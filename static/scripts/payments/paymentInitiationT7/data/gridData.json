@@ -1,0 +1,244 @@
+{
+	"d" : {
+		"instruments" : [{
+			"paymentMetaData" : {
+				"_detailId" : "I8giaAJoiLL7-PtFK-DDW9nffLnvk7PGHFPD3F5Z_m9ObatTPbipRD8RtH2dzasXQ3dEwxcIqTLm015SBzWiCs3hTXZj650y29Ff1f-_uwMWgT135oVPDniFAdSI0cCMxR_MU_PRkc7v6gVV88zLk43NwQ71UzVFf47obnegIkYIh6SuJ3oxUVGQtLnrywlUcI1DTyugORoRjx0JxU0gsHU15YZemyHqo5z0FtrMmoPeR-VAcldnR8i_obLuZMnzWkTm-p0yOxxRPfRyv34b01u-Pj5_-TNTxnF_oBu0zpXfJLIZ36wZT1FJnZlh6vuf",
+				"_headerId" : "I8giaAJoiLL7-PtFK-DDW9nffLnvk7PGHFPD3F5Z_m9ObatTPbipRD8RtH2dzasXQ3dEwxcIqTLm015SBzWiCs3hTXZj650y29Ff1f-_uwMWgT135oVPDniFAdSI0cCMxR_MU_PRkc7v6gVV88zLk43NwQ71UzVFf47obnegIkYIh6SuJ3oxUVGQtLnrywlUcI1DTyugORoRjx0JxU0gsHU15YZemyHqo5z0FtrMmoPeR-VAcldnR8i_obLuZMnzWkTm-p0yOxxRPfRyv34b01u-Pj5_-TNTxnF_oBu0zpXfJLIZ36wZT1FJnZlh6vuf",
+				"_cutoffTime" : "22:45:00",
+				"_buttonMask" : "111111111011011111101",
+				"__rightsMap" : "111100001000011100000",
+				"uri" : "services/paymententrygrid(I8giaAJoiLL7-PtFK-DDW7PpL9l7RWjiDwc1UTXUnfyAEZ2kwTFX85JUuOMTuFIRkbeNf7_giSw65NgDlqs-DbcjL0KNzN3qmYaMmIOwtCsj6EcOGu2LA5QOQImhmlc5SnsAEWOognu8P6pxMiRZDPAH0hqNrS6c_JBdtn07ggIA7BwjQcHli3QqIR06xCxQ)(om.fundtech.core.bean.MapIdentifier@e5e1695).json",
+				"_txnImportEnabled" : "N",
+				"txnQueue" : "None",
+				"type" : "GCP.Instrument",
+				"_status" : "Draft"
+			},
+			"paymentHeaderInfo" : {
+				"hdrActionsMask" : "00000001",
+				"hdrIdentifier" : "I8giaAJoiLL7-PtFK-DDW7PpL9l7RWjiDwc1UTXUnfyAEZ2kwTFX85JUuOMTuFIROdWNck4iqlaQ-woYn4-yPS5m3Ce-fq0BBfdHqduCK2_pGHTqij-TTVD5Uv2IuAwzrvRmQH1dooDZFNqNHhGTIHiJfzGUHxjyCmcT3UW9-A5H-9dpWqI2nTYQljTz317qNbuH_rIh3uWvX51WSxXzBKvC3n1d5q3JrveGyMR0wGPrH9xzzeJ_iH-mj8PGmtylCHADultJ66VoVfEv1VFHTONucpAVMzntNKMEHGGy2xFwI0h194VWVJpQd07_qIO8y4SQs8udABI19rRZy8NsSQov87kL-ef5ydZXJykgvSVoXmpTTatwYEqRZP0w7JwU",
+				"hdrActionStatus" : "9"
+			},
+			"beneficiary" : {
+				"adhocBene" : [{
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBankIDType",
+							"availableValues" : [{
+										"description" : "FED ABA",
+										"code" : "FED"
+									}],
+							"dataType" : "select",
+							"label" : "Bank Id Type",
+							"seekId" : "BeneficiaryBankIDType",
+							"displayMode" : "3"
+						}, {
+							"value" : "45262",
+							"readOnly" : "true",
+							"fieldName" : "drawerAccountNo",
+							"dataType" : "text",
+							"label" : "Account",
+							"displayMode" : "3"
+						}, {
+							"value" : "OnlyWire",
+							"readOnly" : "true",
+							"fieldName" : "drawerDescription",
+							"dataType" : "text",
+							"label" : "Receiver Name",
+							"displayMode" : "2"
+						}, {
+							"readOnly" : "false",
+							"fieldName" : "beneficiaryBranchDescription",
+							"dataType" : "text",
+							"label" : "Bank Description\t",
+							"displayMode" : "2"
+						}, {
+							"value" : "123123123",
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBankIDCode",
+							"dataType" : "seek",
+							"label" : "Bank Id #",
+							"seekId" : "BeneficiaryBankCode",
+							"displayMode" : "3"
+						}],
+				"drawerRegistedFlag" : "A"
+			},
+			"standardField" : [{
+				"value" : "T1",
+				"readOnly" : "false",
+				"fieldName" : "templateName",
+				"availableValues" : [{
+							"description" : "T1",
+							"code" : "qmYaMmIOwtCsj6EcOGu2LA5QOQImhmlc5=="
+						}, {
+							"description" : "T2",
+							"code" : "qmYaMmIOw5gfh-hghtCsj6EcOGu2LA5QOQImhmlc5=="
+						}],
+				"dataType" : "select",
+				"label" : "Template Name",
+				"displayMode" : "2"
+			}, {
+				"formattedValue" : "$ 20.00",
+				"value" : 20,
+				"fieldName" : "amount",
+				"dataType" : "amount",
+				"label" : "Amount",
+				"displayMode" : "3",
+				"readOnly" : "false"
+			}, {
+				"value" : "369258147",
+				"readOnly" : "true",
+				"fieldName" : "accountNo",
+				"availableValues" : [],
+				"dataType" : "select",
+				"label" : "Sending Account",
+				"displayMode" : "2"
+			}, {
+				"value" : "USD",
+				"readOnly" : "true",
+				"fieldName" : "txnCurrency",
+				"availableValues" : [{
+							"description" : "US Dollar",
+							"code" : "USD"
+						}],
+				"dataType" : "select",
+				"label" : "Payment Currency",
+				"displayMode" : "2"
+			}, {
+				"value" : "05/25/2016",
+				"readOnly" : "true",
+				"fieldName" : "txnDate",
+				"dataType" : "date",
+				"label" : "Effective Date",
+				"displayMode" : "2"
+			}, {
+				"value" : "Wire",
+				"readOnly" : "true",
+				"fieldName" : "referenceNo",
+				"dataType" : "text",
+				"label" : "Refrence",
+				"displayMode" : "3"
+			}]
+		}, {
+			"paymentMetaData" : {
+				"_detailId" : "I8giaAJoiLL7-PtFK-DDW9nffLnvk7PGHFPD3F5Z_m9ObatTPbipRD8RtH2dzasXQ3dEwxcIqTLm015SBzWiCs3hTXZj650y29Ff1f-_uwMWgT135oVPDniFAdSI0cCMxR_MU_PRkc7v6gVV88zLk43NwQ71UzVFf47obnegIkYIh6SuJ3oxUVGQtLnrywlUcI1DTyugORoRjx0JxU0gsHU15YZemyHqo5z0FtrMmoPeR-VAcldnR8i_obLuZMnzWkTm-p0yOxxRPfRyv34b01u-Pj5_-TNTxnF_oBu0zpXfJLIZ36wZT1FJnZlh6vuf",
+				"_cutoffTime" : "22:45:00",
+				"_buttonMask" : "111111111011011111101",
+				"__rightsMap" : "111100001000011100000",
+				"uri" : "services/paymententrygrid(I8giaAJoiLL7-PtFK-DDW7PpL9l7RWjiDwc1UTXUnfyAEZ2kwTFX85JUuOMTuFIRkbeNf7_giSw65NgDlqs-DbcjL0KNzN3qmYaMmIOwtCsj6EcOGu2LA5QOQImhmlc5SnsAEWOognu8P6pxMiRZDPAH0hqNrS6c_JBdtn07ggIA7BwjQcHli3QqIR06xCxQ)(om.fundtech.core.bean.MapIdentifier@e5e1695).json",
+				"_txnImportEnabled" : "N",
+				"_status" : "Draft",
+				"type" : "GCP.Instrument"
+			},
+			"beneficiary" : {
+				"registeredBene" : [{
+							"value" : "ONLYWire",
+							"readOnly" : "true",
+							"fieldName" : "drawerCode",
+							"dataType" : "text",
+							"label" : "Receiver Code",
+							"displayMode" : "2"
+						}, {
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBankIDType",
+							"availableValues" : [{
+										"description" : "FED ABA",
+										"code" : "FED"
+									}],
+							"dataType" : "select",
+							"label" : "Bank Id Type",
+							"seekId" : "BeneficiaryBankIDType",
+							"displayMode" : "3"
+						}, {
+							"value" : "45262",
+							"readOnly" : "true",
+							"fieldName" : "drawerAccountNo",
+							"dataType" : "text",
+							"label" : "Account",
+							"displayMode" : "3"
+						}, {
+							"value" : "OnlyWire",
+							"readOnly" : "true",
+							"fieldName" : "drawerDescription",
+							"dataType" : "text",
+							"label" : "Receiver Name",
+							"displayMode" : "2"
+						}, {
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBranchDescription",
+							"dataType" : "text",
+							"label" : "Bank Description\t",
+							"displayMode" : "2"
+						}, {
+							"value" : "123123123",
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBankIDCode",
+							"dataType" : "seek",
+							"label" : "Bank Id #",
+							"seekId" : "BeneficiaryBankCode",
+							"displayMode" : "3"
+						}],
+				"drawerRegistedFlag" : "R"
+			},
+			"standardField" : [{
+				"value" : "T1",
+				"readOnly" : "false",
+				"fieldName" : "templateName",
+				"availableValues" : [{
+							"description" : "T1",
+							"code" : "qmYaMmIOwtCsj6EcOGu2LA5QOQImhmlc5=="
+						}, {
+							"description" : "T2",
+							"code" : "qmYaMmIOw5gfh-hghtCsj6EcOGu2LA5QOQImhmlc5=="
+						}],
+				"dataType" : "select",
+				"label" : "Template Name",
+				"displayMode" : "2"
+			}, {
+				"formattedValue" : "$ 20.00",
+				"value" : 20,
+				"fieldName" : "amount",
+				"dataType" : "amount",
+				"label" : "Amount",
+				"displayMode" : "3",
+				"readOnly" : "false"
+			}, {
+				"value" : "369258147",
+				"readOnly" : "true",
+				"fieldName" : "accountNo",
+				"availableValues" : [],
+				"dataType" : "select",
+				"label" : "Sending Account",
+				"displayMode" : "2"
+			}, {
+				"value" : "USD",
+				"readOnly" : "true",
+				"fieldName" : "txnCurrency",
+				"availableValues" : [{
+							"description" : "US Dollar",
+							"code" : "USD"
+						}],
+				"dataType" : "select",
+				"label" : "Payment Currency",
+				"displayMode" : "2"
+			}, {
+				"value" : "05/25/2016",
+				"readOnly" : "false",
+				"fieldName" : "txnDate",
+				"dataType" : "date",
+				"label" : "Effective Date",
+				"displayMode" : "2"
+			}, {
+				"value" : "Wire",
+				"readOnly" : "false",
+				"fieldName" : "referenceNo",
+				"dataType" : "text",
+				"label" : "Reference No",
+				"displayMode" : "3"
+			}]
+		}],
+		"__count" : 2,
+		"__metadata" : {
+			"_buttonMask" : "111111111011011111101",
+			"type" : "GCP.PaymentEntryList"
+		}
+	}
+}

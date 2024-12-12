@@ -1,0 +1,1195 @@
+.ft-accordion {
+  position: relative;
+}
+
+.ft-accordion-bar {
+  background-color: $moduleContent;
+  border-top: 1px solid $accordianBar;
+  height: 50px;
+
+  .ft-accordion-menubar {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    float: right;
+    top: 15px;
+  }
+}
+
+.ft-accordion-collapsed .ft-accordion-items {
+  display: none;
+}
+
+.ft-accordion-item {
+  clear: both;
+  position: relative;
+  display: block;
+
+  .ft-accordion-exp-icon {
+    margin-left: 5px;
+  }
+}
+
+div + .ft-accordion-items {
+  clear: both;
+  margin-top: 20px;
+}
+
+.ft-accordion-item-label {
+  color: $fontColor;
+  display: inline-block;
+  @include fontSize(10);
+  font-weight: 100;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 50px;
+}
+
+.ft-accordion-content {
+  clear: both;
+  padding-bottom: 20px;
+  @include fontSize(4);
+  color: $primaryColor;
+  min-height: 100px;
+  line-height: 1.4;
+}
+
+.ft-accordion-content {
+  li {
+    @include fontSize(2);
+    margin-bottom: 15px;
+  }
+
+  &.placeholder {
+    background-color: $borderColor;
+    height: 120px;
+    padding: 0;
+  }
+}
+
+.ft-accordion-header-sidebar {
+  float: right;
+  display: block;
+  /* Removed margin as it was not in line with the title 
+  margin-top: 6px;*/
+}
+
+.ft-accordion-header-sidebar-date {
+  @include fontSize(2);
+  color: $fontColor;
+  display: inline-block;
+}
+
+.ft-accordion-item-grouped-by-container {
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+/*
+==========
+Collapsed.
+==========
+*/
+
+.ft-accordion-collapsed {
+  .ft-accordion-content, #ft-accordion-tab-menu {
+    display: none;
+  }
+}
+
+.ft-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $primaryColor;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+}
+
+#ft-add-receiver-page {
+  background-image: url('resources/images/T7/createpayment_mock.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.ft-form-add-receiver {
+  display: block;
+  color: $fontColorDarker;
+  max-width: 436px;
+  border: solid $lightColor thin;
+  background-color: $lightColor;
+  position: relative;
+  margin: 40px auto;
+
+  .ft-button {
+    border: none;
+    padding: 5px 10px;
+    background-color: $logoutButton;
+  }
+
+  .ft-button-submit {
+    background-color: $primaryColor;
+  }
+
+  [type="radio"] {
+    &:checked {
+      background-position: -6px -176px;
+    }
+
+    width: 22px;
+    height: 22px;
+    background-position: -29px -176px;
+    float: left;
+  }
+
+  label[for="ft-form-radio"] {
+    line-height: 2.3;
+  }
+
+  .ft-form-cell:first-child {
+    width: 220px;
+  }
+
+  .ft-form-row-last .ft-form-cell {
+    width: auto;
+  }
+}
+
+.ft-form-header {
+  background-color: $moduleHeaderColor2;
+  @include fontSize(6);
+  font-weight: 100;
+  height: 28px;
+  padding: 14px 0 0 10px;
+}
+
+.ft-form-row {
+  position: relative;
+  display: block;
+  padding-top: 13px;
+  height: 35px;
+}
+
+.ft-form-row-last {
+  width: 100%;
+  height: 30px;
+}
+
+.ft-form-row > .ft-form-cell {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  float: left;
+}
+
+.ft-form-cell-2 {
+  display: inline-block;
+}
+
+.ft-form-cell .ft-icons-vcard {
+  position: absolute;
+  top: 13px;
+  right: 7px;
+}
+
+.ft-form-submit-cell {
+  float: right;
+  margin-right: 10px;
+}
+
+.ft-add-receiver-header {
+  background-color: $moduleHeaderColor2;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+
+  > {
+    .ft-pull-left, .ft-pull-right {
+      width: 45%;
+      height: 100%;
+    }
+  }
+
+  span {
+    @include fontSize(10);
+  }
+}
+
+/*
+	For accordion headings, etc.
+*/
+
+.ft-bar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .autocompleter-li {
+    width: 9%;
+  }
+}
+
+.ft-bar, .ft-bar-action {
+  background-color: $buttonBarBackground;
+  display: table;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.ft-bar { 
+  &.ft-bar-callout {
+    background-color: $moduleHeaderColor2;
+    border-top: 0;
+  }
+
+  > {
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 1%;
+    }
+
+    .ft-bar-align-bottom {
+      vertical-align: bottom;
+    }
+
+    .ft-bar-label {
+      @include fontSize(10);
+      line-height: 1;
+      padding-bottom: 18px;
+      vertical-align: bottom;
+    }
+
+    .ft-bar-title {
+      @include fontSize(10);
+      line-height: 1;
+      padding-bottom: 13px;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.ft-accordion-collapsed .ft-collapsed-hide {
+  display: none;
+}
+
+.ft-bar > {
+  .ft-bar-stretch, .ft-bar-label:last-child, .ft-bar-title:last-child {
+    width: auto;
+  }
+  .ft-bar-stretch {
+    width: 100%;
+  }
+}
+
+.ft-accordion-collapsed {
+  .ft-bar-label, .ft-bar-title {
+    width: auto;
+  }
+}
+
+/* Glass Pipe */
+
+.ft-datapipe {
+  border-color: transparent;
+  border-width: 0;
+  border-style: none;
+  border-collapse: separate;
+  color: white;
+
+  strong {
+    @include fontSize(4);
+  }
+
+  tr {
+    td {
+      min-height: 24px;
+      padding: 4px 2px 4px 2px;
+      text-align: center;
+    }
+
+    &.ft-datapipe-values td {
+      /*border-width: 0 3px 0 0;*/
+      border-style: solid;
+      border-color: $lightColor;
+      line-height: 56px;
+      height: 56px;
+      padding: 0;
+      @include fontSize(8);
+      border-collapse: collapse;
+    }
+
+    &.ft-datapipe-labels {
+      font-weight: small;
+      @include fontSize(1);
+      color: $fontColor;
+    }
+  }
+
+  .ft-datapipe-blue-bg {
+    background-color: #366092;
+  }
+
+  .ft-datapipe-green-bg {
+    background-color: #0f7568;
+  }
+
+  .ft-datapipe-red-bg {
+    background-color: #963634;
+  }
+  
+	.ft-datapipe .ft-datapipe-gray-bg {
+	  background-color: #C4BD97;
+	}
+
+  .ft-datapipe-blue-color {
+    color: $primaryColor;
+  }
+
+  .ft-datapipe-green-color {
+    color: #0f7568;
+  }
+
+  .ft-datapipe-red-color {
+    color: #d31616;
+  }
+
+  .right_border {
+    border-width: 0 3px 0 0;
+    border-style: solid;
+    border-color: #8F8F8F;
+  }
+}
+
+.first_pipe {
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-left: 1px solid #8F8F8F;
+}
+
+.last_pipe {
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+#ft-sample-datapipe {
+  padding: 10px 20px 10px 10px;
+  border-bottom: 1px solid $buttonDarkColor;
+}
+
+.ft-datapipe-tooltip {
+  position: absolute;
+  -webkit-box-shadow: 0 0 8px $boxShadowColor;
+  box-shadow: 0 0 8px $boxShadowColor;
+  width: 145px;
+  height: auto;
+  right: auto;
+  left: 707px;
+  top: 242px;
+  z-index: 19001;
+  display: none;
+  background-color: $lightColor;
+  border-radius: 3px;
+}
+
+.ft-pipeborder {
+	border-width: 2px 3px 2px 0px; 
+	border-color: white;
+	cursor : pointer;
+}
+
+.ft-statuspipe-border{
+	border-width: 0 1px 0 1px; 
+	border-style: solid; 
+	border-color: black;
+}
+
+
+/*
+==================
+Download dropdown.
+==================
+*/
+
+.ftp-dropdown-icon-download {
+  background-image: url(resources/images/T7/download-button-off.png);
+  height: 31px;
+  width: 21px;
+}
+
+.ft-dropdown:hover .ftp-dropdown-icon-download {
+  background-image: url(resources/images/T7/download-button-on.png);
+}
+
+.ft-dropdown-caret {
+  background-image: url(resources/images/T7/caret-blue.png);
+}
+
+.ft-download-dropdown {
+  margin-bottom: -10px;
+}
+
+/*
+=============================================
+Filter dropdown
+=============================================
+*/
+
+.ft-filter-dropdown-container {
+  top: 5px;
+  right: 0;
+  position: absolute;
+  text-align: right;
+
+  &:hover {
+    width: 100%;
+
+    .ft-filter-dropdown {
+      width: 100%;
+    }
+  }
+
+  .ft-dropdown-content {
+    text-align: left;
+  }
+}
+
+.ft-filter-dropdown {
+  .ft-dropdown-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .ft-dropdown-caret {
+    background-image: url(resources/images/T7/funnel-off.png);
+    background-position: center center;
+    height: 20px;
+    width: 25px;
+  }
+
+  &:hover .ft-dropdown-caret {
+    background-image: url(resources/images/T7/funnel-on.png);
+  }
+}
+
+.ft-filter-dropdown-container {
+  select, input[type="text"] {
+    width: 100%;
+  }
+}
+
+.ft-extra-nav {
+  li {
+    position: relative;
+    display: inline-block;
+    @include fontSize(14);
+    border-right: solid $secondaryBtn 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  display: inline-block;
+  float: left;
+  position: absolute;
+  top: 27px;
+  a{
+	&:hover{
+	  color: $linksHoverColor;
+	}
+  }
+}
+
+.ft-extra-nav {
+  a, .ft-extra-active {
+    text-decoration: none;
+    color: $primaryColor;
+  }
+}
+
+.ft-extra-active {
+  &:after, &:before {
+    top: 120%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    display: none;
+  }
+
+  &:after {
+    border-color: rgba(243, 111, 39, 0);
+    border-top-color: $headerBorderColor;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+
+  &:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: transparent;
+    border-width: 9px;
+    margin-left: -9px;
+  }
+}
+
+.ft-extra-nav .ft-extra-active a {
+  color: $darkColor;
+}
+
+.ft-summary-settings-table {
+  width: 14em;
+  min-width: 14em;
+
+  a {
+    @include fontSize(5);
+  }
+}
+
+.ft-summary-settings-label {
+  text-align: center;
+}
+
+/* Vertical Collapsible panel css start */
+
+.vertical-collapsible-titlebar {
+  display: table;
+  min-height: 38px;
+  display: inline-block;
+  border-left: 10px solid $verticalPanelHeader;
+  background-color: $moduleContent;
+}
+
+.toolbar {
+  margin-left: 200px;
+  margin-right: 20px;
+  margin-top: 12px;
+}
+
+.vertical-collapsible-titlebar.vt {
+  color: white;
+  background-color: $verticalPanelHeader;
+  border-left: none;
+
+  .toolbar {
+    display: none;
+  }
+}
+
+.vertical-collapsible-contents {
+  background-color: $moduleContent;
+}
+
+.vertical-collapsible-titlebar > .vertical-collapsible-title {
+  @include fontSize(6);
+  line-height: 1.5;
+  padding-bottom: 18px;
+  position: absolute;
+  top: 8px;
+}
+
+.vertical {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+
+  /* IE 9 */
+  white-space: nowrap;
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 8px;
+}
+
+.content-display-none {
+  display: none !important;
+}
+
+.vertical-collapsible-panel {
+  margin-bottom: 12px;
+  display: table;
+  width: 100%;
+  position: relative;
+  margin-top: 12px;
+}
+
+.vertical-collapsible-titlebar.col-sm-1 {
+  max-width: 38px;
+  height: 100%;
+  width: 38px;
+  position: absolute;
+  padding-top: 10px;
+  display: table-cell;
+}
+
+.vertical-collapsible-titlebar.col-md-1 {
+  max-width: 38px;
+  height: 100%;
+  width: 38px;
+  position: absolute;
+  padding-top: 18px;
+  display: table-cell;
+}
+
+.expand-vertical {
+  float: right;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  margin-top: 13px;
+  margin-left: 0px;
+}
+
+.vertical-collapsible-contents {
+  &.col-md-12 {
+    padding-top: 18px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-left: 48px !important;
+    position: static;
+    height: 100%;
+  }
+
+  .expand-vertical {
+    margin-top: -14px;
+  }
+}
+
+.vertical-collapsible-contents {
+  &.col-sm-12 {
+    padding-top: 18px;
+    padding-bottom: 6px;
+    padding-left: 48px !important;
+    position: static;
+    height: 100%;
+	display: table-cell;
+  }
+
+  .expand-vertical {
+    margin-top: -14px;
+  }
+}
+
+/* Vertical Collapsible panel css end */
+
+/* Action Messages & Titles */
+
+#messageArea {
+  &.errors {
+    border-top: 1px solid #900;
+    border-bottom: 1px solid #900;
+  }
+
+  span {
+    color: #900;
+    text-transform: uppercase;
+  }
+
+  ul li {
+    color: #900;
+  }
+}
+
+.primary-col {
+  margin-right: 10px;
+}
+
+/* Directory compoenent styling*/
+
+.directory a {
+  padding: 5px;
+  cursor: pointer;
+  color: $primaryColor;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.directory-label-div {
+  width: 20px;
+  height: 20px;
+  background-color: $verticalPanelHeader;
+  float: left;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  line-height: 18px;
+}
+
+.blue-horizontal-line {
+  height: 1px;
+  background-color: $verticalPanelHeader;
+  margin-left: 21px;
+  margin-top: 10px;
+}
+
+/* Directory compoenent styling*/
+
+.ft-bar {
+  .ft-dropdown {
+    top: 5px;
+  }
+
+  .ft-dropdown-toggle {
+    padding: 5px;
+    min-width: 0;
+  }
+}
+
+.ft-accordion-content.action-result-scrollable {
+  max-height: 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ft-header-panel-text {
+  @include fontSize(7);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.ft-accordion-header-panel {
+  display: inline-block;
+}
+
+.ft-header-panel-element {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  min-height: 20px;
+}
+
+/* Themeing for Information Panel*/
+
+.ft-info-panel {
+  padding: 0px 6px 6px 6px;
+}
+
+.ft-info-panel-header {
+  background-color: $dialogButtonBackground;
+  display: table;
+  height: 40px !important;
+  margin-bottom: 0px;
+  padding-left: 0px !important;
+  width: 100%;
+  @include fontSize(8);
+  padding-top: 6px;
+}
+
+.ft-info-panel-body {
+}
+
+.ft-info-panel-innerHeader {
+  @include fontSize(6);
+  font-weight: bold;
+}
+
+.ft-info-panel-body-contents {
+  padding-left: 6px;
+  @include fontSize(6);
+}
+
+/* Themeing for Panel*/
+
+.t7-graph rect[hidden] {
+  display: inherit;
+}
+
+/*for vertical tabs center panel top padding*/
+
+.ft-center-panel-padding {
+  padding-top: 5px;
+}
+
+.ft-accordion-entry {
+  .ft-accordion {
+    padding-top: 12px;
+  }
+
+  .ft-bar {
+    margin: 0px;
+  }
+
+  .ft-bar-label {
+    padding-bottom: 11px;
+    padding-top: 9px;
+  }
+
+  .ft-accordion-content {
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    background-color: $moduleContent;
+    @include fontSize(4);
+    font-weight: bold;
+    color: black;
+    min-height: 71px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vertical-collapsible-contents .row {
+    white-space: nowrap;
+  }
+
+  .whitespace-normal {
+    white-space: normal;
+  }
+
+  input[type="text"].form-control, select.form-control {
+    padding: 2px 10px;
+  }
+
+  #tabs-2 select.form-control, .ft-width-bmsg select.form-control {
+    padding: 2px 5px;
+  }
+
+  
+}
+
+.ui-menu .ui-menu-item a {
+  &.ui-state-hover, &.ui-state-active {
+    background-color: $dropDownHoverBgColor;
+  }
+}
+
+.page-heading-bottom-border {
+  border-bottom: 1px solid #8A8A8A;
+  color: $darkColor;
+}
+
+@-moz-document url-prefix() {
+  .vertical-collapsible-panel {
+    display: inline-block;
+    margin-top: 0px;
+  }
+}
+
+.ft-tab-bar-title{
+	color: $panelTextColor;
+}
+
+.title-content {
+	padding-top: 0px;
+	&.ft-accordion-header-sidebar {
+		.ft-icons {
+			background-image: none;
+			@include fontSize(8);
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.ft-setting-btn.ft-icons-settings:before {
+			content: "\f013";
+			font-family: fontawesome;
+			@include fontSize(8);
+		}
+		.ft-pdf-btn.ft-icons-pdf:before {
+			content: "\f1c1";
+			font-family: fontawesome;
+			@include fontSize(8);
+		}
+		.ftp-dropdown-icon-download:before {
+			content: "\f019";
+			font-family: fontawesome;
+			@include fontSize(8);
+		}
+		.ft-refresh-btn.ft-icons-refresh:before {
+			content: "\f021";
+			font-family: fontawesome;
+			@include fontSize(8);
+		}
+		.ft-refresh-btn.ft-icons-refresh {
+			margin-top: 0px;
+		}
+		.dropdown-menu.show {
+			padding: 5px 0px;
+			margin: 2px 0px 0px;
+			background-color: $lightColor;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			border-radius: 4px;
+			right: 0px;
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+			.ft-button { 
+				padding: 5px 20px;
+				color: $fontColor;
+				min-width: 160px;
+				width: 100%;
+				background-color: transparent;
+				text-align: left;
+				font-family: Arial;
+				@include fontSize(4);
+				border-radius: 0px;
+				white-space: nowrap;
+			}
+			.ft-button:hover {
+				background-color: $dropDownHoverBgColor;
+			}
+		}
+		.ft-dropdown.ft-header-dropdown {
+			& > .ft-button {
+				@include fontSize(2);
+				background-color: $primaryColor;
+				line-height: 14px;
+				border-radius: 3px;
+			}
+			& > .ft-button:hover {
+				background-color: $primaryColor1;
+			}
+			& > .ft-button:focus {
+				background-color: $primaryColor1;
+			}
+		}
+		.ft-dropdown.ft-download-dropdown .ft-dropdown-toggle {
+			padding: 0px;
+		}
+		.ft-dropdown {
+			.ft-dropdown-toggle {
+				border-color: transparent;
+			}
+			.ft-dropdown-menu {
+				background-color: $lightColor;
+			}
+		}
+	}
+	.ft-accordion-header-panel {
+		.ft-dropdown {
+			color: $lightColor;
+			background-color: $buttonBackground;
+			border-color: $fontColor;
+			border: 1px solid;
+			padding: 7px 10px;
+			border-radius: 3px;
+			line-height: 14px;
+			min-height: auto;
+			cursor: pointer;
+			&:hover{
+				background-color: $buttonHoverColor;
+				border: 1px solid $buttonHoverColor;
+			}
+			.ft-header-panel-text {
+				@include fontSize(2);
+			}
+			.ft-dropdown-toggle {
+				padding: 0px;
+				min-width: 10px;
+				min-height: 10px;
+				.ft-dropdown-caret{
+					background-image: none;
+					width: 8px;
+					height: 14px;
+					&:before{
+						font-family: fontawesome;
+						content: '\f0d7';
+						color: $lightColor;
+						@include fontSize(8);
+					}
+				}
+			}
+			.ft-dropdown-menu {
+				background-color: $lightColor;
+				min-width: 160px;
+				left: 0px;
+				right: auto;
+			}
+		}
+	}
+}
+
+.panel{
+    margin-bottom: 15px;
+    background-color: $lightColor;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	line-height: 1.42857;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	@include fontSize(6);
+}
+.panel-default{
+	border-color: #ddd;
+	line-height: 1.42857;
+	> .panel-heading {
+		color: $fontColor;
+		background-color: $panelHeaderBackground;
+		border-color: #ddd;
+	}
+}
+
+.panel-heading {
+    padding: 10px 15px;
+	line-height: 1.42857;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.panel-title {
+    position: relative;
+    top: 2px;
+    @include fontSize(10);
+	color: inherit;
+    line-height: 24px;
+}
+
+.panel-body {
+    padding: 15px;
+	@include fontSize(6);
+	a{
+		color: $linksColor;
+		&:hover{
+			color: $linksHoverColor;
+			text-decoration: underline;
+		}
+		&.t7-action-link-with-noline{
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	span{
+		color: $fontColor;
+	}
+	
+	.t7-grid .x-column-header .x-column-header-text span{
+		color: $gridHeaderTextColor;
+	} 
+	
+	.t7-anchor{
+		color: $linksColor;
+		&:hover{
+			color: $linksHoverColor;
+		}
+	}
+}
+
+.panel.panel-default {
+  .panel-body.action-panel {
+    min-height: 0px;
+    max-height: 300px;
+    overflow-y: auto !important;
+  }
+}
+
+.applied-filter-text{
+  @include fontSize(4);
+}
+
+.panel-body a.applied-filter-item{
+	color: $fontColor;
+	margin-right: 20px;
+    @include fontSize(4);
+    line-height: inherit !important;
+    text-overflow: ellipsis;
+    i{
+      padding-left: 7px;
+    }
+    &:hover{
+      text-decoration: none;
+      color: $fontColor;
+    }
+}
+
+.lineheight_21 {
+	line-height: 21px;
+}
+
+.lineheight_20 {
+	line-height: 20px;
+}
+
+.transactionHeader{
+  max-width: 58%;
+  .transactionTitle, .mediumTransactionTitle{
+    max-width: 65%;
+  }
+}
+
+.SIHeader{
+  max-width: 55%;
+  .transactionTitle{
+    max-width: 30%;
+  }
+}
+
+.transactionWizardHeader{
+  max-width: 65%;
+  .transactionTitle{
+    max-width: 55%;
+  }
+}
+
+.SIWizardHeader{
+  max-width: 68%;
+  .transactionTitle{
+    max-width: 30%;
+  }
+}
+
+.transactionView{
+  max-width: 86%;
+  .transactionTitle{
+    max-width: 74%;
+  }
+}
+.SIView{
+  max-width: 85%;
+  .transactionTitle{
+    max-width: 66%;
+  }
+}  
+
+@media only screen and (max-width: 1024px) {
+  .transactionHeader{
+    max-width: 50%;
+    .transactionTitle{
+      max-width: 45%;
+    }
+	.mediumTransactionTitle{
+	  max-width: 30%;
+	}
+  }
+  .SIHeader{
+    max-width: 45%;
+    .transactionTitle{
+      max-width: 14%;
+    }
+  }
+  .SIView{
+    max-width: 85%;
+    .transactionTitle{
+      max-width: 55%;
+    }
+  }  
+  .ui-dialog .ux-dialog{ 
+  	.SIWizardHeader{
+      .transactionTitle, span{
+        @include fontSize(14);
+      }
+    }
+    .transactionWizardHeader{
+      .transactionTitle, span{
+        @include fontSize(14);
+      }
+    }  
+  }
+}

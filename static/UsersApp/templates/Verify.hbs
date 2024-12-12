@@ -1,0 +1,294 @@
+<div class="ft-margin-l ft-margin-r">
+	<div class="ft-layout-inner">
+		<!--START:Page content ################-->
+		<div id="PageTitle">
+			<h1 class="ft-title">
+				{{#ifCond mode '==' "edit" }}
+					{{#ifCond metaData.ssoClient '==' "N" }}
+						<span>Modify {{getLabel "lbl.clientUser.user" "User"}}: {{loginId}}</span>
+					{{/ifCond}}	
+					{{#ifCond metaData.ssoClient '==' "Y" }}
+						<span>Modify {{getLabel "lbl.clientUser.ssologinId" "SSO Login Id"}}: {{ssoLoginId}}</span>
+					{{/ifCond}}
+                		{{/ifCond}}
+                		{{#ifCond mode '==' "new" }}
+					{{#ifCond metaData.ssoClient '==' "N" }}
+						<span>Create {{getLabel "lbl.clientUser.user" "User"}}: {{loginId}}</span>
+					{{/ifCond}}	
+					{{#ifCond metaData.ssoClient '==' "Y" }}
+						<span>Create {{getLabel "lbl.clientUser.ssologinId" "SSO Login Id"}}: {{ssoLoginId}}</span>
+					{{/ifCond}}
+                		{{/ifCond}}
+                		{{#ifCond mode '==' "view" }}
+					{{#ifCond metaData.ssoClient '==' "N" }}
+						<span>View {{getLabel "lbl.clientUser.user" "User"}}: {{loginId}}</span>
+					{{/ifCond}}	
+					{{#ifCond metaData.ssoClient '==' "Y" }}
+						<span>View {{getLabel "lbl.clientUser.ssologinId" "SSO Login Id"}}: {{ssoLoginId}}</span>
+					{{/ifCond}}
+                		{{/ifCond}}
+			</h1>
+
+			
+			{{#ifCond mode '==' "new" }}
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.createUser" "1. Create User"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.permission" "2. Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+										{{getLabel "lbl.clientUser.statusBar.verifyUser" "3. Verify User"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+			{{/ifCond}}	
+	
+	{{#ifCond mode '==' "edit" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.edituser" "1. Edit User"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.permission" "2. Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.verifyUser" "3. Verify User"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond prevMode '==' "new" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.createUser" "1. Create User"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.permission" "2. Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.verifyUser" "3. Verify User"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond prevMode '==' "edit" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.edituser" "1. Edit User"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.permission" "2. Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+									{{getLabel "lbl.clientUser.statusBar.verifyUser" "3. Verify User"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond mode '==' "view" }}
+				<div class="ft-accordion-header-sidebar">
+					<div class="ft-accordion-header-sidebar pull-right title-content">
+						<div class="ft-pdf-btn ft-icons-pdf ft-icons pull-right" id = "userReport" title="Report"></div>
+					</div>
+				</div>
+			{{/ifCond}}
+			
+			{{#ifCond prevMode '==' "view" }}
+				<div class="ft-accordion-header-sidebar">
+					<div class="ft-accordion-header-sidebar pull-right title-content">
+						<div class="ft-pdf-btn ft-icons-pdf ft-icons pull-right" id = "userReport" title="Report"></div>
+					</div>
+				</div>
+			{{/ifCond}}
+			
+		</div>
+		
+        <div id="errorDiv" class="row hidden">
+            <div class="col-sm-12">
+                <div class="ft-error-message">
+                    <span class="ft-bold-font">ERROR:</span>
+                    <p id="errorPara"></p>
+                </div>
+            </div>
+        </div>  		
+		
+			<div id="viewChangesId" class="row">
+			
+			{{#ifCond mode '!=' "viewChanges" }}
+				{{#if displayViewChanges }}
+			<div class="col-sm-6 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-left title-content">
+					<span style="font-size: initial;">
+						<a id="viewChanges">{{getLabel "lbl.clientUser.viewChanges" "View Changes"}}</a>
+					</span>
+				</div>
+			</div>
+				{{/if}}
+			{{/ifCond}}
+			
+			{{#ifCond mode '==' "viewChanges" }}
+				{{#if displayViewChanges }}
+			<div class="col-sm-6 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-left title-content">
+					<span style="font-size: initial;">
+						<a id="viewBack">{{getLabel "lbl.clientUser.viewBack" "Back to View"}}</a>
+					</span>
+				</div>
+			</div>
+				{{/if}}
+			{{/ifCond}}
+			{{#if displayViewChanges }}
+			<div class="col-sm-6 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-right title-content">
+					<span style="font-size: initial;">
+						<a id="expandAll">{{getLabel "lbl.clientUser.expand" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.clientUser.collapseAll" "Collapse All"}}</a>
+					</span>
+				</div> 
+			</div>
+			{{else}}
+			<div class="col-sm-12 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-right title-content">
+					<span style="font-size: initial;">
+						<a id="expandAll">{{getLabel "lbl.clientUser.expand" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.clientUser.collapseAll" "Collapse All"}}</a>
+					</span>
+				</div> 
+			</div>
+			{{/if}}
+			
+			
+		</div>
+		
+		<!-- start of verifyForm -->
+		<div class="largepadding_tb" id="verifyForm">
+			<!-- Start of User Details Panel -->
+			{{>VerifyUserDetails}}
+			<!-- End of User Details Panel -->
+			
+			{{#if brEnable}}
+				{{>VerifyBRPanel}}
+			{{/if}}
+									
+			{{#if forecastEnable}}
+				{{>VerifyForecastPanel}}
+			{{/if}}
+			
+			{{#if lmsEnable}}
+				{{>VerifyLiquidityPanel}}
+			{{/if}}
+			
+			{{#if mobileEnble}}
+				{{>VerifyMobilePanel}}
+			{{/if}}
+			
+			{{#if payEnable }}
+				{{>VerifyPaymentsPanel}}
+			{{/if}}
+			
+			{{#if portalEnable}}
+				{{>VerifyPortalPanel}}
+			{{/if}}
+			
+			{{#if collectionEnable}}
+				{{>VerifyCollectionPanel}}
+			{{/if}}
+			
+			{{#if fscEnable}}
+				{{>VerifySCFPanel}}
+			{{/if}}
+			
+			{{#if limitEnable}}
+				{{>VerifyLimitPanel}}
+			{{/if}}
+			
+				
+		</div>
+		<!-- end of verifyForm -->	
+	</div>
+</div>
+<div class="form-group" id = "footer">
+	<ul class="ft-bar">
+		
+		{{#ifCond mode '==' "view" }}
+			<li>		
+				<a href="userAdminList.form" class="ft-button ft-button-light">{{getLabel "lbl.clientUser.btnclose" "Close"}}</a>
+			</li>
+		{{/ifCond}}
+		
+		{{#ifCond mode '==' "new" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.clientUser.btnback" "Back"}}</a>
+				<a href="userAdminList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.clientUser.btnCancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.clientUser.btnSubmit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}
+		
+		{{#ifCond mode '==' "edit" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.clientUser.btnback" "Back"}}</a>
+				<a href="userAdminList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.clientUser.btnCancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.clientUser.btnSubmit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}		
+		
+		{{#ifCond prevMode '==' "new" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.clientUser.btnback" "Back"}}</a>
+				<a href="userAdminList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.clientUser.btnCancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.clientUser.btnSubmit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}	
+			
+					
+	</ul>
+</div>

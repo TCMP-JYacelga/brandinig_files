@@ -1,0 +1,590 @@
+﻿</b></b></b>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Adobe RoboHelp 9">
+<title>File Upload</title>
+<link rel="StyleSheet" href="anz_1.css" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Payments\nPayment Txn\nFile Upload\nFile Upload");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sample_help.htm", "", ">", "Home", "welcome_dashboard.htm");
+document.write("<a href=\"paymentsmain.htm\">Payments<\/a> > <a href=\"payments.htm\">Payment Txn<\/a> > <a href=\"file_upload2.htm\">File Upload<\/a> > File Upload<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sample_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px;" cellspacing="0" width="100%" bgcolor="#04436F" align="left">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr style="height: 11px;">
+			<td style="vertical-align: middle;"><span style="font-family: 'Arial Black', sans-serif; 
+														 font-style: italic; 
+														 color: #ffffff;"><font color="white" ><i>&#160;</i></font></span><span 
+			 style="color: #ffffff; font-family: Arial, sans-serif; font-size: 10pt; 
+			 font-style: italic; font-weight: bold;"><font size="2" color="white" style="font-size:10.000000pt;"><i><b>GCP CashWeb</b></i></font></span><span 
+			 style="font-family: 'Arial Black', sans-serif; font-style: italic; 
+			 color: #ffffff;"><font color="white" ><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></font></span></td>
+			<td style="vertical-align: top;">
+   <p style="text-align: right; 
+												 font-family: 'Arial Black', sans-serif; 
+												 font-style: italic; font-size: 12pt; 
+												 color: #ffffff;">&#160;</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+<p style="text-align: right;"><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+
+<h1>Uploading Multiple Transactions</h1>
+<h2>Payments &gt;&gt; Payments &gt;&gt; File Upload</h2>
+<p><a class="dropspot" href="javascript:TextPopup(this)" id="a1">About 
+ File Upload<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></p>
+<div class="droptext" id="POPUP475831552" style="display: none;">
+	<p>This feature enables you to upload multiple transactions via a single 
+	 file in the system. It reduces the efforts required for manually entering 
+	 the bulk transactions through data entry screen. On uploading the 
+	 file, GCP CashWeb carries out file format validations followed 
+	 by data level and field level validations. Once the transactions are 
+	 successfully uploaded, they are automatically closed and appear in 
+	 the authorization screen. Auto authorization and auto release depends 
+	 upon the parameters set in My Product master.</p>
+	<p><span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+			 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Client 
+	 can also upload the file generated by the ERP system directly into 
+	 the GCP CashWeb using this facility. The application at a time 
+	 supports upload of transaction file for a given Client and MyProduct 
+	 combination. MyProduct can include different payment products such 
+	 as internal fund transfer, Low value electronic, High value electronic, 
+	 Cross border transfer, Managers cheque etc based in UDE product linkage 
+	 to MyProduct and its respective product association.</span></p>
+	<hr size="1" align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>:</p>
+	<p 
+		 class="Conventionbullet" style="font-family: 'Franklin Gothic Medium', sans-serif;"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+	 case advice infos are defined for MyProduct then they will be validated 
+	 and populated during file upload against the MyProduct advice info 
+	 field else against the client product advice ifno fields. If the advice 
+	 infos are not defined for MyProduct and Client Product, then the advice 
+	 info values uploaded in the file will be ignored.</p>
+	<p 
+		 class="Conventionbullet" style="font-family: 'Franklin Gothic Medium', sans-serif;"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">In case the 
+	 advice infos are mandatory and yet the file is uploaded, the same 
+	 will appear with status- ‘For Repair’ in the Payment summary screen. 
+	 Select the same and enter the advice info as defined for that product.</span></p>
+	<p 
+		 class="Conventionbullet" style="font-family: 'Franklin Gothic Medium', sans-serif;"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-list: l0 level1 lfo1;">For automatically closing the uploaded 
+	 transactions, the <b style="mso-bidi-font-weight: normal;">Close Required</b> 
+	 flag must not be selected in the My Product master.</span></p>
+	<p 
+		 class="Conventionbullet" style="font-family: 'Franklin Gothic Medium', sans-serif;"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>For 
+	 auto authorization and auto release, the <b style="mso-bidi-font-weight: normal;">Approval 
+	 Required</b> &amp; <b style="mso-bidi-font-weight: normal;">Send Required</b> 
+	 flags <span style="mso-list: l0 level1 lfo1;">must not be selected</span> 
+	 in the My Product master.</p>
+	<hr size="1" align="center">
+</div>
+<p>The <a class="dropspot" href="javascript:TextPopup(this)" id="a2">File 
+ Upload Center<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a> displays a summary of previously uploaded files along 
+ with their related information and status . The display is refreshed every 
+ few minutes, to provide you with the most updated information.</p>
+<div class="droptext" id="POPUP475894630" style="display: none;">
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>File Name</b></span>: This field displays the 
+	 unique file name without the extension</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Date and Tim</b></span>e: This field displays 
+	 the date on which the multiple payment file is uploaded.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Status</b></span>: This field displays the 
+	 status of the uploaded file. The different states of upload can be: 
+	 New, In Queue, Running, Aborted, and Completed.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Remarks</b></span>: This field displays any 
+	 remarks that may have been generated by the system, indicating the 
+	 state of upload. In case, any errors occur during the upload process, 
+	 relevant error messages will be displayed to you in this field. This 
+	 will help you to identify the problem with the uploaded file.</p>
+	<table style="margin-left: 80px;" cellspacing="0" width="100%">
+		<col style="width: 30.514%;">
+		<col style="width: 24.877%;">
+		<col style="width: 44.609%;">
+		<tr style="height: 22px;">
+			<td style="border: Solid 1px #000000;"><p class="TableHeading">Scenarios</p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p class="TableHeading">File 
+			 Status</p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p class="TableHeading">Remarks</p></td>
+		</tr>
+		<tr style="height: 22px;">
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p class="TableNormal">File 
+			 is uploaded successfully</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+				 class="TableNormal">Completed</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+				 class="TableNormal">Data Uploaded Successfully</p></td>
+		</tr>
+		<tr style="height: 22px;">
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p class="TableNormal">File 
+			 goes in Reject Repair</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+				 class="TableNormal">Aborted</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+				 class="TableNormal">Error During Validation Refer Reject 
+			 Repair</p></td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p class="TableNormal">File 
+			 is outright rejected</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+				 class="TableNormal">Aborted</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+				 class="TableNormal">File is Rejected: Please check Error 
+			 Report</p></td>
+		</tr>
+	</table>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Total No. of Txns</b></span>: This shows the 
+	 total number of instruments in the uploaded transaction.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Total Amount</b></span>: This field shows the 
+	 total amount of the transaction.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Rejected</b></span>: This field displays the 
+	 transactions that are rejected by the system.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Reject Report</b></span>: This field provides 
+	 the option to download the Reject Report.</p>
+</div>
+<hr size="1" align="center">
+<p class="ImportantNoteText"><span style="font-weight: bold;"><b>IMP</b></span>: 
+ Prior to uploading a payment request, a file containing all the details 
+ of the payment request should be created as per the format shared with 
+ the Bank. System will validate the file extension while uploading it into 
+ GCP CashWeb. Payment transactions (Batch Payments) can also be uploaded.</p>
+<hr size="1" align="center">
+<hr size="1" align="center">
+<p class="Convensions"><span style="font-weight: bold;"><b>Ref</b></span>: For 
+ more details on the file formats, refer to <b style="mso-bidi-font-weight: normal;">FT_DOC_ANZ_GCPCI_CW_InterfaceFormats_UG</b>.</p>
+<hr size="1" align="center">
+<p style="font-weight: bold;">Uploading Multiple Transactions:</p>
+<p class="ListNumberUG">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+ the <span style="font-weight: bold;"><b><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/upload.png" alt="upload.png" style="border: none;" border="0"></b></span>icon in 
+ the <span style="font-weight: bold;"><b>File Upload Center</b></span> to open 
+ the 'Upload File' screen</p>
+<p class="ListNumberUG">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Enter 
+ the following details:</p>
+<p class="Bullet1"><span style="font-family:Wingdings">&#167;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>File Format Type:</b></span> <span style="mso-bidi-font-size: 11.0pt; 
+	 mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Select 
+ the Upload File Format Type from the drop down list. This list comprises 
+ of all the preloaded file formats available for the client.</span></p>
+<p class="Bullet1"><span style="font-family:Wingdings">&#167;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>File Name</b></span>: Select the file from 
+ your network, using the Browse option. If you are entering the name of 
+ the file, ensure that you are specifying the absolute path of the file.</p>
+<p class="ListNumberUG">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+ <b>Upload</b> to upload the selected file. GCP CashWeb will run file 
+ level validations as well as data level validations on the file. In the 
+ course of validating an uploaded file, if system encounters any errors 
+ that can be repaired, the uploaded file is moved to 'Reject Repair'. If 
+ the errors cannot be repaired in ‘Reject Repair’, then system aborts the 
+ filer. This triggers an event and a notification of the reject reason 
+ is sent to the Client as well as the Bank User by E-mail or SMS as specified 
+ in the Event Notification master. The reject report is available for viewing 
+ or downloading in the File Upload summary screen. If both field and data 
+ level validations are successful, system uploads the file successfully 
+ and GCP CashWeb displays the message <b style="mso-bidi-font-weight: normal;">“File 
+ Uploaded Successfully”.</b></p>
+<p class="ListBullet2Indent"><span style="mso-list: none;"><b style="font-weight: bold; 
+	 mso-bidi-font-weight: normal;">O</b>R</span></p>
+<p class="ListBullet2Indent" style="margin-left: 40px;"><span style="mso-fareast-font-family: Calibri; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Click <b>Cancel</b> 
+ to cancel the upload request.</span></p>
+<hr size="1" align="center">
+<p class="ImportantNoteText"><span style="font-weight: bold;"><b>IMP</b></span>:</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>The 
+ maximum file size allowed for upload is <span style="font-weight: bold;"><b>5MB</b></span>.</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">In 
+ the course of validating an uploaded file, if system encounters any file 
+ related errors, the same is aborted. In case of data level errors, the 
+ file is sent for Reject Repair. This triggers an event and a notification 
+ is sent to the Client as well as the Bank User by Email or SMS as specified 
+ in the Event Notification master. The same can also be viewed on-screen 
+ in the File Upload summary screen. You can also view or download the Reject 
+ report. The rejected file appears in the Payment center with status -</span><span 
+	 style="mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-weight: bold;"><b>Pending Repair</b></span> <span style="mso-fareast-font-family: Calibri; 
+													 mso-bidi-font-family: 'Times New Roman'; 
+													 mso-ansi-language: EN-US; 
+													 mso-fareast-language: EN-US; 
+													 mso-bidi-language: AR-SA;">and 
+ &#160;user can repair the errors and validate the file for further processing.</span></p>
+<hr size="1" align="center">
+<p class="ListNumberUG">4.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Once 
+ the transaction is uploaded successfully, it appears in the <b style="mso-bidi-font-weight: normal;">Payment 
+ Summary</b> screen with status as <b style="mso-bidi-font-weight: normal;">Draft</b> 
+ <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+		 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+		 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: normal;">with 
+ <b style="mso-bidi-font-weight: normal;"><span style="mso-bidi-font-size: 11.0pt; 
+												 mso-fareast-font-family: Calibri; 
+												 mso-bidi-font-family: 'Times New Roman'; 
+												 mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA;">the 
+ option to <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+				 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+				 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+				 font-weight: bold;"><b>Discard <span style="mso-bidi-font-size: 11.0pt; 
+													 mso-fareast-font-family: Calibri; 
+													 mso-bidi-font-family: 'Times New Roman'; 
+													 mso-ansi-language: EN-US; 
+													 mso-fareast-language: EN-US; 
+													 mso-bidi-language: AR-SA;">it.</b> 
+ <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+		 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+		 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Here on 
+ the same workflow steps (<span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+								 mso-bidi-font-family: 'Times New Roman'; 
+								 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+								 mso-bidi-language: AR-SA; font-weight: bold;"><b>Authorization 
+ <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+		 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+		 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">and <span 
+	 style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-weight: bold;"><b>Send), 
+ as in the case of Manual Data Entry have to be followed. If Auto Auth 
+ and Auto Send functionality is enabled in the MyProduct master, the transaction 
+ will directly appear in ‘<b style="mso-bidi-font-weight: normal;">Sent 
+ to Bank’</b> status.</p>
+<hr size="1" align="center">
+<p class="Convensions">Note:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>For 
+ automatically closing the uploaded transactions, you have to set the <span 
+	 style="font-weight: bold;"><b>Auto Submit</b></span> flag as checked in the 
+ <span style="font-weight: bold;"><b>Payments My Product Master Entry &gt;&gt; 
+ Workflow &gt;&gt; File Upload.</b></span></p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+ case of auto authorization and auto release, you need to set the <span 
+	 style="font-weight: bold;"><b>Approval Required</b></span> &amp; <span style="font-weight: bold;"><b>Send 
+ Required</b></span> flags unchecked in the <span style="font-weight: bold;"><b>Payments 
+ My Product Master Entry &gt;&gt; Workflow &gt;&gt; File Upload.</b></span></p>
+<hr size="1" align="center">
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Viewing 
+ the Reject Report<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></h2>
+<div class="droptext" id="POPUP564174009" style="display: none;">
+	<p class="ListBullet2Indent">In case an uploaded file gets aborted 
+	 due to file level validation failure or appears in Reject Repair due 
+	 to data level validation failure, you can download the Reject Report 
+	 to understand why the file was aborted or rejected.</p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+	 the <b style="mso-bidi-font-weight: normal;">File Upload</b> screen, 
+	 click the <b style="mso-bidi-font-weight: normal;">Download</b> hyper 
+	 link of a file under the 'Reject Report' column &#160;which is either 
+	 aborted or rejected.</p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+	 the <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+				 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+				 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+				 font-weight: bold;"><b>File Download</b></span> <span style="mso-bidi-font-size: 11.0pt; 
+	 mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">popup 
+	 that appears, click <b style="mso-bidi-font-weight: normal;">Open</b> 
+	 to view the generated report or you can <b style="mso-bidi-font-weight: normal;">Save</b> 
+	 it on your local machine in .pdf format.</span> <span style="mso-bidi-font-size: 11.0pt; 
+															 mso-fareast-font-family: Calibri; 
+															 mso-bidi-font-family: 'Times New Roman'; 
+															 mso-ansi-language: EN-US; 
+															 mso-fareast-language: EN-US; 
+															 mso-bidi-language: AR-SA; 
+															 font-weight: bold;"><b>&#160;</b></span></p>
+</div>
+<h2><span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+			 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><a 
+	 class="dropspot" href="javascript:TextPopup(this)" id="a5">Repairing 
+ Rejected Transactions<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></span></h2>
+<div class="droptext" id="POPUP564207372" style="display: none;">
+	<p class="ListBullet2Indent" style="mso-bidi-font-size: 11.0pt;"><span 
+	 style="mso-bidi-font-size: 11.0pt;"><span style="mso-fareast-font-family: Calibri; 
+												 mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA; 
+												 mso-bidi-font-family: Arial;">When 
+	 you upload a file with multiple transactions, GCP CashWeb performs 
+	 all the validations that are performed at the time of data entry. 
+	 If the system encounters any errors while uploading the file, you 
+	 can edit or repair the errors at instrument level and send it for 
+	 further processing.</span></span></p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">In the</span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: normal; 
+			 font-weight: bold;"><b>Payments Center,</b></span> <span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><b>c</b></span><span 
+	 style="mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">lick the</span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-weight: bold;"><b>Instrument</b></span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">tab 
+	 to open the instrument summary screen.</span></p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>From 
+	 the <span style="font-weight: bold;"><b>Status</b></span> drop down, select 
+	 <span style="font-weight: bold;"><b>Pending Repair</b></span> to retrieve 
+	 all the instruments that are available for repair</p>
+	<p class="ListNumberUG2">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">To repair 
+	 an instrument, click &#160;<b style="mso-bidi-font-weight: normal;">Edit 
+	 Instrument</b></span> <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+								 mso-bidi-font-family: 'Times New Roman'; 
+								 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+								 mso-bidi-language: AR-SA; mso-spacerun: yes;"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/edit.png" alt="" border="0"></span><span 
+	 style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">. The</span> 
+	 <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+			 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-weight: bold;"><b>Instrument 
+	 Edit</b></span> <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+						 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+						 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">screen 
+	 opens displaying the error reason in the header area.</span></p>
+	<p class="ListNumberUG2">4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 mso-list: l0 level1 lfo2;">Make the necessary changes. System refreshes 
+	 the screen with the updated value and the error displayed on the screen 
+	 disappears.</span></p>
+	<p class="ListNumberUG2">5<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Click 
+	 <b>Update</b></span> <span style="mso-fareast-font-family: Calibri; 
+								 mso-bidi-font-family: 'Times New Roman'; 
+								 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+								 mso-bidi-language: AR-SA; mso-bidi-font-weight: bold;">to 
+	 save the changes, and then <b>Back</b> to go to the Payment center.</span></p>
+	<p class="ListNumberUG2">6<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 mso-bidi-font-weight: bold;">The status of the repaired transaction 
+	 changes to ‘<b>For Submit’</b> and the <b>Submit</b> button gets enabled.</span></p>
+	<p class="ListNumberUG2">7<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-language: AR-SA;">Click <b>Submit</b></span> <span 
+	 style="mso-bidi-language: AR-SA; mso-bidi-font-weight: bold;">and 
+	 the status of the transaction changes to ‘<b>For Auth’.</b></span></p>
+	<p class="ListNumberUG2">8<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: normal;">T</b>o Authorize a repaired transaction, 
+	 click <span style="font-weight: bold;"><b><a href="authorizing_a_payment_transaction.htm">Authorizing 
+	 a Payment Transaction and Releasing it to the Bank</a></b></span></p>
+</div>
+<h2><span style="mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+			 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+			 font-weight: bold;"><b><a class="dropspot" href="javascript:TextPopup(this)" 
+									 id="a3">Reasons why a file can be 
+ rejected<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></b></span></h2>
+<div class="droptext" id="POPUP563947713" style="display: none;">
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-list: l0 level1 lfo1; tab-stops: 45.0pt;"><span style="mso-bidi-font-family: Arial;">File 
+	 is not in the specified format</span></span></p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Product Accounts</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 My Product Code</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 User Accounts</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Instrument 
+	 Number is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Debit Account Number</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Debit 
+	 Account Number is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Transaction Type</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Beneficiary 
+	 Name is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Beneficiary 
+	 Account Number is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Beneficiary Country</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Delivery Mode</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Payment 
+	 Amount Should not be greater than 99999999999.99 Amount</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Payment Currency</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Beneficiary 
+	 Country is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Debit 
+	 Account and Beneficiary Account cannot be same</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Charge 
+	 To is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Details 
+	 of Payment value should contain A-Z or a-z or 0-9 Only</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Invalid 
+	 Payment<span style="mso-spacerun: yes;">&#160;</span>&#160;Amount</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Value 
+	 Date is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Details 
+	 of Payment is Mandatory</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Client 
+	 does not have setup for the Payment Currency</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">If the file 
+	 contains any of the blacklisted characters and Oracle SQL keywords 
+	 (like Insert/Update/Union etc) file will be outright rejected.</span></p>
+	<hr size="1" align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 The functionality related to ‘Edit of Transaction Records’ in the 
+	 Payment Center is dependent on the ‘<b style="mso-bidi-font-weight: normal;">Allow 
+	 Transaction Edit’</b> check box in the ‘Payment My Product Master 
+	 setup.</p>
+	<hr size="1" align="center">
+</div>
+<p class="ListBullet2">&#160;</p>
+<p style="font-weight: bold;"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/see_also.png" alt="see_also.png" style="border: none;" width="21" height="21" border="0">See Also</p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="payment_center.htm">Initiating Manual Payment Transactions</a></p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="standing_instruction1.htm">Standing Instructions</a></p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="stop_manual_cheque.htm">Stop Manual Cheque</a></p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="cheque_book_request.htm">Cheque Book Request</a></p>
+<p class="ListBullet3">&#160;</p>
+<p><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px; margin-right: 5px;" cellspacing="0" width="100%" bgcolor="#02426D" align="right">
+		<col style="width: 100%;">
+		<tr style="height: 10px;">
+			<td style="vertical-align: middle;">
+   <p style="text-align: right; 
+													 font-style: italic; 
+													 font-family: 'Eras Demi ITC', sans-serif; 
+													 color: #ffffff; font-size: 8pt; 
+													 margin-left: 12px;">Innovation. 
+			 Bank on it</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP475831552');
+	TextPopupInit('a2','POPUP475894630');
+	TextPopupInit('a4','POPUP564174009');
+	TextPopupInit('a5','POPUP564207372');
+	TextPopupInit('a3','POPUP563947713');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

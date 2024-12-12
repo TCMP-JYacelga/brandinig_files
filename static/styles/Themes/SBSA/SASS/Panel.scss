@@ -1,0 +1,478 @@
+.x-box-mc {
+	background-color: #eee !important;
+	background-image:
+		url('resources/images/tb.gif');
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: #39393 !important;
+	font-size: 15px !important;
+}
+.x-panel-header-text-default-framed {
+	color: $darkColor !important;
+	font-size: $fontSize12 !important;
+	font-weight: bold !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	line-height: 17px !important;
+}
+.x-toolbar .x-toolbar-text {
+	margin-left: 4px !important;
+	margin-right: 6px !important;
+	white-space: nowrap !important;
+	color: #4c4c4c !important;
+	line-height: 16px !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	font-size: $fontSize12 !important;
+	font-weight: normal !important;
+}
+.x-window-header-text-default {
+	color: $darkColor !important;
+	font-weight: bold !important;
+	line-height: 17px !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	font-size: $fontSize12 !important;
+}
+
+.x-html pre,.x-html tt,.x-html code,.x-html kbd,.x-html samp {font-family: $fontFamily, helvetica, arial, sans-serif !important;}
+.x-panel-header-text-container-default,.x-panel-header-text-container-default-framed {
+	color: #222222 !important;
+	font-size: $fontSize12 !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+}
+.x-window-body-default,.x-window-header-default-top,.x-window-default {background-color: $screenBackground !important;}
+.x-toolbar-default,.x-nlg .x-toolbar-default {background-color: white;background-image: none !important;}
+.xn-custom-toolbar.x-toolbar{ padding: 0px 0px 0px 0px !important; }
+.x-message-box .x-window-body {background-color: white;}
+.x-window .x-window-handle {filter: none;}
+
+.x-body {
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: $darkColor !important;
+	font-size: 78% !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	line-height: normal !important;
+}
+.xn-menu-noicon .x-menu-item-link{
+	padding: 0px 0px 0px 10px;
+}
+.ui-dialog .ui-dialog-titlebar{
+	background: $primaryColor !important;
+	color: $lightColor !important;
+}
+.menu-disable.x-btn-default-small .x-btn-arrow{
+	background-image: none !important;
+} 
+
+.xn-ribbon .x-tool:before{
+	background: none !important;
+	content: "\f0d7" !important;
+	color: $darkColor !important;
+	@include glyph($fontSize11)
+}
+
+.xn-ribbon  .x-panel-header-collapsed-top .x-tool:before{
+	content: "\f0da" !important;
+}
+
+.xn-ribbon .x-tool{
+	padding-top: 2px !important;
+}
+.ux_font-size14 .small-linkblue{
+	font-size: $fontSize11 !important;
+	color: $darkColor !important;
+	padding-left: 3px !important;
+	vertical-align: middle !important;
+}
+.ux_font-size14 .linkblue{
+	font-size: $fontSize11 !important;
+	color: $darkColor !important;
+	padding-left: 3px !important;
+	vertical-align: middle !important;
+}
+.xn-panel .x-panel-header { 
+	background: linear-gradient(to bottom, $panelHeaderColor1, $panelHeaderColor2) !important;
+	background: -webkit-linear-gradient(top, $panelHeaderColor1, $panelHeaderColor2) !important;
+	background: -o-linear-gradient(top, $panelHeaderColor1, $panelHeaderColor2) !important;
+	background: -moz-linear-gradient(top, $panelHeaderColor1, $panelHeaderColor2) !important;
+	color: $primaryColor !important;
+	padding: 12px 5px 11px 10px !important;
+	border-radius: 0px !important;
+	border-width : 0px 0px 2px 0px !important;
+	border-style: solid !important;
+	border-color: $screenBackground !important;
+}
+
+.xn-panel{
+	background-color: $panelBackgroundColor !important;
+	margin-bottom: 12px !important;
+	padding: 0px 10px 12px 10px !important;
+	border-width: 0px !important;
+	@include border-radius(0px)
+}
+
+.xn-panel .x-panel-header-text-container{
+	padding-left: 20px !important;
+}
+/*
+.xn-panel .x-panel-header-default{
+	border-style: solid !important;
+	border-width: 0px 0px 1px 0px !important;
+	border-color: #d0d0d0 !important;
+}*/
+
+.x-panel-header-text-default-framed {
+	font-size: $fontSize16 !important;
+	color: $darkColor !important;
+	font-weight: normal !important;
+	text-transform: uppercase !important;
+}
+
+.ux-header-width .x-panel-header-default{
+	width: 100% !important;
+	border: none !important;
+	left: 0px !important;
+}
+
+.ux-header-width .x-panel-header-text-container{
+	padding: 0px !important;
+}
+
+.ux-toolbar-background.ux_toolbar.x-toolbar{
+	padding: 12px 0px !important;
+	background: $screenBackground !important;
+}
+
+.ux-toolbar-background .xn-btn{
+	margin-right: 10px !important;
+}
+
+.gradiant_back .x-panel-body-default.x-panel-body{
+	background: $panelBackgroundColor !important;
+}
+.ux_panel-background .gradiant_back .x-panel-body-default{ background: $panelBackgroundColor !important; }
+
+.ux_paddingtb.x-panel{
+	background: $panelBackgroundColor !important;
+	border-top: 2px solid $screenBackground !important;
+}
+
+.x-portal .x-portal-column {
+	padding: 12px 0px 12px 0px !important;
+	background: #f3f3f3 !important;
+}
+
+.x-portal .x-column{
+	float: none !important;
+}
+
+.ux_panel-background .x-panel-body{
+	background: $screenBackground !important;
+}
+
+.ux_panel-background{
+	background: $screenBackground !important;
+}
+
+.ux_panel-transparent-background .x-panel-body{
+	background: $panelBackgroundColor !important;
+}
+
+.ux-header-width .x-panel-header-default{
+	border-bottom: 2px solid $lightColor !important;
+}
+
+.x-portal-body {
+    background : $screenBackground !important;
+}
+
+/*overrinding ext-uscash class for AccountSummaryView.js*/
+.x-custom-header-font{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	font-size: 15px !important;
+	font-weight: $fontWeight-Regular !important;
+	color: $primaryColor !important;
+	text-transform: uppercase;
+}
+
+/*AccountSummaryView.js header padding*/
+.ux_header-pad{
+	padding: 12px 5px 11px 10px !important;
+}
+.x-form-itemselector-top, .x-form-itemselector-up, .x-form-itemselector-add, .x-form-itemselector-remove, .x-form-itemselector-down, .x-form-itemselector-bottom{
+	background: none !important;
+}
+.x-form-itemselector-top:before{
+	content: "\f102" !important;
+	font-weight: bold;
+	@include glyph($fontSize11)
+}
+.x-form-itemselector-top{
+	content: "\f102" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize11)
+}
+
+.x-form-itemselector-up:before{
+	content: "\f106" !important;
+	font-weight: bold;
+	@include glyph($fontSize11)
+}
+.x-form-itemselector-up{
+	content: "\f106" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize11)
+}
+
+.x-form-itemselector-add:before{
+	content: "\f105" !important;
+	font-weight: bold;
+	@include glyph($fontSize11)
+}
+.x-form-itemselector-add{
+	content: "\f105" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize11)
+}
+
+.x-form-itemselector-remove:before{
+	content: "\f104" !important;
+	font-weight: bold;
+	@include glyph($fontSize11)
+}
+.x-form-itemselector-remove{
+	content: "\f104" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize11)
+}
+
+.x-form-itemselector-down:before{
+	content: "\f107" !important;
+	font-weight: bold;
+	@include glyph($fontSize11)
+}
+.x-form-itemselector-down{
+	content: "\f107" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize11)
+}
+
+.x-form-itemselector-bottom:before{
+	content: "\f103" !important;
+	font-weight: bold;
+	@include glyph($fontSize11)
+}
+.x-form-itemselector-bottom{
+	content: "\f103" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize11)
+}
+.x-toolbar .x-toolbar-item {
+	margin: 0 6px 0 0 !important;
+	font-size: $fontSize11 !important;
+}
+
+.x-body {
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	}
+.x-panel-header-text-default {
+	color: $fontColor !important;
+	font-size: 15px !important;
+	font-weight: $fontWeight-Regular !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	line-height: 17px !important;
+	text-transform: uppercase !important;
+}
+/*For Filter By Panel*/
+.xn-ribbon .x-panel-header-default {
+	padding: 12px 5px 11px 10px;
+	background: $panelBackgroundColor !important;
+	color: $fontColor !important;
+	font-size:$fontSize11 !important;
+	border-width: 0px !important;
+}
+
+/*For Filter By Panel*/
+.xn-ribbon .x-panel-header-text-container {
+	padding-left:20px !important;
+}
+
+/*For Grid Header*/
+.xn-ribbon.ux_no-padding .x-panel-header-text-container{
+	padding:0px !important;
+}
+.ux_payment-type {
+	padding: 6px 0px 0px 10px !important;
+	font-size: $fontSize11 !important;
+	font-weight:$fontWeight-SemiBold !important;
+}
+.xn-panel .x-panel-header-default {
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	/*background: none repeat scroll 0 0 white !important;
+	border: 1px solid #D0D0D0 !important;*/
+	color:$darkColor !important;
+	padding: 12px 5px 11px 10px;
+	/*margin : 4px !important;*/
+}
+/*To Hide an Image*/
+.ux_hide-image {
+	display:none !important;
+}
+.xn-filter-toolbar .ux_margint {
+	padding-top : 0px !important;
+	padding-bottom : 0px !important;
+	margin-top: 3px !important;
+}
+.x-window-header-body-horizontal {
+	height : 37px !important;
+	padding : 8px 10px 5px 10px !important;
+	border-radius: 0px !important;
+	/*background-color: #bfbfbf !important;*/
+	background-color: $primaryColor !important;
+	margin-top: 0px !important;
+	border : none !important;
+}
+.ux_window-position.x-window-default{ top: 30px !important; }
+.x-window-default {
+	border-color : $primaryColor !important;
+	box-shadow : $primaryColor 0px 0px 6px 0px !important;
+}
+.x-window-default .x-tab-default-top {
+	background-image : none !important;
+	background : $inactiveTab !important;
+}
+.x-window-header-text-default {
+	font-size : $fontSize11 !important;
+	font-weight : $fontWeight-SemiBold !important;
+	font-family : $fontFamily !important;
+	color: $lightColor !important;
+}
+
+.x-window-header-default-top {
+	padding: 0px !important;
+}
+
+.ux_background-color-white.xn-panel {
+	background-color : $screenBackground !important;
+	padding : 0px !important;
+	width : 100% !important;
+}
+
+.ux_new-payment .xn-panel{
+	padding : 0px !important;
+	width : 100% !important;
+}
+.ux_toolbar.x-toolbar-default {
+	top : 33px !important;
+	/*padding : 35px 0px 10px 0px !important;*/
+}
+.panel-seperator {
+	border-right-width: 0px !important;
+}
+.ux_file-details-panel .x-panel-header-default{
+	width : 100% !important;
+	left : 0px !important;
+}
+.ux_background-color-f6f6f6 {
+	background-color: #f6f6f6 !important;
+}
+.ui-dialog {
+	padding : 0px !important;
+	border: 1px solid #bfbfbf !important;
+}
+.ui-dialog .ui-dialog-title {
+	font-size: $fontSize11 !important;
+	font-family: $fontFamily !important;
+}
+.ux_blue {
+	color : #13e82 !important;
+	font-weight : bold !important;
+}
+.x-tool-after-title {
+	background : none !important;
+}
+.x-tool-after-title:before {
+	content: "\f057" !important;
+	color: $lightColor !important;
+	@include glyph($fontSize16)
+}
+.x-tool-img {
+	background : none !important;
+}
+.ux_toolbar.x-toolbar {
+	padding : 0px !important;
+}
+.ux_payment-report {
+	color : red !important;
+	background : none !important;
+	font-size : $fontSize11 !important;
+}
+
+.ux_background-color-white .gradiant_back .x-panel-body-default {
+ background-color : $screenBackground !important;
+}
+.ux_border-bottom .x-panel-header-default {
+	border-bottom: 2px solid $screenBackground !important;
+}
+.ux_padding-left0 .x-panel-header-text-default{
+	padding-left: 0px !important;
+}
+.ux_heighlight.x-box-item{
+background : none !important;font-weight : $fontWeight-SemiBold !important;color : #135e82 !important;
+}
+.xn-ribbon .x-panel-header {
+    background: linear-gradient(to bottom, $panelHeaderColor1, $panelHeaderColor2) !important;
+	background: -webkit-linear-gradient(top, $panelHeaderColor1, $panelHeaderColor2) !important;
+	background: -o-linear-gradient(top, $panelHeaderColor1, $panelHeaderColor2) !important;
+	background: -moz-linear-gradient(top, $panelHeaderColor1, $panelHeaderColor2) !important;
+	padding: 12px 5px 11px 10px;
+}
+.xn-ribbon .x-panel-header-default-collapsed-border-top{ border: 0px !important; }
+.xn-ribbon .x-panel .x-panel-header-default-framed-top
+{
+	border-bottom-width: 0px!important;
+}
+.xn-ribbon.x-panel-default-framed{
+	border-radius:0px;
+	border-width:0px;	
+}
+.ux-custom-header-font{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	font-size: $fontSize16 !important;
+	font-weight: normal !important;
+	color: $darkColor !important;
+}
+
+.ux_nopanelpad.x-panel-default-framed{ padding: 0px !important; }
+.ux_popup_width{
+	width:480px !important;
+}
+
+.xn-portlet .x-tool{
+	 display :none !important;
+}
+
+.paymentqueuespacer .x-component{ padding: 3px 0px 0px 5px !important; } 
+.paymentqueuespacer .icon-company{ font-size: $fontSize14 !important; } 
+
+.gradiant_back.xn-ribbon .ux_paddingtb .x-panel-body-default.x-panel-body {
+  background: transparent !important;
+}
+
+.gradiant_back.xn-ribbon.x-panel .x-panel-body-default.x-panel-body {
+  background: #eee9d5 !important;
+}
+
+.gradiant_back{ background-color: #f6f6ee !important; }
+
+.gradiant_back .x-tool-after-title{ left: 0px !important; }
+
+.ux_panel-transparent-background.xn-ribbon .x-tool-after-title{ left: 0px !important; }
+
+
+
+

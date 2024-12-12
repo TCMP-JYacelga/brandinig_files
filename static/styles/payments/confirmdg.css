@@ -1,0 +1,31 @@
+/*
+ * SimpleModal Confirm Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2009 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: confirm.css 185 2009-02-09 21:51:12Z emartin24 $
+ *
+ */
+
+
+/* Overlay */
+#confirmModalOverlay {background-color:#eee; cursor:wait;}
+
+/* Container */
+#confirmModalContainer {height:auto; width:800px; font-family:'Trebuchet MS', Verdana, Arial; font-size:16px; text-align:left; background:White; border:2px solid #1C5F62; padding: 0 0 10px 0;}
+#confirmModalContainer .header {height:30px; width:100%; background:url('../../images/wtdarkgreen.png') repeat-x; color:White; font-size:1.1em; font-weight:bold; line-height:30px;}
+#confirmModalContainer .header span {padding-left:8px; color: White;}
+#confirmModalContainer .message {color:#333333; text-align:left; margin:0; padding:4px 4px 4px 0px; font-size:1em; display:block; }
+#confirmModalContainer .buttons {float:right; padding:10px 4px 0;}
+#confirmModalContainer .buttons span {float:right; margin-left:8px; width:70px; height:22px; color:#257F82; font-weight:bold; text-align:center; background:url('../../images/button.gif') repeat-x; background-position: top; border:1px solid #bbb; cursor:pointer; padding-top: 4px;}
+#confirmModalContainer a.modalCloseX,
+#confirmModalContainer a.modalCloseX:link,
+#confirmModalContainer a.modalCloseX:active,
+#confirmModalContainer a.modalCloseX:visited {text-decoration:none; font-weight:bold; font-size:1.1em; position:absolute; top:3px; left:400px; color:#ddd; border: 0px none White;}
+#confirmModalContainer a.modalCloseX:hover {color:White;}
+#confirmModalContainer textarea {border: 1px solid WindowFrame;}

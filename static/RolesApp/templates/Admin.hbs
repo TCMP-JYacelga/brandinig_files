@@ -1,0 +1,55 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.expandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.collapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} {{#selectAsset assetId "03"}}
+	
+		{{#if allowedFeatures}}
+			{{>featureTemplate assetid="03"}}	
+		{{/if}}
+		
+		{{>prevTemplate assetid="03"}}
+
+		{{>interfacePriviTemplate assetid="03"}}
+
+	<!--Message and Reports Privileges starts here -->
+	<div class="row">
+
+		<!-- Start of Message -->
+		<div class="col-sm-6">
+			{{>msgTemplate assetid="03"}}
+		</div>
+		<!-- End of Message -->
+
+		<!-- Start of Reports -->
+		<div class="col-sm-6">
+			{{>reportTemplate assetid="03"}}
+		</div>
+		<!-- End of Reports -->
+	</div>
+	<!--Message and Reports Privileges ends here -->
+
+	<!--Widgets and Alerts starts here -->
+	<div class="row">
+
+		<!-- Start of Widgets -->
+		<div class="col-sm-6">
+			{{>widgetTemplate assetid="03"}}
+		</div>
+		<!-- End of Widgets -->
+
+		<!-- Start of Alerts -->
+		<div class="col-sm-6">
+			{{>alertTemplate assetid="03"}}
+		</div>
+		<!-- End of Alerts -->
+	</div>
+	<!--Widgets and Alerts Ends here -->
+	{{/selectAsset}} {{/each}}
+</div>

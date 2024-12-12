@@ -1,0 +1,27 @@
+/*
+ * SimpleModal Confirm Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+#confirm {display:none;}
+
+/* Overlay */
+#confirm-overlay {background-color:#eee;}
+
+/* Container */
+#confirm-container {height:140px; width:420px; text-align:left; background:#fff; border:1px solid #cfcfcf;}
+#confirm-container .header {height:30px; line-height:30px; width:100%; background:#f6f6f6 url('../themes/tandem/jquery/ui-bg_glass_75_f6f6f6_1x400.png') 50% 50% repeat-x; color:#0066cc; font-weight:bold;}
+#confirm-container .header span {padding-left:8px;}
+#confirm-container .message {color:#333; font-size:14px; margin:0; padding:12px 4px 12px 8px;}
+#confirm-container .buttons {line-height:26px; width:160px; float:right; padding:10px 8px 0;}
+#confirm-container .buttons div {float:right; margin-left:4px; width:70px; height:26px; color:#336699; font-weight:bold; text-align:center; background:#ebebeb url('../themes/tandem/jquery/ui-bg_glass_85_ebebeb_1x400.png') 50% 50% repeat-x; border:1px solid #d3d3d3; cursor:pointer;}
+#confirm-container .buttons span {float:right; margin-left:4px; width:70px; height:26px; color:#336699; font-weight:bold; text-align:center; background:#ebebeb url('../themes/tandem/jquery/ui-bg_glass_85_ebebeb_1x400.png') 50% 50% repeat-x; border:1px solid #d3d3d3; cursor:pointer;}
+#confirm-container a.modal-close,
+#confirm-container a.modal-close:link,
+#confirm-container a.modal-close:active,
+#confirm-container a.modal-close:visited {text-decoration:none; font-weight:bold; position:absolute; right:10px; top:6px; color:#000; display:block; width:16px; height:16px;text-align:center;vertical-align:middle;}
+#confirm-container a.modal-close:hover {color:#ccc; border:1px solid #336699;border-radius:2px;}

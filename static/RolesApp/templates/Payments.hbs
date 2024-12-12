@@ -1,0 +1,120 @@
+<div>
+  <div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.payexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.paycollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{{#each assets}} {{#selectAsset assetId "02"}}
+
+		{{#if allowedFeatures}}
+			{{>featureTemplate assetid="02"}}	
+		{{/if}}
+
+
+	<!--Payments Privileges starts here -->
+
+		{{>prevTemplate assetid="02"}}
+
+	<!-- Payment Privileges ends here  -->
+
+	<!--Payments Packages starts here -->
+	
+		{{>packageTemplate assetid="02"}}
+		
+	<!--Payments Packages starts here -->
+
+	<!--Payments Templates starts here -->
+	
+		{{>paymentTemplate assetid="02"}}
+	<!-- Payment Template ends here  -->
+
+	<!--Payments Accounts starts here -->
+		<div class="row">
+			<div class="col-sm-12">
+				{{>accountTemplate assetid="02"}}
+			</div>
+		</div>
+	<!-- Payment Account ends here  -->
+	
+	
+	<!--Start of Company Id -->
+		<div class="row">
+			<div class="col-sm-12">
+				{{>cmpIdTemplate assetid="02"}}
+			</div>
+		</div>
+	<!-- End of Company Id  -->
+	
+
+	<!--Report and Alerts starts here -->
+		<div class="row">
+			<!-- Start of Alerts -->
+				<div class="col-sm-6">
+				{{>alertTemplate assetid="02"}}
+				</div>
+			<!-- End of Alerts -->
+			
+			<!-- Start Report  -->
+				<div class="col-sm-6">
+				{{>reportTemplate assetid="02"}}
+			</div>
+			<!-- End of Reports -->
+		</div>
+	<!--Report and Alerts ends here -->
+
+	<!--Widget Privileges starts here -->
+		<div class="row">
+			<!-- Start of Widgets -->
+				<div class="col-sm-6">
+				{{>widgetTemplate assetid="02"}}
+			</div>
+			<!-- End of Widgets -->
+		</div>
+	<!--Widgets Privileges ends here -->
+
+	<!--Granular Privileges - Payment starts here -->	
+		<div class="row">
+			<div class="col-sm-12">
+				{{>granPaymentTemplate assetid="02"}}
+			</div>
+		</div>
+	<!--Granular Privileges  -Payment ends here -->	
+	
+	<div class="row">
+				
+		<!--Granular Privileges - Template starts here -->	
+		<div class="col-sm-12">
+			{{>granTempTemplate assetid="02"}}
+		</div>
+		<!--Granular Privileges - Template ends here -->	
+	
+	</div>
+			
+	<div class="row">
+	
+		<!--Granular Privileges - SI starts here -->	
+		<div class="col-sm-12">
+			{{>granSITemplate assetid="02"}}
+		</div>
+		<!--Granular Privileges - SI ends here -->	
+	
+	</div>
+						
+	<div class="row">
+	
+		<!--Granular Privileges - Reversal starts here -->	
+		<div class="col-sm-12">
+			{{>granReversalTemplate assetid="02"}}
+		</div>
+		<!--Granular Privileges - Reversal ends here -->	
+	
+	</div>
+
+	
+{{/selectAsset}} {{/each}}
+
+</div>

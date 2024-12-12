@@ -1,0 +1,25 @@
+{
+	"d" :
+		{
+		"groupTypes" :
+					 [{
+					 	"groupTypeDesc" : "Status",
+						"groupTypeCode" : "STATUS",
+					 	"groups" :
+					 			 [{
+					 				"groupCode" : "STATUS_PENDING",
+									"groupDescription" : "Pending Approve",
+									"groupId" : "status",
+									"groupQuery" : " ((isSubmitted eq 'Y' and (requestState eq '0' or requestState eq '1')) or (requestState eq '4' or requestState eq '5')) "
+					 			  },
+								  {
+					 				"groupCode" : "STATUS_ACTIVE",
+									"groupDescription" : "ACTIVE",
+									"groupId" : "status",
+									"groupQuery" : " isValidFlag eq 'Y' and requestState eq '3' "
+					 			  }
+					 			  
+					 			 ]
+					 }]
+		}
+}

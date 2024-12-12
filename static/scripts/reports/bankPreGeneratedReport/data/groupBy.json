@@ -1,0 +1,40 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "Modules",
+			"groupTypeCode" : "MODULE",
+			// "columns" : [],
+			"groups" : [{
+				"groupCode" : "01",
+				"groupDescription" : "Balance Reporting",
+				"groupId" : "01",
+				"groupQuery" : "reportModule=01"
+			}, {
+				"groupCode" : "02",
+				"groupDescription" : "Payment",
+				"groupId" : "Payment",
+				"groupQuery" : "reportModule=02"
+			},{
+				"groupCode" : "06",
+				"groupDescription" : "FSC",
+				"groupId" : "06",
+				"groupQuery" : "reportModule=06"
+			},{
+				"groupCode" : "04",
+				"groupDescription" : "Liquidity",
+				"groupId" : "04",
+				"groupQuery" : "reportModule=04"
+			},{
+				"groupCode" : "05",
+				"groupDescription" : "Collections",
+				"groupId" : "05",
+				"groupQuery" : "reportModule=05"
+			}]
+			}],
+			"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+			}
+	}
+}

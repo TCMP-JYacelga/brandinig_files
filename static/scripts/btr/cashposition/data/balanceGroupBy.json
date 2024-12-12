@@ -1,0 +1,10 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "All",
+			"groupTypeCode" : "all",
+			"groups" : []
+			
+		}]
+	}
+}

@@ -1,0 +1,172 @@
+.panel
+{}
+
+.widget
+{
+    margin-top: 30px;
+}
+
+.widget .card-body
+{
+    min-height: 540px;
+}
+
+.finastra-layout-top
+{
+    background-color: #694ed6 !important;
+    height: 150px;
+}
+
+.main-container
+{
+    margin: -140px auto 10px auto;
+}
+
+.dash-header-enterprice
+{
+    color: white;
+    text-align: right;
+}
+
+card-header widget-card-header *,
+.dash-header-enterprice div *
+{
+    display: inline;
+}
+
+.br-header h5,
+.br-header button
+{
+    display: inline;
+}
+
+.br-header .widget-action-menu
+{
+    display: inline;
+    text-aling: right;
+    float: right;
+}
+
+.poweredBy
+{
+    display: block;
+    clear: both;
+}
+
+.card
+{
+    width: 100%;
+}
+
+#groupWidgetContainer_bannerContainer .card-header,
+#groupWidgetContainer_bannerContainer .widget-top-label,
+#groupWidgetContainer_bannerContainer .card-footer
+{
+    display: none;
+}
+
+
+.card:hover {
+ 	box-shadow: 0 0 0 rgba(0,0,0,.15)!important;
+}
+
+.widget-item {
+    border: 0px;
+	border-radius: .25rem;
+	box-shadow: none;
+	padding: 2px !important;
+	background: #FFF;
+}
+
+
+#dash-top-container {
+	padding: 0px;
+}
+
+#dash-left-container {
+	padding: 0px;
+}
+
+.widget-card-header {
+	margin: 0px;
+}
+
+.material-icons {
+	position: relative !important;
+}
+
+.payables-card-body, .payments-card-body {
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.card-header {
+    border-bottom: 1px solid #f8f9fa !important;
+}
+
+DIV#\30 .col-md-12 {
+	padding: 0px;
+}
+
+DIV#\30 .col-md-12 {
+	padding: 0px;
+}
+
+DIV#\30 .col-md-12 {
+	padding: 0px;
+}
+
+.card-header {
+	padding-top: 0px;
+}
+
+.widget-card-header {
+	padding-top: 0px;
+}
+
+.widget-title {
+	font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+	color: #000000;
+}
+
+.widget-item {
+	margin-bottom: 0px;
+}
+
+/** Keep minimum height of datatable row */
+.dataTables_scrollBody TD {
+	height: 44px;
+}
+
+/** Hide currency converter icon on account type widget */
+.compare-arrow {
+	height: 17.5px;
+}
+.compare-arrow i {
+	display: none;
+}
+
+/** Remove unwanted padding and margin from View All link */
+
+.view-more-btn {
+	height: auto;
+}
+
+.view-more-btn A {
+	padding: 0px;
+	margin: 0px;
+	font-weight: normal;
+}
+
+/** Remove unwanted padding from widget body */
+.widget-body, .widget-card-body {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.card-footer {
+	padding-left: 0px;
+	padding-right: 0px;
+}

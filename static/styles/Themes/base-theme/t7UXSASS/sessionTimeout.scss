@@ -1,0 +1,67 @@
+@media (min-width: 576px) {
+#sessionPopup .modal-dialog {
+    margin: 0px;
+}
+}
+
+#sessionPopup .modal-dialog {
+	margin: 0px;
+	height: 271px;
+}
+
+#sessionPopup .modal-content {
+	width: 333px;
+    height: 271px;	
+}
+
+#sessionPopup .modal-header {
+	padding: 1rem !important;
+    border-bottom: 0px !important;
+}
+
+#sessionPopup .modal-title {
+	margin-bottom: 1rem;
+	line-height: 1.5;
+	font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.28px;
+}
+
+#sessionPopup .modal-content .modal-body {
+	padding: 16px 16px;
+    overflow: hidden;
+}
+
+.sessionTimeout-subtitle-1 {
+    color: rgba(65,65,65,0.6);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+}
+
+.text-time {
+	font-size: 24px;
+    color: #505D6F;
+}
+
+#sessionPopup .modal.show .modal-dialog {
+	width: 333px;
+    height: 271px;
+}
+
+#sessionPopup .modal-content .modal-footer {
+	padding: 16px 16px;
+    border-top: 0;
+    display: inline;
+}
+
+.sessionPopup-sessionTimeout {
+    outline: 0px;
+    height: 271px;
+    width: 333px;
+    top: 231px;
+    left: calc(50vw - 170px);
+    margin: 0px;
+}

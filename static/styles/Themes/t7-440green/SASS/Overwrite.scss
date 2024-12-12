@@ -1,0 +1,12 @@
+.ft-header{
+  border-bottom: solid $headerBorderColor 8px;
+  color: $lightColor;
+  .globalHeader{
+    background-position: 10px 3px;
+	width: 320px;
+  }
+}
+
+input.form-control[disabled], input.form-control[readonly]{
+  background-color: $fieldDisabledColor;
+}

@@ -1,0 +1,65 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.brexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.brcollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+ {{#each assets}}
+	{{#selectAsset assetId "01"}}
+
+		<div class="row">
+			<div class="col-sm-12">
+				{{>accountTemplate assetid="01"}}
+			</div>
+		</div>
+
+<div class="row">
+
+	<!--BalanceReporing Permission starts here -->
+	<div class="col-sm-6">
+			{{>prevTemplate assetid="01"}}
+	</div>
+	<!--BalanceReporing Permission ends here -->	
+	
+	<!--Alerts starts here -->	
+	<div class="col-sm-6">
+		{{>alertTemplate assetid="01"}}
+	</div>
+	<!--Alerts ends here -->	
+</div>
+
+
+<div class="row">
+	
+	<!--Reports starts here -->	
+	<div class="col-sm-6">
+		{{>reportTemplate assetid="01"}}
+	</div>
+	<!--Reports ends here -->	
+
+	<!--Widgets starts here -->	
+	<div class="col-sm-6">
+		{{>widgetTemplate assetid="01"}}
+	</div>
+	<!--Widgets ends here -->
+</div>
+
+
+<div class="row">
+	
+	<!--Granular Privileges starts here -->	
+	<div class="col-sm-12">
+		{{>granTemplate assetid="01"}}
+	</div>
+	<!--Granular Privileges ends here -->	
+
+</div>
+
+	  {{/selectAsset}}
+{{/each}}
+
+</div>

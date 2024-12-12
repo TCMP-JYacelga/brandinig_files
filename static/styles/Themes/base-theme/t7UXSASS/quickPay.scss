@@ -1,0 +1,348 @@
+.quickpay-btn {
+    color: $whiteColor;
+    font-size: 28px;
+    float: left;
+    position: fixed;
+    bottom: 25%;
+    left: -8px;
+    height: 265px;
+    background: $secondaryColor;
+    border-radius: 18px;
+    cursor: pointer;
+    width: 25px;
+}
+.quickpay-img {
+    position: absolute;
+    top: 100px;
+    left: 7px;
+    background-color:$whiteColor;
+    border: solid;
+    border-color: $secondaryColor;
+    z-index:99;
+    border-radius: 50%;
+}
+.quickpay-btn-rtl {
+    color: $whiteColor;
+    font-size: 28px;
+    float: right;
+    position: fixed;
+    bottom: 25%;
+    right: -8px;
+    height: 265px;
+    background: $secondaryColor;
+    border-radius: 18px;
+    cursor: pointer;
+    width: 25px;
+}
+.quickpay-img-rtl {
+    position: absolute;
+    top: 100px;
+    right: 7px;
+    background-color:$whiteColor;
+    border: solid;
+    border-color: $secondaryColor;
+    z-index:99;
+    border-radius: 50%;
+}
+.quickPay-text {
+ display: none;
+ font-size: 0.4em;
+ color: black;
+ padding-left: 5px;
+ padding-right: 5px;
+}
+
+.quickpay-img:hover .quickPay-text {
+ display: inline-block;
+}
+
+.quickpay-img:hover{
+ border-radius: 25px !important;
+}
+
+.quickpay-div {
+    display:none;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    left: -410px;
+    height: 100%;
+    width: 390px;
+    background-color: $whiteColor;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+    z-index: 12000;
+    box-shadow: -3px 3px 10px 2px #888888;
+    transition: all 0.4s cubic-bezier(.4,0,.2,1);
+	padding-right:0px !important;
+}
+
+.quickpay-div-rtl{
+    display:none;
+    float: right;
+    position: fixed;
+    bottom: 0;
+    right: 410px;
+    height: 100%;
+    width: 390px;
+    background-color: $whiteColor;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+    z-index: 12000;
+    box-shadow: -3px 3px 10px 2px #888888;
+    transition: all 0.4s cubic-bezier(.4,0,.2,1);
+	padding-right:0px !important;
+}
+
+.quickpay-container {
+ margin:1rem 0rem 1rem 1rem;
+}
+
+.quickpay-buttons {
+ width: 168px;
+ border: 1px solid;
+ border-radius:0px;
+}
+
+.btn.btn-primary.active:hover {
+ background-color: $primaryButtonActiveHoverColor;
+ color:#FFFFFF;
+}
+
+.btn.btn-primary:hover {
+ background-color: $primaryButtonBgColor;
+ color:$primaryButtonHoverColor;
+ border-color: #B0A36A;
+}
+
+#quickpaydiv a:hover {
+ text-decoration: none;
+}
+
+#quickpaydiv a[aria-expanded="false"] {
+ color: grey;
+}
+ #quickpaydiv #fav-bene-collapse[aria-expanded="false"] #fav-bene-expand-icon,
+ #quickpaydiv #all-bene-collapse[aria-expanded="false"] #all-bene-expand-icon,
+ #quickpaydiv #recommended-bene-collapse[aria-expanded="false"] #recommended-bene-expand-icon {
+   display:inline-block;
+ }
+ #quickpaydiv #fav-bene-collapse[aria-expanded="false"] #fav-bene-collapse-icon,
+ #quickpaydiv #all-bene-collapse[aria-expanded="false"] #all-bene-collapse-icon,
+ #quickpaydiv #recommended-bene-collapse[aria-expanded="false"] #recommended-bene-collapse-icon {
+   display:none;
+ }
+
+#quickpaydiv a[aria-expanded="true"] {
+ font-weight:bold;
+ color:$fontColor;
+}
+ #quickpaydiv #fav-bene-collapse[aria-expanded="true"] #fav-bene-expand-icon,
+ #quickpaydiv #all-bene-collapse[aria-expanded="true"] #all-bene-expand-icon,
+ #quickpaydiv #recommended-bene-collapse[aria-expanded="true"] #recommended-bene-expand-icon {
+   display:none;
+ }
+ #quickpaydiv #fav-bene-collapse[aria-expanded="true"] #fav-bene-collapse-icon,
+ #quickpaydiv #all-bene-collapse[aria-expanded="true"] #all-bene-collapse-icon,
+ #quickpaydiv #recommended-bene-collapse[aria-expanded="true"] #recommended-bene-collapse-icon {
+   display:inline-block;
+ }
+ 
+.quickpay-search-icon {
+    display: inline-block;
+    margin-left: -35px;
+    vertical-align: middle;
+    color: $primaryColor;
+}
+
+.quickpay-search-icon-rtl {
+    display: inline-block;
+    margin-left: -25px;
+    vertical-align: middle;
+    color: $primaryColor;
+}
+
+.quickpay-search-input {
+    border: 1px solid grey;
+    margin: 10px 0px;
+    width: 340px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
+#bene-search .bmd-form-group {
+  position:inherit;
+  padding:0px;
+}
+
+.field {
+  margin: 0.7rem 0rem;
+}
+.field-rtl {
+  margin: 0.7rem 0rem;
+  text-align : right;
+}
+
+.pay-receiverName {
+ font-size:20px;
+ color:$primaryColor;
+ margin-top:10px;
+}
+
+.pay-receiverAccNo {
+ font-size: 14px;
+ color: grey;
+}
+
+.quickpay-receiver {
+  cursor: pointer;
+  margin: 0px;
+  padding: 10px;
+}
+
+
+.quickPay-success {
+  color: $successColor;
+  font-size: 40px;
+  margin-left: 150px;
+}
+
+.quickPay-error{
+  color: $errorColor;
+  font-size: 40px;
+  margin-left: 150px;
+}
+
+.input-field{
+  margin: 1.3rem 0rem 0.5rem 0rem;
+}
+
+.quickpay_recent_tnx {
+    border-bottom: 1px solid grey;
+    margin: 11px 10px 11px 2px;
+    padding: 10px;
+}
+
+.quickpay-maxHeight-receivers {
+ max-height: calc(100vh - 124px);
+ overflow:auto;
+}
+
+.quickpay-maxHeight-recentTnx {
+ max-height: calc(100vh - 100px);
+ overflow:auto;
+}
+
+#payment_initiation_screen {
+ max-height: calc(100vh - 105px);
+ overflow:auto;
+}
+
+.quickpay-receiver:hover {
+  background-color:$hoverColor;
+}
+
+.quickpay-closingChevron {
+  position: absolute;
+  top: 50vh;
+  left: 345px;
+  cursor:pointer;
+}
+
+.uxg-quickpay-avatar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  color:  $primaryColor;
+  font-size: 18px;
+  font-weight: bold;
+  background: $quickPayAvatarBGcolor;
+  flex:none;
+  text-transform: uppercase;
+}
+
+.uxg-quickpay-avatar:hover {
+  background: $quickPayAvatarHoverBGcolor;
+  color:$quickPayAvatarHovercolor;
+}
+
+.quickpay-div[aria-modal="true"] {
+  transform : translateX(410px);
+}
+
+.quickpay-div[aria-hidden="true"] {
+  transform : translateX(-410px);
+}
+
+.quickpay-div .modal-dialog {
+   pointer-events:all;
+}
+
+.quickpay-div-rtl[aria-modal="true"] {
+  transform : translateX(410px);
+}
+
+.quickpay-div-rtl[aria-hidden="true"] {
+  transform : translateX(-410px);
+}
+
+.quickpay-div-rtl .modal-dialog {
+   pointer-events:all;
+}
+
+.receiver-avatar {
+ height:80px;
+ width:80px;
+ border-radius:50%;
+ border: 2px solid $primaryColor;
+ background-color: $receiverAvatarBGcolor;
+ text-align: center;
+ flex:none;
+ margin-left: 135px;
+}
+
+.receiver-avatar-rtl {
+ height:80px;
+ width:80px;
+ border-radius:50%;
+ border: 2px solid $primaryColor;
+ background-color: $receiverAvatarBGcolor;
+ text-align: center;
+ flex:none;
+ margin-right: 135px;
+}
+
+.receiver-avatar-initials {
+  position: relative;
+  font-size: 20px;
+  line-height: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $primaryColor;
+}
+
+.quickPay-receiverDesc {
+  color:$secondaryColor;
+}
+
+.quickPay-recentTnx-receiverDesc {
+  color:$secondaryColor;
+  font-size:16px;
+}
+
+.quickPay-recentTnx-amount {
+  font-size:18px;
+  color:$primaryColor;
+}
+
+.quickPay-amount-in-words {
+  color:$secondaryColor;
+  font-size:12px;
+  display:none
+}
+

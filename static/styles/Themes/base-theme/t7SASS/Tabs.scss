@@ -1,0 +1,344 @@
+
+/*
+=============
+Active state.
+=============
+*/
+
+.ft-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @include fontSize(5);
+  line-height: 1;
+  padding-left: 20px;
+  overflow: hidden;
+
+  > li {
+    float: left;
+    padding-top: 3px;
+    padding-left: 5px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  a {
+    background: $tabsColor;
+    border-radius: 5px 5px 0 0;
+    color: $primaryColor;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .ft-tabs-active a {
+    background: $lightColor;
+    color: $headerBorderColor;
+    margin-top: -3px;
+    padding-top: 13px;
+  }
+}
+
+.x-tab-bar-default-top .x-tabbar-scroll-right-hover {
+  background-position: 0px 0px !important;
+}
+
+.ux-dialog .ui-tabs .ui-tabs-nav {
+   	padding: 12px 0px;
+	border-bottom: 1px solid $menuBorderColor;
+}
+
+.ui-tabs {
+  @include fontSize(2);
+  padding: 5px 5px 0px 0px;
+  display: table;
+  height: 30px;
+  width: 100%;
+  .ui-tabs-nav {
+	li{
+		float: left;
+		&:first-child {
+			padding-left: 0;
+		}
+		a {
+		  @include fontSize(2);
+		  font-weight: normal;
+		  background: $tabsColor;
+		  border-radius: 4px;
+		  color: $fontColor;
+		  display: block;
+		  padding: 7px 10px;
+		  text-decoration: none;
+		  margin-right: 10px !important;
+		  background-color: $panelHeaderBackground;
+		  border: 1px solid $fontColor;
+		  &:hover{
+			background-color: $gridTabOverColor;
+		  }
+		}
+	}
+	.ui-state-active a {
+		background: $buttonBackground;
+		color: $lightColor;
+		&:hover{
+			background: $buttonBackground;
+			color: $lightColor;
+		}
+	}
+  }
+}
+.ie-properties{
+	.ui-tabs {
+		height: 60px;
+	}
+}
+.ui-tabs .ui-bar-tabs {
+  padding: 12px 12px 0 12px;
+  background-color: $popupHeaderColor;
+}
+
+.ui-vertical-tab {
+  padding: 0px;
+
+  ul {
+    padding: .2em .1em .2em .2em;
+    float: left;
+    width: 12em;
+
+    li {
+      margin-top: .3em !important;
+    }
+
+    a {
+      width: 170px; 
+      border-radius: 0px !important;
+    }
+  }
+  .ui-vertical-tabs-selected {
+	  a {
+		color: $menuTextColor;
+		background-color: $menuBgColor;
+	  }
+
+	  :after {
+		content: "";
+		border-top: 17px solid transparent;
+		border-bottom: 17px solid transparent;
+		border-left: 11px solid $menuBgColor;
+		position: absolute;
+		right: -11px;
+		top: 0px;
+		z-index: 1;
+	  }
+  }
+}
+
+.ux-dialog.ui-dialog-content .ft-tab-bar-title {
+  @include fontSize(10);
+  font-weight: normal;
+  padding-top: 6px;
+
+  > label {
+    @include fontSize(10);
+    font-weight: normal;
+    color: $advFilterHeaderColor;
+    margin-right: 50px;
+    margin-bottom: 0px;
+    line-height: 24px;
+  }
+}
+
+.ft-tab-bar {
+  .ui-dialog-titlebar {
+    display: none;
+    display: none;
+  }
+
+  &.ui-dialog .ui-dialog-content {
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .ui-tabs {
+    padding: 0px;
+
+    .ui-tabs-nav {
+      li {
+        top: 4px;
+      }
+
+      .ui-dialog-titlebar-close {
+        float: right;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.selected-cb-background {
+  list-style: none;
+  float: left;
+  position: relative;
+  //top: 1px;
+  //margin-top: .3em;
+  border-bottom: 0;
+  padding: 0;
+  white-space: nowrap;
+  //display: block;
+  text-align: left;
+  margin: 0 2px 0 0;
+  :before {
+    //content: "";
+  }
+  tbody{
+	width: 100%;
+  }
+}
+
+.ux_padding2 .x-form-cb {
+  background: none;
+  display: none;
+}
+
+.selected-cb-background {
+  .x-form-item-body .x-form-cb-label {
+	  @include fontSize(4);
+	  font-weight: normal;
+	  background: $primaryColor;
+	  color: $lightColor;
+	  display: block;
+	  padding: 13px 15px;
+	  text-decoration: none;
+	  cursor: pointer;
+	  margin: 0px; 
+	  width: 100%;
+	  &:after{
+		font-family: fontawesome;
+		content: "\f0da";
+		@include fontSize(8);
+		float: right;
+		position: absolute;
+		right: 16px;
+	  }
+	}
+
+  /*.x-form-cb-wrap {
+	width: 165px !important;
+  }*/
+}
+
+.x-form-checkboxgroup-body{
+  padding: 0px;
+}
+
+.ux_padding2 .x-form-cb-label {
+  margin: 0px;
+  @include fontSize(5);
+  font-weight: normal;
+  background: $primaryColor;
+  color: $primaryColor;
+  display: block;
+  padding: 13px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ux_margin2 {
+  .x-form-checkbox {
+    background: none;
+    display: none;
+  }
+  display: inline-table;
+  .x-form-item-body{
+	//display: table;
+  }
+  /*&.selected-cb-background {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }*/
+}
+
+.ux_padding2 {
+  &.selected-cb-background {
+    margin-bottom: 10px;
+  }
+
+  margin-bottom: 10px;
+}
+
+.ux_margin2 .x-form-cb-label {
+  margin: 0px;
+  @include fontSize(4);
+  font-weight: normal;
+  color: #555;
+  display: block;
+  padding: 13px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  height: 39px;
+  &:after{
+	font-family: fontawesome;
+    content: "\f0da";
+    @include fontSize(8);
+    float: right;
+  }
+}
+
+.tabClass {
+  margin-bottom: 0px;
+}
+
+.x-tbar-loading {
+ background: none; }
+
+.x-tbar-loading:before {
+  content: "\f021";
+  font-family: fontawesome;
+  @include fontSize(2);
+  color :$primaryColor;
+  }
+
+
+@media screen and (max-width: 1024px) {
+  .ui-vertical-tab {
+    .ui-vertical-tabs-selected {
+      :after {
+        border-top: 17px solid transparent;
+        border-bottom: 17px solid transparent;
+      }
+    }
+  }  
+}
+
+/*******JQuery vertical tabs styling*******/
+.vertical-tabs{
+	.ui-tabs{
+		.ui-tabs-nav{
+			border-bottom: 0px;
+			li{
+				a{
+					@include fontSize(4);
+					font-weight: normal;
+					background-color: $primaryColor;
+					color: $lightColor;
+					display: block;
+					padding: 8px 10px;
+					text-decoration: none;
+					border: 0px;
+					margin-right: 0px !important;
+				}
+			}
+		}
+	}
+}
+/*******JQuery vertical tabs styling Ends*******/

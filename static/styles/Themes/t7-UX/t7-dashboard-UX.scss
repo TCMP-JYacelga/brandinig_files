@@ -1,0 +1,88 @@
+$baseFontSize: 10px;
+
+@mixin fontSize($size) {
+    font-size: $baseFontSize + $size;
+}
+
+@mixin fontSizeImportant($size) {
+    font-size: $baseFontSize + $size !important;
+}
+
+/* $primaryColor used for primary Buttons, header */
+$primaryColor: #694ed6;
+
+/* Font color used in grid data, labels in entry pages */
+$fontColor: #414141;
+
+/* Font Family used across appliction */
+$fontFamily: Roboto;
+$fontFamilyImportant: Roboto !important;
+
+/*UX dashboard colors */
+$secondaryColor : #c137A2;
+$whiteColor : #FFF;
+$blackColor : #0000;
+
+/*buttons */
+$primaryButtonActiveHoverColor : #745BD9;
+$primaryButtonHoverColor : #664CD5;
+$tertiaryButtonHoverBgColor : #E9E0F9;
+$primaryButtonBgColor : #F7F7FD;
+
+/* success and error colors */
+$successColor : #56c271;
+$errorColor : #f44336;
+
+/* quick pay receiver avatar colors */ 
+$quickPayAvatarBGcolor: #ECE9FA;
+$quickPayAvatarHovercolor: #493694;
+$quickPayAvatarHoverBGcolor: #D9D3F5;
+$receiverAvatarBGcolor: #E9E0F9;
+
+/* view profile colors */ 
+$profileBgColor : #493696;
+$profileBorderColor : #CECECE;
+
+$hoverColor : #F3F3FC;
+
+/* static fields and inputs */
+$inputFieldBgColor : #F7F5FC;
+
+/* data tables colors */
+$oddRowBgColor :  #FBFBFE;
+$rowHoverBgColor : $hoverColor;
+
+/* cards  */
+$cardHeaderBorderBottomColor : #5B45BC;
+
+$modalErrorColor : #E40046;
+$loadingIndBgColor :  rgba(255, 255, 255, 0.7);
+$loadingIndAfterBgColor : #6200EE;
+
+$addWidgetNavSelectedBgColor :  rgba(105,78,214,.04);
+$addWidgetItemHoverColor : rgba(105,78,214,.04);
+$addWidgetActiveNavBgColor :  rgba(105,78,214,.04);
+$navHoverBgColor : rgba(105,78,214,.04);
+$navHoverBorder : rgba(105,78,214,.2);
+$navSelectedIconColor : rgba(105, 78, 214, 0.5);
+$navIconColor: rgba(65, 65, 65, 0.25);
+
+$sideMenuButtonBgColor : rgba(105, 78, 214, 0.2);
+
+$widgetToggleButtonBorderColor :  #7C7C7C;
+$widgetToggleButtonActiveBgColor: #E9E0F9;
+
+$avatarPrimaryColor : $primaryColor;
+$avatarSecondaryColor :$secondaryColor;
+$avatarTertiaryColor : #e40046;
+
+$widgetActionButtonActiveBgColor : #F0EDFB;
+$radioButtonActiveHoverColor    :  rgba(105, 78, 214, 0.5);
+$toolbarActiveBgColor	:	#F0EDFB;
+
+
+/* Imports base UX theme and overwrite SASS files */
+@import "bootstrap-material-design.min.css";
+@import "../base-theme/baseUXComponent.scss";
+@import "../../uxp-themes/theme.scss";
+@import "SASS/OverwriteUX.scss"; 

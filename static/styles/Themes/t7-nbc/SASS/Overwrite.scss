@@ -1,0 +1,126 @@
+.ft-header {
+	color: $fontColor;
+    border-bottom: solid $primaryColor 4px;
+}
+
+.ft-header-dropdown .ft-dropdown-caret {
+    background-image: url("resources/images/T7/caret-black.png");
+}
+
+.ft-pref-dropdown {
+  .ft-dropdown-caret {
+    height: 5px;
+    width: 8px;
+    background-image: url('resources/images/T7/caret-black.png');
+  }
+
+  &:hover {
+    .ft-dropdown-caret {
+      background-image: url('resources/images/T7/caret-white.png');
+    }
+
+    .ft-dropdown-toggle {
+      background-color: $ftDropdownMenuBgColor;
+      color: $primaryColor;
+    }
+  }
+
+  .ft-dropdown-menu {
+    background-color: $ftDropdownMenuBgColor;
+    color: $fontColor !important;
+  }
+
+  &:hover a {
+    color: $ftDropdownMenuTextColor !important;
+  }
+
+  .ft-dropdown-items a:hover {
+    background-color: $lightColor;
+    color: $primaryColor !important;
+    text-decoration: none;
+  }
+}
+
+.ext-dropdown-menu {
+	.x-menu-item{
+		&:hover {
+			.x-menu-item-text {
+				color: $fontColor;
+			}
+		}
+	}
+}
+
+.ft-main-nav{
+	background-color: $moduleHeaderColor2;
+}
+
+.ft-main-nav {
+  .ft-page-active a {
+    color: $primaryColor;
+  }
+}
+
+.ft-sub-nav {
+  background-color: $primaryColor;
+  > li {
+	background-color: $primaryColor;
+	&:hover{
+		a{
+			color: $lightColor;
+			background: $logoutHover;
+		}
+	}
+    > a {
+      color: $lightColor;
+    }
+  }
+  .ft-link-active {
+	background: $logoutHover;
+
+    a {
+      color: $lightColor;
+    }
+  }
+}
+
+li.flyout {
+  > {
+    a {
+      position: relative;
+      background-color: $primaryColor;
+      &:after {
+        border-color: rgba(243, 111, 39, 0);
+        border-top-color: $moduleHeaderColor2;
+        border-width: 5px;
+        margin-left: -8px;
+      }
+    }
+  }
+  .ft-sub-nav-3{
+	background-color: $lightColor !important;
+    border: 1px solid #c3c3c3 !important;
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+	li{
+		a{
+			background: $lightColor !important;
+			color: $fontColor !important;
+			padding-top: 5px;
+			border: none;
+			&:hover{
+				color: $primaryColor !important;
+			}
+		}
+		&:last-child{
+			a{
+				border-bottom: 1px solid #c3c3c3;
+			}
+		}
+	}
+  }
+}
+
+.ui-dialog .ui-dialog-content .ui-tabs .ui-tabs-nav .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:hover, .xn-popup .x-window-header-default-horizontal .x-tool-after-title .x-tool-img:hover{
+	background-position: -93px -136px;
+}

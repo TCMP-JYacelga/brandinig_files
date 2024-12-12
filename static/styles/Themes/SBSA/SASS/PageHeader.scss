@@ -1,0 +1,187 @@
+.toolbar { height: 24px; align: right; padding : 0 25px 4px 0 !important; background: $screenBackground !important;}
+.toolbar1 { height: 24px; align: right; padding : 0 25px 4px -1px !important; font-family: $fontFamily,helvetica,arial,sans-serif; font-size: $fontSize11 !important;}
+.toolbar > a { height: inherit; display: inline-block; vertical-align: middle; padding: 0px; color: #06C; font-family: $fontFamily,helvetica,arial,sans-serif;}
+.toolbar1  a { height: inherit; display: inline-block; vertical-align: middle; padding: 0px; margin:0px; color: #06C; font-family: $fontFamily,helvetica,arial,sans-serif;}
+.toolbar1 > a > img { height: 25px; width: 16px; vertical-align: middle; }
+
+#morePageOptionsDialog a { color: $primaryColor;font-family: $fontFamily,helvetica,arial,sans-serif;}
+
+#navbar { background-image: none; }
+#menubar li a { color: $darkColor; font-weight: normal; }
+#menubar li a:hover { color: #000;  }
+#menubar li.on { background: transparent url('resources/images/right_edge.png') top right no-repeat; }
+#menubar li.on a { background: transparent url('resources/images/left_edge.png') top left no-repeat; font-weight: bold; color: $darkColor; }
+
+/* navigation & menu bar icons */
+.menubar-icon { background-image:url('resources/images/button_icons.png'); background-repeat: no-repeat; }
+
+/* drop line menu */
+.dlddmenu {background: transparent top left repeat-x scroll url('resources/images/menu_bg.png');}
+.dlddmenu > ul > li > a {color:#6B6B6B; background:transparent;}
+.dlddmenu > ul > li > a b {background:transparent;}
+.dlddmenu > ul > li > ul {background:$lightColor;}
+.dlddmenu > ul > li > ul > li {background: transparent right center no-repeat scroll url('resources/images/menu_spacer.gif');}
+.dlddmenu > ul > li > ul > li > a {color:$darkColor;}
+.dlddmenu > ul > li > ul > li > ul {background:$lightColor url('resources/images/submenu_pointer.png') no-repeat; border:1px solid #e8e8e8;}
+.dlddmenu > ul > li > ul > li > ul > li > a {color:$darkColor;}
+.dlddmenu > ul > li > ul > li:hover > a {color:$darkColor;}
+.dlddmenu > ul > li > ul > li > ul > li > a:hover {background:#ececec; color:$darkColor;}
+
+.dlddmenu > ul > li:hover {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul > li:hover > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /*background-color: $lightColor; border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+.dlddmenu > ul > li.current {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul > li.current > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /* border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+
+.dlddmenu > ul:hover > li.current {background: transparent top left no-repeat scroll none;}
+.dlddmenu > ul:hover > li.current > a {background: transparent top left no-repeat scroll none;} /*background:transparent;*/
+.dlddmenu > ul:hover > li.current > a b { background:transparent; }
+.dlddmenu > ul:hover > li.current:hover {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul:hover > li.current:hover > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /*background-color: $lightColor; border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+
+#messageArea.errors { background-color: #ffffbb; }
+#messageArea span { background-image: url('resources/images/icon_error.gif'); background-repeat: no-repeat; background-position: left center; color: #AF4C4C; }
+#messageArea ul li { color: #F7442A; }
+#pageTitle, .pageTitle { color: $primaryColor; text-transform: uppercase; padding: 10px 0px 10px 0px;font-size: $fontSize18; font-family: $fontFamily; }
+#pageTitle span, .pageTitle span{ font-size: $fontSize18; font-family: $fontFamily; }
+#pageTitle span.titleActions a, .pageTitle span.titleActions a {color: #06c; }
+.subHeading { color: #0078ae; }
+.actions_menu a:hover, .actions_menu a:active { background-color: #f3f3f3; }
+.headerBand { background-color: #E0E0E0; color: #cc0000; border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-color: #aaaaaa #aaaaaa transparent #aaaaaa; }
+.stripedback { background: transparent url('resources/images/stripes.gif') top left repeat; }
+.fav_menu_title { background-color: #F3F3F3; font-weight: bold; color: #666666; padding: 6px 2px; }
+.fav_menu_item { min-width: 200px; }
+.fav_menu_item span { color: #0066CC; }
+
+#contactus, #interestrate, #exchangerate { padding: 0px; }
+.dropline {
+	height:29px !important;
+}
+ul.menubar > li.barover  {
+	background: $lightColor ;
+	border-top: 3px solid $borderColor !important;
+}
+ul.menubar > li.barover > a{
+	color: $fontColor !important;
+	padding-top: 0px;
+}
+ul.menubar > li.barover > a {
+	background: $lightColor;
+}
+
+.dropline > ul.dlmenu > li > a:hover{
+	border-bottom: 2px solid $fontColor !important;
+	color: $fontColor !important;
+}
+
+ul.menubar > li > a
+{
+font-family: $fontFamily !important;
+ color:$lightColor !important;
+ font-size: $fontSize11 !important;
+ padding-top: 2px;
+line-height: 25px;
+}
+
+.dropline > ul.dlmenu > li > a{
+color:$fontColor !important;
+font-family: $fontFamily !important;
+font-size: $fontSize11 !important;
+}
+
+.dropline > ul.dlmenu > li {
+	float:left;
+	padding: 0px !important;
+}
+
+.dropline > ul.dlmenu > li > a {
+	padding: 0px !important;
+}
+
+.dropline > ul.dlmenu > li > a  > b{
+	padding: 0px 20px 0px 20px !important;
+}
+
+.dropline > ul.dlmenu {
+padding: 0px !important;
+}
+
+li.flyout > a > b {
+	background: right center no-repeat scroll url('resources/images/flyout.png') !important;
+}
+
+li.flyout > ul > li > a > b
+{
+color:$fontColor !important;
+font-family: $fontFamily !important;
+font-size: $fontSize11 !important;
+}
+
+li.flyout > ul{
+background: $lightColor !important;
+border:none !important;
+padding: 4px 15px !important;
+}
+
+li.flyout > ul > li > a:hover{
+background:$hoverColor !important;
+color:$fontColor !important;
+font-family: $fontFamily !important;
+font-size: $fontSize11 !important;
+}
+
+.toolbar1 { 
+height: 19px !important; padding : 5px 40px 4px 1px !important;
+background-color: $primaryColor !important;
+box-shadow: 0 -5px 5px -5px $menuBarShadow;
+
+}
+
+.toolbar1 a { 
+color:$lightColor !important;
+display : inline !important;
+padding-left: 10px !important;
+}
+.ux_padding-right4 {
+	padding-right : 4px;
+}
+a#homeLink {
+float: left;
+height: 24px;
+font-size: $fontSize18;
+padding-top: 5px;
+padding-right: 10px;
+color: white;
+}
+.ux_alert {
+	color : #c80404 !important;
+	padding-right: 20px;
+}
+div#loginInfo {
+	padding-top : 20px ;
+}
+
+#userInfo div.controls {
+	padding-top : $fontSize14;
+}
+#banklogo {
+	margin-top : 10px;
+}
+#userInfo p {
+	font-size : $fontSize11;
+}
+
+#morePageOptionsDialog{ background: $lightColor !important; font-size: $fontSize11 !important; padding: 0.5em 0.5em; }
+
+#favClient{ background: $lightColor !important; font-size: $fontSize11 !important; padding: 0.5em 0.5em; }
+#favClient .groupHeader{ font-size: $fontSize11 !important; padding: 0px; }
+#favClient .favlink{ font-size: $fontSize11 !important; }
+#favClient table td{ line-height: 24px; height: auto !important; }
+#favClient table td:hover{ background: #f3f3f3; line-height: 24px; height: auto !important; }
+
+#favMenu { background: $lightColor !important; font-size: $fontSize11 !important; padding: 0.5em 0.5em; }
+#favMenu .favitem .favlink{ font-size: $fontSize11 !important; }
+#favMenu table td:hover{ background: #f3f3f3 !important; line-height: 24px !important; }
+#favMenu table td{ line-height: 24px !important; }
+
+#morePageOptionsDialog div{ height: auto !important; line-height: 24px !important; }
+#morePageOptionsDialog div:hover{ height: auto !important; line-height: 24px !important; background: #f3f3f3; }

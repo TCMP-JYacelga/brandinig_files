@@ -1,0 +1,79 @@
+<div id="limAchRevRow">
+<div class="row">
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="achRevMakerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.achRevMakerInfoCaret" "Maker - ACH Reversal"}} </span>
+									<img id = "makerLimit_AchRev" data-makerAchReversalEnabled="{{ makerAchReversalEnabled }}" 
+										 src="{{ checkBoxIcon makerAchReversalEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="achRevMakerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.achRev.defaultLimitProfile" "Default Limit Profile"}}</label>
+								
+								{{#if makerAchReversalEnabled}}
+									<select id="defMaker_AchRev" name="defMaker_AchRev" class="form-control" tabindex="1">
+								{{else}}
+									<select id="defMaker_AchRev" name="defMaker_AchRev" class="form-control" disabled="disabled" tabindex="1">
+								{{/if}}	
+									<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+									{{#each profileList}}
+										{{option profileId profileDescription assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="achRevCheckerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.achRevCheckerInfoCaret" "Checker - ACH Reversal"}}</span>
+									<img id = "checkerLimit_AchRev" data-checkerAchReversalEnabled = "{{ checkerAchReversalEnabled }}" tabindex="1" 
+										 src="{{ checkBoxIcon checkerAchReversalEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="achRevCheckerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.achRev.defaultLimitProfile" "Default Limit Profile"}}</label>
+								{{#if checkerAchReversalEnabled}}
+									<select id="defChecker_AchRev" name="defChecker_AchRev" class="form-control" tabindex="1">
+								{{else}}
+									<select id="defChecker_AchRev" name="defChecker_AchRev" class="form-control" disabled="disabled" tabindex="1">
+								{{/if}}	
+									<option>{{getLabel "lbl.clientUser.limit.achRev.defaultLimitProfile" "Default Limit Profile"}}</option>
+									{{#each profileList}}
+										{{option profileId profileDescription assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+</div>
+</div>

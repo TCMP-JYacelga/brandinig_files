@@ -1,0 +1,164 @@
+ul.tabList li { border: 1px solid #d0ccc9; background: #efefef; }
+ul.tabList li.active { border-bottom: 0px solid transparent; color: #0066cc; background: $lightColor; }
+.tabClientArea { border: 1px solid #d0ccc9; }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 0px solid #d3d3d3; background: $inactiveTab; font-weight: bold; color: #6f6f6f; border-radius:0px !important; -moz-border-radius: 0px  !important;-webkit-border-radius: 0px  !important; -o-border-radius: 0px  !important;-ms-border-radius: 0px  !important;-khtml-border-radius: 0px  !important; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #336699; }
+/*.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 0px solid #336699; color: #0066cc; }*/
+.ui-state-hover a, .ui-state-hover a:hover { color: #336699; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 0px solid #aaaaaa; background: $activeTab; color: $lightColor; border-radius:0px !important; -moz-border-radius: 0px  !important;-webkit-border-radius: 0px  !important; -o-border-radius: 0px  !important;-ms-border-radius: 0px  !important;-khtml-border-radius: 0px  !important;}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: $lightColor !important; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { border: 1px solid #fcefa1; background: #fbf9ee url('resources/images/ui-bg_glass_55_fbf9ee_1x400.png') 50% 50% repeat-x; color: #363636; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a { color: #363636; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error { border: 1px solid #cd0a0a; background: #fef1ec url('resources/images/ui-bg_glass_95_fef1ec_1x400.png') 50% top repeat-x; color: #cd0a0a; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { background-image: none; }
+
+/* states and images */
+.ui-icon { background-image: url('resources/images/ui-icons_222222_256x240.png'); }
+.ui-widget-content .ui-icon { background-image: url('resources/images/ui-icons_222222_256x240.png');}
+.ui-widget-content .ui-icon.ui-icon-closethick:before{ font-family: fontawesome; content: '\f057'; color: $lightColor; font-size: 16px;}
+.ui-widget-content .ui-icon.ui-icon-closethick{ background-image: none !important; text-indent: inherit !important; font-family: fontawesome; content: '\f057'; color: $primaryColor; font-size: 16px;}
+.ui-widget-header .ui-icon { background-image: url('resources/images/ui-icons_222222_256x240.png'); }
+.ui-state-default .ui-icon { background-image: url('resources/images/ui-icons_888888_256x240.png') !important; }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon { background-image: url('resources/images/ui-icons_454545_256x240.png'); }
+.ui-state-active .ui-icon { background-image: url('resources/images/ui-icons_454545_256x240.png'); }
+.ui-state-highlight .ui-icon { background-image: url('resources/images/ui-icons_2e83ff_256x240.png'); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url('resources/images/ui-icons_cd0a0a_256x240.png'); }
+
+.ui-tabs { background-image: none !important; border: 0px none transparent !important; } 
+.ui-tabs .ui-tabs-nav { background-image: none !important; border: 0px none transparent !important; background-color: transparent !important; font-size: $fontSize14  !important; border-bottom: 2px solid $primaryColor !important;}
+.ui-button { font-weight: normal; font-size: inherit; }
+ 
+.linkTabs ul { background: transparent; }
+.linkTabs ul li { padding: 0px 10px; border-bottom: 3px solid #a1a1a1; margin-right: 3px; color: $fontColor; font-size: $fontSize16; }
+.linkTabs ul li a{ color: #a1a1a1; font-size: $fontSize16; padding: 0px 10px; }
+.linkTabs ul li.selectedTab, .linkTabs ul li:hover { border-bottom: 3px solid $primaryColor; font-weight: normal; }
+.linkTabs ul li.selectedTab, .linkTabs ul li:hover a{ color: $primaryColor; font-weight: normal; font-size: $fontSize16; }
+.linkTabs ul li.selectedTab{pointer-events: none;cursor: default;text-decoration: none;}
+.linkTabs ul li.selectedTab a{color: $primaryColor; font-size: $fontSize16;}
+.linkTabs ul.actionbar { background: transparent 0% 0% repeat scroll none; }
+
+.tabs{
+	height: 31px !important;
+	border-left: none !important;
+	border-bottom: 6px solid $activeTab !important;
+}
+
+.tabs .active a{
+	background: $activeTab !important;
+	border: none !important;
+	color: $lightColor !important;
+}
+
+.tabs li a{
+	background: #caebf5 !important;
+	border: none !important;
+}
+
+.tabs li{
+	border: none !important;
+	margin-right: 4px !important;
+}
+
+.tab_container{
+	border: none !important;
+}
+
+.ux_font-icon-setting.fa:before{
+	color: $activeTab !important;
+}
+
+.ux_font-icon-setting{
+	margin-right: 20px !important;
+}
+
+.x-window-default .x-tab-default-top {
+	background-image : none !important;
+	background : $inactiveTab !important;
+}
+.x-window-default .x-tab-top-active {
+	border-radius : 0px !important;
+	background : $activeTab !important;
+}
+.x-tab-default-active .x-tab-inner {
+	color : $lightColor !important;
+}
+
+.ux_tabs .x-tab-active.x-tab-default .x-tab-inner{
+	color : $lightColor !important;
+	font-weight: bold !important;
+}
+
+.x-tab-default-top {
+	border-radius : 0px !important;
+}
+/*.x-tab-default-top.x-unselectable{
+	background : $inactiveTab !important;
+}*/
+.x-tab-bar-strip-default, .x-tab-bar-strip-default-plain {
+	border-color : $activeTab !important;
+}
+.adv-filter-tabPanel-height .x-tab-bar .x-tab-bar-body .x-box-inner .x-tab {
+	padding-left : 10px !important;
+}
+.x-tab-top-active {
+	border-bottom : none !important;
+}
+
+.ui-state-hover,#buttonbar  input[name="Filter"],input[id="Filter"]{
+	border:0px;
+}
+.ux_quick-pay-background.ui-tabs .ui-tabs-nav{
+	background-color: #f3f3f3 !important;
+	border-bottom: 2px solid $activeTab !important;
+}
+.ux_tabs .x-tab-bar .x-tab-bar-body .x-tab-top-active{
+	border: 0 !important;
+	padding: 5px 9px !important;
+	background: $activeTab !important;
+	color : $lightColor !important;
+}
+
+.ux_tabs .x-tab-default-top {
+	background: $inactiveTab !important;
+	padding: 5px 9px !important;
+	color : #6f6f6f !important;
+}
+.ux_tabs .x-tab-default .x-tab-inner {
+	@include fontSizeImportant(4);
+	font-family: $fontFamily !important;
+	font-weight: normal !important;
+	color: $fontColor;
+}
+
+.list-menu-item_24 {
+	padding: 5px 0px 0px 5px;
+	width: 152px;
+	height: 24px;
+	right: auto;
+	left: 0px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.activeTab{
+	background-color: $lightColor;
+	font-weight: bold;
+}
+
+.inactiveTab{ 
+	background-color: #ddd;
+}
+
+.sublinks a.on {
+	color: $activeTab !important;
+	border-bottom: 3px solid $activeTab !important;
+}
+
+.sublinks a.tab:hover  { 
+	color: $activeTab !important;
+	border-bottom: 3px solid $activeTab !important; }

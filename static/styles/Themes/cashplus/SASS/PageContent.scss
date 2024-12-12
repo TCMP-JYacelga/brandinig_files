@@ -1,0 +1,92 @@
+#content { padding: 0px 8px 0 4px; width: 75%;}
+html body { border: 0px transparent none; color: $fontColor; min-width: 992px; }
+a { color: $fontColor;outline:0px !important;  }
+#pageBody { background: $lightColor top left repeat-x scroll url('resources/images/page_background.png'); }
+#historyPage, #seekPage { background: $lightColor url('resources/images/blank_background.gif') repeat !important; }
+#popupBody {background-color: $lightColor;}
+
+#banklogo { height: 53px; width: 340px; background: top left no-repeat scroll url('resources/images/gcp_logo_edited.png'); } 
+
+#maincontainer { background: transparent left top no-repeat scroll none; }
+/*#container, #bodywrapper { background-color: $lightColor; margin: 0 5% !important; }
+#container {height : auto;}*/
+#popupContainer { background-color: $lightColor; }
+
+#messageArea.errors { background-image: url('resources/images/error_background.png'); background-repeat: repeat; border-top: 1px solid #DF7D7D;  border-bottom: 1px solid #DF7D7D; }
+#messageArea span { background-image: url('resources/images/icon_error.gif'); background-repeat: no-repeat; background-position: left center; color: #AF4C4C; } 
+#messageArea ul li { color: #F7442A; }
+#pageTitle, .pageTitle { color: $fontColor; text-transform: uppercase; padding: 10px 0px 10px 0px; }
+#pageTitle span, .pageTitle span{ font-size: 20px; font-family: $fontFamily; }
+#pageTitle span.titleActions a, .pageTitle span.titleActions a {color: #06c; }
+.subHeading { color: #0078ae; }
+
+/* login page: */
+#loginpanel { color:$lightColor; background-color: #6af; background:url('resources/images/login_bg.png') no-repeat left top; border: 0px white none; }
+#staticData { background-color: transparent; }
+.portlet { background-color: #f6f5ed; border: 1px solid #e9e5da; }
+.portlet-title { background: url('resources/images/portlet-header.png'); font-weight:bold; color: white; }
+p#links a { color:white; }
+p#copyright { border-top: 1px solid #FBFBFB; }
+
+/* dashboard */
+#dashboard { border: 0px #aaa none; }
+.window { border: 1px solid #bababa; }
+.windowTitle { color:$lightColor; background: #000000 url('resources/images/ui-bg_highlight-soft_75_ffffff_1x100.png') 50% 50% repeat-x; }
+.windowTitle span { color: $lightColor; }
+.theTitle { color: #FF6600; }
+.widgetTitle h4 { color: #000; }
+#contactus h4 { text-transform: uppercase; }
+#quicklink h4 { text-transform: uppercase; }
+#quicklink ul li a { color: #06c; }
+#interestrate h4 { text-transform: uppercase; }
+#exchangerate h4 { text-transform: uppercase; }
+
+#graphContainer, .graphContainer { border: 1px solid #c7c7c7; }
+.boxshadow { box-shadow:3px 3px 3px #D3D3D3; -moz-box-shadow: 3px 3px 3px #D3D3D3; -webkit-box-shadow: 3px 3px 3px #D3D3D3; filter:progid:DXImageTransform.Microsoft.Shadow(Direction=135,Color='#D3D3D3',Strength=4); }
+
+.success { color: #008000; }
+.failure { color: #ff0000; }
+
+#container, #bodywrapper 
+{ 
+	background-color: #f3f3f3 !important; 
+	margin: auto !important; 
+}
+
+#container {
+	height : auto;
+	margin : 0px 40px !important;
+}
+/*
+form{
+ margin: 12px 0px 0px !important;
+}*/
+
+.ui-dialog .ui-dialog-titlebar{
+	background: $primaryColor !important;
+	color: $lightColor !important;
+}
+#pageBody{
+	background: #f3f3f3 !important;
+}
+
+.page-heading{
+	font-size: 20px !important;
+	text-transform: uppercase !important;
+	padding: 0px !important;
+}
+
+
+#frmMain{
+margin-top:0px !important;
+}
+#filterDiv table tr td {
+padding: 0px;
+}#frmMain{
+margin-top:0px !important;
+}
+#pageTitle div {
+	text-transform: none !important;
+}
+
+#oneColumnContainer{ height: auto; margin: 0px 40px 0px 40px; width: 70%;}

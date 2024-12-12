@@ -1,0 +1,67 @@
+<!--BR Accounts starts here -->	
+	
+	<div class="panel panel-default" id="accountPanel">
+   		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="accountsInfoCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.clientUser.accounts" "Accounts"}}</span>
+						<img id = "accountAll_{{assetid}}" data-version = "{{ assignAllAccounts_version }}" src="{{checkBoxIcon allAccounts}}" class="chkBoxAlign" width="16" height="16" border="0" tabindex="1">
+						<label id="accountAll_{{assetid}}" for="accountAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.clientUser.all" "All"}}</label>
+						<label id="lblAccountCount" class="checkbox-inline pull-right">{{accountsAssignedCount}} {{getLabel "lbl.clientUser.of" "of"}} {{accountsCount}} {{getLabel "lbl.clientUser.selected" "Selected"}}</label>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="accountsInfoDiv" class="panel-body">
+		   	<div class="row grid">
+					<table class="view-grid" style="width:100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text" style = "width:50"></td>
+								<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templateAccounts.acctno" "Account No"}}</td>
+								<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templateAccounts.acctname" "Account Name"}}</td>
+								<td class="view-grid-header-text" >{{getLabel "lbl.clientUser.templateAccounts.status" "Status"}}</td>
+								<td class="view-grid-header-text" >{{getLabel "lbl.clientUser.templateAccounts.companyname" "Company Name"}}</td>
+							</tr>
+										
+						</thead>			
+						<tbody>	
+							
+								  {{#each accounts}}
+								  		<tr class="view-grid-body">
+												<td class="view-grid-body-content text-center">
+													<a class="limit-reached">
+														<img id="chkAccount_{{../assetid}}_{{accountId}}" 
+															data-subsidiaryid="{{ subsidiaryId }}"
+															data-accountname="{{ accountName }}"
+															data-accountid="{{ accountId }}"
+															data-accountno="{{ accountNo }}"
+															data-subsidiaryname="{{ subsidiaryName }}"
+															data-version = "{{ version }}"
+															data-assetid = "{{ ../assetId }}"
+															data-digest = "{{ digest }}"
+														src="{{checkBoxIcon assignedFlag}}" width="16" height="16" border="0" tabindex="1">
+													</a>
+												</td>
+											<td class="view-grid-body-content">{{accountNo}}</td>
+											<td class="view-grid-body-content">{{getStringWithSpecialChars accountName}}</td>
+											<td class="view-grid-body-content">
+												{{getStatusExpression assignedFlag}}
+											</td>
+											<td class="view-grid-body-content">{{getStringWithSpecialChars subsidiaryName}}</td>
+										</tr>
+								  
+								  {{else}}
+										<tr class="view-grid-body">
+												<td class="view-grid-body-content" colSpan="5" style="padding-bottom: 1%;" >&nbsp</td>
+										</tr>
+								 {{/each}}	
+							</tbody>
+					</table>
+		   </div>
+		</div>
+	</div>
+	
+<!--BR Accounts ends here -->

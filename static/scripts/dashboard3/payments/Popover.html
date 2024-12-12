@@ -1,0 +1,270 @@
+<div id="tranInfoPopup" >  
+  <div class="modal" id="myModal" role="dialog" style="display:block">
+    <div class="modal-dialog">
+      <div id="paymentInfo" class="modal-content" >
+	  
+        <div class="modal-header">
+          <h5 class="uxg-h5" style="color:#694ED6">Alert !!</h5>
+          <button type="button" class="close" data-dismiss="modal">x</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+			 <div id="paymentDetailsPopover"></div>
+			 <div id="paymentDetails" style="display:none">
+				<div class="row">
+					<div class="col">
+						<span class="label label-bold">Company</span>
+						<p>Post Holdings</p>
+					</div>
+					<div class="col">
+						<span class="label label-bold">Package</span>
+						<p>Book Transfer</p>
+					</div>
+				  </div>
+				  <div class="row">
+					<div class="col">
+						<span class="label label-bold">Beneficiary</span>
+						<p>Archer Daniel</p>
+					</div>
+					<div class="col">
+						<span class="label label-bold">Effective Date</span>
+						<p>06/11/2020</p>
+					</div>
+				  </div>
+				  
+				  <div class="row">
+					<div class="col">
+						<span class="label label-bold">Amount</span>
+						 <p>USD	98,000.00</p>
+				   </div>
+					<div class="col">
+						<span class="label label-bold">Sending Account</span>
+						 <p>Expense 8000000006</p>
+				   </div>
+				  </div>
+				  <div class="row">
+						<div class="col">
+							<span class="label label-bold">Workflow Standard</span>
+							<p>ACH</p>
+						</div>
+						<div class="col">
+							<span class="label label-bold">Approval Structure</span>
+							 <p>Maker Checker</p>
+					   </div>
+				  </div>
+				  <hr class="t7-light-hr">
+				  <div class="row">
+					<div class="col">
+						<div class="">
+						<i class="material-icons" aria-hidden="true" style="color:red">warning</i> Current balance in account : 
+						<span class="payinrisk">USD 80,000</span>
+						<p>Payment likely to be rejected due to In-sufficient balance in the account</p></div>
+						<p><a href="javascript:void(0)" class="paymentMoreDetail btn btn-outline-secondary">More...</a></p>
+					 </div>
+				  </div>
+				</div>			
+			<div id="paymentMoreDetails" style="display:none">
+				<div class="row popover-grid">
+					<div class="col-2">
+						<img class="uxg-avatar dense d-inline-block m-0" alt="">
+					</div>
+					<div class="col-6">
+						<p>
+							Available pool balance under agreement structure POOLSTR1 is USD 90,000
+						</p>
+					</div>
+					<div class="col-4">
+						<a id="payTriggerSweep" href="javascript:void(0)" class="btn widget-action-lastupdated btn-outline-secondary">Trigger Sweep</a>
+					</div>
+				</div>
+				<div class="row popover-grid">
+					<div class="col-2">
+						<img class="uxg-avatar dense d-inline-block m-0" alt="">
+					</div>
+					<div class="col-6">
+						<p>
+							Available credit facility to drawdown from account 43####3##82 is USD 150,000
+						</p>
+					</div>
+					<div class="col-4">
+						<a href="javascript:void(0)" class="btn widget-action-lastupdated btn-outline-secondary">Draw Advance</a>
+					</div>
+				</div>
+				<div class="row popover-grid">
+					<div class="col-2">
+						<img class="uxg-avatar dense d-inline-block m-0" alt="">
+					</div>
+					<div class="col-6">
+						<p>
+							Request for a new credit facility
+						</p>
+					</div>
+					<div class="col-4">
+						<a href="javascript:void(0)" class="btn widget-action-lastupdated btn-outline-secondary">Apply Online</a>
+					</div>
+				</div>
+
+				  <div class="row">
+					<div class="col">
+						<p>Was this helpful <a class="material-icons" href="javascript:return false;" style="font-size:1.3em;">thumb_up</a>  <a class="material-icons" href="javascript:return false;" style="font-size:1.3em">thumb_down</a></p>
+						<p>Would you like to be reminded of such action in future <a class="material-icons" href="javascript:return false;" style="font-size:1.3em">thumb_up</a>  <a class="material-icons" href="javascript:return false;" style="font-size:1.3em">thumb_down</a></p>
+					</div>
+				  </div>			
+			</div>			  											
+        </div>
+        
+		<div class="model-footer">
+			<div class="w-100 text-right">
+				<button class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+			</div>				
+		</div>    
+        
+      </div>
+	   <div id="collectionInfo" class="modal-content collection-popover d-none">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="uxg-h5" style="color:#694ED6">Overdue Collection</h4>
+          <button type="button" class="close" data-dismiss="modal">x</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body" id="collectionDetails">
+			  <div class="row">
+			    <div class="col">
+					<span class="label label-bold">Company</span>
+					<p>Motorola</p>
+			    </div>
+			    <div class="col">
+				    <span class="label label-bold">Receiving Account</span>
+				     <p>Savings01 - 134101 (USD)</p>
+			   </div>
+			  </div>
+			  
+			  <div class="row">
+			    <div class="col">
+					<span class="label label-bold">Product</span>
+					<p>Outstation Own Bank</p>
+			    </div>
+			    <div class="col">
+				    <span class="label label-bold">Amount</span>
+				     <p>USD 5,310,531.00</p>
+			   </div>
+			  </div>			  
+  			
+			  <div class="row">
+			    <div class="col">
+				    <span class="label label-bold">Effective Date</span>
+				     <p>1/31/2020</p>
+			    </div>
+			    <div class="col">
+				    <span class="label label-bold">Beneficiary</span>
+				     <p>Dell</p>
+			   </div>
+			  </div>
+			  
+			  <div>
+					<span class="label label-bold" style="color:#694ED6">Alert</span>
+			  </div>
+			  <hr class="t7-light-hr">
+			  <div class="row">
+			    <div class="col">
+					<span class="label label-bold">Workflow Standard</span>
+					<p>Outstation</p>
+			    </div>
+			    <div class="col">
+				    <span class="label label-bold">Approval Structure</span>
+				     <p>Maker Checker</p>
+			   </div>
+			  </div>			  
+			  			  											
+        </div>
+        
+		<div class="model-footer">
+			<div class="w-100 text-right">
+				<button class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+			</div>				
+		</div>   
+      </div>      
+    </div>
+  </div>
+<script type="text/javascript" language="JavaScript">
+function closePopup()
+{
+	$( '#myModal' ).dialog( "close" );
+}
+
+</script>
+</div>
+
+<script>
+	$(document).on("click", " .paymentMoreDetail" , function(){
+			$('#paymentDetailsPopover').html($('#paymentMoreDetails').html());
+			//$('#tranInfoPopup .payment-popover').trigger('click').trigger('click');
+	});
+</script>
+
+<!--
+<script>
+
+
+$('#paymentDetailsPopover').html($('#paymentDetails').html());
+	var $payment_popover = $('.payment-popover').popover({
+		title: 'Payment Alert <a href="javascript:void(0)" class="pay-alert close" data-dismiss="alert">&times;</a>',
+		content: function() {
+			return $('#paymentDetailsPopover').html();
+		},
+		html: true,
+						css:'large-popover',
+		trigger: 'manual'
+	});
+
+
+	$(document).on("click", ".popover .close" , function(){
+			$(this).parents(".popover").popover('hide');
+	});
+
+	$(".payment-popover").on('shown.bs.popover', function () {
+			$('.container-fluid.wrapper').css('opacity','0.2');
+	});
+	
+	$(".payment-popover").on('hide.bs.popover', function () {
+			$('.container-fluid.wrapper').css('opacity','inherit');
+	});
+
+
+	$(document).on("click", ".popover .pay-alert.close" , function(){
+			  $('#paymentDetailsPopover').html($('#paymentDetails').html());
+	});
+
+	$(document).on("click", ".popover .paymentMoreDetail" , function(){
+			$('#paymentDetailsPopover').html($('#paymentMoreDetails').html());
+		$('.payment-popover').trigger('click').trigger('click');
+	});
+
+
+	$(document).on("click", ".popover #payTriggerSweep" , function(){
+		$('.popover-body').css('opacity','0.2');
+		$('.popover').append('<div id="div-loading" class="div-loading"><img src="static/scripts/dashboard3/static/images/loader.gif" alt="Loading..."/></div>');
+		setTimeout(function(){
+			$('.payinrisk').html('Current balance in account : USD 85,000');
+			$('.payinrisk').removeClass('label-danger');	
+			$('.payinriskdtl').remove();
+				$('#paymentDetailsPopover').html($('#paymentDetails').html());
+							$('.payment-popover').trigger('click').trigger('click');
+			$('.popover-body').css('opacity','0.9');
+			$('.popover').find('.div-loading').remove();
+
+		},5000);				
+	});
+
+	$(document).on('click', '.payment-popover', function() {
+		$(this).popover('toggle');
+		$('#payment-more-popover').popover({
+			html: true,
+			trigger: 'manual',
+			content: function() {
+				return $('#paymentMoreDetails').html();
+			}
+		});
+	});
+	</script> -->

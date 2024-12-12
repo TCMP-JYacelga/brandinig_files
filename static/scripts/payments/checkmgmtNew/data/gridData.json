@@ -1,0 +1,53 @@
+{
+  "d": {
+	"__count": "3",
+	"__metadata": {
+		"_buttonMask": "11",
+		"isInquieryPlaced" : false,
+		"batchRefNumber" : "id"
+	},
+    "advStopPayChecks": []/*[
+      {
+		"advStopPayMetaData" :{
+			"__rightsMap" :"10",
+			"_detailId" : "recordId",
+			"_buttonMask": "11"
+		},
+        "accountNumber" : "1234",
+        "checkNumber" : "11111",
+        "accountName" : " ABCD",
+        "sellerId" : "USA",
+        "ccy" : "USD",
+        "amount" : "1000",
+        "status" : "check is Paid",
+		 "message": {
+        "errors": [
+          {
+            "errorCode": "P87",
+            "errorMessage": "Amount grater than 0."
+          }
+        ],
+		 "success": "N"
+		}
+      },
+       {
+		"advStopPayMetaData" :{
+			"__rightsMap" :"01",
+			"_detailId" : "recordId",
+			"_buttonMask": "11"
+		},
+        "accountNumber" : "123456",
+        "checkNumber" : "2222",
+        "accountName" : "XYZ",
+        "sellerId" : "USA",
+        "ccy" : "USD",
+        "amount" : "1000",
+        "status" : "check is Paid",
+        "message": {
+        "errors": [],
+		 "success": "Y"
+		}
+      }
+      ]*/
+  }
+}

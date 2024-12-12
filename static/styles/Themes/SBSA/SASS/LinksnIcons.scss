@@ -1,0 +1,96 @@
+.icon-misc-smrcolapse { background-position: 0 -1067px; min-width: 8px; border-width: 0px; height: 24px;}
+.icon-misc-smrexpand { background-position: 0 -1115px; min-width: 8px; border-width: 0px; height: 24px;}
+
+.seeklink {
+	font-family: fontawesome !important;
+	content: "\f00e" !important;
+	font-size: $fontSize11 !important;
+}
+.seeklink:before {
+	font-family: fontawesome !important;
+	content: "\f00e" !important;
+	font-size: $fontSize11 !important;
+}
+.squarebullets { list-style: none; padding:0; margin: 0; }
+.squarebullets li { background: transparent url('resources/images/bullet.gif') left center no-repeat; padding: 0 0 0 16px; }
+.icon-expand-blue { background: transparent 0px -$fontSize14 no-repeat scroll url('resources/images/misc_icons.png'); }
+.icon-collapse-blue { background: transparent 0px -60px no-repeat scroll url('resources/images/misc_icons.png'); }
+.icon-projection { background: transparent 0px -620px no-repeat scroll url('resources/images/button_icons.png'); }
+
+.success { color: #008000; }
+.failure { color: #ff0000; }
+.cursor_pointer {cursor: pointer !important;}
+.fa-stack-1x {
+  line-height: 1.8em;
+  font-size: $fontSize11 !important;
+  padding: 0px 0px 0px;
+}
+.fa-stack-2x {
+  font-size: 1.5em;
+  color: $activeTab !important;
+}
+
+.ux_font-icon-setting.fa:before{
+	color: $fontColor !important;
+}
+
+.ux_font-icon-setting{
+	margin-right: 20px !important;
+}
+.ux_info-icon{
+	background: none !important;
+	padding-left: 8px !important;
+	float: right !important;
+}
+
+.ux_info-icon:before{
+	content: "\f05a" !important;
+	float: right !important;
+	@include glyph($fontSize11)
+}
+.ux_icon-padding.fa{
+	padding-right: 5px !important;
+	opacity: 1 !important;
+	color: $fontColor !important;
+}
+.ux_save-icon:before{
+	font-family: fontawesome;
+	content: "\f0c7" !important;
+}
+.ux_group-action-link > a{
+	padding: 10px 5px 0px !important;
+}
+.xn-ribbon .icon_expand_summ{
+	background-image: none !important;
+}
+
+.xn-ribbon .icon_expand_summ:before {
+	content: "\f0da" !important;
+	color: $darkColor !important;
+	@include glyph($fontSize11)
+}
+.xn-ribbon .icon_expand_summ{
+	content: "\f0da" !important;
+	color: $darkColor !important;
+	@include glyph($fontSize11)
+}
+
+.xn-ribbon .icon_collapse_summ{
+	background-image: none !important;
+}
+
+.xn-ribbon .icon_collapse_summ:before{
+	content: "\f0d7" !important;
+	color: $darkColor !important;
+	@include glyph($fontSize11)
+}
+.xn-ribbon .icon_collapse_summ{
+	content: "\f0d7" !important;
+	color: $darkColor !important;
+	@include glyph($fontSize11)
+}
+.small-icon .x-btn-glyph {
+	font-size : $fontSize11 !important;
+}
+.icon-remark { font-family: "FontAwesome"; content: "\f086"; }
+.icon-remark:before { font-family: "FontAwesome"; content: "\f086"; }

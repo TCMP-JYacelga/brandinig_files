@@ -1,0 +1,18 @@
+.col_1_1,.col_1_2,.col_2_2,.col_1_3,.col_2_3,.col_3_3,.col_1-2_3,.col_2-3_3,.col_1_4,.col_2_4,.col_3_4,.col_4_4,.col_1-2_4,.col_2-3_4,.col_3-4_4,.col_1-3_4,.col_2-4_4,.col_1_5,.col_2_5,.col_3_5,.col_4_5,.col_5_5,.col_1-2_5,.col_2-3_5,.col_3-4_5,.col_4-5_5,.col_1-3_5,.col_2-4_5,.col_3-5_5,.col_1-4_5,.col_2-5_5,.col_12{float:left;overflow:hidden;}
+* html .col_1_1,* html .col_1_2,* html .col_2_2,* html .col_1_3,* html .col_2_3,* html .col_3_3,* html .col_1-2_3,* html .col_2-3_3,* html .col_1_4,* html .col_2_4,* html .col_3_4,* html .col_4_4,* html .col_1-2_4,* html .col_2-3_4,* html .col_3-4_4,* html .col_1-3_4,* html .col_2-4_4,* html .col_1_5,* html .col_2_5,* html .col_3_5,* html .col_4_5,* html .col_5_5,* html .col_1-2_5,* html .col_2-3_5,* html .col_3-4_5,* html .col_4-5_5,* html .col_1-3_5,* html .col_2-4_5,* html .col_3-5_5,* html .col_1-4_5,* html .col_2-5_5{margin-left:-.04em;}
+.col_1_1{width:100%;}
+.col_1_2,.col_2_2{width:50%;}
+.col_1_3,.col_2_3,.col_3_3{width:33.33%;}
+.col_1-2_3,.col_2-3_3{width:66.66%;}
+.col_1_4,.col_2_4,.col_3_4,.col_4_4{width:25%;}
+.col_1-2_4,.col_2-3_4,.col_3-4_4{width:50%;}
+.col_1-3_4,.col_2-4_4{width:75%;}
+.col_1_5,.col_2_5,.col_3_5,.col_4_5,.col_5_5{width:20%;}
+.col_1-2_5,.col_2-3_5,.col_3-4_5,.col_4-5_5{width:40%;}
+.col_1-3_5,.col_2-4_5,.col_3-5_5{width:60%;}
+.col_1-4_5,.col_2-5_5{width:80%;}
+.content{padding:0 10px;overflow:hidden;}
+.col_1_2 .content,.col_1_3 .content,.col_1-2_3 .content,.col_1_4 .content,.col_1-2_4 .content,.col_1-3_4 .content,.col_1_5 .content,.col_1-2_5 .content,.col_1-3_5 .content,.col_1-4_5 .content,.col_1-2_5 .content,.col_1-3_5 .content,.col_1-4_5 .content{padding-left:0;}
+.col_2_2 .content,.col_3_3 .content,.col_2-3_3 .content,.col_4_4 .content,.col_3-4_4 .content,.col_2-4_4 .content,.col_5_5 .content,.col_4-5_5 .content,.col_3-5_5 .content,.col_2-5_5 .content,.col_4-5_5 .content,.col_3-5_5 .content,.col_2-5_5 .content{padding-right:0;}
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+.col_12{ width:12%; }

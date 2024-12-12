@@ -1,0 +1,213 @@
+/*Carousel Start*/
+
+.ft-carousel-slick-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  height: 89px;
+  overflow: hidden;
+}
+
+.ft-carousel-slick-list {
+  position: absolute;
+  top: 0;
+  left: 17px;
+  right: 20px;
+  bottom: 0;
+  height: 100%;
+  visibility: hidden;
+
+  &.slick-initialized {
+    visibility: visible;
+  }
+}
+
+.ft-carousel-slick-item {
+  background-color: $primaryColor;
+  border-radius: 5px;
+  color: $lightColor;
+  cursor: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 9px;
+  position: relative;
+
+  /* Total: 80 pixels tall. */
+  height: 80px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:hover {
+    background-color: darken($primaryColor, 5%);
+  }
+}
+
+.ft-carousel-slick-title {
+  margin-bottom: 10px;
+  max-width: 216px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ft-carousel-slick-value {
+  @include fontSize(14);
+  max-width: 216px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ft-carousel-slick-alert {
+  background-image: url('resources/images/T7/alert-white.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.ft-carousel-slick-active {
+  background-color: $headerBorderColor;
+
+  &:hover {
+    background-color: $headerBorderColor;
+  }
+
+  &:after {
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: $headerBorderColor;
+    border-width: 9px;
+    margin-left: -9px;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+}
+.ft-carousel-slick-wrapper {
+  .slick-prev, .slick-next {
+    background-image: url(resources/images/T7/carousel-arrows.png);
+    background-repeat: no-repeat;
+    opacity: 0.75;
+    margin: 0;
+    padding: 0;
+    width: 15px;
+    height: 80px;
+    top: 0;
+  }
+
+  .slick-prev {
+    background-position: 0 0;
+    left: -17px;
+  }
+
+  .slick-next {
+    background-position: -15px 0;
+    right: -17px;
+  }
+
+  .slick-prev:hover, .slick-next:hover {
+    opacity: 1;
+  }
+
+  .slick-disabled {
+    cursor: default;
+    opacity: 0.25;
+
+    &:hover {
+      cursor: default;
+      opacity: 0.25;
+    }
+  }
+
+  .slick-prev:before, .slick-next:before {
+    display: none;
+  }
+}
+
+/*Carousel Ends */
+
+
+/*
+=========================
+Status bar / Step wizard.
+=========================
+*/
+
+.ft-status-bar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $fontColor;
+    float: left;
+	font-weight: normal;
+    margin-left: 10px;
+	margin-top: 2px;
+    line-height: 34px;
+    position: relative;
+	opacity: .5;
+	&:last-child{
+	  &.ft-status-bar-li-active{
+		opacity: inherit;
+	  }
+	  &:after{
+		display: none;
+	  }
+    }
+  }
+  
+
+  @include fontSize(3);
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+
+  .ft-status-bar-li-done {
+	opacity: initial;
+	background-color: transparent;
+	span{
+		color: $doneStatusBarTextColor;
+		padding-right: 0px;
+	}
+    &:before {
+		font-family: fontawesome;
+		content: '\f00c';
+		@include fontSize(8);
+    }
+
+    &:after {
+      font-family: fontawesome;
+	  content: '\f101';
+	  @include fontSize(8);
+	  padding-left: 10px;
+	  vertical-align: top;
+    }
+  }
+
+  .ft-status-bar-li-active {
+	background-color: transparent;
+	opacity: inherit;
+	span{
+		background-color: $activeStatusBarColor;
+		border: 1px solid $activeStatusBarBorderColor;
+		color: $activeStatusBarTextColor;
+		border-radius: 15px;
+		padding: 8px 10px;
+	}
+
+    &:after {
+      font-family: fontawesome;
+	  content: '\f101';
+	  @include fontSize(8);
+	  padding-left: 10px;
+	  vertical-align: top;
+    }
+  }
+}

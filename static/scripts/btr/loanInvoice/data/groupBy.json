@@ -1,0 +1,42 @@
+{
+	"d" :
+		{
+		"groupTypes" :
+					 [{
+					 	"groupTypeDesc" : "Status",
+						"groupTypeCode" : "STATUS",
+					 	"groups" :
+					 			 [{
+					 				"groupCode" : "STATUS_PENDING_APPROVE",
+									"groupDescription" : "Pending Approve",
+									"groupId" : "status",
+									//"groupQuery" : "((isSubmitted eq 'Y' and (requestState eq '0' or requestState eq '1')) or (requestState eq '4' or requestState eq '5'))"
+									"groupQuery" : ""
+					 			  },
+					 			  {
+					 			  	"groupCode" : "STATUS_ACTIVE",
+									"groupDescription" : "Active",
+									"groupId" : "status",
+									"groupQuery" :  " requestState eq '3' "
+					 			  }
+					 			 ]
+					 },
+					 {
+					 	"groupTypeDesc" : "Advance Filter",
+						"groupTypeCode" : "ADVFILTER",
+					 	"groups" : 
+						 	[{
+								"groupCode" : "filterCode1",
+								"groupDescription" : "LoanIn",
+								"groupId" : "filters",
+								"groupQuery" : ""
+							}, {
+								"groupCode" : "filterCode2",
+								"groupDescription" : "9thFebLoan",
+								"groupId" : "filters",
+								"groupQuery" : ""
+							}, ]
+					 }
+					 ]
+		}
+}

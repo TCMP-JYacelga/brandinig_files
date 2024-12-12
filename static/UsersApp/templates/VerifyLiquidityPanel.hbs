@@ -1,0 +1,54 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="lmsCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">LMS</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="lmsAssetBody" class="panel-body">
+				<div id="lmsFunctionTableDiv">
+				{{#each assets}} 
+				{{#selectAsset assetId "04"}} 
+					  {{#if notionalAgreements}}
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.templatenotional.title" "Notional Agreements"}} </label> <span
+											class="pull-right catseparator">:</span>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="form-group">
+										<span> {{getListExpression notionalAgreements "agreementName" }} </span>
+									</div>
+								</div>
+							</div>
+					{{/if}} 
+				{{#if sweepAgreements}}
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.templatesweep.title" "Sweep Agreements"}} </label> <span
+									class="pull-right catseparator">:</span>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="form-group">
+								<span> {{getListExpression sweepAgreements "agreementName" }} </span>
+							</div>
+						</div>
+					</div>
+				{{/if}}
+			  {{/selectAsset}}
+			{{/each}}
+			</div>
+			
+		</div>
+	</div>
+</div>
+			

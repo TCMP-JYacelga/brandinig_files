@@ -1,0 +1,56 @@
+<div class="col-sm-2" style="vertical-align: top">
+	<div class="modal-body quicklinks-modal-body">
+		<div class="quicklinks-col-left">
+			<div class="list-group quicklinks-nav" role="tablist">
+				<ul id="quickLinkLists">
+						{{#if brEnable}}
+								<li id="MENUITEM_BR">
+								<a href="#/BalanceReporting" class="list-group-item">{{getModLabel "01" "Balance Reporting"}} </a></li> 
+						{{/if}}
+												
+						{{#if forecastEnable}}
+								<li id="MENUITEM_FORECAST">
+								<a href="#/Forecasting" class="list-group-item">{{getModLabel "10" "CashFlow Forecast"}}</a></li>
+						{{/if}}
+						
+						{{#if limitEnable}}	
+								<li id="MENUITEM_LIMIT">
+									<a href="#/Limit" class="list-group-item">{{getModLabel "18" "Limits"}}</a></li>
+						{{/if}}
+						
+						{{#if lmsEnable}}	
+								<li id="MENUITEM_LMS">
+									<a href="#/Liquidity" class="list-group-item">{{getModLabel "04" "Liquidity"}}</a></li>
+						{{/if}}
+						
+						{{#if mobileEnble}}		
+								<li id="MENUITEM_MOBILE">
+									<a href="#/MobileBanking" class="list-group-item"> Mobile Banking </a></li>
+						{{/if}}
+						
+						{{#if payEnable }}	
+						
+								<li id="MENUITEM_PAYMENTS">
+								<a href="#/Payments" class="list-group-item">{{getModLabel "02" "Payments"}}</a></li>
+						{{/if}}	
+												
+						{{#if portalEnable}}
+								<li id="MENUITEM_PORTAL">
+								<a href="#/Portal" class="list-group-item">{{getModLabel "19" "Portal"}}</a></li>
+						{{/if}}
+						
+						{{#if collectionEnable}}
+								<li id="MENUITEM_COLLECTION">
+								<a href="#/Collection" class="list-group-item">{{getModLabel "05" "Receivables"}} </a></li>
+						{{/if}}
+						
+						{{#if fscEnable}}		
+								<li id="MENUITEM_FSC">
+									<a href="#/SCF" class="list-group-item">{{getModLabel "06" "Supply Chain"}}</a></li>
+						{{/if}}
+						
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

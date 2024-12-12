@@ -1,0 +1,361 @@
+﻿h1 {
+    margin-top:12.0pt;
+    margin-right:0in;
+    margin-bottom:3.0pt;
+    margin-left:0in;
+    font-size:14.0pt;
+    font-family:"Franklin Gothic Medium Cond" , sans-serif;
+    color:#005E82;
+    x-next-type:P;
+    font-weight:normal;
+    font-style:normal;
+}
+h2 {
+    margin-right:0in;
+    margin-bottom:3.0pt;
+    margin-left:0in;
+    line-height:12.0pt;
+    font-size:12.0pt;
+    font-family:"Franklin Gothic Medium Cond" , sans-serif;
+    color:#005E82;
+    font-weight:normal;
+    font-style:normal;
+    x-next-type:P;
+    margin-top:16.5pt;
+}
+h3 {
+    margin-top:12.0pt;
+    margin-right:0in;
+    margin-bottom:3.0pt;
+    margin-left:0in;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:Arial, sans-serif;
+    mso-bidi-font-size:10.0pt;
+    font-weight:bold;
+    x-next-type:P;
+    color:#e55e1c;
+}
+h4 {
+    margin-top:12.0pt;
+    margin-right:0in;
+    margin-bottom:3.0pt;
+    margin-left:0in;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+}
+h5 {
+    margin-top:6.0pt;
+    margin-right:0in;
+    margin-bottom:6.0pt;
+    margin-left:0in;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+}
+p.ListBullet {
+              margin-right:0in;
+              font-size:10.0pt;
+              font-family:Arial, sans-serif;
+              margin-top:6pt;
+              margin-bottom:6pt;
+              list-style:rh-list;
+              x-list-class:rl-p-ListBullet;
+              x-list-level:1;
+              text-indent:-0.25in;
+              margin-left:69px;
+              color:#008080;
+}
+p.ListBullet2 {
+               margin-top:6.0pt;
+               margin-right:0in;
+               margin-bottom:6.0pt;
+               text-indent:-15px;
+               font-size:11pt;
+               font-family:Arial;
+               color:#000000;
+               list-style:rh-list;
+               x-list-class:rl-p-ListBullet2;
+               x-list-level:1;
+               margin-left:39px;
+}
+p.ListBullet3 {
+               margin-top:6.0pt;
+               margin-right:0in;
+               font-size:10.0pt;
+               font-family:Arial, sans-serif;
+               margin-bottom:6pt;
+               list-style:rh-list;
+               x-list-class:rl-p-ListBullet3;
+               x-list-level:1;
+               text-indent:-20pt;
+               margin-left:50pt;
+               color:#000000;
+}
+p.BodyText {
+            margin-top:0in;
+            margin-right:0in;
+            margin-bottom:8.0pt;
+            margin-left:0in;
+            text-align:justify;
+            font-size:10.5pt;
+            font-family:Arial, sans-serif;
+}
+p.BodyTextIndent {
+                  margin-top:6.0pt;
+                  margin-right:0in;
+                  margin-bottom:6.0pt;
+                  margin-left:.25in;
+                  line-height:12.0pt;
+                  font-size:10.0pt;
+                  font-family:Arial, sans-serif;
+}
+span.Hyperlink {
+                font-family:Arial, sans-serif;
+                color:#000000;
+                text-underline:none;
+                text-decoration:none;
+}
+span.HyperlinkFollowed {
+                        font-family:Arial, sans-serif;
+                        color:#004B6E;
+                        text-underline:single;
+                        text-decoration:underline;
+}
+p.Convensions {
+               margin-right:0in;
+               line-height:12.0pt;
+               font-size:10.0pt;
+               font-family:"Franklin Gothic Medium Cond" , sans-serif;
+               color:#5F5F5F;
+               margin-bottom:6pt;
+               margin-top:6pt;
+               x-next-type:p;
+               margin-left:18pt;
+}
+span.ConvensionsChar {
+                      font-family:"Franklin Gothic Medium Cond" , sans-serif;
+                      color:#5F5F5F;
+}
+p.ImportantNoteText {
+                     margin-right:0in;
+                     line-height:12.0pt;
+                     font-size:10.0pt;
+                     font-family:"Franklin Gothic Medium Cond" , sans-serif;
+                     color:#E24B00;
+                     margin-bottom:6pt;
+                     margin-top:6pt;
+                     margin-left:18pt;
+}
+p.ListBulletIndent {
+                    margin-top:6.0pt;
+                    margin-right:0in;
+                    margin-bottom:12.0pt;
+                    margin-left:.2in;
+                    font-size:10.0pt;
+                    font-family:Arial, sans-serif;
+}
+p.ListNumberUG {
+                margin-right:0in;
+                margin-bottom:12.0pt;
+                font-size:10.0pt;
+                font-family:Arial, sans-serif;
+                margin-top:7.5pt;
+                color:#000000;
+                list-style:rh-list;
+                x-list-class:rl-p-ListNumberUG;
+                x-list-level:1;
+                x-next-class:ListNumberUG;
+                x-next-type:p;
+                text-indent:-24px;
+                margin-left:24px;
+}
+p.ListNumberUG2 {
+                 margin-right:0in;
+                 margin-bottom:12.0pt;
+                 font-size:10.0pt;
+                 font-family:Arial, sans-serif;
+                 margin-top:6pt;
+                 list-style:rh-list;
+                 x-list-class:rl-p-ListNumberUG2;
+                 x-list-level:1;
+                 text-indent:-15px;
+                 margin-left:0.3in;
+}
+p.SeeAlso {
+           margin-top:6.0pt;
+           margin-right:0in;
+           margin-bottom:12.0pt;
+           margin-left:1.0in;
+           text-align:justify;
+           font-size:10.0pt;
+           font-family:Arial, sans-serif;
+           font-weight:bold;
+}
+OL {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+UL {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+table.SimpleGridBlue {
+                      padding:0px;
+                      x-border-spacing:0px;
+                      x-row-pat-1:1;
+                      x-row-pat-1-name:t1Row;
+                      x-row-pat-count:2;
+                      x-row-pat-2:1;
+                      x-row-pat-2-name:t2Row;
+                      border-left-style:Solid;
+                      border-left-width:1px;
+                      border-left-color:#4F81BD;
+                      border-top-style:Solid;
+                      border-top-width:1px;
+                      border-top-color:#4F81BD;
+}
+table.SimpleGridBlue td {
+                         padding-left:10px;
+                         padding-right:10px;
+                         padding-top:0px;
+                         padding-bottom:0px;
+}
+table.SimpleGridBlue tr.t1Row td {
+                                  font-family:Times New Roman;
+                                  font-size:12pt;
+                                  border-right-style:Solid;
+                                  border-right-width:1px;
+                                  border-right-color:#4F81BD;
+                                  border-bottom-style:Solid;
+                                  border-bottom-width:1px;
+                                  border-bottom-color:#4F81BD;
+}
+table.SimpleGridBlue tr.t2Row td {
+                                  border-right-style:Solid;
+                                  border-right-width:1px;
+                                  border-right-color:#4F81BD;
+                                  border-bottom-style:Solid;
+                                  border-bottom-width:1px;
+                                  border-bottom-color:#4F81BD;
+}
+SPAN.glosstext {
+                font-family:Arial;
+                font-size:10pt;
+                color:#3a872d;
+}
+rh-list.rl-p-ListBullet {
+                         x-level-count:1;
+                         x-lvl-1-format:<x>;
+                         x-lvl-1-type:bullet;
+                         x-lvl-1-pfx-class:BodyTextIndentChar;
+}
+p.Bullet1 {
+           margin-right:0in;
+           line-height:12.0pt;
+           font-size:10.0pt;
+           font-family:Arial, sans-serif;
+           color:#000000;
+           font-weight:normal;
+           font-style:normal;
+           margin-top:6pt;
+           margin-bottom:6pt;
+           list-style:rh-list;
+           x-list-class:rl-p-Bullet1;
+           x-list-level:1;
+           text-indent:-0.25in;
+           margin-left:1.26cm;
+}
+rh-list.rl-p-Bullet1 {
+                      x-level-count:1;
+                      x-lvl-1-format:<x>;
+                      x-lvl-1-type:square;
+}
+A:link {
+        color:#00597f;
+        font-family:Arial;
+        font-size:10pt;
+        font-weight:bold;
+        text-decoration:underline;
+}
+A.dropspot {
+            x-image-place:right;
+            color:#233a77;
+            x-open-image:url("arrow-close.jpg");
+            x-close-image:url("arrow-open.jpg");
+            font-family:Arial;
+            font-size:10pt;
+}
+rh-list.rl-p-ListBullet3 {
+                          x-level-count:1;
+                          x-lvl-1-format:<x>;
+                          x-lvl-1-type:small-square;
+}
+rh-list.rl-p-ListBullet2 {
+                          x-level-count:1;
+                          x-lvl-1-format:<x>;
+                          x-lvl-1-type:bullet;
+}
+p.Conventionbullet {
+                    text-indent:-0.25in;
+                    margin-left:40pt;
+                    font-family:Franklin Gothic Medium Cond;
+                    font-size:10pt;
+                    color:#5e5e5e;
+                    margin-bottom:5pt;
+                    margin-top:5pt;
+                    list-style:rh-list;
+                    x-list-class:rl-p-Conventionbullet;
+                    x-list-level:1;
+}
+p.IMPbullet {
+             font-family:Franklin Gothic Medium Cond;
+             color:#e55e1c;
+             text-indent:-.25in;
+             margin-left:0.556in;
+             margin-bottom:5pt;
+             margin-top:6pt;
+             list-style:rh-list;
+             x-list-class:rl-p-IMPbullet;
+             x-list-level:1;
+}
+SPAN.expandtext {
+                 font-family:Arial;
+                 font-size:10pt;
+                 color:#00597f;
+}
+P {
+   margin-bottom:14pt;
+   margin-left:0pt;
+   margin-right:0pt;
+   font-family:Arial;
+   font-size:10pt;
+   margin-top:9.5pt;
+}
+rh-list.rl-p-ListNumberUG {
+                           x-level-count:1;
+                           x-lvl-1-format:<x>.;
+                           x-lvl-1-type:decimal;
+}
+p.Topics {
+          font-size:12pt;
+          margin-left:0pt;
+          font-weight:bold;
+          color:#494949;
+          margin-bottom:5pt;
+}
+rh-list.rl-p-IMPbullet {
+                        x-level-count:1;
+                        x-lvl-1-format:<x>;
+                        x-lvl-1-type:Nonbreaking Hyphen;
+}
+rh-list.rl-p-Conventionbullet {
+                               x-level-count:1;
+                               x-lvl-1-format:<x>;
+                               x-lvl-1-type:Nonbreaking Hyphen;
+}
+DIV.droptext {
+}

@@ -1,0 +1,26 @@
+#errContainer {
+    height: 200px;
+    width: 100%;
+    padding: 4px;
+    background-color: #FFFEFC;
+}
+.permImage {
+    height: 256px;
+    background-image: url('../../images/accessdenied.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.permMsg {
+    padding-left: 50px;
+    font-size: 18pt;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #BF6000;
+}
+.permFooter {
+    border-top: 2px solid #604800;
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: center;
+    height: 28px;
+}

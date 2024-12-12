@@ -1,0 +1,42 @@
+<div id="PageTitle">
+		<h1 class="ft-title">
+                    {{#ifCond mode '==' "edit" }}
+                       <span>Modify User</span>
+                    {{/ifCond}}
+                    {{#ifCond mode '==' "new" }}
+                       <span>Create User</span>
+                    {{/ifCond}}
+                    {{#ifCond mode '==' "view" }}
+                       <span>View User</span>
+                    {{/ifCond}}
+		</h1>
+		<div class="ft-accordion-header-sidebar">
+			<ul class="ft-status-bar">
+					<li id="tab_c" class="ft-status-bar-li-done">
+					
+					 {{#ifCond mode '!=' "new" }}
+						<span>
+							{{getLabel "lbl.clientUser.statusBar.edituser" "1. Modify User"}}
+						</span>
+					{{/ifCond}}									
+					
+					 {{#ifCond mode '==' "new" }}
+						<span>
+							{{getLabel "lbl.clientUser.statusBar.createUser" "1. Create User"}}
+						</span>
+					{{/ifCond}}		
+					</li>
+					<li id="tab_e" class="ft-status-bar-li-active">
+						<span>
+							{{getLabel "lbl.clientUser.statusBar.permission" "2. Permissions"}}
+						</span>
+					</li>
+					<li id="tab_v">
+						<span>
+							{{getLabel "lbl.clientUser.statusBar.verifyUser" "3. Verify User"}}
+						</span>
+					</li>
+							
+			</ul>
+		</div>
+</div>

@@ -1,0 +1,185 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">	
+									<span id="adminDetailsCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.rolesrv.03" "Admin"}}</span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="adminAssetBody" class="panel-body">
+						<div id="adminFunctionalDiv">
+						  {{#each assets}}
+								{{#selectAsset assetId "03"}}
+								{{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+									
+											{{#if messages}}
+												<tr class="view-grid-body"><td class="view-grid-body-content">{{getLabel "lbl.role.msgs" "Messages"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression messages "messageType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if reports}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.report" "Reports"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression reports "reportType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if widgets}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.widget" "Widgets"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression widgets "widgetType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+											{{#if alerts}}			
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.alert" "Alerts"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression alerts "alertType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+											{{#if allowedFeatures}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.features" "Features"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression allowedFeatures "featureName"}}	
+													</td>
+												</tr>
+											{{/if}}	
+									</tbody>
+							</table>
+							{{/if}}
+								 {{/selectAsset}}
+							{{/each}}
+						 
+						</div>	
+					
+						<!-- Start of Admin Service - Privileges Table -->
+						<div class="ft-margin-t" id="adminPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "03"}}
+							{{#if permissions}}
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.privileges" "Privileges"}}</td></tr>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" >{{getLabel "lbl.role.privfunction" "Function"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privView" "View"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privEdit" "Edit"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privAppr" "Approve"}}</td>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each permissions}}
+											<tr class="view-grid-body">
+												<td class="view-grid-header-text view-grid-body-content" >{{getColoredExpressionRow colorClass screenName tciRmParent}}</td>
+																{{#ifCond rmForView '==' "Y" }}
+																{{#if view}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}} 
+																{{#ifCond rmForEdit '==' "Y" }}
+																{{#if edit}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+																{{#ifCond rmForAuth '==' "Y" }}	
+																{{#if auth}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+											</tr>
+										{{else}}
+											<tr class="view-grid-body">
+													<td class="view-grid-body-content" colSpan="4" style="padding-bottom: 1%;" >None assigned</td>
+											</tr>												
+										{{/each}}											
+											
+										</tbody>
+									</table>	
+									{{/if}}
+								{{/selectAsset}}
+							{{/each}}
+						</div>
+						<!-- End of Admin Service - Privileges Table -->	
+							<!-- Start of Admin Service - Interface Privileges Table -->
+						<div class="ft-margin-t" id="adminInterfacePrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "03"}}
+							
+							{{#if interfaces}}
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.interfprivileges" "Interface Privileges"}}</td></tr>
+										<tr class="view-grid-header">
+											<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.interfNm" "Interface Name"}}</td>
+											<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.privEdit" "Edit"}}</td>
+											<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.interfExecute" "Execute"}}</td>
+										</tr>		
+									</thead>
+									<tbody>							
+										{{#each interfaces}}
+											<tr class="view-grid-body">
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass interfaceType}}</td>
+												{{#if edit}}
+													<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+														<i class="fa fa-check"></i>
+													</td>
+												{{else}}
+													<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+												{{/if}} 	
+																					
+												{{#if execute}}
+													<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+														<i class="fa fa-check"></i>
+													</td>
+												{{else}}
+													<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+												{{/if}}																	
+											</tr>
+										{{else}}
+											<tr class="view-grid-body">
+													<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+											</tr>												
+										{{/each}}											
+									</tbody>
+								</table>
+							{{/if}}	
+							{{/selectAsset}}
+						{{/each}}																			
+						</div>
+						<!-- End of Admin Service - Interface Privileges Table -->							
+					</div>
+				</div>
+			</div>
+			

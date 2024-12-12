@@ -1,0 +1,17 @@
+arrColsPref = [{
+					"colId" : "productName",
+					"colDesc" : "Product Name",
+					"sortable" :true
+				}, {
+					"colId" : "ccyCode",
+					"colDesc" : "Currencies",
+					"sortable" :true
+				}, {
+					"colId" : "cutOffTime",
+					"colDesc" : "Cut Off Time",
+					"sortable" :true
+				}, {
+					"colId" : "status",
+					"colDesc" : "Status",
+					"sortable" :true
+				}];

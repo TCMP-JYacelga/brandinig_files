@@ -1,0 +1,167 @@
+.ft-accordion-header-txt {
+  @include fontSize(8);
+}
+
+.ft-layout-header .ft-accordion-toggle-trigger {
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 20px;
+}
+
+/*
+==================
+Sidebar collapsed.
+==================
+*/
+
+.ft-accordion-trigger-icon {
+  background-position: -5px -42px;
+  margin-left: 5px;
+  margin-right: 5px;
+  float: left;
+  width: 22px;
+  height: 28px;
+}
+
+.ft-sidebar-hidden .ft-accordion-trigger-icon {
+  background-position: -28px -42px;
+}
+
+#actionListWidget{
+	background: $sidePanelActionList !important;
+}
+
+#actionlistWidget{
+	background: $sidePanelActionList !important;
+}
+
+#quickpaylistWidget{
+	background: $sidePanelQuickPayments !important;
+}
+
+/*#favReportList{
+	background: $sidePanelReports !important;	
+}*/
+
+#messageFormsWidget{
+	background: $sidePanelMessages !important;	
+}
+
+/*
+	Styles specifically for sidebar accordion.
+
+	There was too much weird inheritance from
+	the main content area's accordion styles.
+
+	Cleaner just to start fresh, in one file.
+*/
+
+.ft-sidebar-accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.ft-sidebar-accordion-header {
+  color: $fontColorDarker;
+  @include fontSize(6);
+  padding-left: 38px;
+  padding-right: 30px;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  position: relative;
+
+  .ft-icons-settings {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  .ft-accordion-exp-icon {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: -14px;
+    left: 5px;
+  }
+
+  .ft-icons-settings {
+    margin-top: -10px;
+    right: 5px;
+  }
+}
+
+.ft-sidebar-accordion-content {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 100px;
+
+  li {
+    padding-bottom: 20px;
+  }
+
+  a {
+    color: $primaryColor;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*
+====================
+Accordion collapsed.
+====================
+*/
+
+.ft-accordion-collapsed {
+  .ft-icons-settings, .ft-sidebar-accordion-content {
+    display: none;
+  }
+}
+
+.ft-content-alert {
+  color: #818181;
+  font-style: italic;
+}
+
+.ft-icons-settings {
+  width: 20px;
+  height: 20px;
+  background-position: -40px -139px;
+}
+
+.ft-layout-sidebar .ft-accordion-content {
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0;
+}
+
+/*
+===============
+Sidebar hidden.
+===============
+*/
+
+.ft-sidebar-hidden .ft-layout-sidebar {
+  display: none;
+}

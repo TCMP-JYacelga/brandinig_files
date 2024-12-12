@@ -1,0 +1,151 @@
+/*User Profile Dropdown*/
+.user-profile-dropdown .dropdown-menu {
+  left: -230px;
+  width: 280px;
+  height: 295px; 
+}
+.user-profile-dropdown .dropdown-menu .menu-header {
+  padding: 0px 10px; 
+}
+.user-profile-dropdown .dropdown-menu .menu-header .avatar-title-block {
+  min-height: 60px;
+  word-wrap: break-word; 
+  text-align: -webkit-center;
+}
+.user-profile-dropdown .dropdown-menu .menu-footer {
+  text-align: center; 
+}
+.user-profile-dropdown .dropdown-menu .menu-footer button {
+  width: 90%; 
+}
+.user-profile-dropdown .dropdown-menu .menu-footer .btn.btn-raised {
+  box-shadow: none;
+}
+.user-profile-dropdown .dropdown-menu .menu-footer .btn.btn-raised:hover {
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+.user-profile-dropdown .dropdown-menu .menu-footer button .material-icons {
+  font-size: 17px;
+  line-height: 1px; 
+}
+
+.alerts-dropdown{
+  left: -28.125rem;
+  width: 33.5rem; 
+  margin-top:-0.625rem;}
+
+.alerts-header {
+	padding: 0.5rem 0.5rem 0rem 1rem;
+}
+
+.alerts-footer {
+	padding: 0.5rem 0.5rem 0rem 1rem;
+	text-align: right;
+}
+
+.alert-items{
+	padding: 1rem 0rem 1rem 1rem;
+	line-height:1;
+	min-height:4rem;
+}
+
+.alerts-badge {
+	vertical-align:top;
+	margin-top: -5px;
+	margin-left:-12px;
+}
+
+.alerts-time {
+ font-size:0.875rem;
+ margin-top:-10px;
+}
+
+.alert-items:hover .alerts-time .alerts-delete {
+	display : block;
+}
+
+.alerts-delete {
+	display : none;
+	text-align:center;
+	margin-top:2px;
+}
+
+#alert-items:hover {
+	background-color:$hoverColor;
+}
+
+.alerts-time .alerts-delete i {
+	cursor:pointer;
+}
+
+#viewAlertsPopup .modal-dialog .modal-content .modal-header{
+	padding: 1rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+#viewAlertsPopup .modal-dialog .modal-content .modal-footer{
+	padding: 0.4rem !important;
+    border-top: 1px solid #dee2e6 !important;
+}
+
+.alert-subject{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-transform: capitalize;
+    word-break:normal !important;
+    max-height:2rem;
+    cursor:pointer;
+}
+
+.alerts-body .dropdown-divider {
+	margin : 0;
+}
+
+#alert-dropdown .dropdown-menu {
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14), 
+	            0px 3px 1px 1px rgba(0,0,0,0.2), 
+				0px 1px 5px 0px rgba(0,0,0,0.12) !important;
+}
+
+#alert-dropdown .dropdown-toggle:after {
+	content:none;
+}
+
+.container-alerts{
+	min-width : 28.5rem;
+}
+
+.alerts-notification {
+    background: url("resources/images/T7UX/notificationAlert.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:24px;
+}
+
+.alerts-security {
+    background: url("resources/images/T7UX/SecuritAlert.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:24px;
+}
+
+.alerts-account {
+    background: url("resources/images/T7UX/accountActivityAlert.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:24px;
+}
+
+.alerts-broadcast {
+    background: url("resources/images/T7UX/Broadcast.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:24px;
+}

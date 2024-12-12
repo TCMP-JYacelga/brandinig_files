@@ -1,0 +1,1261 @@
+<div class="ft-layout-primary">
+	<div class="ft-layout-inner">
+		<!--START:Page content ################-->
+		<div id="PageTitle">
+			<h1 class="ft-title">
+				<span>View Roles</span>
+			</h1>
+			<div class="ft-accordion-header-sidebar pull-right title-content">
+				<div class="ft-pdf-btn ft-icons-pdf ft-icons" title="Report">
+				</div>
+			</div>
+		</div>
+		<!-- start of verifyForm -->
+		<div class="largepadding_tb" id="verifyForm">
+			<!-- Start of Role Details Panel -->
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span class="ft-padding-l ">Role Details</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body" id="categoryDetails">
+						<div class="ft-margin-t">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Code</td><td class="view-grid-body-content" style="width:80%;">{{role}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Description</td><td class="view-grid-body-content" style="width:80%;">{{role}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Subsidiary Access</td><td class="view-grid-body-content" style="width:80%;">{{#each subsidiaries}}{{subsidiaryName}} {{#unless @last}},{{/unless}} 
+										{{else}}
+										None Assigned
+									{{/each}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Services</td><td class="view-grid-body-content" style="width:80%;">{{#each allowedServices}}{{serviceName}} {{#unless @last}},{{/unless}} 
+										{{else}}
+										None Assigned
+									{{/each}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Granular Privileges</td><td class="view-grid-body-content" style="width:80%;">{{#each allowedGranularPrivileges}}{{serviceName}} {{#unless @last}},{{/unless}}
+											{{else}}
+											None Assigned
+											{{/each}}</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Role Details Panel -->
+			<!-- Start of Admin Service Panel -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">									
+									<span id='adminDetailsCaret'
+													onClick="toggleSection('adminDetailsCaret', 'adminAssetBody')"
+													class="fa fa-caret-up pull-left cursor_pointer"></span>Admin Services <span
+													class="ft-padding-l "></span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="adminAssetBody">
+						<div class="panel-body" id="adminFunctionalDiv">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Messages</td><td class="view-grid-body-content" style="width:80%;">
+										{{#each assets}}{{#selectAsset assetId "03"}}{{#each messages}}
+											{{messageType}}{{#unless @last}},{{/unless}}{{else}}None Assigned{{/each}}
+														{{/selectAsset}}
+										{{/each}}
+										</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Reports</td><td class="view-grid-body-content" style="width:80%;">{{#each assets}}{{#selectAsset assetId "03"}}{{#each reports}}
+											{{reportType}}{{#unless @last}},{{/unless}}{{else}}None Assigned{{/each}}
+														{{/selectAsset}}
+										{{/each}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Widgets</td><td class="view-grid-body-content" style="width:80%;">{{#each assets}}{{#selectAsset assetId "03"}}{{#each widgets}}
+											{{widgetType}}{{#unless @last}},{{/unless}}{{else}}None Assigned{{/each}}
+														{{/selectAsset}}
+										{{/each}}</td></tr>								
+								</tbody>
+							</table>
+						</div>	
+						<!-- Start of Admin Service - Interface Privileges Table -->
+						<div class="panel-body" id="adminInterfacePrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Interface Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;" >Interface Name</th>
+										<th class="view-grid-header-text" style="width:20%;" >Edit</th>
+										<th class="view-grid-header-text" style="width:20%;">Execute</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "03"}}
+												{{#each interfaces}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{interfaceType}}</td>
+														{{#if edit}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}} 										
+														{{#if execute}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}																	
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of Admin Service - Interface Privileges Table -->	
+						<!-- Start of Admin Service - Privileges Table -->
+						<div class="panel-body" id="adminPrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" >Type</th>
+										<th class="view-grid-header-text" style="width:20%;">View</th>
+										<th class="view-grid-header-text" style="width:20%;">Modify</th>
+										<th class="view-grid-header-text" style="width:20%;">Approval</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "03"}}
+												{{#each permissions}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{screenName}}</td>
+														{{#if view}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}} 	
+														{{#if edit}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}	
+														{{#if auth}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}															
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of Admin Service - Privileges Table -->							
+					</div>
+				</div>
+			</div>
+			<!-- End of Admin Service Panel -->
+			<!-- Start of BR Panel -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">									
+									<span id='brCaret'
+													onClick="toggleSection('brCaret', 'brAssetBody')"
+													class="fa fa-caret-up pull-left cursor_pointer"></span>Balance Reporting <span
+													class="ft-padding-l "></span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="brAssetBody">
+						<div class="panel-body" id="brFunctionTableDiv">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Reports</td><td class="view-grid-body-content" style="width:80%;">{{#each assets}}{{#selectAsset assetId "01"}}{{#each reports}}
+											{{reportType}}{{#unless @last}},{{/unless}}{{else}}None Assigned{{/each}}
+														{{/selectAsset}}
+										{{/each}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">Widgets</td><td class="view-grid-body-content" style="width:80%;">{{#each assets}}{{#selectAsset assetId "01"}}{{#each widgets}}
+											{{widgetType}}{{#unless @last}},{{/unless}}{{else}}None Assigned{{/each}}
+														{{/selectAsset}}
+										{{/each}}</td></tr>								
+								</tbody>
+							</table>
+						</div>	
+						<!-- Start of BR -Account table -->							
+						<div class="panel-body" id="brAccountTableDiv">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Accounts</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;" >Account No</th>
+										<th class="view-grid-header-text" style="width:20%;" >Account Name</th>
+										<th class="view-grid-header-text" style="width:20%;">Client Description</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "01"}}
+												{{#each accounts}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{subsidiaryName}}</td>
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>							
+						</div>
+						<!-- End of BR -Account table -->			
+						<!-- Start of BR Service - Privileges Table -->
+						<div class="panel-body" id="brPrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" >Type</th>
+										<th class="view-grid-header-text" style="width:60%;">View</th>												
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "01"}}
+												{{#each permissions}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{screenName}}</td>
+														{{#if view}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:60%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}														
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of BR Service - Privileges Table -->
+						<!-- Start of BR Granular Previlages table -->
+						<div class="panel-body" id="brGranularDiv">
+							<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">Granular Privileges</td></tr>
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;">Account</th>
+													{{#each assets}}
+														{{#selectAsset assetId "01"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" >{{colName}}</th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>												
+									</thead>
+									<tbody>							
+											{{#each assets}}
+												{{#selectAsset assetId "01"}}
+													{{#each granularPermission}}
+										<tr class="view-grid-body">
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+												<i class="fa fa-check"></i>
+											</td>														
+																{{else}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+										</tr>											
+													{{/each}}											
+												{{/selectAsset}}
+											{{/each}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- end of granular previlages table -->
+					</div>
+				</div>
+			</div>
+			<!-- End of BR Panel -->
+			<!-- Start of Payment -->
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id='paymentCaret'
+												onClick="toggleSection('paymentCaret', 'paymentAssetBody')"
+												class="fa fa-caret-up pull-left cursor_pointer"></span> <span
+												class="ft-padding-l ">Payment</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="paymentAssetBody">
+						<div class="panel-body" id="paymentFunctionTableDiv">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th></tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Company Id</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "02"}}
+														{{#each companyIds}}
+															{{companyName}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Packages</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "02"}}
+														{{#each packages}}
+															{{packageName}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Templates</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "02"}}
+														{{#each templates}}
+															{{templateName}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Reports</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "02"}}
+														{{#each reports}}
+															{{reportType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Alerts</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "02"}}
+														{{#each alerts}}
+															{{alertType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Widgets</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "02"}}
+														{{#each widgets}}
+															{{widgetType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+						<!-- Start of Payment - Account table -->							
+						<div class="panel-body" id="brAccountTableDiv">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Accounts</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;" >Account No</th>
+										<th class="view-grid-header-text" style="width:20%;" >Account Name</th>
+										<th class="view-grid-header-text" style="width:20%;">Client Description</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "02"}}
+												{{#each accounts}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{subsidiaryName}}</td>
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>							
+						</div>
+						<!-- End of Payment -Account table -->	
+						<!-- Start of Payment Service - Privileges Table -->
+						<div class="panel-body" id="paymentPrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" >Type</th>
+										<th class="view-grid-header-text" style="width:20%;">View</th>
+										<th class="view-grid-header-text" style="width:20%;">Modify</th>
+										<th class="view-grid-header-text" style="width:20%;">Approval</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "02"}}
+												{{#each permissions}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{screenName}}</td>
+														{{#if view}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}} 	
+														{{#if edit}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}	
+														{{#if auth}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}															
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of Payment Service - Privileges Table -->
+						<!-- start of granular previlages table -->
+						<div class="panel-body" id="paymentGranularDiv">
+							<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">Payment Granular Privileges</td></tr>
+										<tr class="view-grid-header">
+													{{#each assets}}
+														{{#selectAsset assetId "02"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+											<th class="view-grid-header-text" style="width:20%;" colspan="3">Type</th>
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" >{{colName}}</th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>		
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;">Account</th>
+											<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+											<th class="view-grid-header-text" style="width:20%;">Payment Package</th>
+													{{#each assets}}
+														{{#selectAsset assetId "02"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" ></th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>		
+									</thead>
+									<tbody>							
+											{{#each assets}}
+												{{#selectAsset assetId "02"}}
+													{{#each granularPermission}}
+										<tr class="view-grid-body">
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{packageName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+												<i class="fa fa-check"></i>
+											</td>														
+																{{else}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+										</tr>											
+													{{/each}}											
+												{{/selectAsset}}
+											{{/each}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- end of granular previlages table -->							
+					</div>
+				</div>
+			</div>
+			<!-- end of payments -->
+			<!-- Start of Imaging View Panel -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">									
+									<span id='imagingViewCaret'
+													onClick="toggleSection('imagingViewCaret', 'imagingViewAssetBody')"
+													class="fa fa-caret-up pull-left cursor_pointer"></span>Imaging View <span
+													class="ft-padding-l "></span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="imagingViewAssetBody">
+						<div class="panel-body" id="brFunctionTableDiv">
+						</div>						
+					</div>
+				</div>
+			</div>
+			<!-- End of Imaging View Panel -->
+			<!-- Start of Loan Asset -->
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id='loanCaret'
+												onClick="toggleSection('loanCaret', 'loanAssetBody')"
+												class="fa fa-caret-up pull-left cursor_pointer"></span> <span
+												class="ft-padding-l ">Loan</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="loanAssetBody">
+						<div class="panel-body" id="loanFunctionTableDiv">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Reports</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "07"}}
+														{{#each reports}}
+															{{reportType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Alerts</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "07"}}
+														{{#each alerts}}
+															{{alertType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+						<!-- Start of Loan - Account table -->							
+						<div class="panel-body" id="brAccountTableDiv">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Accounts</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;">Account No</th>
+										<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+										<th class="view-grid-header-text" style="width:20%;">Client Description</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "07"}}
+												{{#each accounts}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{subsidiaryName}}</td>
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>							
+						</div>
+						<!-- End of Loan -Account table -->		
+						<!-- Start of :Loan Service - Privileges Table -->
+						<div class="panel-body" id="laonPrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" >Type</th>
+										<th class="view-grid-header-text" style="width:20%;">View</th>
+										<th class="view-grid-header-text" style="width:20%;">Modify</th>
+										<th class="view-grid-header-text" style="width:20%;">Approval</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "07"}}
+												{{#each permissions}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{screenName}}</td>
+														{{#if view}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}} 	
+														{{#if edit}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}	
+														{{#if auth}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}															
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of Loan Service - Privileges Table -->							
+						<!-- start of granular previlages table -->
+						<div class="panel-body" id="loanGranularDiv">
+							<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">Loan Granular Privileges</td></tr>
+										<tr class="view-grid-header">
+													{{#each assets}}
+														{{#selectAsset assetId "07"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+											<th class="view-grid-header-text" style="width:20%;" colspan="3">Type</th>
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" >{{colName}}</th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>		
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;">Obligor Id</th>
+											<th class="view-grid-header-text" style="width:20%;">Obligation Id</th>
+											<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+													{{#each assets}}
+														{{#selectAsset assetId "07"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" ></th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>		
+									</thead>
+									<tbody>							
+											{{#each assets}}
+												{{#selectAsset assetId "07"}}
+													{{#each granularPermission}}
+										<tr class="view-grid-body">
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{obligatorId}}</td> 
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+												<i class="fa fa-check"></i>
+											</td>														
+																{{else}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+										</tr>											
+													{{/each}}											
+												{{/selectAsset}}
+											{{/each}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- end of granular previlages table -->							
+					</div>
+				</div>
+			</div>
+			<!-- End of Loan Panel -->
+			<!-- Start of Positive Pay Asset -->
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id='positivePayCaret'
+												onClick="toggleSection('positivePayCaret', 'positivePayAssetBody')"
+												class="fa fa-caret-up pull-left cursor_pointer"></span> <span
+												class="ft-padding-l ">Positive Pay</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="positivePayAssetBody">
+						<div class="panel-body" id="positivePayFunctionTableDiv">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Reports</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "13"}}
+														{{#each reports}}
+															{{reportType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+						<!-- Start of Positive Pay - Account table -->							
+						<div class="panel-body" id="postivePayAccountTableDiv">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Accounts</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;">Account No</th>
+										<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+										<th class="view-grid-header-text" style="width:20%;">Client Description</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "13"}}
+												{{#each accounts}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{subsidiaryName}}</td>
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>							
+						</div>
+						<!-- End of Potive Pay - Account table -->
+						<!-- Start of Potive Pay Service - Privileges Table -->
+						<div class="panel-body" id="positivePayPrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" >Type</th>
+										<th class="view-grid-header-text" style="width:20%;">View</th>
+										<th class="view-grid-header-text" style="width:20%;">Modify</th>
+										<th class="view-grid-header-text" style="width:20%;">Approval</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "13"}}
+												{{#each permissions}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{screenName}}</td>
+														{{#if view}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}} 	
+														{{#if edit}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}	
+														{{#if auth}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}															
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of Potive Pay Service - Privileges Table -->	
+						<!-- Start of Granular Previlages Table -->
+						<div class="panel-body" id="positivePayGranularDiv">
+							<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">Postive Pay Granular Privileges</td></tr>	
+													{{#each assets}}
+														{{#selectAsset assetId "13"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;" colspan="3">Type</th>
+																		{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" >{{colName}}</th>
+																		{{/each}}
+										</tr>																		
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;">Account</th>
+											<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+													{{#each assets}}
+														{{#selectAsset assetId "13"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" ></th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>		
+									</thead>
+									<tbody>							
+											{{#each assets}}
+												{{#selectAsset assetId "13"}}
+													{{#each granularPermission}}
+										<tr class="view-grid-body">
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+												<i class="fa fa-check"></i>
+											</td>														
+																{{else}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+										</tr>											
+													{{/each}}											
+												{{/selectAsset}}
+											{{/each}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- end of granular previlages table -->							
+					</div>
+				</div>
+			</div>
+			<!-- End of Loan Panel -->
+			<!-- Start of Check Managemnt Asset -->
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id='checkMgmtCaret'
+												onClick="toggleSection('checkMgmtCaret', 'checkMgmtAssetBody')"
+												class="fa fa-caret-up pull-left cursor_pointer"></span> <span
+												class="ft-padding-l ">Check Management</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="checkMgmtAssetBody">
+						<!-- Start of Check Managemnt - Account table -->							
+						<div class="panel-body" id="checkMgmtAccountTableDiv">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Accounts</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;">Account No</th>
+										<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+										<th class="view-grid-header-text" style="width:20%;">Client Description</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "14"}}
+												{{#each accounts}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{subsidiaryName}}</td>
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>							
+						</div>
+						<!-- End of Check Managemnt - Account table -->		
+						<!-- Start of Check Management Service - Privileges Table -->
+						<div class="panel-body" id="checkMgmtPrivileges">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" >Type</th>
+										<th class="view-grid-header-text" style="width:20%;">View</th>
+										<th class="view-grid-header-text" style="width:20%;">Modify</th>
+										<th class="view-grid-header-text" style="width:20%;">Approval</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "14"}}
+												{{#each permissions}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{screenName}}</td>
+														{{#if view}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}} 	
+														{{#if edit}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}	
+														{{#if auth}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+											<i class="fa fa-check"></i>
+										</td>
+														{{else}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+														{{/if}}															
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>																				
+						</div>
+						<!-- End of Check Management Service - Privileges Table -->
+						<!-- Start of Granular Previlages Table -->
+						<div class="panel-body" id="checkMgmtGranularDiv">
+							<div  style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">Check Management Granular Privileges</td></tr>	
+													{{#each assets}}
+														{{#selectAsset assetId "14"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;" colspan="2">Type</th>
+																		{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" >{{colName}}</th>
+																		{{/each}}
+										</tr>																		
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" style="width:20%;">Account</th>
+											<th class="view-grid-header-text" style="width:20%;">Account Name</th>
+													{{#each assets}}
+														{{#selectAsset assetId "14"}}
+															{{#each granularPermission}}
+																{{#if @first}}
+																	{{#each (splitOperation operations) }}
+											<th class="view-grid-header-text" style="width:20%;" ></th>
+																	{{/each}}														
+																{{/if}}												
+															{{/each}}											
+														{{/selectAsset}}
+													{{/each}}
+										</tr>		
+									</thead>
+									<tbody>							
+											{{#each assets}}
+												{{#selectAsset assetId "14"}}
+													{{#each granularPermission}}
+										<tr class="view-grid-body">
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+												<i class="fa fa-check"></i>
+											</td>														
+																{{else}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+										</tr>											
+													{{/each}}											
+												{{/selectAsset}}
+											{{/each}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- Start of Granular Previlages Table -->
+					</div>
+				</div>
+			</div>
+			<!-- End of Check Managemnt  Panel -->
+			<!-- Start of Bank Report Asset -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id='bankReportsCaret'
+												onClick="toggleSection('bankReportsCaret', 'bankReportsAssetBody')"
+												class="fa fa-caret-up pull-left cursor_pointer"></span> <span
+												class="ft-padding-l ">Bank Reports</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="bankReportsAssetBody">
+						<!-- Start of Bank Reports table -->							
+						<div class="panel-body" id="checkMgmtAccountTableDiv">
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Bank Reports</td></tr>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text" style="width:20%;">Distribution Id</th>
+										<th class="view-grid-header-text" style="width:20%;">Report Name</th>
+										<th class="view-grid-header-text" style="width:20%;">Type</th>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each assets}}
+											{{#selectAsset assetId "15"}}
+												{{#each bankReports}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{distributionId}}</td>
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{reportName}}</td>
+														{{#selectAsset type "G"}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >Group</td>
+														{{/selectAsset}}
+														{{#selectAsset type "A"}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >Account</td>
+														{{/selectAsset}}
+														{{#selectAsset type "F"}}
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >Field</td>
+														{{/selectAsset}}
+									</tr>											
+												{{/each}}											
+											{{/selectAsset}}
+										{{/each}}
+								</tbody>
+							</table>							
+						</div>
+						<!-- End of Bank Reports table -->			
+					</div>
+				</div>
+			</div>
+			<!-- End of Bank Reports Panel -->
+			<!-- Start of LMS Panel -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">									
+									<span id='lmsCaret'
+													onClick="toggleSection('lmsCaret', 'lmsAssetBody')"
+													class="fa fa-caret-up pull-left cursor_pointer"></span>LMS <span
+													class="ft-padding-l "></span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="lmsAssetBody">
+						<div class="panel-body" id="lmsFunctionTableDiv">
+						</div>						
+					</div>
+				</div>
+			</div>
+			<!-- End of LMS Panel -->
+			<!-- Start of Forecast Panel -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">									
+									<span id='forecastCaret'
+													onClick="toggleSection('forecastCaret', 'forecastAssetBody')"
+													class="fa fa-caret-up pull-left cursor_pointer"></span>Forecast <span
+													class="ft-padding-l "></span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="forecastAssetBody">
+						<div class="panel-body" id="forecastFunctionTableDiv">
+						</div>						
+					</div>
+				</div>
+			</div>
+			<!-- End of Forecast Panel -->
+			<!-- Start of Mobile Banking Asset -->
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id='mobileBankingCaret'
+												onClick="toggleSection('mobileBankingCaret', 'mobileBankingAssetBody')"
+												class="fa fa-caret-up pull-left cursor_pointer"></span> <span
+												class="ft-padding-l ">Mobile Banking</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="mobileBankingAssetBody">
+						<div class="panel-body" id="loanFunctionTableDiv">
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header">
+										<th class="view-grid-header-text">Function</td><td class="view-grid-header-text" style="width:20%;">Details</th>
+									</tr>
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">Services</td>
+										<td class="view-grid-body-content" style="width:80%;">
+												{{#each assets}}
+													{{#selectAsset assetId "20"}}
+														{{#each serices}}
+															{{widgetType}}{{#unless @last}},{{/unless}}{{else}}None Assigned
+														{{/each}}
+													{{/selectAsset}}
+												{{/each}}
+										</td>
+									</tr>
+								</tbody>
+							</table>		
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Check Managemnt  Panel -->
+			<!-- Start of Limits Panel -->
+			<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">									
+									<span id='limitsCaret'
+													class="fa fa-caret-up pull-left cursor_pointer"></span>Limits<span
+													class="ft-padding-l "></span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="limitsAssetBody">
+						<div class="panel-body" id="limitsFunctionTableDiv">
+						</div>						
+					</div>
+				</div>
+			</div>
+			<!-- End of  Limits Panel -->		 
+		</div>
+		<!-- end of verifyForm -->	
+	</div>
+</div>

@@ -1,0 +1,52 @@
+/* Main Forms */
+form { margin: 2px 0 0 2px; }
+#frmDialog { margin:0px; }
+.frmLabel { width: 12em; display: inline-block; text-align: left; vertical-align: middle; padding: 0 0 0 12px; }
+.required { }
+.frmLabel em { text-decoration: underline; font-style: normal; }
+.fieldLabel { height: 16px; line-height: 16px; }
+button em { text-decoration: underline; font-style: normal; }
+input[type="text"], input[type="password"] { background-color: white; border: 1px solid #B0B0B0; min-height: 17px; padding: 3px 0 3px 5px; }
+label.readOnly, label.pkField, span.readOnly, span.pkField { display: inline-block; height: 17px !important; padding-top:5px;padding-bottom:3px; padding-left: 3px; border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px;}
+label.readOnly, label.pkField, span.readOnly, span.pkField { border: 1px solid #616161; background-color: #fff; color: #828282; font-size: 1em; padding-top: 3px; padding-left: 3px; border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px;}
+input, select, textarea { font-family: Calibri, helvetica, arial, sans-serif; font-size: inherit; }
+
+
+/* Common elements */
+.sortable_backgound {background-color: #F1F8E5}
+.codeBox { min-width: 120px; }
+.dateBox { width: 80px; min-width: 80px; }
+.amountBox { width: 10.1em; min-width: 10em; text-align: right; padding-right: 4px !important; }
+.percentBox { width: 4em; min-width: 4em; text-align: right; }
+.srnoBox { width: 3em; min-width: 3em; text-align: right; }
+.comboBox {font-family: inherit; min-height: 20px; min-width: 160px; padding-bottom: 1px; padding-top: 2px; }
+option { font-family: inherit; }
+.selectBox {}
+.checkbox { padding: 3px; margin: 3px 2px 3px 2px; vertical-align: middle; height: 22px; padding-top: 0px; padding-bottom: 0px;}
+.numberBox { text-align: left; padding-right: 3px !important; }
+.disabled { background-color: #ececec !important; }
+
+.radio { height: 22px; margin: 3px 2px;vertical-align: middle; padding: 1px 4px 2px 0px; margin: 3px 3px 3px 3px; }
+.radioContainer { vertical-align: middle; }
+.noWrap { white-space: nowrap; }
+
+
+.inputRow { display: block; line-height: 32px; height: 32px;  margin: 0px; padding: 0px; vertical-align: middle; }
+.seeklink { margin: 0px; padding: 0px; text-decoration: none; border: thin transparent none; vertical-align: middle; }
+
+
+fieldset.fieldGroup { padding: 4px 0 6px 0; margin: 6px 0 4px 0;  }
+fieldset.fieldGroup { border-width: 1px 0px 0px 0px; border-style: solid none none none; border-color: #8c8c8c transparent transparent transparent; }
+fieldset.fieldGroup legend { font-weight: bold; padding: 2px 4px 2px 4px; margin: 0 0 0 10px; border-width: 0px; }
+
+/* label field pairs */
+p.label_checkbox_pair input { padding: 0 4px 0 0; min-height: 22px; vertical-align: middle; }
+p.label_checkbox_pair label {}
+
+p.formRow { min-height: 48px; padding: 0 0 4px 0; }
+label.tabGroupLabel b { font-weight: bold; font-size: 104%; }
+
+
+.formTable { border: 0px none #fff; table-layout:fixed; padding: 0; margin: 0; }
+.formTable tbody tr { height: 24px; padding: 0; margin: 0; }
+.formTable tbody tr td { padding: 2px 0 2px 4px; margin: 0; }

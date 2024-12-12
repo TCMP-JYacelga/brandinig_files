@@ -1,0 +1,50 @@
+function getLabel(key, defaultText) {
+	return (tranSearchLabelsMap && !Ext.isEmpty(tranSearchLabelsMap[key]))
+			? tranSearchLabelsMap[key]
+			: defaultText
+}
+
+var mapService = {
+		'SUBFAC0101' : 'BR_STDVIEW_SUBFAC_SAVING',
+		'SUBFAC0102' : 'BR_STDVIEW_SUBFAC_CURRENT',
+		'SUBFAC0103' : 'BR_STDVIEW_SUBFAC_CRDCARD',
+		'SUBFAC0104' : 'BR_STDVIEW_SUBFAC_CALL',
+		'SUBFAC0105' : 'BR_STDVIEW_SUBFAC_ESCROW',
+		'SUBFAC0106' : 'BR_STDVIEW_SUBFAC_COLLECTION',
+		'SUBFAC0107' : 'BR_STDVIEW_SUBFAC_MONEY',
+		'SUBFAC0108' : 'BR_STDVIEW_SUBFAC_CHECKING',
+		'SUBFAC0301' : 'BR_STDVIEW_SUBFAC_LOAN',
+		'SUBFAC0303' : 'BR_STDVIEW_SUBFAC_TERMLOAN',
+		'SUBFAC0404' : 'BR_STDVIEW_SUBFAC_TERMDEPOSITS',
+		'SUBFAC0405' : 'BR_STDVIEW_SUBFAC_DEPOSIT',
+		'SUBFAC0406' : 'BR_STDVIEW_SUBFAC_CERTIFICATEDEPOSITS',
+		'SUBFAC0801' : 'BR_STDVIEW_SUBFAC_FUND',
+		'CURRENCY' : 'BR_STDVIEW_CURRENCY',
+		'BANK' : 'BR_STDVIEW_BANK',
+		'GROUP' : 'BR_STDVIEW_GROUP',
+		'TXNCAT' : 'BR_GRIDVIEW_GENERIC',
+		'GENERIC' : 'BR_GRIDVIEW_GENERIC',
+		'SUMMARYRIBBON' : 'BR_SUMMARY_RIBBON',
+		'SERVICE_ACTIVITY' : 'BR_ACTIVITY',
+		'SERVICE_HISTORY' : 'BR_HISTORY',
+		'BR_STD_SUMM_GRID' : 'BR_STD_SUMM_GRID',
+		'BR_GRIDVIEW_GENERIC' : 'BR_GRIDVIEW_GENERIC',
+		'BR_STD_ACT_GRID' : 'BR_STD_ACT_GRID',
+		'BR_STD_ACT_RIBBON' : 'BR_STD_ACT_RIBBON',
+		'BR_STD_BAL_GRID' : 'BR_STD_BAL_GRID',
+		'BR_STD_BAL_RIBBON' : 'BR_STD_BAL_RIBBON',
+		'BR_RIBBON_GENERIC' : 'BR_RIBBON_GENERIC',
+		'loanSubFacility' : 'SUBFAC0306',
+		'BR_TXN_SRC_GRID' : 'BR_TXN_SRC_GRID'
+};
+
+var arrDownloadReportColumn = {
+		'typeCode' : 'typeCode',
+		'postingDate' : 'postingDate',
+		'customerRefNo' : 'customerRefNo',
+		'bankRef' : 'bankRef',
+		'creditUnit' : 'creditUnit',
+		'debitUnit' : 'debitUnit',
+		'runningLegBalance' : 'runningLegBalance',
+		'valueDate' : 'valueDate'
+	};

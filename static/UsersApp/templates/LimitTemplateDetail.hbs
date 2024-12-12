@@ -1,0 +1,84 @@
+<div class="row">
+	<div class="col-sm-12">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="limitDetailInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.limitDetailInfoCaret" "Limit Details"}} </span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="limitDetailInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<div class="col-sm-3">
+									<label>{{getLabel "lbl.clientUser.limit.defaultLimitProfile" "Default Limit Profile"}}</label>
+										<select id="defLimitDetail" name="defLimitDetail" class="form-control">
+										<option>Select Profile</option>
+										{{#each profileList}}
+											{{option profileId profileDescription assignedFlag }}
+										{{/each}}
+									</select>
+								</div>
+								<div class="col-sm-3"><br>
+									&nbsp;&nbsp;<span id="currencyId" class="frmLabel" style="padding-top: 5px;"></span>	
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.txnTrfCrLimit" "Txn Trf Cr. Limit"}}</label>		
+									<br>
+									<div class="divJustified"> <span id="trfCrLimit"></span></div>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.txnTrfDrLimit" "Txn Trf Dr. Limit"}}</label>					
+									<br>
+									<div class="divJustified"><span id="trfDrLimit"></span></div>
+								</div>
+							</div>
+							
+							<div class="col-sm-12">
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.clmTrfCrLimit" "Clm. Trf Cr. Limit"}}</label>		
+									<br>
+									<div class="divJustified"><span id="cmlTrfCrLimit"></span></div>						
+								</div>
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.clmTrfDrLimit" "Clm. Trf Dr. Limit"}}</label>					
+									<br>
+									<div class="divJustified"><span id="cmlTrfDrLimit"></span></div>
+								</div>
+							</div>
+							
+							<div class="col-sm-12">
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.warningCrLimit" "Warning Cr. Limit"}}</label>		
+									<br>
+									<div><span id="wrCrLimit"></span></div>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.warningDrLimit" "Warning Dr. Limit"}}</label>					
+									<br>
+									<div class="divJustified"><span id="wrDrLimit"></span></div>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.limit.MaxTrf" "Max # of Trf"}}</label>		
+									<br>
+									<div class="divJustified"><span id="maxCountNo"></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+</div>

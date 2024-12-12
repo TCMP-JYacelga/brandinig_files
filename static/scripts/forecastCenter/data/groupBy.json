@@ -1,0 +1,14 @@
+{
+	"d" : {
+		"groupTypes" : [{
+					"groupTypeDesc" : "All",
+					"groupTypeCode" : "all"
+					,
+				}],
+		"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+		}
+	}
+}

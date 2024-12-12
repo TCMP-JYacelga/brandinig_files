@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>ChevronDefault</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 15.885 6.79892038 9 0 2.115 2.09311741 0 11 9 2.09311741 18"></polygon>
+    </defs>
+    <g id="ChevronDefault" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#745DDA" cx="19.5" cy="19.5" r="18.5"></circle>
+        <g id="icon/hardware/keyboard_arrow_right_24px" transform="translate(14.000000, 10.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use stroke="#FFFFFF" stroke-width="0.025" fill="#FFFFFF" fill-rule="nonzero" stroke-linejoin="round" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

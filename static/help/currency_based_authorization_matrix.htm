@@ -1,0 +1,389 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="generator" content="Adobe RoboHelp 9">
+<title>Currency based authorization matrix</title>
+<link rel="StyleSheet" href="anz_1.css" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sample_help.htm", "", ">", "Home", "welcome_dashboard.htm");
+document.write("Currency based authorization matrix<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sample_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px;" cellspacing="0" width="100%" bgcolor="#04436F" align="left">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr style="height: 11px;">
+			<td style="vertical-align: middle;"><span style="font-family: 'Arial Black', sans-serif; 
+														 font-style: italic; 
+														 color: #ffffff;"><font color="white" ><i>&#160;</i></font></span><span 
+			 style="color: #ffffff; font-family: Arial, sans-serif; font-size: 10pt; 
+			 font-style: italic; font-weight: bold;"><font size="2" color="white" style="font-size:10.000000pt;"><i><b>GCP CashWeb</b></i></font></span><span 
+			 style="font-family: 'Arial Black', sans-serif; font-style: italic; 
+			 color: #ffffff;"><font color="white" ><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></font></span></td>
+			<td style="vertical-align: top;">
+   <p style="text-align: right; 
+												 font-family: 'Arial Black', sans-serif; 
+												 font-style: italic; font-size: 12pt; 
+												 color: #ffffff;">&#160;</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+<p style="text-align: right;"><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+
+<h1>Currency Based Authorization</h1>
+<p>Authorization matrix can be set up in different currencies. A seek list 
+ allows you to select the Currency at AVM &amp; SVM for authorization types 
+ - &#160;Product &amp; Account. It is applicable for both Payment &amp; 
+ Collection MyProducts.</p>
+<p>Currency Code is prefixed to the “Limit From” &amp; “Limit To” of the 
+ Detail Records of the AVM/SVM.</p>
+<h3>Processing</h3>
+<p class="ListNumberUG">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Currency 
+ selected for the first slab is applicable to all the slabs set thereafter. 
+ Any modifications required to be done should be done in the initial slab 
+ and will be defaulted to the remaining slabs.</p>
+<hr style="float: aligncenter; ">
+<p class="Convensions"><span style="font-weight: bold;"><b>Example</b></span>:</p>
+<p class="Convensions" style="margin-top: 1.5pt; margin-bottom: 1.5pt;">Select 
+ currency USD and Enter slab 0-100.</p>
+<p class="Convensions" style="margin-top: 1.5pt; margin-bottom: 1.5pt;">Then 
+ the <span style="font-weight: bold;"><b>Currency</b></span> field is defaulted 
+ to USD while setting up the next slab of 101 to 1000. You cannot change 
+ the currency here.</p>
+<p class="Convensions" style="margin-top: 1.5pt; margin-bottom: 1.5pt;">You 
+ need to go to initial level i.e.0-100 to edit the currency.</p>
+<hr style="float: aligncenter; ">
+<p>&#160;</p>
+<p class="ListNumberUG">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If 
+ the transaction currency and authorization matrix currency are different, 
+ system applies conversion of transaction currency to authorization matrix 
+ currency for verification of slabs.</p>
+<p class="Convensions" style="font-weight: bold;">Example</p>
+<table cellspacing="0" width="100%" border="1">
+	<col style="width: 33.333%;">
+	<col style="width: 33.333%;">
+	<col style="width: 33.333%;">
+	<tr>
+		<td><p class="Convensions" style="font-weight: bold;">Setup</p></td>
+		<td><p class="Convensions" style="font-weight: bold;">Scenario 
+		 1</p></td>
+		<td><p class="Convensions" style="font-weight: bold;">Scenario 
+		 2</p></td>
+	</tr>
+	<tr>
+		<td rowspan="2"><p class="Convensions" style="text-indent: -1px; 
+							 margin-left: 11px; margin-top: 1.5pt; margin-bottom: 1.5pt;">MyProduct 
+		 = DDFINDEPT</p>
+		<p class="Convensions" style="text-indent: -1px; margin-left: 11px; 
+			 margin-top: 1.5pt; margin-bottom: 1.5pt;">UDE Bank Product 
+		 = SGPBANKCHQ </p>
+		<p class="Convensions" style="text-indent: -1px; margin-left: 11px; 
+			 margin-top: 1.5pt; margin-bottom: 1.5pt;">(Bank products under 
+		 this UDE: SGPDDAUD, SGPDDGBP, SGPDDEUR, SGPDDUSD, SGPDDINR)</p>
+		<p class="Convensions" style="text-indent: -1px; margin-left: 11px; 
+			 margin-top: 1.5pt; margin-bottom: 1.5pt;">Authorization Matrix 
+		 Currency code = USD</p></td>
+		<td><p class="Convensions" style="margin-left: 9px;">Transaction 
+		 initiated for DD issuance of USD 100.</p>
+		<p class="Convensions" style="margin-left: 9px;">Product derived 
+		 by system : SGPDDUSD</p></td>
+		<td><p class="Convensions" style="margin-left: 9px;">Transaction 
+		 initiated for DD issuance of &#160;EUR 100.</p>
+		<p class="Convensions" style="margin-left: 9px;">Product derived 
+		 by system : SGPDDEUR</p></td>
+	</tr>
+	<tr>
+		<td><p class="Convensions" style="margin-left: 10pt;">Since Authorization 
+		 Matrix Currency Code and the Product currency code are same, <span 
+		 style="font-weight: bold;"><b>system does not convert to verify Authorization 
+		 Matrix Slab.</b></span></p></td>
+		<td><p class="Convensions" style="margin-left: 10pt;">Since Authorization 
+		 Matrix Currency Code and the Product currency code are different 
+		 , <span style="font-weight: bold;"><b>system converts before doing 
+		 verification of Authorization Matrix Slab.</b></span></p></td>
+	</tr>
+</table>
+<p class="ListNumberUG">&#160;</p>
+<p class="ListNumberUG">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>System 
+ validates whether currency pair is maintained either for Product Currency- 
+ AVM/SVM Currency or for Debit Account Currency - AVM/SVM Currency. This 
+ validation is an additional validation to the existing validations which 
+ are applicable for Authorization Matrix. </p>
+<p class="ListNumberUG">4.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+ order to achieve this, user has to operationally ensure to maintain currency 
+ pair either in Product Currency- AVM/SVM Currency or in Debit Account 
+ Currency -AVM/SVM Currency.</p>
+<p class="Convensions" style="font-weight: bold;"><span style="font-weight: bold;"><b>Example</b></span></p>
+<table style="border-collapse: separate;" width="98.476%" cellspacing="0" 
+		 border="1">
+	<col style="width: 22.014%;">
+	<col style="width: 77.986%;">
+	<tr>
+		<td><p class="Convensions" style="font-weight: bold;">Setup</p></td>
+		<td><p class="Convensions" style="font-weight: bold;">Scenario 
+		 1</p></td>
+	</tr>
+	<tr>
+		<td rowspan="3"><p class="Convensions" style="margin-left: 10pt; 
+							 margin-top: 1.5pt; margin-bottom: 1.5pt;">MyProduct 
+		 = DDFINDEPT</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">UDE Bank Product = SGPBANKCHQ </p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">(Bank products under this UDE: SGPDDAUD, 
+		 SGPDDGBP, SGPDDEUR, SGPDDUSD, SGPDDINR)</p></td>
+		<td><p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+				 margin-bottom: 1.5pt;">Transaction initiated for DD issuance 
+		 of USD 100 &amp; Product derived by system SGPDDUSD &amp; AVM 
+		 is maintained in Currency- AUD (Australian Dollars)</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Seller currency = HKD</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Product Currency of the product SGPDDUSD 
+		 = USD</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Debit Account Currency for the product 
+		 SGPDDUSD = SGD</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Authorization Matrix Currency for MyProduct 
+		 DDFINDEPT = AUD</p></td>
+	</tr>
+	<tr>
+		<td><p class="Convensions" style="margin-left: 10pt;">As per existing 
+		 setup, Bank maintains Currency pair in USD-SGD or pairs in Triangulation 
+		 Currency (USD-HKD &amp; SGD-HKD) in order to issue Demand draft 
+		 &#160;in USD &#160;by debiting the SGD account.</p></td>
+	</tr>
+	<tr>
+		<td ><p class="Convensions" style="margin-left: 10pt;">In addition 
+		 to the above, Bank has to maintain Currency Pairs in USD-AUD (Product 
+		 Currency vs. AVM Currency) or SGD-USD (Debit Account Currency 
+		 vs. AVM Currency), in order to achieve Authorization Matrix validation.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p class="ListNumberUG">5.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>System 
+ displays error message if currency pair is not maintained for any of the 
+ Product Currency Vs AVM/SVM Currency (in case of Authorization type = 
+ Product). </p>
+<p class="Convensions" style="font-weight: bold;"><span class="ConvensionsChar">Example</span></p>
+<table cellspacing="0" width="98.476%" border="1">
+	<col style="width: 45.076%;">
+	<col style="width: 54.924%;">
+	<tr>
+		<td><p class="Convensions" style="font-weight: bold;">Setup</p></td>
+		<td><p class="Convensions" style="font-weight: bold;">Error</p></td>
+	</tr>
+	<tr>
+		<td ><p class="Convensions" style="margin-left: 11px; margin-top: 1.5pt; 
+				 margin-bottom: 1.5pt;">MyProduct = DDFINDEPT</p>
+		<p class="Convensions" style="margin-left: 11px; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">UDE Bank Product = SGPBANKCHQ </p>
+		<p class="Convensions" style="margin-left: 11px; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">(Bank products under this UDE: SGPDDAUD, 
+		 SGPDDGBP, SGPDDEUR, SGPDDUSD, SGPDDINR)</p>
+		<p class="Convensions" style="margin-left: 11px; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Authorization Type = Product</p>
+		<p class="Convensions" style="margin-left: 11px; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Authorization Matrix Currency code 
+		 = USD</p></td>
+		<td><p class="Convensions" style="margin-left: 10pt;">System displays 
+		 error message if it does not find any of Currency Pair maintained 
+		 in AUD-USD, GBP-USD, EUR-USD, INR-USD.</p></td>
+	</tr>
+</table>
+<p class="ListNumberUG">&#160;</p>
+<p class="ListNumberUG">6.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>System 
+ displays error message if currency pair is not maintained in Account Currency 
+ Vs. AVM/SVM Currency (in case of Authorization type = Account). </p>
+<p class="Convensions" style="font-weight: bold;"><span style="font-weight: bold;"><b><span 
+	 class="ConvensionsChar">Example</span></b></span></p>
+<table style="border-collapse: separate;" cellspacing="0" width="98.476%" 
+		 border="1">
+	<col style="width: 45.076%;">
+	<col style="width: 54.924%;">
+	<tr>
+		<td><p class="Convensions" style="font-weight: bold;">Setup</p></td>
+		<td><p class="Convensions" style="font-weight: bold;">Error</p></td>
+	</tr>
+	<tr>
+		<td><p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+				 margin-bottom: 1.5pt;">MyProduct = DDFINDEPT</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">UDE Bank Product = SGPBANKCHQ </p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">(Bank products under this UDE: SGPDDAUD, 
+		 SGPDDGBP, SGPDDEUR, SGPDDUSD, SGPDDINR)</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Authorization Type = Account</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Account No: 950006NZD00001</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Account currency = NZD</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">Authorization Matrix Currency code 
+		 = USD</p></td>
+		<td><p class="Convensions">System displays error message if it 
+		 does not find Currency Pair maintained in NZD-USD, </p>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<p class="ListNumberUG">&#160;</p>
+<p class="ListNumberUG">7.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>The 
+ system derives the Buy / Sell as explained in the example below</p>
+<p class="Convensions" style="font-weight: bold;"><span class="ConvensionsChar">Example</span></p>
+<table cellspacing="0" width="100%" border="1">
+	<col style="width: 21.403%;">
+	<col style="width: 20.863%;">
+	<col style="width: 20.324%;">
+	<col style="width: 37.41%;">
+	<tr>
+		<td><p class="Convensions" style="text-align: center; font-weight: bold;">Currency 
+		 Pair Maintained in GCP</p></td>
+		<td><p class="Convensions" style="text-align: center; font-weight: bold;">Authorization 
+		 Matrix</p>
+		<p class="Convensions" style="text-align: center; font-weight: bold;">Maintained 
+		 in</p></td>
+		<td><p class="Convensions" style="text-align: center; font-weight: bold;">Currency 
+		 in which transaction is initiated in</p></td>
+		<td><p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+				 margin-bottom: 1.5pt; text-align: center; font-weight: bold;">What 
+		 is the rate that is &#160;resolved by system for the USD – INR 
+		 currency pair</p></td>
+	</tr>
+	<tr>
+		<td><p class="Convensions" style="text-align: center;">USD - INR</p></td>
+		<td><p class="Convensions" style="text-align: center;">INR</p></td>
+		<td><p class="Convensions" style="text-align: center;">USD</p></td>
+		<td><p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+				 margin-bottom: 1.5pt;">Here Auth Matrix currency = INR 
+		 and Transaction currency = USD.</p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">System uses the BUY Rate defined for 
+		 the currency pair USD-INR</p></td>
+	</tr>
+	<tr>
+		<td><p class="Convensions" style="text-align: center;">USD - INR 
+		 </p></td>
+		<td><p class="Convensions" style="text-align: center;">USD </p></td>
+		<td><p class="Convensions" style="text-align: center;">INR</p></td>
+		<td><p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+				 margin-bottom: 1.5pt;">Here Auth Matrix currency = USD 
+		 and Transaction currency = INR. </p>
+		<p class="Convensions" style="margin-left: 10pt; margin-top: 1.5pt; 
+			 margin-bottom: 1.5pt;">System uses the SELL Rate defined for 
+		 the currency pair USD-INR</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px; margin-right: 5px;" cellspacing="0" width="100%" bgcolor="#02426D" align="right">
+		<col style="width: 100%;">
+		<tr style="height: 10px;">
+			<td style="vertical-align: middle;">
+   <p style="text-align: right; 
+													 font-style: italic; 
+													 font-family: 'Eras Demi ITC', sans-serif; 
+													 color: #ffffff; font-size: 8pt; 
+													 margin-left: 12px;">Innovation. 
+			 Bank on it</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

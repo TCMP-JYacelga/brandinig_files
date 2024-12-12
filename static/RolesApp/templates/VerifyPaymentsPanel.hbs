@@ -1,0 +1,359 @@
+<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="paymentCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.role.Payment" "Payment"}}</span>	
+									
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="paymentAssetBody" class="panel-body">
+						<div id="paymentFunctionTableDiv">
+						{{#each assets}}
+						 {{#selectAsset assetId "02"}}
+						  {{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+									
+											{{#if companyIds}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.compid" "Company ID"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression companyIds "companyName"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if packages}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.pkg" "Packages"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression packages "packageName"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if templates}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.Templates" "Templates"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression templates "templateName"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if reports}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.report" "Reports"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression reports "reportType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+											{{#if alerts}}	
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.alert" "Alerts"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression alerts "alertType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if widgets}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.widget" "Widgets"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression widgets "widgetType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											
+											{{#if allowedFeatures}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.features" "Features"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression allowedFeatures "featureName"}}	
+													</td>
+												</tr>
+											{{/if}}
+											
+										</tbody>
+									 </table>
+									{{/if}}
+								{{/selectAsset}}
+							{{/each}}
+						</div>	
+						
+						<!-- Start of Payment Service - Privileges Table -->
+						<div class="ft-margin-t" id="paymentPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "02"}}
+							 	{{#if permissions}}
+									<table class="view-grid" style="width:100%">
+										<thead>
+											<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.privileges" "Privileges"}}</td></tr>
+											<tr class="view-grid-header">
+												<td class="view-grid-header-text" >{{getLabel "lbl.role.privfunction" "Function"}}</td>
+												<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privView" "View"}}</td>
+												<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privEdit" "Edit"}}</td>
+												<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privAppr" "Approve"}}</td>
+											</tr>		
+										</thead>
+										<tbody>							
+												{{#each permissions}}
+													<tr class="view-grid-body">
+														<td class="view-grid-header-text view-grid-body-content" >{{getColoredExpression colorClass screenName}}</td>
+																		{{#ifCond rmForView '==' "Y" }}
+																		{{#if view}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+															<i class="fa fa-check"></i>
+														</td>
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/if}}
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/ifCond}} 
+																		{{#ifCond rmForEdit '==' "Y" }}
+																		{{#if edit}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+															<i class="fa fa-check"></i>
+														</td>
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/if}}
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/ifCond}}
+																		{{#ifCond rmForAuth '==' "Y" }}	
+																		{{#if auth}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+															<i class="fa fa-check"></i>
+														</td>
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/if}}
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/ifCond}}
+													</tr>
+												{{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>		
+												{{/each}}											
+											</tbody>
+											</table>
+										{{/if}}	
+								 {{/selectAsset}}
+							{{/each}}																			
+						</div>
+						<!-- End of Payment Service - Privileges Table -->
+						
+						<!-- Start of Payment - Account table -->		
+						{{#each assets}}
+							{{#selectAsset assetId "02"}}	
+								{{#if accounts}}				
+									<div class="ft-margin-t" id="brAccountTableDiv">
+										<table class="view-grid" style="width:100%">
+											<thead>
+												<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.acct" "Accounts"}}</td></tr>
+												<tr class="view-grid-header">
+													<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.acctNo" "Account No"}}</td>
+													<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.acctNm" "Account Name"}}</td>
+													<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.clientDesc" "Client Description"}}</td>
+												</tr>		
+											</thead>
+											<tbody>							
+													{{#each accounts}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass subsidiaryName}}</td>
+														</tr>		
+													{{else}}
+														<tr class="view-grid-body">
+																<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+														</tr>		
+													{{/each}}											
+											</tbody>
+										</table>							
+									</div>
+								{{/if}}
+							{{/selectAsset}}
+						{{/each}}			
+									
+						<!-- End of Payment -Account table -->	
+						
+						<!-- start of Payment Granular Privileges table -->
+						{{#each assets}}
+							{{#selectAsset assetId "02"}}
+								{{#if granularPermission.payments}}
+									<div class="ft-margin-t" id="paymentGranularDiv">
+										<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">Payment Granular Privileges</td></tr>
+														<tr class="view-grid-header">
+															<th class="view-grid-header-text" style="width:20%;" colspan="3">Type</th>
+															{{#each (splitOperation granularPermission.paymentOperations) }}
+																<td class="view-grid-header-text hidden" style="width:20%;" id="grPayColHdr_{{@index}}" rowspan="2">{{colName}}</td>
+															{{/each}}
+														</tr>		
+														
+														<tr class="view-grid-header">
+															<td class="view-grid-header-text" style="width:20%;">Account</td>
+															<td class="view-grid-header-text" style="width:20%;">Account Name</td>
+															<td class="view-grid-header-text" style="width:20%;">Payment Package</td>															
+														</tr>	
+												</thead>
+												<tbody>							
+													{{#each granularPermission.payments}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass packageName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+																	<td class="view-grid-header-text view-grid-body-content hidden" 
+																	 	id="chkPayGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" >
+																		<i class="fa fa-check"></i>
+																	</td>														
+																{{else}}
+																	<td class="view-grid-header-text view-grid-body-content hidden" 
+																	 	id="chkPayGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>
+										</div>
+									</div>
+								{{/if}}
+							{{/selectAsset}}
+						{{/each}}
+						
+						<!-- end of Payment Granular Privileges table -->
+						
+						
+						<!-- start of Template Granular Privileges table -->
+						{{#each assets}}
+							{{#selectAsset assetId "02"}}
+								{{#if granularPermission.templates}}
+									<div class="ft-margin-t" id="templateGranularDiv">
+										<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">Template Granular Privileges</td></tr>
+													{{templateGranularHeader granularPermission}}
+												</thead>
+												{{templateGranularBody granularPermission}}
+											</table>
+										</div>
+									</div>
+								{{/if}}
+							{{/selectAsset}} 
+						{{/each}}
+						<!-- end of Template Granular Privileges table -->
+						
+						<!-- start of Standing Instruction Granular Privileges table -->
+						{{#each assets}}
+							{{#selectAsset assetId "02"}}
+								{{#if granularPermission.standingInsts}}
+									<div class="ft-margin-t" id="siGranularDiv">
+										<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">Standing Instruction Granular Privileges</td></tr>
+														<tr class="view-grid-header">
+															<th class="view-grid-header-text" style="width:20%;" colspan="3">Type</th>
+															{{#each (splitOperation granularPermission.siOperations) }}
+																<td class="view-grid-header-text hidden" style="width:20%;" rowspan="2" id="grSIColHdr_{{@index}}">{{colName}}</td>
+															{{/each}}														
+														</tr>		
+														<tr class="view-grid-header">
+															<td class="view-grid-header-text" style="width:20%;">Account</td>
+															<td class="view-grid-header-text" style="width:20%;">Account Name</td>
+															<td class="view-grid-header-text" style="width:20%;">Payment Package</td>													
+														</tr>		
+												</thead>
+												<tbody>		
+													{{#each granularPermission.standingInsts}}					
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass packageName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+																	<td class="view-grid-header-text view-grid-body-content hidden" 
+																		 id="chkSIGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" >
+																		<i class="fa fa-check"></i>
+																	</td>														
+																{{else}}
+																	<td class="view-grid-header-text view-grid-body-content hidden" 
+																		 id="chkSIGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+														</tr>
+													{{/each}}											
+												</tbody>
+											</table>
+										</div>
+									</div>
+								{{/if}}
+							{{/selectAsset}}
+						{{/each}}
+						<!-- End of Standing Instruction Granular Privileges table -->
+						
+						<!-- start of Reversal Granular Privileges table -->
+						{{#each assets}}
+							{{#selectAsset assetId "02"}}
+								{{#if granularPermission.reversals}}
+									<div class="ft-margin-t" id="reversalGranularDiv">
+										<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">Reversal Granular Privileges</td></tr>
+													<tr class="view-grid-header">
+														<th class="view-grid-header-text" style="width:20%;" colspan="2">Type</th>
+														{{#each (splitOperation granularPermission.rvOperations) }}
+															<td class="view-grid-header-text hidden" style="width:20%;" id="grRevColHdr_{{@index}}" rowspan="2" >{{colName}}</td>
+														{{/each}}														
+													</tr>		
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;">Account</td>
+														<td class="view-grid-header-text" style="width:20%;">Account Name</td>
+													</tr>		
+												</thead>
+												<tbody>	
+													{{#each granularPermission.reversals}}						
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName}}</td>
+															{{#each (splitMask mask) }}
+																{{#if isAssign}}
+																	<td class="view-grid-header-text view-grid-body-content hidden" 
+																		 id="chkRevGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" >
+																		<i class="fa fa-check"></i>
+																	</td>														
+																{{else}}
+																	<td class="view-grid-header-text view-grid-body-content hidden" 
+																		id="chkRevGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" ></td>
+																{{/if}} 
+															{{/each}}														
+														</tr>	
+													{{/each}}											
+												</tbody>
+											</table>
+										</div>
+									</div>
+									{{/if}}
+								{{/selectAsset}}
+							{{/each}}
+						<!-- End of Reversal Granular Privileges table -->
+					</div>
+				</div>
+			</div>
+			

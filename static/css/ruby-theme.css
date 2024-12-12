@@ -1,0 +1,234 @@
+/* Page Layouts */
+html body { border: 0px transparent none; }
+
+
+#pageBody { background: #B6B6B6 url('../themes/ruby/backgrounds/page_background.png') top left repeat-x; }
+#pageHeader { margin-bottom: -7px !important; }
+#maincontainer { background: transparent left top no-repeat scroll none; margin: 0px 6px; }
+#sidemenu, #sidepanel { background: transparent none repeat-y top right; }
+#container, #bodywrapper { background: #fff url('../themes/ruby/backgrounds/left-bg.png') repeat-y -8px top; margin: 0 0 -6px 0 !important; padding-bottom: 2px; }
+#errContainer { border-top: 1px solid #828282; }
+.sideBarCollapsed { background: #fff left top repeat-y scroll none !important; }
+
+#popupContainer { background-color: #fff; }
+#pageFooter { background: transparent url('../images/backgrounds/footer_bg.png') no-repeat right -6px; }
+#pageFooter p { background: transparent url('../images/backgrounds/footer_bg.png') no-repeat; padding: 4px 2px 0px 2px; }
+#userInfo p { color: white; }
+#userInfo p a { color: white; }
+#banklogo { background: transparent left top no-repeat scroll url('../images/logos/capital-one-logo.png'); }
+
+#sidepanel h4 { color: #cc0000; background: transparent url('../images/backgrounds/divider.png') repeat-x 0px bottom;  }
+#sidemenu h4 { color: #cc0000; background: transparent url('../images/backgrounds/divider.png') repeat-x 0px bottom;  }
+.jqaccordion div dl dt { background: transparent url("../themes/ruby/backgrounds/bullet.gif") no-repeat left center; }
+
+#historyPage, #seekPage { background: #ffffff url('../images/backgrounds/blank_background.gif') repeat !important; }
+#popupBody { background-color: #585858; }
+
+/* navigation & menu bar */
+#navbar { background: transparent url('../themes/ruby/backgrounds/right_edge.png') top right no-repeat; }
+#menubar { background: transparent url('../themes/ruby/backgrounds/left_edge.png') top left no-repeat; }
+#menubar li { background: transparent url('../themes/ruby/backgrounds/menubar_spacer.png') top right no-repeat; }
+#menubar li a { font-weight: normal; color: #fff; }
+#menubar li a:hover { color: #000; }
+#menubar li.on { background: transparent url('../themes/ruby/backgrounds/nav_bg2.png') center 30px no-repeat; color: #000; }
+
+/* navigation & menu bar icons */
+.menubar-icon { background-image:url('../themes/ruby/icons/button_icons.png'); background-repeat: no-repeat; }
+.icon-misc-help { background: transparent 0 -110px no-repeat scroll url('../themes/tandem/icons/misc_icons.png'); }
+
+/* button icons */
+.button-icon { background-image:url('../themes/ruby/icons/button_icons.png'); background-repeat: no-repeat; }
+
+/* DataGrid Colors */
+.gridContainer { background-color: #DBDBDB; border: 1px solid #BEBEBE; }
+.gridTable { background-color: white; }
+.gridTable thead { background-color: #BEBEBE; }
+.gridTable thead tr th { color: #000; border-bottom: 1px solid #BEBEBE; }
+.gridTable tbody tr:hover { background-color: #fdcd5f; }
+.gridTable tbody tr td { border-bottom: 1px dotted #BEBEBE; }
+.gridTable tbody tr.lastrow td { border: 0px transparent none;  }
+.gridTable tfoot { border: 0px transparent none; } /*background: #cccccc url('../themes/ruby/jquery/ui-bg_glass_75_cccccc_1x400.png') 50% 50% repeat-x; */
+.gridTable tfoot tr { border: 0px transparent none; }
+.gridTable tfoot tr td { border-top: 1px solid #BEBEBE; }
+.navColumn { border: 0px transparent none; }
+.pageOfPage { border: 0px transparent none; color: #000; }
+.trEven { background-color: #F3F3F3; }
+
+/* DataGrid Pager */
+.firstpage { background-image: url('../themes/ruby/datagrid/first.gif'); background-repeat: no-repeat; background-position: top left; }
+.nextpage { background-image: url('../themes/ruby/datagrid/next.gif'); background-repeat: no-repeat; background-position: top left; }
+.prevpage { background-image: url('../themes/ruby/datagrid/previous.gif'); background-repeat: no-repeat; background-position: top left; }
+.lastpage { background-image: url('../themes/ruby/datagrid/last.gif'); background-repeat: no-repeat; background-position: top left; }
+.firstpage_grey { background-image: url('../themes/ruby/datagrid/first_grey.gif'); background-repeat: no-repeat; background-position: top left; cursor:default; }
+.nextpage_grey { background-image: url('../themes/ruby/datagrid/next_grey.gif'); background-repeat: no-repeat; background-position: top left; cursor:default; }
+.prevpage_grey { background-image: url('../themes/ruby/datagrid/previous_grey.gif'); background-repeat: no-repeat; background-position: top left; cursor:default; }
+.lastpage_grey { background-image: url('../themes/ruby/datagrid/last_grey.gif'); background-repeat: no-repeat; background-position: top left; cursor:default; }
+
+/* seek links */
+.seeklink { background-image: url('../themes/ruby/icons/icon_search.gif'); background-position: left center; background-repeat: no-repeat; }
+
+/* grid icons */
+.grdlnk-notify-icon { background-image: url('../themes/ruby/icons/icon_grid.png'); }
+.grid-link-icon { background-image: url('../themes/ruby/icons/icon_grid.png'); }
+
+/* hoverTable */
+.hoverTable tbody tr:hover { background-color: #fdcd5f; }
+.hoverTable tbody tr td { border-bottom: 1px dotted #BEBEBE; }
+
+/* tree grid */
+.treeContainer { background-color: white; border: 1px solid #8c8c8c; }
+.treeGrid { border-width: 0px; border-style: none; }
+.treeGrid thead { background: #cccccc url('../themes/ruby/jquery/ui-bg_glass_75_cccccc_1x400.png') 50% 50% repeat-x; }
+.treeGrid thead th { color: #222222; }
+
+/* simple grid */
+.simpleTable { background-color: white; border: 1px solid #BABABA; }
+.simpleTable td { border-right: 1px solid #fff; border-left: 1px solid #fff; }
+.odd_column { background-color: #EFEFEF; }
+.even_column {  background-color: #ffffff; }
+
+/* list styles */
+.squarebullets { list-style: none; padding:0; margin: 0; }
+.squarebullets li { background: transparent url('../themes/ruby/backgrounds/bullet.gif') left center no-repeat; padding: 0 0 0 16px; }
+
+/* HTML Forms */
+label.required { background: transparent left top no-repeat scroll url('../images/forms/asterisk.gif'); }
+.rounded, .roundedCombo { border: 1px solid #9f9f9f; }
+input[type=text]:hover, input[type=text]:focus, textarea:hover, textarea:focus, select:hover, select:focus { background-color:#C7E2F2; border: 1px solid #296080; }
+
+/* Action Messages & Titles */
+#messageArea.errors { background-image: url('../themes/ruby/backgrounds/error_background.png'); background-repeat: repeat; border-top: 1px solid #DF7D7D;  border-bottom: 1px solid #DF7D7D; }
+#messageArea span { background-image: url('../images/icons/icon_error.gif'); background-repeat: no-repeat; background-position: left center; color: #AF4C4C; }
+#messageArea ul li { color: #F7442A; }
+#pageTitle, .pageTitle { border-bottom: 1px solid #ececec; }
+#pageTitle span { color: #cc0000; }
+.subHeading { color: #0078ae; }
+
+/* login page: */
+#loginpanel { color:#fff; background-color: #6af; background:url('../themes/ruby/backgrounds/login_bg.png') no-repeat left top; border: 0px white none; }
+#staticData { background-color: transparent; }
+.portlet { background-color: #f6f5ed; border: 1px solid #e9e5da; }
+.portlet-title { background: url('../themes/ruby/backgrounds/portlet-header.png') 50% 50%; font-weight:bold; color: white; }
+p#links a { color:white; }
+p#copyright { border-top: 1px solid #FBFBFB; }
+
+/* dashboard */
+#dashboard { border: 0px #aaa none; }
+.window { border: 1px solid #bababa; }
+.windowTitle { color:#ffffff; background: #000000 url('../themes/ruby/jquery/ui-bg_glass_75_cccccc_1x400.png') 50% 50% repeat-x; }
+.windowTitle span { color: #ffffff; }
+.theTitle { color: #cc0000; }
+.widgetTitle h4 { color: #cc0000; }
+#contactus h4 { text-transform: uppercase; }
+#quicklink h4 { text-transform: uppercase; }
+#quicklink ul li a { color: #000; }
+#interestrate h4 { text-transform: uppercase; }
+#exchangerate h4 { text-transform: uppercase; }
+
+/* flash container */
+#graphContainer, .graphContainer { border: 1px solid #c7c7c7; }
+
+.link_color { color: #FF8000; }
+
+/* action menu */
+.actions_menu a:hover, .actions_menu a:active { background-color: #fdcd5f; }
+
+/* acordion */
+.acord_header { background: transparent url('../images/backgrounds/divider.png') repeat-x 0px bottom;  }
+.acord_header a { color: #cc0000; }
+.jqaccordion div dl dt a { color: #000;  }
+
+/* borders */
+.rtBorder { border-width: 0 1px 0 0; border-style: none solid none none; border-color: #d9b35c; }
+.lightgrey { color: #ececec; }
+hr.lightgrey { background-color: #ececec; }
+
+/* misc styles */
+.acord_grid_head { color: #cc0000; border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-color: #aaaaaa #aaaaaa transparent #aaaaaa; }
+.acord_open img { background: #E0E0E0 url('../images/backgrounds/minus.gif') center left no-repeat; }
+.acord_close img { background: #E0E0E0 url('../images/backgrounds/plus.gif') center left no-repeat; border-bottom: 1px solid #aaa !important; }
+.headerBand {background-color: #E0E0E0; color: #cc0000; border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-color: #aaaaaa #aaaaaa transparent #aaaaaa; }
+.stripedback { background: transparent url('../images/backgrounds/stripes.gif') top left repeat; }
+label.tabGroupLabel b {color: #cc0000;}
+.reportLink { border-bottom: 1px dotted black; color: #cc0000; }
+.header_color { color: #600000; }
+
+/* CSS Tabs */
+ul.tabList li { border: 1px solid #d0ccc9; background: #efefef; }
+ul.tabList li.active { border-bottom: 0px solid transparent; color: #0066cc; background: #fff; }
+.tabClientArea { border: 1px solid #d0ccc9; }
+
+/* JQuery ui */
+/* Component containers
+----------------------------------*/
+.ui-widget-content { border: 1px solid #E0E0E0; background: #ffffff url('../themes/ruby/jquery/ui-bg_glass_65_ffffff_1x400.png') 50% top repeat-x; color: #222222; }
+.ui-widget-content a { color: #222222; }
+.ui-widget-header { border: 1px solid #cc0000; background: #cc0000 url('../themes/ruby/jquery/ui-bg_glass_75_cc0000_1x400.png') 50% 50% repeat-x; color: #fff; }
+.ui-widget-header a { color: #fff; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #d3d3d3; background: #e6e6e6 url('../themes/ruby/jquery/ui-bg_glass_75_e6e6e6_1x400.png') 50% 50% repeat-x; font-weight: bold; color: #555555; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #555555; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 1px solid #999999; background: #dadada url('../themes/ruby/jquery/ui-bg_highlight-hard_100_f6f6f6_1x100.png') 50% 50% repeat-x; color: #212121; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #212121; }
+.ui-state-active, .ui-widget-content .ui-state-active { border: 1px solid #aaaaaa; background: #3d3d3d url('../themes/ruby/jquery/ui-bg_glass_65_3d3d3d_1x400.png') 50% 50% repeat-x; color: #ffffff; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #ffffff; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight { border: 1px solid #fcefa1; background: #fbf9ee url('../themes/ruby/jquery/ui-bg_glass_55_fbf9ee_1x400.png') 50% 50% repeat-x; color: #363636; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #363636; }
+.ui-state-error, .ui-widget-content .ui-state-error { border: 1px solid #cd0a0a; background: #fef1ec url('../themes/ruby/jquery/ui-bg_inset-soft_95_fef1ec_1x100.png') 50% top repeat-x; color: #cd0a0a; }
+.ui-state-error a, .ui-widget-content .ui-state-error a { color: #cd0a0a; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text { color: #cd0a0a; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled { background-image: none; }
+
+/* states and images */
+.ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_222222_256x240.png'); }
+.ui-widget-content .ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_222222_256x240.png'); }
+.ui-widget-header .ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_ffffff_256x240.png'); }
+.ui-state-default .ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_888888_256x240.png'); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_454545_256x240.png'); }
+.ui-state-active .ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_ffffff_256x240.png'); }
+.ui-state-highlight .ui-icon { background-image: url('../themes/ruby/ui-icons_2e83ff_256x240.png'); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: url('../themes/ruby/jquery/ui-icons_cd0a0a_256x240.png'); }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa url('../themes/ruby/jquery/ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x; }
+.ui-widget-shadow { background: #aaaaaa url('../themes/ruby/jquery/ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x; }
+
+.ui-dialog .ui-dialog-content { background: none; }
+.ui-dialog .ui-dialog-buttonpane { background-image: none; }
+
+.ui-tabs { background-image: none !important; border: 0px none transparent !important; } /*box-shadow:3px 3px 3px #D3D3D3; -moz-box-shadow: 3px 3px 3px #D3D3D3; -webkit-box-shadow: 3px 3px 3px #D3D3D3; filter:progid:DXImageTransform.Microsoft.Shadow(Direction=135,Color='#D3D3D3',Strength=4); }*/
+.ui-tabs .ui-tabs-nav { background-image: none !important; border: 0px none transparent !important; background-color: #fff !important; }
+
+/* Boxes */
+.ui-section-shadow { -moz-box-shadow: 2px 2px 3px #828282; -webkit-box-shadow: 2px 2px 3px #828282; box-shadow: 2px 2px 3px #828282; -ms-filter:"progId:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='gray')"; }
+.ui-section-header { background: #BABABA url('../themes/ruby/jquery/ui-bg_glass_75_cccccc_1x400.png') 50% 50% repeat-x; color: #222; }
+.ui-section-header a { color: #222; }
+.ui-accordion-content dt a:hover { background-color: #F47116; }
+
+/* oval buttons */
+.ui-oval-button { background: transparent url('../themes/ruby/backgrounds/oval-gray-left.gif') no-repeat top left; }
+button.ui-oval-button { border: 0px transparent none; }
+.ui-oval-button span { background: transparent url('../themes/ruby/backgrounds/oval-gray-right.gif') no-repeat top right; }
+
+/* colors */
+.success { color: #008000; }
+.failure { color: #ff0000; }
+
+/* miscelleneous styles */
+.gradiant_back { background-color: #f6f6f6; }
+#filterDiv { border: 1px solid #EFEFEF; }
+.linkTabs ul { background: transparent 0 -104px repeat-x url('../themes/tandem/backgrounds/horizontal_bg_sprites.png'); }
+.linkTabs ul li { color: #3d9de0; }
+.linkTabs ul li a { color: inherit; }
+.linkTabs ul li.selectedTab a { color: inherit; }
+.linkTabs ul li.selectedTab, .linkTabs ul li:hover {background: transparent center top no-repeat url('../themes/tandem/backgrounds/tabs_selected_bg.png'); color: #fff; }
+.linkTabs ul.actionbar { background: transparent 0% 0% repeat scroll none; }
+
+/* Icons for ACH Module */
+.downArrow { background: transparent 0px -12px no-repeat scroll url('../themes/ruby/icons/misc_icons.png'); vertical-align: middle; }
+.upArrow { background: transparent 0px -58px no-repeat scroll url('../themes/ruby/icons/misc_icons.png');  vertical-align: middle;}

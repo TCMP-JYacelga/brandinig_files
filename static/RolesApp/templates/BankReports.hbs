@@ -1,0 +1,18 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.brexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.brcollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "15"}}
+	
+			{{>bankReports assetid="15"}}
+			
+		{{/selectAsset}} 
+	{{/each}}
+</div>

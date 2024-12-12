@@ -1,0 +1,26 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.clientUser.expand" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.clientUser.collapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+ {{#each assets}}
+	{{#selectAsset assetId "06"}}
+
+	<!--SCF Packages starts here -->
+	
+		{{>packageTemplate assetid="06"}}
+		
+	<!--SCF Packages starts here -->
+
+
+	  {{/selectAsset}}
+{{/each}}
+
+
+
+</div>

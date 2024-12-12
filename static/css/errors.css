@@ -1,0 +1,13 @@
+#errContainer { height: 80%; min-height: 748px; background-color: #fff; margin: -7px 0 -6px 0; padding: 0 0 0 16px; border-width: 0; vertical-align: top; }
+.pagenotfound { background-image: url('../images/backgrounds/error_404.gif'); background-position: right center; background-repeat: no-repeat; }
+.internalerror { background-image: url('../images/backgrounds/error_500.gif'); background-position: right center; background-repeat: no-repeat; }
+.accessdenied { background-image: url('../images/backgrounds/error_403.gif'); background-position: right center; background-repeat: no-repeat; }
+.unknownerror { background-image: url('../images/backgrounds/error_unknown.gif'); background-position: right center; background-repeat: no-repeat; }
+
+
+#errContainer h3 { font-size: 24pt; font-weight: bold; letter-spacing: -0.06em; border-bottom: 1px solid #FF3000; min-width: 600px; width: 600px; }
+#errContainer h3 em { color: #FF3000;  font-style: normal; }
+#errContainer p { padding-top: 10px; width: 480px; font-size: 1.25em; text-align: justify; line-height: 1.1em; }
+#errContainer p q { font-size: 1.6em; }
+#errContainer ul { font-size: 1.25em; list-style: circle outside; padding: 0px 0px 0px 16px; }
+#errContainer li { color: #606030; text-align: justify; font-style: italic; }

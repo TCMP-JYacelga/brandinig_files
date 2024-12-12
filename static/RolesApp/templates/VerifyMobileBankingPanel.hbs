@@ -1,0 +1,102 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">	
+									<span id="mobileBankingCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.rolesrv.20" "Mobile Banking"}}</span>								
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="mobileBankingAssetBody" class="panel-body">
+					<div id="mobileBankingFunctionalDiv">
+						  {{#each assets}}
+								{{#selectAsset assetId "20"}}
+								{{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+											{{#if allowedFeatures}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.features" "Features"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression allowedFeatures "featureName"}}	
+													</td>
+												</tr>
+											{{/if}}	
+									</tbody>
+								</table>
+							{{/if}}
+						{{/selectAsset}}
+					 {{/each}}
+				</div>	
+					<!-- Start of Mobile banking View Service - Privileges Table -->
+						<div class="ft-margin-t" id="mobileBankingPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "20"}}
+								{{#if permissions}}
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.privileges" "Privileges"}}</td></tr>
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" >{{getLabel "lbl.role.type" "Type"}}</th>
+											<th class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privView" "View"}}</th>
+											<th class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privEdit" "Edit"}}</th>
+											<th class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privAppr" "Approve"}}</th>
+										</tr>		
+									</thead>
+									<tbody>							
+										{{#each permissions}}
+											<tr class="view-grid-body">
+												<td class="view-grid-header-text view-grid-body-content" >{{getColoredExpression colorClass screenName}}</td>
+																{{#ifCond rmForView '==' "Y" }}
+																{{#if view}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}} 
+																{{#ifCond rmForEdit '==' "Y" }}
+																{{#if edit}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+																{{#ifCond rmForAuth '==' "Y" }}	
+																{{#if auth}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+											</tr>
+										{{else}}
+											<td class="view-grid-header-text view-grid-body-content" colspan="4" style="width:20%;" >None Selected</td>											
+										{{/each}}											
+									</tbody>
+								</table>
+								{{/if}}	
+								{{/selectAsset}}
+							{{/each}}																			
+						</div>
+						<!-- End of mob banking View Service - Privileges Table -->		
+											
+					</div>
+				</div>
+			</div>
+			

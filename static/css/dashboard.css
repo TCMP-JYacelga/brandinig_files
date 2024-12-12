@@ -1,0 +1,96 @@
+/* CSS Document */
+.widgetTitle { border-width: 0 0 2px 0; border-style: none none solid none; border-color: #C7C7C7; padding:0; height: 26px; vertical-align:bottom; text-decoration: uppercase}
+.widgetTitle h4 { float:left; vertical-align: bottom; font-size: 110%; font-weight: bold; border-width: 0px; margin: 4px 0 0 0; }
+.widgetTitle span { border-width: 0px; vertical-align: bottom; }
+.widgetTitle h4 a { color: inherit; }
+
+/* Styling of tables in a dasgboard widget */
+.dashboardTable { border-collapse: collapse; table-layout:auto; }
+.dashboardTable thead tr { line-height: 22px; height: 22px; }
+.dashboardTable thead tr th { font-weight: bold; border-width: 0 0 1px 0; border-color: #cdcdcd; border-style: solid; }
+.dashboardTable tbody tr { line-height: 22px; height: 22px; }
+.dashboardTable tbody tr td { border-width: 0 0 1px 0; border-color: #ededed; border-style: solid; }
+
+/* Glass Pipe */
+.glasspipe { border-color: transparent; border-width: 0px; border-style: none; border-collapse:seperate; }
+.glasspipe tr td { min-height: 24px; padding: 4px 2px 4px 2px; text-align: center; }
+.glasspipe tr.pipe_row td { border-width: 1px 1px 1px 0; border-style: solid; border-color: #8F8F8F; line-height: 24px; height: 24px; padding: 0px; border-collapse:collapse; }
+.blue_glass { background: transparent url('../images/backgrounds/blue_glass.png') 0 0 repeat-x; }
+.green_glass { background: transparent url('../images/backgrounds/green_glass.png') 0 0 repeat-x; }
+.red_glass { background: transparent url('../images/backgrounds/red_glass.png') 0 0 repeat-x; }
+.right_border { border-width: 0 1px 0 0; border-style: solid; border-color: #8F8F8F; }
+.first_pipe { -moz-border-radius-topleft: 4px; -moz-border-radius-bottomleft: 4px; border-left: 1px solid #8F8F8F !important; }
+.last_pipe { -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 4px; }
+.blue_text { color: #618FBE; }
+.green_text { color: #3EB560; }
+.red_text { color: #E56262; }
+
+/* Styles for mail popup */
+#mailContainer { width: 480px; height: auto; margin: 0; padding: 4px 4px 4px 4px; position:absolute; z-index: 20000; background-color: #F4FAFE; border: 1px solid #8e8e8e; }
+#mailContainer table tr td { height: 22px; padding: 2px; }
+#mailHeader { border-bottom: 1px solid #828282; height: auto;}
+#mailContent { padding: 4px; margin: 0; }
+#mpText { background-color: #fff; border: 1px solid #828282; min-height: 96px; display: block; padding: 4px; }
+
+.nodata { word-wrap: break-word; font-size: 1.2em; font-weight: bold; color: #acacac; height: 48px; }
+
+/* tabstrip */
+ul#tabnav {
+	text-align: left; /* set to left, right or center */
+	margin: 0; /* set margins as desired */
+	font: bold 11px verdana, arial, sans-serif; /* set font as desired */
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #fff #fff #c7c7c7 #fff;
+	list-style-type: none;
+	padding: 0 10px 0 10px; /* THIRD number must change with respect to padding-top (X) below */
+	height: inherit;
+}
+
+ul#tabnav li { /* do not change */
+	display: inline-block;
+	height: 23px;
+}
+
+li.tab1, li.tab2, li.tab3, li.tab4 { /* settings for selected tab */
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+	border-color: #fff;
+	background-color: #fff; /* set background color to match above border color */
+}
+
+li.tab1 a, li.tab2 a, li.tab3 a, li.tab4 a { /* settings for selected tab link */
+	position: relative;
+	height: 15px;
+	display:inline-block;
+}
+
+
+ul#tabnav li a { /* settings for all tab links */
+	padding: 6px 4px 4px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+	border: 1px solid #C7C7C7; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+	background-color: #c3c3c3; /* set unselected tab background color as desired */
+	color: #666; /* set unselected tab link color as desired */
+	margin-right: 0px; /* set additional spacing between tabs as desired */
+	text-decoration: none;
+	border-bottom: 0px none #fff;
+}
+
+ul#tabnav li.selected a {
+	background-color: #fff; /* set selected tab background color as desired */
+	color: #000; /* set selected tab link color as desired */
+}
+
+ul#tabnav a:hover { /* settings for hover effect */
+	background: #fff; /* set desired hover color */
+}
+
+/* Hero banner */
+.heroContainer { width: 100%; height: 196px; margin:0; padding: 0; border-width: 0;}
+.heroBanner { height: 140px; background: #F8F8F6 url('../images/banners/ad2.jpg') no-repeat right bottom; padding: 30px 0 0 30px; }
+.heroLine { height: 6px; background-color: #ff6600; }
+.heroBanner h2.bannerHeading { font-size: 26px; font-weight: normal; color: #000; }
+.heroBanner p { color: #8f8f8f; }
+
+/* Simple tabs string */
+.plainList { list-style: none; display: inline }

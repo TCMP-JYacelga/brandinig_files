@@ -1,0 +1,25 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "Status",
+			"groupTypeCode" : "STATUS",
+			// "columns" : [],
+			"groups" : [{
+				"groupCode" : "STATUS_PENDING",
+				"groupDescription" : "Pending Approval and Posting",
+				"groupId" : "status",
+				"groupQuery" : "(isSubmitted eq 'Y' and (requestState eq '0' or requestState eq '1' ) and requestState eq '4' and isSubmitted eq 'N' and requestState eq '1' and requestState eq '5')"
+			}, {
+				"groupCode" : "STATUS_ACTIVE",
+				"groupDescription" : "Active",
+				"groupId" : "status",
+				"groupQuery" : "(validFlag eq 'Y' and requestState eq '3')"
+			}]
+		}],
+		"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+		}
+	}
+}

@@ -1,0 +1,142 @@
+.ux_textbox-margin .x-toolbar-default.x-box-item{ background-color : $panelBackgroundColor !important; }
+.ux_paymententry input[type="text"], input[type="password"]{ padding: 6px 5px !important; }
+.ux_paymententry SELECT ,OPTION{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	padding: 5px 0px 5px 2px !important;
+	font-size: $fontSize14;
+	border: 1px solid #C7C7C7;
+}
+
+input[type=text]:hover, input[type=text]:focus, textarea:hover, textarea:focus, select:hover, select:focus { border: 1px solid #c2c2c2; }
+input[type=text], input[type=password], textarea, select { font-size: $fontSize14; font-family: $fontFamily; }
+
+input[type="text"], input[type="password"], textarea{ border-color: #eaeaea !important; padding-left: 5px !important; padding-right: 5px !important; border-radius: 5px;}
+
+SELECT ,OPTION{	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important; padding-left: 2px !important; font-size: $fontSize14; border-radius: 5px !important; border: 1px solid #eaeaea; }
+
+select:focus { width:auto ;
+position:relative ;
+}
+input[name='clientCodeFltr'],input[name='agreementCodeFltr']{
+font-size:$fontSize14;
+margin:0px !important;
+padding-top:3px !important;
+padding-bottom:3px !important;
+padding-left:0px !important;
+}
+
+.ux_width165 input[type=text].x-form-field {
+	width : 165px !important;
+}
+.ux_width165 input[type=text] {
+	width : 165px !important;
+}
+input[type=text].x-form-field {
+	border-radius : 0px !important;
+	font-size : $fontSize14 !important;
+}
+input[type=text], input[type=password], textarea, select {
+	font-size : $fontSize14 !important;
+	/*background-color: $lightColor !important;*/
+}
+/*AmountBox Textbox Widht Overridden*/
+.amountBox{
+	width: 196px !important;
+	min-width: 196px !important;
+}
+
+/*Prenote and other options*/
+.ux_selectbox{
+	font-size: $fontSize14 !important;
+}
+
+.ux_optioncolor{
+	color: #808080 !important;
+}
+
+.ux_multi-textbox-margin-left{
+	margin-left: 10px !important;
+}
+
+.ux_textbox-margin input[type=text], input[type=password], textarea, select{
+	margin: 0px !important;
+}
+
+.ux_reciever-name-textfield-margin{
+	margin-left: 0px !important;
+}
+/*Autocompleter Font Icon*/
+
+.xn-suggestion-box {
+    background-image: url("resources/images/icon-search-grey.png") !important;
+    background-position: right center !important;
+	background-repeat: no-repeat !important;
+	padding: 3px 20px 3px 3px !important;
+}
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+}
+.ux_trigger-height .x-form-trigger{ height: 25px; }
+
+.textBox{ padding: 7px 5px !important; }
+
+
+.radioSmall {
+	margin: 0px;
+	vertical-align: text-bottom;
+	height: $fontSize14;
+	width: $fontSize14;
+	-webkit-transform: scale(0.8,0.8);
+	-moz-transform: scale(0.8,0.8);
+	-o-transform: scale(0.8,0.8);
+}
+select:-internal-list-box option:checked {
+	background-color: $lightColor !important;
+	color: $primaryColor !important;
+}
+.mediumfont{ font-size: $fontSize14; }
+
+.ux_width17.xn-form-trigger {
+	width : 17px !important;
+}
+
+.w15_5{ width: 15.5em !important; min-width: 15.5em !important; }
+.w15_7{ width: 15.7em !important; min-width: 15.7em !important; }
+.w14_8{ width: 14.843em !important; min-width: 14.843em !important; }
+.w12_8 { width: 12.857em !important; min-width: 12.857em !important; }
+
+fieldset.fieldGroup {
+	border-color: $fieldsetBorderColor !important;
+}
+
+.ux_w35{ width: 350px !important; }
+.ux_w38{ width: 338px !important; }
+
+#ufd-container .plain li.active{ background-image: none !important; background-color: #e7e7e7 !important; color: $fontColor !important; font-size: $fontSize14 !important; font-weight: 400 !important;}
+
+#ufd-container .plain li{ font-size: $fontSize14 !important; }
+
+.x-form-readonly.x-item-disabled .x-form-field{ opacity: 1; }
+
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+.xn-suggestion-box.x-form-text  {
+	padding-right: 20px !important;
+}
+
+@-moz-document url-prefix() {
+    SELECT,OPTION {
+		border: 0px solid #eaeaea !important;
+		height : 25px;
+    }
+	select:disabled {
+		background-color : #fff;
+	}
+	input[type=text], input[type=password],input[type=number] {
+		height : 25px;
+	}
+}

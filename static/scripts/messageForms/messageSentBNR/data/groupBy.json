@@ -1,0 +1,39 @@
+{
+	"d" :
+		{
+		"groupTypes" :
+					 [
+					 {
+					 	"groupTypeDesc" : "Form Group",
+						"groupTypeCode" : "FormGroup",
+					 	"groups" :
+					 			 [{
+					 				"groupCode" : "FG_ACH",
+									"groupDescription" : "ACH Clarification",
+									"groupId" : "formGroup",
+									"groupQuery" : " formGroup eq 'ACH Clarification' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "FG_CHECK",
+									"groupDescription" : "Check ",
+									"groupId" : "formGroup",
+									"groupQuery" :  " formGroup eq 'Check' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "FG_GC",
+									"groupDescription" : "General Complaints",
+									"groupId" : "formGroup",
+									"groupQuery" :  " formGroup eq 'General Complaints' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "FG_TOKEN",
+									"groupDescription" : "Token ",
+									"groupId" : "formGroup",
+									"groupQuery" :  " formGroup eq 'Token' "
+					 			  }
+					 			 ]
+					 
+					 }
+					 ]
+		}
+}

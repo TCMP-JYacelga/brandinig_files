@@ -1,0 +1,747 @@
+/* css for dashboard*/
+@CHARSET "ISO-8859-1";
+
+#loadingDiv {
+	background-image: url("../images/smartnav/loading.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	margin: 10%;
+	height: 600px;
+	width: 600px;
+}
+
+.cursor_pointer {
+	cursor: pointer !important;
+}
+
+.padding_lr_5 {
+	padding: 0 5px 0 5px;
+}
+
+.x-form-trigger-wrap td {
+	vertical-align: middle;
+}
+
+.color-bar .x-panel-default {
+	background-color: #FD4E0B !important;
+	height: 10px;
+}
+
+.x-portlet-container {
+	/*margin: 15px;*/
+	margin: 0 15px 15px 15px;
+	border: none;
+	background-color: white !important;
+}
+
+.ie .x-portlet-container {
+	margin: 0 10px 10px 10px !important;
+	border: none;
+	background-color: white !important;
+}
+
+.x-portlet-container .x-panel-header-text {
+	color: #008000 !important;
+	margin: 0 0 0 25px;
+	font-size: 12px;
+	font-family: arial,helvetica,sans-serif;
+}
+
+.x-portlet-container .x-panel-header {
+	height: 20px !important;
+	background: #F1F8E5 !important;
+	padding-top: 0px;
+	background-color: white !important;
+	border:none !important;
+}
+
+.x-portlet-container .x-grid-cell-inner {
+	padding: 5px;
+}
+
+.home-page-ad {
+	/*background-image: url("../images/backgrounds/ad1.jpg") !important;*/
+	background-repeat: none !important;
+	height: 160;
+	width: 100%;
+	border-bottom: thick #FD4E0B;
+}
+
+.x-grid-cell-inner {
+	font-size: 12px;
+	color: #666;
+	font-weight: 400;
+	line-height: 13px;
+	font-family: Arial,Helvetica,sans-serif;
+	text-decoration: none;
+	vertical-align: baseline;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+.x-column-header {
+	background: url(../images/smartnav/bg_header.png) no-repeat scroll;
+	font-weight: bold;
+	border: 0px;
+	color: #666;
+}
+
+.x-portlet {
+	padding: 5px 0 0 0;
+}
+
+.x-portlet-container .x-panel-header .x-box-item {
+	height: 20px;
+}
+
+.no-data {
+	color: gray;
+    font: 11px calibri, helvetica, arial, sans-serif;
+    padding: 10px;
+}
+
+.debit-renderer {
+	color: red;
+}
+
+.msg-Widget-link {
+	color: #008000;
+	font-family: Arial,Helvetica,sans-serif;
+	line-height: 10px;
+	background: transparent;
+}
+
+/*For rss feeds gadget inner text*/
+.RSS-feed-title {
+	word-wrap: break-word;
+	width: 95%;
+	color: #666;
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+/*For announcement gadget titles*/
+.RSS-feed-title a {
+	color: #0066CC;
+	font-weight: 400;
+	font-family: calibri, helvetica, arial, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	vertical-align: baseline;
+	background: transparent;
+	cursor: pointer !important;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+}
+
+/** Item Selector Styles **/
+.x-form-multiselect-body .x-boundlist .x-mask {
+	background: none;
+}
+
+.x-form-itemselector-body .x-form-item {
+	margin: 0;
+}
+
+.x-form-itemselector-top {
+	background-image: url(../images/smartnav/top2.gif);
+}
+
+.x-form-itemselector-up {
+	background-image: url(../images/smartnav/up2.gif);
+}
+
+.x-form-itemselector-add {
+	background-image: url(../images/smartnav/right2.gif);
+}
+
+.x-form-itemselector-remove {
+	background-image: url(../images/smartnav/left2.gif);
+}
+
+.x-form-itemselector-down {
+	background-image: url(../images/smartnav/down2.gif);
+}
+
+.x-form-itemselector-bottom {
+	background-image: url(../images/smartnav/bottom2.gif);
+}
+
+.x-window-body-default,.x-window-header-default-top,.x-window-default {
+	background-color: white;
+}
+
+.x-toolbar-default,.x-nlg .x-toolbar-default {
+	background-color: white;
+	background-image: none !important;
+}
+
+.widget-selector {
+	margin: 2%;
+}
+
+.x-panel-header-default,.x-nlg  .x-panel-header-default-top,.x-nlg  .x-window-header-default-top-mc
+	{
+	background-color: white;
+	background-image: none;
+	/*border: none !important;*/
+}
+
+.x-boundlist-item {
+	font-family: arial, tahoma, verdana, helvetica;
+	font-size: 11px;
+	font-weight: 400;
+	font-style: normal;
+	font-size-adjust: none;
+	color: #666666;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: normal;
+	word-spacing: 0;
+	line-height: 14px;
+	text-align: left;
+	vertical-align: baseline;
+}
+
+.dlddmenu {
+	background: none !important;
+}
+
+.x-window-header-text-default {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	font-style: normal;
+	font-size-adjust: none;
+	color: #FD4E0B;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: normal;
+	word-spacing: 0;
+	line-height: 16px;
+	text-align: start;
+	vertical-align: baseline;
+}
+
+#dashboardDiv {
+	overflow: visible !important;
+	width: 100%;
+	height: auto;
+}
+
+#content {
+	float: left;
+	height: auto;
+	overflow: visible;
+}
+
+.x-tab-bar,.x-nlg .x-tab-bar,.x-nlg .x-window-default-mc {
+	background-image: none;
+	background-color: white;
+}
+
+.x-tab-bar-top .x-tab-bar-body,.x-window-body-default,.x-toolbar-default
+	{
+	border: none !important;
+}
+
+.x-message-box .x-window-body {
+	background-color: white;
+}
+
+.x-window .x-window-handle {
+	filter: none;
+}
+
+.dashboard-msgs {
+	font-weight: bold;
+	font-family: calibri, helvetica, arial, sans-serif;
+	font-size: 14px;
+}
+
+/* Adding styles for SmartGrid here */
+.icon-search {
+	background-image: url("../images/smartnav/icon_search.png");
+	width: 18px;
+	height: 18px;
+}
+
+.icon-button {
+	background-image: url("../images/smartnav/button_icons.png");
+	background-repeat: no-repeat;
+	border-width: 0;
+	width: 22px;
+	height: 22px;
+}
+
+.icon-save {
+	background-position: 0 -590px !important;
+}
+
+.icon-new {
+	background-position: 0 -290px !important;
+}
+
+.icon-submit {
+	background-position: 0 -350px !important;
+}
+
+.icon-verify {
+	background-position: 0 -320px !important;
+}
+
+.icon-authorize {
+	background-position: 0 -320px !important;
+}
+
+.icon-reject {
+	background-position: 0 -500px;
+}
+
+.icon-send {
+	background-position: 0 -380px !important;
+}
+
+.icon-hold {
+	background-position: 0 -440px;
+}
+
+.icon-release {
+	background-position: 0 -470px;
+}
+
+.icon-stop {
+	background-position: 0 -410px;
+}
+
+.icon-discard {
+	background-position: 0 -950px;
+}
+
+.icon-download {
+	background-position: 0 -920px;
+}
+
+.icon-print {
+	background-position: 0 -1016px;
+}
+
+.grid-row-action-icon {
+	background-image: url("../images/smartnav/icon_grid.png");
+	background-repeat: no-repeat;
+	border-width: 0;
+	display: inline-block;
+	height: 18px;
+	min-width: 18px;
+}
+
+.icon-history {
+	background-position: 0 -198px;
+}
+
+.icon-view {
+	background-position: 0 -216px;
+}
+
+.icon-edit {
+	background-position: 0 -162px;
+}
+
+.icon-clone {
+	background-position: 0 -144px;
+}
+.icon_success
+{
+	background-image: url("../images/smartnav/icon_success.png");
+	background-repeat: no-repeat;
+	border-width: 0;
+	display: inline-block;
+	height: 16px;
+	min-width: 16px;
+	vertical-align: middle;
+}
+.icon_error
+{
+	background-image: url("../images/smartnav/icon_error.png");
+	background-repeat: no-repeat;
+	border-width: 0;
+	display: inline-block;
+	height: 16px;
+	min-width: 16px;
+	vertical-align: middle;
+}
+
+.payment_center {
+	width: auto;
+	height: 600px;
+}
+
+.x-grid-cell-checkcolumn .x-grid-cell-inner {
+	padding-top: 4px;
+	padding-bottom: 2px;
+	line-height: 14px;
+}
+
+.x-grid-with-row-lines .x-grid-cell-checkcolumn .x-grid-cell-inner {
+	padding-top: 3px;
+}
+
+.x-grid-checkheader {
+	height: 14px;
+	background-image: url('../images/smartnav/unchecked.gif');
+	background-position: 50% -2px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.x-grid-checkheader-checked {
+	background-image: url('../images/smartnav/checked.gif');
+}
+
+.x-grid-checkheader-editor .x-form-cb-wrap {
+	text-align: center;
+}
+
+.icon-quickpay {
+	background-position: 0 -72px;
+	margin-left: 2px;
+	vertical-align: middle;
+}
+
+.downloadrep {
+	background-position: 0 -234px;
+	cursor: pointer;
+}
+
+.account-detail {
+	color: #FF6600;
+	font: normal !important;
+	font-size: 12px !important;
+}
+
+.widget-close {
+	width: 17px;
+	height: 15px;
+	cursor: pointer;
+	left: 0 !important;
+}
+
+.toggleBtnCls {
+	width: 30px !important;
+}
+
+.toggleGrpCls {
+	width: 38px !important;
+}
+
+#dataPipe {
+	padding: 10px 20px 10px 10px; 
+	border-bottom: 1px solid #8c8c8c;
+}
+.blue_text { 
+	color: #618FBE; 
+	font: small;
+	font-size: 11px !important;
+}
+.green_text { 
+	color: #3EB560;
+	font-weight: small;
+	font-size: 11px !important;
+}
+.red_text { 
+	color: #E56262; 
+	font-weight: small;
+	font-size: 11px !important;
+}
+.error-msg  {
+    background-color: #EEEEEE !important;
+	background-image:none !important;
+    background-position: 5px center!important;
+    background-repeat: no-repeat!important;
+    border: 1px solid #B3B3B3!important;
+    color: red!important;
+    cursor: wait!important;
+    font: 11px tahoma,arial,verdana,sans-serif!important;
+    padding: 5px 10px 5px 25px!important;
+}
+.widgetcls{
+    background: url("../themes/mnt/images/icon_expand.png") no-repeat scroll 0 0 transparent !important;
+    float: left;
+    height: 17px !important;
+    width: 18px !important;
+}
+.widget-collapse-cls{
+	background: url("../themes/mnt/images/icon_collapse.png") no-repeat scroll 0 0 transparent !important;
+    float: left;
+    height: 17px !important;
+    width: 18px !important;
+}
+
+.treeHeader
+{
+background: #F1F8E5;
+}
+
+
+
+/* CSS for page setting popup */
+ input[type="button"].x-form-radio  {
+    background: url("../js/extjs/resources/themes/images/gray/form/radio.gif");
+ border: 0 none;
+    height: 13px;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: -1px;
+    width: 13px;
+}
+
+.x-form-cb-checked .x-form-checkbox,.x-form-cb-checked input[type="button"].x-form-radio
+{
+background-position:0 -13px
+}
+
+/*--------------------------------------------------------*/
+.x-tab-default:hover, .x-tab-default:hover  button{
+color: #FFFFFF;
+}
+.x-tab  BUTTON .x-tab-inner{
+	text-align : center ;
+	display : block;
+	white-space: nowrap;
+	overflow : visible !important;
+	background-repeat : no-repeat;
+	background-color : transparent;
+}
+.x-tab-default-top {box-shadow: 0 0px 0 0 white inset, -0px 0 0 0 white inset, 0px 0 0 0 white inset;}
+
+.x-tab-default-top {
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-o-border-top-left-radius: 4px;
+	-ms-border-top-left-radius: 4px;
+	-khtml-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-o-border-top-right-radius: 4px;
+	-ms-border-top-right-radius: 4px;
+	-khtml-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-moz-border-radius-bottomright:0;
+	-webkit-border-bottom-right-radius: 0;
+	-o-border-bottom-right-radius: 0;
+	-ms-border-bottom-right-radius: 0;
+	-khtml-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-o-border-bottom-left-radius: 0;
+	-ms-border-bottom-left-radius: 0;
+	-khtml-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	padding: 5px 15px 3px;
+	margin-right: 1px;
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	color: #4C4C4C !important;
+	/*font-weight: normal;*/
+	/*font-family: tahoma,arial,verdana,sans-serif !important;*/
+	background-image: none !important;
+	background : #80C634!important;
+	background-color: #80C634 !important;
+	background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #80C634),
+		color-stop(25%, #80C634), color-stop(45%, #80C634) ) !important;
+	background-image: -webkit-linear-gradient(top, #DCDCDC, #80C634 25%, #80C634 45%) !important;
+	background-image: -moz-linear-gradient(top, #DCDCDC, #80C634 25%, #80C634 45%) !important;
+	background-image: -o-linear-gradient(top, #DCDCDC, #80C634 25%, #80C634 45%) !important;
+	background-image: -ms-linear-gradient(top, #DCDCDC, #80C634 25%, #80C634 45%) !important;
+	background-image: linear-gradient(top, #DCDCDC, #80C634 25%, #80C634 45%) !important;
+}
+
+/*Changed Active Tab Background Color*/
+.x-tab-top-active {
+	background-color: #008000 !important;
+	border-bottom: 1px solid #008000 !important;
+	background-image: -moz-linear-gradient(center top, #008000, #008000) !important;
+	background-image: -webkit-linear-gradient(top, #008000, #008000 48%, #008000 52%, #008000) !important;
+	background-image: -ms-linear-gradient(top, #008000, #008000 25%, #008000 45%) !important;
+}
+
+
+.x-tab-top-active  button {	color: #FFFFFF !important;}
+
+/*Changed the tab strip background color and border color*/
+.x-tab-bar-top .x-tab-bar-strip {border-width: 1px;	top: 22px;}
+
+.x-tab-bar-strip-default,.x-tab-bar-strip-default-plain {
+	background-color: #008000;
+	border-color: #008000;
+	border-style: solid;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+	margin-bottom: 5px;
+}
+/*--------------------------------------------------------*/
+
+.x-window .x-toolbar-default {
+	background : none repeat scroll 0 0 #F1F8E5 !important;
+    background-color: #D8D8D8;
+    border-color: #D0D0D0;
+}
+
+.x-nlg .x-window .x-toolbar-default {
+	background : none repeat scroll 0 0 #F1F8E5 !important;
+    background-color: #D8D8D8;
+    border-color: #D0D0D0;
+}
+
+.x-window .x-panel-header-default {
+    background-color: #D7D2D2;
+	background : none repeat scroll 0 0 #F1F8E5 !important;
+    border-color: #D0D0D0;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 11px;
+}
+
+.x-panel-header-text-container .x-panel-header-text-default{
+    color: #008000;
+    font-family: tahoma,arial,verdana,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+.x-window .x-tab-bar {
+    background-color: #D2D2D2;
+    background : none repeat scroll 0 0 #F1F8E5 !important;
+    font-size: 11px;
+    position: relative;
+}
+
+
+.x-window .x-btn-default-toolbar-small {
+background : none repeat scroll 0 0 #008000 !important;
+}
+.x-window .x-btn-default-toolbar-small:hover button{
+background : none repeat scroll 0 0 #008000 !important;
+}
+.x-window .x-btn-default-toolbar-small .x-btn-inner {
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-family: tahoma,arial,verdana,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 0 4px;
+}
+
+
+.x-nlg .x-window-header-default-top-mc{
+background-color :#F1F8E5 !important ;
+}
+
+.x-window-header-text-default{
+	color : white !important;
+	line-height : 17px !important;
+	font-family : tahoma, arial, verdana, sans-serif !important;
+	font-size : 11px !important;
+	font-weight : bold !important;
+}
+
+.x-window .x-window-header-default-top {
+    background-color: #F1F8E5;
+    border-radius: 5px 5px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    padding: 4px 5px 0;
+}
+
+/* pop-up style changes*/
+.x-window-header-body-horizontal {
+	margin-top:0px !important;
+	padding : 5px 10px 5px 10px !important; 
+	border: 1px solid #C5C5C5 !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	background: none repeat scroll 0 0 #008000 !important;
+}
+
+.x-window-body {
+	padding: 8px !important;
+}
+
+.x-tab-bar-top .x-tab-bar-body, .x-window-body-default, .x-toolbar-default {
+	border: medium none !important;
+}
+
+.x-window-body-default, .x-window-header-default-top, .x-window-default {
+	background-color: white !important;
+}
+
+.font_bold {
+	font-weight: bold !important;
+}
+
+.details-cls {
+	padding: 5px !important;
+	border: none !important;
+	border-width: 0 !important;
+}
+
+.x-form-text, textarea.x-form-field {
+    background: none repeat scroll 0 0 #ECECEC;
+    border: 1px solid #B5B8C8;
+    padding: 1px 3px;
+	vertical-align: text-top !important;
+	overflow: auto !important;
+}
+
+.detail-field-cls {
+	left: 0px!important;
+}
+
+.x-column-header {
+    background: url("../themes/mnt/flexigrid/gradient.png") repeat-x scroll center bottom #80C634;
+    border: 0 none;
+    color: #666666;
+    font-weight: bold;
+}
+
+/* for ie */
+.x-nlg .x-column-header {
+    background: url("../themes/mnt/flexigrid/gradient.png") repeat-x scroll center bottom #80C634;
+    border: 0 none;
+    color: #666666;
+    font-weight: bold;
+}
+
+.x-nlg  .x-panel-header-default-top {
+	background-color: white;
+	background-image: none;
+	border-top-width: 1px !important;
+	border-top-color: #EFEDED !important;
+}
+
+.settings-header-cls  .x-docked-top {
+	border-bottom-width: 1px !important;
+}
+
+.x-surface tspan {
+    -moz-user-select: -moz-none;
+    cursor: default;
+    font: 12px Arial !important;
+}
+
+.x-panel-body-default-framed{
+	background-color:white !important;
+}

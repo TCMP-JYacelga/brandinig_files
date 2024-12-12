@@ -1,0 +1,82 @@
+<div class="panel panel-default" id="brGranularPanel">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="granularInfoCaret"
+						class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>Balance Reporting Granular Privileges</span>
+					<!-- <img id="alertsAll_{{assetid}}" src="{{checkBoxIcon assignAllAlerts}}"
+					data-version = "{{ assignAllAlerts_version }}"
+					 class="chkBoxAlign" width="16"
+						height="16" border="0">
+				   <label class="checkbox-inline noLeftPadding">All</label> -->
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="granularInfoDiv" class="panel-body">
+		<div class="row gridGran">
+					<table class="view-grid">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text">Account</td>
+								<td class="view-grid-header-text">Account Name</td> 
+								{{#each (splitOperation granularPermission.brOperations) }}
+									<td class="view-grid-header-text hidden" style="width:20%;" id=grBRCol_{{@index}}>{{colName}}</td> 
+								{{/each}}
+							</tr>
+						</thead>
+						<tbody>
+							{{#each granularPermission.balanceRpts}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{accountNo}}</td>														
+										<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getStringWithSpecialChars accountName}}</td>
+										{{#each (splitMask mask) }}
+											{{#if isAssign}}
+												<td class="view-grid-body-content hidden">
+													<a class="limit-reached test">
+														<img id="chkGran_{{../../assetid}}_{{@index}}_{{../accountId}}"
+															data-accountId = "{{ ../accountId }}"
+															data-accountName = "{{ ../accountName }}"
+															data-accountNo = "{{ ../accountNo }}"
+															data-gpermissionType = "{{ ../gpermissionType }}"
+															data-assetId="{{../../assetId}}"
+															data-packageId="{{../../packageId}}"
+															data-packageName="{{../../packageName}}"
+															data-obligatorId="{{../../obligatorId}}"
+															data-digest = "{{ digest }}"
+															data-version = "{{ version }}"
+															src="{{checkBoxIcon true}}" width="16" height="16" border="0">
+													</a>
+												</td>
+											{{else}}
+												<td class="view-grid-body-content hidden">
+													<a class="limit-reached test">
+														<img id="chkGran_{{../../assetid}}_{{@index}}_{{../accountId}}"
+															data-accountId = "{{ ../accountId }}"
+															data-accountName = "{{ ../accountName }}"
+															data-accountNo = "{{ ../accountNo }}"
+															data-gpermissionType = "{{ ../gpermissionType }}"
+															data-assetid="{{../../assetId}}"
+															data-packageId="{{../../packageId}}"
+															data-packageName="{{../../packageName}}"
+															data-obligatorId="{{../../obligatorId}}"
+															data-version = "{{ version }}"
+															data-digest = "{{ digest }}"
+															src="{{checkBoxIcon false}}" width="16" height="16" border="0">
+													</a>
+												</td>
+											{{/if}} 
+										{{/each}}														
+									</tr>
+								{{else}}
+									<tr class="view-grid-body">
+											<td class="view-grid-body-content" colSpan="25" style="padding-bottom: 1%;" >&nbsp</td>
+									</tr>		
+								{{/each}}											
+						</tbody>
+					</table>
+		</div>
+	</div>
+</div>

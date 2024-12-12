@@ -1,0 +1,172 @@
+<div id="limPayPackageRow">
+<div class="row">
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="payPackageMakerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.payPackageMakerInfoCaret" "Maker - Payment Package"}}</span>
+									<img id = "makerLimit_PaymentPackage" data-makerPackageEnabled = "{{ makerPackageEnabled }}" tabindex="1" 
+										 src="{{ checkBoxIcon makerPackageEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="payPackageMakerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.payPackage.defaultLimitProfile" "Default Limit Profile"}}</label>
+								
+								{{#if makerPackageEnabled}}
+									<select id="defMaker_PaymentPackage" name="defMaker_PaymentPackage" class="form-control" tabindex="1">
+								{{else}}
+									<select id="defMaker_PaymentPackage" name="defMaker_PaymentPackage" class="form-control" tabindex="1" disabled="disabled">
+								{{/if}}	
+									<option>Select</option>
+									{{#each profileList}}
+										{{option profileId profileDescription assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						
+						
+								<div class="grid">
+									<table class="view-grid" style="width:100%;table-layout: fixed;">
+										<thead>
+											<tr class="view-grid-header">
+												<td class="view-grid-header-text" style="width: 60%;">{{getLabel "lbl.clientUser.limit.payPackage" "Payment Package"}}</td>
+												<td class="view-grid-header-text" style="width: 40%;">{{getLabel "lbl.clientUser.limit.payPackage.limitPrf" "Limit Profile"}}</td>
+											</tr>
+														
+										</thead>			
+										<tbody>	
+										{{#if makerPackageEnabled}}
+											  {{#each makerPackage}}
+											  		<tr class="view-grid-body">
+											  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}" id="{{categoryCode}}" style="width: 60%;">{{categoryDescription}}</td>
+											  			<td class="view-grid-body-content" style="width: 40%;">
+										  					<select id="PaymentPackage_maker_{{categoryCode}}" name="PaymentPackage_maker_{{categoryCode}}" 
+											  					data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" tabindex="1">
+																	<option>Select</option>
+																	{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+															</select>
+											  			</td>
+													</tr>
+											  {{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="2" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>
+											 {{/each}}	
+										{{else}}
+											 {{#each makerPackage}}
+										  		<tr class="view-grid-body">
+										  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}">{{categoryDescription}}</td>
+										  			<td class="view-grid-body-content">
+											  			<select id="PaymentPackage_maker_{{categoryCode}}" name="PaymentPackage_maker_{{categoryCode}}" data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" disabled="disabled"  tabindex="1">
+															<option>Select</option>
+															{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+														</select>
+										  			</td>
+												</tr>
+											 {{/each}}	
+										{{/if}}	 
+										</tbody>
+									</table>
+								</div>
+							
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="payPackageCheckerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.payPackageCheckerInfoCaret" "Checker - Payment Package"}}</span>
+									<img id = "checkerLimit_PaymentPackage" data-checkerPackageEnabled = "{{ checkerPackageEnabled }}" tabindex="1" 
+										 src="{{ checkBoxIcon checkerPackageEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="payPackageCheckerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.payPackage.defaultLimitProfile" "Default Limit Profile"}}</label>
+								
+								{{#if checkerPackageEnabled}}
+									<select id="defChecker_PaymentPackage" name="defChecker_PaymentPackage" class="form-control" tabindex="1">
+								{{else}}
+									<select id="defChecker_PaymentPackage" name="defChecker_PaymentPackage" class="form-control" tabindex="1" disabled="disabled">
+								{{/if}}	
+									<option>Select</option>
+									{{#each profileList}}
+										{{option profileId profileDescription assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						
+						
+								<div class="grid">
+									<table class="view-grid" style="width:100%;table-layout: fixed;">
+										<thead>
+											<tr class="view-grid-header">
+												<td class="view-grid-header-text" style="width: 60%;">{{getLabel "lbl.clientUser.limit.payPackage" "Payment Package"}}</td>
+												<td class="view-grid-header-text" style="width: 40%;">{{getLabel "lbl.clientUser.limit.payPackage.limitPrf" "Limit Profile"}}</td>
+											</tr>
+														
+										</thead>			
+										<tbody>	
+										{{#if checkerPackageEnabled}}
+											  {{#each checkerPackage}}
+											  		<tr class="view-grid-body">
+											  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}" id="{{categoryCode}}" style="width: 60%;">{{categoryDescription}}</td>
+											  			<td class="view-grid-body-content" style="width: 40%;">
+										  					<select id="PaymentPackage_checker_{{categoryCode}}" name="PaymentPackage_checker_{{categoryCode}}" 
+											  					data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" tabindex="1">
+																	<option>Select</option>
+																	{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+															</select>
+											  			</td>
+													</tr>
+											  {{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="2" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>
+											 {{/each}}	
+										{{else}}
+											 {{#each checkerPackage}}
+										  		<tr class="view-grid-body">
+										  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}">{{categoryDescription}}</td>
+										  			<td class="view-grid-body-content">
+											  			<select id="PaymentPackage_checker_{{categoryCode}}" name="PaymentPackage_checker_{{categoryCode}}" data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" disabled="disabled" tabindex="1">
+															<option>Select</option>
+															{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+														</select>
+										  			</td>
+												</tr>
+											 {{/each}}	
+										{{/if}}	 
+										</tbody>
+									</table>
+								
+						</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+</div>
+</div>

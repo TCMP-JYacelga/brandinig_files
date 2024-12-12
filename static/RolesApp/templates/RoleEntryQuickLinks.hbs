@@ -1,0 +1,108 @@
+<div class="col-sm-2" style="vertical-align: top">
+	<div class="modal-body quicklinks-modal-body">
+		<div class="quicklinks-col-left">
+			<div class="list-group quicklinks-nav" role="tablist">
+				<ul id="quickLinkLists">
+					{{#each services}} 
+						{{#selectAsset serviceId "03"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_ADMIN">
+								<a href="#/Admin" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							 {{/if}} 
+						{{/selectAsset}}
+						{{#selectAsset serviceId "01"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_BR">
+								<a href="#/BalanceReporting" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li> 
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "02"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_PAYMENTS">
+								<a href="#/Payments" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "16"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_DEPOSIT_VIEW">
+								<a href="#/Imaging" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "07"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_LOAN">
+								<a href="#/Loans" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "13"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_POSITIVE_PAY">
+								<a href="#/PositivePay" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+						{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "14"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_CHECKS">
+								<a href="#/CheckManagement" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+						{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "15"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_BANKREPORTS">
+								<a href="#/BankReports" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "06"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_FSC">
+									<a href="#/SCF" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "04"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_LMS">
+									<a href="#/Liquidity" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "10"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_FORECAST">
+								<a href="#/Forecasting" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "05"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_COLLECTION">
+								<a href="#/Collection" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "19"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_PORTAL">
+								<a href="#/Portal" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+						{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "20"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_MOBILE">
+								<a href="#/MobileBanking" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "21"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_SUB_ACCOUNTS">
+								<a href="#/SubAccounts" class="list-group-item"> {{getModLabel serviceId serviceName}} </a></li>
+							{{/if}}
+						{{/selectAsset}}
+						{{#selectAsset serviceId "22"}} 
+							{{#if assignedFlag}}
+								<li id="MENUITEM_TPFA">
+								<a href="#/TPFA" class="list-group-item"> TPFA </a></li>
+							{{/if}}
+						{{/selectAsset}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

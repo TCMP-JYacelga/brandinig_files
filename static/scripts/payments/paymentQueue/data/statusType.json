@@ -1,0 +1,15 @@
+{
+	"d" :{
+"statusType":[
+               {
+                   "code": "1",
+                   "description": "Repair",
+                   "count": 3
+               },{
+                   "code": "2",
+                   "description": "Auth",
+                   "count": 4
+               }
+           ]
+       }
+}

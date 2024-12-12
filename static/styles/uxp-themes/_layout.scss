@@ -1,0 +1,19 @@
+html, body{
+ font-family: $font-family
+}
+
+.page-body {
+  min-height: calc(100vh - 60px - 120px);
+}
+.dash-container
+{
+  .dash-header{
+    min-height: 10px;    
+  }
+}
+
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1400px;
+  }
+}

@@ -1,0 +1,38 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="brCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">{{getLabel "lbl.clientUser.module.btr" "Balance Reporting"}}</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="brAssetBody" class="panel-body">
+		{{#each assets}}
+			{{#selectAsset assetId "01"}}
+				{{#if accounts}}
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.module.btraccounts" "Balance Reporting Accounts"}} 
+							</label> <span class="pull-right catseparator">:</span>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						<div class="form-group">
+							<span> 
+								{{getResourceListExpressionAccounts accounts "accountName" "accountNo"}}
+							 </span>
+						</div>
+					</div>
+				</div>
+				{{/if}}
+			{{/selectAsset}}
+		{{/each}}
+		</div>
+	</div>
+</div>
+			

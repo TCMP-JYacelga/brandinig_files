@@ -1,0 +1,26 @@
+* { font-family:Calibri, Verdana, Tahoma, Geneva, sans-serif; }
+
+html body { font-size:12px !important; background-color: #bababa; }
+#pageHeader { height: 90px;  padding: 0; border-width: 0; margin: 0 0 -7px 0; }
+
+#loginbodywrapper { width: auto; min-width: 100%; height: 100%; padding: 6px; vertical-align: top; display: table; border-width: 0px; }
+#loginpanel { -moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px; width: 55% !important; float:left; margin:0px; }
+#loginform { padding: 0 10px 0 10px; }
+.frmLabel { width:100px; display: inline-block;  vertical-align: middle; }
+input[type=text], input[type=password] { background-color: white; }
+.codeBox { width: 10em; min-width: 10em; }
+
+#staticData { position: relative; float: left; width:43% !important; padding-left: 10px; margin:0; border:0px white none; }
+
+.portlet { -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; margin: 0 0 10px 0; height:auto; padding: 2px; }
+.portlet-title { padding: 0 10px 0 10px; display:block; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; height: 28px; font-weight: bold; vertical-align: middle; line-height: 28px; border-width: 0px; }
+.portlet-content { padding: 2px 10px 10px 2px; }
+ul.theList { list-style-image:none; list-style-position:outside; list-style-type:circle; padding-left: 22px; }
+ul.theList li { font-size: 1em; }
+p#links a { text-decoration: none; font-size: 90%;color: inherit; }
+p#copyright { font-size:1em; font-style:italic; text-align:left; margin:0 auto; margin-top:200px; padding:6px 10px 0 10px; }
+p#links { padding-bottom: 10px; text-decoration: none; font-size: 85%; }
+
+#messageArea { margin: 4px 20px 4px 20px ; padding: 2px; }
+#messageArea span { padding-left: 18px; font-weight: bold; }
+#messageArea ul { list-style: circle inside; padding-left: 24px; padding-top: 4px; }

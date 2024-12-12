@@ -1,0 +1,39 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "Status",
+			"groupTypeCode" : "CRNOTE_OPT_STATUS",
+			"groups" : [{
+				"groupCode" : "STATUS_REJECT",
+				"groupDescription" : "REJECTED",
+				"groupId" : "status",
+				"groupQuery" : "actionStatus eq '4'"
+			}, {
+				"groupCode" : "STATUS_FORMYAUTH",
+				"groupDescription" : "FOR MY AUTH",
+				"groupId" : "status",
+				"groupQuery" : "actionStatus eq '2'"
+			}, {
+				"groupCode" : "STATUS_FORAUTH",
+				"groupDescription" : "FOR AUTH",
+				"groupId" : "status",
+				"groupQuery" : "actionStatus eq '1'"
+			}, {
+				"groupCode" : "STATUS_FORPRESENTMENT",
+				"groupDescription" : "FOR PRESENTMENT",
+				"groupId" : "status",
+				"groupQuery" : "actionStatus eq '3'"
+			}, {
+				"groupCode" : "STATUS_PRESENTED",
+				"groupDescription" : "PRESENTED",
+				"groupId" : "status",
+				"groupQuery" : "actionStatus eq '7'"
+			}]
+		}],
+		"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+		}
+	}
+}

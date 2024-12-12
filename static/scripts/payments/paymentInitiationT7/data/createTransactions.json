@@ -1,0 +1,95 @@
+{
+	"d" : {
+		"message" : {
+			"errors" : [{
+						"errorCode" : "ENR-0002",
+						"errorMessage" : "AB is Required."
+					}],
+			"success" : "SUCCESS"
+		},
+		"identifier" : "I8giaAJoiLL7-PtFK-DDWyNdCe4WxkMndbE92OCIO0NyB30sKGAqVoNjDdSTsjTfhFoZ38VKgeniwfFhf1AeIFv-rN6hlgIezKXZSOkCpIl1q4XwVCKFJ-c0F7r4dOfJK4q4vOoI7b3fdhLfqaCNxiii_GLP-nYSKN2E7kOx8TfaV76RByeRfZHeZgVsWN3NVRFNrl7UNinm1XMoBKrRfAGwKcXSrILvnpnEvvLibrz8LBtMvKWSDocBcNv2emrbIVFZKlPfB92EtJeKmjYe2Fq11K0Wo-AEODbpGStdIMfQjhjS1oh34d5SGERQj6_CNWKXvsXNC59VmA9ER72X9pWjcStM7EpKmeywW5ma6jx3RlfvmUIqe8vS-hN9qHHCpPOfjnLFwAol8f0pmO6vWh5p3qwv_Jw2EOLzij5kooFmlWfg9hzP8U4Vac6kZkZm3HMINdrJnh4lH-QdO2pLuP6BdXRYqbiqHXCuzm3VhezDqX_ZuZLwbWKNiw1fmJADfUuijQY-6qpORqaVLwQxRRvE8u8PPcAr02dL7ZDt9Ii3xaIarPNAon6-hrKsbfCJcvEIrFKZDy3xPMiFiVhmPA",
+		"count" : 2,
+		"editableGridCols" : "accountNo,txnDate,drawerDescription,txnCurrency,amount,drawerAccountNo,beneficiaryBankIDType,beneficiaryBankIDCode,beneficiaryBranchDescription,referenceNo,__status",
+		"__metadata" : {
+			"_applDate" : "05/24/2016",
+			"_dateFormat" : "MM/dd/yyyy",
+			"_jqueryDateFormat" : "mm/dd/yy",
+			"_extDateFormat" : "m/d/Y",
+			"_myproduct" : "CCD",
+			"_userLocale" : "en_US",
+			"_cutoffTime" : "22:45:00",
+			"_productCategory" : "ACH",
+			"_myproductDescription" : "CCD",
+			"_buttonMask" : "000000000",
+			"_pirMode" : "LP",
+			"_gridEntryEnabled" : "N",
+			"_systemBeneFlag" : "N",
+			"_txnImportEnabled" : "N",
+			"_secCode" : "CCD",
+			"txnQueue" : "None",
+			"type" : "GCP.PaymentEntry"
+		},
+		"paymentEntry" : {
+			"beneficiary" : {
+				"adhocBene" : [{
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBankIDType",
+							"dataType" : "select",
+							"displayMode" : "3"
+						}, {
+							"readOnly" : "true",
+							"fieldName" : "drawerAccountNo",
+							"dataType" : "text",
+							"displayMode" : "3"
+						}, {
+							"readOnly" : "true",
+							"fieldName" : "drawerDescription",
+							"dataType" : "text",
+							"displayMode" : "2"
+						}, {
+							"readOnly" : "false",
+							"fieldName" : "beneficiaryBranchDescription",
+							"dataType" : "text",
+							"displayMode" : "2"
+						}, {
+							"readOnly" : "true",
+							"fieldName" : "beneficiaryBankIDCode",
+							"dataType" : "seek",
+							"displayMode" : "3"
+						}],
+				"drawerRegistedFlag" : "A"
+			},
+			"standardField" : [{
+						"readOnly" : "false",
+						"fieldName" : "templateName",
+						"dataType" : "select",
+						"displayMode" : "2"
+					}, {
+						"fieldName" : "amount",
+						"dataType" : "amount",
+						"displayMode" : "3",
+						"readOnly" : "false"
+					}, {
+						"readOnly" : "true",
+						"fieldName" : "accountNo",
+						"dataType" : "select",
+						"displayMode" : "2"
+					}, {
+						"readOnly" : "true",
+						"fieldName" : "txnCurrency",
+						"dataType" : "select",
+						"displayMode" : "2"
+					}, {
+						"readOnly" : "true",
+						"fieldName" : "txnDate",
+						"dataType" : "date",
+						"displayMode" : "2"
+					}, {
+						"readOnly" : "true",
+						"fieldName" : "referenceNo",
+						"dataType" : "text",
+						"displayMode" : "3"
+					}]
+		}
+	}
+}

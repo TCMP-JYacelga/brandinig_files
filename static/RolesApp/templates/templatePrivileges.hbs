@@ -1,0 +1,96 @@
+<!--Admin Privileges starts here -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="privilegesInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.role.privileges" "Privileges"}}</span> 
+						<img id="prevAll_{{assetid}}"  src="static/images/icons/icon_unchecked.gif" class="chkBoxAlign" width="16"
+							height="16" border="0"> 
+						<label id = "prevAll_{{assetid}}" for = "prevAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.priv" "All"}}</label>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="privilegesInfoDiv" class="panel-body">
+			<div class="row grid">
+					<table class="view-grid" style="width: 100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text">{{getLabel "lbl.role.privfunction" "Function"}}</td>
+								<td class="view-grid-header-text" style="width: 15%">{{getLabel "lbl.role.privView" "View"}}</td>
+								<td class="view-grid-header-text" style="width: 15%">{{getLabel "lbl.role.privEdit" "Edit"}}</td>
+								<td class="view-grid-header-text" style="width: 15%">{{getLabel "lbl.role.privAppr" "Approve"}}</td>
+							</tr>
+
+						</thead>
+						<tbody>
+							{{#each permissions}}
+							<tr class="view-grid-body">
+
+								<td class="view-grid-body-content">{{getLabel tciRmParent screenName}}</td>
+								<td class="view-grid-body-content">
+								{{#ifCond rmForView '==' "Y" }}
+								<a class="limit-reached test"> <img
+										id="chkPrevView_{{../assetid}}_{{tciRmParent}}"
+										data-screenid = "{{screenId}}"
+										data-screenname = "{{screenName}}"
+										data-screenweight = "{{screenWeight}}"
+										data-module = "{{module}}"
+										data-featureid = "{{featureId}}"
+										data-submodule = "{{subModule}}"
+										data-tcirmparent = "{{tciRmParent}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon view}}" width="16" height="16" border="0"></a>
+								{{/ifCond}}</td>
+								<td class="view-grid-body-content ">
+								{{#ifCond rmForEdit '==' "Y" }}
+								<a class="limit-reached test"> <img
+										id="chkPrevEdit_{{../assetid}}_{{tciRmParent}}"
+										data-screenid = "{{screenId}}"
+										data-screenname = "{{screenName}}"
+										data-screenweight = "{{screenWeight}}"
+										data-module = "{{module}}"
+										data-submodule = "{{subModule}}"
+										data-featureid="{{featureId}}"
+										data-tcirmparent = "{{tciRmParent}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon edit}}" width="16" height="16" border="0"></a>
+								{{/ifCond}}</td>
+								<td class="view-grid-body-content">
+								{{#ifCond rmForAuth '==' "Y" }}
+								<a class="limit-reached test"> <img
+										id="chkPrevAuth_{{../assetid}}_{{tciRmParent}}"
+										data-screenid = "{{screenId}}"
+										data-screenname = "{{screenName}}"
+										data-screenweight = "{{screenWeight}}"
+										data-module = "{{module}}"
+										data-submodule = "{{subModule}}"
+										data-featureid="{{featureId}}"
+										data-tcirmparent = "{{tciRmParent}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon auth}}" width="16" height="16" border="0"></a>
+								{{/ifCond}}</td>
+
+							</tr>
+							{{else}}
+							<tr class="view-grid-body">
+								<td class="view-grid-header-text view-grid-body-content"
+									colSpan="4" style="padding-bottom: 1%;">&nbsp</td>
+							</tr>
+							{{/each}}
+
+						</tbody>
+					</table>
+
+			</div>
+		</div>
+	</div>
+	<!-- Admin Privileges ends here */ -->

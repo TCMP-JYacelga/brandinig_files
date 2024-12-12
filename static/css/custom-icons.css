@@ -1,0 +1,336 @@
+/* icons height & widths */
+.icon_16x16 { height: 16px; width: 16px; }
+.icon_18x18 { height: 18px; width: 18px; }
+.icon_20x20 { height: 20px; width: 20px; }
+.icon_24x24 { height: 24px; width: 24px; }
+.icon_32x32 { height: 32px; width: 32px; }
+
+/* icons for menubar */
+.menubar-icon { min-width: 30px;display: inline-block; }
+.icon-mbar-chgpwd { background-position:0 -60px; width:23px; }
+.icon-mbar-switch { background-position:0 -91px; }
+.icon-mbar-lang { background-position:0 -120px; }
+.icon-mbar-theme { background-position:0 -150px; width:33px }
+.icon-mbar-qlink { background-position:0 -180px; }
+.icon-mbar-delink { background-position:0 -980px; }
+.icon-mbar-pref { background-position:0 -1100px; }
+.icon-mbar-home { background-position:0 -1256px; }
+.icon-mbar-logout { background-position:0 -1286px; }
+.icon-misc-help { min-width: 18px; display: inline-block; }
+.topicon{float:right;width:300px; height:13px;}
+/* icons for theme switcher */
+.themebox { background: transparent url('../images/icons/icon_themes.png'); background-repeat: no-repeat; }
+.themebox { height: 18px; display: block; padding: 0 0 0 18px; width: auto; }
+.themewinter { background-position: 2px -2px; }
+.themespring { background-position: 2px -22px; }
+.themelemon { background-position: 2px -42px; }
+.themesummer { background-position: 2px -62px; }
+.themegrey { background-position: 2px -82px; }
+
+/* icons for language switcher */
+
+/* button icons */
+.button-icon { border-width: 0px; min-width: 18px; outline: 0px; }
+/*.icon-button-new { background-position: 0 -290px; }
+.icon-button-new-grey { background-position: 0 -290px; }
+.icon-button-accept { background-position: 0 -320px; }
+.icon-button-accept-grey { background-position: 0 -320px; }*/
+/*.icon-button-submit { background-position: 0 -350px; }
+.icon-button-submit-grey { background-position: 0 -350px; }*/
+/*.icon-button-send { background-position: 0 -380px; }
+.icon-button-send-grey { background-position: 0 -380px; }*/
+/*.icon-button-stop { background-position: 0 -410px; }*/
+/*.icon-button-stop-grey { background-position: 0 -410px; }*/
+.icon-button-stop-grey:before,.icon-button-stop:before {
+	font-family: 'fontawesome';
+	content: '\f056';
+	font-size: 14px;
+	padding-right: 5px !important;
+}
+.icon-button-hold { background-position: 0 -440px; }
+.icon-button-hold-grey { background-position: 0 -440px; }
+/*.icon-button-relese { background-position: 0 -470px; }
+.icon-button-release-grey { background-position: 0 -470px; }*/
+/*.icon-button-reject { background-position: 0 -500px; }*/
+/*.icon-button-reject-grey { background-position: 0 -500px; }*/
+/*.icon-button-save { background-position: 0 -590px; }
+.icon-button-save-grey { background-position: 0 -590px; }*/
+/*.icon-button-download { background-position: 0 -920px; }
+.icon-button-download-grey { background-position: 0 -920px; }*/
+/* 15-04-2013 added below two lines  */ 
+.icon-button-cancel { background-position: 0 -680px; }
+.icon-button-cancel-grey { background-position: 0 -680px; }
+/*.icon-button-discard { background-position: 0 -950px; }
+.icon-button-discard-grey { background-position: 0 -950px; }*/
+
+.icon-button-excel { background-position: 0 -920px; }
+.icon-button-excel-grey { background-position: 0 -920px; }
+.icon-button-pdf { background-position: 0 -920px; }
+.icon-button-pdf-grey { background-position: 0 -920px; }
+/*.icon-button-print { background-position: 0 -1016px; }
+.icon-button-print-grey { background-position: 0 -1016px; }*/
+.icon-button-document { background-position: 0 -1046px; }
+.icon-button-back { background-position: 0 -1076px; }
+
+/* icons for dual list movement */
+.icon-button-addone { background-position: 0 -1136px; }
+.icon-button-addall { background-position: 0 -1166px; }
+.icon-button-delone { background-position: 0 -1196px; }
+.icon-button-delall { background-position: 0 -1226px; }
+
+
+/* decorative icons */
+/*.misc-icon { background-color: transparent; background-image: url('../images/icons/icon_assorted.png'); background-repeat: no-repeat; }*/
+/*.icon-misc-product { background-position: 0 -62px; min-width: 18px; border-width: 0px; height: 18px;}*/
+.icon-misc-money { background-position: 0 -110px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-people { background-position: 0 -158px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-person { background-position: 0 -206px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-process { background-position: 0 -254px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-info { background-position: 0 -302px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-more { background-position: 0 -351px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-less { background-position: 0 -399px; min-width: 18px; border-width: 0px; height: 18px;}
+/*.icon-misc-favorite { background-position: 0 -450px; min-width: 18px; border-width: 0px; height: 18px;}*/
+/*.icon-misc-nonfavorite { background-position: 0 -498px; min-width: 18px; border-width: 0px; height: 18px;}*/
+.icon-misc-selfavorite { background-position: 0 -546px; min-width: 18px; border-width: 0px; height: 18px;}
+.icon-misc-print { background-position: 0 -827px; min-width: 8px; border-width: 0px; height: 24px; }
+.icon-misc-addfav { background-position: 0 -875px; min-width: 8px; border-width: 0px; height: 24px; }
+.icon-misc-myfav { background-position: 0 -923px; min-width: 8px; border-width: 0px; height: 24px; }
+.icon-misc-pgsetup { padding-left:2px;background-position: 0 -971px; min-width: 8px; border-width: 0px; height: 24px; }
+.icon-misc-pghlp { background-position: 0 -1022px; min-width: 8px; border-width: 0px; height: 24px; }
+.icon-misc-pgsetup-tool { padding-left:2px;background-position: 0 -1100px; min-width: 8px; border-width: 0px; height: 24px; }
+/* miscelleneous icons */
+/*.icon-expand { background-image: url('../images/icons/icon_expand.png'); background-repeat: no-repeat; background-position: top left; }*/
+/*.icon-collapse { background-image: url('../images/icons/icon_collapse.png'); background-repeat: no-repeat; background-position: top left; }*/
+.misc-icon {
+	padding-right: 5px !important;
+}
+.misc-icon.icon-misc-favorite{
+	font-family: 'fontawesome';
+	content: '\f005';
+	color : #FE9A2E;
+}
+.misc-icon.icon-misc-favorite:before{
+	font-family: 'FontAwesome';
+	content: '\f005';
+	color : #FE9A2E;
+}
+.misc-icon.icon-misc-nonfavorite{
+	font-family: 'FontAwesome';
+	content: '\f005';
+	color : 'grey';
+}
+.misc-icon.icon-misc-nonfavorite:before{
+	font-family: 'fontawesome';
+	content: '\f005';
+	color : 'grey';
+}
+.icon-expand {
+	font-family: 'fontawesome';
+	content: '\f0d7';
+	background-image : none;
+}
+.icon-expand:before {
+	font-family: 'fontawesome';
+	content: '\f0d7';
+	padding-right: 10px !important;
+}
+
+.icon-collapse {
+	font-family: 'fontawesome';
+	content: '\f0da';
+	background-image : none;
+}
+.icon-collapse:before {
+	font-family: 'fontawesome';
+	content: '\f0da';
+	padding-right: 10px !important;
+}
+.icon-button-new,.icon-button-new-grey,.icon-button-accept,.icon-button-accept-grey,.icon-button-enable,.icon-button-enable-grey,.icon-button-disable,.icon-button-disable-grey,.icon-button-discard-grey,.icon-button-discard,.icon-button-release,.icon-button-release-grey,.icon-button-download,.icon-button-download-grey,.icon-button-submit,.icon-button-submit-grey,.icon-button-send-grey,.icon-button-send,.icon-button-print,.icon-button-print-grey,.icon-misc-product,.icon-button-save-grey,.icon-button-save{
+background-image:none !important;font-size:14px;padding-left:5px;
+}
+.icon-button-new:before,.icon-button-new-grey:before{
+	font-family: 'fontawesome';
+	content: '\f067';
+	font-size:14px;
+	padding-right: 5px;
+}
+.icon-button-reject:before{
+	font-family: 'fontawesome';
+	content: '\f00d';
+	font-size:14px;	
+	text-align: center;
+	padding-right: 5px !important;
+}
+.icon-button-reject{
+	font-family: 'fontawesome';
+	content: '\f00d';
+	font-size:14px;	
+	text-align: center;
+	padding-right: 5px !important;
+}
+.icon-button-reject-grey:before{
+	font-family: 'fontawesome';
+	content: '\f00d';
+	font-size:14px;
+	padding-right: 5px !important;
+}
+.icon-button-accept:before,.icon-button-accept-grey:before{
+	font-family: 'fontawesome';
+	content: '\f046';
+	font-size:14px;
+	padding-right: 5px !important;	
+}
+.icon-button-enable-grey:before,.icon-button-enable:before{
+	font-family:'fontawesome';
+	content:'\f205' !important;
+	font-size:14px;
+	padding-right: 5px !important;	
+}
+.icon-button-disable-grey:before,.icon-button-disable:before{
+	font-family:'fontawesome';
+	content:'\f204' !important;
+	font-size:14px;
+	padding-right: 5px !important;	
+}
+.icon-button-discard:before,.icon-button-discard-grey:before{
+	font-family:'fontawesome';
+	content:'\f1f8';
+	font-size:14px;
+	padding-right: 5px !important;	
+}
+.icon-button-release:before,.icon-button-release-grey:before{
+	font-family:'fontawesome';
+	content:'\f04b';
+	font-size:14px;
+	padding-right: 5px !important;	
+}
+.icon-button-download:before,.icon-button-download-grey:before{
+	font-family : 'fontawesome';
+	content: '\f019'; 
+	font-size: 14px;
+	padding-right:5px !important;
+}
+.ux_custom-arrow-button:after {
+	font-family : fontawesome;
+	content: "\f0d7" !important;
+	font-size: 14px !important;
+	padding-left:5px !important;
+}
+.icon-button-submit:before,.icon-button-submit-grey:before {
+	font-family : 'fontawesome';
+	content: '\f058'; 
+	font-size: 14px;
+	padding-right:5px !important;
+}
+.icon-button-send-grey:before,.icon-button-send:before {
+	font-family : 'fontawesome';
+	content: '\f0a9'; 
+	font-size: 14px;
+	padding-right:5px !important;
+}
+.icon-button-print:before,.icon-button-print-grey:before {
+	font-family : 'fontawesome';
+	content: '\f02f'; 
+	font-size: 14px;
+	padding-right:5px !important;
+}
+.misc-icon:before,.icon-misc-product{
+	font-family : 'fontawesome';
+	content: '\f039'; 
+	font-size: 14px;
+	margin-right:5px !important;
+	cursor: default;
+}
+.ux_misc-icon.misc-icon:before,.icon-misc-product{
+	font-family : 'fontawesome';
+	content: '\f039'; 
+	font-size: 14px;
+	margin:0px 5px !important;
+}
+.icon-button-save-grey:before,.icon-button-save:before{
+	font-family : 'fontawesome';
+	content: '\f0c7'; 
+	font-size: 14px;
+	margin:0px 5px !important;
+}
+/* left side label icons */
+.label_icon { height: 16px; background-color: transparent; background-repeat: no-repeat; background-image: url('../images/icons/small_icons.png'); padding: 0px 2px 0px 18px; }
+.icon_email { background-position: 0 -254px; }
+.icon_phone { background-position: 0 -302px; }
+
+
+
+/* icons in data grid */
+.grdlnk-notify-icon { min-width: 18px; height: 18px; display: inline-block; background-repeat:no-repeat; border-width: 0px; }
+.icon-gln-fileup { background-position: 0 0; }
+.icon-gln-confidential { background-position: 0 -18px; }
+.icon-gln-online { background-position: 0 -36px; }
+.icon-gln-billpay { background-position: 0 -54px; }
+.icon-gln-quickpay { background-position: 0 -72px; }
+.icon-gln-fcy { background-position: 0 -90px; padding: 0px !important; }
+.icon-gln-alert { background-position: center -108px; padding: 0px !important; background-color: transparent !important; min-height: 18px; }
+.icon-gln-electronic { background-position: 0 -126px; }
+.icon-gln-physical { background-position: 0 -144px; }
+.icon-gln-pdc { background-position: 0 -162px; }
+
+.grid-link-icon { min-width: 18px; height: 18px; display: inline-block; background-repeat:no-repeat; border-width: 0px; }
+.grid-link-icon-retry {min-width: 18px; height: 18px; display: inline-block; background-repeat:no-repeat; border-width: 0px;}
+.infolink { background-position: 0 -126px; }
+.clonelink { background-position: 0 -144px; }
+/*.editlink { background-position: 0 -162px;  }*/
+.editlink { background-image: none !important; font-family: fontawesome !important;content: "\f044" !important;font-size: 14px !important;}
+.editlink:before { font-family: fontawesome !important;content: "\f044" !important;font-size: 14px !important;}
+.enrichlink { background-position: 0 -180px; }
+/*.historylink { background-position: 0 -198px; }*/
+.historylink { background-image: none !important; font-family: fontawesome !important;content: "\f1da" !important;font-size: 14px !important;}
+.historylink:before { font-family: fontawesome !important;content: "\f1da" !important;font-size: 14px !important;}
+.activitylink {background-image: url('../images/icons/icons_ach.png'); display: inline-block; height:16px; padding: 2px 14px 2px 2px; background-position : 0 -48px;}
+/*.viewlink { background-position: 0 -216px; }*/
+.viewlink { background-image: none !important; font-family: fontawesome !important;content: "\f00e" !important;font-size: 14px !important;}
+.viewlink:before { font-family: fontawesome !important;content: "\f00e" !important;font-size: 14px !important; margin-left: 5px;}
+.downloadlink { background-position: 0 -234px; }
+.infolink_grey, .clonelink_grey, .editlink_grey, .enrichlink_grey, .historylink_grey, .viewlink_grey, .downloadlink_grey { background-image: none !important; }
+.unchk_dislink { background-position: 0 -252px; }
+.chk_dislink { background-position: 0 -270px; }
+.unchklink { background-position: 0 -288px; }
+.chklink { background-position: 0 -306px; }
+
+
+/* icons for form buttons */
+/*.icon_arrow { background-image: url('../images/icons/icon_arrows.png'); background-repeat: no-repeat; height: 18px; width: 18px; }
+.addone { background-position: 0 0;  margin: 0px; padding: 0px; }
+.addall { background-position: 0 -18px;  margin: 0px; padding: 0px; }
+.removeone { background-position: 0 -36px;  margin: 0px; padding: 0px; }
+.removeall { background-position: 0 -54px;  margin: 0px; padding: 0px; }
+*/
+.icon_arrow.addone:before {
+	font-family : 'fontawesome';
+	content: '\f054'; 
+	font-size: 20px;
+	color: #5d99b5;
+}
+.icon_arrow.addall:before {
+	font-family : 'fontawesome';
+	content: '\f04e'; 
+	font-size: 20px;
+	color: #5d99b5;
+}
+.icon_arrow.removeone:before {
+	font-family : 'fontawesome';
+	content: '\f053'; 
+	font-size: 20px;
+	color: #5d99b5;
+}
+.icon_arrow.removeall:before {
+	font-family : 'fontawesome';
+	content: '\f04a'; 
+	font-size: 20px;
+	color: #5d99b5;
+}
+#morePageOptionsDialog div {
+	display:block;height:15px;margin-bottom:6px;
+}
+#morePageOptionsDialog>a {
+	#padding-left:25px;
+	width:auto;
+}

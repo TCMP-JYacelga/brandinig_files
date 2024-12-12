@@ -1,0 +1,9 @@
+#pageFooter { height: 42px; margin: 4px 0 0 0; padding: 2px 0 0 4px; float: bottom; }
+#pageFooter div { padding: 8px 0 0 0; }
+
+#pageFooter { background: $lightColor top left repeat-x scroll url('resources/images/bg_footer.png'); }
+#pageFooter div { background-color: transparent; }
+#pageFooter p { padding-top: 4px; }
+
+#userInfo p { color: $lightColor; }
+#userInfo p a { color: $lightColor; }

@@ -1,0 +1,141 @@
+#pageFooter { margin:0 ; padding: 0 8px 0 8px; border-width: 0; min-width: 600px; font-size: 10px; position: relative; }
+#pageFooter div { vertical-align: middle; height: inherit; }
+#pageFooter a { text-decoration: none; color: inherit; font-weight: bold; }
+#pageFooter #poweredBy { position:absolute; right: 5px; }
+
+.ft-footer {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  border-top: 1px dotted #cfcfcf;
+  height: 65px;
+  display: block;
+  margin-top: 50px;
+}
+
+.ft-footer-column-left {
+  float: left;
+  width: 360px;
+  height: 100%;
+}
+
+.ft-footer-column-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.ft-footer .ft-row-top {
+  display: block;
+  height: 50%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ft-footer .ft-row-bottom {
+  display: block;
+  height: 50%;
+  width: 100%;
+  color: #464646;
+  padding-top: 0;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ft-footer-center {
+  text-align: center;
+  margin: 12px auto;
+  width: 300px;
+}
+
+.ft-footer-copyright {
+  font-size: 10px;
+  color: #464646;
+}
+
+.ft-footer-nav {
+  margin: 0;
+  padding-top: 8px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.ft-footer-nav li {
+  display: inline;
+  color: #135e82;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 1.5;
+  border-right: 1px solid #cbd0d3;
+}
+
+.ft-footer-nav li:first-child,
+.ft-footer-nav li:nth-child(4) {
+  padding-left: 0;
+}
+
+.ft-footer-nav li:last-child,
+.ft-footer-nav li:nth-child(3) {
+  border-right: none;
+}
+
+.ft-member-fdic {
+  height: 50px;
+  width: 44px;
+  float: left;
+  padding-left: 27px;
+  background: url("../images/T7/member-fdic.png") no-repeat transparent center center;
+}
+.ft-member-plynt {
+  height: 80px;
+  width: 144px;
+  float: left;
+  padding-left: 27px;
+  background: url("../images/T7/plynt_certified_logo.jpg") no-repeat transparent center center;
+}
+
+.ft-equal-housing-lender {
+  height: 50px;
+  width: 77px;
+  float: left;
+  padding-left: 19px;
+  background: url("../images/T7/equal-housing-lender.png") no-repeat transparent center center;
+}
+
+.ft-verisign-secured {
+  height: 50px;
+  width: 54px;
+  float: left;
+  padding-left: 19px;
+  background: url("../images/T7/entrust.png") no-repeat transparent center center;
+}
+.ft-footer a:link {
+  color: #135e82;
+  text-decoration: none;
+}
+
+.ft-footer a:visited {
+  color: #135e82;
+  text-decoration: none;
+}
+
+.ft-footer a:hover {
+  color: #135e82;
+  text-decoration: underline;
+}
+
+.ft-footer a:active {
+  color: #135e82;
+  text-decoration: none;
+}
+
+
+
+
+
+

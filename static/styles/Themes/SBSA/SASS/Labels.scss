@@ -1,0 +1,176 @@
+label.required { background: transparent right top no-repeat scroll url('resources/images/asterisk.gif'); }
+.x-form-item-label,.x-form-cb-label {font-family: $fontFamily, helvetica, arial, sans-serif !important;	font-size: $fontSize12 !important;}
+.ux_label-margin-right{
+	margin-right: 10px !important;
+}
+
+.ux_multi-header-label{
+	font-size: $fontSize11 !important;
+	vertical-align: middle !important;
+	line-height: 24px !important;
+}
+
+.grey.fieldLabel{
+	color: $darkColor !important;
+}
+
+
+label.required {
+	padding: 0px 15px 0px 0px !important;
+}
+
+.frmLabel { 
+	width: auto !important;
+	line-height: 24px !important;
+	font-size: $fontSize11 !important;
+	font-family: $fontFamily;
+	padding: 0px 15px 0px 0px !important;
+	color: #010101 !important;
+	display: inline-block !important;
+	font-weight: $fontWeight-SemiBold !important;
+}
+
+label.required-lbl-right{
+	padding: 0px 15px 0px 0px !important;
+}
+
+.fieldLabel { 
+	line-height: 24px !important;
+	font-size: $fontSize11 !important;
+	padding: 0px 15px 0px 0px !important;
+	color: #010101 !important;
+	height: auto !important;	
+	display: inline-block !important;
+	font-weight: $fontWeight-SemiBold !important;
+}
+.ux_texttransform-upper{
+	text-transform: uppercase !important;
+}
+
+.ux_label-style label.tdrequired{
+	padding-left: 0px !important;
+	font-size: $fontSize11 !important;
+	font-family: $fontFamily !important;
+}
+.ux_label-style label.tdfrmLabel{
+	padding-bottom: 6px !important;
+	font-size: $fontSize11 !important;
+	font-family: $fontFamily !important;
+}
+.ux_font-size14 {
+	font-size:$fontSize11 !important;
+	font-weight:$fontWeight-SemiBold !important;
+	font-family:$fontFamily !important;
+}
+
+.x-form-item-label, .x-form-cb-label  {
+	font-size : $fontSize11 !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+}
+.x-form-cb-label {
+	/*font : $fontSize11 $fontFamily !important;*/
+	font-size : $fontSize11 !important;
+	font-family : $fontFamily !important;
+	cursor: pointer;
+}
+
+
+.ux_font-size16 {
+	font-size : $fontSize16 !important;
+	font-weight : bold !important;
+	font-family : $fontFamily !important;
+}
+
+.xn-group-view .ux_font-size16-normal {
+	font-size : $fontSize16 !important;
+	font-family : $fontFamily !important;
+}
+
+.ux_font-size16-normal {
+	font-size : $fontSize16 !important;
+	font-family : $fontFamily !important;
+	font-weight: normal !important;
+}
+
+.ux_font-size16.x-toolbar-item  {
+	font-size : $fontSize16 !important;
+	font-weight : bold !important;
+	font-family : $fontFamily !important;
+}
+.ux_font-size14-normal {
+	font-size : $fontSize11 !important;
+	font-family : $fontFamily !important;
+	font-weight: normal !important;
+}
+.ux_line-height24 {
+	line-height : 24px !important;
+}
+.ux_line-height15{
+	line-height:15px !important;
+}
+.ux_padding2 {
+	margin-bottom : 6px !important;
+	background: #f6f6f6 !important;
+}
+
+.ux_padding2 .x-form-cb-label {
+	/*padding : 2px !important;*/
+	padding : 4px 0px 4px 0px !important;
+}
+.ux_padding2 .x-form-cb {
+	/*margin-top : 7px !important;*/
+	background-image: none !important;
+	/*margin-top : 11px !important;*/
+}
+
+.selected-cb-background {
+	height : 30px !important;
+	/*background: #ddd !important;*/
+	background: $activeTab !important;
+	border-left: 3px solid $borderColor;
+}
+.selected-cb-background :after {
+	border-color: $activeTab !important;
+	border-top: 15px solid transparent !important;
+	border-bottom: 15px solid transparent !important;
+}
+
+.ux_margin2 {
+	margin-bottom : 6px !important;
+	/*background: #f6f6f6 !important;*/
+}
+.ux_margin2 .x-form-checkbox{
+	background-image : none !important;
+}
+.ux_margin2 .x-form-cb-label{
+	padding : 4px 0px 4px 0px !important;
+	/*font-size: $fontSize11 !important;*/
+}
+.ux_unselected {
+	/*background: #f6f6f6 !important;*/
+	background: $inactiveTab !important;
+}
+.selected-cb-background .x-form-cb-label {
+	font-weight : bold !important;
+	color: $fontColor;
+	font-size: $fontSize11 !important;
+	cursor: pointer;
+}
+.ux_paddingb .x-form-item-label {
+	padding-bottom: 6px !important;
+	margin-top: 0px;
+	font-weight: $fontWeight-SemiBold !important;
+}
+.ux_right-align.frmLabel {
+	text-align: right !important;
+}
+
+.ux_text-elipsis{ text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ux_required { background: transparent right top no-repeat scroll url('resources/images/asterisk.gif'); }
+.errmsg{
+	font-weight: bold; 
+    border: 1px solid red;
+    text-align:center;
+}
+
+.ux_batchpay-moreinfo-label{ font-size: $fontSize11 !important; color:$darkColor !important; display: inline-block !important; }

@@ -1,0 +1,38 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">Expand/</a> <a id="collapseAll">Collapse All</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} {{#selectAsset assetId "22"}}
+	
+		{{#if allowedFeatures}}
+			{{>featureTemplate assetid="22"}}	
+		{{/if}}
+		
+		{{>prevTemplate assetid="22"}}
+
+	<!-- Alert and Reports Privileges starts here -->
+	<div class="row">
+
+		<!-- Start of Reports -->
+		<div class="col-sm-6">
+			{{>reportTemplate assetid="22"}}
+		</div>
+		<!-- End of Reports -->
+		
+		<!-- Start of Alerts -->
+		<div class="col-sm-6">
+			{{>alertTemplate assetid="22"}}
+		</div>
+		<!-- End of Alerts -->
+		
+	</div>
+	<!-- Alert and Reports Privileges ends here -->
+
+	{{/selectAsset}} {{/each}}
+</div>

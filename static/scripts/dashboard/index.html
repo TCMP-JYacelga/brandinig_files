@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="owner" content="Fundtech INDIA Ltd."/>
+<meta name="copyright" content="(c) 2009, Fundtech INDIA Ltd."/>
+<!-- <link rel="stylesheet" type="text/css" href="../../js/extjs/resources/css/ext-all-gray.css" />
+<link rel="stylesheet" type="text/css" href="../../js/extjs/resources/css/portal.css" />
+<link rel="stylesheet" type="text/css" href="../../static/css/mnt-theme-ext.css" /> -->
+
+<link rel="stylesheet" type="text/css" href="../../js/extjs4.2.1/resources/css/ext-all-gray.css" />
+<link rel="stylesheet" type="text/css" href="../../js/extjs4.2.1/resources/css/portal.css" />
+
+<link type="text/css" rel="stylesheet" href="../../css/cashplus-theme-ext.css" title="cashplus"></link>
+ 
+<!-- <script type="text/javascript" src="../../js/extjs/ext-debug.js"></script> -->
+
+<script type="text/javascript" src="../../js/extjs4.2.1/ext-debug.js"></script>
+
+<script type="text/javascript">
+	var date_map ={'dd/MM/yyyy':'d/m/Y','MM/dd/yyyy':'m/d/Y'};
+	var dateFormat = "${sessionScope.DATE_FORMATS.extJsDateFormat}";//This will be from server.
+	var serverdateFormat;
+	if(dateFormat)
+		  //serverdateFormat=date_map[dateFormat];
+			serverdateFormat= dateFormat;
+		else
+		  serverdateFormat = 'd/m/Y';
+	
+	var label_map = {
+			loading : 'Loading',
+			lastFiveTrans : 'Last 5 transactions',
+			openingBal: 'Opening Balances',
+			closingBal: 'Closing Balances',
+			viewAll: 'View all',
+			available: 'Available',
+			selected: 'Selected',
+			customer: 'Customer',
+			bank: 'Bank',
+			stopRequest: 'Stop Requests',
+			repair: 'For Repair',
+			draft: 'For Submit',
+			verification: 'For Verification',
+			pendAuth: 'For Auth',
+			hold: 'Hold',
+			send: 'For Send',
+			bankRepair: 'Failed',
+			balVerify: ' For Debit',
+			pendPrint: 'For Printing',
+			liquidation: 'Liquidation',
+			stopReqAuth: 'With Client',
+			stopWithBank: 'With Bank',
+			noDataFound: 'No data to display...'
+			};
+</script>
+
+<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+
+</body>
+</html>

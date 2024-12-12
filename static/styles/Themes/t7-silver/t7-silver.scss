@@ -1,0 +1,208 @@
+$baseFontSize: 10px;
+
+@mixin fontSize($size){
+	font-size: $baseFontSize + $size;
+}          
+@mixin fontSizeImportant($size){     
+	font-size: $baseFontSize + $size !important; 
+}   
+ 
+/* $primaryColor used for primary Buttons, header */   
+$primaryColor: #2d2d2d ;          
+		   
+$headerBackgroundColor: #fff; 
+
+/* Logout Button Background and hover Color     */
+$logoutButton: #4a4a4a;
+$logoutHover: #4a4a4a;    
+                               
+ $focusBorderColor: #67686b;                        
+  
+$mainMenuBgColor: #f8f8f8;
+$mainMenuHoverColor: #f9f9f9;                          
+$mainMenuTextColor: $primaryColor;
+$mainMenuHoverTextColor: #9a9a9a;
+$activeMenuTextColor: #8f8f8f;
+$secondaryNavHoverColor: #a7a7a7;     
+ 
+$linkFocusColor: #3f75ab; 
+  
+/* Background color for action background in header */
+$headerActionDropdown: #f1f1f1;
+
+$buttonBackground: #4a4a4a;  
+$buttonBarBackground: #f1f1f1;   
+$buttonHoverColor: #4a4a4a;
+$buttonBorderColor: #4a4a4a;                               
+   
+/* Border color in the header and also the carrot color which is in main menu */
+$headerBorderColor: #595959;  
+
+/* Third level menu background color in the main menu */
+$subNav-3-bgColor: #f7fbfc; 
+
+/* Used as font color and as background color for panels, labels, buttons */
+$lightColor: #fff;
+
+/* Font color used in textfields, autocompleters */
+$darkColor: #000000;
+ 
+/* Font color used in grid data, labels in entry pages */
+$fontColor: #333;
+
+/* Font color used in popup header, EXTJS fields */
+$fontColorDark: #555555;
+
+/* Font color of batch actions label and other labels in JSP pages */
+$fontColorDarker: #666666; 
+
+/* Font color for group level of the grid */
+$buttonDarkColor: #8c8c8c; 
+
+/* Disabled Field background color */   
+$disableColor: #EEEEEE;
+
+/* Granular and privilege popup content border and background colors */
+$contentBorderColor: #A9A6A6;
+$contentBackgroundColor: #FAFAFA;      
+
+/* Filter panel Clear button Color*/
+$filterClearButton: #629BB5;
+  
+/* Background colors for the right hand side panel for each and every panel*/
+$sidePanelHeader: #d9d9d9;
+$sidePanelHeaderTextColor: $lightColor;
+$sidePanelActionList: #E6e6e6;
+$sidePanelQuickPayments: #ececec;
+$sidePanelMessages: #F9F9F9; 
+$sidePanelReports: #F3F3F3;
+  
+/* AutoCompleter dropdown hover color */
+$dropDownHoverBgColor: $sidePanelQuickPayments;   
+$selectedDropdownColor: #e3e3e4;            
+ 
+/* Font and background color for granular and privilege labels */
+$linkColor:  $primaryColor;; 
+$linkBgColor: $sidePanelHeader;
+
+/* Red Background color for privilege popup content */
+$panelBgColor: #e4f3f9;  
+
+/* Box shadow color */
+$boxShadowColor: #888888; 
+
+/* Box shadow color for Date Picker */
+$datePickerShadowColor: #d2d9de;
+
+/* Date Picker Header and column(Eg. sun, mon, tues,...etc) background color */
+$pickerHeaderColor:$fontColorDarker;
+$pickerColumnHeaderColor: #d9d9d9;                                   
+$datePickerNextPrevColor:  $lightColor;
+$datePickerTodayColor: #73b2d9;
+
+/* Common border color used every where */                
+$borderColor: #CCCCCC;   
+$menuBorderColor: #e3e3e4;                  
+
+/* Background color for button on popup */     
+$dialogButtonBackground: #f1f1f1;
+
+/* Grid header, summary, alternate rows, paginition background color, column header text color and grid icon colors */
+$gridHeaderColor: $primaryColor;
+$gridHeaderColorOver: $primaryColor;
+$gridSummary: #f0f4dd; 
+$gridHeaderTextColor: $lightColor;         
+$gridRowColor: #F8F8F8;       
+$gridTabOverColor: #f1f1f1;       
+$gridRowOverColor: #e3e3e4;     
+$selectedRowOverColor: #d6d6d7;                                      
+$pagingBackground: #e7e7e7;    
+$gridIconColor: $primaryColor;      
+$errorIconColor: #F78181;
+$completedIconColor: #00994e;
+  
+$summaryBorderColor: #ddd;
+   
+/* Grid Height Dropdown Label Color */      
+$gridHeightLabel: $lightColor;              
+     
+/* Links Color*/                   
+$linksColor: $primaryColor; 
+$linksHoverColor: #3f75ab;       
+
+/* Different textfields border color */
+$inputTypeBorderColor: #66afe9;
+$textFieldBorderColor: #e6e9ea;
+$textFieldTextColor: #7b8a97;
+
+/* Toolbar seperator color used in paginition and EXTJS combo box */
+$toolbarSeperatorColor: #b9d2dd;
+
+/* Tabs color use in Advance Filter */
+$tabsColor: $headerActionDropdown;  
+
+/* Font color for Active Tabs in Advance Filters */
+$activeTabsColor : $headerBorderColor;
+$accordianBar: #eaeaea;   
+    
+/* Primary Button Hover Color */     
+$primaryColor1: #333333;    
+
+/* Background color to show Active menu from the main menu in the header */
+$moduleHeaderColor1: #f9f9f9;
+
+/* Used as EXTJS panel background color */
+$moduleContent: $moduleHeaderColor1;
+
+/* Used as grid column header hover color */
+$moduleHeaderColor2: $primaryColor;       	
+                
+$crumbsBackground: #e3e3e4;
+
+/* Font Family used across appliction */
+$fontFamily: Arial,sans-serif,Calibri,Candara,Segoe,"Segoe UI",Optima;
+
+
+
+/* Secondary button background and hover color */
+$secondaryBtn: #404040;
+$secondaryBtnHover: #4d4d4d;
+ 
+/* Vertical panel header color on Entry Screens */
+$verticalPanelHeader: $primaryColor;  
+
+/* Save preference text color and export pdf dropdown text and background color*/
+$ftDropdownMenuTextColor: $primaryColor;
+$ftDropdownMenuBgColor : $headerActionDropdown;
+
+/* Save preference on hover background color */
+$headerDropdownTextColor : $lightColor; 
+                      
+/* EXTJS panel text color(generic) */  
+$panelHeaderBackground: #f5f5f5;               
+$panelTextColor: $lightColor;                        
+                                            
+/* Advance filter header text color */   
+$advFilterHeaderColor : $lightColor;              
+  
+/* Popup header text color */                      
+$popupHeaderColor: $primaryColor;
+$windowHeaderTextColor: $lightColor;                          
+$windowHeaderBorderColor: #e5e5e5;           
+ 
+/* Add widget popup menu and text color */                     
+$menuBgColor: $gridHeaderColor; 
+$menuTextColor: $primaryColor;;  
+$menuHoverColor: $panelHeaderBackground;   
+
+/* Status Bar color on entry pages */  
+$doneStatusBarTextColor: $fontColor; 
+$activeStatusBarColor: #666666;;
+$activeStatusBarBorderColor: $buttonBorderColor;
+$activeStatusBarTextColor: $lightColor;      
+
+/* Imports base theme and overwrite SASS files */
+@import "../base-theme/base.scss";
+@import "SASS/Overwrite.scss"; 
+
+

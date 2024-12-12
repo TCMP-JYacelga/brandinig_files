@@ -1,0 +1,178 @@
+.ft-circle-alerts {
+	height: 25px;
+	width: 25px;
+	background-image: url('resources/images/T7/circle-background-red.png');
+	line-height: 24px;
+	color: $lightColor;
+}
+.ft-main-nav {
+  > li {
+    > a {
+      @include fontSize(6);
+    }
+  }
+}
+.ft-sub-nav{
+	> li{
+		> a{
+			@include fontSize(2);
+			padding: 7px 10px;
+		}
+	}
+	.flyout{
+		.ft-sub-nav-3{
+			> li{
+				> a{
+					@include fontSize(2);
+					padding: 6px 2px 0px;
+				}
+			}
+		}
+	}
+}
+.ft-batch-action{
+	@include fontSizeImportant(2);
+}
+.x-grid .x-grid-cell-inner{
+	@include fontSizeImportant(3);
+}
+
+.t7-grid{
+	.x-tab-bar-body .x-box-item {
+		.x-tab-button .x-tab-inner {
+			@include fontSizeImportant(4);
+		}
+    }
+}
+.vertical-collapsible-titlebar > .vertical-collapsible-title{
+	@include fontSize(4);
+}
+
+.ux_margin2 .x-form-cb-label{
+	@include fontSize(4);
+}
+
+.selected-cb-background {
+	.x-form-cb-label{
+		background-color: $tabsColor;
+		color: $primaryColor !important;
+	}
+	&:after{
+		content: "";
+		border-top: 17px solid transparent !important;
+		border-bottom: 17px solid transparent !important;
+		border-left: 11px solid $tabsColor !important;
+		position: absolute !important;
+		right: -11px !important;
+		top: 0px !important;
+		z-index: 1 !important;
+	}
+}
+
+.ux_margin2 .x-form-cb-label{
+	background-color: $tabsColor;
+	color: $primaryColor;
+}
+
+.ui-tabs .ui-tabs-nav a{
+	@include fontSize(3);
+}
+
+.ft-main-compact.ft-main-nav > li > a{
+	padding: 0px 10px !important;
+	@include fontSize(6);
+	min-width: 55px;
+} 
+
+.ft-header{
+	height: 86px;	
+}
+
+.ft-status-bar  .ft-status-bar-li-active {
+    background-color: $primaryColor;
+}
+
+.ui-vertical-tab .ui-vertical-tabs-selected :after {
+	border-left: 11px solid $dialogButtonBackground;
+	border-top: 14px solid transparent;
+	border-bottom: 13px solid transparent;
+}
+
+.filterSttingButtons {
+  .x-btn-inner {
+    color: $primaryColor !important;
+  }
+}
+
+.ext-dropdown-menu .x-menu-item:hover .x-menu-item-text{
+	color: $primaryColor;
+}
+.ft-dropdown-menu{
+	margin-top: -6px;
+}
+
+.datepick-cmd{
+	@include fontSize(1);
+}
+
+.ft-header{
+	background-position-x: 30px !important;
+	background-image: url("resources/images/T7/logo.png");	
+	background-color: $primaryColor; // fallback
+	background: url('resources/images/T7/logo.png') left center no-repeat; // fallback
+	background: url('resources/images/T7/logo.png') left center no-repeat, -moz-linear-gradient(to bottom, #1b1b1b, #797979); // FF 3.6+
+	background: url('resources/images/T7/logo.png') left center no-repeat, -webkit-gradient(linear, 0 0, 0 100%, #1b1b1b, #797979); // Safari 4+, Chrome 2+
+	background: url('resources/images/T7/logo.png') left center no-repeat, -webkit-linear-gradient(to bottom, #1b1b1b, #797979); // Safari 5.1+, Chrome 10+
+	background: url('resources/images/T7/logo.png') left center no-repeat, -o-linear-gradient(to bottom, #1b1b1b, #797979); // Opera 11.10
+	background: url('resources/images/T7/logo.png') left center no-repeat, linear-gradient(to bottom, #1b1b1b, #797979); // Standard, IE10
+	border: none;
+}
+
+.ft-header-menubar{
+	margin-top: 23px;
+}
+
+.summary-highlight {
+    background-color: $sidePanelHeader !important;
+    color: $fontColor;
+    font-size: 16px;
+	label, span{
+		font-size: 16px !important;
+	}
+}
+
+.t7-grid .xn-panel-header .x-btn-default-toolbar-small .x-btn-arrow{
+	background-image: url("resources/images/T7/caret-white.png");
+}
+
+.ft-dropdown-caret {
+    background-image: url(../../../images/T7/dropdown_arrow.png);
+}
+
+.t7-grid .icon-collapse-rounded{
+	background-image: url("resources/images/T7/BDB-icons.png");
+}
+
+.t7-grid .icon-expand-rounded {
+    background-image: url("resources/images/T7/BDB-icons.png");
+}
+
+.t7-grid .icon-expand-rounded:hover {
+    background-image: url('resources/images/T7/BDB-icons.png');
+}
+
+.x-tool-img{
+	background-color: transparent !important;
+}
+
+.x-combo-checker{
+	background-position: 0px 3px;
+	height: 18px;
+}
+
+.ui-multiselect-header{
+	background-color: $dialogButtonBackground;
+}
+
+.ft-dropdown-caret {
+  background-image: url(resources/images/T7/dropdown_arrow.png); }

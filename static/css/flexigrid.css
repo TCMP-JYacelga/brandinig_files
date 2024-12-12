@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.flexigrid { position: relative; overflow: hidden;}
+.flexigrid.hideBody { height: 26px !important; }
+.ie6fullwidthbug { padding-right: 2px; }
+
+.flexigrid div.nDiv { overflow: auto; left: 0px; position: absolute; z-index: 999; float: left; }
+.flexigrid div.nDiv table { margin: 2px; }
+
+.flexigrid div.hDivBox { float: left; padding-right: 40px; display: inline-block; height: inherit; }
+.flexigrid div.hDivBox table { height: inherit; }
+
+.flexigrid div.bDiv table { margin-bottom: 10px; }
+.flexigrid div.bDiv table.autoht { border-bottom: 0px; margin-bottom: 0px; }
+.flexigrid div.bDiv table tr td div { text-overflow: ellipsis; overflow: hidden; }
+.flexigrid div.bDiv table tr td div a { text-align: center;}
+
+
+.flexigrid div.nDiv td { padding: 2px 3px; cursor: default; }
+.flexigrid div.nDiv td.ndcol2 { padding-right: 10px; }
+
+.flexigrid div.nBtn { position: absolute; width: 14px; z-index: 900; top: 0px; left: 0px; margin-top: 1px; cursor: pointer; display: none; }
+.flexigrid div.nBtn div { height: 42px; width: 12px; float: left; }
+
+.flexigrid div.mDiv { font-weight: bold; display: block; overflow: hidden; white-space: nowrap; position: relative; }
+.flexigrid div.mDiv div { padding: 6px; white-space: nowrap; }
+.flexigrid div.mDiv div.ptogtitle { position: absolute; top: 4px; right: 3px; padding: 0px; height: 16px; width: 16px; overflow: hidden; cursor: pointer; }
+.flexigrid div.mDiv div.ptogtitle span { display: block; width: 14px; height: 14px; }
+
+/* toolbar */
+.flexigrid div.tDiv { position: relative; overflow: hidden; }
+.flexigrid div.tDiv2 { float: left; clear: both; padding: 1px; }
+.flexigrid div.sDiv { position: relative; border-top: 0px; overflow: hidden; display: none; }
+.flexigrid div.sDiv2 { float: left; clear: both; padding: 5px; padding-left: 5px; width: 1024px; }
+.flexigrid div.sDiv2 input, .flexigrid div.sDiv2 select { vertical-align: middle; }
+/*.flexigrid div.btnseparator { float: left; height: 22px; margin: 1px; }*/
+.flexigrid div.fbutton { float: left; display: block; cursor: pointer; padding: 1px; }
+.flexigrid div.fbutton div { float: left; padding: 1px 3px; }
+.flexigrid div.fbutton span { float: left; display: block; padding: 3px; }
+.flexigrid div.fbutton:hover, .flexigrid div.fbutton.fbOver { padding: 0px; }
+.flexigrid div.fbutton:hover div, .flexigrid div.fbutton.fbOver div { padding: 0px 2px; }
+/* end toolbar */
+
+.flexigrid div.hDiv { position: relative; overflow: hidden; background: #5d99b5 !important; }
+
+.flexigrid div.cDrag { float: left; position: absolute; z-index: 2; overflow: visible; }
+.flexigrid div.cDrag div { float: left; background: none; display: block; position: absolute; height: 24px; width: 5px; cursor: col-resize; }
+.flexigrid div.cDrag div.noresize { cursor: default; }
+.flexigrid div.cDrag div.noresize:hover { background-image: none; }
+
+.flexigrid div.iDiv { position: absolute; overflow: visible; }
+.flexigrid div.iDiv input, .flexigrid div.iDiv select, .flexigrid div.iDiv textarea { }
+.flexigrid div.iDiv input.tb { padding: 0px; width: 100%; height: 100%; padding: 0px; }
+
+.flexigrid div.bDiv { overflow: auto; position: relative; }
+
+.flexigrid div.hGrip { position: absolute; top: 0px; right: 0px; height: 5px; width: 5px; margin-right: 1px; cursor: col-resize; }
+.flexigrid div.hGrip:hover, .flexigrid div.hGrip.hgOver { margin-right: 0px; }
+.flexigrid div.vGrip { height: 5px; overflow: hidden; position: relative; text-align: center; cursor: row-resize; }
+.flexigrid div.vGrip span { display: block; margin: 1px auto; width: 20px; height: 1px; overflow: hidden; }
+
+/* common cell properties*/
+.flexigrid div.hDiv th, .flexigrid div.bDiv td { border-width: 0px 1px 0px 0px; border-style: solid; border-color: #ddd; }
+
+/* common inner cell properties*/
+.flexigrid div.hDiv th div { padding: 9px 10px; vertical-align: middle; }
+.flexigrid div.hDiv th div input[type="checkbox"]{ margin-left: 13px; }
+div.colCopy div { padding: 2px; height: 22px; vertical-align: middle; line-height: 22px; }
+.flexigrid div.bDiv td  div { font-size: 14px !important; }
+.flexigrid div.hDiv th, div.colCopy { font-weight: normal; cursor: default; white-space: nowrap; overflow: hidden; vertical-align: middle; }
+
+div.colCopy { overflow: hidden; }
+
+.flexigrid div.hDiv th.thOver { }
+/*.flexigrid div.hDiv th.thOver div, .flexigrid div.hDiv th.sorted.thOver div { padding-bottom: 0px; }*/
+.flexigrid div.hDiv th.sorted.thMove div { padding-bottom: 4px }
+.flexigrid div.bDiv td { vertical-align: top; white-space: nowrap; font-size: 14px; padding: 9px 10px !important; }
+
+.flexigrid div.hDiv th { line-height: 24px; background: #5d99b5; color: #fff; font-weight: normal !important; text-align: left; font-size: 14px; }
+.flexigrid div.hDiv th div { height: inherit; }
+
+.flexigrid span.cdropleft { display: block; width: 24px; height: 24px; position: relative; top: -24px; margin-bottom: -24px; z-index: 3; }
+.flexigrid div.hDiv span.cdropright { display: block; width: 24px; height: 24px; float: right; position: relative; top: -24px; margin-bottom: -24px; }
+
+
+
+.flexigrid tr td.sorted div { }
+.flexigrid tr.erow td.sorted div { }
+
+.flexigrid div.pDiv { overflow: hidden; white-space: nowrap; position: relative; margin-top: 12px; border: 0px !important;background: #e7e7e7; padding: 6px 10px; line-height: 24px !important;}
+.flexigrid div.pDiv div.pDiv2 { margin: 3px; margin-left: -2px; float: left; width: 100%; }
+
+div.pGroup { float: left; background: none; height: 24px; margin: 0px 5px; display:inline !important; }
+
+div.pGroup .pcontrol input[type=text]{ margin: 0px; min-height: 14px;  }
+
+.flexigrid div.pDiv .pPageStat, .flexigrid div.pDiv .pcontrol { position: relative; overflow: visible; height: inherit; display: inline-block; font-size: 14px; color: #8f8f8f; font-weight: bold; }
+.flexigrid div.pDiv  div.pButton { float: left; width: 22px; height: 22px; cursor: pointer; overflow: hidden; text-align: center; }
+.flexigrid div.pDiv  div.pButton:hover, .flexigrid div.pDiv  div.pButton.pBtnOver { width: 22px; height: 22px; cursor: pointer; text-align: center; }
+/*.flexigrid div.pDiv  div.pButton span { width: 20px; height: 20px; display: block; float: left; }*/
+.flexigrid div.pDiv  div.pButton:hover span, .flexigrid div.pDiv  div.pButton.pBtnOver span { width: 19px; height: 19px; }
+
+/* ie adjustments */
+/* common inner cell properties*/
+.flexigrid.ie div.hDiv th div, .flexigrid.ie  div.bDiv td  div, div.colCopy.ie div { overflow: hidden; }
+
+/* Invisible left scroll */
+div.scrollingHotSpotLeft
+{
+	min-width: 20px;
+	width: 2%;
+	height: 100%;
+	background-image: url(../images/cursors/big_transparent.gif);
+	background-repeat: repeat;
+	background-position: center center;
+	position: absolute;
+	z-index: 200;
+	left: 0;
+	/*  The first url is for Firefox and other browsers, the second is for Internet Explorer */
+	cursor: url(../images/cursors/cursor_arrow_left.png), url(../images/cursors/cursor_arrow_left.cur),w-resize;
+}
+
+
+
+/* Invisible right scroll */
+div.scrollingHotSpotRight
+{
+	min-width: 20px;
+	width: 2%;
+	height: 100%;
+	background-image: url(../images/cursors/big_transparent.gif);
+	background-repeat: repeat;
+	background-position: center center;
+	position: absolute;
+	z-index: 200;
+	right: 0;
+	/*  The first url is for Firefox and other browsers, the second is for Internet Explorer */
+	cursor: url(../images/cursors/cursor_arrow_right.png), url(../images/cursors/cursor_arrow_right.cur),e-resize;
+}

@@ -1,0 +1,19 @@
+{
+	"success" : true,
+	"news" : [{
+				"title" : 'Low Interest Credit Cards',
+				"artifactDate" : "Feb 02 - 12.58 PM"
+			}, {
+				"title" : 'Mobile and Tablet Banking',
+				"artifactDate" : "Feb 02 - 11.46 PM"
+			}, {
+				"title" : 'Bank Closure Dates',
+				"artifactDate" : "Feb 01 - 01.00 PM"
+			}, {
+				"title" : 'Special Offers',
+				"artifactDate" : "Jan 29 - 12.58 PM"
+			}, {
+				"title" : 'Fraud Protection',
+				"artifactDate" : "Jan 25 - 08.00 AM"
+			}]
+}

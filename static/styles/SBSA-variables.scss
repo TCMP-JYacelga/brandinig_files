@@ -1,0 +1,75 @@
+$fontSize14 : 14px;
+$fontSize13 : 13px;
+$fontSize12 : 12px;
+$fontSize11 : 11px;
+$fontFamily : "Arial";
+$fontWeight-Regular: 400;
+$fontWeight-SemiBold: 600;
+
+/*Used for Button Background, Horizontal Menu Bar,SmartGrid Header,Linktabs*/
+$primaryColor : #005199; 
+
+$pageHeaderGradient1: #6994b7 ;
+$pageHeaderGradient2: #005199 ;
+$menuBarShadow: #00294d;
+$menuBarColor: #003767;
+
+
+$secondaryColor: #9ea2ab;
+
+$panelBackgroundColor: #eee9d5;
+
+$panelHeaderColor1: #eee9d5;
+$panelHeaderColor2: #e1dab0;
+
+/*Table column header*/
+$colHeader1: #98bbd9;
+$colHeader2: #4c88be;
+/*Table row Colors*/
+$alternateColor: #f3f6f5;
+$selectedRow: #c8dbec;
+
+
+/*Font Colors*/
+$btnFont: #000;
+$fontColor: #000;
+
+
+/*Action Button Colors*/
+$gradientColor1: #fbfbf6 ;
+$gradientColor2: #dddab1;
+
+/*Button Hover Color*/
+$hoverColor1: #f7f2d5;
+$hoverColor2: #eadb80;
+
+
+/*Used for background color of Active tab*/
+$activeTab : $panelBackgroundColor; 
+
+/*Used for background color of inactive tab*/
+$inactiveTab : #eadb80; 
+
+/*Font color*/
+$lightColor: #fff;
+$screenBackground: #f6f6ee;
+$darkColor: #000;
+
+/*Hover Font Color*/
+
+$hoverColor: #dddbdc;
+
+/*Link color*/
+
+$linkColor: #000;
+
+
+
+/*Menu Bar border color*/
+$borderColor: #ffa700;
+
+/*Tertiary Tabs*/
+
+$activeTertiaryTab: $screenBackground;
+$inactiveTertiaryTab: #ddd6ac;
+$tertiaryTabHover: $inactiveTab;

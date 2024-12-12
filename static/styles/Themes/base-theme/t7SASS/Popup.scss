@@ -1,0 +1,3138 @@
+.t7-popup .x-toolbar-default {
+  background-image: none !important;
+}
+
+.ui-dialog {
+  display: block;
+  color: $fontColorDarker;
+  border: solid $lightColor thin;
+  background-color: $lightColor;
+  margin: 40px auto;
+  padding: 0px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  
+  textarea{
+	@include fontSize(6);
+	color: $fontColor;
+  }
+  
+  .ui-dialog-titlebar {
+    background-color: $popupHeaderColor;
+    @include fontSize(13);
+    /*Changes done due to popup header standardization */
+    font-weight: 100;
+    border-radius: 0;
+	border-bottom: 1px solid $windowHeaderBorderColor;
+    padding: 15px;
+  }
+
+  .ui-button {
+    background-color: $secondaryBtn;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    color: $lightColor;
+    @include fontSize(1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 13px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .ui-button-text {
+      line-height: 14px;
+    }
+
+    &:hover, &:focus {
+      background-color: $secondaryBtnHover;
+    }
+  }
+
+  .ui-button-next {
+    background-color: $primaryColor;
+
+    &:hover, &:focus {
+      background-color: $primaryColor1;
+    }
+  }
+
+  .ui-dialog-buttonpane {
+    height: 55px;
+    background-color: $dialogButtonBackground;
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin: 0px 0px 0px 0px;
+    padding: 12px 12px 12px 12px;
+  }
+
+  .ui-dialog-titlebar-close {
+    background-image: none;
+    top: 32%;
+	padding: 0px;
+    margin-right: 5px;
+	.ui-icon{
+		text-indent: 0px;
+		width: 16px;
+		height: 28px;
+	}
+	.ui-icon-closethick:before{
+		font-family: fontawesome;
+		content: '\f057';
+		color: $windowHeaderTextColor;
+		@include fontSize(8);
+	}
+	&.ui-state-hover{
+		font-weight: normal;
+	}
+  }
+
+  .ui-dialog-buttonpane button:disabled {
+    cursor: default;
+    background-color: #86B5CE;
+  }
+}
+
+.hide-title-bar {
+  .ui-dialog-titlebar {
+    display: none;
+  }
+  padding: 0px 0px 0px 0px;
+  /*padding changes done Under popup standardization for no-title bar popups*/
+  border-color: #5d99b5;
+  box-shadow: #5d99b5 0px 0px 6px 0px;
+  background: white;
+
+  .ui-dialog-buttonpane {
+    background: white;
+  }
+}
+
+/*---Popup styling:start---*/
+
+.t7-popup {
+  .x-window-header-default-top {
+    background-color: $moduleHeaderColor2;
+    @include fontSize(10);
+    font-weight: 100;
+    padding: 12px;
+    position: relative;
+    border-radius: 0px;
+  }
+
+  .x-header-body {
+    margin-top: 0px;
+  }
+
+  .x-window-header-text {
+    @include fontSize(6);
+    color: $fontColorDarker;
+    font-weight: normal;
+  }
+
+  &.x-window-default, .x-window-body-default {
+    background-color: $lightColor;
+  }
+
+  &.x-message-box .x-window-body {
+    background-color: $lightColor;
+    @include fontSize(4);
+  }
+
+  .x-form-display-field {
+    @include fontSize(4);
+  }
+
+  .x-btn-default-small, .x-btn-default-toolbar-small {
+    background-color: $secondaryBtn;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    background-image: none;
+    color: $lightColor;
+    @include fontSize(1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 13px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .x-btn-inner {
+      @include fontSize(1);
+      line-height: 14px;
+      font-weight: normal;
+      font-family: $fontFamily;
+      color: $lightColor;
+    }
+  }
+
+  .x-form-cb-checked .x-form-checkbox {
+    background-image: url(resources/images/T7/checked.png);
+    background-position: initial;
+  }
+}
+
+/*---Popup styling:end---*/
+
+.ui-dialog .ui-dialog-title {
+  float: left;
+  line-height: 24px;
+  margin: 0px;
+  font-weight: normal;
+  color: $windowHeaderTextColor;
+}
+
+.t7-popup {
+  &.x-window .x-toolbar-footer .x-btn.x-btn-default-small {
+    width: 70px;
+	.x-btn-button{
+	  height: initial;
+	}
+	&:first-child{
+	  background-color: $primaryColor;
+	  padding: 6px 12px;
+	  border-radius: 4px;
+	  right: 15px !important;
+	  left: auto !important;
+	  .x-btn-inner{
+		line-height: 13px;
+		@include fontSize(2);
+		color: $lightColor;
+	  }
+	  &:hover{
+		background-color: $primaryColor1;
+	  }
+	  &:focus{
+		background-color: $primaryColor1;
+	  }
+	}
+	&:last-child{
+	  background-color: $lightColor;
+	  border-radius: 4px;
+	  padding: 6px 12px;
+	  border: 1px solid $fontColor;
+	  right: auto !important;
+	  left: 15px !important;
+	  .x-btn-inner{
+		@include fontSize(2);
+		line-height: 13px;
+		color: $fontColor;
+	  }
+	  &:hover{
+		background-color: $lightColor;
+		box-shadow: 1px 1px 0px 0px #4a4a4a;
+	  }
+	  &:focus{
+		background-color: $lightColor;
+		box-shadow: 1px 1px 0px 0px #4a4a4a;
+	  }
+	}
+  }
+  
+  .x-form-field{
+	@include fontSize(6);
+	color: $fontColor;
+  }
+
+  .x-tool-after-title {
+    padding-left: 10px;
+  }
+
+  &.x-window .x-window-header-body-horizontal {
+    padding-left: 0px;
+    height: 30px;
+  }
+}
+
+.x-window .ux_panel-background {
+  &.x-panel-default {
+    background-color: $dialogButtonBackground;
+    padding: 10px !important;
+  }
+
+  .x-panel-body {
+    background: $dialogButtonBackground;
+  }
+
+  .x-form-text {
+    background-color: transparent;
+	background-image: none;
+    @include fontSize(4);
+    color: #676767;
+    padding: 6px 10px;
+    height: 90px;
+  }
+}
+
+.x-window {
+	.ux_panel-background .ux_font-size16 {
+		@include fontSize(6);
+		font-weight: 600;
+		color: inherit;
+		color: #676767;
+		top: auto !important;
+		left: 0px !important;
+	}
+
+	.ux_font-size16 {
+		@include fontSize(6);
+		font-weight: bold;
+		color: $linkColor;
+		top: auto !important;
+		left: 0px !important;
+	}
+	.x-window-body-default, .x-window-header-default-top, .x-window-default {
+		position: relative;
+		border: 0;
+		padding: 15px;
+		background-color: $lightColor;
+		zoom: 1;
+	}
+}
+
+.x-window.x-window-default {
+  display: block;
+  color: $fontColorDarker;
+  border: solid $lightColor thin;
+  background-color: $lightColor;
+  margin: 40px auto;
+  padding: 0px;
+  border-radius: 0;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  .x-window-header-default-top {
+	position: relative;
+	background-color: $popupHeaderColor;
+	border-bottom: 1px solid $windowHeaderBorderColor !important;
+  }
+}
+
+.x-window-body-default, .x-window-header-default-top, .x-window-default {
+  position: relative;
+  border: 0;
+  padding: 12px;
+  background-color: $lightColor;
+  zoom: 1;
+}
+
+.x-window .x-window-header-body-horizontal {
+  background-color: $popupHeaderColor;
+  @include fontSize(10);
+  font-weight: 100;
+  padding: 0px;
+  border-radius: 0px;
+  padding-right: 0px;
+}
+
+.ux_window-position {
+  .x-window-body-default {
+    border: none;
+  }
+
+  .x-toolbar {
+    padding: 10px;
+  }
+
+  .ux_no-padding .x-toolbar {
+    padding: 0px;
+  }
+
+  .x-img {
+    border: 1px solid $gridHeaderColor;
+  }
+}
+
+.x-window-header-default{
+	.x-tool{
+		.x-tool-img {
+		  background-image: none;
+		  top: 40%;
+		  background-color: transparent;
+		  vertical-align: baseline;
+		}
+	}
+}
+
+.x-panel-ghost .x-panel-header {
+  display: none;
+}
+
+.x-window-header-default-horizontal .x-tool-after-title {
+  left: auto !important;
+  float: right;
+  right: 0px !important;
+  top: 5px !important;
+  width: 24px !important;
+  height: 24px !important;
+  &:before{
+	font-family: fontawesome;
+	content: '\f057';
+	color: $windowHeaderTextColor;
+	@include fontSize(8);
+  }
+}
+
+.x-window {
+  .ux_font-size12 {
+    @include fontSize(4);
+    font-weight: 100;
+  }
+
+  .x-window-header-text-default {
+    @include fontSize(13);
+    float: left;
+    color: $windowHeaderTextColor;
+    font-weight: normal;
+    margin: 0px 16px 0px 0px;
+    line-height: 1.42857;
+  }
+}
+
+.ux_window-position.x-window-default {
+  top: 30px !important;
+}
+
+.widget-popup-header.x-panel-default{
+  border-bottom: 1px solid $windowHeaderBorderColor;
+  .xn-suggestion-box {
+    overflow: hidden;
+  }
+}
+
+.settings-popup {
+  @include fontSize(4);
+
+  .x-window-body-default {
+    border: none;
+    padding: 12px;
+  }
+  
+  .x-toolbar.x-docked-bottom{
+	.x-box-inner a:last-child{
+		background-color: $primaryColor;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		.x-btn-inner{
+			color: $lightColor;
+			@include fontSize(2);
+		}
+		&:hover{
+			background-color: $primaryColor1;
+			box-shadow: none;
+		}
+		&:focus{
+			background-color: $primaryColor1;
+			box-shadow: none;
+		}
+	}
+	.x-box-inner a:first-child{		
+		&:hover{
+			background: $lightColor;
+     		box-shadow: $buttonHoverColor 1px 1px 0px 0px;
+		}
+		&:focus{
+			background: $lightColor;
+     		box-shadow: $buttonHoverColor 1px 1px 0px 0px;
+		}
+	}
+	.x-btn-default-toolbar-small{
+		background-color: transparent;
+		border: 1px solid $fontColor;
+		&:hover{
+			background-color: transparent;
+		}
+	}
+  }
+
+  .x-form-cb-label {
+    @include fontSize(4);
+    line-height: 24px;
+    margin: 0px;
+    display: inline-block;
+    padding-left: 6px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  .x-window-item {
+    padding: 0px;
+  }
+
+  .x-form-cb-checked .x-form-checkbox {
+    line-height: 13px;
+    background-image: url(resources/images/T7/checked.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-position: 0px 0px;
+    padding-right: 5px;
+  }
+
+  .x-form-checkbox {
+    line-height: 13px;
+    background-image: url(resources/images/T7/checkbox.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-position: 0px 0px;
+    padding-right: 5px;
+  }
+
+  .x-form-radio {
+    margin-top: 5px;
+  }
+
+  .x-form-cb-checked .x-form-radio {
+    margin-top: 5px;
+  }
+  .xn-custom-arrow-button.x-btn {
+    padding: 0px;
+	background-color: transparent;
+    margin: 4px 4px;
+
+    .x-btn-glyph {
+      background: transparent url(resources/images/T7/caret-black.png) no-repeat;
+      opacity: 1;
+      font-size: 0px;
+    }
+
+    &.x-btn-default-small .x-btn-arrow {
+      background-image: none;
+    }
+  }
+
+  .ux_dropdown.xn-custom-arrow-button.x-btn {
+    padding: 0px !important;
+    margin: 0px;
+    border-width: 1px 1px 1px 0px !important;
+    border: 1px solid $borderColor;
+    border-left: 0px;
+	border-radius: 0px;
+    border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+    .x-btn-glyph {
+      background: transparent url(resources/images/T7/dropdown_arrow.png) no-repeat;
+      opacity: 1;
+      font-size: 0px;
+      padding-top: 32px;
+      background-position: right center;
+    }
+
+    &.x-btn-default-small .x-btn-arrow {
+      background-image: none;
+    }
+
+    .x-btn-button {
+      margin: 0px !important;
+      padding: 0px !important;
+    }
+  }
+
+  .xn-suggestion-box.xn-form-text {
+    padding: 2px 10px;
+	@include fontSize(4);
+  }
+
+  .xn-form-text {
+    height: 25px;
+	@include fontSize(4);
+    .x-form-text {
+      background-color: $lightColor;
+    }
+  }
+
+  .xn-form-trigger {
+    background: transparent url(resources/images/T7/dropdown_arrow.png) center no-repeat;
+    background-position: right center;
+    padding: 0px;
+    margin: 0px;
+    height: 36px;
+    width: 25px;
+    border-width: 1px 1px 1px 0px;
+    border: 1px solid $borderColor;
+    border-left: 0px;
+    border-radius: 0px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+  }
+
+  .x-trigger-cell {
+    width: 25px !important;
+  }
+
+  .xn-form-field.w4 {
+    padding: 0px 0px 0px 7px;
+    width: 2em !important;
+  }
+
+  .x-toolbar {
+    border: none;
+    padding: 12px;
+  }
+
+  .ux_padding0060 {
+    padding-bottom: 6px;
+  }
+
+  .x-btn-default-small-over {
+    background-color: $primaryColor1;
+  }
+
+  .ft-button-secondary {
+    &.x-btn-default-small {
+      background-color: $secondaryBtn;
+    }
+
+    &.x-btn-default-small-over {
+      background-color: $secondaryBtnHover;
+    }
+  }
+
+  .x-toolbar {
+    background-color: $dialogButtonBackground;
+  }
+  .settings-ui-caret{
+	.x-btn-wrap{
+	  display: none;
+	}
+  }
+  .x-form-trigger-input-cell .x-form-field, input.form-control, select.form-control{
+	height: 36px;
+  }
+  input[type="text"]{
+	height: 36px;
+  }
+  .xn-dropdown-box.x-form-text{
+	background-image: url(resources/images/T7/dropdown_arrow.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+  }
+}
+
+.t7-popup .btn.x-btn.x-btn-default-small, .background .btn.x-btn.x-btn-default-small {
+  width: auto !important;
+  padding: 0px;
+  background-color: transparent;
+}
+
+.alignCenter {
+  text-align: center;
+  background-color: $contentBackgroundColor;
+}
+
+.t7-popup .t7-grid {
+  .x-btn-default-toolbar-small, .x-btn-default-toolbar-small-over {
+    background-color: transparent;
+  }
+
+  .xn-close-button.x-btn-default-toolbar-small .x-btn-inner {
+    color: $primaryColor;
+  }
+}
+
+.ux_window-position .add-wgt {
+  left: 92% !important;
+}
+
+/*
+==============================
+Popup standardization classes.
+=============================
+*/
+
+.ui-dialog .ui-dialog-content .ui-tabs .ui-tabs-nav .ui-dialog-titlebar-close {
+  width: 24px;
+  height: 24px;
+  right: 0px;
+  margin-right: 0px;
+  top: 0px;
+
+  &:hover {
+    padding: 1px;
+    width: 24px;
+    height: 24px;
+    background-position: -29px -198px;
+  }
+}
+
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  border-width: 1px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  background: none;
+}
+
+.ui-dialog {
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    .row {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  .col-sm-4, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-12, .col-sm-6 {
+    //padding-left: 15px;
+    //padding-right: 15px;
+  }
+}
+
+.single-payment-template.ux-dialog .col-sm-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ft-content-pane-scroll {
+  overflow-x: hidden;
+  overflow-y: visible;
+  max-height: 490px;
+}
+
+.single-payment-template .ft-content-pane-scroll {
+  overflow-x: hidden;
+  overflow-y: visible;
+  height: 200px;
+}
+
+.ft-dialog-content-padding-lrb {
+  padding: 0px 12px 12px 12px;
+  @include fontSize(4);
+}
+
+.ft-grid-padding {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: -12px;
+}
+
+.ui-dialog .ui-dialog-content {
+  position: relative;
+  border: 0;
+  padding: 15px;
+  @include fontSize(6);
+  background: none;
+  overflow-y: hidden;
+  zoom: 1;
+}
+/*
+This is creating an issue in batch payment add account popup grid 
+.ui-dialog-content .t7-grid .x-panel-default {
+  overflow-y: visible;
+}*/
+
+.t7-popup {
+  .x-toolbar-footer {
+    margin-top: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 0px;
+    background-color: $dialogButtonBackground;
+  }
+
+  .x-portlet {
+    margin-bottom: 10px;
+    margin: 0px 8px 0 0 !important;
+  }
+
+  .x-window-header-default-horizontal .x-tool-after-title {
+    /* For Generalized Security module popup */
+    left: auto !important;
+    float: right;
+    right: 10px !important;
+    top: 5px !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+.x-window .x-window-body-default .x-window-header-default-top, .x-window-default .x-toolbar-footer {
+  margin-top: 0px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  background-color: $dialogButtonBackground;
+}
+
+.x-window-default .x-toolbar-footer {
+	border-top: 1px solid $windowHeaderBorderColor !important;
+}
+
+.x-window .x-toolbar-footer .x-btn.x-btn-default-small {
+  width: auto !important;
+}
+
+.t7-popup .x-window-header-text-container-default, .x-window .x-window-header-text-container-default {
+  padding: 0px 2px 0px 0px;
+}
+
+.x-window {
+  .ft-button-secondary.x-btn-default-small-over {
+    /* For secondary button color change on hover */
+    background-color: $secondaryBtnHover;
+  }
+
+  .x-toolbar-footer.x-toolbar-docked-bottom .x-btn-default-small-over:last-child {
+    /* For primary button color change on hover */
+    background-color: $primaryColor1;
+  }
+}
+
+.ui-dialog-buttonpane .ui-dialog-buttonset button {
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  height: 24px;
+}
+
+.x-window-header-default-horizontal .x-tool-after-title .x-tool-img:hover {
+  background-image: url(resources/images/T7/iconsmore.png);
+  width: 24px;
+  height: 24px;
+  top: 40%;
+  background-position: -29px -198px;
+}
+
+.popup-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup-long-textWrap {
+  word-wrap: break-word;
+}
+
+/* TODO :: This need to be modify */
+
+.ft-padding-bottom {
+  padding-bottom: 12px;
+}
+
+.formgroup-adv {
+  width: 45px;
+}
+
+.col-sm-2.col-sm-2-formgroup-adv {
+  width: 58px;
+  padding-left: 12px;
+  padding-right: 3px;
+}
+
+.col-sm-4.col-sm-4-formgroup-adv {
+  padding-left: 5px;
+  width: 186px;
+}
+
+.t7-popup .t7-grid .x-btn-default-toolbar-small:first-child {
+  padding-left: 5px;
+}
+
+/*TODO:remove these specfic class*/
+
+.typecode-settings.ux-dialog.ui-dialog-content {
+  padding-bottom: 0px;
+}
+
+.ui-dialog .row .ft-rowMargin {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.clearlink-a a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+/*TODO:remove these specfic class*/
+
+.typecode-combo {
+  width: 240px;
+}
+
+.privilege-label {
+  color: $linkColor;
+  background-color: $linkBgColor;
+  @include fontSize(4);
+  margin-bottom: 0px;
+  padding-top: 5px !important;
+  height: 30px;
+}
+
+.privilege {
+  .red-bg .x-panel-body {
+    background-color: $gridRowColor;
+    border-right: 0px; 
+  }
+	
+  .whitetext {
+    color: $contentBackgroundColor;
+    background-color: $contentBackgroundColor;
+    border-left: 1px solid $lightColor;
+    border-right: 1px solid $lightColor;
+    height: 25px;
+  }
+
+  .cellContent {
+    text-align: center;
+    border-left: none;
+    border-right: 1px solid $lightColor;
+    background-color: transparent;
+    height: 25px;
+  }
+}
+
+.brprivilege {
+  .whitetext {
+    color: $contentBackgroundColor;
+    background-color: $contentBackgroundColor;
+    border-left: 1px solid $lightColor;
+    border-right: 1px solid $lightColor;
+    height: 25px;
+  }
+
+  .cellContent {
+    text-align: center;
+    border-left: 1px solid $lightColor;
+    border-right: 1px solid $lightColor;
+    background-color: $contentBackgroundColor;
+  }
+}
+
+.adminprivilege {
+  .whitetext {
+    color: $contentBackgroundColor;
+    background-color: $contentBackgroundColor;
+    border-left: 1px solid $lightColor;
+    border-right: 1px solid $lightColor;
+    height: 25px;
+  }
+
+  .cellContent {
+    text-align: center;
+    border-left: 1px solid $lightColor;
+    border-right: 1px solid $lightColor;
+    background-color: $contentBackgroundColor;
+    height: 25px;
+  }
+}
+
+.privilege .mainHeader {
+  text-align: center;
+  background-color: $linkBgColor;
+}
+
+.privilege-admin-rights {
+  font-weight: normal;
+  border-left: 1px solid $lightColor;
+  border-right: 1px solid $lightColor;
+}
+
+.privilege .privilege-grid-even {
+  background-color: $gridRowColor;
+}
+
+.privilege .privilege-grid-odd {
+  background-color: $lightColor;
+}
+
+.privilege-grid-header {
+  border-left: 1px solid $lightColor;
+  border-right: 1px solid $lightColor;
+  @include fontSize(4);
+}
+
+.privilege-grid-main-header {
+  border-right: 1px solid $lightColor;
+}
+
+.privilege-grid-type-label {
+  text-align: left;
+}
+
+/*TODO:remove this styling*/
+
+.br-privilege-type {
+  width: 224px;
+}
+
+.privilege .cellContent:last-child {
+  text-align: center;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: transparent;
+}
+
+.privilege .privilege-grid-odd:last-child {
+  border-right-color: $lightColor;
+  background-color: $lightColor;
+}
+
+.privilege .privilege-grid-even:last-child {
+	background-color: $gridRowColor;
+}
+
+.privilege .whitetext:last-child {
+  border-left: 0px;
+  border-right: 0px;
+  height: 25px;
+}
+
+.privilege-sub-label .x-form-cb {
+  margin-top: 2px;
+}
+
+.ft-disclaimer-font-size {
+  @include fontSize(4);
+}
+
+.receiverSelectionPopupSelector .x-toolbar .x-btn-default-toolbar-small:first-child {
+  padding-left: 5px;
+}
+
+.privilege label.granular-privilege-label {
+  color: $linkColor;
+  background-color: $linkBgColor;
+  margin-bottom: 0px !important;
+  padding-top: 5px !important;
+  height: 66px;
+}
+
+.xn-popup .gran-privilege.privilege label.granular-privilege-label {
+  position: static !important;
+  line-height: 1.3;
+  display: table-cell;
+  padding-top: 0px !important;
+  vertical-align: middle;
+}
+
+.granular-privilege-type {
+  width: 310px;
+}
+
+.granular-payprivilege-type {
+  width: 400px;
+}
+.x-gecko{
+.granular-payprivilege-type {
+  width: 405px;
+}
+}
+.label-lineHeight {
+  line-height: 2.5;
+}
+
+.granular-loanprivilege-type {
+  width: 335px;
+}
+
+.x-gecko{
+  .granular-loanprivilege-type {
+		width: 341px;
+		}
+}
+
+.granular-accnt-privilege-headers {
+  width: 105px !important; } 
+
+.granular-obli-privilege-headers {
+ width: 95px !important; }
+
+.granular-privilege-headers {
+  width: 90px !important;
+}
+.granular-privilege-main-headers {
+  width: 90px !important;
+}
+
+.x-gecko{
+	.granular-privilege-main-headers {
+	  width: 96px !important;
+	}
+}
+
+.x-gecko{
+	.granular-privilege-headers {
+	  width: 96px !important;
+	}
+}
+
+.granular-privilege-templateHeaders{
+	width: 120px;
+}
+
+.granular-privilege-account-header {
+  border-right: 1px solid $lightColor;
+}
+
+.granular-privilege-accountno {
+  width: 160px;
+}
+
+.privilege .granular-cellContent {
+  text-align: center;
+  border-left: 1px solid $lightColor;
+  border-right: 1px solid $lightColor;
+
+  &:last-child {
+    text-align: center;
+    border-left: 0px;
+    border-right: 0px;
+    width: 90px;
+  }
+}
+
+.granular-autocompleter {
+  width: 235px !important;
+  height: 24px; 
+  @include fontSize(4);
+}
+
+.granular-autocompleterLarge {
+  width: 245px !important;
+  height: 24px;
+  @include fontSize(4);
+}
+
+.privilege .red-bg1 .x-panel-body {
+  background-color: $lightColor;
+}
+
+.privilege .red-bg1 .x-panel-body .cellContent{
+  background-color: $lightColor;
+}
+
+/* dashboard settings popup */
+/* New Class for header */
+
+.settings-popup {
+  .x-window-header-body-horizontal {
+    padding: 0px;
+  }
+
+  .x-window-header-default-top {
+    border: 0px;
+  }
+
+  .x-form-checkboxgroup-body {
+    padding: 0px;
+  }
+}
+
+/* New Class to remove header's border */
+
+.t7-grid .grid-row-action-icon {
+  &.icon-account:before {
+    font-family: fontawesome;
+    content: "\f031";
+    @include fontSize(4);
+    color: $gridIconColor;
+    /*To be verified*/
+  }
+
+  &.icon-transaction:before {
+    font-family: fontawesome;
+    content: "\f031";
+    @include fontSize(4);
+    color: $gridIconColor;
+    /*To be verified*/
+  }
+
+  &.icon-account {
+    font-family: fontawesome;
+    content: "\f031";
+    @include fontSize(4);
+    color: $gridIconColor;
+    /*To be verified*/
+  }
+
+  &.icon-transaction {
+    font-family: fontawesome;
+    content: "\f022";
+    @include fontSize(4);
+    color: $gridIconColor;
+    /*To be verified*/
+  }
+}
+
+.sleek-tansaction {
+  color: #FFCC66;
+}
+
+.ux-dialog .additional-info-label .x-form-display-field,
+.x-windows-viewPopup .additional-info-label .x-form-display-field{
+  color: $fontColor;
+  @include fontSize(6);
+  font-weight: normal;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 17px;
+  margin-top: 3px;
+}
+
+.x-windows-viewPopup table td {
+  width: auto;
+}
+
+.x-windows-viewPopup .additional-info-label .x-form-display-field {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.t7-popup-button-right-align {
+  left: 90% !important;
+  right: 14px !important;
+}
+
+.ui-dialog {
+  .ui-dialog-titlebar .ui-corner-all, .ui-tabs .ui-corner-all {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
+
+.borderPanel-section-line {
+  width: 710px;
+  margin: 0px 12px 12px 12px;
+  left: 12px;
+}
+
+.x-windows-viewPopup .borderPanel-section-line {
+  width: 710px;
+  margin: 0px 12px 12px 0px;
+  left: 12px;
+}
+
+.additional-info-detail, .txnDetails-displayfield {
+  margin: 0px 10px 12px 10px;
+  .x-field-label-cell{
+    //padding-left: 15px;
+  }
+}
+
+.x-windows-viewPopup {
+  .txnDetails-displayfield {
+    margin: 0px 12px 12px 0px;
+  }
+  .left-margin{
+    margin-left: -2px;
+  }
+
+  .x-window-body-default {
+    padding: 24px 12px 24px 12px;
+  }
+}
+
+.adv_filter_date_menu {
+  height: 21px;
+
+  label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 190px;
+    white-space: nowrap;
+  }
+}
+
+.widget_date_menu {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
+  white-space: nowrap;
+}
+
+.adv_filter_date_menu a {
+  top: -8px;
+}
+
+.xn-popup .wgt-confirm-text {
+  font-weight: normal;
+  color: $primaryColor;
+}
+
+.ft-extraLargeMarginR{ margin-right: 24px !important; }
+
+.ft-smallMargin-left {
+  margin-left: 8px;
+}
+
+.ft-smallMargin-right {
+  margin-right: 8px;
+}
+
+.ft-extraLargeMargin-right {
+  margin-right: 16px;
+}
+
+.ft-extraLargeMargin-left {
+  margin-left: 16px;
+}
+
+.ft-largeMargin-left {
+  margin-left: 14px;
+}
+
+.ft-largeMargin-right { 
+ margin-right: 24px !important; 
+}
+
+/*Transaction Initiation Screen - Payment Method Section*/
+.single-payment-template-method-center.col-sm-12, .single-payment-template-defined-center.col-sm-12 {
+  width: 98% !important;
+}
+
+/*#########################################*/
+/*###### Ext popup styling:Start ##########*/
+/*#########################################*/
+
+/*popup header*/
+
+.xn-popup {
+  .x-window-header-default-top {
+    background-color: $popupHeaderColor;
+    @include fontSize(13);
+    font-weight: 100;
+    padding: 15px;
+    position: relative;
+    border-radius: 0px;
+  }
+
+  .x-window-header-default-horizontal .x-tool-after-title .x-tool-img:hover {
+    background-image: url(resources/images/T7/iconsmore.png);
+    background-position: -29px -198px;
+  }
+
+  .x-window-body-default {
+    background-color: $lightColor;
+    padding: 15px;
+  }
+
+  label {
+    color: $fontColorDarker;
+	@include fontSize(4);
+  }
+
+  .x-form-display-field {
+    @include fontSize(4);
+	color : $fontColorDarker;
+	margin-top : 2px;
+  }
+
+  .x-toolbar-docked-bottom {
+    padding: 15px;
+    margin-right: -12px;
+    background-color: $dialogButtonBackground;
+	border-top: 1px solid $borderColor !important;
+	background-image: none;
+	&.x-docked-bottom{
+		.ft-btn-primary.x-btn{
+			background-color: $primaryColor;
+			color: $lightColor;
+			border: 1px solid transparent;
+			.x-btn-inner{
+				color: $lightColor;
+			}
+			&:hover, &:focus {
+        		background-color: $primaryColor1;
+        		box-shadow: none;
+      		}
+		}
+		.ft-btn-primary.x-btn.x-btn-default-toolbar-small-over{
+			background-color: $primaryColor1;
+			box-shadow: none;
+			.x-btn-inner{
+				color: $lightColor;
+			}
+		}
+		.ft-btn-primary.x-btn.x-btn-default-toolbar-small-focus{
+			background-color: $primaryColor1;
+			box-shadow: none;
+			.x-btn-inner{
+				color: $lightColor;
+			}
+		}
+		
+		.ft-btn-link.x-btn{
+			background-color: transparent;
+			color: $linksColor;
+			border: none;
+			padding-left: 0px;
+			padding-right: 0px;
+			.x-btn-inner{
+				color: $linksColor;
+				@include fontSize(4);
+			}
+			.x-btn-default-toolbar-small-over{
+				background-color: transparent;
+				.x-btn-inner{
+					color: $linksHoverColor;
+					text-decoration: underline;
+				}
+			}
+		}
+		
+		.ft-button-dark.x-btn.x-btn-default-toolbar-small-over{
+			background-color: $buttonHoverColor;
+			.x-btn-inner{
+				color: $lightColor;
+			}
+		}
+		.ft-btn-light.x-btn{
+			background-color: $lightColor;
+			border: 1px solid $fontColor;
+			&:hover, &:focus {
+        		background: $lightColor;
+        		box-shadow: 1px 1px 0px 0px $buttonHoverColor;
+      		}
+		}
+	}
+  }
+
+  .x-docked-bottom .x-box-inner a {
+    &:last-child {
+      background-color: $lightColor;
+	  border: 1px solid $fontColor;
+
+      &:hover, &:focus {
+        background: $lightColor;
+        box-shadow: $buttonHoverColor 1px 1px 0px 0px;
+      }
+    }
+
+    //background-color: $secondaryBtn;
+
+	/* This is creating problem on User activity details popup grid pagination hence commented */
+    /*&:hover {
+      background-color: $secondaryBtnHover;
+    }*/
+	
+	
+  }
+
+  .x-toolbar-docked-bottom {
+    .x-btn-toolbar {
+      padding: 6px 12px;
+      margin-right: 12px !important;
+    }
+	.ft-button-primary.x-btn.x-btn-default-toolbar-small{
+	  background-color: $primaryColor;
+	  border: 1px solid $primaryColor;
+	  .x-btn-inner{
+		color: $lightColor;
+	  }
+	  &.x-btn-default-toolbar-small-over{
+	    background-color: $primaryColor1;
+		.x-btn-inner{
+		  color: $lightColor;
+		}
+	  }
+	  &.x-btn-default-toolbar-small-focus{
+	    background-color: $primaryColor1;
+		.x-btn-inner{
+		  color: $lightColor;
+	}
+	  }
+	}
+	.ft-button-light.x-btn.x-btn-default-toolbar-small{
+	  background-color: $lightColor;
+	  border: 1px solid $fontColor;
+	  .x-btn-inner{
+		color: $fontColor;
+	  }
+	  &.x-btn-default-toolbar-small-over{
+	    background-color: $lightColor;
+		.x-btn-inner{
+		  color: $fontColor;
+		}
+	  }
+	}
+    .x-btn-default-toolbar-small .x-btn-inner {
+      padding: 0px;
+    }
+  }
+
+  .x-btn-default-toolbar-small {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    background-image: none;
+    color: $lightColor;
+    @include fontSize(1);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 13px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .x-btn-inner {
+      @include fontSize(2);
+      font-weight: normal;
+      font-family: $fontFamily;
+      color: $fontColor;
+    }
+  }
+
+  .t7-grid {
+    .x-btn-default-toolbar-small {
+      line-height: inherit;
+    }
+    .x-btn-default-toolbar-small:first-child {
+      padding-left: 5px;
+    }
+
+	/* This is creating problem on User activity details popup grid pagination hence commented */
+    /*.x-docked-bottom .x-box-inner a {
+      background-color: transparent;
+    }*/
+  }
+
+  .clearlink-a a:hover {
+    color: #23527c;
+    text-decoration: underline;
+  }
+}
+
+/*Popup search box*/
+
+.popup-searchBox {
+  min-width: 220px !important;
+  max-width: 340px;
+  height: 24px;
+  @include fontSize(4);
+}
+
+.xn-popup {
+  .ft-bottom-padding {
+    padding: 12px !important;
+  }
+
+  .x-portlet {
+    margin: 0px !important;
+  }
+
+  .t7-grid .ux_no-padding {
+    padding: 0px;
+  }
+  .x-nlg & .x-toolbar-default { 
+    background-image: none !important;
+  } 
+}
+
+/*#########################################*/
+/*###### Ext popup styling:End ##########*/
+/*#########################################*/
+/*#########################################*/
+/*########## Jquery Dialog:start ##########*/
+/*#########################################*/
+
+.ux-dialog {
+  .ux-dialog-footer {
+    margin-right: -12px;
+    margin-left: -12px;
+    margin-bottom: -12px;
+  
+
+  .ft-bar {
+    li {
+      padding-left: 0px;
+      //padding-right: 12px;
+    }
+	
+	.ft-bar-stretch + li:last-child{
+	  padding-right: 0px;
+	  button{
+		float: none;
+	  }
+	}
+
+    padding: 15px;
+	border-top: 1px solid $borderColor;
+
+    .ft-button-primary {
+      &:hover, &:focus {
+        background-color: $primaryColor1;
+      }
+
+      background-color: $primaryColor;
+    }
+
+    background-color: $dialogButtonBackground;
+    display: table;
+    height: inherit;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  }
+}
+
+/* for moving bar tab up*/
+
+.ft-tab-bar .ux-dialog .ui-tabs .ui-tabs-nav li {
+  top: 2px;
+}
+
+/* jquery dialog is view only then add ft-view-dialog class to body part*/
+
+.ux-dialog {
+  .ux-view-dialog {
+    padding: 12px 0px 12px 0px;
+    @include fontSize(6);
+  }
+
+  &.ui-dialog-content {
+    label {
+      @include fontSize(4);
+    }
+  }
+
+  /*.t7-grid .x-column-header-text {
+    @include fontSize(2);
+  }*/
+   
+  .ui-tabs .ui-tabs-nav {
+   		padding: 12px 12px 0 12px;
+  }
+  
+  .ui-tabs .ui-tabs-panel{
+	padding : 12px 12px 0px 12px;
+  }
+  .xn-suggestion-box.x-form-text{
+	height: 39px;
+  }
+}
+
+/* For autocompleters used in adv filters: text color change */
+.ux-dialog .ui-suggestion-box,ul.ui-autocomplete.ui-menu .ui-menu-item a{
+	color : $fontColor;
+}
+
+/*if jquery dialog contains label-value pairs in view mode,add this class to body part */
+.ux-dialog .ux-view-labelValuePair-dialog{
+    padding: 12px 0px 24px 0px;
+    @include fontSize(6);
+}
+
+/* jquery view popup:end*/
+
+.ux-dialog .form-control{
+	padding : 2px 10px;
+}
+/*#########################################*/
+/*########## Jquery Dialog:end ##########*/
+/*#########################################*/
+
+/* rules that only apply for canvases narrower than 1024px */
+@media only screen and (max-width: 1024px) {
+  @-moz-document url-prefix() {
+    .ft-help-nav > div {
+      margin-right: 5px;
+    }
+  }
+
+  .settings-popup {
+    .x-window-body-default {
+      padding: 8px;
+    }
+
+    .x-toolbar {
+      padding: 8px;
+    }
+  }
+
+  .ft-smallMargin-left {
+    margin-left: 4px;
+  }
+
+  .ft-smallMargin-right {
+    margin-right: 4px;
+  }
+
+  .ft-extraLargeMargin-right {
+    margin-right: 8px;
+  }
+
+  .ft-extraLargeMargin-left {
+    margin-left: 8px;
+  }
+
+  .ft-margin-large-t{ 
+	margin-top: 8px; 
+  }
+  
+  .ft-extraLargeMarginR{ margin-right: 16px !important; }
+  
+  .ux_window-position .add-wgt {
+    left: 91.5% !important;
+  }
+
+  .ux-dialog.ui-dialog-content .ft-tab-bar-title > label {
+    @include fontSize(10);
+    margin-right: 37px;
+    margin-bottom: 8px;
+    line-height: 20px;
+  }
+	
+  .ux-dialog .ui-tabs .ui-bar-tabs.ui-tabs-nav {
+    padding: 8px 8px 8px 8px;
+  }
+
+  .row .form-group {
+    margin-bottom: 8px !important;
+  }
+
+  .ui-dialog .ui-dialog-content .ui-tabs .ui-tabs-nav .ui-dialog-titlebar-close {
+    width: 18px;
+    height: 18px;
+    background-position: -96px -139px;
+
+    &:hover {
+      padding: 1px;
+      width: 18px;
+      height: 18px;
+      background-position: -32px -201px;
+    }
+  }
+  
+	.ux-dialog .ux-view-labelValuePair-dialog{
+	    padding: 8px 0px 16px 0px;
+	    @include fontSize(4); 
+	}
+	
+	.ui-dialog select.form-control.autoheight, .ui-dialog textarea.form-control.autoheight {
+		height: auto;
+	} 
+	
+  .ui-tabs .ui-tabs-panel {
+    border-width: 1px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    overflow-x: hidden;
+  }
+
+  .ui-dialog .col-sm-4 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .ft-bar {
+    > li {
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      width: 1%;
+
+      &:first-child {
+        padding-left: 8px;
+      }
+
+      &:last-child {
+        padding-right: 8px;
+      }
+    }
+
+    height: 34px !important;
+  }
+
+  .ui-tabs a {
+    @include fontSize(3);
+    /* border-radius: 5px 5px 0 0; */
+  }
+
+  #tabs-2 {
+    label {
+      @include fontSize(2);
+    }
+
+    /*.form-control {
+      height: 23px;
+      padding: 2px 10px;
+      @include fontSize(2);
+    }*/
+  }
+
+  .x-btn.x-btn-default-small {
+    padding: 5px 10px 3px 10px;
+  }
+
+  .ui-multiselect {
+    box-shadow: inset 0 2px 2px -2px $datePickerShadowColor;
+    padding: 2px 0px 2px 10px;
+  }
+
+  .ui-multiselect-down-caret {
+    margin: 5px 5px;
+  }
+
+  .x-window-header-default-top {
+    padding: 8px;
+  }
+
+  .x-window .x-window-header-text-default {
+    @include fontSize(8);
+    float: left;
+    color: $fontColor;
+    font-weight: normal;
+    margin: 0px 16px 0px 0px;
+    line-height: 26px;
+  }
+
+  .x-tool-img {
+    background-image: url(resources/images/T7/iconsmore.png);
+    width: 18px;
+    height: 18px;
+    background-position: -96px -139px;
+    top: 40%;
+  }
+
+  .x-window-body-default, .x-window-header-default-top, .x-window-default {
+    position: relative;
+    border: 0;
+    padding: 8px;
+    background-color: $lightColor;
+    zoom: 1;
+  }
+
+  .x-window .x-window-body-default .x-window-header-default-top, .x-window-default .x-toolbar-footer {
+    margin-top: 0px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    background-color: $dialogButtonBackground;
+  }
+
+  .x-window-header-default-horizontal .x-tool-after-title {
+    left: auto !important;
+    float: right;
+    right: 0px !important;
+    top: -1px !important;
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* .x-window .x-toolbar-footer .x-btn.x-btn-default-small {
+    width: 60px !important;
+  } */ 
+
+  .ux_window-position.x-window {
+    .x-toolbar-footer .x-btn.x-btn-default-small {
+      width: auto !important;
+
+      &.add-wgt {
+        width: 60px !important;
+      }
+    }
+
+    .x-btn.x-btn-default-small {
+      padding: 5px 10px;
+    }
+  }
+
+  .xn-btn.x-btn.x-btn-default-small {
+    padding: 5px 10px;
+  }
+
+  .settings-popup {
+    .xn-form-text.xn-suggestion-box, .xn-form-field {
+      padding: 2px 10px;
+    }
+  }
+
+  .x-window {
+    .x-window-header-body-horizontal {
+      background-color: $popupHeaderColor;
+      @include fontSize(6);
+      font-weight: 100;
+      padding: 0px;
+      border-radius: 0;
+      padding-right: 0px;
+      height: 25px;
+    }
+
+    .x-window-header-text-container-default {
+      padding: 0px 0px 0px 0px;
+    }
+  }
+
+  .ui-dialog {
+    .col-sm-4, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-12 {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  .single-payment-template.ux-dialog .col-sm-3 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .ui-dialog .row, .single-payment-template.ux-dialog .row .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .col-sm-2.col-sm-2-formgroup-adv {
+    padding-left: 8px;
+  }
+
+  .ft-dialog-content {
+    padding: 8px 8px 0px 8px;
+  }
+
+  .x-window-header-default-horizontal .x-tool-after-title .x-tool-img:hover {
+    background-image: url(resources/images/T7/iconsmore.png);
+    width: 18px;
+    height: 18px;
+    top: 40%;
+    background-position: -32px -201px;
+  }
+
+  .ui-dialog {
+    .ui-dialog-titlebar {
+      @include fontSize(6);
+      padding: 8px;
+    }
+
+    .ui-dialog-title {
+      line-height: 20px;
+    }
+  }
+
+  .t7-popup {
+    &.x-window .x-window-header-body-horizontal {
+      height: 24px;
+    }
+
+    .x-window-header-default-horizontal .x-tool-after-title {
+      right: 12px !important;
+      top: 2px !important;
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+
+  .ui-dialog .ui-dialog-titlebar-close {
+    /*background-image: url(resources/images/T7/iconsmore.png);*/
+    width: 18px;
+    height: 18px;
+    background-position: -96px -139px;
+    top: 50%;
+    margin-right: 3px;
+
+    &:hover {
+      /*padding: 1px !important;*/
+      width: 18px;
+      height: 18px;
+      background-position: -32px -201px;
+    }
+  }
+
+  .ft-dialog-content {
+    .form-control {
+      height: 23px;
+      @include fontSize(2);
+    }
+
+    label {
+      @include fontSize(2);
+    }
+  }
+
+  .settings-popup {
+    label, .x-form-cb-label {
+      @include fontSize(2);
+    }
+  }
+
+  .ui-dialog .ui-dialog-content {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+  }
+
+  .ui-dialog {
+    .row label {
+      @include fontSize(2);
+    }
+
+    .form-control {
+      /*height: 23px;
+      @include fontSize(2);*/
+    }
+  }
+
+  .ui-tabs {
+    .radio-inline input[type="radio"], .checkbox-inline input[type="checkbox"] {
+      margin-top: 2px;
+    }
+  }
+
+  .ui-dialog hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .additional-info-label .x-form-item-label {
+    @include fontSize(2);
+  }
+
+  .ux-dialog .additional-info-label .x-form-display-field, .x-windows-viewPopup .additional-info-label .x-form-display-field {
+    @include fontSize(2);
+  }
+
+  /*for vertical tabs center panel top padding*/
+
+  .ft-center-panel-padding {
+    padding-top: 2px;
+  }
+
+  /*Need to change these left classes. Do something generic*/
+
+  .t7-popup-button-right-align {
+    left: 90.3% !important;
+    right: 8px !important;
+  }
+
+  .privilege-type {
+    width: 243px;
+  }
+
+  .br-privilege-type {
+    width: 229px;
+  }
+
+  .privilege-grid-main-header:last-child {
+    border-right: 0px;
+  }
+
+  .privilege {
+    .whitetext {
+      border-left: 1px solid $lightColor;
+      border-right: 1px solid $lightColor;
+      height: 25px;
+    }
+
+    .cellContent {
+      text-align: center;
+      border-left: none;
+      border-right: 1px solid $lightColor;
+
+      &:last-child {
+        text-align: center;
+        border-left: 0px;
+        border-right: 0px;
+      }
+    }
+  }
+
+  .privilege-grid-odd:last-child {
+    border-right-color: $lightColor;
+  }
+
+  .privilege .whitetext:last-child {
+    border-left: 0px;
+    border-right: 0px;
+    height: 25px;
+  }
+
+  .borderPanel-section-line {
+    width: 715px;
+    margin: 0px 8px 8px 8px;
+    left: 8px;
+  }
+
+  .ft-padding-bottom {
+    padding-bottom: 8px !important;
+  }
+
+  .txnDetails-displayfield {
+    margin: 0px 0px 8px 8px;
+  }
+
+  .adv_filter_date_menu {
+    height: 19px;
+
+    label {
+      max-width: 195px;
+    }
+
+    a {
+      top: -6px;
+    }
+  }
+
+  .ui-dialog .row .row {
+    margin-left: -10px;
+    margin-right: -8px;
+  }
+
+  .x-windows-viewPopup {
+    .x-window-body-default {
+      padding: 16px 8px 16px 8px !important;
+    }
+
+    .txnDetails-displayfield {
+      margin: 0px 8px 8px 0px;
+    }
+
+    .borderPanel-section-line {
+      margin: 0px 8px 8px 0px;
+      width: 720px;
+    }
+  }
+
+  .ui-vertical-tabs-selected :after {
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 11px solid $menuBgColor;
+  }
+
+  .ft-rowMargin {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .ft-grid-padding{
+	 padding-left: 8px;
+	 padding-right : 8px;
+	 padding-top : -8px;
+	}
+	
+ .ft-dialog-content-padding-lrb{
+   padding : 0px 8px 8px 8px;
+   font-size : 12px;
+ }
+	
+	.popup-searchBox {
+	  @include fontSize(2);
+	}
+	.granular-autocompleter {
+	  @include fontSize(2);
+	}
+	.granular-autocompleterLarge {
+	  @include fontSize(2);
+	}
+  /*Ext popup styling:start*/
+  /*header outer space*/
+
+  .xn-popup {
+    .x-window-header-default-top {
+      padding: 8px;
+    }
+
+    .x-window-header-default-horizontal .x-tool-after-title .x-tool-img {
+      width: 18px;
+      height: 18px;
+      background-position: -96px -139px;
+
+      &:hover {
+        background-image: url(resources/images/T7/iconsmore.png);
+        top: 40%;
+        background-position: -32px -201px;
+      }
+    }
+
+    .x-window-body-default {
+      padding: 8px;
+    }
+
+    label {
+		color: $fontColorDarker;
+      @include fontSize(2);
+    }
+
+    .x-toolbar-docked-bottom {
+      .x-btn-toolbar {
+        margin-right: 8px !important;
+        padding: 4px 10px;
+      }
+
+      padding: 8px;
+      margin-right: -8px;
+      background-color: $dialogButtonBackground;
+    }
+
+    .t7-grid .x-grid .x-grid-cell-inner {
+      @include fontSize(2);
+    }
+  }
+
+  /*Ext popup styling:end*/
+  /*Jquery Dialog styling:start*/
+
+  .ux-dialog {
+    .ux-dialog-footer {
+      margin-right: -8px;
+      margin-left: -8px;
+      margin-bottom: -8px;
+    }
+
+    .ft-bar {
+      li {
+        padding-left: 0px;
+        padding-right: 8px;
+      }
+
+      padding-left: 8px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .ux-view-dialog {
+      padding: 8px 0px 8px 0px;
+      @include fontSize(2);
+    }
+    
+	.ui-tabs .ui-tabs-nav {
+		padding: 8px 8px 0 8px;
+	}
+	
+	.ui-tabs .ui-tabs-panel{
+		padding : 8px 8px 0px 8px;
+	}
+  }
+
+  .ft-tab-bar .ux-dialog .ui-tabs .ui-tabs-nav li {
+    top: 4px !important;
+  }
+
+  .ux-dialog.ui-dialog-content {
+    label, span {
+      /*@include fontSize(2);*/
+    }
+  }
+  
+  .ux-dialog .ui-multiselect {
+  	padding: 4px 0px 0px 10px;
+  }
+
+  /*Jquery Dialog styling:end*/
+}
+
+.ui-dialog{ 
+	.t7-grid {
+		.x-grid-body {
+			min-height: 0px;
+			.x-box-inner{
+				min-height: 0px;
+			} 
+		}
+	}
+}
+
+.ft-dialog {
+	.ux-dialog{
+	   	padding: 0px;
+	}
+	
+	.ft-content-pane-scroll{
+		padding: 15px 15px 0px 15px;
+	}
+	
+	.ux-dialog-footer {
+   		margin: 0px;
+	}
+}
+
+.pagesetting {
+	.x-fieldset{
+		border-right: 0px !important;
+		border-left: 0px !important;
+		border-bottom: 0px !important;
+		padding-left: 0px;
+		padding-right: 0px;
+		border-color: #e5e5e5;
+	}
+	
+	.x-fieldset-header{
+		border-bottom: 0px !important;
+		width: auto !important;
+		margin-bottom: 10px;
+	}
+	
+	.x-fieldset-header-text{
+	 	border-color: #CFCFCF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+		color: #848484; margin: 0px;
+		font-size: 14px;
+		padding: 2px 2px 2px 0 !important;
+		width:100% !important;
+	}
+	
+	.x-fieldset-body{
+		padding: 0px 10px;
+	}
+}
+/* Quick Links Popup Changes : START*/
+.quicklinks-column {
+  border-left: 1px solid #e3e3e4;
+  font-size: 14px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1 200px;
+  -moz-box-flex:  1 200px;
+  flex:  1 200px;
+
+  -webkit-box-ordinal-group: 2;  
+  -moz-box-ordinal-group: 2;     
+  -ms-flex-order: 2;     
+  order: 2;
+}
+
+.quicklinks-column .checkbox label {
+    min-height: inherit;
+}
+
+.quicklinks-column h4 {
+    font-size: 14px;
+    white-space: initial;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.quicklinks-modal-body {
+  padding: 0;
+}
+
+.quicklinks-modal-body .panel-group {
+    margin-bottom: 0;
+}
+
+.quicklinks-modal-body .panel-group .panel + .panel {
+    margin-top: 0;
+}
+
+.quicklinks-modal-body .panel-body {
+    padding: 0;
+}
+  
+.quicklinks-modal-body .panel-title i {
+    padding-right: 10px;
+}
+  
+.quicklinks-modal-body .list-group-item:first-child,
+  .quicklinks-modal-body .list-group-item:last-child {
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    font-size : 14px;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-body:before, .panel-body:after {
+    content: " ";
+    display: table;
+}
+
+.panel-body:after {
+    clear: both;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.panel-group .panel-heading {
+    border-bottom: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+    .panel-group .panel-heading + .panel-collapse > .list-group {
+      border-top: 1px solid $summaryBorderColor;
+}
+
+.panel-default {
+  border-color: $summaryBorderColor;
+}
+
+.panel-default > .panel-heading {
+    color: $fontColor;
+    background-color: $panelHeaderBackground;
+    border-color: $summaryBorderColor;
+}
+    
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+      border-top-color: $summaryBorderColor;
+}
+
+.panel-default > .panel-heading .badge {
+      color: #f5f5f5;
+      background-color: #4a4a4a;
+}
+
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: $summaryBorderColor;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.in {
+    display: block;
+}
+
+.quicklinks-badges {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-bottom: 12px;
+  
+  .truncate-text {
+    width: 120px;
+    margin-right: 3px;
+  }
+  .js-badge-container{
+	  .badges{
+		background-color: transparent;
+		color: $fontColor;
+		padding: 7px 0px;
+		@include fontSize(4);
+		display: inline-block;
+		line-height: 16px;
+		text-align: center;
+		i{
+			float: right;
+			font-size: 18px;
+			line-height: 22px;
+			padding-left: 5px;
+		}
+		.t-filter-text{
+			padding-right: 5px;
+			color: $fontColor;
+			top: 3px;
+		}
+	  }
+	}
+	.clear-all-links{
+	padding: 7px 0px;
+	@include fontSize(4);
+	line-height: 16px;
+	color: $linksColor;
+	display: inline-block;
+	text-align: center;
+	background-color: transparent;
+    border: 0px;
+    margin-left: 10px;
+	&:hover{
+		color: $linksHoverColor;
+	}
+  }
+}
+
+.quicklinks-badges li {
+    float: left;
+    margin-left: 3px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.btn-accent {
+  color: #fff;
+  background-color: #4598cc;
+  border-color: transparent;
+}
+
+.no-border{
+	border: none;
+}
+
+.btn-accent:focus, .btn-accent.focus {
+    color: #fff;
+    background-color: #307eae;
+    border-color: transparent;
+}
+
+.btn-accent:hover {
+    color: #fff;
+    background-color: #307eae;
+    border-color: transparent;
+}
+
+.btn-accent:active, .btn-accent.active,
+  .open > .btn-accent.dropdown-toggle {
+    color: #fff;
+    background-color: #307eae;
+    border-color: transparent;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 7px 10px;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 3px;
+}
+
+.badges-ghost-container {
+  float: left;
+}
+
+.badges-ghost {
+  background: #e3e3e4;
+  color: #e3e3e4;
+  display: inline-block;
+  height: 34px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  width: 120px;
+}
+
+.t-filter-text {
+  position: relative;
+  top: -2px;
+  padding-left: 5px;
+}
+
+.badge {
+  //display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 16px;
+  //font-weight: bold;
+  color: #fff;
+  line-height: 1;
+  vertical-align: middle;
+  //white-space: nowrap;
+  //text-align: center;
+  background-color: #e3e3e4;
+  border-radius: 10px;
+}
+
+.badge:empty {
+    display: none;
+}
+
+.btn .badge {
+    position: relative;
+    top: -1px;
+}
+
+.btn-xs .badge, .btn-group-xs > .btn .badge,
+  .btn-group-xs > .btn .badge {
+    top: 0;
+    padding: 1px 5px;
+}
+
+.list-group-item.active > .badge,
+  .nav-pills > .active > a > .badge {
+    color: #00609d;
+    background-color: #fff;
+}
+
+.list-group-item > .badge {
+    float: right;
+}
+
+.list-group-item > .badge + .badge {
+    margin-right: 5px;
+}
+
+.nav-pills > li > a > .badge {
+    margin-left: 3px;
+}
+
+a.badge:hover, a.badge:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  z-index: 2;
+  color: #fff;
+  background-color: $tabsColor;
+  border-color: $tabsColor;
+  text-decoration: none;
+}
+
+.list-group-item.active .list-group-item-heading,
+  .list-group-item.active .list-group-item-heading > small,
+  .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading,
+  .list-group-item.active:hover .list-group-item-heading > small,
+  .list-group-item.active:hover .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading,
+  .list-group-item.active:focus .list-group-item-heading > small,
+  .list-group-item.active:focus .list-group-item-heading > .small {
+    color: inherit;
+}
+
+.list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
+    color: #e5f1f8;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header:before, .modal-header:after {
+    content: " ";
+    display: table;
+}
+
+.modal-header:after {
+    clear: both;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857;
+}
+
+.modal-body {
+  position: relative;
+  /* padding: 15px; */
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer:before, .modal-footer:after {
+    content: " ";
+    display: table;
+}
+
+.modal-footer:after {
+    clear: both;
+}
+  
+.modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.btn {
+  font-size: 12px;
+}
+
+.btn-light {
+  color: #67686b;
+  background-color: #fff;
+  border-color: #67686b;
+}
+
+.btn-light:focus, .btn-light.focus {
+    color: #67686b;
+    background-color: #e6e6e6;
+    border-color: #28292a;
+}
+
+.btn-light:hover {
+    color: #67686b;
+    background-color: #e6e6e6;
+    border-color: #494a4c;
+}
+
+.btn-light:active, .btn-light.active,
+  .open > .btn-light.dropdown-toggle {
+    color: #67686b;
+    background-color: #e6e6e6;
+    border-color: #494a4c;
+}
+
+.btn-light:active:hover, .btn-light:active:focus, .btn-light:active.focus, .btn-light.active:hover, .btn-light.active:focus, .btn-light.active.focus,
+    .open > .btn-light.dropdown-toggle:hover,
+    .open > .btn-light.dropdown-toggle:focus,
+    .open > .btn-light.dropdown-toggle.focus {
+      color: #67686b;
+      background-color: #d4d4d4;
+      border-color: #28292a;
+}
+
+.btn-light:active, .btn-light.active,
+  .open > .btn-light.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-light.disabled:hover, .btn-light.disabled:focus, .btn-light.disabled.focus, .btn-light[disabled]:hover, .btn-light[disabled]:focus, .btn-light[disabled].focus,
+  fieldset[disabled] .btn-light:hover,
+  fieldset[disabled] .btn-light:focus,
+  fieldset[disabled] .btn-light.focus {
+    background-color: #fff;
+    border-color: #67686b;
+}
+
+.btn-light .badge {
+    color: #fff;
+    background-color: #67686b;
+}
+
+.btn-light:hover, .btn-light:active, .btn-light:focus {
+    background-color: #fff;
+    border-color: #4a4a4a;
+    color: #4a4a4a;
+}
+
+.btn-accent {
+  color: #fff;
+  background-color: #4598cc;
+  border-color: transparent;
+}
+
+.btn-accent:focus, .btn-accent.focus {
+    color: #fff;
+    background-color: #307eae;
+    border-color: transparent;
+}
+
+.btn-accent:hover {
+    color: #fff;
+    background-color: #307eae;
+    border-color: transparent;
+}
+
+.btn-accent:active, .btn-accent.active,
+  .open > .btn-accent.dropdown-toggle {
+    color: #fff;
+    background-color: #307eae;
+    border-color: transparent;
+}
+
+.btn-accent:active:hover, .btn-accent:active:focus, .btn-accent:active.focus, .btn-accent.active:hover, .btn-accent.active:focus, .btn-accent.active.focus,
+    .open > .btn-accent.dropdown-toggle:hover,
+    .open > .btn-accent.dropdown-toggle:focus,
+    .open > .btn-accent.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #286992;
+      border-color: transparent;
+}
+
+.btn-accent:active, .btn-accent.active,
+  .open > .btn-accent.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-accent.disabled:hover, .btn-accent.disabled:focus, .btn-accent.disabled.focus, .btn-accent[disabled]:hover, .btn-accent[disabled]:focus, .btn-accent[disabled].focus,
+  fieldset[disabled] .btn-accent:hover,
+  fieldset[disabled] .btn-accent:focus,
+  fieldset[disabled] .btn-accent.focus {
+    background-color: #4598cc;
+    border-color: transparent;
+}
+  
+.btn-accent .badge {
+    color: #4598cc;
+    background-color: #fff;
+}
+
+.btn-accent:hover, .btn-accent:active, .btn-accent:focus {
+    background-color: #3880ae;
+    border-color: transparent;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-accent > i.fa {
+    color: #fff;
+}
+
+a[role="button"]:hover, a[role="button"]:active, a[role="button"]:focus {
+  text-decoration: none;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 21px;
+  color: inherit;
+  position: relative;
+  top: 2px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.panel-title > a,
+  .panel-title > small,
+  .panel-title > .small,
+  .panel-title > small > a,
+  .panel-title > .small > a {
+    color: inherit;
+}
+
+.quicklinks-col-left {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.ui-dialog .ft-button-primary{
+	color: $lightColor;
+	&:hover{
+		color: $lightColor;
+	}
+	i{
+		@include fontSize(8);
+	}
+}
+/*
+.ft-button.ft-button-primary.clear-all-links{
+	height: 34px;
+	margin-left: 3px; 
+	
+}*/
+
+.verticalDiv {
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+
+.right-border {
+	border-right: 1px solid #e3e3e4;
+}
+
+.no-left-border{
+	border-left: none;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+ 
+/* Quick Links Popup Changes : END*/
+
+.ui-dialog{
+	.ui-dialog-buttonpane{
+		border-top: 1px solid $summaryBorderColor;
+		.ui-dialog-buttonset{
+			float: none;
+			button{
+				padding: 6px 12px;
+				height: auto;
+				border-radius: 4px;
+				font-weight: normal;
+				.ui-button-text{
+					@include fontSize(2);
+					padding: 0px;
+					line-height: normal;
+				}
+				&:first-child{
+					float: right;
+					background-color: $primaryColor;
+					color: $lightColor;
+					border: 1px solid transparent;
+					&:hover{
+						background-color: $primaryColor1;
+					}
+					&:focus{
+						background-color: $primaryColor1;
+				}
+				}
+				&:last-child{
+					background-color: $lightColor;
+					border: 1px solid $fontColor;
+					color: $fontColor;
+					&:hover{
+						background-color: $lightColor;
+						box-shadow: $buttonHoverColor 1px 1px 0px 0px;
+				}
+					&:focus{
+						background-color: $lightColor;
+						box-shadow: $buttonHoverColor 1px 1px 0px 0px;
+					}
+				}
+				&.ft-button-light{
+					background-color: $lightColor;
+					border: 1px solid $fontColor;
+					.ui-button-text{
+						color: $fontColor;
+					}
+					&:hover{
+						background-color: $lightColor;
+						border: 1px solid $fontColor;
+						.ui-button-text{
+							color: $fontColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.x-body .x-mask-msg{
+	border-color: $fontColor;
+    background-color: $lightColor;
+	height: 68px;
+	width: 162px;
+	padding: 20px 10px;
+	.x-mask-msg-inner{
+		border-width: 0px;
+		background-color: $lightColor;
+		width: 50px;
+		height: 30px;
+		background-image: url(resources/images/T7/loading.gif);
+		background-repeat: no-repeat;
+		background-position: 9px center;
+		font-family: $fontFamily;
+		background-size: contain;
+		.x-mask-msg-text{
+			@include fontSize(6);
+			color: $fontColor;
+			padding-left: 40px;
+			background-image: none;
+		}
+	}
+}
+
+/*Ext Message box style*/
+
+.message-box{
+  &.x-window{
+    .x-toolbar{
+	  &.x-toolbar-docked-bottom{
+	    a{
+		  &.x-btn{
+		    padding: 7px 12px;
+			border-radius: 3px;
+			margin-right: 0px;
+			.x-btn-inner{
+			  @include fontSize(2);
+			}
+			&:first-child{
+			  right: 0px !important;
+			  left: auto !important;
+			  background-color: $primaryColor;
+			  border: 1px solid transparent;
+			  .x-btn-inner{
+			    color: $lightColor;
+			  }
+			  &:hover{
+			  	background-color: $primaryColor1;
+			  }
+			  &:focus{
+			  	background-color: $primaryColor1;
+			  }
+			}
+			&:nth-child(2){
+			  right: 0px !important;
+			  left: auto !important;
+			  background-color: $primaryColor;
+			  border: 1px solid transparent;
+			  .x-btn-inner{
+			    color: $lightColor;
+				}
+			  }
+			  &.x-btn-default-small-over{
+				background-color: $primaryColor1;
+				border: 1px solid transparent;
+				.x-btn-inner{
+				  color: $lightColor;
+				}
+			  }
+			}
+			&:last-child, &:nth-child(3){
+			  left: 0px !important;
+			  right: auto !important;
+			  background-color: $lightColor;
+			  border: 1px solid $fontColor;
+			  .x-btn-inner{
+			    color: $fontColor;
+			  }
+			  &.x-btn-default-small-over{
+				background-color: $lightColor;
+				border: 1px solid $fontColor;
+				.x-btn-inner{
+				  color: $fontColor;
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
+.ux-dialog{
+  .get-org-chart{
+	&.get-darkred{
+	  background-color: $lightColor;
+	  .get-oc-tb {
+		border-bottom: 0px;
+		background-color: $buttonBarBackground;
+	    a.get-print, a.get-up, a.get-minus, a.get-plus, a.get-right, a.get-left, a.get-down{
+		  background: none;
+		  @include fontSize(14);
+		  color: $fontColor;
+		}
+	  }
+	  .get-oc-c {
+		.get-box{
+		  background-color: $primaryColor;
+		  fill: $primaryColor;
+		  stroke: $primaryColor;
+		}
+		.get-text{
+		  color: $lightColor;
+		  fill: $lightColor;
+		}
+	  }
+	}
+  }
+}

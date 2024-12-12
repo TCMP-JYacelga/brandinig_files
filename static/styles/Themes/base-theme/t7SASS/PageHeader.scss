@@ -1,0 +1,888 @@
+.ft-accordion-toggle-trigger {
+  background: $sidePanelHeader;
+  color: $sidePanelHeaderTextColor;
+  cursor: pointer;
+  @include fontSize(8);
+  line-height: 28px;
+  width: 200px;
+}
+
+/*---Prefrences drop-down styling---- */
+
+.ft-dropdown:hover .ft-icons-help2 {
+  background-position: 0px 0px;
+  background-image: url(resources/images/T7/button-preference-off.png);
+}
+
+.ft-pref-dropdown {
+  .ft-dropdown-caret {
+    height: 5px;
+    width: 8px;
+    background-image: url('resources/images/T7/caret-black.png');
+  }
+
+  &:hover {
+    .ft-dropdown-caret {
+      background-image: url('resources/images/T7/caret-white.png');
+    }
+
+    .ft-dropdown-toggle {
+      background-color: transparent;
+	  
+    }
+  }
+
+  .ft-dropdown-menu {
+    background-color: $primaryColor;
+    color: $lightColor;
+  }
+
+  &:hover a {
+    color: $ftDropdownMenuTextColor;
+  }
+
+  .ft-dropdown-items a:hover {
+    background-color: $ftDropdownMenuBgColor;
+    color: $ftDropdownMenuTextColor !important;
+    text-decoration: none;
+  }
+}
+
+/*Prefrences drop-down*/
+
+.ft-circle-actions {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url('resources/images/T7/circle-background-actions.png');
+  background-repeat: no-repeat;
+  color: $primaryColor;
+  text-align: center;
+  line-height: 20px;
+}
+
+/*.ft-dropdown:hover {
+  .ft-circle-alerts, .ft-circle-actions {
+    background-image: url('resources/images/T7/circle-background-primary-blue.png');
+    color: $lightColor;
+  }
+}*/
+
+.ft-circle-alerts {
+  display: inline-block;
+  min-width: 30px;
+  /*background-image: url('resources/images/T7/circle-background.png');
+  background-repeat: no-repeat;*/
+  color: $lightColor;
+  @include fontSize(2);
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding: 3px 7px;
+  background-color: $headerBorderColor;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.ft-item-index {
+  display: table-cell;
+  @include fontSize(4);
+  vertical-align: top;
+  padding-right: 10px;
+}
+
+.ft-item-content {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 130px;
+  color: $fontColor;
+}
+
+/*
+===========================
+Title area dropdown styles.
+===========================
+*/
+
+.ft-title {
+  @include fontSize(14);
+  color: $fontColor;
+  font-weight: normal;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+
+/*
+==========================
+Icon only dropdown styles.
+==========================
+*/
+
+.ft-dropdown-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ft-header {
+  position: relative;
+  border-bottom: solid $headerBorderColor 4px;
+  height: 74px;
+  color: $fontColor;
+  display: block;
+  overflow: hidden;
+  overflow: visible;
+  min-width:960px;
+  //z-index: 1000;
+  .globalHeader{
+	display: inline-block;
+	padding-top: 10px;
+	background-image: url("resources/images/T7/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+    width: 300px;
+    height: 74px;
+  }
+}
+
+.ft-main-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: $mainMenuBgColor;
+  height: 51px;
+  display: block;
+  border-bottom: solid $menuBorderColor thin;
+  border-right: solid $menuBorderColor thin;
+  border-left: solid $menuBorderColor thin;
+
+  li{
+	a{
+	  &:hover, &:focus{
+	    color: $mainMenuHoverTextColor;
+		text-decoration: none;
+	  }
+	}
+	&:hover {
+      background-color: $mainMenuHoverColor;
+      a {
+        color: $mainMenuHoverTextColor;
+        text-decoration: none;
+	    &:hover{
+	      color: $mainMenuHoverTextColor;
+		  text-decoration: none;
+	    }
+	  }
+	}
+  }
+}
+
+.ft-sub-nav li:hover a {
+  color: $headerBorderColor;
+  text-decoration: none;
+}
+
+.ft-main-nav .ft-page-active {
+  position: relative;
+  background-color: transparent;
+}
+
+.ft-page-active {
+  &:after, &:before {
+    top: 0;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: rgba(243, 111, 39, 0);
+    border-top-color: $headerBorderColor;
+    border-width: 6px;
+    margin-left: -6px;
+  }
+
+  &:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: transparent;
+    border-width: 6px;
+    margin-left: -6px;
+  }
+}
+
+.ft-main-nav {
+  .ft-page-active a {
+    color: $activeMenuTextColor;
+  }
+
+  > li {
+    float: left;
+    display: block;
+    height: 50px;
+	position: relative;
+    border-right: solid $menuBorderColor thin;
+
+    > a {
+      margin: 0;
+      padding: 12.5px 15px;
+      border: none;
+      display: table-cell;
+      vertical-align: middle;
+      @include fontSize(6);
+      font-weight: normal;
+	  i{
+		@include fontSize(8);
+		padding-top: 3px;
+		color: $fontColor;
+	  }
+    }
+  }
+}
+
+.ft-main-nav{
+	.ft-sub-nav {
+		width: auto;
+		border-bottom: solid #CCCCCC thin;
+		position: absolute;
+		top: 100%;
+		left: auto;
+		z-index: 19999;
+		display: none;
+		float: left;
+		min-width: 160px;
+		list-style: none;
+		font-size: 18px;
+		text-align: left;
+		background-color: $lightColor;
+		border: 1px solid #ccc;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		background-clip: padding-box;
+
+		> li:not(:last-child) {
+			border-bottom: 1px solid #ddd;
+		}
+		
+		> li {
+			&:hover{
+				background-color: $secondaryNavHoverColor;
+				a{
+					color: $lightColor;
+				}
+			}
+			> a {
+				display: block;
+				padding: 10px 20px;
+				clear: both;
+				font-weight: normal;
+				line-height: 1.42857;
+				color: $fontColor;
+				@include fontSize(4);
+				white-space: nowrap;
+			}
+		}
+
+	  .ft-link-active {
+		border-bottom: solid white thin;
+
+		a {
+		  color: $headerBorderColor;
+		}
+	  }
+	}
+}
+
+.ft-header-menubar {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  margin-top: 20px;
+  @include fontSize(6);
+  .ft-dropdown {
+    display: inline;
+  }
+}
+
+.ft-header-menubar-separator {
+  display: inline;
+  width: 1px;
+  height: 100%;
+  border-right: 1px solid #9cafb8;
+  margin: 0 2px;
+}
+
+.ft-header-menubar .ft-button-login {
+  color: $logoutButton;
+  text-align: left;
+  background-color: transparent;
+  border-color: transparent;
+  border: none;
+  &:hover {
+    color: $logoutHover;
+  }
+}
+
+.ft-help-txt {
+  display: table-cell;
+  vertical-align: middle;
+  color: #006699;
+  @include fontSize(5);
+}
+
+.ft-help-nav {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
+  vertical-align: middle;
+
+  > div {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  li{
+	display: inline;
+	@include fontSize(8);
+	padding-left: 5px;
+    padding-right: 5px;
+	a{
+		color: $fontColor;
+		cursor: pointer;
+	}
+  }
+  .ft-dropdown-menu li {
+    max-width: 70px;
+  }
+}
+
+.t-update-text {
+    color: $fontColorDark;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* flyout submenu -- added for thrid level menu*/
+
+.flyout {
+  z-index: 999;
+  position: relative;
+}
+
+.ft-main-nav{
+	li.flyout {
+	  > ul {
+		width: auto;
+		border-bottom: solid #CCCCCC thin;
+		position: absolute;
+		top: -1px;
+		left: 100%;
+		z-index: 1000;
+		display: none;
+		float: left;
+		min-width: 160px;
+		list-style: none;
+		font-size: 18px;
+		text-align: left;
+		background-color: $lightColor;
+		border: 1px solid #ccc;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		background-clip: padding-box;
+
+		> li {
+		  filter: none;
+		  margin: 0;
+		  min-width: 148px;
+		  font-weight: normal;
+		  cursor: pointer;
+		}
+	  }
+
+	  &:hover > ul {
+		display: block;
+	  }
+
+	  > {
+		ul {
+		  > li > a {
+			padding: 10px 20px;
+			display: block;
+			height: inherit;
+			font-weight: normal;
+
+			> b {
+			  font-weight: normal;
+			}
+		  }
+			border-radius: 0 0 4px 4px;
+			background-color: $subNav-3-bgColor;
+		}
+
+		a > b {
+		  font-weight: bold;
+		}
+
+		ul > li > a:hover {
+		  background-color: $secondaryNavHoverColor;
+		  color: $lightColor;
+		}
+
+		a {
+		  position: relative;
+		  /*.caret {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				margin-left: 2px;
+				vertical-align: middle;
+				border-top: 4px dashed;
+				border-top: 4px solid \9;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
+			}*/
+			i{
+				padding-left: 3px;
+			}
+		}
+	  }
+	  .ft-sub-nav-3 {
+		  li {
+			&:hover a {
+			  text-decoration: none;
+			}
+			&:not(:last-child) {
+				border-bottom: 1px solid #ddd;
+			}
+			a {
+			    display: block;
+				clear: both;
+				font-weight: normal;
+				@include fontSize(4);
+				line-height: 1.42857;
+				color: $fontColor;
+				white-space: nowrap;
+			}
+		  }
+
+		  .ft-link-active {
+			border-bottom: solid white thin;
+
+			/* removing as this is creating problem in 3rd level menu item click
+			a {
+			  color: $headerBorderColor;
+			} */
+		  }
+		}
+	}
+}
+/*
+========================
+Default dropdown styles.
+========================
+*/
+
+.ft-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  min-height: 20px;
+}
+
+.ft-dropdown-toggle {
+  cursor: default;
+  display: inline-block;
+  min-height: 20px;
+  min-width: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  background : none;
+  background-color : transparent;
+}
+
+.ft-dropdown:hover .ft-dropdown-toggle {
+  background-color: transparent;
+  /* border: 1px solid $focusBorderColor; */
+}
+
+.ft-dropdown-toggle:focus {
+	border: 1px solid $focusBorderColor;
+}
+
+.ft-dropdown:hover #clockDiv.ft-dropdown-toggle{
+	background-color: transparent;
+	color: inherit;
+}
+
+.ft-dropdown-caret {
+  display: inline-block;
+  height: 7px;
+  width: 13px;
+  vertical-align: middle;
+  background-image: url('resources/images/T7/caret-black.png');
+  background-repeat: no-repeat;
+}
+
+.ft-dropdown:hover .ft-dropdown-caret {
+  background-image: url('resources/images/T7/caret-white.png');
+}
+
+.ft-dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  overflow: hidden;
+  @include fontSize(4);
+}
+
+/*.ft-dropdown:hover .ft-dropdown-menu {
+  display: block;
+}*/
+
+.ft-dropdown-items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  > li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 3px 20px;
+    color: $fontColor;
+    text-decoration: none;
+   	white-space : nowrap;
+
+    &:hover {
+      background-color: $ftDropdownMenuBgColor;
+      color: $ftDropdownMenuTextColor;
+      text-decoration: none;
+    }
+  }
+  .headerCheckBox{
+	white-space: nowrap;
+	padding: 10px 20px 10px;
+	border-top: 1px solid #ddd;
+	font-weight: normal;
+	width: 100%;
+	input[type="checkbox"]{
+	  margin-top: 6px;
+	  margin-right: 6px;
+	}
+  }
+}
+
+.list-group{
+	.list-group-items{
+		padding: 10px 15px;
+		border-width: 0px 0px 1px;
+		border-style: solid;
+		border-color: #ddd;
+		width: 100%;
+		color: $fontColor;
+	}
+	li:first-child a{
+		border-top: none;
+	}
+}
+
+.list-group-item.is-unread{
+	position: relative;
+	padding : 10px 15px;
+}
+
+.list-group-item.is-unread:after {
+		position: absolute;
+	    right: 9px;
+	    top: 9px;
+	    content: '';
+	    background: $headerBorderColor;
+	    height: 7px;
+	    width: 7px;
+	    border-radius: 50%;
+}
+
+.ft-dropdown-content {
+  padding: 10px 15px;
+  text-align: center;
+  &:hover{
+	background-color: $ftDropdownMenuBgColor;
+	.link-button{
+		color: $fontColor;
+	}
+  }
+}
+
+.ft-dropdown-content-btr {
+  padding: 0px 0  5px 0px;
+}
+
+/*
+===========================
+Left aligned dropdown menu.
+===========================
+*/
+
+.ft-dropdown-left .ft-dropdown-menu {
+  right: auto;
+  left: 0;
+  border-radius: 0 5px 5px 5px;
+}
+
+/*
+=======================
+Header dropdown styles.
+=======================
+*/
+
+.ft-header-dropdown {
+  .ft-dropdown-menu {
+    right: 3px;
+  }
+
+  .ft-dropdown-caret {
+    height: 5px;
+    width: 8px;
+    background-image: url('resources/images/T7/alert-caret.png');
+  }
+
+  &:hover {
+    .ft-dropdown-caret {
+      background-image: url('resources/images/T7/caret-primary-blue.png');
+    }
+  }
+
+  .ft-dropdown-menu {
+    background-color: $lightColor;
+  }
+  
+  .list-group{
+	width: 262px;
+	
+	a{
+		white-space : normal;
+	}
+  }
+}
+
+.ft-icons-help {
+  width: 19px;
+  height: 23px;
+  background-position: -123px -5px;
+}
+
+.ft-icons-help2 {
+  width: 23px;
+  height: 23px;
+  background-position: -123px -38px;
+}
+
+.ft-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ft-icons-refresh {
+  margin-top: 2px;
+  width: 23px;
+  height: 19px;
+  background-position: -5px -139px;
+}
+
+/* Compact Menu Changes */
+
+.ft-main-compact.ft-main-nav {
+  height: 50px;
+
+  li {
+    height: 49px;
+  }
+
+  > li > a {
+    min-width: 55px;
+  }
+}
+
+/* Changes for Quick Links Drop Down Menu : START */
+.quicklinks-dropdown .ft-dropdown-menu {
+	margin-top: 15px;
+  	padding-bottom: 0;
+}
+
+.list-group {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.quicklinks-dropdown .list-group {
+  margin-bottom: 10px;
+  width : auto;
+}
+
+.quicklinks-dropdown a.list-group-item {
+  border: none;
+  color: $primaryColor;
+  padding: 3px 15px;
+  white-space: nowrap;
+}
+
+.quicklinks-dropdown .list-group-item:hover, .quicklinks-dropdown .list-group-item:active, .quicklinks-dropdown .list-group-item:focus {
+    color: $primaryColor;
+}
+
+.list-group-item-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: $lightColor;
+  border: 1px solid #ddd;
+}
+
+.quicklinks-dropdown .list-group-item-heading {
+  color: $fontColorDark;
+  font-size: 12px;
+  padding: 3px 15px;
+}
+
+.quicklinks-dropdown .divider {
+  margin: 0 0 10px 0;
+}
+
+.ft-dropdown-menu .divider {
+    height: 1px;
+    margin: 11.5px 0;
+    overflow: hidden;
+    background-color: $windowHeaderBorderColor;
+}
+
+.ft-dropdown-right {
+	left : 0;
+}
+
+.list-group-item.is-unread .list-group-item-heading {
+	@include fontSize(6);
+	font-weight: bold;
+}
+
+.ft-dropdown-menu .list-group-item-text {
+	@include fontSize(4);
+	line-height : 15px;
+}
+
+a.list-group-item,
+	button.list-group-item {
+  		color: #555;
+}
+
+a.list-group-item .list-group-item-heading,
+button.list-group-item .list-group-item-heading {
+    color: $fontColorDark;
+}
+
+a.list-group-item:hover, a.list-group-item:focus,
+  button.list-group-item:hover,
+  button.list-group-item:focus {
+    text-decoration: none;
+    color: #555;
+    background-color: $dropDownHoverBgColor;
+}
+
+.quicklinks-dropdown .quicklinks-edit.list-group-item {
+  color: $lightColor;
+  background-color: $buttonBackground;
+  padding: 8px 0;
+  cursor : pointer;
+}
+
+.quicklinks-dropdown, .list-group {
+	padding-bottom: 0px;
+}
+
+.text-center {
+  text-align: center; 
+}
+
+/* Changes for Quick Links Drop Down Menu : END */
+
+@media screen and (max-width: 1024px) {
+	/* Compact Menu Changes */
+
+  .ft-main-compact.ft-main-nav {
+    height: 41px;
+
+    li {
+      height: 40px;
+    }
+
+    > li > a {
+      padding: 0px 7px;
+      @include fontSize(4);
+      min-width: 55px;
+    }
+  }
+  .ft-main-nav > li > a{
+	padding: 12.5px 14px;
+	@include fontSize(5);
+  }
+  .ft-title{
+	@include fontSize(12);
+	white-space: nowrap;
+  }
+}
+
+.ft-header-nav {
+  position: relative;
+  display: block;
+
+  a {
+	line-height: 25px;
+    color: $mainMenuTextColor;
+  }
+}
+
+.ft-header .ft-dropdown-items a:focus {
+  color: $primaryColor;
+  text-decoration: none;
+}
+
+.ft-dropdown-items a:focus {
+  //color: $lightColor;
+  text-decoration: none;
+}
+
+.side-menu-button-show {
+  display: none;
+}
+
+.side-menu-show {
+  display:none;
+}

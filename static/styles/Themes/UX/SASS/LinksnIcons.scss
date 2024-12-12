@@ -1,0 +1,72 @@
+.seeklink {
+	font-family: fontawesome !important;
+	content: "\f00e" !important;
+	font-size: $fontSize14 !important;
+}
+.seeklink:before {
+	font-family: fontawesome !important;
+	content: "\f00e" !important;
+	font-size: $fontSize14 !important;
+}
+/* grid icons */
+.grdlnk-notify-icon { background-image: url('resources/images/icon_grid.png'); }
+.grid-link-icon { background-image: url('resources/images/icon_grid.png'); }
+.grid-link-icon-retry { background-image: url('resources/images/icon_retry.png'); }
+.link_color { color: #394a58; }
+/* icons for collapsible panels */
+.icon-expand-blue { background: transparent 0px -$fontSize14 no-repeat scroll url('resources/images/misc_icons.png'); }
+.icon-collapse-blue { background: transparent 0px -60px no-repeat scroll url('resources/images/misc_icons.png'); }
+.icon-projection { background: transparent 0px -620px no-repeat scroll url('resources/images/button_icons.png'); }
+.fa-stack-1x {
+  line-height: 1.8em;
+  font-size: $fontSize14 !important;
+  padding: 0px 0px 0px;
+}
+.fa-stack-2x {
+  font-size: 1.5em;
+  color: $activeTab !important;
+}
+
+.ux_font-size14 .small-linkblue{
+	font-size: $fontSize14 !important;
+	color: $fontColor !important;
+	padding-left: 3px !important;
+	vertical-align: middle !important;
+}
+.ux_font-size14 .linkblue{
+	font-size: $fontSize14 !important;
+	color: $fontColor !important;
+	padding-left: 3px !important;
+	vertical-align: middle !important;
+}
+
+.ux_icon-padding.fa{
+	padding-right: 5px !important;
+	opacity: 1 !important;
+	color: $lightColor !important;
+}
+.ux_save-icon:before{
+	font-family: fontawesome;
+	content: "\f0c7" !important;
+}
+
+.ux_group-action-link > a{
+	padding: 10px 5px 0px !important;
+}
+
+.small-icon .x-btn-glyph {
+	font-size : $fontSize14 !important;
+}
+.button_underline {
+	color : $activeTab !important;
+	text-decoration: underline !important;
+}
+.icon-remark { font-family: "FontAwesome"; content: "\f086"; }
+.icon-remark:before { font-family: "FontAwesome"; content: "\f086"; }
+
+.ft-batch-action-img {
+  background-image: url(resources/images/T7/grid/level-up.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 24px;
+}

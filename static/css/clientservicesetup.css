@@ -1,0 +1,43 @@
+/*--------------- Css Overrided----------------*/
+.ui-menu {list-style:none;padding: 0px;margin: 1px;display:block;width:410px; overflow: auto;height: auto;}
+.ui-menu .ui-menu-item {margin: 1px;padding: 0;width: 400px;list-style-type: none;}
+.col_1_1{width:100%;float: left;}
+.col_1_2,.col_2_2{width:50%;float: left;}
+fieldset.fieldGroup {border-color: #CFCFCF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0); color: #848484; margin: 0px;  padding: 2px 2px 2px 0 !important; width:95% !important;}
+fieldset.fieldGroup legend {font-weight: normal;margin: 0px;padding: 5px 10px 0 5px !important;}
+.fieldLabel{padding: 0 0 0 12px;}
+.ui-section-header{background: none !important;}
+.ui-widget-header{border-width: 0 0 1px 0 !important;}
+.ui-tabs .ui-tabs-nav {background-color: #FAFAFA !important;}
+.checkboxMedium {padding: 1px 4px 2px 0; /*margin: 0 5px 0 10px;*/ vertical-align: middle; height: 14px; width: 14px; -webkit-transform: scale(0.8,0.8); -moz-transform: scale(0.8,0.8); -o-transform: scale(0.8,0.8);}
+.checkboxNormal {padding: 1px 4px 2px 0; vertical-align: middle; height: 15px; width: 15px; -webkit-transform: scale(0.8,0.8); -moz-transform: scale(0.8,0.8); -o-transform: scale(0.8,0.8);}
+.icon-spacer-spacing {padding: 2px 5px 0 15px;}
+#sellerDiv {padding: 1px 4px 2px 0; margin: 0 7px; vertical-align: text-bottom;}
+#sellerCode {background: #ececec !important; border: 1px solid #dbdbdb !important;}
+.w8 {height: 20px; width: 35px; margin-top:-4px !important; border: none;}
+.leftPadding15 {padding-left: 15px;}
+.leftPadding24 {padding-left: 22px;}
+.leftPadding230 {padding-left: 235px;}
+.splitset2dist {margin-left:-4px !important;}
+.mediumpadding_bottom {padding-bottom: 5px;}
+.mediumpadding_top {padding-top: 3px;}
+.wi14 {border: 1px solid #dbdbdb !important; width: 13.5em !important;}
+.wi14:hover {border: 1px solid #C7C7C7 !important; width: 13.5em !important;}
+input[type=text] {border: 1px solid #dbdbdb !important;}
+.secGap {height: 4px;}
+
+/*--------------- Custom Css ----------------*/
+.lightbackgound {background-color: #FAFAFA !important;}
+.noborder_tb{border-width: 0 1px 0 1px !important;}
+.jq-panel-header { background: none repeat scroll 0 0 #F0F0F0 !important; color: #000000 !important;}
+.radioSmall {padding: 1px 4px 2px 0; /*margin: 0 2px 0 10px;*/ vertical-align: text-bottom; height: 14px;width: 14px;-webkit-transform: scale(0.8,0.8);-webkit-backface-visibility: hidden;-moz-transform: scale(0.8,0.8);-o-transform: scale(0.8,0.8);}
+.checkboxsmall {padding: 1px 4px 2px 0; vertical-align: middle; height: 14px;width: 14px;-webkit-transform: scale(0.8,0.8);-moz-transform: scale(0.8,0.8);-o-transform: scale(0.8,0.8);}
+.nofloating{float: none !important;}
+.ml12{margin-left: 12px}
+.requiredField{border : 1px solid red !important; background-color : #FFCECE !important;}
+#lblSeller{vertical-align: top;}
+@media screen and (max-width:1024px) {
+	.second_field.w11_5 {
+		width: 12.6em !important;
+	}
+}

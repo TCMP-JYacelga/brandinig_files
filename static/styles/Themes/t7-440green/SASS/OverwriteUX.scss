@@ -1,0 +1,21 @@
+.btn.btn-outline-primary,.btn.btn-raised.btn-primary,.btn.btn-raised.btn-secondary {
+	height: 36px;
+    width: 130px;
+	font-family: Roboto;
+    font-size: 14px;
+}
+
+.btn.btn-primary {
+	color: $primaryColor;
+}
+
+.btn.btn-primary:hover,.btn.btn-primary:focus {
+	color: $primaryColor;
+	background-color: transparent;
+    border-color: transparent;
+}
+
+.btn.btn-secondary:hover {
+	background-color: transparent;
+    border-color: transparent;
+}

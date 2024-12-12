@@ -1,0 +1,26 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.expandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.collapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "10"}}
+	
+		{{>prevTemplate assetid="10"}}
+		
+		<!--Forecasting Packages starts here -->
+	
+		{{>packageTemplate assetid="10"}}
+		
+		<!--Forecasting Accounts starts here -->
+
+		{{>accountTemplate assetid="10"}}
+	
+		{{/selectAsset}} 
+	{{/each}}
+</div>

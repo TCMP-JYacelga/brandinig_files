@@ -1,0 +1,124 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="Welcome to GCP CashWeb" url="welcome_dashboard.htm" />
+<book name="Admin" url="admin_setup.htm" >
+  <book name="User Setup" url="user_setup.htm" >
+    <item name="User Category" url="user_category.htm" />
+    <item name="Category Master Entry" url="category_master_entry.htm" />
+    <item name="User List" url="user_list.htm" />
+    <item name="User Master Entry" url="user_master_entry.htm" />
+    <item name="User Product Authorization List" url="user_product_authorization_list.htm" />
+    <item name="User Report" url="user_report.htm" />
+    <item name="User Account" url="user_account.htm" />
+    <item name="User Product" url="user_product.htm" />
+    <item name="User Client Relation" url="user_client_relation.htm" />
+    <item name="User Subscription Master" url="user_subscription_master.htm" />
+    <item name="User Subscription Entry" url="user_subscription_entry.htm" />
+    <item name="User Subscription Details" url="user_subscription_details.htm" />
+  </book>
+  <book name="User Setup Auth" url="user_setup_auth.htm" >
+    <item name="Category Authorization List" url="category_authorization_list.htm" />
+    <item name="User Authorization List" url="user_authorization_list.htm" />
+    <item name="User Reports Rights Authorization List" url="user_reports_rights_authorization_list.htm" />
+    <item name="User Account Authorization List" url="user_account_authorization_list.htm" />
+    <item name="User Product Authorization List" url="user_product_authorization_list.htm#bc-1" />
+    <item name="User Client Rights Authorization List" url="user_client_rights_authorization_list.htm" />
+    <item name="User Subscription Authorization List" url="user_subscription_authorization_list.htm" />
+  </book>
+  <book name="Account Setup" url="account_setup.htm" >
+    <item name="Account Name List" url="account_name_list.htm" />
+    <item name="Account Name Edit" url="account_name_edit.htm" />
+    <item name="Enrichments List" url="enrichments_list.htm" />
+    <item name="Enrichments Entry" url="enrichments_entry.htm" />
+    <item name="View Enrichments" url="view_enrichments.htm" />
+    <item name="Group List" url="group_list.htm" />
+    <item name="Group Master Entry" url="group_master_entry.htm" />
+  </book>
+  <book name="Account Setup Auth" url="account_setup_auth.htm" >
+    <item name="Account Auth Name List" url="account_auth_name_list.htm" />
+    <item name="Enrichments Authorization" url="enrichments_authorization.htm" />
+    <item name="Group Authorization" url="group_authorization.htm" />
+  </book>
+  <book name="Product Setup" url="product_setup.htm" >
+    <item name="Payment My Product List" url="payment_my_product_list.htm" />
+    <item name="Payment My Product Master Entry" url="payment_my_product_master_entry.htm" />
+    <item name="MyProduct Advice Info. List" url="myproduct_advice_info_list.htm" />
+    <item name="My Product Advice Info." url="my_product_advice_info.htm" />
+    <item name="Product Account List" url="product_account_list.htm" />
+    <item name="Auth Matrix List" url="auth_matrix_list.htm" />
+    <item name="Auth Matrix Entry" url="auth_matrix_entry.htm" />
+    <item name="Signatory Matrix Entry" url="signatory_matrix_entry.htm" />
+  </book>
+  <book name="Product Setup Auth" url="product_setup_auth.htm" >
+    <item name="Payment My Product Authorization List" url="payment_my_product_authorization_list.htm" />
+    <item name="My Product Advice Info Auth" url="my_product_advice_info_auth.htm" />
+    <item name="Product Account Authorization List" url="product_account_authorization_list.htm" />
+    <item name="Auth Matrix Authorization List" url="authmatrix_authorization_list.htm" />
+  </book>
+  <book name="Others" url="others.htm" >
+    <item name="Customer Upload Download" url="customer_upload_download.htm" />
+  </book>
+</book>
+<book name="Payments" url="paymentsmain.htm" >
+  <book name="Masters" url="payment_masters.htm" >
+    <item name="Beneficiaries" url="beneficiaries.htm" />
+    <item name="Beneficiary Entry" url="beneficiary_entry.htm" />
+    <item name="Beneficiaries Authorization List" url="beneficiaries_authorization_list.htm" />
+    <item name="Ordering Party List" url="ordering_party_list.htm" />
+    <item name="Ordering Party Entry" url="ordering_party_entry.htm" />
+    <item name="Ordering Party Authorization List" url="ordering_party_authorization_list.htm" />
+  </book>
+  <book name="Payment Txn" url="payments.htm" >
+    <book name="Payments" url="payment_summary1.htm" >
+      <item name="Payment Center" url="payment_center.htm" />
+      <item name="Batch Header" url="batch_header.htm" />
+      <item name="Instrument Entry" url="instrument_entry.htm" />
+      <item name="Authorizing a Payment Transaction" url="authorizing_a_payment_transaction.htm" />
+    </book>
+    <book name="Transaction Template" url="transaction_template.htm" >
+      <item name="Creating Transaction Template" url="creating_transaction_template.htm" />
+    </book>
+    <book name="Standing Instructions" url="standing_instruction1.htm" >
+      <item name="Standing Instruction Center" url="standing_instruction_center.htm" />
+      <item name="Batch Header SI New" url="batch_header_si_new.htm" />
+      <item name="Instrument Entry SI New" url="instrument_entry_si_new.htm" />
+      <item name="Authorizing a Transaction SI New" url="authorizing_a_transaction_si_new.htm" />
+    </book>
+    <book name="File Upload" url="file_upload2.htm" >
+      <item name="File Upload" url="file_upload.htm" />
+    </book>
+    <book name="Stop Manual Cheque" url="stop_manual_cheque.htm" >
+      <item name="Stop Payment" url="stop_payment.htm" />
+    </book>
+    <book name="Cheque Book Request" url="cheque_book_request.htm" >
+      <item name="Cheque Book Requests" url="cheque_book_requests.htm" />
+    </book>
+  </book>
+</book>
+<book name="Accounts" url="account_introduction.htm" >
+  <item name="Account Balance" url="account_balance.htm" />
+  <item name="Account Activity" url="account_activity.htm" />
+  <item name="Account Balance History" url="account_balance_history.htm" />
+  <item name="Transaction Search" url="transaction_search.htm" />
+</book>
+<book name="Reports" url="reports.htm" >
+  <item name="View Reports" url="view_reports.htm" />
+  <item name="On Demand Reports" url="on_demand_reports.htm" />
+  <item name="Pre Generated Reports" url="pre_generated_reports.htm" />
+  <item name="Schedule Definition List" url="schedule_definition_list.htm" />
+  <item name="Schedule Entry" url="schedule_entry.htm" />
+  <item name="Schedule Definition Authorization" url="schedule_definition_authorization.htm" />
+  <item name="Download List" url="download_list.htm" />
+  <item name="On Demand System Download" url="on_demand_system_download.htm" />
+  <item name="Pre Generated System Download" url="pre_generated_system_download.htm" />
+</book>
+<book name="Related Topics" url="common_files.htm" >
+  <item name="Conventions" url="conventions.htm" />
+  <item name="Verifying Transactions" url="verifying_transactions.htm" />
+  <item name="Maker and Checker Concept" url="maker_and_checker_concept.htm" />
+  <item name="Creating Transaction Template" url="creating_transaction_template.htm#bc-1" />
+  <item name="Initiating a Transaction using Template." url="initiating_a_transaction_using_template..htm" />
+  <item name="Other Possible Tasks" url="other_possible_tasks.htm" />
+</book>
+
+</tocdata>

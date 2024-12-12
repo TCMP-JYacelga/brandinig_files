@@ -1,0 +1,397 @@
+<div class="ft-margin-l ft-margin-r">
+	<div class="ft-layout-inner">
+		<!--START:Page content ################-->
+		<div id="PageTitle">
+			<h1 class="ft-title">
+				<span>{{getLabel "lbl.role.title" "Role:"}} {{roleId}}</span>
+			</h1>
+			
+			{{#ifCond mode '==' "new" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									1. {{getLabel "lbl.role.create" "Create Role"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									2. {{getLabel "lbl.role.permissions" "Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+										3. {{getLabel "lbl.role.verify" "Verify Role"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond mode '==' "edit" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									1. {{getLabel "lbl.role.edit" "Edit Role"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									2. {{getLabel "lbl.role.permissions" "Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+										3. {{getLabel "lbl.role.verify" "Verify Role"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond prevMode '==' "new" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									1. {{getLabel "lbl.role.create" "Create Role"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									2. {{getLabel "lbl.role.permissions" "Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+										3. {{getLabel "lbl.role.verify" "Verify Role"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond prevMode '==' "edit" }}
+			
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+							<li id="tab_c" class="ft-status-bar-li-done">
+								<span>
+									1. {{getLabel "lbl.role.edit" "Edit Role"}}
+								</span>
+							</li>
+							<li id="tab_e" class="ft-status-bar-li-done">
+								<span>
+									2. {{getLabel "lbl.role.permissions" "Permissions"}}
+								</span>
+							</li>
+							<li id="tab_v" class="ft-status-bar-li-active">
+								<span>
+										3. {{getLabel "lbl.role.verify" "Verify Role"}}
+								</span>
+							</li>			
+					</ul>
+				</div>
+				
+			{{/ifCond}}
+			
+			{{#ifCond mode '==' "view" }}
+				<div class="ft-accordion-header-sidebar">
+					<div class="ft-accordion-header-sidebar pull-right title-content">
+						<div class="ft-pdf-btn ft-icons-pdf ft-icons pull-right" id = "roleReport" title="Report"></div>
+					</div>
+				</div>
+			{{/ifCond}}
+			
+			{{#ifCond prevMode '==' "view" }}
+				<div class="ft-accordion-header-sidebar">
+					<div class="ft-accordion-header-sidebar pull-right title-content">
+						<div class="ft-pdf-btn ft-icons-pdf ft-icons pull-right" id = "roleReport" title="Report"></div>
+					</div>
+				</div>
+			{{/ifCond}}
+		</div>
+		
+		<div id="viewChangesId" class="row">
+			
+			{{#ifCond mode '!=' "viewChanges" }}
+				{{#if displayViewChanges }}
+			<div class="col-sm-6 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-left title-content">
+					<span style="font-size: initial;">
+						<a id="viewChanges">View Changes</a>
+					</span>
+				</div>
+			</div>
+				{{/if}}
+			{{/ifCond}}
+			
+			{{#ifCond mode '==' "viewChanges" }}
+				{{#if displayViewChanges }}
+			<div class="col-sm-6 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-left title-content">
+					<span style="font-size: initial;">
+						<a id="viewBack">Back to View</a>
+					</span>
+				</div>
+			</div>
+				{{/if}}
+			{{/ifCond}}
+			
+			{{#if displayViewChanges }}
+			<div class="col-sm-6 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-right title-content">
+					<span style="font-size: initial;">
+						<a id="expandAll">{{getLabel "lbl.role.ppexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.ppcollapseAll" "Collapse All"}}</a>
+					</span>
+				</div> 
+			</div>
+			{{else}}
+			<div class="col-sm-12 ft-padding-b">
+				<div class="ft-accordion-header-sidebar pull-right title-content">
+					<span style="font-size: initial;">
+						<a id="expandAll">{{getLabel "lbl.role.ppexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.ppcollapseAll" "Collapse All"}}</a>
+					</span>
+				</div> 
+			</div>
+			{{/if}}
+			
+		</div>
+		<!-- start of verifyForm -->
+		<div class="largepadding_tb" id="verifyForm">
+			<!-- Start of Role Details Panel -->
+			{{>VerifyRoleDetails}}
+			<!-- End of Role Details Panel -->
+			
+			<!-- Start of Admin Service Panel -->
+			{{#each services}}
+				{{#selectAsset serviceId "03"}}
+					{{#if assignedFlag}}
+						{{>VerifyAdminServicePanel @root}}
+					{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			<!-- End of Admin Service Panel -->
+			{{#each services}}
+				{{#selectAsset serviceId "01"}} 
+						{{#if assignedFlag}}
+							<!-- Start of BR Panel -->
+							{{>VerifyBRPanel @root}}
+							<!-- End of BR Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "15"}} 
+						{{#if assignedFlag}}	
+							<!-- Start of Bank Report Asset -->
+							{{>VerifyBankReportsPanel @root}}
+							<!-- End of Bank Reports Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "14"}} 
+						{{#if assignedFlag}}
+							<!-- Start of Check Managemnt Asset -->
+							{{>VerifyCheckManagementPanel @root}}
+							<!-- End of Check Managemnt  Panel -->
+						{{/if}}
+					{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "10"}} 
+						{{#if assignedFlag}}
+							<!-- Start of Forecast Panel -->
+							{{>VerifyForecastPanel @root}}
+							<!-- End of Forecast Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "16"}} 
+						{{#if assignedFlag}}			
+							<!-- Start of Imaging View Panel -->
+							{{>VerifyImagingPanel @root}}
+							<!-- End of Imaging View Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "04"}} 
+					{{#if assignedFlag}}
+						<!-- Start of Liquidity Panel -->
+						{{>VerifyLiquidityPanel @root}}
+						<!-- End of Liquidity Panel -->
+					{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "07"}} 
+						{{#if assignedFlag}}			
+							<!-- Start of Loan Asset -->
+							{{>VerifyLoansPanel @root}}
+							<!-- End of Loan Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "20"}} 
+					{{#if assignedFlag}}
+						<!-- Start of Mobile Banking Asset -->
+						{{>VerifyMobileBankingPanel @root}}
+						<!-- End of Mobile Banking  Panel -->
+					{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "02"}} 
+						{{#if assignedFlag}}
+							<!-- Start of Payment -->
+							{{>VerifyPaymentsPanel @root}}
+							<!-- end of payments -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "19"}} 
+					{{#if assignedFlag}}
+						<!-- Start of Portal Panel -->
+						{{>VerifyPortalPanel @root}}
+						<!-- End of Portal Panel -->
+					{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "13"}} 
+						{{#if assignedFlag}}
+							<!-- Start of Positive Pay Asset -->
+							{{>VerifyPositivePayPanel @root}}
+							<!-- End of Positive Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			{{#each services}}
+				{{#selectAsset serviceId "05"}} 
+						{{#if assignedFlag}}
+							<!-- Start of Collection Panel -->
+							{{>VerifyReceivablesPanel @root}}
+							<!-- End of Collection Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			{{#each services}}
+				{{#selectAsset serviceId "06"}} 
+						{{#if assignedFlag}}			
+							<!-- Start of SCF Asset -->
+							{{>VerifySCFPanel @root}}
+							<!-- End of SCF Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			{{#each services}}
+				{{#selectAsset serviceId "21"}} 
+						{{#if assignedFlag}}			
+							<!-- Start of Sub Accounts Asset -->
+							{{>VerifySubAccountsPanel @root}}
+							<!-- End of Sub Accounts Panel -->
+						{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+				
+			{{#each services}}
+				{{#selectAsset serviceId "22"}} 
+					{{#if assignedFlag}}
+						<!-- Start of TPFA Panel -->
+						{{>VerifyTPFAPanel @root}}
+						<!-- End of TPFA Panel -->
+					{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+			
+			</div>
+		<!-- end of verifyForm -->	
+	</div>
+</div>
+<div class="form-group" id = "footer">
+	<ul class="ft-bar">
+		
+		{{#ifCond mode '==' "view" }}
+		     {{#ifCond isFullScreen '==' "yes"}}
+			     <li>		
+				    <a href="userAdminCategoryList.form" class="ft-button ft-button-light">{{getLabel "lbl.role.close" "Close"}}</a>
+			     </li>
+			  {{/ifCond}}
+		{{/ifCond}}
+		
+		{{#ifCond prevMode '==' "view" }}
+			<li>		
+				<a href="userAdminCategoryList.form" class="ft-button ft-button-light">{{getLabel "lbl.role.close" "Close"}}</a>
+			</li>
+		{{/ifCond}}
+		
+		{{#ifCond mode '==' "new" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.role.back" "Back"}}</a>
+				<a href="userAdminCategoryList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.role.cancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.role.submit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}
+		{{#ifCond mode '==' "edit" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.role.back" "Back"}}</a>
+				<a href="userAdminCategoryList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.role.cancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.role.submit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}	
+		{{#ifCond prevMode '==' "new" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.role.back" "Back"}}</a>
+				<a href="userAdminCategoryList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.role.cancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.role.submit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}	
+		{{#ifCond prevMode '==' "edit" }}
+			<li>		
+				<a id="verifyBack"  class="ft-button ft-button-light">{{getLabel "lbl.role.back" "Back"}}</a>
+				<a href="userAdminCategoryList.form" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.role.cancel" "Cancel"}}</a>
+			</li>
+			<li class="ft-bar-stretch">
+				<div class="pull-right">
+					<a id="submit" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.role.submit" "Submit"}}</a>
+				</div>
+			</li>
+		{{/ifCond}}			
+					
+	</ul>
+</div>

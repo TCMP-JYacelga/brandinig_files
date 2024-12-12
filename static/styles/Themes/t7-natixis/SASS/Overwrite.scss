@@ -1,0 +1,102 @@
+.ft-header{
+	background-size: 100% 100%;
+	background-position: 0px 10px;
+	color: $fontColor;
+	.ft-header-dropdown .ft-dropdown-caret{
+		background-image: url("resources/images/T7/caret-black.png")
+	}
+}
+
+.t7-grid .xn-panel-header{
+	background-color: $gridPanelHeaderColor;
+}
+
+.ext-dropdown-menu {
+	.x-menu-item {
+		&:hover {
+			.x-menu-item-text {
+				color: $primaryColor;
+			}
+		}
+	}
+}
+
+.ui-vertical-tab .ui-vertical-tabs-selected :after{
+	border-top: 15px solid transparent;
+    border-bottom: 14px solid transparent
+}
+
+.generic_selectbox select {
+	@include fontSizeImportant(4);
+}
+
+label{
+	@include fontSize(4); 
+}
+
+.ft-accordion-toggle-trigger {
+	color: $lightColor;
+}
+
+.ft-sidebar-accordion-header, .ft-content-alert, .ft-sidebar-accordion-content a, .ft-sidebar-accordion-content a:hover{
+	color: $lightColor;
+}
+
+.ft-footer{
+	background-color: $lightColor;
+}
+
+.ft-sidebar-accordion-header .ft-accordion-exp-icon{
+	background-image: url('resources/images/T7/nat_icons.png');
+	background-position: -5px -5px;
+}
+
+.ft-sidebar-accordion-header .ft-accordion-exp-icon:hover {
+	background-image: url('resources/images/T7/nat_icons.png');
+    background-position: -25px -101px;
+}
+
+.ft-sidebar-accordion-header .ft-icons-settings{
+	background-image: url('resources/images/T7/nat_icons.png');
+	background-position: -40px -139px;
+}
+
+.ft-accordion-collapsed .ft-accordion-exp-icon, .ft-accordion-collapsed .ft-accordion-exp-icon:hover{
+	background-position: -43px -5px;
+}
+
+.ft-circle-alerts{
+	color: $lightColor;
+}
+.ft-pref-dropdown {
+	&:hover a {
+		color: $lightColor;
+	}
+}
+
+.x-tool-img{
+	background-color: transparent !important;
+}
+
+.datepick-cmd-range {
+    width: 84px;
+    margin-left: 44px;
+}
+
+.ui-tabs{ 
+	.ui-tabs-nav {
+		li {
+			a {
+				padding: 0.5em;
+			}
+		}
+	}
+}
+
+.ui-vertical-tab {
+	ul {
+		a {
+			width: 160px; 
+		}
+	}
+}

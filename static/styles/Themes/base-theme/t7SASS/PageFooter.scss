@@ -1,0 +1,146 @@
+.ft-footer {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  border-top: 1px dotted #cfcfcf;
+  height: 35px;
+  display: block;
+  margin-top: 50px;
+}
+
+.ft-footer-column-left {
+  float: left;
+  width: 360px;
+  height: 100%;
+}
+
+.ft-footer-column-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  li {
+    padding-left: 10px;
+	span {
+		@include fontSize(4);
+		display: block;
+	}
+  }
+}
+
+.ft-footer {
+  .ft-row-top {
+    display: block;
+    height: 50%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .ft-row-bottom {
+    display: block;
+    height: 50%;
+    width: 100%;
+    color: $fontColor;
+    padding-top: 0;
+    padding-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.ft-footer-center {
+  text-align: center;
+  margin: 12px auto;
+  @include fontSize(4);
+  margin-top: 25px;
+  margin-left: 46%;
+  color: $fontColor;
+  width: 390px;
+}
+
+.ft-footer-copyright {
+  @include fontSize(0);
+  color: $fontColor;
+}
+
+.ft-footer-nav {
+  margin: 0;
+  width: 480px;
+  padding-top: 25px;
+  list-style-type: none;
+  text-align: left;
+
+  li {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 8px;
+    line-height: 1.5;
+    border-right: 1px solid #000;
+	@include fontSize(4);
+	a{
+		color: #00609d;
+	}
+    &:first-child{
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.ft-member-fdic {
+  height: 50px;
+  width: 44px;
+  float: left;
+  padding-left: 27px;
+  background: url("resources/images/T7/member-fdic.png") no-repeat transparent center center;
+}
+
+.ft-member-plynt {
+  height: 50px;
+  width: 144px;
+  float: left;
+  padding-left: 27px;
+  background: url("resources/images/T7/plynt_certified_logo.jpg") no-repeat transparent center center;
+}
+
+.ft-equal-housing-lender {
+  height: 50px;
+  width: 77px;
+  float: left;
+  padding-left: 19px;
+  background: url("resources/images/T7/equal-housing-lender.png") no-repeat transparent center center;
+}
+
+.ft-verisign-secured {
+  height: 50px;
+  width: 54px;
+  float: left;
+  padding-left: 19px;
+  background: url("resources/images/T7/entrust.png") no-repeat transparent center center;
+}
+
+.ft-footer a {
+  &:link, &:visited {
+    color: $primaryColor;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: #3f75ab;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $primaryColor;
+    text-decoration: none;
+  }
+}

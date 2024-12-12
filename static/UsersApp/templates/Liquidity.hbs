@@ -1,0 +1,35 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.clientUser.expand" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.clientUser.collapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+ {{#each assets}}
+	{{#selectAsset assetId "04"}}
+
+		<div class="row">
+		<!-- Start of Notional Agreement -->
+		{{#if featureEnable}}
+			<div class="col-sm-6">
+				{{>notionalAgreementTemplate assetid="04"}}
+			</div>
+			<!-- End of Notional Agreement -->
+		{{/if}}	
+		<!-- Start of Sweep Agreement -->
+		<div class="col-sm-6">
+			{{>sweepAgreementTemplate assetid="04"}}
+		</div>
+		<!-- End of Sweep Agreement  -->
+	</div>	
+
+
+	  {{/selectAsset}}
+{{/each}}
+
+
+
+</div>

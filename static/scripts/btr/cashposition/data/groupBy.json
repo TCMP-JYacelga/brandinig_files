@@ -1,0 +1,96 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "Account Type",
+			"groupTypeCode" : "ACCTYPE",
+			// "columns" : [],
+			"groups" : [{
+				"groupCode" : "SUBFAC0101",
+				"groupDescription" : "Savings",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0101&$serviceType=BR_STDVIEW_SUBFAC_SAVING"
+			}, {
+				"groupCode" : "SUBFAC0102",
+				"groupDescription" : "Current",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0102&$serviceType=BR_STDVIEW_SUBFAC_CURRENT"
+			}, {
+				"groupCode" : "SUBFAC0103",
+				"groupDescription" : "Credit Card",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0103&$serviceType=BR_STDVIEW_SUBFAC_CRDCARD"
+			}, {
+				"groupCode" : "SUBFAC0301",
+				"groupDescription" : "Loan",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0103&$serviceType=BR_STDVIEW_SUBFAC_LOAN"
+			}, {
+				"groupCode" : "SUBFAC0405",
+				"groupDescription" : "Deposit",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0103&$serviceType=BR_STDVIEW_SUBFAC_DEPOSIT"
+			}, {
+				"groupCode" : "SUBFAC0801",
+				"groupDescription" : "Fund",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0103&$serviceType=BR_STDVIEW_SUBFAC_FUND"
+			}]
+		}, {
+			"groupTypeDesc" : "Bank",
+			"groupTypeCode" : "BANK",
+			// "columns" : [],
+			"groups" : [{
+				"groupCode" : "MANTUS33",
+				"groupDescription" : "MANTUS33",
+				"groupId" : "BANK",
+				"groupQuery" : "$filterOn=BNK&$filterValue=MANTUS33&$serviceType=BR_STDVIEW_BANK"
+				,
+					// "columns" : []
+			}, {
+				"groupCode" : "MNTBUFFALO",
+				"groupDescription" : "MNT Buffalo",
+				"groupId" : "BANK",
+				"groupQuery" : "$filterOn=BNK&$filterValue=MNTBUFFALO&$serviceType=BR_STDVIEW_BANK"
+			}, {
+				"groupCode" : "PNBPUS33",
+				"groupDescription" : "PNBPUS33",
+				"groupId" : "BANK",
+				"groupQuery" : "$filterOn=BNK&$filterValue=PNBPUS33&$serviceType=BR_STDVIEW_BANK"
+			}]
+		}, {
+			"groupTypeDesc" : "Currency",
+			"groupTypeCode" : "CURRENCY",
+			// "columns" : [],
+			"groups" : [{
+				"groupCode" : "EUR",
+				"groupDescription" : "Euro",
+				"groupId" : "CURRENCY",
+				"groupQuery" : "$filterOn=CCY&$filterValue=EUR&$serviceType=BR_STDVIEW_CURRENCY"
+			}, {
+				"groupCode" : "CAD",
+				"groupDescription" : "CANADIAN DOLLAR",
+				"groupId" : "CURRENCY",
+				"groupQuery" : "$filterOn=CCY&$filterValue=CAD&$serviceType=BR_STDVIEW_CURRENCY"
+			}, {
+				"groupCode" : "USD",
+				"groupDescription" : "US Dollar",
+				"groupId" : "CURRENCY",
+				"groupQuery" : "$filterOn=CCY&$filterValue=USD&$serviceType=BR_STDVIEW_CURRENCY"
+			}]
+		}, {
+			"groupTypeDesc" : "Txn Category",
+			// "columns" : [],
+			"groups" : [{
+						"groupCode" : "TXNCAT",
+						"groupDescription" : "Transaction Category",
+						"groupId" : "txncategory",
+						"groupQuery" : ""
+					}]
+		}],
+		"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+#actionListWidget, #quickpaylistWidget, #favReportList, #messageFormsWidget, #actionlistWidget{
+	margin-top: 10px;
+}
+
+.ext-dropdown-menu {
+	.x-menu-item-active .x-menu-item-text {
+		color: $primaryColor;
+	}
+	.ext-active-menu{
+		.x-menu-item-text {
+			color: $primaryColor;
+		}
+	}
+}
+
+.filterSttingButtons {
+  .x-btn-inner {
+    color: $primaryColor !important;
+  }
+}
+
+.xn-popup {
+  .x-window-header-default-horizontal .x-tool-after-title .x-tool-img:hover {
+    background-image: url(resources/images/T7/iconsmore.png);
+    background-position: -93px -136px;
+  }
+}

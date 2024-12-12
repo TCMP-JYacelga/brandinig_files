@@ -1,0 +1,84 @@
+<div class="panel panel-default" id="loansGranularPanel">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="loansGranularInfoCaret"
+						class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>Loan Granular Privileges</span>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="loansGranularInfoDiv" class="panel-body">
+		<div class="row gridGran">
+					<table class="view-grid"  style="table-layout: fixed;">
+						<thead>
+							<tr class="view-grid-header">
+								<th class="view-grid-header-text" style="width:20%;" colspan="3">Type</th>
+								{{#each (splitOperation granularPermission.loansOperations) }}
+									<th class="view-grid-header-text hidden" style="width:20%;" id=grLoanCol_{{@index}} rowspan="2">{{colName}}</th>
+								{{/each}}														 
+							</tr>		
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text">Obligor Id</td>
+								<td class="view-grid-header-text">Obligation Id</td> 
+								<td class="view-grid-header-text">Account Name</td>
+								<!-- {{#each (splitOperation granularPermission.loansOperations) }}
+									<td class="view-grid-header-text" style="width:20%;" >{{colName}}</td> 
+								{{/each}} -->
+							</tr>
+						</thead>
+						<tbody>
+							{{#each granularPermission.loans}}
+									<tr class="view-grid-body">
+										<td class="view-grid-header-text view-grid-body-content" >{{accountNo}}</td>
+										<td class="view-grid-header-text view-grid-body-content" >{{obligatorId}}</td> 
+										<td class="view-grid-header-text view-grid-body-content" >{{getStringWithSpecialChars accountName}}</td>
+										
+										{{#each (splitMask mask) }}
+											{{#if isAssign}}
+												<td class="view-grid-body-content hidden">
+													<a class="limit-reached test">
+														<img id="chkLoansGran_{{../../assetid}}_{{@index}}_{{../accountId}}"
+															data-accountId = "{{ ../accountId }}"
+															data-accountName = "{{ ../accountName }}"
+															data-accountNo = "{{ ../accountNo }}"
+															data-gpermissionType = "{{ ../gpermissionType }}"
+															data-assetId="{{../../assetId}}"
+															data-packageId="{{../packageId}}"
+															data-packageName="{{../packageName}}"
+															data-obligatorId="{{../obligatorId}}"
+															data-version = "{{ version }}"
+															src="{{checkBoxIcon true}}" width="16" height="16" border="0">
+													</a>
+												</td>
+											{{else}}
+												<td class="view-grid-body-content hidden">
+													<a class="limit-reached test">
+														<img id="chkLoansGran_{{../../assetid}}_{{@index}}_{{../accountId}}"
+															data-accountId = "{{ ../accountId }}"
+															data-accountName = "{{ ../accountName }}"
+															data-accountNo = "{{ ../accountNo }}"
+															data-gpermissionType = "{{ ../gpermissionType }}"
+															data-assetid="{{../../assetId}}"
+															data-packageId="{{../packageId}}"
+															data-packageName="{{../packageName}}"
+															data-obligatorId="{{../obligatorId}}"
+															data-version = "{{ version }}"
+															src="{{checkBoxIcon false}}" width="16" height="16" border="0">
+													</a>
+												</td>
+											{{/if}} 
+										{{/each}}														
+									</tr>
+								{{else}}
+									<tr class="view-grid-body">
+											<td class="view-grid-body-content" colSpan="25" style="padding-bottom: 1%;" >&nbsp</td>
+									</tr>		
+								{{/each}}											
+						</tbody>
+					</table>
+		</div>
+	</div>
+</div>

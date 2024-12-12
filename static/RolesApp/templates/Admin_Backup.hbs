@@ -1,0 +1,336 @@
+<div class="ft-layout-container">
+			<div class="ft-layout-row">
+				<div class="ft-layout-primary">
+					<div class="ft-layout-inner">
+						<!--START:Page content ################-->
+						<div id="pageTitle">
+		<h1 class="ft-title">
+					<span>Edit Roles</span>
+		</h1>
+		<div class="ft-accordion-header-sidebar">
+			<ul class="ft-status-bar">
+					<li id="tab_c" class="ft-status-bar-li-done">
+						<span>
+							1. Edit Role
+						</span>
+					</li>
+					<li id="tab_e" class="ft-status-bar-li-active">
+						<span>
+							2. Permissions
+						</span>
+					</li>
+					<li id="tab_v">
+						<span>
+								3. Verify Role
+						</span>
+					</li>			
+			</ul>
+		</div>
+	</div>
+	<form id="frmMain">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-12">
+							<div>
+<div id="txnMainDiv" class="row">
+	<div class="col-sm-8" id="userCategoryInfoDiv">
+			<label>
+				<span>Role :</span>
+			</label>
+			FTADMIN&nbsp;&nbsp;
+			<label>
+				<span>Company :</span>
+			</label>
+			Fundtech Corporation&nbsp;&nbsp;
+			<label>
+				<span>
+					Subsidiaries
+					 : 
+				</span>
+			</label>
+						<span title="Fundtech Corporation, clnsbs1, vgf, Fundtech Corporation">
+							Fundtech Corporation, clnsbs1,...
+						</span>			
+		</div>
+	</div>
+</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body noLeftPadding">
+			<div class="row">
+							<div class="col-sm-2" style="vertical-align:top">
+								<div class="modal-body quicklinks-modal-body">
+									<div class="quicklinks-col-left">
+										<div class="list-group quicklinks-nav" role="tablist"> 
+<ul>
+	<li id="MENUITEM_ADMIN">
+						<a href="#/Admin" class="list-group-item">
+							Admin
+						</a>
+	</li>
+	<li id="MENUITEM_BR">
+						<a href="#/BalanceReporting" class="list-group-item">
+							Balance Reporting
+						</a>
+	</li>
+	<li id="MENUITEM_PAYMENT">
+						<a href="#/Payments" class="list-group-item">
+							Payments
+						</a>
+	</li>
+	<li id="MENUITEM_DEPOSIT_VIEW">
+						<a href="#/Imaging" class="list-group-item">
+							Imaging
+						</a>
+	</li>
+	<li id="MENUITEM_LOAN">
+						<a href="#/Loans" class="list-group-item">
+							Loans
+						</a>
+	</li>
+	<li id="MENUITEM_POSITIVE_PAY">
+						<a href="#/PositivePay" class="list-group-item">
+							Positive Pay
+						</a>
+	 </li>
+	<li id="MENUITEM_CHECKS">
+						<a href="#/CheckManagement" class="list-group-item">
+							Check Management
+						</a>
+	 </li>
+	<li id="MENUITEM_BANKREPORTS">
+						<a href="#/BankReports" class="list-group-item" > 
+							Bank Reports
+						</a>
+	</li>
+	<li id="MENUITEM_FSC">
+						<a href="#/SupplyChain" class="list-group-item">
+							Supply Chain
+						</a>
+	</li>
+	<li id="MENUITEM_LMS">
+						<a href="#/Liquidity" class="list-group-item" >
+							Liquidity
+						</a>
+	</li>
+	<li id="MENUITEM_FORECAST">
+						<a href="#/Forecasting" class="list-group-item">
+							Forecasting
+						</a>
+	</li>
+	<li id="MENUITEM_COLLECTION">
+						<a href="#/Recievables" class="list-group-item" >
+							Recievables
+						</a>
+	</li>
+	<li id="MENUITEM_PORTAL">
+						<a href="#/Portals" class="list-group-item" >
+							Portal
+						</a>
+	</li>
+	<li id="MENUITEM_MOBILE">
+						<a href="#/MobileBanking" class="list-group-item">
+							Mobile Banking
+						</a>
+	</li>
+</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-10">
+										<div id="tabs-admin">
+	<div class="panel panel-default">
+   		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span>Permission</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+		   	<div class="row">
+				<div class="col-sm-4">
+					<a class="t7-anchor" onclick="getPrivilegesPopup();">
+						Select Privileges
+					</a>	
+				</div>	
+		   </div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+   		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>Access</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+	<div class="panel-body">
+   	<div class="row">
+		<div class="col-sm-4 nowrap">
+			<b>	<label for="messageType">
+					Messages 
+					(45)
+			</label></b>							
+			<br>
+						<img src="../static/images/icons/icon_unchecked.gif" width="16" height="16" border="0" id="chkallMessagesSelectedFlag" onclick="toggleCheckUncheck(this,'allMessagesSelectedFlag');setDirtyBit();">
+			<label class="checkbox-inline noLeftPadding">			
+				All
+			</label>&nbsp;&nbsp;
+						<a class="t7-anchor" onclick="getMessageTypePopup();">
+							Select Message Type
+						</a>
+			<br><br>							
+		</div>
+		<div class="col-sm-4">
+			<b><label for="alert">
+					Alerts 
+					(0)
+			</label>	</b>						
+			<br>
+						<img src="../static/images/icons/icon_unchecked_grey.gif" width="16" height="16" border="0">
+			<label class="checkbox-inline noLeftPadding">			
+				All
+			</label>&nbsp;&nbsp;
+			<br><br>
+		</div>
+		<div class="col-sm-4">
+			<b><label for="report">
+				Reports 
+				(2)
+			</label>	</b>						
+			<br>
+						<img src="../static/images/icons/icon_unchecked.gif" width="16" height="16" border="0" id="chkallReportsSelectedFlag" onclick="toggleCheckUncheck(this,'allReportsSelectedFlag');setDirtyBit();">
+			<label class="checkbox-inline noLeftPadding">				
+				All&nbsp;
+			</label>&nbsp;&nbsp;
+						<a class="t7-anchor" onclick="getReportPopup('03');">
+							Select Report
+						</a>
+			<br><br>							
+		</div>
+				<div class="col-sm-4">
+						<b>	<label for="interface">						
+									Widgets 
+									(6)
+							</label> </b>							
+							<br>
+										<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign ml12" width="16" height="16" border="0" id="chkAllAdminWidgetsSelectedFlag" onclick="toggleCheckUncheck(this,'allAdminWidgetsSelectedFlag');setDirtyBit();">
+							<label class="checkbox-inline noLeftPadding">
+								All
+							</label>&nbsp;&nbsp;
+										<a class="t7-anchor" onclick="getAdminWidgtesPopup('03');">
+											Widgets
+										</a>
+							<input id="allAdminWidgetsSelectedFlag" name="allAdminWidgetsSelectedFlag" type="hidden" value="N">
+							<br><br>							
+				</div>
+				<div class="col-sm-4">
+						<b>	<label for="interface">						
+									Interfaces 
+									(107)
+							</label> </b>							
+							<br>
+										<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign ml12" width="16" height="16" border="0" id="chkAllInterfcaesSelectedFlag" onclick="toggleCheckUncheck(this,'allInterfcaesSelectedFlag');setDirtyBit();">
+							<label class="checkbox-inline noLeftPadding">
+								All
+							</label>&nbsp;&nbsp;
+										<a class="t7-anchor" onclick="getAdminInterfacesPopup('03');">
+											Select Interfaces
+										</a>
+							<br><br>							
+				</div>
+	</div>
+		<div class="row">
+							<div class="col-sm-4">
+								<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign" width="16" height="16" border="0" id="chkEditSelf" onclick="toggleCheckUncheck(this,'editSelf');setDirtyBit();">
+									<input id="editSelf" name="editSelf" type="hidden" value="Y">
+									<label class="checkbox-inline noLeftPadding">Edit Self</label>
+							</div>	
+							<div class="col-sm-4">
+								<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign" width="16" height="16" border="0" id="chkApproveSelf" onclick="toggleCheckUncheck(this,'approveSelf');setDirtyBit();">
+									<input id="approveSelf" name="approveSelf" type="hidden" value="N">
+									<label class="checkbox-inline noLeftPadding">Approve Self</label>
+							</div>	
+					<div class="col-sm-4">
+								<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign" width="16" height="16" border="0" id="chkPublicFilterAction" onclick="toggleCheckUncheck(this,'publicFilterAction');setDirtyBit();">
+									<input id="publicFilterAction" name="publicFilterAction" type="hidden" value="N">
+									<label class="checkbox-inline noLeftPadding">Public Filter Actions</label>
+					</div>	
+					<br><br>		
+	</div>
+	<div class="row">
+				         <div class="col-sm-4">
+								<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign" width="16" height="16" border="0" id="chkMultipleImageView" onclick="toggleCheckUncheck(this,'multipleImageView');setDirtyBit();">
+									<input id="multipleImageView" name="multipleImageView" type="hidden" value="N">
+									<label class="checkbox-inline noLeftPadding">Multiple Image View</label>
+							</div>
+							<div class="col-sm-4 nowrap">
+								<img src="../static/images/icons/icon_unchecked.gif" class="middleAlign" width="16" height="16" border="0" id="chkMultipleImageDownload" onclick="toggleCheckUncheck(this,'multipleImageDownload');setDirtyBit();">
+									<input id="multipleImageDownload" name="multipleImageDownload" type="hidden" value="N">
+									<label class="checkbox-inline noLeftPadding">Multiple Image Download</label>
+							</div>	
+	</div>
+	</div>
+</div>
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="QWQJ-2T2K-S371-SFU1-CLVF-X9CM-Y57T-DKAA">
+	<input type="hidden" name="viewState" value="qHUuyS8bnttHFyni44C8FrkPYM0uJPPoMJ-rNnewHkxqIxy07T4erbP7NpqDOEYnd1633wR9CD5QTfYmhdS5c9nHYbtjCpTthcXN_Vdzi5i-nG25AQVXSG3sE3e4TI_8NsjTRDR_-0oZRrsfQqSkrH8-utDL4ILUJ7juNlw2PYPbvFT-Ut9ozyFEP6oPm_-TagnMov4v5elLMSeGU_8LGgoy2sYbrHpGP9YIItHhHR_RXOlrUeUvHmLY-OjlIeDoDQW5zASSTWVuQT1m9eZ1VgK18OFIGfO4u8ing7Doa70">
+	<input type="hidden" name="dtlViewState" value="qHUuyS8bnttHFyni44C8FnUwWPmGiG899quUep9CqpGChrmnfnqMgLy_rFzX0CLT903m7C67FQZe22ic0CV1mUo4MFTW6Zw_A-j_yScVGo9yEu0coGB_KBobqiDM4ZHukVSolHkyVNe7t0qw2HKgnA">
+	<input type="hidden" id="viewRightsSerials" name="viewRightsSerials">
+	<input type="hidden" id="editRightsSerials" name="editRightsSerials">
+	<input type="hidden" id="authRightsSerials" name="authRightsSerials">
+										</div>
+							</div>
+			</div>
+	</div></div>
+	<div class="form-group">		
+		<ul class="ft-bar">
+			<li>
+						<a href="#/" class="ft-button ft-button-light">Back</a>
+			</li>
+			 <li class="ft-bar-stretch">
+				<div class="pull-right">
+							<input type="button" class="ft-button ft-margin-l ft-btn-link" tabindex="8" onclick="saveAdminFeatureProfile('saveUserCategoryAdminFeature.form');" value="Update" autocomplete="off">
+							<a href="#/Verify" class="ft-button ft-margin-l ft-button-primary">Next</a>
+				 </div>
+			</li>
+		</ul>
+	</div>
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="QWQJ-2T2K-S371-SFU1-CLVF-X9CM-Y57T-DKAA">
+	<!-- commenting below code as viewState/dtlViewState are getting duplicated in Service specific entry page-->
+	<input type="hidden" id="viewRightsSerials" name="viewRightsSerials">
+	<input type="hidden" id="editRightsSerials" name="editRightsSerials">
+	<input type="hidden" id="authRightsSerials" name="authRightsSerials">
+	<input type="hidden" id="selectedRecordsForAccount" name="selectedRecordsForAccount">
+	<input type="hidden" id="dirtyBit" name="dirtyBit">
+	<input type="hidden" id="MODE" name="MODE" value="EDIT">
+	</form>
+	<div id="navigatePopup" class="ui-helper-hidden autowidth" title="Navigate!">
+	</div>
+	<div id="warningPopup" class="ui-helper-hidden autowidth" title="Warning">
+<label id="">Changes will be discarded</label>
+<input type="hidden" id="inptcurrent_page" name="current_page" value=""> 
+<input type="hidden" id="txtCurrent" name="txtCurrent" value=""> 
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="QWQJ-2T2K-S371-SFU1-CLVF-X9CM-Y57T-DKAA">
+	</div>
+						<!--END:Page content ################-->
+					</div>
+				</div>
+				<!--START:Page Side Panel-->
+				<!--END:Page Side Panel-->
+			</div>
+		</div>

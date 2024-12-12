@@ -1,0 +1,587 @@
+<style type="text/css">
+	.requiredField{border : 1px solid red !important; background-color : #FFCECE !important;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+	   if(emailValidationFlag == 'true')
+        {
+            $('#emailLabel').addClass("required");
+            $("#email").blur(function() {
+                markRequired(this);
+             });   
+        }
+        if(emailValidationFlag == 'false')
+        {
+            $('#emailLabel').removeClass("required ");   
+        }
+        if(mobileValidationFlag == 'true')
+        { 
+            $('#mobileNoLbl').addClass("required ");
+            $("#mobileNo").blur(function() {
+                markRequired(this);
+             });
+        }
+        if(mobileValidationFlag == 'false')
+        { 
+            $('#mobileNoLbl').removeClass("required ");   
+        }
+		autoFocusOnFirstElement('entryFormDiv', true);
+	});
+</script>
+<div class="ft-layout-row">
+	<div class="ft-layout-primary">
+		<div class="ft-layout-inner">
+			<!--START:Page content ################-->
+			<div id="PageTitle1">
+				{{#ifCond mode '==' "new" }}
+				<h1 class="ft-title">
+					<span>{{getLabel "lbl.clientUser.title1" "Create User"}}</span>
+				</h1>
+				{{/ifCond}} {{#ifCond mode '!=' "new" }}
+				<h1 class="ft-title">
+					<span>{{getLabel "lbl.clientUser.title2" "Modify User"}}</span>
+				</h1>
+				{{/ifCond}}
+
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+
+						{{#ifCond mode '==' "new" }}
+						<li class="ft-status-bar-li-active" id="txnStep1"><span>
+								{{getLabel "lbl.clientUser.statusBar.createUser" "1. Create User"}}</span></li> {{/ifCond}} {{#ifCond mode '!=' "new" }}
+						<li class="ft-status-bar-li-active" id="txnStep1"><span>
+								{{getLabel "lbl.clientUser.statusBar.edituser" "1. Edit User"}}</span></li> {{/ifCond}}
+						<li><span> {{getLabel "lbl.clientUser.statusBar.permission" "2. Permissions"}} </span></li>
+						<li><span> {{getLabel "lbl.clientUser.statusBar.verifyUser" "3. Verify User"}}  </span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="errorDiv" class="row hidden">
+				<div class="col-sm-12">
+					<div class="ft-error-message">
+						<span class="ft-bold-font">{{getLabel "lbl.clientUser.error" "ERROR:"}}</span>
+						<p id="errorPara"></p>
+					</div>
+				</div>
+			</div>
+
+			<div id="entryFormDiv">
+				<form id="frmMain" name="frmMain" method="post" autocomplete="off">
+					<div>
+						<!--Role Details section starts here -->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-sm-12">
+										<h2 class="pull-left panel-title">
+											<span>{{getLabel "lbl.clientUser.userDetails" "User Details"}}</span>
+										</h2>
+									</div>
+								</div>
+							</div>
+
+							<div id="userInfoDiv" class="panel-body">
+								{{#if admin}}
+								<div id="corpDiv">
+									<div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="corporation" class="frmLabel required">{{getLabel "lbl.company.name" "Company Name"}}</label>
+												<input type="text" id="corporation"
+													class="ui-suggestion-box  form-control" tabindex="1"
+													placeholder="Enter Keyword or %" tabindex="1" onblur="markRequired(this)"></input>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/if}}
+
+								<div id="userInfoDiv"></div>
+
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="firstName" class="frmLabel required"> <span>
+													{{getLabel "lbl.clientUser.firstName" "First Name"}} </span>
+											</label> <input id="firstName" name="firstName" class="form-control"
+												type="text" maxlength="39" value="{{{firstName}}}" tabindex="1" onblur="markRequired(this)">
+										</div>
+									</div>
+									<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+										<div class="form-group">
+											<label for="lastName" class="frmLabel required"> <span>
+													{{getLabel "lbl.clientUser.lastName" "Last Name"}} </span>
+											</label> <input id="lastName" data-version="{{ version }}"
+												name="lastName" class="form-control" type="text"
+												maxlength="40" value="{{{lastName}}}" tabindex="1" onblur="markRequired(this)">
+										</div>
+									</div>
+									{{#ifCond recordKeyNo  "==" null}}
+									<div id="copyFromDiv">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<a class="limit-reached"> <img id="chkCopyFrom"
+													data-version="{{ version }}" class="chkBoxAlign" width="16"
+													height="16" src="{{ checkBoxIcon
+													copyFromFlag }}"
+													border="0" tabindex="1">
+												</a> <label id="lblCopyFrom" for="chkCopyFrom" class="frmLabel noLeftPadding">
+													{{getLabel "lbl.clientUser.copy.existingUser" "Copy From Existing User"}}</label> <input type="text" id="copyFromUser"
+													class="ui-suggestion-box  form-control" disabled="disabled"
+													placeholder="Enter Keyword or %" tabindex="1" onblur="markRequired(this)"></input>
+											</div>
+										</div>
+									</div>
+									{{/ifCond}}
+
+								</div>
+								<div class="row">
+								{{#ifCond metaData.autoUsrCode '==' "PRODUCT" }}
+									
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="loginId" class="frmLabel required"> <span>
+													{{getLabel "lbl.clientUser.loginId" "Login Id"}}</span>
+											</label> 
+											{{#if recordKeyNo}}
+											<input id="loginId" name="loginId" class="form-control"
+												type="text" maxlength="10" value="{{loginId}}"  disabled ='disabled' tabindex="1" onblur="markRequired(this)">
+											{{else}}
+												<input id="loginId" name="loginId" class="form-control"
+												type="text" maxlength="10" value="{{loginId}}" tabindex="1" onblur="markRequired(this)">
+											{{/if}}
+										</div>
+									</div>
+								{{/ifCond}}
+								{{#ifCond metaData.autoUsrCode '!=' "PRODUCT" }}
+									<div class="col-sm-3 hidden">
+										<div class="form-group">
+											<label for="loginId" class="frmLabel required"> <span>
+													{{getLabel "lbl.clientUser.loginId" "Login Id"}}</span>
+											</label> 
+												<input id="loginId" name="loginId" class="form-control"
+												type="text" maxlength="10" tabindex="1" onblur="markRequired(this)">
+											
+										</div>
+									</div>
+								{{/ifCond}}
+								{{#ifCond metaData.ssoClient '==' 'Y'}}
+										<div class="col-sm-offset-1 col-sm-3">
+											<div class="form-group">
+												{{#ifCond metaData.autoUsrCode '==' "PRODUCT" }}
+												<label for="ssologinId" class="frmLabel required">
+													 <span> {{getLabel "lbl.clientUser.ssologinId" "SSO Login Id"}}</span>
+												</label> 
+													<input id="ssoLoginId" name="ssoLoginId" class="form-control"
+														type="text" maxlength="25" value="{{ssoLoginId}}" tabindex="1" onblur="markRequired(this)">
+											
+												{{/ifCond}}
+												{{#ifCond metaData.autoUsrCode '!=' "PRODUCT" }}											
+												<label for="ssoLoginId" class="frmLabel required">
+													 <span> {{getLabel "lbl.clientUser.ssouserId" "SSO User Id"}}</span>
+												</label> 
+												<input id="ssoLoginId" name="ssoLoginId" class="form-control"
+													type="text" maxlength="25" value="{{ssoLoginId}}" tabindex="1" onblur="markRequired(this)">
+												{{/ifCond}}
+											</div>
+										</div>
+										{{#ifCond recordKeyNo  "==" null}}
+											{{#ifCond metaData.ssoIdFetch '==' "Y"}}
+											<div class = "inline" id = "fetchInfoDiv" style = "color:#fff; padding-top: 23px";>
+													<a class="ft-button ft-button-primary" style = "color:#fff";
+													id="fetchSSOIdInfo" tabindex="1">{{getLabel "lbl.clientUser.ssologinInfo" "Fetch User Info"}}</a>
+											</div>	
+											{{/ifCond}}
+										{{/ifCond}}
+								{{/ifCond}}
+							</div>
+								<div class="row">
+									<div class="col-sm-3 form-group">
+										<label for="userCategory" class="frmLabel required"> <span>{{getLabel "lbl.clientUser.userCategory" "Role"}}</span>
+										</label> <select id="userCategory" name="userCategory" class="form-control" tabindex="1" onblur="markRequired(this)">
+											<option>{{getLabel "lbl.clientUser.select" "Select"}}</option>
+											{{#each roleList}}
+												<option value="{{roleId}}">{{roleId}} | {{roleDesc}}</option>
+											{{/each}}
+										</select>
+
+									</div>
+									
+								{{#if usrRoleId}}	
+									<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+										<div class="form-group">
+										</br>
+											<a id="lnkRoleDetails" class="t7-anchor" tabindex="1" > {{getLabel "lbl.clientUser.viewroledetails" "View Role Details"}} </a>
+										<br/>
+										</div>	
+									</div>
+								{{/if}}
+								{{#ifCond metaData.ssoClient '==' 'Y'}}
+									{{#if usrRoleId}}	
+										<div class="col-sm-3">
+									{{else}}
+										<div class="col-sm-offset-1 col-sm-3">
+									{{/if}}
+								{{else}}
+									{{#if usrRoleId}}	
+										<div class="col-sm-3">
+									{{else}}
+										<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+									{{/if}}
+								{{/ifCond}}									
+										<div class="form-group">
+											<label for="activationDate" class="frmLabel required">
+												<span> {{getLabel "lbl.clientUser.activationDate" "Activation Date"}} </span>
+											</label>
+											<div class="input-daterange">
+												{{#if checkerId}}
+												<input id="activationDate" name="activationDate"
+													class="form-control ft-datepicker"
+													readonly="readonly" style="width: 88.2%;" disabled ='' value="{{activationDate}}" tabindex="1" onblur="markRequired(this)">
+													<div id="dticon" class="input-group-addon has-icon disabled">
+													<i class="fa fa-calendar"></i>
+												</div>
+												{{else}}												
+												<input id="activationDate" name="activationDate"
+													class="form-control ft-datepicker"
+													readonly="readonly" style="width: 88.2%;" value="{{activationDate}}" tabindex="1" onblur="markRequired(this)">
+													<div id="dticon" class="input-group-addon has-icon">
+													<i class="fa fa-calendar"></i>
+												</div>
+												{{/if}}
+											</div>
+										
+									</div>
+
+								</div>
+								</div>
+								
+
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="department"> <span> {{getLabel "lbl.clientUser.department" "Department"}} </span>
+											</label> <input id="department" name="department"
+												class="form-control" type="text" maxlength="40"
+												autocomplete="off" value="{{department}}" tabindex="1">
+										</div>
+									</div>
+									<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+										<div class="form-group">
+											<label for="telephone"> <span> {{getLabel "lbl.clientUser.telephone" "Telephone"}} </span>
+											</label> <input id="telephone" name="telephone"
+												class="form-control" type="text"  maxlength="20"
+												autocomplete="off" value="{{telephone}}" tabindex="1">
+										</div>
+									</div>
+									{{#ifCond metaData.authMatrixPermission '==' 'Y'}}
+									<div class="col-sm-3">
+											<label for="approvalLevel" class="frmLabel">
+												<span>{{getLabel "lbl.clientUser.approvalLevel" "Approval Level"}}</span>
+											</label> <select id="approvalLevel" name="approvalLevel"
+												class="form-control">
+												<option value="" >{{getLabel "lbl.clientUser.select" "Select"}}</option>  
+												{{#each approvalLevelList}}
+													 {{option optionId optionDesc assignedFlag version}} 
+												{{/each}}
+										</select>
+	
+									</div>
+								{{/ifCond}}
+								</div>
+								<!--<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<a class="t7-action-link-with-noline">
+											     <i id="lnkChangeAddress" class="fa fa-caret-down"></i>
+											     {{getLabel "lbl.clientUser.lnkChangeAddress" "Change Address"}}
+										     </a>
+										</div>
+									</div>
+								</div>-->
+								<div class="row" id="usrAddressDiv" class="panel-body">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="usrAddress" class="frmLabel required"> <span>{{getLabel "lbl.clientUser.usrAddress" "Address"}}</span>
+											</label>
+											<textarea path="usrAddress" id="usrAddress"
+												class="form-control" style="height: 93%;" rows="5" cols="255" maxlength="150"  tabindex="1" onblur="markRequired(this)">{{address.addressLine1}}</textarea>
+										</div>
+										<div class="form-group">
+											<label for="fax"> <span>{{getLabel "lbl.clientUser.fax" "Fax"}}</span>
+											</label> <input path="fax" id="fax" class="form-control" 
+												maxlength="14"  value="{{address.fax}}" tabindex="1">
+										</div>
+
+									</div>
+									<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+										<div class="form-group">
+											<label for="usrCountry" class="frmLabel required"> <span>{{getLabel "lbl.clientUser.usrCountry" "Country"}}</span>
+											</label> <select path="usrCountry" id="usrCountry" class="form-control" onblur="markRequired(this)"  tabindex="1">
+											{{#each address.countryList }}
+												{{option countryId (getCountryMstLabel countryId countryName) assignedFlag}}
+											{{/each}}
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="city"> <span>{{getLabel "lbl.clientUser.city" "City"}}</span>
+											</label> <input path="city" id="city" class="form-control"
+												maxlength="30" value="{{address.city}}" tabindex="1">
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="usrState"> <span>{{getLabel "lbl.clientUser.usrState" "State"}}</span>
+											</label> <select id="usrState" class="form-control" tabindex="1">
+											<option value="" >{{getLabel "lbl.clientUser.select" "Select"}}</option> 
+											{{#each address.stateList }}
+												{{option stateId (getStateMstLabel stateId stateName) assignedFlag}}
+											{{/each}}
+											</select>
+										</div>
+										<div class="form-group">
+										{{#ifCond metaData.mandatoryCheck '==' "Y" }}
+											<label for="zipCode" id="zipCode-label" class="frmLabel required" > <span>
+											{{getLabel "lbl.clientUser.zipCode" "Zip Code"}}</span>
+											</label>
+										{{else}}
+											 <label for="zipCode" id="zipCode-label" class="frmLabel"> <span>
+											{{getLabel "lbl.clientUser.zipCode" "Zip Code"}}</span>
+											</label>
+										{{/ifCond}}	
+											 <input path="zipCode" id="zipCode"
+												class="form-control" maxlength="10" value="{{address.zipCode}}" tabindex="1">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="email" class="frmLabel" id="emailLabel"> <span>
+                                                    {{getLabel "lbl.clientUser.email" "Email"}} </span>
+                                            </label> <input id="email" name="email"
+                                                class="form-control" type="text"
+                                                maxlength="255" autocomplete="off" value="{{email}}" tabindex="1" >
+										</div>
+									</div>
+									<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+										<div class="form-group">
+											<label for="mobileNo" id="mobileNoLbl" class="frmLabel"> <span>
+													{{getLabel "lbl.clientUser.mobileNo" "Mobile Number"}} </span>
+											</label> <input id="mobileNo" name="mobileNo"
+												class="form-control" type="text" tabindex="1" 
+												maxlength="14" autocomplete="off" value="{{mobileNo}}" tabindex="1">
+										</div>
+									</div>
+
+
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="profileName"> <span> {{getLabel "lbl.clientUser.usrLanguage" "Language"}} </span>
+											</label> <select id="usrLanguage" name="usrLanguage" tabindex="1"
+												class="form-control" autocomplete="off" value="{{usrLanguage}}">
+												
+												{{#each languageList}}
+												{{option languageId (getLanguageMstLabel languageId languageDesc) assignedFlag}}
+											{{/each}}
+												</select>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<div class="row">
+										    <div class="col-sm-12">
+												<h2 class="panel-title">	
+													<span id="featuresInfoCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+													<span class="ft-padding-l ">{{getLabel "lbl.clientUser.features" "Features"}} </span>									
+												</h2>
+											</div>
+										</div>
+									</div>
+									<div id="featuresAssetBody" class="panel-body">
+									<div class="row">
+										<div class="col-sm-3">
+											<img src="{{checkBoxIcon isTemplateOnly}}" width="16"
+												height="16" border="0" data-digest = "{{ digest }}" id="chkTemplateOnlyFlag"
+												class="field-control chkBoxAlign" tabindex="1">&nbsp; <input
+												id="templateOnlyFlag" name="templateOnlyFlag" type="hidden"
+												value="N" autocomplete="off"> <label for="chkTemplateOnlyFlag" id="chkTemplateOnlyFlag"
+												class="checkbox-inline noLeftPadding"> {{getLabel "lbl.clientUser.chkTemplateOnlyFlag" "Only a Template User"}} </label>
+										</div>
+										<div class="col-sm-2">
+											<img src="{{checkBoxIcon superUser}}" width="16"
+												height="16" border="0" id="chkUsrSuperUser"
+												class="field-control chkBoxAlign" tabindex="1">&nbsp; <input id="usrSuperUser"
+												name="usrSuperUser" type="hidden" value="N"
+												autocomplete="off"> <label id="chkUsrSuperUser" for="chkUsrSuperUser"
+												class="checkbox-inline noLeftPadding"> {{getLabel "lbl.clientUser.chkUsrSuperUser" "Super User"}} </label>
+										</div>
+										<div class="col-sm-3">
+											<img src="{{checkBoxIcon allowConfidential}}" width="16"
+												height="16" border="0" id="chkUsrAccessType"
+												class="field-control chkBoxAlign" tabindex="1">&nbsp; <input
+												id="usrAccessType" name="usrAccessType" type="hidden"
+												value="N" autocomplete="off"> <label id="chkUsrAccessType" for="chkUsrAccessType"
+												class="checkbox-inline noLeftPadding"> {{getLabel "lbl.clientUser.chkUsrAccessType" "View Confidential"}} </label>
+										</div>
+										{{#ifCond metaData.disableRejectFlag '==' "Y" }}
+											<div class="col-sm-3">
+												<img src="{{checkBoxIcon disableReject}}" width="16"
+													height="16" border="0" id="chkDisableReject"
+													class="field-control chkBoxAlign" tabindex="1">&nbsp; <input
+													id="disableReject" name="disableReject" type="hidden"
+													value="N" autocomplete="off"> <label id="chkDisableReject" for="chkDisableReject"
+													class="checkbox-inline noLeftPadding"> {{getLabel "lbl.clientUser.chkDisableReject" "Disable Reject"}} </label>
+											</div>
+										{{/ifCond}}
+										{{#ifCond metaData.mfaApplicable '==' "Y" }}
+											<div class="col-sm-2">
+												<img src="{{checkBoxIcon requireMFA}}" width="16"
+													height="16" border="0" id="chkUsrMultiFa"
+													class="field-control chkBoxAlign" tabindex="1">&nbsp; <input id="usr2Fa"
+													name="usr2Fa" type="hidden" value="N" autocomplete="off">
+												<label class="checkbox-inline noLeftPadding" id="chkUsrMultiFa" for="chkUsrMultiFa">
+												{{getLabel "lbl.clientUser.chkUsrMultiFa" "Factor Authentication Required"}}  </label>
+											</div>
+											<div class="col-sm-2 hidden">
+												<label for="usrMfaTrigger" class="frmLabel"> <span>{{getLabel "lbl.clientUser.usrMfaTrigger" "MFA Trigger"}}</span>
+												</label> <select path="usrMfaTrigger" id="usrMfaTrigger" class="form-control" onblur="markRequired(this)"  tabindex="1">
+												{{#each usrMfaList }}
+													{{option mfaTriggerId (getMfaTriggerLabel mfaTriggerId mfaTriggerDesc) assignedFlag}}
+												{{/each}}
+												</select>
+											</div>
+										{{/ifCond}}
+										<br><br>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+
+									<div class="col-sm-6">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="row">
+													<div class="col-sm-12">
+														<h2 class="panel-title">
+															<span id="subsidiaryInfoCaret"
+																class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+															<span>{{getLabel "lbl.clientUser.subsidiaryInfoCaret" "Subsidiary"}}</span>
+															<img id="subsidiaryAll" class="chkBoxAlign" src="static/images/icons/icon_unchecked.gif" width="16" height="16" border="0">
+															<label id="subsidiaryAll" for="subsidiaryAll" class="checkbox-inline noLeftPadding">{{getLabel "lbl.clientUser.all" "All"}}</label>
+															<label id="lblSubsidiaryCount" class="checkbox-inline pull-right">{{subsidiaryAssignedCount}} {{getLabel "lbl.clientUser.of" "of"}} {{subsidiaryCount}} {{getLabel "lbl.clientUser.selected" "Selected"}}</label>
+														</h2>
+													</div>
+												</div>
+											</div>
+											<div id="subsidiaryInfoDiv" class="panel-body">
+												<div class="row">
+													<div class="grid">
+														<table class="view-grid" style="width: 99%">
+															<thead>
+																<tr class="view-grid-header">
+																	<td class="view-grid-header-text" style="width: 10%"></td>
+																	<td class="view-grid-header-text">{{getLabel "lbl.clientUser.subsidiaryInfoCaret" "Subsidiary"}}</td>
+																	<td class="view-grid-header-text" style="text-align: center">{{getLabel "lbl.clientUser.default" "Default"}}</td>
+																</tr>
+															</thead>
+															<tbody>
+																{{#each subsidiaries}}
+																	<tr class="view-grid-body">
+																		<td class="view-grid-body-content text-center "><a
+																		class="limit-reached test"><img
+																			id="chkSubsidiary_{{subsidiaryId}}"
+																			data-subsidiaryid = "{{subsidiaryId}}"
+																			data-subsidiaryname = "{{subsidiaryName}}"
+																			data-digest = "{{ digest }}"
+																			src="{{checkBoxIcon assignedFlag}}" width="16"
+																			height="16" border="0"></a></td>
+																		<td class="view-grid-body-content">{{subsidiaryName}}</td>
+																		{{#if assignedFlag}}	
+																			{{#if defaultFlag}}
+																				<td class="view-grid-body-content text-center">	
+																					<input type="radio" name="defaultClientRadio" 
+																							id="radioSubsidiary_{{subsidiaryId}}"
+																							data-subsidiaryid = "{{subsidiaryId}}"
+																							data-subsidiaryname = "{{subsidiaryName}}" 
+																							data-digest = "{{ digest }}" tabindex="1"
+																							checked="checked">	
+																				</td>																			
+																			{{else}}
+																				<td class="view-grid-body-content text-center">	
+																					<input type="radio" name="defaultClientRadio" 
+																							id="radioSubsidiary_{{subsidiaryId}}"
+																							data-subsidiaryid = "{{subsidiaryId}}"
+																							data-digest = "{{ digest }}" tabindex="1"
+																							data-subsidiaryname = "{{subsidiaryName}}">	
+																				</td>																			
+																			{{/if}}
+																		{{else}}
+																			<td class="view-grid-body-content text-center">	
+																				<input type="radio" name="defaultClientRadio" 
+																						id="radioSubsidiary_{{subsidiaryId}}"
+																						data-subsidiaryid = "{{subsidiaryId}}"
+																						data-digest = "{{ digest }}" tabindex="1"
+																						data-subsidiaryname = "{{subsidiaryName}}" 
+																						disabled="disabled">	
+																		{{/if}}
+																	</tr>
+																{{else}}
+																	<tr class="view-grid-body">
+																		<td class="view-grid-body-content" colSpan="4"
+																			style="padding-bottom: 1%;">&nbsp</td>
+																	</tr>
+																{{/each}}
+															<tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								</div>
+							<div id='verifyRoleDetail' style="overflow-y: auto">
+								
+							</div>
+
+						</div>
+
+						<div class="form-group">
+							<ul class="ft-bar">
+								<li>
+								<button id='btnCancel' class="ft-button ft-button-light"tabindex="1">{{getLabel "lbl.clientUser.btnCancel" "Cancel"}}</button>
+								</li>
+								<li class="ft-bar-stretch">
+									<div class="pull-right">
+										<!-- TODO - Commented temporarily -->
+										{{#ifCond mode '==' "new" }} <input type="button"
+											id="saveUpdate" class="ft-button ft-margin-l ft-btn-link"
+											value={{getLabel "lbl.clientUser.btnSave" "Save"}} autocomplete="off" tabindex="1">
+										{{/ifCond}} {{#ifCond mode '!=' "new" }} <input type="button"
+											id="saveUpdate" class="ft-button ft-margin-l ft-btn-link"
+											value={{getLabel "lbl.clientUser.btnUpdate" "Update"}} autocomplete="off" tabindex="1">
+										{{/ifCond}} <a class="ft-button ft-margin-l ft-button-primary"
+											id="Next" tabindex="1">{{getLabel "lbl.clientUser.btnNext" "Next"}}</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="confirmMsgPopup"></div>
+						<div id="roleChangeMsgPopup"></div>
+						
+				</form>
+			</div>
+			<!--END:Page content ################-->
+		</div>
+	</div>
+	<input type="hidden" name="recordKeyNo" id="recordKeyNo"
+		value="{{recordKeyNo}}">
+
+	<!--START:Page Side Panel-->
+	<!--END:Page Side Panel-->
+</div>

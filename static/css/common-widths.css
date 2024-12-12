@@ -1,0 +1,102 @@
+/* em widths */
+.autowidth { width: auto; }
+.w47 { width: 47em; min-width: 46em; }
+.w46 { width: 46em; min-width: 46em; }
+.w40 { width: 40em; min-width: 40em; }
+.w36 { width: 36em; min-width: 36em; }
+.w32 { width: 32em; min-width: 32em; }
+.w30_5 { width: 30.5em; min-width: 30.5em; }
+.w28 { width: 28em; min-width: 28em; }
+.w27 { width: 27em; min-width: 27em; }
+.w26 { width: 26em; min-width: 26em; }
+.w25 { width: 25em; min-width: 25em; }
+.w24 { width: 24em; min-width: 24em; }
+.w23 { width: 23em; min-width: 23em; }
+.w22 { width: 22em; min-width: 22em; }
+.w21 { width: 21em; min-width: 21em; }
+.w20_5 { width: 20.5em !important; min-width: 20.5em !important; }
+.w20 { width: 20em; min-width: 20em; }
+.w18 { width: 18em; min-width: 18em; }
+.w17_5 { width: 17.5em; min-width: 17.5em; }
+.w17 { width: 17em; min-width: 17em; }
+.w16_6 { width: 16.6em; min-width: 16.6em; }
+.w16 { width: 16em; min-width: 16em; }
+.w14_3 { width: 14.3em; min-width: 14.3em; }
+.w14 { width: 14em; min-width: 14em; }
+.w13_5 { width: 13.5em; min-width: 13.5em; }
+.w13 { width: 13em; min-width: 13em; }
+.w12_5 { width: 12.5em; min-width: 12.5em; }
+.w12_6 { width: 12.6em; min-width: 12.6em; }
+.w12 { width: 12em; min-width: 12em; }
+.w11_5 { width: 11.5em !important; min-width: 11.5em !important; }
+.w11_6 { width: 11.6em !important; min-width: 11.6em !important; }
+.w10_5 { width: 10.5em !important; min-width: 10em; }
+.w10 { width: 10.1em; min-width: 10em; }
+.w9_8 { width: 9.8em; min-width: 9.8em; }
+.w9_5 { width: 9.5em; min-width: 9.5em; }
+.w9_2 { width: 9.2em !important; min-width: 9em; }
+.w9 { width: 9em; min-width: 9em; }
+.w8 { width: 8em; min-width: 8em; }
+.w7 { width: 7em; min-width: 7em; }
+.w6_7 { width: 6.75em !important; min-width: 6.5em; }
+.w6_5 { width: 6.5em !important; min-width: 6.5em; }
+.w6 { width: 6em; min-width: 6em; }
+.w5 { width: 5em; min-width: 5em; }
+.w4_5 { width: 4.5em; min-width: 4.5em; }
+.w4 { width: 4em; min-width: 4em; }
+.w3 { width: 3em; min-width: 3em; }
+.w2 { width: 2em; min-width: 2em; }
+.w1 { width: 1em; min-width: 1em; }
+.w15_5{ width: 15.5em !important; min-width: 15.5em !important; }
+.w15_7{ width: 15.7em !important; min-width: 15.7em !important; }
+.w14_7{ width: 14.7em !important; min-width: 14.7em !important; }
+.w14_8{ width: 14.843em !important; min-width: 14.843em !important; }
+.w12_8 { width: 12.857em !important; min-width: 12.857em !important; }
+.w17_5 { width: 17.5em !important; min-width: 17.5em !important; }
+.w19_5 { width: 19.5em !important; min-width: 19.5em !important; }
+.w20_5 { width: 20.5em !important; min-width: 20.5em !important; }
+.w33 {
+width: 33em !important;
+min-width: 33em !important;
+}
+.w80p { width:80px; min-width:80px; }
+.mw10 { min-width: 10em; }
+.mw20 { min-width: 20em; }
+
+/* em heights */
+.h1 { height: 1em; min-height: 1em; }
+.h1_2 { height: 1.2em; min-height: 1.2em; }
+.h1_4 { height: 1.4em; min-height: 1.4em; }
+.h1_5 { height: 1.5em; min-height: 1.5em; }
+.h1_6 { height: 1.6em; min-height: 1.6em; }
+.h1_8 { height: 1.8em; min-height: 1.8em; }
+.h2 { height: 2em; min-height: 2em; }
+.h3 { height: 3em; min-height: 3em; }
+.h4 { height: 4em; min-height: 4em; }
+.h6 { height: 6em; min-height: 6em; }
+.h8 { height: 8em; min-height: 8em; }
+.h9 { height: 9em; min-height: 9em; }
+.h10 { height: 10em; min-height: 10em; }
+.h12 { height: 12em; min-height: 12em; }
+.h14 { height: 14em; min-height: 14em; }
+.h15 { height: 14em; min-height: 15em; }
+.h16 { height: 16em; min-height: 16em; }
+
+/* pure heights with normal line-height */
+.h_16_5 { height: 16.5em; min-height: 16.5em; }
+.h_10 { height: 10em; min-height: 10em; }
+.h18p { height: 18px; min-height: 18px; }
+.h20p { height: 20px; min-height: 20px; }
+.h24p { height: 24px; min-height: 24px; }
+.h32p { height: 32px; min-height: 32px; }
+.h48p { height: 48px; min-height: 48px; }
+.h140p { height: 140px; min-height: 140px; }
+.h200p { height: 200px; min-height: 200px; }
+.h300p { height: 300px; min-height: 300px; }
+
+.hm96p { max-height: 96px; }
+.hm112p { max-height: 112px; }
+.hm128p { max-height: 128px; }
+
+/* padding for form buttons */
+.lpad15 { padding: 0 0 0 13.8em; }

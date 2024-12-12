@@ -1,0 +1,21 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.brexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.brcollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "20"}}
+		{{#if allowedFeatures}}
+			{{>featureTemplate assetid="20"}}	
+		{{/if}}
+	
+		{{>prevTemplate assetid="20"}}
+
+		{{/selectAsset}} 
+	{{/each}}
+</div>

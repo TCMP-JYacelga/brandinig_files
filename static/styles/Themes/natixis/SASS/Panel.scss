@@ -1,0 +1,602 @@
+.gradiant_back { background-color: #f6f6f6; }
+#filterDiv { border: 1px solid #EFEFEF; }
+
+.xn-panel .x-panel-header { 
+	background: $lightColor !important;
+	color: $primaryColor !important;
+	padding: 12px 5px 11px 10px !important;
+	border-radius: 0px !important;
+	border-width : 0px 0px 2px 0px !important;
+	border-style: solid !important;
+	border-color: #f3f3f3 !important;
+}
+
+.xn-panel{
+	background-color: $lightColor !important;
+	margin-bottom: 12px !important;
+	padding: 0px 10px 12px 10px !important;
+	border-width: 0px !important;
+	@include border-radius(0px)
+}
+
+.xn-panel .x-panel-header-text-container{
+	padding-left: 20px !important;
+}
+/*
+.xn-panel .x-panel-header-default{
+	border-style: solid !important;
+	border-width: 0px 0px 1px 0px !important;
+	border-color: #d0d0d0 !important;
+}*/
+
+.x-panel-header-text-default-framed {
+	font-size: $fontSize16 !important;
+	color: $fontColor !important;
+	font-weight: normal !important;
+	text-transform: uppercase !important;
+}
+
+.ux-header-width .x-panel-header-default{
+	width: 100% !important;
+	border: none !important;
+	left: 0px !important;
+}
+
+.ux-header-width .x-panel-header-text-container{
+	padding: 0px !important;
+}
+.ux-toolbar-background.ux_toolbar.x-toolbar{
+	padding: 12px 0px !important;
+	background: #f3f3f3 !important;
+}
+
+.ux-toolbar-background .xn-btn{
+	margin-right: 10px !important;
+}
+
+.gradiant_back .x-panel-body-default.x-panel-body{
+	background: $lightColor !important;
+}
+
+.ux_paddingtb.x-panel{
+	background: $lightColor !important;
+	border-top: 2px solid #f3f3f3 !important;
+}
+
+.x-portal .x-portal-column {
+	padding: 12px 0px 12px 0px !important;
+	background: #f3f3f3 !important;
+}
+
+.x-portal .x-column{
+	float: none !important;
+}
+
+.ux_panel-background .x-panel-body{
+	background: #f3f3f3 !important;
+}
+
+.ux_panel-transparent-background .x-panel-body{
+	background: $lightColor !important;
+}
+
+.ux-header-width .x-panel-header-default{
+	border-bottom: 2px solid #f3f3f3 !important;
+}
+
+.x-portal-body {
+    background : #f3f3f3 !important;
+}
+
+/*overrinding ext-uscash class for AccountSummaryView.js*/
+.x-custom-header-font{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	font-size: $fontSize16 !important;
+	font-weight: normal !important;
+	color: $fontColor !important;
+	text-transform: uppercase;
+}
+.xn-ribbon .icon_expand_summ{
+	background-image: none !important;
+}
+
+.xn-ribbon .icon_expand_summ:before {
+	content: "\f0da" !important;
+	color: $fontColor !important;
+	@include glyph($fontSize14)
+}
+.xn-ribbon .icon_expand_summ{
+	content: "\f0da" !important;
+	color: $fontColor !important;
+	@include glyph($fontSize14)
+}
+
+.xn-ribbon .icon_collapse_summ{
+	background-image: none !important;
+}
+
+.xn-ribbon .icon_collapse_summ:before{
+	content: "\f0d7" !important;
+	color: $fontColor !important;
+	@include glyph($fontSize14)
+}
+.xn-ribbon .icon_collapse_summ{
+	content: "\f0d7" !important;
+	color: $fontColor !important;
+	@include glyph($fontSize14)
+}
+
+.x-form-itemselector-top, .x-form-itemselector-up, .x-form-itemselector-add, .x-form-itemselector-remove, .x-form-itemselector-down, .x-form-itemselector-bottom{
+	background: none !important;
+}
+.x-form-itemselector-top:before{
+	content: "\f102" !important;
+	font-weight: bold;
+	@include glyph($fontSize14)
+}
+.x-form-itemselector-top{
+	content: "\f102" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize14)
+}
+
+.x-form-itemselector-up:before{
+	content: "\f106" !important;
+	font-weight: bold;
+	@include glyph($fontSize14)
+}
+.x-form-itemselector-up{
+	content: "\f106" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize14)
+}
+
+.x-form-itemselector-add:before{
+	content: "\f105" !important;
+	font-weight: bold;
+	@include glyph($fontSize14)
+}
+.x-form-itemselector-add{
+	content: "\f105" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize14)
+}
+
+.x-form-itemselector-remove:before{
+	content: "\f104" !important;
+	font-weight: bold;
+	@include glyph($fontSize14)
+}
+.x-form-itemselector-remove{
+	content: "\f104" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize14)
+}
+
+.x-form-itemselector-down:before{
+	content: "\f107" !important;
+	font-weight: bold;
+	@include glyph($fontSize14)
+}
+.x-form-itemselector-down{
+	content: "\f107" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize14)
+}
+
+.x-form-itemselector-bottom:before{
+	content: "\f103" !important;
+	font-weight: bold;
+	@include glyph($fontSize14)
+}
+.x-form-itemselector-bottom{
+	content: "\f103" !important;
+	font-weight: bold;
+	padding-left: 4px;
+	@include glyph($fontSize14)
+}
+
+.x-toolbar .x-toolbar-item:first-child {
+	margin: 0px 6px 0px 0px !important;
+	font-size: $fontSize12 !important;
+}
+
+.x-body {
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	}
+.x-panel-header-text-default {
+	color: $fontColor !important;
+	@include fontSizeImportant(6);
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	line-height: 17px !important;
+	text-transform: uppercase !important;
+}
+/*For Filter By Panel*/
+.xn-ribbon .x-panel-header-default {
+	padding: 12px 5px 11px 10px;
+	background: $lightColor !important;
+	color: $primaryColor !important;
+	font-size:$fontSize14 !important;
+	border-width: 0px !important;
+}
+
+/*For Filter By Panel*/
+.xn-ribbon .x-panel-header-text-container {
+	padding-left:20px !important;
+}
+
+/*For Grid Header*/
+.xn-ribbon.ux_no-padding .x-panel-header-text-container{
+	padding:0px !important;
+}
+
+.ux_font-size14 {
+	@include fontSizeImportant(4);
+	font-weight:bold !important;
+	font-family:$fontFamily !important;
+}
+
+/*For Cerate New Filter*/
+.xn-small-button .x-btn-inner {
+	font-size:$fontSize14 !important;
+}
+
+/*For Date*/
+.xn-toolbar-small .x-toolbar-item {
+	@include fontSizeImportant(4);
+	font-weight: normal !important;
+}
+
+/*For remaining elements in Filter By Panel*/
+.xn-toolbar-small .x-toolbar-item .x-btn-inner {
+	@include fontSizeImportant(4);
+	text-decoration: none;
+}
+/*For Payment Pipeline Border*/
+.xn-panel .x-panel-header-default {
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	/*background: none repeat scroll 0 0 white !important;
+	border: 1px solid #D0D0D0 !important;*/
+	color:$fontColor !important;
+	padding: 12px 5px 11px 10px;
+	/*margin : 4px !important;*/
+}
+/*To Hide an Image*/
+.ux_hide-image {
+	display:none !important;
+}
+
+.xn-filter-toolbar .ux_margint {
+	padding-top : 0px !important;
+	padding-bottom : 0px !important;
+	margin-top: 3px !important;
+}
+.x-window-header-body-horizontal {
+	background-color: $gridHeaderOverColor;
+	font-size: $fontSize16;
+	font-weight: 100;
+	padding: 0px !important;/*5px 0px 5px 10px !important;*/
+	border-radius: 0px !important;
+	border: 0px !important;
+}
+.ux_window-position.x-window-default{ top: 30px !important; }
+.x-window-default {
+	border-color : $lightColor !important;
+	border-radius: 0px !important;
+	padding : 0px !important;
+	border : 0px !important;
+}
+
+.x-window-header-default-top {
+	padding: 0px !important;
+	font-size: $fontSize16 !important;
+	font-weight: 100;
+	font-family : $fontFamily !important;
+	color: $lightColor !important;
+	border : 0px !important;
+}
+
+.x-window-header-default-top {
+    padding: 12px !important;/*0.4em 0.5em 0.4em 1em !important;*/
+    position: relative;
+    background-color: $gridHeaderOverColor !important;
+}
+
+.ux_font-size16 {
+	@include fontSizeImportant(6);
+	font-weight : bold !important;
+	font-family : $fontFamily !important;
+}
+
+.xn-group-view .ux_font-size16-normal {
+	@include fontSizeImportant(6);
+	font-family : $fontFamily !important;
+}
+
+.ux_font-size16-normal {
+	@include fontSizeImportant(6);
+	font-family : $fontFamily !important;
+	font-weight: normal !important;
+}
+
+.ux_font-size16.x-toolbar-item  {
+	@include fontSizeImportant(6);
+	font-weight : bold !important;
+	font-family : $fontFamily !important;
+}
+.ux_font-color-black {
+	color:black !important;
+}
+.ux_background-color-white {
+	background-color : white !important;
+}
+.ux_background-color-white.xn-panel {
+	background-color : white !important;
+	padding : 0px !important;
+	width : 100% !important;
+}
+
+.ux_new-payment .xn-panel{
+	padding : 0px !important;
+	width : 100% !important;
+}
+.ux_toolbar.x-toolbar-default {
+	top : 33px !important;
+	/*padding : 35px 0px 10px 0px !important;*/
+}
+.ux_font-size14-normal {
+	@include fontSizeImportant(4);
+	font-family : $fontFamily !important;
+	font-weight: normal !important;
+}
+.ux_radio-button .x-form-checkbox{
+	background: url('resources/images/radio-uncheck.png') no-repeat !important;
+	background-position: center !important;
+}
+.ux_radio-button.x-form-cb-checked .x-form-checkbox {
+	background: url('resources/images/radio-checked.png') no-repeat !important;
+	background-position: center !important;
+}
+
+.xn-form-field, .xn-form-text {
+	padding-left: 10px !important;
+}
+
+.panel-seperator {
+	border-right-width: 0px !important;
+}
+.ux_padding2 {
+	margin-bottom : 6px !important;
+	background: #f6f6f6 !important;
+}
+
+.ux_padding2 .x-form-cb-label {
+	/*padding : 2px !important;*/
+	padding : 4px 0px 4px 0px !important;
+	width: 85% !important;
+	cursor: pointer;
+}
+.ux_padding2 .x-form-cb {
+	/*margin-top : 7px !important;*/
+	background-image: none !important;
+	/*margin-top : 11px !important;*/
+}
+
+.selected-cb-background {
+	height : 30px !important;
+	/*background: #ddd !important;*/
+	background: $activeTab !important;
+}
+.selected-cb-background :after {
+	border-color: $activeTab !important;
+	border-top: 15px solid transparent !important;
+	border-bottom: 15px solid transparent !important;
+}
+
+.ux_margin2 {
+	margin-bottom : 6px !important;
+	/*background: #f6f6f6 !important;*/
+}
+.ux_margin2 .x-form-checkbox{
+	background-image : none !important;
+}
+.ux_margin2 .x-form-cb-label{
+	padding : 4px 0px 4px 0px !important;
+	/*font-size: $fontSize14 !important;*/
+	width: 85% !important;
+	cursor: pointer;
+}
+.ux_unselected {
+	/*background: #f6f6f6 !important;*/
+	background: $inactiveTab !important;
+}
+.selected-cb-background .x-form-cb-label {
+	font-weight : bold !important;
+	color: $lightColor;
+	cursor: pointer;
+}
+.ux_file-details-panel .x-panel-header-default{
+	width : 100% !important;
+	left : 0px !important;
+}
+.ux_background-color-f6f6f6 {
+	background-color: #f6f6f6 !important;
+}
+.ux_autoCmplete-field .xn-suggestion-box {
+	width : 165px !important;
+}
+.gradiant_back .x-tool-after-title {
+	background : none !important;
+	left: 0px !important;
+}
+.gradiant_back .x-tool-after-title:before {
+	content: "\f057" !important;
+	color: $lightColor !important;
+	@include glyph($fontSize14)
+}
+.gradiant_back .x-tool-img {
+	background : none !important;
+}
+.ux_toolbar.x-toolbar {
+	padding : 0px !important;
+}
+.ux_payment-report {
+	color : red !important;
+	background : none !important;
+	@include fontSizeImportant(4);
+}
+.ux_background-color-white .gradiant_back .x-panel-body-default {
+ background-color : $lightColor !important;
+}
+.ux_dropdown .xn-form-trigger, .xn-grid-form-trigger {
+	padding-left : 5px !important;
+}
+.ux_width17.xn-form-trigger {
+	width : 17px !important;
+}
+.ux_border-bottom .x-panel-header-default {
+	border-bottom: 2px solid #f3f3f3 !important;
+}
+.ux_padding-left0 .x-panel-header-text-default{
+	padding-left: 0px !important;
+}
+.ux_paddingb .x-form-item-label {
+	padding-bottom: 6px !important;
+	margin-top: 0px;
+	font-weight: bold !important;
+}
+.ux_heighlight.x-box-item{
+background : none !important;font-weight : bold !important;color : #135e82 !important;
+}
+.xn-ribbon .x-panel-header {
+    background: $lightColor !important;
+	padding: 12px 5px 11px 10px;
+}
+.xn-ribbon .x-panel .x-panel-header-default-framed-top
+{
+	border-bottom-width: 0px!important;
+}
+.xn-ribbon.x-panel-default-framed{
+	border-radius:0px;
+	border-width:0px;	
+}
+select:focus { width:auto ;
+position:relative ;
+}
+.xn-group-view .ux_smallmargin-right{ margin-right: 4px !important; left:2px !important;}
+
+.ux_text-elipsis{ text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ux_nopanelpad.x-panel-default-framed{ padding: 0px !important; }
+.ux_popup .x-form-display-field {
+	font-size: $fontSize14 !important;
+}
+.radioSmall {
+	margin: 0px;
+	vertical-align: text-bottom;
+	height: $fontSize14;
+	width: $fontSize14;
+	-webkit-transform: scale(0.8,0.8);
+	-moz-transform: scale(0.8,0.8);
+	-o-transform: scale(0.8,0.8);
+}
+
+.ui-menu{ width: 200px; }
+
+.gradiant_back .x-tool-after-title {
+	background : none !important;
+	left: 0px !important;
+}
+.gradiant_back .x-tool-after-title:before {
+	content: "\f057" !important;
+	color: $lightColor !important;
+	@include glyph($fontSize14)
+}
+.gradiant_back .x-tool-img {
+	background : none !important;
+}
+.gradiant_back .x-tool:before{
+	content: "\f0d7" !important;
+	color: $fontColor !important;
+	@include glyph($fontSize14)
+}
+
+.gradiant_back .x-panel-header-collapsed-top .x-tool:before{
+	content: "\f0da" !important;
+}
+
+/*.xn-ribbon .x-tool{
+	padding-top: 2px !important;
+}*/
+
+/*.xn-portlet .x-tool{
+	 display :none !important;
+}*/
+
+.xn-ribbon .x-tool-img{ background-image: none !important; }
+.xn-ribbon .x-tool-img.x-tool-refresh{ font-family: fontawesome !important; content: "\f021" !important; font-size: $fontSize13 !important; }
+.xn-ribbon .x-tool-img.x-tool-refresh:after{ font-family: fontawesome !important; content: "\f021" !important; font-size: $fontSize13 !important; }
+
+.xn-ribbon .x-tool-img.x-tool-close{ font-family: fontawesome !important; content: "\f00d" !important; font-size: $fontSize15 !important; }
+.xn-ribbon .x-tool-img.x-tool-close:after{ font-family: fontawesome !important; content: "\f00d" !important; font-size: $fontSize15 !important; }
+
+.xn-ribbon .x-tool-img.x-tool-gear{ font-family: fontawesome !important; content: "\f0c9" !important; font-size: $fontSize14 !important; }
+.xn-ribbon .x-tool-img.x-tool-gear:after{ font-family: fontawesome !important; content: "\f0c9" !important; font-size: $fontSize14 !important; }
+
+/*.x-window-default .x-tool-img{ background-image: none !important; }
+.x-window-default .x-tool-img.x-tool-close{ font-family: fontawesome !important; content: "\f057" !important; font-size: $fontSize15 !important; color: $lightColor !important; background: none !important; }
+.x-window-default .x-tool-img.x-tool-close:after{ font-family: fontawesome !important; content: "\f057" !important; font-size: $fontSize15 !important; color: $lightColor !important; }*/
+
+.xn-ribbon.ux_panel-transparent-background .x-tool{ left: 0px !important; }
+.xn-ribbon.ux_panel-transparent-background .x-panel-header-collapsed-top .x-tool:before{ content: "\f0da" !important; }  
+.xn-ribbon.ux_panel-transparent-background .x-tool:before {
+  content: "\f0d7" !important;
+  color: #444 !important;
+  font-family: fontawesome !important;
+  font-size: 14px !important;
+}
+
+
+.x-window-default .x-tool-after-title{
+	left: auto !important;
+	float: right !important;
+	right: 1px !important;
+	top: -1px !important;
+	width: 24px !important;
+	height: 24px !important;
+}
+
+.x-window .gradiant_back{
+	background-color: $lightColor !important;
+	border: 0px !important;
+}
+
+.x-window-default .x-tool-close{
+	background-image: url("resources/images/T7/iconsmore.png") !important;
+	width: 24px !important;
+	background-color: transparent !important;
+	height: 24px !important;
+	background-position: -94px -136px !important;
+	top: 40%;
+}
+
+/*.x-window-default .x-tool.x-tool-after-title{ font-family: fontawesome !important; content: "\f057" !important; font-size: $fontSize15 !important; color: $lightColor !important; background: none !important; }
+.x-window-default .x-tool.x-tool-after-title:before{ font-family: fontawesome !important; content: "\f057" !important; font-size: $fontSize15 !important; color: $lightColor !important; }*/
+
+.jspSeeklink {
+  background-image: url("resources/images/T7/icon_search.gif");
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;  
+  display: inline-block; 
+}
+
+.fa {
+	font-family: fontawesome !important;
+}

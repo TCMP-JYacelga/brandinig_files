@@ -1,0 +1,24 @@
+{  
+   "d":{  
+      "groupTypes":[  
+         {  
+            "groupTypeDesc":"Status",
+            "groupTypeCode":"INPAYSO_OPT_STATUS",
+            "groups":[  
+               {  
+                  "groupId":"STATUS",
+                  "groupCode":"STATUS_PENDING",
+                  "groupDescription":"Pending Approval",
+                  "groupQuery":"((stdOdrIsSubmitted eq 'Y' and (stdOdrRequestState eq '0' or stdOdrRequestState eq '1')) or (stdOdrRequestState eq '4' or stdOdrRequestState eq '5'))"
+               },
+               {  
+                  "groupId":"STATUS",
+                  "groupCode":"STATUS_ACTIVE",
+                  "groupDescription":"Active",
+                  "groupQuery":"(stdOdrValidFlag eq 'Y' and stdOdrRequestState eq '3')"
+               }
+            ]
+         }
+      ]
+   }
+}

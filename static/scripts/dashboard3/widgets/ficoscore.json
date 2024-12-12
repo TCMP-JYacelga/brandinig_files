@@ -1,0 +1,42 @@
+{
+    "maxScore": 850,
+    "minScore": 300,
+    "records": [
+        {
+            "agencyId": 1,
+            "agencyName": "Equifax",
+            "date": "2020-10-16",
+            "score": "778"
+        },
+        {
+            "agencyId": 2,
+            "agencyName": "TransUnion",
+            "date": "2020-10-16",
+            "score": "793"
+        },
+        {
+            "agencyId": 3,
+            "agencyName": "Experian",
+            "date": "2020-10-16",
+            "score": "782"
+        },
+        {
+            "agencyId": 1,
+            "agencyName": "Equifax",
+            "date": "2020-9-16",
+            "score": "775"
+        },
+        {
+            "agencyId": 2,
+            "agencyName": "TransUnion",
+            "date": "2020-9-16",
+            "score": "796"
+        },
+        {
+            "agencyId": 3,
+            "agencyName": "Experian",
+            "date": "2020-9-16",
+            "score": "778"
+        }
+    ]
+}

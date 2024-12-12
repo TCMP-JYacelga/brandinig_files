@@ -1,0 +1,56 @@
+{
+	"d" :
+		{
+		"groupTypes" :
+					 [{
+					 	"groupTypeDesc" : "Status",
+						"groupTypeCode" : "STATUS",
+					 	"groups" :
+					 			 [{
+					 				"groupCode" : "STATUS_READ",
+									"groupDescription" : "Read",
+									"groupId" : "status",
+									"groupQuery" : " messageStatus eq 'Y' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "STATUS_UNREAD",
+									"groupDescription" : "Unread",
+									"groupId" : "status",
+									"groupQuery" :  " messageStatus eq 'Y' "
+					 			  }
+					 			 ]
+					 },
+					 {
+					 	"groupTypeDesc" : "Destination",
+						"groupTypeCode" : "DESTINATION",
+					 	"groups" :
+					 			 [{
+					 				"groupCode" : "STATUS_GD",
+									"groupDescription" : "General Department",
+									"groupId" : "dest",
+									"groupQuery" : " formDestination eq '1001' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "STATUS_CD",
+									"groupDescription" : "Check Department",
+									"groupId" : "dest",
+									"groupQuery" :  " formDestination eq '1002' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "STATUS_ACHD",
+									"groupDescription" : "ACH Department",
+									"groupId" : "dest",
+									"groupQuery" :  "formDestination eq '1003' "
+					 			  },
+					 			  {
+					 			  	"groupCode" : "STATUS_TOKEN",
+									"groupDescription" : "Token Department",
+									"groupId" : "dest",
+									"groupQuery" :  " formDestination eq '1005' "
+					 			  }
+					 			 ]
+					 
+					 }
+					 ]
+		}
+}

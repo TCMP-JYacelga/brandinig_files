@@ -1,0 +1,56 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.recvexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.recvcollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "05"}}
+	
+		{{>prevTemplate assetid="05"}}
+		
+		<!--Collection Packages starts here -->
+	
+		{{>packageTemplate assetid="05"}}
+		
+	<!--Collection Packages starts here -->
+
+		<!--Account Section starts here -->
+		<div class="row">
+			<div class="col-sm-12">
+				{{>accountTemplate assetid="05"}}
+			</div>
+		</div>
+		<!--Account Section end here -->
+		
+
+		<!--Alerts and Reports Privileges starts here -->
+		<div class="row">
+	
+			<!-- Start of Alerts -->
+			<div class="col-sm-6">
+				{{>alertTemplate assetid="05"}}
+			</div>
+			<!-- End of Alerts -->
+	
+			<!-- Start of Reports -->
+			<div class="col-sm-6">
+				{{>reportTemplate assetid="05"}}
+			</div>
+			<!-- End of Reports -->
+		</div>
+		<!-- Alerts and Reports Privileges ends here -->
+	<div class="row">
+
+		<!-- Start of Widgets -->
+		
+		<!-- End of Widgets -->
+	</div>	
+	
+		{{/selectAsset}} 
+	{{/each}}
+</div>

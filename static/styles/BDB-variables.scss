@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800);
+
+$fontSize14 : 14px;
+$fontSize13 : 13px;
+$fontSize12 : 12px;
+$fontFamily : "Open Sans", calibri;
+$fontWeight-Regular: 400;
+$fontWeight-SemiBold: 600;
+
+/*Used for Button Background, Horizontal Menu Bar,SmartGrid Header,Linktabs*/
+$primaryColor : #000; 
+
+$secondaryColor: #9ea2ab;
+
+$panelBackgroundColor: #f5f5f5;
+
+/*Used for background color of Active tab*/
+$activeTab : #000; 
+
+/*Used for background color of inactive tab*/
+$inactiveTab : #ccc; 
+
+/*Font color*/
+$lightColor: #fff;
+$darkColor: #000;
+
+/*Hover Font Color*/
+
+$hoverColor: #dddbdc;
+
+/*Link color*/
+
+$linkColor: #000;
+
+
+$fieldsetBorderColor: #cfcfcf;

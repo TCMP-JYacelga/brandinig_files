@@ -1,0 +1,19 @@
+{
+	"d" :
+		{
+		"groupTypes" :
+					 [{
+					 	"groupTypeDesc" : "Type",
+						"groupTypeCode" : "TYPE",
+					 	"groups" :
+					 			 [{
+					 				"groupCode" : "TYPE_URGENT",
+									"groupDescription" : " URGENT",
+									"groupId" : "type",
+									"groupQuery" : " isUrgent eq 'Y' "
+					 			  }
+					 			  
+					 			 ]
+					 }]
+		}
+}

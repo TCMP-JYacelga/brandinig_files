@@ -1,0 +1,250 @@
+#sidepanel, #sidemenu { float: right; padding: 0 4px 0 8px; min-height: 640px; }
+#sidepanel h4 { padding: 0 0 2px 2px; margin: 0 0 2px 0; }
+#sidemenu h4 { padding: 0 0 2px 2px; margin: 0 0 2px 0; }
+#sidemenu > .innertube { min-height: inherit; }
+
+#sideMenuResizer { top: 166px; }
+
+.jqaccordion div dl dt { padding: 2px 0 2px 6px; margin: 0; }
+h3.acord_header { border: 1px solid #E5E5E5; height: 26px; margin: 0 0 2px 0; }
+h3.acord_header a { padding: 4px 0 0 28px; }
+
+#sidemenu, #sidepanel { background: transparent top left repeat-y scroll url('resources/images/bg_sidemenu.png'); }
+#sidepanel h4 { color: #FF6600; border-bottom: 1px solid #BFBFBF; }
+#sidemenu h4 { color: #FF6600; border-bottom: 1px solid #BFBFBF; }
+
+/* acordion */
+h3.acord_header { background: transparent 0 0 repeat-x scroll url('resources/images/bg_user_module_header.png');  }
+h3.acord_header a { color: #FF6600; }
+h3.accord_open a { background: transparent 3px 0 no-repeat url('resources/images/accordion.png'); }
+h3.accord_close a { background: transparent 3px -29px no-repeat url('resources/images/accordion.png'); }
+div.acord_content dl dt { color: #666; }
+div.acord_content dl dt a { color: #0066cc; }
+div.acord_content dl dt a:hover {color:	#003366; }
+
+/* borders */
+.rtBorder { border-width: 0 1px 0 0; border-style: none solid none none; border-color: #d9b35c; }
+.lightgrey { color: #ececec; }
+hr.lightgrey { background-color: #ececec; }
+
+/* misc styles */
+/* misc styles */
+/*.acord_grid_head { color: #cc0000; border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-color: #aaaaaa #aaaaaa transparent #aaaaaa; }
+.acord_open { background: #E0E0E0 url('resources/images/minus.gif') center left no-repeat; }
+.acord_close { background: #E0E0E0 url('resources/images/plus.gif') center left no-repeat; border-bottom: 1px solid #aaa !important; }*/
+.acord_grid_head{
+background: $lightColor !important;
+color: $fontColor !important;
+border-bottom: 2px solid #f3f3f3 !important;
+text-transform: uppercase;
+position: relative;
+height: auto;
+font-weight: normal !important;
+font-family: $fontFamily;
+font-size:$fontSize16;
+vertical-align: middle;
+line-height: 28px;
+padding:6px 5px 6px 10px ;
+}
+.acord_close:before {
+	float:left;
+	font-family: fontawesome;
+	content: "\f0da" !important;
+	font-size: $fontSize14 !important;
+	color: $fontColor !important;
+	padding-right:16px !important;
+}
+.acord_open:before{
+	float:left;
+	font-family: fontawesome;
+	content: "\f0d7" !important;
+	font-size: $fontSize14 !important;
+	color: $fontColor !important;
+	padding-right:16px !important;
+}
+.headerBand { background-color: #E0E0E0; color: #cc0000; border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-color: #aaaaaa #aaaaaa transparent #aaaaaa; }
+.stripedback { background: transparent url('resources/images/stripes.gif') top left repeat; }
+
+.actionmenutitle{
+	font-weight :700;
+	font-size : 11px;
+	color : #ff6600;
+	font-family: tahoma,arial,verdana,sans-serif;
+	font-style: normal;
+	letter-spacing: normal;
+	text-transform: uppercase;
+	margin: 2px;
+}
+
+.rightMenu{
+	width: 90%;
+	margin-bottom: 12px !important;
+}
+.rightMenuBody > ul > li { padding: 1.5px !important; text-overflow : ellipsis;}
+
+.expandIcon{
+	width : 18px !important;
+	height: 18px !important;
+	margin: 2px 6px 0 6px;
+	float:left;
+	background: url("resources/images/icon_expand.png") no-repeat !important;
+}
+
+.collapseIcon{
+	width : 18px !important;
+	height: 18px !important;
+	margin: 2px 6px 0 6px;
+	float:left;
+	background: url("resources/images/icon_collapse.png") no-repeat !important;
+}
+
+.rightMenu {
+	width: 95% !important;
+}
+
+#menuHiddenLeftMenu{
+	padding-right: 16px !important;
+}
+
+.sidemenu_right_icon{
+	padding-right: 2px !important;
+}
+
+#actionlistform .smartnavHeader{
+ border: 0px !important;
+ background: $lightColor !important;
+}
+
+#actionlistform  .rightMenuBody{
+ background: $lightColor !important;
+ border-top: 2px solid #f6f6f6 !important;
+}
+
+#quickpaylistform .smartnavHeader{
+ border: 0px !important;
+ background: $lightColor !important;
+}
+
+#quickpaylistform  .rightMenuBody{
+ background: $lightColor !important;
+ border-top: 2px solid #f6f6f6 !important;
+}
+
+#favReportList .smartnavHeader{
+ border: 0px !important;
+ background: $lightColor !important;
+}
+
+#favReportList  .rightMenuBody{
+ background: $lightColor !important;
+ border-top: 2px solid #f6f6f6 !important;
+}
+
+#messageFormsRightMenuForm .smartnavHeader{
+ border: 0px !important;
+ background: $lightColor !important;
+}
+
+#messageFormsRightMenuForm  .rightMenuBody{
+ background: $lightColor !important;
+ border-top: 2px solid #f6f6f6 !important;
+}
+
+.actionmenutitle{
+ color: $fontColor !important;
+ font-weight: normal !important;
+ font-size: $fontSize16 !important;
+ font-family: $fontFamily,arial,verdana,sans-serif !important;
+}
+
+.rightMenuBody{
+ padding: 10px 0px 12px 5px !important;
+}
+
+.custom-margin{
+ vertical-align: middle;
+ display: inline-block;
+ margin: 3px 10px;
+ color:$fontColor !important;
+ font-size: $fontSize18 !important;
+}
+
+.smartnavHeader .collapseIcon{
+ background: none !important;
+ margin: 3px 6px 0 6px !important;
+}
+
+.collapseIcon:before{
+ content: "\f0da" !important;
+ margin: 2px 6px 0 6px;
+ float: left;
+ color:$fontColor !important;
+ background: none !important;
+ @include glyph($fontSize14)
+}
+
+.smartnavHeader .expandIcon{
+ background: none !important;
+ margin: 3px 6px 0 6px !important;
+}
+
+.expandIcon:before{
+ content: "\f0d7" !important;
+ margin: 2px 6px 0 6px;
+ float: left;
+ color:$fontColor !important;
+ background: none !important;
+ @include glyph($fontSize14)
+}
+
+.actionlink{
+	line-height: 24px !important;
+}
+
+.sidemenu_left_icon {
+    background-color: transparent;
+    background-image: url("resources/images/arrow-left.png") !important;
+    background-repeat: no-repeat;
+	position: absolute !important;
+	right: 41px !important;
+	height: 20px !important;
+}
+
+.sidemenu_right_icon {
+    background-color: transparent;
+    background-image: url("resources/images/arrow-right.png") !important;
+    background-repeat: no-repeat;
+	height: 20px !important;
+	margin-top: 26px !important;
+}
+
+#menuHiddenRightMenu { 
+	background: url("resources/images/bg_column_separator.png") no-repeat scroll left top transparent !important; 
+	position: relative;
+    min-width: 2px; 
+	width: 2px; 
+	/*margin-top: 2%;*/ 
+	height: 700px !important;
+	top: -4px !important;
+	vertical-align:top; 
+	border-width: 0px; 
+	float:right;
+}
+
+
+#quickpaylistform {
+    margin-top: 0px !important;
+    background: $sidePanelQuickPayments !important;
+}
+
+#favReportList {
+    margin-top: 0px !important;
+    background: $sidePanelReports !important;
+}
+
+#messageFormsRightMenuForm {
+    margin-top: 0px !important;
+    background: $sidePanelMessages !important;
+}
+
+.ft-layout-sidebar li{ background: transparent !important; }

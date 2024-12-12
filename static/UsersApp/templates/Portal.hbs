@@ -1,0 +1,66 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.clientUser.expand" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.clientUser.collapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+ {{#each assets}}
+	{{#selectAsset assetId "19"}}
+
+	<div class="row">
+		{{#each map as |servicesObj parentIndex|}}
+			{{#ifCond @key '==' 'IBILLPAY'}}
+				{{#if servicesObj}}
+					<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+						<div class="form-group">
+							<label for="billPayId" class="frmLabel required"> <span>
+						{{getLabel "lbl.clientUser.portal.billPayId" "Bill Pay ID"}} </span>
+							</label> <input id="billPayId" name="billPayId" class="form-control" tabindex="1"
+								type="text" maxlength="20" value={{../billPayID}}>
+						</div>
+					</div>
+				{{/if}}
+			{{/ifCond}}
+			{{#ifCond @key '==' 'RDC'}}
+				{{#if servicesObj}}
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="remoteDepositeTd" class="frmLabel required"> <span>
+						{{getLabel "lbl.clientUser.portal.remoteDepositeTd" "Remote Deposit ID"}}</span>
+							</label> <input id="remoteDepositeTd" name="remoteDepositeTd" tabindex="1"
+						class="form-control" type="text" maxlength="20" value={{../remoteDepositID}}>
+						</div>
+					</div>
+				{{/if}}
+			{{/ifCond}}
+			{{#ifCond @key '==' 'FPOR-000001'}}
+				{{#if servicesObj}}
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="netCaptureAdmUsrId" class="frmLabel required"> <span>
+									NetCapture Admin User ID</span>
+							</label> <input id="netCaptureAdmUsrId" name="netCaptureAdmUsrId" tabindex="1"
+						class="form-control" type="text" maxlength="20" value={{../netCaptureAdmUsrId}}>
+						</div>
+					</div>
+				{{/if}}
+			{{/ifCond}}
+		{{/each}}
+        <!--Account Section starts here -->
+        <div class="row">
+            <div class="col-sm-12">
+                {{>accountTemplate assetid="19"}}
+            </div>
+        </div>
+        <!--Account Section end here -->	
+	</div>
+
+	{{/selectAsset}} {{/each}}
+
+
+
+</div>

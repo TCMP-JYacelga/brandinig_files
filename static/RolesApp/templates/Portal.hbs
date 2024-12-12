@@ -1,0 +1,25 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.portalexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.portalcollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "19"}}
+	
+		{{>prevTemplate assetid="19"}}
+
+		<!--Account Section starts here -->
+		<div class="row">
+			<div class="col-sm-12">
+				{{>accountTemplate assetid="19"}}
+			</div>
+		</div>
+		<!--Account Section end here -->
+		{{/selectAsset}} 
+	{{/each}}
+</div>

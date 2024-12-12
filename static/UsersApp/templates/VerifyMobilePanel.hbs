@@ -1,0 +1,56 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="mobileCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">Mobile</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="mobileAssetBody" class="panel-body">
+			<div id="mobileFunctionTableDiv">
+				{{#each assets}} 
+					{{#selectAsset assetId "20"}} 
+					
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group">
+									<label class="frmLabel"> Remote Deposit Capture</label> 
+									<span class="pull-right catseparator">:</span>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div class="form-group">
+									{{#if rdcFlag}}
+										<span class="{{rdcFlagClass}}">Yes</span>
+									{{else}}
+										<span class="{{rdcFlagClass}}">No</span>
+									{{/if}}
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group">
+									<label class="frmLabel"> Remote Deposit Capture User Key
+									</label> 
+									<span class="pull-right catseparator">:</span>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div class="form-group">
+									<span class="{{rdcUserKeyClass}}" title={{rdcUserKey}}>{{rdcUserKey}}</span>
+								</div>
+							</div>
+						</div>
+			{{/selectAsset}}
+			{{/each}}
+			</div>
+			
+		</div>
+	</div>
+</div>
+			

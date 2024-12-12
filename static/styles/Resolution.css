@@ -1,0 +1,40 @@
+
+.col_1_1 .w40, .col_1_1 .w27{ width: 70% !important; min-width: 70% !important; }
+.col_1_3 .w14_8,.col_2_3 .w14_8,.col_3_3 .w14_8{ width: 80% !important; min-width: inherit !important; max-width: 72% !important; }
+.col_2-3_3 .w14_8{ width: 40% !important; min-width: inherit !important; max-width: 36% !important; }
+.col_1_3 .w15_7,.col_2_3 .w15_7,.col_3_3 .w15_7{ width: 85% !important; min-width: inherit !important; max-width: 76% !important;}
+
+td .w11{ width: 45% !important; min-width: inherit !important; max-width: 58% !important; }
+td input.w14_8{ width: 80% !important; min-width: inherit !important; max-width: 72% !important; }
+td textarea.w14_8{ width: 80% !important; min-width: inherit !important; max-width: 72% !important; }
+td select.w15_7,td input[type='text'].w15_7,td textarea.w15_7 { width: 85% !important; min-width: inherit !important; max-width: 76% !important;}
+
+.col_1_4 .w14_8,.col_2_4 .w14_8,.col_3_4 .w14_8,.col_4_4 .w14_8{ width: 80% !important; min-width: inherit !important; max-width: 72% !important; }
+.col_1_4 .w15_7,.col_2_4 .w15_7,.col_3_4 .w15_7,.col_4_4 .w15_7{ width: 85% !important; min-width: inherit !important; max-width: 76% !important;}
+
+.col_1_3 .w12,.col_2_3 .w12,.col_3_3 .w12{ width: 80% !important; min-width: inherit !important; max-width: 76% !important; }
+
+
+#menubarContainer { width: 86%; }	
+#menu_container .toolbar1{ padding-right: 25px !important; }
+.radioSmall{ vertical-align: middle !important; }
+
+.gridTable select.w10{
+	width: 100% !important;
+	min-width: 50% !important;
+}
+
+.gridTable .w10{
+	width: 88% !important;
+	min-width: 50% !important;
+}
+
+.gridTable .w8{
+	width: 82% !important;
+	min-width: 50% !important;
+}
+
+
+.col_1_4 .w10,.col_2_4 .w10,.col_3_4 .w10,.col_4_4 .w10{ width: 55% !important; min-width: inherit !important; max-width: 60% !important; }
+
+.col_1_4 .w12_8,.col_2_4 .w12_8,.col_3_4 .w12_8,.col_4_4 .w12_8{ width: 60% !important; min-width: inherit !important; max-width: 65% !important; }

@@ -1,0 +1,38 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="supplyChainCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">{{getLabel "lbl.clientUser.module.scf" "Supply Chain"}}</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="supplyChainAssetBody" class="panel-body">
+			{{#each assets}}
+				{{#selectAsset assetId "06"}}
+					{{#if packages}}
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group">
+									<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.scfPackages" "SCF packages"}}
+									</label> <span class="pull-right catseparator">:</span>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div class="form-group">
+									<span> 
+										{{getResourceListExpression packages "packageName" "subsidiaryName"}}
+									 </span>
+								</div>
+							</div>
+						</div>
+					{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+		</div>
+	</div>
+</div>
+			

@@ -1,0 +1,79 @@
+.rightMenuBody {
+	background-color:#E8E8E8 ;
+}
+
+
+/*.smartnavHeader {
+	background: url("../images/smartnav/bg_right_module_header.png") repeat-x !important;
+	border-width: 1px;
+	border-color: #e5e5e5;
+	border-style: solid;
+	height: 27px;
+    padding: 2px 0 0;
+}*/
+.smartnavHeader {
+background-color: #f1f1f1;
+/* border-width: 1px; */
+/* border-color: #e5e5e5; */
+/* border-style: solid; */
+height: 21px;
+padding: 9px 0px 9px 0px;
+border: 1px solid #e5e5e5;
+}
+.actionmenutitle{
+	font-weight :700;
+	font-size: 16px;
+	color : #444444;
+	font-family: calibri,tahoma,arial,verdana,sans-serif;
+	font-style: normal;
+	letter-spacing: normal;
+	text-transform: capitalize;
+	margin: 2px;
+	line-height:24px;
+}
+.expandIcon{
+	width : 18px !important;
+	height: 18px !important;
+	margin: 3px 0px 10px 6px;
+	float:left;
+	background: url("../images/smartnav/icon_expand.png") no-repeat !important;
+}
+.collapseIcon{
+	width : 18px !important;
+	height: 18px !important;
+	margin: 3px 6px 0 6px;
+	float:left;
+	background: url("../images/smartnav/icon_collapse.png") no-repeat !important;
+}
+/*#actionlistform,#quickpaylistform,#favReportList,#messageFormsRightMenuForm{
+margin-bottom: 12px !important;
+}*/
+.rightMenuBody{
+margin: 0 0 0 9px;
+background-color: #f7f7f7;
+padding: 12px 0 12px 0px;
+}
+.ofcontents {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 14px;
+}
+.actionlink {
+color: #0066CC;
+font-size: 14px;
+font-family: calibri,helvetica,arial,sans-serif;
+font-weight: 400;
+vertical-align: baseline;
+margin: 0 0 0 10px;
+text-overflow: ellipsis;
+white-space: nowrap;
+line-height: 20px;
+
+}
+.naFavdata {
+color: #828282;
+font-weight: bold;
+font-family: Calibri,helvetica,arial,sans-serif;
+font-size: 14px;
+}

@@ -1,0 +1,240 @@
+/*Page Header Section */
+#pageHeader { 
+	height: 132px !important; 
+	margin: 0px!important; 
+	border-bottom: 1px solid #e7e7e7;
+}
+#headerTop { 
+	height: 76px !important;
+	padding : 0px 40px !important;
+	/*background-color: $primaryColor !important;*/
+	background: linear-gradient(to bottom, #1b1b1b 20%, #605e5f);
+}
+#menu_container {
+	padding : 0px !important;
+	border-bottom: 1px solid #e1e1e1 !important;
+}
+#menubarContainer { 
+	float: left; 
+	height: 28px !important; 
+	margin:0; 
+	padding:0px 0px 0px 40px; 
+	border-width: 0; 
+	/*background-color: $primaryColor !important;*/
+	  background: linear-gradient(to bottom, #605e5f, #797979);
+}
+.dropline {
+	height:29px !important;
+}
+ul.menubar > li.barover  {
+	background: $lightColor ;
+	padding: 0 0 0 10px;
+	  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+ul.menubar > li.barover > a{
+	color: $primaryColor !important;
+	border-top-right-radius: 10px;
+}
+ul.menubar > li.barover > a {
+	background: $lightColor;
+}
+
+.dropline > ul.dlmenu > li > a:hover{
+	border-bottom: 2px solid $primaryColor !important;
+	color: $primaryColor !important;
+}
+
+ul.menubar > li > a
+{
+font-family: $fontFamily !important;
+ color:$lightColor !important;
+ font-size: $fontSize11 !important;
+ text-transform: uppercase;
+}
+
+ul.menubar > li > a > b{
+	font-weight: $fontWeight-SemiBold !important;
+}
+
+.dropline > ul.dlmenu > li > a{
+color:$primaryColor !important;
+font-family: $fontFamily !important;
+font-size: $fontSize11 !important;
+text-transform: uppercase;
+}
+
+.dropline > ul.dlmenu > li {
+	float:left;
+	padding: 0px !important;
+}
+
+.dropline > ul.dlmenu > li > a {
+	padding: 0px !important;
+}
+
+.dropline .dlmenu li{
+	background-image: url("resources/images/line.gif") !important;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.dropline .dlmenu li:last-child{
+	background-image: none !important;
+}
+
+.dropline .dlmenu li.flyout{
+	background-image: url("resources/images/line.gif") !important;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 10px !important;
+}
+
+.dropline .dlmenu li.flyout:last-child{
+	background-image: none !important;
+}
+
+.dropline > ul.dlmenu > li > a  > b{
+	padding: 0px 20px 0px 20px !important;
+	font-weight: $fontWeight-SemiBold !important;
+}
+
+.dropline > ul.dlmenu {
+padding: 0px !important;
+}
+
+li.flyout > a > b {
+	background: right center no-repeat scroll url('resources/images/flyout-grey.png') !important;
+}
+
+li.flyout > ul > li > a > b
+{
+color:$lightColor !important;
+}
+
+.dropline li.flyout > ul > li{
+	background-image: none !important;
+}
+
+li.flyout > ul{
+background: $secondaryColor !important;
+border:none !important;
+padding: 4px 15px !important;
+}
+
+li.flyout > ul > li > a:hover{
+background:$hoverColor !important;
+color: $primaryColor !important;
+}
+
+.toolbar1 { 
+	height: 19px !important; padding : 5px 40px 4px 1px !important;
+	/*background-color: $primaryColor !important;*/
+	font-family: $fontFamily;
+	font-size: $fontSize13 !important;
+	background: linear-gradient(to bottom, #605e5f, #797979);
+}
+
+.toolbar { height: 24px; align: right; padding : 0 25px 4px 0 !important; background: $lightColor !important;}
+
+.toolbar1 a {
+	height: inherit; 
+	vertical-align: middle; 
+	margin:0px; font-family:
+	$fontFamily,helvetica,arial,sans-serif;
+	color:$lightColor !important;
+	display : inline !important;
+	padding-left: 10px !important;
+}
+.ux_padding-right4 {
+	padding-right : 4px;
+}
+a#homeLink {
+float: left;
+height: 24px;
+font-size: 18px;
+padding-top: 5px;
+padding-right: 10px;
+color: white;
+}
+.ux_alert {
+	color : #c80404 !important;
+	padding-right: 20px;
+}
+div#loginInfo {
+	padding-top : 20px ;
+}
+
+#userInfo div.controls {
+	padding-top : $fontSize14;
+}
+#banklogo {
+	margin-top : 10px;
+}
+#userInfo p {
+	font-size : $fontSize13;
+	color: $lightColor;
+}
+
+.page-heading{
+	font-size: 18px !important;
+	font-family : $fontFamily !important;
+	font-weight: $fontWeight-Regular !important;
+	text-transform: uppercase !important;
+	padding: 0px !important;
+}
+
+#morePageOptionsDialog{ background: $panelBackgroundColor !important; font-size: $fontSize13 !important; padding: 0.5em 0.5em; }
+
+#favClient{ background: $lightColor !important; font-size: $fontSize13 !important; padding: 0.5em 0.5em; }
+#favClient .groupHeader{ font-size: $fontSize13 !important; padding: 0px; }
+#favClient .favlink{ font-size: $fontSize13 !important; }
+#favClient table td{ line-height: 24px; height: auto !important; }
+#favClient table td:hover{ background: #f3f3f3; line-height: 24px; height: auto !important; }
+
+#favMenu { background: $panelBackgroundColor !important; font-size: $fontSize13 !important; padding: 0.5em 0.5em; }
+#favMenu .favitem .favlink{ font-size: $fontSize13 !important; }
+#favMenu table td:hover{ background: !important; line-height: 24px !important; }
+#favMenu table td{ line-height: 24px !important; }
+
+#morePageOptionsDialog div{ height: auto !important; line-height: 24px !important; }
+#morePageOptionsDialog div:hover{ height: auto !important; line-height: 24px !important; background: #f3f3f3; }
+
+.button_underline.x-btn-default-toolbar-small .x-btn-inner{ color: $primaryColor !important; text-decoration: underline; text-transform: none; }
+
+/* navigation & menu bar */
+#navbar { background-image: none; }
+#menubar li a { color: $primaryColor; font-weight: normal; }
+#menubar li a:hover { color: $primaryColor;  }
+#menubar li.on { background: transparent url('resources/images/right_edge.png') top right no-repeat; }
+#menubar li.on a { background: transparent url('resources/images/left_edge.png') top left no-repeat; font-weight: bold; color: $primaryColor; }
+
+/* navigation & menu bar icons */
+.menubar-icon { background-image:url('resources/images/button_icons.png'); background-repeat: no-repeat; }
+
+/* drop line menu */
+.dlddmenu {background: transparent top left repeat-x scroll url('resources/images/menu_bg.png');}
+.dlddmenu > ul > li > a {color:#6B6B6B; background:transparent;}
+.dlddmenu > ul > li > a b {background:transparent;}
+.dlddmenu > ul > li > ul {background:$lightColor;}
+.dlddmenu > ul > li > ul > li {background: transparent right center no-repeat scroll url('resources/images/menu_spacer.gif');}
+.dlddmenu > ul > li > ul > li > a {color:$primaryColor;}
+.dlddmenu > ul > li > ul > li > ul {background:$lightColor url('../themes/cashplus/backgrounds/submenu_pointer.png') no-repeat; border:1px solid #e8e8e8;}
+.dlddmenu > ul > li > ul > li > ul > li > a {color:$primaryColor;}
+.dlddmenu > ul > li > ul > li:hover > a {color:$primaryColor;}
+.dlddmenu > ul > li > ul > li > ul > li > a:hover {background:#ececec; color:$primaryColor;}
+
+.dlddmenu > ul > li:hover {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul > li:hover > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /*background-color: $lightColor; border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+.dlddmenu > ul > li.current {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul > li.current > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /* border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+
+.dlddmenu > ul:hover > li.current {background: transparent top left no-repeat scroll none;}
+.dlddmenu > ul:hover > li.current > a {background: transparent top left no-repeat scroll none;} /*background:transparent;*/
+.dlddmenu > ul:hover > li.current > a b { background:transparent; }
+.dlddmenu > ul:hover > li.current:hover {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul:hover > li.current:hover > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /*background-color: $lightColor; border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+
+.fav_menu_title { background-color: #F3F3F3; font-weight: bold; color: #666666; padding: 6px 2px; }
+.fav_menu_item { min-width: 200px; }
+.fav_menu_item span { color: #0066CC; }

@@ -1,0 +1,26 @@
+<div class="panel panel-default" id="templateGranularPanel">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="templateGranularInfoCaret"
+						class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>Template Granular Privileges</span>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="templateGranularInfoDiv" class="panel-body">
+		<div class="row gridGran">
+					<table class="view-grid">
+						{{#if granularPermission.templates}}
+						
+							{{templateGranularHeader granularPermission}}
+						
+						
+							{{templateGranularBody granularPermission}}
+						{{/if}}
+					</table>
+		</div>
+	</div>
+</div>

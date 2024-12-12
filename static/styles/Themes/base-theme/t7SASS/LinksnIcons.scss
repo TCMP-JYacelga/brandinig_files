@@ -1,0 +1,798 @@
+/*
+============================
+Activity header detail link.
+============================
+*/
+
+.ft-activity-header-detail-link {
+  display: inline-block;
+  color: $primaryColor;
+  border-left: 1px solid #989898;
+  vertical-align: middle;
+  padding: 5px 0 5px 20px;
+  text-decoration: none;
+  margin-top: -5px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.ft-vr-blue {
+  border-right: 1px solid #bed6e0;
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.ft-vr-blue-large {
+  border-right: 1px solid #bed6e0;
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.ft-z-index-20 {
+  z-index: 20;
+  position: relative;
+}
+
+.ft-graph-tt-content {
+  color: $primaryColor;
+  @include fontSize(2);
+  font-weight: 100;
+  padding: 5px;
+  padding-top: 1px;
+}
+
+.ft-graph-tt-title {
+  @include fontSize(6);
+}
+
+.ft-graph-tt-date {
+  color: $fontColor;
+  @include fontSize(2);
+}
+
+.ft-graph-tt-bal {
+  color: $headerBorderColor;
+}
+
+.ft-graph-tt-link {
+  text-decoration: underline;
+}
+
+.ft-graph {
+  position: relative;
+  color: $fontColor;
+}
+
+.ft-icons-acc-minus {
+  width: 28px;
+  height: 28px;
+  background-position: -5px -5px;
+}
+
+.ft-icons-acc-plus {
+  width: 28px;
+  height: 28px;
+  background-position: -43px -5px;
+}
+
+.ft-icons-alert-grn {
+  width: 27px;
+  height: 22px;
+  background-position: -81px -5px;
+}
+
+.ft-icons-alert-wht {
+  width: 30px;
+  height: 31px;
+  background-position: -82px -39px;
+}
+
+.ft-icons-arrow-dwn {
+  width: 14px;
+  height: 16px;
+  background-position: -33px -78px;
+}
+
+.ft-icons-btn-arrow {
+  width: 13px;
+  height: 16px;
+  background-position: -88px -78px;
+}
+
+.ft-icons-download {
+  width: 19px;
+  height: 23px;
+  background-position: -5px -104px;
+}
+
+.ft-icons-filter {
+  width: 25px;
+  height: 25px;
+  background-position: -121px -137px;
+}
+
+.ft-icons-filt2 {
+  width: 17px;
+  height: 20px;
+  background-position: -88px -104px;
+}
+
+.ft-icons-filter-wht {
+  background-position: -54px -64px;
+  width: 25px;
+  height: 25px;
+}
+
+
+
+.ft-icons-menu {
+  width: 25px;
+  height: 24px;
+  background-position: -123px -71px;
+}
+
+.ft-icons-pdf-white {
+  width: 19px;
+  height: 21px;
+  background-image: url(resources/images/T7/pdf_hover.png);
+}
+
+.ft-dropdown:hover .ft-icons-pdf {
+   background-position: 0;
+}
+
+.ft-icons-xls {
+  width: 20px;
+  height: 23px;
+  background-position: -70px -138px;
+}
+
+.ft-icons-fav-red {
+  width: 22px;
+  height: 20px;
+  background-position: -144px -5px;
+}
+
+.ft-icons-fav {
+  width: 22px;
+  height: 20px;
+  background-position: -99px -73px;
+}
+
+.ft-icons-arr-dwn-blue {
+  width: 13px;
+  height: 12px;
+  background-position: -58px -87px;
+}
+
+.ft-icons-arr-dwn-black {
+  width: 13px;
+  height: 12px;
+  background-position: -46px -86px;
+}
+
+.ft-icons-arr-dwn-black-big {
+  width: 13px;
+  height: 12px;
+  background-position: -71px -88px;
+}
+
+.ft-icons-exp-sml {
+  width: 18px;
+  height: 18px;
+  background-position: -150px -163px;
+}
+
+.ft-icons-coll-sml {
+  width: 18px;
+  height: 18px;
+  background-position: -165px -181px;
+}
+
+.ft-icons-lscroll {
+  width: 15px;
+  height: 76px;
+  background-position: -167px -3px;
+}
+
+.ft-icons-rscroll {
+  width: 15px;
+  height: 76px;
+  background-position: -169px -83px;
+}
+
+.ft-icons-radio-on {
+  width: 20px;
+  height: 20px;
+  background-position: -100px -162px;
+}
+
+.ft-icons-radio-off {
+  width: 20px;
+  height: 20px;
+  background-position: -127px -163px;
+}
+
+.ft-icons-check-on {
+  width: 22px;
+  height: 22px;
+  background-position: -6px -176px;
+}
+
+.ft-icons-check-off {
+  width: 23px;
+  height: 22px;
+  background-position: -29px -176px;
+}
+
+.ft-icons-ui-begin, .ft-icons-ui-fwd, .ft-icons-ui-begin {
+  width: 17px;
+  height: 17px;
+  background-position: -8px -158px;
+}
+
+.ft-icons-ui-bck {
+  width: 21px;
+  height: 17px;
+  background-position: -37px -158px;
+}
+
+.ft-icons-ui-end {
+  width: 17px;
+  height: 17px;
+  background-position: -48px -158px;
+}
+
+.ft-icons-vcard {
+  width: 31px;
+  height: 21px;
+  background-position: -68px -163px;
+}
+
+.ft-icons-attach:before {
+  font-family: fontawesome;
+  content: "\f0c6";
+  @include fontSize(4);
+  color: $gridIconColor;
+}
+
+.ft-icons-bulk {
+  width: 22px;
+  height: 14px;
+  background-position: -56px -53px;
+}
+
+.ft-icons-flag {
+  width: 20px;
+  height: 17px;
+  background-position: -7px -205px;
+}
+
+/*
+======================
+Accordion expand icon.
+======================
+*/
+
+.ft-accordion-exp-icon {
+  background-position: -5px -5px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.ft-accordion-collapsed .ft-accordion-exp-icon:hover {
+  background-position: -54px -102px;
+}
+
+.ft-accordion-exp-icon:hover {
+  background-position: -25px -101px;
+}
+
+.ft-accordion-collapsed .ft-accordion-exp-icon {
+  background-position: -43px -5px;
+}
+
+.smart-filter-button .x-btn-button .icon-filter-T7 {
+  background-image: url(resources/images/T7/funnel-off.png);
+  background-position: center center;
+  height: 20px;
+  width: 25px;
+}
+
+.smart-filter-button .x-btn-button .icon-filter-on-T7 {
+  background-image: url(resources/images/T7/funnel-on.png);
+  background-position: center center;
+  height: 20px;
+  width: 25px;
+}
+
+.misc-icon {
+  background-color: transparent;
+  background-image: url('resources/images/etc/icon_assorted.png');
+  background-repeat: no-repeat;
+}
+
+.icon-misc-favorite {
+  color: #f36f27;
+  position: absolute;
+  margin-top: 4px;
+  &:hover {
+    color: #f36f27;
+  }
+}
+
+img.icon-misc-favorite, img.icon-misc-nonfavorite{
+  position: relative;
+}
+
+.icon-misc-nonfavorite {
+  color: $fontColor;
+  position: absolute;
+  margin-top: 4px;
+  &:hover {
+	color: $fontColor;
+  }
+}
+
+.ft-summary-settings-icons {
+  @include fontSize(4);
+  padding-left: 12px;
+}
+
+.ui-caret {
+  background-color: transparent;
+  border-width: 0px;
+
+  .x-btn-arrow {
+    background-image: url('resources/images/T7/alert-caret.png');
+    padding: 0px;
+  }
+}
+
+.ui-caret-black {
+  background-color: transparent;
+  border-width: 0px;
+  background-image: none;
+
+  &.x-btn.x-btn-default-small {
+    background-color: transparent;
+    border-width: 0px;
+    background-image: none;
+  }
+
+  .x-btn-arrow {
+    background-image: url('resources/images/T7/caret-blue.png');
+  }
+}
+
+.ft-batch-action-img {
+  background-image: url(resources/images/T7/grid/level-up.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 24px;
+}
+
+.t7-grid .x-btn-button .icon_sort_asc {
+  background-image: url('resources/images/etc/up.png');
+  background-position: right center;
+  height: 12px;
+}
+
+.t7-grid .x-btn-button .icon_sort_desc {
+  background-image: url('resources/images/etc/dn.png');
+  background-position: right center;
+  height: 12px;
+}
+
+.xn-close-button .x-btn-split-right {
+  padding-right: 14px;
+  height: 20px;
+  .x-btn-button{
+	height: auto;
+  }
+  .x-btn-icon-el{
+	background-image: none;
+	/*right: 0px;
+	top: 0px;
+	left: auto;
+	  &:after{
+		font-family: fontawesome;
+		content: '\f057';
+		color: $fontColor;
+		line-height: inherit;
+		@include fontSize(4);
+	}*/
+  }
+  background-image: url('resources/images/T7/icon-btn-close.png');
+  background-position: right center;
+}
+
+.icon-company:before {
+  font-family: fontawesome;
+  content: "\f1ad";
+  @include fontSize(6);
+  color: $primaryColor;
+}
+
+.t7-anchor {
+  color: $secondaryBtn;
+  cursor: pointer;
+  @include fontSize(4);
+}
+
+a {
+  /*i {
+    line-height: 21px !important;
+  }*/
+
+  &[type="button"]:hover {
+    color: $lightColor;
+  }
+}
+
+.downloadNacha-disabled a:hover {
+  background-color: $primaryColor;
+}
+
+.icon-tick:before {
+  font-family: fontawesome;
+  content: "\f00c";
+  @include fontSize(10);
+  color: #00FF83;
+}
+
+.icon-close:before {
+  font-family: fontawesome;
+  content: "\f00d";
+  @include fontSize(10);
+  color: $errorIconColor;
+}
+
+.icon-repeat:before {
+  font-family: fontawesome;
+  content: "\f01e";
+  @include fontSize(10);
+  color: #00FF83;
+}
+
+.icon-quickpay:before {
+  font-family: fontawesome;
+  content: "\f1d8";
+  @include fontSize(4);
+}
+
+a.t7-action-link {
+  color: $linksColor;
+  text-decoration: underline;
+  cursor: pointer;
+  @include fontSize(4);
+  &:hover, &:focus{
+    color: $linksHoverColor;
+  }
+}
+
+a.t7-action-link-with-noline {
+  color: $linksColor;
+  text-decoration: none;
+  cursor: pointer;
+  @include fontSize(5);
+  &:hover, &:focus{
+    color: $linksHoverColor;
+  }
+}
+
+.icon_warn:before {
+  font-family: fontawesome;
+  content: '\f071';
+  @include fontSize(10);
+  color: #FFA500;
+}
+
+.icon_error:before {
+  font-family: fontawesome;
+  content: "\f06a";
+  @include fontSize(10);
+  color: $errorIconColor;
+}
+
+.icon_success:before {
+  font-family: fontawesome;
+  content: "\f058";
+  @include fontSize(10);
+  color: #00FF83;
+}
+
+.icon-aligment {
+  text-align: center;
+}
+
+.ui-caret-dropdown {
+  background-image: none;
+
+  &.x-btn.x-btn-default-small {
+    background-image: none;
+	background-color: transparent;
+	padding: 0px 0px 0px 5px;
+	top: 0px;
+	&:before{
+		font-family: fontawesome;
+		content: '\f0d7';
+		@include fontSize(4);
+		color: $fontColor;
+	}
+  }
+  &:before{
+	font-family: fontawesome;
+	content: '\f0d7';
+	@include fontSize(4);
+	color: $fontColor;
+  }
+}
+
+.ui-caret-dropdown.ui-caret {
+  .x-btn-wrap {
+	margin-top: 0px;
+	background-image: none;
+  }
+}
+
+.ui-caret {
+  background-color: transparent;
+  border-width: 0px;
+
+  .x-btn-wrap {
+    background-repeat: no-repeat;
+    background-image: url('resources/images/T7/alert-caret.png');
+    padding: 0px;
+    width: 10px !important;
+  }
+}
+
+.jspSeeklink {
+  background-image: url('resources/images/etc/icon_search.gif');
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-description {
+  vertical-align: -4px;
+}
+
+.icon-info:before {
+  content: "\f05a";
+  color: $secondaryBtn;
+  @include fontSize(4);
+}
+
+.ft-image-focus {
+  border-color: $primaryColor1;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px $primaryColor1, 0 0 8px $primaryColor1;
+  box-shadow: inset 0 1px 1px blue, 0 0 8px $primaryColor1;
+}
+
+.ft-icons-entry {
+  background-image: url(resources/images/T7/row-expander-minus.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: 0px !important;
+  cursor: pointer;
+  width: 20px;
+  height: 22px;
+}
+
+.ft-accordion-collapsed .ft-icons-entry {
+  background-image: url(resources/images/T7/row-expander-plus.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: 0px;
+  cursor: pointer;
+  width: 20px;
+  height: 22px;
+}
+
+.t7-anchor:focus {
+  border-color: $inputTypeBorderColor;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  text-decoration: underline;
+}
+
+.dropDown-caret {
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.grdlnk-notify-icon {
+  min-width: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  border-width: 0px;
+  background-image: url(resources/images/T7/grid/icon_grid.png);
+}
+
+.icon-gln-fcy {
+  background-position: 0 -90px;
+  padding: 0px !important;
+}
+
+.iconlink {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.icon_discard:before {
+  font-family: fontawesome !important;
+  content: '\f014';
+  @include fontSize(8);
+}
+
+.icon_reject {
+  font-family: fontawesome !important;
+  content: '\f00d';
+  font-size: inherit;
+
+  &:before {
+    font-family: fontawesome !important;
+    content: '\f00d';
+    font-size: inherit;
+  }
+}
+
+.icon_rollover {
+  font-family: fontawesome !important;
+  content: '\f01e';
+  @include fontSize(8);
+
+  &:before {
+    font-family: fontawesome !important;
+    content: '\f01e';
+    @include fontSize(8);
+  }
+}
+
+.online_link {
+  border-width: 0;
+  display: inline-block;
+  height: 18px;
+  min-width: 18px;
+  background: url(resources/images/T7/icon_online.png) no-repeat top left;
+}
+
+.offline_link {
+  border-width: 0;
+  display: inline-block;
+  height: 18px;
+  min-width: 18px;
+  background: url(resources/images/T7/icon_offline.png) no-repeat top left;
+}
+
+.fileUploadLink {
+  @include fontSize(4);
+  cursor: auto;
+  padding: 0px 2px 0px 2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.icon-action-dropdown {
+	background-position: right center;
+    border: 1px solid $buttonBorderColor;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: $buttonBackground;
+    height: 26px;
+    color: $lightColor;
+	text-align: center;
+    padding: 6px 12px;
+	line-height: 1.2;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: visible;
+    @include fontSize(2);
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 85px;
+}
+
+.x-grid{
+	.icon-action-dropdown{
+		color: $lightColor;
+		&:hover{
+			color: $lightColor;
+			text-decoration: none;
+		}
+	}
+}
+
+.icon-action-dropdown:hover, .icon-action-dropdown:focus{
+	color: $lightColor; 
+	background-color: $buttonHoverColor;
+    border-color: $buttonBorderColor;
+	text-decoration: none;
+}
+
+
+.disabled-action-dropdown{
+	opacity: .5;
+	&.icon-action-dropdown:hover{
+		opacity: .4;
+	}
+}
+
+.icon-action-dropdown:after {
+	font-family: fontawesome;
+	content: "\f0d7";
+	margin-left: 11px;
+}
+.fa.fa-building, .fa.fa-building:before {
+	font-family: fontawesome;
+	content: "\f1ad";
+	color :$primaryColor;
+}
+
+.delete-icon {
+	font-family: fontawesome;
+	content: "\f00d"; 
+	 @include fontSize(4);
+	padding : 0 5px 0 5px;
+	color: $fontColor !important;
+}
+
+.delete-icon:before {
+	font-family: fontawesome;
+	content: "\f00d"; 
+	@include fontSize(4);
+}
+
+.blockMsg{
+	width: 162px !important;    
+    //background-image: url(resources/images/T7/loading.gif);
+    background-position: 6px 6px;
+	background-repeat: no-repeat;
+	height: 68px;
+	left: 46% !important;
+	@include fontSize(6);
+	opacity: 1 !important;
+	color: $fontColor !important;
+	border: 1px solid $fontColorDark !important;
+	#loadingMsg{
+	  height: 100%;
+	  width: 100%;
+	  padding: 20px 10px;
+	  img{
+	    width: 30px;
+		height: 30px;
+	  }
+	}
+}
+
+.blockOverlay{
+  z-index: 20000;
+}
+
+.radio-inline, .checkbox-inline, .ux-dialog.ui-dialog-content .radio-inline, .ux-dialog.ui-dialog-content .checkbox-inline{
+	@include fontSize(6);
+}
+
+#disclaimerTextIcon{
+  color: $primaryColor !important;
+}

@@ -1,0 +1,77 @@
+<!--Bank Reports starts here -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="bankReportsInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.rolesrv.15" "Bank Reports"}}</span> 
+						<img id="bankReportAll_{{assetid}}"  src="{{checkBoxIcon assignAllBR}}" class="chkBoxAlign" width="16"
+							height="16" border="0"> 
+						<label id="bankReportAll_{{assetid}}" for="bankReportAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.priv" "All"}}</label>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="bankReportsInfoDiv" class="panel-body">
+			<div class="row grid">
+					<table class="view-grid" style="width: 100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text" style="width: 5%">#</td>
+								<td class="view-grid-header-text" style="width: 5%"></td>
+								<td class="view-grid-header-text">{{getLabel "lbl.role.distributionId" "Distribution Id"}}</td>
+								<td class="view-grid-header-text">{{getLabel "lbl.role.reportnm" "Report Name"}}</td>
+								<td class="view-grid-header-text">{{getLabel "lbl.role.assigned" "Assigned"}}</td>
+								<td class="view-grid-header-text">{{getLabel "lbl.role.type" "Type"}}</td>
+							</tr>
+
+						</thead>
+						<tbody>
+							{{#each bankReports}}
+							<tr class="view-grid-body">
+
+								<td class="view-grid-body-content">{{math @index "+" 1}}</td>
+								<td class="view-grid-body-content text-center "><a
+								class="limit-reached test"> <img
+									id="chkBankReports_{{../assetid}}_{{reportId}}"
+									data-distributionid = "{{ distributionId }}"
+									data-reportid = "{{ reportId }}"
+									data-reportname="{{reportName}}"
+									data-type="{{type}}"
+									data-assetid="{{../assetId}}"
+									data-clientid="{{clientId}}"
+									data-version = "{{ version }}"
+									data-digest = "{{ digest }}"
+									src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+									border="0"></a></td>
+								<td class="view-grid-body-content">{{distributionId}}</td>
+								<td class="view-grid-body-content">{{reportName}}</td>
+								<td class="view-grid-body-content">
+												{{getStatusExpression assignedFlag}}
+								</td>
+										{{#selectAsset type "G"}}
+								<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >Group</td>
+										{{/selectAsset}}
+										{{#selectAsset type "A"}}
+								<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >Account</td>
+										{{/selectAsset}}
+										{{#selectAsset type "F"}}
+								<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >Field</td>
+										{{/selectAsset}}
+							
+							</tr>
+							{{else}}
+							<tr class="view-grid-body">
+								<td class="view-grid-header-text view-grid-body-content"
+									colSpan="4" style="padding-bottom: 1%;">&nbsp</td>
+							</tr>
+							{{/each}}
+
+						</tbody>
+					</table>
+
+				</div>
+		</div>
+	</div>
+	<!-- Bank Reports ends here */ -->

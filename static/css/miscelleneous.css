@@ -1,0 +1,24 @@
+﻿#filterDiv { padding: 2px 0 2px 0; }
+#filterDiv table tr td { padding: 2px; }
+
+
+.acord_grid_head { height: 26px; padding: 4px 0 0 6px; font-weight: bold; cursor: pointer; border-width: 0; line-height: normal; border: 0px none transparent; vertical-align: middle; }
+.acord_grid_head  img { border: 0px none transparent; vertical-align: middle; }
+.headerBand { line-height: 20px; display:block; font-weight: bold; cursor: pointer; border-width: 0; padding: 2px 0 2px 2px;}
+
+.acord_grid_head div.acord_title {}
+.acord_grid_body { clear: both; overflow: hidden; overflow-x: scroll; }
+.acord_open .col_2_3 { display:none; visibility: hidden; }
+.acord_open .col_3_3 { display:none; visibility: hidden; }
+.acord_close .col_2_3 { display:block; visibility: visible; }
+.acord_close .col_3_3 { display:block; visibility: visible; }
+
+# icon added for ach module
+.achIcon { background-position: center; background-repeat: no-repeat; min-width: 18px; height: 18px; display: inline-block; border-width: 0px; background-image: url('../images/icons/icons_ach.png');}
+.achIcon-1 { background-position: 0px 0px; }
+.achIcon-2 { background-position: 0px -24px; }
+.achIcon-3 { background-position; 0px -48px; }
+.achIcon-5 { background-position: 0px -72px; }
+.achIcon-6 { background-position: 0px -96px; }
+.downArrow{background-image: url(../images/icons/icon_arrow_down.png);vertical-align: middle;}
+.upArrow{background-image: url(../images/icons/icon_arrow_up.png);vertical-align: middle;}

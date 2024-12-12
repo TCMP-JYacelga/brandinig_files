@@ -1,0 +1,28 @@
+/*
+.accordion { width:200px; line-height: 24px; }
+.accordion dt { width: auto; padding:2px 3px; cursor: pointer; line-height: 24px; height: 24px; display: block; font-weight: bold; }
+.accordion dt:hover {}
+.accordion .open {}
+.accordion dd { overflow: visible; }
+.accordion dd span { display: block; width:auto; padding:2px; }
+.accordion dd span span { display: block; width: auto; padding: 1px 0px 1px 2px; }
+.accordion dd span span a { line-height: 24px; height: 24px; display: block; width: auto; text-decoration: none; }
+.accordion span span a:hover {}
+
+#tree_accordion div dl { width: auto; }
+#tree_accordion div dl dt { line-height: 23px; height: 23px; display: block; padding: 1px; margin: 0; }
+#tree_accordion div dl dt a { text-decoration: none; display: block; padding: 1px; margin: 0px; }
+#tree_accordion div dl dt a:hover { color: white; background-color: #6eac2c; border: 1px solid #6eac2c; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+*/
+
+
+.jqaccordion div dl { width: auto; }
+.jqaccordion div dl dt { display: block; }
+.jqaccordion div dl dt a { text-decoration: none; display: block; padding: 1px; margin: 0px; }
+.jqaccordion div dl dt a:hover { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+
+h3.acord_header { font: 700 13px/1 calibri, helvetica, arial, sans-serif; text-transform: uppercase;  cursor: pointer; vertical-align: middle; }
+h3.acord_header a { border-width: 0; height: inherit; display: block; }
+h3.acord_header a:focus { outline: 0; }
+div.acord_content { padding: 2px 0 2px 6px; }
+div.acord_content dl dt a { white-space: nowrap; }

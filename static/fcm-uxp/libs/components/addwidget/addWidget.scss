@@ -1,0 +1,144 @@
+ .btn-add-widget {
+	position: fixed;
+    bottom: 110px;
+    right: 10px;
+    z-index: 99999 !important;
+    font-size: 0px;
+    width: 45px;
+    height: 45px;
+    padding-left: 10px;
+    margin-right: 8px;
+}
+
+.btn-add-widget-rtl{
+	position: fixed;
+    bottom: 110px;
+    left: 10px;
+    z-index: 99999 !important;
+    font-size: 0px;
+    width: 45px;
+    height: 45px;
+    padding-left: 10px;
+    margin-right: 8px;
+}
+
+.addSymbol {
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.modal-header{
+	padding: 1rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+}
+ #addWidget_left_section a {
+	text-transform: none;
+	color:inherit;
+}
+
+#addWidget_left_section a::after {
+    content: ' \003E';
+    font-size: 20px;
+    font-weight: 800;
+    color: rgba(65, 65, 65, 0.25);
+    top: 8px;
+    border: 0 !important;
+    position: absolute;
+    right: 5px;
+}
+
+#addWidget_left_section .nav-pills .nav-link {
+	border-radius: 0rem;
+  padding:0rem;
+}
+
+.addWidget-nav-list{
+     background-color: #FFF;
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.addWidget-item-border{
+    height: 35px;
+    width: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+.addWidget-nav-list a[aria-selected="true"] .addWidget-item-border{
+   background-color: $primaryColor;
+}
+
+.addWidget-nav-list li:hover  .addWidget-item-border{
+   background-color: rgba(105,78,214,.2);
+}
+
+.addWidget-nav-list li:hover{
+	background-color: rgba(105,78,214,.04);
+}
+
+.addWidget-nav-list li{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+    box-sizing: border-box;
+    padding-left: 0;
+    border-left-style: solid;
+    border-left-color: transparent;
+   -webkit-tap-highlight-color: transparent;
+}
+
+.addWidget-nav-list li{
+    font-size: 16px;
+    min-height: 35px;
+}
+
+.addWidget-nav-list li a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    height: 40px;
+    text-decoration: none;
+}
+
+.addWidget-nav-list li a{
+	font: 500 16px/24px Roboto;
+	color: $fontColor;	
+}
+
+.addWidget-nav-list a[aria-selected="true"]{
+	color: $primaryColor !important;
+        background-color: rgba(105,78,214,.04);
+} 
+
+.add-widget-item:hover .btn-display{
+  visibility: visible;
+}
+
+.add-widget-item:hover {
+  background-color: rgba(105,78,214,.04);
+}
+
+.btn-display{
+ visibility: hidden;
+ width: 90px;
+}
+
+#addWidget_left_section a[aria-selected="true"]::after {
+  color: $primaryColor !important;
+}
+
+.add-widget-item .dropdown-divider {
+   margin:0rem;
+}
+
+#addWidget_left_section .nav-pills .nav-link.active {
+  background-color: rgba(105,78,214,.04);
+}
+
+#addWidgetPopup .modal-lg{
+ max-width: 850px;
+}

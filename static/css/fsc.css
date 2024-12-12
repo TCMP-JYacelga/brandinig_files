@@ -1,0 +1,111 @@
+.acceptancelink,.verifylink,.amendlink,.anchorclient_link,.full_filled_red_link,.empty_link,.full_filledlink,
+.half_filledlink,.cancellink,.closelink,.collectionlink, .paymentlink,.fail_link,.financelink,.loanrequestlink,
+.icon-lock,.collapselink,.expandlink,.returnlink,.success_link,.icon-unlock,.unmatchGrid,.matchlink
+{
+    background: url(../images/icons/fsc-icons.png) no-repeat top left;
+}
+
+.flexigrid div.bDiv table tr td 
+.acceptancelink,.verifylink,.amendlink,.anchorclient_link,.full_filled_red_link,.empty_link,.full_filledlink,
+.half_filledlink,.cancellink,.closelink,.collectionlink, .paymentlink,.fail_link,.financelink,.loanrequestlink,
+.icon-lock,.collapselink,.expandlink,.returnlink,.success_link,.icon-unlock,.unmatchGrid,.matchlink,payment_bondlink,invoicelink
+ {visibility: visible;}
+ 
+.flexigrid div.bDiv table tr:hover td 
+.acceptancelink,.verifylink,.amendlink,.anchorclient_link,.full_filled_red_link,.empty_link,.full_filledlink,
+.half_filledlink,.cancellink,.closelink,.collectionlink, .paymentlink,.fail_link,.financelink,.loanrequestlink,
+.icon-lock,.collapselink,.expandlink,.returnlink,.success_link,.icon-unlock,.unmatchGrid,.matchlink,payment_bondlink,invoicelink
+ { visibility: visible;}
+
+.acceptancelink, .verifylink{ background-position: 0 0; width: 16px; height: 16px; } 
+.amendlink{ background-position: 0 -26px; width: 16px; height: 16px; } 
+.anchorclient_link{ background-position: 0 -44px; width: 20px; height: 20px; } 
+.full_filled_red_link{ background-position: 0 -70px; width: 30px; height: 24px; } 
+.empty_link{ background-position: 0 -96px; width: 30px; height: 24px; } 
+.full_filledlink{ background-position: 0 -122px; width: 30px; height: 24px; } 
+.half_filledlink{ background-position: 0 -148px; width: 30px; height: 24px; } 
+.cancellink{ background-position: 0 -174px; width: 16px; height: 16px; } 
+.closelink{ background-position: 0 -192px; width: 24px; height: 24px; } 
+.collectionlink, .paymentlink{ background-position: 0 -218px; width: 16px; height: 16px; } 
+.fail_link{ background-position: 0 -236px; width: 24px; height: 24px; } 
+.financelink{ background-position: 0 -262px; width: 16px; height: 16px; } 
+.loanrequestlink{ background-position: 0 -280px; width: 16px; height: 16px; } 
+.icon-lock{ background-position: 0 -298px; width: 16px; height: 16px; } 
+.matchlink{ background-position: 0 -316px; width: 16px; height: 16px; } 
+.collapselink{ background-position: 0 -334px; width: 16px; height: 16px; } 
+.expandlink{ background-position: 0 -352px; width: 16px; height: 16px; } 
+.returnlink{ background-position: 0 -370px; width: 16px; height: 16px; } 
+.success_link{ background-position: 0 -388px; width: 22px; height: 22px; } 
+.icon-unlock{ background-position: 0 -412px; width: 16px; height: 16px; } 
+.unmatchGrid{ background-position: 0 -430px; width: 16px; height: 16px; } 
+.fileupload_Link{  width: 16px; height: 16px;
+	background: url(../images/icons/File_Upload.png) no-repeat top left;
+}
+.debitnote_link{  width: 16px; height: 16px;
+	background: url(../images/icons/debit_note.ico) no-repeat top left;
+}
+/*Required for dashboard*/
+.greyback { background-color: #ECECEC !important; }
+.orangeback { background-color: #F88017 !important; }
+.redback { background-color: #FF0000 !important; }
+.greenback { background-color: #77CC6D !important; }
+.purpleback { background-color: #9B30FF !important; }
+
+/*To make flexigrid header bold*/
+.flexigrid div.hDiv th,div.colCopy {font-weight: bold;}
+/*To make flexigrid row data vertically middle align*/
+.flexigrid div.bDiv td {vertical-align: middle; white-space: nowrap;}
+
+.payment_bondlink{ background: url(../images/icons/payment_bond.png) no-repeat top left;}
+.invoicelink{ background: url(../images/icons/invoice.png) no-repeat top left;}
+.radio { vertical-align: middle; padding: 1px 4px 2px 0px; margin: 3px 3px 3px 0px; }
+
+.autowidth { width: auto; }
+.grid-link-icon { background-image: url("../themes/tandem/icons/icon_grid.png");}
+.grid-link-icon { background-repeat: no-repeat; border-width: 0; display: inline-block; height: 18px; min-width: 18px;}
+.linkbox { cursor: pointer; display: inline-block; float: none; height: 22px; margin: 0; text-decoration: none; width: 22px;}
+
+.acceptancelink, .verifylink, .amendlink, .anchorclient_link, .full_filled_red_link, .empty_link, .full_filledlink, .half_filledlink, .cancellink, .closelink, .collectionlink, .paymentlink, .fail_link, .financelink, .loanrequestlink, .icon-lock, .collapselink, .expandlink, .returnlink, .success_link, .icon-unlock, .unmatchGrid, .matchlink {
+    background: url("../images/icons/fsc-icons.png");
+}
+.grid-link-icon { min-width: 18px; height: 18px; display: inline-block; background-repeat:no-repeat; border-width: 0px; }
+.infolink { background-position: 0 -126px; }
+.clonelink { background-position: 0 -144px; }
+.editlink { background-position: 0 -162px;  }
+.enrichlink { background-position: 0 -180px; }
+.historylink { background-position: 0 -198px; }
+.viewlink { background-position: 0 -216px; }
+.downloadlink { background-position: 0 -234px; }
+.infolink_grey, .clonelink_grey, .editlink_grey, .enrichlink_grey, .historylink_grey, .viewlink_grey, .downloadlink_grey { background-image: none !important; }
+.unchk_dislink { background-position: 0 -252px; }
+.chk_dislink { background-position: 0 -270px; }
+.unchklink { background-position: 0 -288px; }
+.chklink { background-position: 0 -306px; }
+
+.acceptancelink, .verifylink{ background-position: 0 0; width: 16px; height: 16px; } 
+.amendlink{ background-position: 0 -26px; width: 16px; height: 16px; } 
+.anchorclient_link{ background-position: 0 -44px; width: 20px; height: 20px; } 
+.full_filled_red_link{ background-position: 0 -70px; width: 30px; height: 24px; } 
+.empty_link{ background-position: 0 -96px; width: 30px; height: 24px; } 
+.full_filledlink{ background-position: 0 -122px; width: 30px; height: 24px; } 
+.half_filledlink{ background-position: 0 -148px; width: 30px; height: 24px; } 
+.cancellink{ background-position: 0 -174px; width: 16px; height: 16px; } 
+.closelink{ background-position: 0 -192px; width: 24px; height: 24px; } 
+.collectionlink, .paymentlink{ background-position: 0 -218px; width: 16px; height: 16px; } 
+.fail_link{ background-position: 0 -236px; width: 24px; height: 24px; } 
+.financelink{ background-position: 0 -262px; width: 16px; height: 16px; } 
+.loanrequestlink{ background-position: 0 -280px; width: 16px; height: 16px; } 
+.icon-lock{ background-position: 0 -298px; width: 16px; height: 16px; } 
+.matchlink{ background-position: 0 -316px; width: 16px; height: 16px; } 
+.collapselink{ background-position: 0 -334px; width: 16px; height: 16px; } 
+.expandlink{ background-position: 0 -352px; width: 16px; height: 16px; } 
+.returnlink{ background-position: 0 -370px; width: 16px; height: 16px; } 
+.success_link{ background-position: 0 -388px; width: 22px; height: 22px; } 
+.icon-unlock{ background-position: 0 -412px; width: 16px; height: 16px; } 
+.unmatchGrid{ background-position: 0 -430px; width: 16px; height: 16px; } 
+
+/* .icon-lock{ background: none !important; opacity: 1; font-family: fontawesome; content: "\f023"; font-size: 14px; vertical-align: text-bottom; } */
+/* .icon-lock:before{ font-family: fontawesome; opacity: 1; content: "\f023"; font-size: inherit;} */
+
+/* .icon-unlock{ background: none !important; opacity: 1; font-family: fontawesome; content: "\f09c"; font-size: 14px; vertical-align: text-bottom; } */
+/* .icon-unlock:before{ font-family: fontawesome; opacity: 1; content: "\f09c"; font-size: inherit;} */

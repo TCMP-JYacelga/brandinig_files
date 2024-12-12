@@ -1,0 +1,144 @@
+@import "variables-default";
+@import "SASS/Button.scss";
+@import "SASS/Grid.scss";
+@import "SASS/Crumbs.scss";
+@import "SASS/SidePanel.scss";
+@import "SASS/PageHeader.scss";
+@import "SASS/Labels.scss";
+@import "SASS/Panel.scss";
+@import "SASS/InputFields.scss";
+@import "SASS/Div-Section.scss";
+@import "SASS/Tabs.scss";
+@import "SASS/LinksnIcons.scss";
+@import "SASS/PageFooter.scss";
+@import "SASS/PageContent.scss";
+@import "SASS/PaddingMargin.scss";
+@import "../common/layout.scss";
+
+@mixin border-radius($radius) {
+	border-radius : $radius !important;
+	-moz-border-radius: $radius !important;
+	-webkit-border-radius: $radius !important;
+	-o-border-radius: $radius !important;
+	-ms-border-radius: $radius !important;
+	-khtml-border-radius: $radius !important;
+}
+
+@mixin glyph($size) {
+	font-family: fontawesome !important;
+	font-size: $size !important;
+}
+
+.ft-bgcolor {
+    background-color: $lightColor;
+}
+
+.ft-header{
+	color: $fontColor;
+	border-bottom: solid $primaryColor 4px;
+	background-image: url(resources/images/T7/nbcLogo.gif);
+}
+
+.ft-main-nav > li > a{
+	color: $fontColor !important;
+}
+
+.ft-main-nav{
+	background-color: $secondaryColor !important;
+}
+
+.ft-main-nav .ft-page-active a{
+	background-color: $secondaryColorHover !important;
+	color: $primaryColor !important;
+}
+
+.ft-sub-nav{
+	background-color: $primaryColor;
+}
+
+.ft-sub-nav > li > a{
+	padding: 7px 10px;
+	color: $lightColor !important;
+}
+
+.ft-sub-nav > li{
+	background-color: $primaryColor;
+	border-bottom: none !important;
+	border-right: 1px solid $secondaryColorHover;
+}
+
+.ft-sub-nav .ft-link-active a{
+	color: $lightColor !important;
+	border-bottom: none !important;
+	background: linear-gradient(to bottom, $primaryColor, $gradientColor);
+}
+
+li.flyout > a{
+	background-color: $primaryColor !important;
+}
+
+.ft-page-active:after{
+	border-top-color: $primaryColor !important;
+}
+
+li.flyout > a:after{
+	border-top-color: $secondaryColor !important;
+}
+
+.ft-sub-nav li:hover a{
+	background: linear-gradient(to bottom, $primaryColor, $gradientColor) !important;
+	color: $lightColor !important
+}
+
+.ft-sub-nav li.flyout > ul.ft-sub-nav-3{
+	background-color: $lightColor !important
+}
+
+li.flyout > ul.ft-sub-nav-3 > li > a{
+	background: $lightColor !important;
+	color : $fontColor !important;
+}
+
+li.flyout > ul.ft-sub-nav-3 > li > a:hover{
+	background-color: $lightColor !important;
+	color: $primaryColor !important;
+}
+
+li.flyout > ul.ft-sub-nav-3 > li > a{
+	border: none !important;
+}
+
+li.flyout > ul.ft-sub-nav-3 > li:last-child a{
+	border-bottom: 1px solid $secondaryColorHover !important;
+}
+
+.ft-header-menubar .ft-dropdown:hover .ft-dropdown-toggle{
+    background-color: inherit !important;
+    color: $fontColor;
+}
+
+.ft-dropdown:hover .ft-dropdown-toggle{
+	background-color: $secondaryColorHover !important;
+}
+
+.ft-pref-dropdown:hover .ft-dropdown-toggle, .ft-pref-dropdown .ft-dropdown-menu{
+	background-color: $secondaryColorHover !important;
+	color: $fontColor !important;
+}
+
+.ft-pref-dropdown:hover a{
+	color: $fontColor !important;
+}
+
+.ft-pref-dropdown .ft-dropdown-menu .ft-dropdown-items a:hover{
+	background-color: $lightColor !important;
+	color: $primaryColor !important;
+}
+
+.ft-header-menubar .ft-button-login{
+	background-color: $primaryColor !important;
+}
+
+.ft-header-menubar .ft-button-login:hover{
+	background: linear-gradient(to bottom, $primaryColor, $gradientColor) !important;
+}

@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span  id='featureInfoCaret' class="fa fa-caret-up pull-left cursor_pointer toggle-handler" />
+					<span>{{getLabel "lbl.role.features" "Features"}}</span>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="featureInfoDiv" class="panel-body">
+		{{#each allowedFeatures}}
+		<div class="col-sm-4">
+			<a class="limit-reached"> <img
+				id="chkImgFeature_{{../assetId}}_{{featureId}}"
+				data-featureid="{{featureId}}"
+				data-featurename="{{featureName}}"
+				data-assetid="{{../assetId}}"
+				data-version = "{{ version }}"
+				src="{{checkBoxIcon assignedFlag}}" class="chkBoxAlign" width="16" height="16"
+				data-digest = "{{ digest }}"
+				border="0">
+			</a> 
+			<input type="hidden" id="test" value="TestValue" />
+			<label for="chkImgFeature_{{../assetId}}_{{featureId}}"
+				id="lblImgSrvc_{{serviceId}}"
+				class="checkbox-inline noLeftPadding"> {{getLabel (concat "lbl.role.features." featureId) featureName}}
+			</label>
+		</div>
+		{{/each}}
+	</div>
+	<!-- end of refactored -->
+</div>

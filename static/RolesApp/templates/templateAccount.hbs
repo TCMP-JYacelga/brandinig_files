@@ -1,0 +1,77 @@
+<!--BR Accounts starts here -->	
+	
+	<div class="panel panel-default" id="accountPanel">
+   		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="accountsInfoCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.role.acct" "Accounts"}}</span>
+						<img id = "accountAll_{{assetid}}" data-version = "{{ assignAllAccounts_version }}" src="{{checkBoxIcon assignAllAccounts}}" class="chkBoxAlign" width="16" height="16" border="0">
+						<label id = "accountAll_{{assetid}}" for = "accountAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.acct1" "All"}}</label>
+						<label id="lblAccountCount" class="checkbox-inline pull-right">{{accountsAssignedCount}} of {{accountsCount}}{{getLabel "lbl.role.acct2" " Selected"}}</label>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="accountsInfoDiv" class="panel-body">
+		   	<div class="row grid">
+					<table class="view-grid" style="width:100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text" style = "width:50"></td>
+								{{#ifCond assetid '==' "07" }}
+									<td class="view-grid-header-text">{{getLabel "lbl.role.obligorId" "Obligor ID"}}</td>
+									<td class="view-grid-header-text">{{getLabel "lbl.role.obligationId" "Obligation ID"}}</td>
+    							{{/ifCond}}
+								{{#ifCond assetid '!=' "07" }}
+    								<td class="view-grid-header-text">{{getLabel "lbl.role.acctNo" "Account No"}}</td>
+									<td class="view-grid-header-text">{{getLabel "lbl.role.acctNm" "Account Name"}}</td>
+    							{{/ifCond}}	
+								<td class="view-grid-header-text" >{{getLabel "lbl.role.acctStatus" "Status"}}</td>
+								<td class="view-grid-header-text" >{{getLabel "lbl.role.acctCmp" "Company Name"}}</td>
+							</tr>
+										
+						</thead>
+						<tbody>	
+								  {{#each accounts}}
+								  		<tr class="view-grid-body">
+												<td class="view-grid-body-content text-center">
+													<a class="limit-reached">
+														<img id="chkAccount_{{../assetid}}_{{accountId}}" 
+															data-subsidiaryid="{{ subsidiaryId }}"
+															data-accountname="{{ accountName }}"
+															data-accountid="{{ accountId }}"
+															data-accountno="{{ accountNo }}"
+															data-subsidiaryname="{{ subsidiaryName }}"
+															data-version = "{{ version }}"
+															data-assetid = "{{ ../assetId }}"	
+															data-digest = "{{ digest }}"													
+														src="{{checkBoxIcon assignedFlag}}" width="16" height="16" border="0">
+													</a>
+												</td>
+											<td class="view-grid-body-content">{{accountNo}}</td>
+											{{#ifCond ../assetid '==' "07" }}
+											<td class="view-grid-body-content">{{obligationId}}</td>
+											{{/ifCond}}
+											{{#ifCond ../assetid '!=' "07" }}
+											<td class="view-grid-body-content">{{getStringWithSpecialChars accountName}}</td>
+											{{/ifCond}}
+											<td class="view-grid-body-content">
+												{{getStatusExpression assignedFlag}}
+											</td>
+											<td class="view-grid-body-content">{{getStringWithSpecialChars subsidiaryName}}</td>
+										</tr>
+								  
+								  {{else}}
+										<tr class="view-grid-body">
+												<td class="view-grid-body-content" colSpan="5" style="padding-bottom: 1%;" >&nbsp</td>
+										</tr>
+								 {{/each}}	
+							</tbody>
+					</table>
+		   </div>
+		</div>
+	</div>
+	
+<!--BR Accounts ends here -->

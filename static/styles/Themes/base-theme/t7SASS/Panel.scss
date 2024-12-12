@@ -1,0 +1,1370 @@
+.x-toolbar-default {
+  border: none;
+  background-color: #f9fafb;
+  background-image: none;
+}
+
+.x-toolbar {
+  @include fontSize(1);
+  border-style: solid;
+  padding: 2px 0 2px 2px;
+}
+
+.x-toolbar.x-docked-bottom {
+  border: 0;
+}
+
+.x-toolbar-separator-horizontal {
+  border-left-color: $toolbarSeperatorColor;
+}
+
+.x-toolbar-text {
+  color: $fontColor;
+  line-height: 16px;
+  @include fontSize(2);
+}
+
+.ft-form-add-receiver {
+  .x-panel-body-default-framed {
+    border: none;
+    background-color: $lightColor;
+  }
+
+  .x-form-item-label {
+    color: $fontColorDarker;
+    font-style: 14px;
+    margin-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .x-form-text {
+    color: $textFieldTextColor;
+    min-height: 30px;
+    padding: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $textFieldBorderColor;
+    text-align: left;
+    font-style: normal;
+  }
+
+  .x-form-display-field {
+    color: $textFieldTextColor;
+    text-align: left;
+    font-style: normal;
+  }
+}
+
+.ft-create-payment-form {
+  .x-panel-body {
+    background-color: $moduleContent;
+  }
+
+  .x-panel-default-framed {
+    border: none;
+    background-color: transparent;
+  }
+
+  .x-form-item-label {
+    color: $fontColorDarker;
+    font-style: 14px;
+    margin-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .ft-create-payment-form-top .x-form-text, .ft-create-payment-form-bottom .x-form-text {
+    color: $textFieldTextColor;
+    min-height: 30px;
+    padding: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $textFieldBorderColor;
+    text-align: left;
+    font-style: 13px;
+  }
+
+  .ft-create-payment-form-top .x-form-text {
+    font-style: italic;
+    padding-left: 10px;
+  }
+
+  .ft-create-payment-form-bottom {
+    padding-left: 10px;
+  }
+
+  .x-grid-editor .x-form-text {
+    color: $darkColor;
+    height: 30px;
+    padding: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $textFieldBorderColor;
+    text-align: left;
+    font-style: 13px;
+  }
+
+  .x-grid-cell-inner {
+    font-style: 13px;
+    color: $fontColor;
+
+    .ft-summary-currency {
+      margin-left: -22px;
+    }
+  }
+
+  .ft-label {
+    color: $fontColorDarker;
+    padding-bottom: 6px;
+  }
+
+  .x-form-display-field {
+    color: $textFieldTextColor;
+    text-align: left;
+    font-style: 13px;
+  }
+
+  .ft-left {
+    float: left;
+    @include fontSize(2);
+    color: $darkColor;
+  }
+
+  .ft-right {
+    float: right;
+    @include fontSize(2);
+    color: $darkColor;
+    padding-left: 10px;
+  }
+
+  .ft-bold-font {
+    font-weight: bold;
+  }
+
+  .x-trigger-cell {
+    position: absolute;
+    right: 0;
+    top: 70%;
+  }
+
+  .x-form-trigger {
+    width: 17px;
+    height: 21px;
+    border: 0;
+    background: transparent url(resources/images/T7/form/trigger.png) no-repeat 0 0;
+    cursor: pointer;
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+  }
+
+  .ft-create-payment-action-buttons {
+    overflow: hidden;
+    padding: 10px;
+
+    a:nth-child(1) {
+      margin-right: 5px;
+    }
+  }
+
+  .ft-internal-notes-textfield {
+    margin-right: 20px;
+  }
+}
+
+.x-surface {
+  position: relative;
+  z-index: 1;
+}
+
+.x-tip {
+  border: none;
+  border-color: transparent;
+  background-color: $lightColor;
+  -webkit-box-shadow: 0 0 8px $boxShadowColor;
+  box-shadow: 0 0 8px $boxShadowColor;
+  min-width: 70px;
+}
+
+.x-tip-anchor {
+  position: absolute;
+  overflow: hidden;
+  height: 20px;
+  width: 10px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 10px;
+  zoom: 1;
+}
+
+.x-tip-anchor-bottom {
+  background-image: url('resources/images/T7/ttbeak.png');
+  background-position: 0 -29px;
+  height: 40px;
+  background-repeat: no-repeat;
+  width: 30px;
+}
+
+.x-tip-anchor-top {
+  background-image: url('resources/images/T7/ttbeakup.png');
+  background-position: 0 14px;
+  height: 40px;
+  background-repeat: no-repeat;
+  width: 30px;
+}
+
+/*IE 8 FIXES*/
+
+/*ACCOUNT ACTIVITY*/
+
+.ie8 {
+  .ft-bar > .ft-bar-stretch {
+    width: 100%;
+  }
+
+  .x-tip {
+    .x-tip-default-mc {
+      background-color: $lightColor;
+      height: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .x-tip-body-default {
+      padding: 0;
+    }
+  }
+}
+
+/*Graph Tooltips*/
+
+.x-panel-default {
+  border: none;
+}
+
+.x-panel .x-panel-body-default {
+  background: white;
+  border-color: #99bce8;
+  color: $fontColor;
+  @include fontSize(2);
+  font-weight: normal;
+  border: none;
+  border-width: 0px;
+  border-style: none;
+}
+
+.x-panel-header-default-top {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.x-panel-header-default {
+  background-image: none;
+  background-color: $lightColor;
+  border: none;
+}
+
+.x-panel-header-default-horizontal {
+  padding: 4px 5px 4px 5px;
+}
+
+.x-panel-header-default {
+  @include fontSize(1);
+}
+
+/*
+================================
+Override ExtJS plus/minus icons.
+================================
+*/
+
+.x-accordion-hd {
+  .x-tool-collapse-top, .x-tool-collapse-bottom, .x-tool-expand-top, .x-tool-expand-bottom {
+    background: url(resources/images/T7/x-tool-plus-minus.png) no-repeat;
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle;
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.x-tool-img {
+  &.x-tool-collapse-top {
+    background-position: -18px 0;
+
+    &:hover {
+      background-position: -18px 0;
+    }
+  }
+
+  &.x-tool-expand-bottom {
+    background-position: 0 0;
+
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+}
+
+.x-panel-default-framed {
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  background-color: #dfe9f6;
+}
+
+.ft-grid-row-expander .x-panel-header-text-container-default {
+  color: #04408c;
+  @include fontSize(1);
+  font-weight: bold;
+  line-height: 15px;
+  padding: 0 2px 1px;
+  text-transform: none;
+  background-color: $moduleHeaderColor2;
+}
+
+.x-panel.ft-row-expander-grid-panel-header {
+  .x-panel-header {
+    background: $moduleHeaderColor2;
+    padding: 15px;
+    border-radius: 0;
+    border-bottom: 1px solid white;
+  }
+
+  .x-panel-header-text {
+    color: $darkColor;
+    @include fontSize(10);
+    font-weight: normal;
+  }
+
+  .x-panel-body {
+    border: none;
+    padding: 0;
+  }
+}
+
+/*  menu items css  :Aditya*/
+
+.ext-dropdown-menu {
+	position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    margin: 2px 0 0;
+    list-style: none;
+    @include fontSize(4);
+    text-align: left;
+    background-color: $lightColor;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  .x-menu-body {
+    background-color: $primaryColor;
+    padding: 0px;
+  }
+	.x-menu-icon-separator{
+		border: none;
+	}
+  .x-panel-body {
+    padding: 0px;
+  }
+
+  .x-menu-item {
+    border-radius: 0px;
+    padding: 10px 0px 10px 10px;
+	border-bottom: 1px solid $windowHeaderBorderColor;
+	@include fontSize(4);
+	&:last-child{
+	  border-bottom: 0px;
+	}
+
+    &:hover {
+      background-color: $ftDropdownMenuBgColor;
+    }
+  }
+
+  .x-menu-item-active, .ext-active-menu {
+    background-color: $ftDropdownMenuBgColor;
+    background-image: none;
+    border-radius: 0px;
+    border-width: 0px;
+	border-bottom: 1px solid $windowHeaderBorderColor;
+  }
+
+  .x-menu-item-active .x-menu-item-link {
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .x-menu-item-link {
+    padding: 0px 30px 0px 0px;
+  }
+
+  .x-menu-item-text {
+    color: $fontColor;
+    font-size: 100%;
+  }
+}
+
+.action-dropdown-hover .x-panel-body {
+  border-radius: 0px 5px 5px 5px;
+}
+
+.filter-view {
+  width: 500px;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid $summaryBorderColor !important;
+  .x-header-body{
+	padding: 15px;
+  }
+  .x-field .x-form-item-body{
+  	padding-left: 0px !important;
+  }
+  .filter-body{
+	padding: 0px 15px 15px;
+  }
+  .x-panel-body {
+    background-color: transparent !important;
+    border-width: 1px 1px 0px 1px;
+
+    &.x-panel-body-default {
+      background-color: transparent !important;
+      border-width: 1px 1px 0px 1px;
+    }
+    
+    & .ui-caret .x-btn-wrap{
+    	background-image: none;
+		@include fontSize(4);
+		&:before{
+			font-family: fontawesome;
+			content: '\f0d7';
+			color: $fontColor;
+		}
+    }
+	.ui-caret-dropdown.x-btn.x-btn-default-small{
+		background-image: none;
+	}
+  }
+  
+  &.xn-ribbon {
+    .x-panel-header-text-container.x-box-item {
+      font-weight: normal;
+      padding-left: 20px;
+      @include fontSize(10);
+      .fa.fa-filter {
+      	@include fontSize(8);
+      }
+      .applied-filter-header {
+			@include fontSize(4); 
+			color: $fontColor;
+		}
+    }
+    .x-panel-header.x-header {
+    	background-color: transparent;
+    	border: 0px;
+    	padding: 0px;
+    }
+    .x-tool.x-box-item {
+      left : 0px !important;
+      top: 2px !important;
+      &:before {
+        content: "\f0d8";
+        font-family: fontawesome;
+      }
+      .x-tool-img {
+        background-image: none;
+        display: none;
+  	  }
+  	}
+  	
+  }
+  &.xn-ribbon .x-collapsed {
+    .x-tool.x-box-item {
+      &:before {
+        content: "\f0d7";
+      }
+    }
+  }
+}
+
+.filter-panel.panel-default {
+	& > .panel-heading {
+		background-color: transparent;
+		padding: 15px;
+		border-bottom: 0px;
+		.panel-title .panel-title-text{
+			padding-left: 20px;
+		}
+		.filter-collapse {
+			left: 0px !important;
+    		top: 2px !important;
+    		position: absolute;
+		}
+	}
+	.label-val-item {
+	  padding-top: 6px;
+	}
+	.t7-anchor.clear-link {
+	  color: $linksColor;
+	  margin-left: 12px;
+	  &:hover {
+	    text-decoration: none;
+	  }
+    }
+}
+
+.filter-view {
+	.x-nlg & .x-panel-header-default-top {
+		background-image: none;
+	}
+	&.x-panel .x-panel-body .ft-normal-font.x-component.x-box-item.x-component-default{
+  		@include fontSize(4);
+  		font-weight: normal;
+  		vertical-align: middle;
+  		padding-top: 5px;
+  		padding-right: 10px;
+  	}
+	.x-btn.x-btn-default-small {
+		background-color: transparent;
+		padding: 5px 0px 0px 5px;
+		
+		 .x-btn-inner {
+			line-height: 6px;
+		}
+	}	
+	.ui-caret-dropdown.x-btn.x-btn-default-small{
+		padding-top: 4px;
+	}
+	.t7-action-link.x-btn.x-btn-default-small{
+		color: $linksColor;
+		background-color: transparent;
+		cursor: pointer;
+		@include fontSize(4);
+		padding: 0px;
+		margin-bottom: 10px;
+		line-height: 20px;
+		margin-left: 12px;
+		&.x-btn-default-small-over{
+			background-color: transparent;
+			color: $linksHoverColor;
+			.x-btn-inner{
+				color: $linksColor;
+				@include fontSize(4);
+			}
+		}
+		.x-btn-inner{
+			line-height: normal;
+			color: $linksColor;
+			@include fontSize(4);
+			line-height: 20px;
+		}
+	}
+  .x-tool.x-box-item, .x-btn-default-toolbar-small .x-btn-inner, .xn-toolbar-small .x-toolbar-item .x-btn-inner {
+      color: $fontColor !important;
+      @include fontSizeImportant(8);
+      background-image: none !important;
+      border-width: 0px !important;
+    }
+    .x-header-text-container {
+      color: $fontColor;
+    }
+    &.xn-ribbon .x-panel-body label.x-component.x-box-item.x-component-default {
+    	font-weight: normal;
+    	@include fontSize(4);
+    }
+ 
+  label.label-font-normal {
+    @include fontSize(4);
+    padding-top: 5px;
+  }
+
+  > .x-panel-body > .x-box-inner > .x-box-target > .x-box-item {
+    top: 10px !important;
+  }
+  
+  .searchBtn{
+	&.x-btn-default-small{
+		@include fontSize(2);
+		border: 1px solid $fontColor;
+		background-color: $buttonBackground;
+		padding: 6px 12px;
+		.x-btn-inner{
+			color: $lightColor;
+			@include fontSize(2);
+			line-height: 15px;
+		}
+	}
+	&.x-btn-default-small-over{
+		background-color: $buttonHoverColor;
+	}
+  }
+  
+  .btn-applied-filter.x-btn.x-btn-default-small{
+  	padding: 0px;
+  	line-height: 20px;
+	margin: 5px 20px 10px 0px;
+  	border-radius: 3px;
+  	max-width: 180px;
+	min-width: 50px;
+  	.x-btn-button{
+  		line-height: 20px;
+		height: auto;
+  	}
+  	.x-btn-inner{
+		color: $fontColor;
+  		@include fontSize(4);
+  		line-height: inherit !important;
+  		padding-right: 20px;
+  		text-overflow: ellipsis;
+  	}
+  	.xn-close-button{
+  		top: 0px;
+		left: auto;
+		right: 0px;
+		color: $fontColor;
+  		&:before{
+			font-family: fontawesome;
+			content: '\f057';
+			line-height: inherit;
+			@include fontSize(4);
+			padding-left: 3px;
+		}
+	}
+	&.x-btn-default-small-over{
+		background-color: transparent;
+	}
+	&.no-close-icon{
+	  .x-btn-inner{
+	    padding-right: 0px;
+	  }
+	}
+  }
+  .ft-primary-button.x-btn{
+		&.x-btn-default-small{
+			background-color: $primaryColor;
+		  	padding: 7px 10px;
+		  	line-height: 20px;
+		  	border-radius: 3px;
+		  	height: 34px;
+		  	margin-bottom: 10px;
+		}
+		.x-btn-button{
+  			line-height: 20px;
+  		}
+		.x-btn-inner{
+			color: $lightColor;
+	  		@include fontSize(2);
+	  		line-height: inherit !important;
+		}
+		&.x-btn-default-small-over{
+			background-color: $primaryColor1;
+		}
+	}
+	.toDateText{
+		@include fontSize(6);
+	    width: auto !important;
+	    min-width: 16px;
+	    height: 36px;
+	    padding: 4px 5px;
+	    font-weight: normal;
+	    line-height: 1.42857;
+	    text-align: center;
+	    text-shadow: 0 1px 0 $lightColor;
+	    vertical-align: middle;
+	    border: 0px solid #ccc;
+		margin-top: 2px;
+		span{
+			padding-top: 4px;
+		}
+	}
+}
+
+
+.filter-view {
+	.filterSttingButtons .x-btn-inner{
+		color: $primaryColor !important;
+		font-size: 13px !important;
+		padding: 3px;
+		text-align: left !important;
+		line-height: 15px !important;
+	}
+	
+	.x-panel-body label.x-component.x-box-item.x-component-default.create-advanced-filter-label {
+		background-color: $buttonBackground;
+		border-radius: 4px;
+		border-color: $buttonBorderColor;
+		color: $lightColor;
+		@include fontSize(2);
+		margin-top: 28px;
+		padding: 6px 12px;
+		&:hover {
+			background-color: $buttonHoverColor;
+		}
+	}
+	
+	.filterSttingButtons.x-btn.x-btn-default-small{
+		background-color : transparent;
+		color: $primaryColor !important;
+		text-decoration: underline;
+		text-align: left;
+		padding: 0px !important;
+	}
+	
+	.x-form-trigger-input-cell .x-form-field{
+		font-size: 13px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background-image: url(../../../images/T7/dropdown_arrow.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding-right: 15px;
+		border: 1px solid $borderColor;
+	}
+}
+
+.pagesetting .x-form-trigger-input-cell .x-form-field {
+	@include fontSize(6);
+	border-radius: 4px;
+	height: 39px;
+	line-height: 1.42857;
+	color: $fontColor;
+    padding: 6px 12px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url(../../../images/T7/dropdown_arrow.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 15px;
+	border: 1px solid $borderColor !important;
+}
+
+.filter-view .x-trigger-cell, .filter-view .x-trigger-cell .x-form-trigger  , .pagesetting .x-trigger-cell, .pagesetting .x-trigger-cell .x-form-trigger{
+	width: 0px !important;
+	border-width: 0px;
+	background-image: none;
+	background-color: transparent;
+}
+
+
+
+.x-css-shadow {
+  box-shadow: rgb(136, 136, 136) 0px 0px 0px !important;
+}
+
+.x-portlet {
+  margin-bottom: 10px;
+  margin: 8px 8px 0 0;
+}
+
+.x-panel {
+  .x-panel-header.x-header {
+    background-color: $panelHeaderBackground;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 10px 15px;
+    line-height: 1.42857;
+    border-bottom: 1px solid transparent;
+    border-color: #ddd;
+  }
+
+  &.xn-ribbon.xn-portlet .x-panel-header {
+    display: block;
+  }
+
+  .x-panel-header-default-framed-top {
+    border-width: 0px 2px;
+    border-style: solid;
+    border-color: $lightColor;
+    border-radius: 0px;
+    background-image: none;
+  }
+
+  &.x-panel-default-framed {
+    border-radius: 0px;
+    background: $moduleContent;
+  }
+
+  .x-panel-header-default-framed-top {
+    box-shadow: none;
+  }
+
+  .x-panel-header-text-container {
+    padding-left: 25px;
+	line-height: 25px;
+  }
+
+  .x-panel-header-text-default-framed {
+    @include fontSize(10);
+    color: $fontColor;
+    font-weight: normal;
+  }
+
+  .x-panel-header-default-framed-top {
+    border: none;
+    border-radius: 0px;
+  }
+}
+
+.xn-ribbon {
+  .widgetcls {
+    height: 18px;
+    width: 18px;
+    color : $fontColor;
+    @include fontSize(8);
+    cursor : pointer;
+  }
+  .widget-close{
+	left : 0px !important;
+  }
+  .widget-collapse-cls {
+    height: 18px;
+    width: 18px;
+    color : $fontColor;
+    @include fontSize(8);
+    cursor : pointer;
+  }
+  
+  .x-toolbar-default .widget-footer-cls {
+	color: $fontColor;
+    @include fontSize(8);
+    font-weight: bold;
+    cursor: pointer;
+	border: none;
+	.x-btn-inner{
+	  @include fontSize(8);
+	  color: $fontColor;
+	}
+  }
+
+  .x-panel-header-default-framed-horizontal .x-tool-after-title {
+    width: 18px !important;
+    height: 18px !important;
+    margin-left: 10px;
+	display: inline-block;
+    top: -2px !important;
+  }
+
+  .x-tool-img.x-tool-gear {
+    background: none;
+    content: "\f013";
+    font-family: fontawesome;
+    width: 18px;
+    height: 18px;
+
+    &:after {
+      background: none;
+      content: "\f013";
+      @include fontSize(6);
+      color: $secondaryBtn;
+      font-family: fontawesome;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .x-tool-img.x-tool-refresh {
+    background: none;
+    content: "\f021";
+	@include fontSize(8);
+    font-family: fontawesome;
+    width: 18px;
+    height: 18px;
+
+    &:after {
+      background: none;
+      content: "\f021";
+      font-family: fontawesome;
+      width: 18px;
+      height: 18px;
+      color: $fontColor;
+      vertical-align : bottom;
+      background: none;
+    }
+  }
+
+  .x-tool-img.x-tool-close {
+    background: none;
+    content: "\f057";
+    font-family: fontawesome;
+    width: 18px;
+    height: 18px;
+
+    &:before {
+      background: none;
+      content: "\f057";
+      @include fontSize(6);
+      color: $secondaryBtn;
+      font-family: fontawesome;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .ux_panel-transparent-background .x-panel-body {
+    background-color: transparent !important;
+  }
+}
+
+.xn-portlet .ux_bodyCls {
+  background: $moduleContent !important;
+  margin-top: 17px !important;
+}
+
+.xn-ribbon .x-portlet {
+  margin: 8px 12px 10px 0px;
+}
+
+.panel-seperator {
+  border-right: 0px;
+  border-right-style: none;
+}
+
+.xn-ribbon {
+  .x-panel-body-default {
+    background-color: $moduleContent;
+  }
+
+  .mainHeader .x-panel-body-default {
+    background-color: $linkBgColor;
+  }
+}
+
+.ux_panel-background {
+  .x-panel-body-default {
+    background-color: transparent;
+  }
+
+  .x-form-text {
+    background-color: transparent;
+    @include fontSize(4);
+    padding: 6px 10px;
+    height: 25px;
+  }
+
+  .x-toolbar {
+    padding-left: 0px;
+  }
+}
+
+.banner-prev{
+	position:absolute; 
+	@include fontSize(20); 
+	top : 41%; 
+	padding: 0px 0px 0px 6px;
+	color : $lightColor;
+	cursor : pointer; 
+}
+.banner-next{
+	position:absolute; 
+	@include fontSize(20);
+	top:41%; 
+	left:98%;
+	cursor : pointer;
+	color : $lightColor;
+}
+.banner-portlet {
+  border-style: none !important; 
+  padding : 0px !important	
+}
+  
+
+.xn-portlet {
+  border-width: 0px 1px !important;
+  border-style: solid;
+  border-color: $lightColor !important;
+  padding: 0px !important;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 12px 0px;
+  border: 1px solid transparent;
+  border-radius: 4px !important;
+  background-color: $lightColor;
+  .x-tab-bar-top .x-tab-bar-body, .x-window-body-default {
+    border: none !important;
+    background: $lightColor !important;
+  }
+  
+  .x-grid-view-default, .x-grid-empty {
+	background-color: $gridRowColor; 
+  }
+
+  .x-toolbar-default {
+    //margin-top: 10px;
+    background: transparent;
+    padding: 11px 0px;
+	
+	  &.widgetTable-footer{
+        background-color:$gridRowOverColor;
+        color:$fontColor;
+        text-decoration: none;
+	  }
+	
+    .x-btn-default-toolbar-small-over {
+      background-color: inherit;
+      background-image: none;
+      border: none;
+    }
+
+    .custom_sprite_orange {
+      &.x-btn-default-toolbar-small-over, &.x-btn-default-toolbar-small-focus {
+        background-color: orange;
+        background-image: none;
+        border: none;
+      }
+    }
+
+    .custom_sprite_green {
+      &.x-btn-default-toolbar-small-over, &.x-btn-default-toolbar-small-focus {
+        background-color: green;
+        background-image: none;
+        border: none;
+      }
+    }
+
+    .x-btn-inner {
+      @include fontSize(4);
+    }
+
+    .x-btn-default-toolbar-small-focus {
+      background-color: inherit;
+      background-image: none;
+      border: none;
+    }
+  }
+  .x-panel-header-default-framed-horizontal .x-tool-after-title{
+	top : 2px !important;
+  }
+  .xn-account-filter-btnmenu .x-btn-inner {
+    color: #7ACAE5;
+    text-decoration: underline;
+    cursor: pointer;
+    @include fontSize(3);
+  }
+}
+
+.xn-ribbon .widget-close .x-panel-body-default {
+  background-color: transparent;
+}
+
+.x-tip.x-tip-default {
+  background: transparent;
+  border: 0px;
+  box-shadow: 0px 0px;
+  .x-tip-body-default {
+	background: $lightColor;
+	white-space: pre-wrap;
+	overflow: inherit;
+	word-break: break-all;
+	min-width: 65px;
+	width: inherit !important;
+	box-shadow: 0px 0px 8px #888888;
+	border-radius: 3px;
+  }
+}
+
+.x-boundlist.x-boundlist-default {
+    background-color: $lightColor;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+	min-width: 200px;
+	max-width: 250px;
+  .x-boundlist-item {
+	@include fontSize(4);
+	color: $fontColor;
+	padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: $windowHeaderBorderColor;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .x-boundlist-item-over.x-boundlist-item {
+	background: $dropDownHoverBgColor;
+	
+  }
+  .x-boundlist-selected{
+	background: transparent;
+  }
+  /*.x-boundlist-list-ct{
+	height: 193px !important;
+	ul{
+		height: inherit !important;
+	}
+  }*/
+}
+
+.ux_dropdown .x-menu-icon-separator {
+  left: 0px;
+  border-left: 0px;
+  background-color: white;
+  width: 2px;
+}
+
+.ft-layout-inner .xn-ribbon .x-panel-default {
+  padding: 0 0 0 0;
+}
+
+.ux_dropdown {
+  &.x-menu {
+	background-color: $lightColor;
+    border: 1px solid $borderColor;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+  .x-menu-item {
+	cursor: pointer;
+	@include fontSize(4);
+    color: $fontColor;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: $windowHeaderBorderColor;
+	&.x-menu-item-checked {
+		.x-menu-item-icon, .x-menu-item-icon-right {
+		  background-image: url(resources/images/T7/checked.png);
+		  margin: 8px 10px;
+		}
+	  }
+
+    &.x-menu-item-unchecked {
+		.x-menu-item-icon, .x-menu-item-icon-right {
+		  background-image: url(resources/images/T7/checkbox.png);
+		  margin: 8px 10px;
+		}
+    }
+	&.x-menu-item-active{
+		background-image: none;
+		background-color: $dropDownHoverBgColor;
+	}
+  }
+  .x-menu-item-text{
+	color: $fontColor;
+	@include fontSize(4);
+  }
+  .x-menu-item-link {
+    padding: 0 0 0 30px;
+  }
+}
+
+.ux_dropdown-no-leftpadding.ux_dropdown .x-menu-item-link {
+  padding: 0 0 0 0px;
+}
+
+.ux_panel-background {
+  background: $lightColor;
+
+  .x-panel-body {
+    background: $lightColor;
+  }
+}
+
+.x-portal-body.x-panel-body-default {
+  padding: 0 0 0 0px;
+}
+
+.ux_dropdown {
+  .x-vertical-box-overflow-body {
+    overflow-y: scroll;
+    width: 100% !important;
+  }
+
+  .x-menu-scroll-top, .x-menu-scroll-bottom {
+    display: none;
+  }
+}
+
+.x-menu .x-menu-body {
+  padding: 0px;
+  width: 100%;
+  background-color: $lightColor;
+}
+
+.xn-portlet .x-panel-body-default-framed {
+  background-color: $gridRowColor;
+  overflow: hidden !important;
+}
+
+.menu-separator .x-menu-item-link {
+	width : 100%;
+	border-top : 1px solid $gridHeightLabel;
+}
+.menu-separator.x-menu-item:hover{
+	background-color : $primaryColor;
+	cursor: auto;
+}
+
+.widget-header-menu.x-menu{
+	padding: 5px 0px;
+	@include fontSize(4);
+	width: 162px !important;
+	border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+	background-color: $lightColor;
+	.x-menu-body{
+		width: 100% !important;
+	}
+	.x-box-inner.x-vertical-box-overflow-body {
+		width: 100% !important;
+		.x-box-target{
+			width: 100% !important;
+		}
+	}
+	.x-menu-item{
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		width: 100% !important;
+		font-weight: normal;
+		line-height: 1.42857;
+		color: $fontColor;
+		white-space: nowrap;
+		.x-menu-item-link{
+			padding-left: 0px;
+			font-size: inherit;
+			width: 100% !important;
+			.x-menu-item-icon{
+				@include fontSize(8);
+				width: 16px;
+				height: 16px;
+				top: 4px;
+				padding-left: 15px;
+				background-position: center;
+				color: $fontColor;
+			}
+			.x-menu-item-text{
+				@include fontSize(4);
+				color: $fontColor;
+				padding-left: 19px;
+			}
+		}
+	}
+	.x-menu-item-active{
+		background-color: $menuHoverColor;
+		border: none;
+		background-image: none;
+		border-radius: 0px;
+	}
+}
+
+.action-dropdown-menu{
+	border: 1px solid #ccc;
+	@include fontSize(4);
+	//padding: 5px 0px;
+	background-color: $lightColor;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	.x-menu-body{
+		//width: 100% !important;
+		.x-box-inner.x-vertical-box-overflow-body{
+			width: auto !important;
+		}
+		.x-box-target{
+			width: auto !important;
+		}
+	}
+	.x-menu-item{
+		background-color: $lightColor;
+		border-radius: 0px !important;
+	    display: block;
+		border-bottom: 1px solid $windowHeaderBorderColor;
+		clear: both;
+		font-weight: normal;
+		padding: 0px;
+		line-height: 1.42857;
+		color: $fontColor;
+		white-space: nowrap;
+		.x-menu-item-link{
+			padding: 10px 20px 10px 10px;
+			width: 100%;
+		}
+	}
+	.x-menu-item-active{
+		background-image: none;
+		border: none;
+		border-bottom: 1px solid $windowHeaderBorderColor;
+		.x-menu-item-link{
+			background-color: $dropDownHoverBgColor;
+		}
+	}
+	.x-menu-item-text {
+		color: $fontColor;
+		@include fontSize(4); 
+		margin-right: 14px;
+	}
+}
+
+.widget-header {
+	.x-header-text-container{
+		padding: 0px 50px 0px 30px;
+		width: 100% !important;
+	}
+	.x-component{
+		margin-right : 10px !important;
+	}
+	.x-tool-after-title{
+		margin-right : 7px !important;
+	} 
+} 
+
+.ribbon-view{	
+	.x-header .x-header-body {
+		background-color: $panelHeaderBackground;
+		border-bottom: 1px solid $summaryBorderColor;
+		.x-tool.x-box-item{
+			top: 2px !important;
+		}
+		.ribbon-settings{
+			padding-top: 4px;
+		}
+	}
+	.summary-combobox.custom-combobox-input{
+		border-radius: 4px;
+		border-color: $fontColor;
+		background-image: url("resources/images/T7/alert-caret.png");
+		background-color: $buttonBackground;
+		color: $lightColor;
+		background-position-x: 95%;
+		padding-right: 20px;
+	}
+	.x-panel-body.x-panel-body-default{
+		padding: 15px;
+	}
+}
+
+.widget-seperator.x-panel-default{
+  border-bottom: 1px solid $windowHeaderBorderColor;
+  &:last-child{
+    border-bottom: 0px;
+  }
+}
+
+.x-nlg{ 
+  .x-btn.x-btn-default-small, .x-panel-header.x-panel-header-default-framed-top, .x-grid .x-grid-header-ct, .x-grid .x-column-header, .x-toolbar.x-toolbar-default, .x-grid .x-column-header-sort-DESC, .x-grid .x-column-header-sort-ASC{
+    background-image: none !important;
+  }
+}
+
+.x-field-form-focus.x-field-default-form-focus, .x-field-form-focus.x-field-default-form-hover{
+    border-color: $inputTypeBorderColor;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+

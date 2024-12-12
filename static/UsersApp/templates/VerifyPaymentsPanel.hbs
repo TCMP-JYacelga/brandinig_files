@@ -1,0 +1,75 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="paymentCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">{{getLabel "lbl.clientUser.module.payments" "Payments"}}</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="paymentAssetBody" class="panel-body">
+		{{#each assets}}
+			{{#selectAsset assetId "02"}}		
+				{{#if accounts}}
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.module.payments.paymentsAccounts" "Payment Accounts"}}
+							</label> <span class="pull-right catseparator">:</span>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						<div class="form-group">
+							<span> 
+								{{getResourceListExpressionAccounts accounts "accountName" "accountNo"}}
+							 </span>
+						</div>
+					</div>
+				</div>
+				{{/if}}
+
+				{{#if packages}}
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.module.payments.paymentspackages" "Payment Packages"}}
+							</label> <span class="pull-right catseparator">:</span>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						<div class="form-group">
+							<span> 
+								{{getResourceListExpression packages "packageName" "subsidiaryName"}}
+							 </span>
+						</div>
+					</div>
+				</div>
+				{{/if}}
+				
+			
+				{{#if templates}}
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label class="toplabel frmLabel">{{getLabel "lbl.clientUser.module.payments.paymentTemplates" "Payment Templates"}} 
+								</label> <span class="pull-right catseparator">:</span>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="form-group">
+								<span> 
+									{{getResourceListExpression templates "templateName" "subsidairyName"}}
+								 </span>
+							</div>
+						</div>
+					</div>
+				{{/if}}
+				{{/selectAsset}}
+			{{/each}}
+		</div>
+	</div>
+</div>
+			

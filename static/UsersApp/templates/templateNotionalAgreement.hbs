@@ -1,0 +1,58 @@
+<div class="panel panel-default" >
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="agreementInfoCaret"
+						class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>{{getLabel "lbl.clientUser.templatenotional.title" "Notional Agreements"}}</span> 
+					<img id="agreementAll_{{assetid}}" src="{{checkBoxIcon allNotionalAgreements}}"
+					data-version = "{{ assignAllNotionals_version }}"
+					 class="chkBoxAlign" width="16"
+						height="16" border="0">
+				   <label id="agreementAll_{{assetid}}" for="agreementAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.clientUser.all" "All"}}</label>
+				  <label id="lblNotionalAgreementCount" class="checkbox-inline pull-right">{{notionalAgreementsAssignedCount}} {{getLabel "lbl.clientUser.of" "of"}} {{notionalAgreementsCount}} {{getLabel "lbl.clientUser.selected" "Selected"}}</label>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="agreementInfoDiv" class="panel-body">
+		<div class="row grid">
+			<table class="view-grid" style="width: 99%">
+				<thead>
+					<tr class="view-grid-header">
+						<td class="view-grid-header-text" style="width: 10%"></td>
+						<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatenotional.agreementcode" "Agreement Code"}}</td>
+						<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatenotional.agreementName" "Agreement Name"}}</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each notionalAgreements}}
+					<tr class="view-grid-body">
+						<td class="view-grid-body-content text-center "><a
+							class="limit-reached test"><img
+								id="chkNotional_{{../assetid}}_{{agreementCode}}"
+								data-agreementRecKey ="{{ agreementRecKey }}"
+								data-agreementcode = "{{ agreementCode }}"
+								data-agreementname = "{{ agreementName }}"
+								data-subsidairyid = "{{ subsidiaryId }}"
+								data-subsidairyname = "{{ subsidiaryName }}"
+								data-assetid="{{../assetId}}"
+								data-version = "{{ version }}"
+								data-digest = "{{ digest }}"
+								src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+								border="0"></a></td>
+						<td class="view-grid-body-content">{{agreementCode}}</td>
+						<td class="view-grid-body-content">{{agreementName}}</td>
+					</tr>
+					{{else}}
+					<tr class="view-grid-body">
+						<td class="view-grid-body-content" colSpan="4"
+							style="padding-bottom: 1%;">&nbsp</td>
+					</tr>
+					{{/each}}
+				<tbody>
+			</table>
+		</div>
+	</div>
+</div>

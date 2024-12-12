@@ -1,0 +1,303 @@
+<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span class="ft-padding-l ">{{getLabel "lbl.clientUser.userDetails" "User Details"}}</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body" id="categoryDetails">
+						
+						<div class="row">		
+							<div class="col-sm-4 col-lg-3">
+								<div class="form-group">
+									<label class="frmLabel"> {{getLabel "lbl.clientUser.firstName" "First Name"}}
+									</label>
+									<br><span class="wrap-word {{firstNameClass}}">{{{firstName}}}</span>
+								</div>
+							</div>
+							
+							<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+								<div class="form-group">
+									<label class="frmLabel"> {{getLabel "lbl.clientUser.lastName" "Last Name"}}
+									</label>
+									<br><span class="wrap-word {{lastNameClass}}">{{{lastName}}}</span>
+								</div>
+							</div>
+							
+							
+							<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+								<div class="form-group">
+									<label class="frmLabel"> {{getLabel "lbl.company.name" "Company Name"}}
+									</label>
+									<br><span class="wrap-word">{{corporationDesc}}</span>
+								</div>
+							</div>
+							
+							
+						<!-- 	<div class="col-sm-4 col-lg-3 col-lg-offset-1" style="visibility: hidden">
+								<div class="form-group">
+									<label class="frmLabel"> {{getLabel "lbl.clientUser.fullName" "Full Name"}}
+									</label>
+									<br><span class="wrap-word">{{{firstName}}} {{{lastName}}}</span>
+								</div>
+							</div> -->
+						</div>
+					
+					<div class="row">
+					
+						{{#ifCond metaData.autoUsrCode '==' "PRODUCT" }}
+							<div class="col-sm-4 col-lg-3">
+								<div class="form-group">
+									<label class="frmLabel"> {{getLabel "lbl.clientUser.loginId" "Login Id"}}
+									</label>
+									<br><span>{{loginId}}</span>
+								</div>
+							</div>
+						{{/ifCond}}
+						{{#ifCond metaData.ssoClient '==' 'Y'}}
+							{{#ifCond metaData.autoUsrCode '==' "PRODUCT" }}
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.ssologinId" "SSO Login Id"}}
+										</label>
+										<br><span>{{ssoLoginId}}</span>
+									</div>
+								</div>
+							{{/ifCond}}
+							{{#ifCond metaData.autoUsrCode '!=' "PRODUCT" }}
+								<div class="col-sm-4 col-lg-3">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.ssouserId" "SSO User Id"}}
+										</label>
+										<br><span>{{ssoLoginId}}</span>
+									</div>
+								</div>
+							{{/ifCond}}	
+						{{/ifCond}}
+						
+						<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+							<div class="form-group">
+								<label class="frmLabel">{{getLabel "lbl.clientUser.activationDate" "Activation Date"}}
+								</label>
+								<br><span class="{{activationDateClass}}">{{activationDate}}</span>
+							</div>
+						</div>
+						
+						{{#ifCond metaData.ssoClient '==' 'Y'}}
+								<div class="col-sm-4 col-lg-3">
+						{{else}}
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+						{{/ifCond}}
+							<div class="form-group">
+								<label class="frmLabel"> {{getLabel "lbl.clientUser.userCategory" "Role"}}
+								</label>
+								<br><span class="wrap-word {{usrRoleIdClass}}">{{usrRoleId}}</span>
+							</div>
+						</div>
+					</div>
+				
+					<div class="row">		
+						<div class="col-sm-4 col-lg-3">
+							<div class="form-group">
+								<label class="frmLabel"> {{getLabel "lbl.clientUser.department" "Department"}}
+								</label>
+								<br><span class="wrap-word {{departmentClass}}">{{department}}</span>
+							</div>
+						</div>
+						<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+							<div class="form-group">
+								<label class="frmLabel"> {{getLabel "lbl.clientUser.telephone" "Telephone"}}
+								</label>
+								<br><span class="wrap-word {{telephoneClass}}">{{telephone}}</span>
+							</div>
+						</div>
+					</div>
+					
+					<div id="usrAddressDiv">
+							<div class="row">		
+								<div class="col-sm-4 col-lg-3">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.usrAddress" "Address"}}
+										</label>
+										<br><span class="wrap-word {{addressLine1Class}}">{{address.addressLine1}}</span>
+									</div>
+								</div>
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.usrCountry" "Country"}}
+										</label>
+										<br><span class="wrap-word {{usrCountryClass}}">{{usrCountryDesc}}</span>
+									</div>
+								</div>
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.usrState" "State"}}
+										</label>
+										<br><span class="wrap-word {{usrStateClass}}">{{usrStateDesc}}</span>
+									</div>
+								</div>
+							</div>
+						
+							<div class="row" id="usrOtherAddressDiv">		
+								<div class="col-sm-4 col-lg-3">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.fax" "Fax"}}
+										</label>
+										<br><span class="wrap-word {{faxClass}}">{{address.fax}}</span>
+									</div>
+								</div>
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel">{{getLabel "lbl.clientUser.city" "City"}}
+										</label>
+										<br><span class="wrap-word {{cityClass}}">{{address.city}}</span>
+									</div>
+								</div>
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.zipCode" "Zip Code"}}
+										</label>
+										<br><span class="wrap-word {{zipCodeClass}}">{{address.zipCode}}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">		
+							<div class="col-sm-4 col-lg-3">
+								<div class="form-group">
+									<label class="frmLabel"> {{getLabel "lbl.clientUser.email" "Email"}}
+									</label>
+									<br><span class="wrap-word {{emailClass}}">{{email}}</span>
+								</div>
+							</div>
+							<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+								<div class="form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.mobileNo" "Mobile Number"}}
+									</label>
+									<br><span class="wrap-word {{mobileNoClass}}">{{mobileNo}}</span>
+								</div>
+							</div>
+							
+							<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+								<div class="form-group">
+									<label class="frmLabel">  {{getLabel "lbl.clientUser.usrLanguage" "Language"}}
+									</label>
+									<br><span class="wrap-word {{usrLanguageClass}}">{{getLanguageMstLabel usrLanguage usrLanguageDesc }}</span>
+								</div>
+							</div>
+						
+						</div>
+						
+							<div class="row">
+								<div class="col-sm-4 col-lg-3">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.chkTemplateOnlyFlag" "Only a Template User"}} 
+										</label>
+										<br>
+										{{#if isTemplateOnly}}
+											<span class="{{isTemplateOnlyClass}}">Yes</span>
+										{{else}}
+											<span class="{{isTemplateOnlyClass}}">No</span>
+										{{/if}}
+									</div>
+								</div>
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel"> {{getLabel "lbl.clientUser.chkUsrSuperUser" "Super User"}}
+										</label>
+										<br>
+										{{#if superUser}}
+											<span class="{{isSuperUserClass}}">Yes</span>
+										{{else}}
+											<span class="{{isSuperUserClass}}">No</span>
+										{{/if}}
+									</div>
+								</div>
+								<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+									<div class="form-group">
+										<label class="frmLabel">  {{getLabel "lbl.clientUser.chkUsrAccessType" "View Confidential"}}
+										</label>
+										<br>
+										{{#if allowConfidential}}
+											<span class="{{allowConfidentialClass}}">Yes</span>
+										{{else}}
+											<span class="{{allowConfidentialClass}}">No</span>
+										{{/if}}
+									</div>
+								</div>
+								{{#ifCond metaData.disableRejectFlag '==' "Y" }}
+									<div class="col-sm-4 col-lg-3">
+										<div class="form-group">
+											<label class="frmLabel">  {{getLabel "lbl.clientUser.chkDisableReject" "Disable Reject"}}
+											</label>
+											<br>
+											{{#if disableReject}}
+												<span class="{{disableRejectClass}}">Yes</span>
+											{{else}}
+												<span class="{{disableRejectClass}}">No</span>
+											{{/if}}
+										</div>
+									</div>
+								{{/ifCond}}
+							</div>
+						
+						<div class="row">
+							{{#ifCond metaData.autoUsrCode '==' "PRODUCT"}}
+								{{#ifCond metaData.mfaApplicable '==' "Y"}}
+									<div class="col-sm-4 col-lg-3">
+										<div class="form-group">
+											<label class="frmLabel"> {{getLabel "lbl.clientUser.chkUsrMultiFa" "MFA"}}
+											</label>
+											<br>
+											{{#if requireMFA}}
+												<span class="{{requireMFAClass}}">Yes</span>
+											{{else}}
+												<span class="{{requireMFAClass}}">No</span>
+											{{/if}}
+										</div>
+									</div>
+									<div class="col-sm-4 col-lg-3 col-lg-offset-1 hidden">
+										<div class="form-group">
+											<label class="frmLabel">  {{getLabel "lbl.clientUser.usrMfaTrigger" "MFA Trigger"}}
+											</label>
+											<br><span class="wrap-word {{usrMfaTrigger}}">{{getMfaTriggerLabel mfaTriggerId mfaTriggerDesc }}</span>
+										</div>
+									</div>
+								{{/ifCond}}
+							{{/ifCond}}
+							
+							
+							{{#ifCond metaData.authMatrixPermission '==' 'Y'}}
+								{{#ifCond metaData.mfaApplicable '==' "Y"}}
+									<div class="col-sm-4 col-lg-3 col-lg-offset-1">
+								{{/ifCond}}
+								{{#ifCond metaData.mfaApplicable '!=' "Y"}}
+									<div class="col-sm-4 col-lg-3">
+								{{/ifCond}}
+									<div class="form-group">
+										<label class="frmLabel">{{getLabel "lbl.clientUser.approvalLevel" "Approval Level"}}
+										</label>
+										<br/><span class="{{usrApprovalLevelClass}}">{{usrApprovalLevel}}</span>
+									</div>
+								</div>
+							{{/ifCond}}
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-4 col-lg-3">
+								<div class="form-group">
+									<label class="frmLabel">{{getLabel "lbl.clientUser.subsidoryaccess" "Subsidiary Access"}} 
+									</label>
+									<br/><span>{{getListExpression subsidiaries "subsidiaryName"}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</div>		

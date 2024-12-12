@@ -1,0 +1,74 @@
+<div>
+	<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.clientUser.expand" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.clientUser.collapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="limitTypeInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.clientUser.limit.limitTypeInfoCaret" "Period Type"}}</span> 
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="limitTypeInfoDiv"  class="panel-body">
+			{{#each assets}}
+				{{#selectAsset assetId "18"}}
+					<div class="col-sm-2">
+						{{#ifCond limitType '==' "D"}}
+							<input id="periodTypeD" name="limitType" class="radioSmall" value="D" type="radio" checked="checked" tabindex="1">
+						{{/ifCond}}
+						{{#ifCond limitType '!=' "D"}}
+							<input id="periodTypeD" name="limitType" class="radioSmall" value="D" type="radio" tabindex="1">
+						{{/ifCond}}
+						<span class="topAlign ux_largemargin-right ux_font-size14-normal">{{getLabel "lbl.clientUser.limit.daily" "Daily"}}</span>
+					</div>
+					<div class="col-sm-2">									
+						{{#ifCond limitType '==' "M"}}
+							<input id="periodTypeM" name="limitType" class="radioSmall" type="radio" value="M" checked="checked" tabindex="1">
+						{{/ifCond}}
+						{{#ifCond limitType '!=' "M"}}
+							<input id="periodTypeM" name="limitType" class="radioSmall" type="radio" value="M" tabindex="1">
+						{{/ifCond}}
+						<span class="topAlign ux_largemargin-right ux_font-size14-normal">{{getLabel "lbl.clientUser.limit.monthly" "Monthly"}} </span>
+					</div>	
+				{{/selectAsset}}
+			{{/each}}
+		</div>
+	</div>
+	
+	{{#each assets}}
+		{{#selectAsset assetId "18"}}
+			{{#ifCond limitLayout '!=' '2'}}
+				{{>LimitTemplatePayCategory @root}}
+			
+		 		{{>LimitTemplateSecCode @root}}
+		 	
+		 		{{>LimitTemplatePayCategoryTempType @root}}	
+			
+				{{>LimitTemplateACHRev @root}}
+				
+				{{>LimitTemplateACHPassThru @root}}
+				
+			{{/ifCond}}
+			
+						
+			{{#ifCond limitLayout '!=' '1'}}
+				{{>LimitTemplatePayPkg @root}} 
+			{{/ifCond}}
+	
+			{{>LimitTemplateDetail @root}}
+		{{/selectAsset}}
+	{{/each}}
+	<div id="confirmLimitMsgPopup"></div>
+</div>

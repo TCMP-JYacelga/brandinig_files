@@ -1,0 +1,66 @@
+<!--Interface Privileges starts here -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="intrefacePrevInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.role.interfprivileges" "Interface Privileges"}}</span>
+						<img id="interfaceAll_{{assetid}}" src="{{checkBoxIcon assignAllInterfaces}}" 
+							 data-version="{{ assignAllInterfaces_version }}"	width="16" class="chkBoxAlign" height="16" border="0"> 
+						<label id = "interfaceAll_{{assetid}}" for = "interfaceAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.interfpriv" "All"}}</label>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="intrefacePrevInfoDiv" class="panel-body">
+			<div class="row grid">
+					<table class="view-grid" style="width: 100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text">{{getLabel "lbl.role.interfNm" "Interface Name"}}</td>
+								<td class="view-grid-header-text" style="width: 15%">{{getLabel "lbl.role.interfEdit" "Edit"}}</td>
+								<td class="view-grid-header-text" style="width: 15%">{{getLabel "lbl.role.interfExecute" "Execute"}}</td>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each interfaces}}
+							<tr class="view-grid-body">
+								<td class="view-grid-body-content">{{interfaceType}}</td>
+								<td class="view-grid-body-content"><a
+									class="limit-reached test"><img
+										id="chkInterfaceEdit_{{../assetid}}_{{interfaceId}}"
+										data-interfaceType = "{{interfaceType}}"
+										data-interfaceId = "{{interfaceId}}"
+										data-model = "{{model}}"
+										data-subModule = "{{subModule}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon edit}}" width="16" height="16" border="0"></a></td>
+								<td class="view-grid-body-content"><a
+									class="limit-reached test"><img
+										id="chkInterfaceExecute_{{../assetid}}_{{interfaceId}}"
+										data-interfaceType = "{{interfaceType}}"
+										data-interfaceId = "{{interfaceId}}"
+										data-model = "{{model}}"
+										data-subModule = "{{subModule}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon execute}}" width="16" height="16"
+										border="0"></a></td>
+							</tr>
+							{{else}}
+							<tr class="view-grid-body">
+								<td class="view-grid-body-content" colSpan="4"
+									style="width: 20%; padding-bottom: 1%;">&nbsp</td>
+							</tr>
+							{{/each}}
+
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+	<!--Interface Privileges ends here -->

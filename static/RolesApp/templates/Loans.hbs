@@ -1,0 +1,54 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.loansexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.loanscollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "07"}}
+	
+		{{>prevTemplate assetid="07"}}
+
+		<!--Account Section starts here -->
+		<div class="row">
+			<div class="col-sm-12">
+				{{>accountTemplate assetid="07"}}
+			</div>
+		</div>
+		<!--Account Section end here -->
+		
+
+		<!--Alerts and Reports Privileges starts here -->
+		<div class="row">
+	
+			<!-- Start of Alerts -->
+			<div class="col-sm-6">
+				{{>alertTemplate assetid="07"}}
+			</div>
+			<!-- End of Alerts -->
+	
+			<!-- Start of Reports -->
+			<div class="col-sm-6">
+				{{>reportTemplate assetid="07"}}
+			</div>
+			<!-- End of Reports -->
+		</div>
+		<!-- Alerts and Reports Privileges ends here -->
+	
+	<!--Granular Privileges - Loans starts here -->	
+		<div class="row">
+			<div class="col-sm-12">
+				{{>granLoansTemplate assetid="07"}}
+			</div>
+		</div>
+	<!--Granular Privileges - Loans ends here -->	
+	
+	
+		{{/selectAsset}} 
+	{{/each}}
+
+</div>

@@ -1,0 +1,210 @@
+.ux_padding-top-12 {
+	padding : 12px 0px 0px 0px !important;
+}
+
+.ux_margin-top-12 {
+	margin-top : 12px !important;
+}
+
+.ux_header-padding{
+	padding: 6px 5px 6px 10px !important;
+}
+
+.ux_reciever-padding{
+	padding: 7px 0px 5px !important;
+}
+
+.ux_custom-section-header{
+	margin: 0px !important;
+	padding: 0px !important;
+	line-height: inherit !important;
+	font-size: 15px !important;
+	font-family: $fontFamily !important;
+	color: $primaryColor !important;
+	background: none !important;
+	font-weight: normal !important;
+	text-transform: uppercase;
+}
+
+.ux_custom-section-header.icon-collapse:before{
+	content: "\f0d7" !important;
+	padding-right: 10px !important;
+	@include glyph(100%)
+}
+
+.ux_custom-section-header.icon-expand:before{
+	content: "\f0da" !important;
+	padding-right: 10px !important;
+	@include glyph(100%)
+}
+
+.ux_panel-body{
+	padding: 12px 12px 12px $fontSize14 !important;
+	line-height: 24px;
+	font-size: 100%;
+	background: $lightColor !important;
+}
+
+.ux_info-icon{
+	background: none !important;
+	padding-left: 8px !important;
+	float: right !important;
+}
+
+.ux_info-icon:before{
+	content: "\f05a" !important;
+	float: right !important;
+	@include glyph(100%)
+}
+
+.ux_sifields-header{
+	/*line-height: inherit !important;*/
+	font-size: fontSize16 !important;
+	font-weight: normal !important;
+	/*background: $lightColor !important;*/
+	color: $primaryColor !important;
+	text-transform: uppercase;
+}
+.ux_icon-padding.fa{
+	padding-right: 5px !important;
+	opacity: 1 !important;
+	color: $primaryColor !important;
+}
+
+
+.ux_panel-padding{
+	padding: 10px 0px !important;
+}
+
+.ux_div-padding{
+	padding: 12px 0px 0px !important;
+}
+
+.ux_panel-padding-leftright{
+	padding: 0px 10px !important;
+}
+
+.ux_no-padding{
+	padding: 0px !important;
+}
+
+.ux_no-border{
+	border: none !important;
+}
+
+.ux_no-margin{
+	margin: 0px !important;
+}
+.ux_no-outline{
+	outline: 0px !important;
+}
+.ux_body-background-color{
+	background: $panelBackgroundColor !important;
+	/*line-height: 24px !important;
+	font-size: 100% !important;*/
+	padding: 10px !important;
+}
+.disabled {
+	background-color: $panelBackgroundColor !important;
+	font-weight: inherit;
+}
+
+.ux_radio-buttons-panel{
+	background: #f6f6f6 !important;
+	padding: 10px !important;
+	font-size: 100% !important;
+}
+.ux_multi-header-label{
+	font-size: 100% !important;
+	vertical-align: middle !important;
+	line-height: 24px !important;
+}
+.ux_body-background-color .mr80{
+	margin-left: 63px !important;
+}
+
+.ux_body-background-color .m124{
+	margin-left: 33px !important;
+}
+
+
+/*singlepayment transaction summary div color and padding*/
+
+.ux_trans-background.ui-widget-header{
+	background: #d7d7d7 !important;
+}
+
+.ux_trans-body{
+	background: #e7e7e7 !important;
+	padding: 6px 10px !important;
+	line-height: 24px;
+	font-size: 100%;
+}
+.jq-panel-header.ui-widget-header { background: $panelBackgroundColor !important; color: $primaryColor !important; border-bottom: 2px solid $lightColor !important; text-transform: uppercase;}
+
+.jq-panel-header1.ui-widget-header { background: $panelBackgroundColor !important; color: $primaryColor !important; border-bottom: 2px solid $lightColor !important;}
+.ux_panel-background{
+	background: $lightColor !important;
+}
+
+.ui-widget-content{
+	background: $lightColor	!important;
+	border: none !important;
+}
+.ux_panel-transparent-background{
+	background: $panelBackgroundColor !important;
+}
+
+/*For adhoc receiver more details*/
+.ux_receiver-details-header.ui-widget-header{
+	background: #e7e7e7 !important;
+	color: $primaryColor !important;
+	border-bottom: 2px solid $lightColor !important;
+	text-transform: uppercase;
+}
+.ux_receiver-details
+{
+	background: #e7e7e7 !important;
+	padding: 10px !important;
+}
+
+
+.ux-custom-header-font{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	font-size: fontSize16 !important;
+	font-weight: normal !important;
+	color: $primaryColor !important;
+}
+.ui-widget-header { 
+	/*border: 1px solid #dddddd; */
+	/*background: $lightColor url('resources/images/ui-bg_highlight-soft_75_ffffff_1x100.png') 50% 50% repeat-x;*/
+	background-color : #bfbfbf !important;
+	color: #222222;
+	border : none !important;
+	border-radius : 0px !important;
+}
+
+.ux_white-background{
+	background: $lightColor !important;
+	/*line-height: 24px !important;*/
+	/*font-size: 100% !important;*/
+	padding: 10px !important;
+}
+.ui-widget-content { border: 1px solid #cfcfcf; background: $lightColor url('resources/images/ui-bg_flat_75_ffffff_40x100.png') 50% top repeat-x; color: #222222; }
+.ui-widget-content a { color: #222222; }
+.ui-widget-overlay { background: #aaaaaa url('resources/images/ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x; }
+.ui-widget-shadow { background: #999999 url('resources/images/ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x; }
+
+.ui-section-header { background: $lightColor url('resources/images/title_bg.png') 50% 50% repeat-x; color: #222222; }
+.ui-section-header a { color: #222222; }
+
+#frmMain{
+margin-top:0px !important;
+}
+
+#filterDiv table tr td {
+padding: 0px;
+}
+
+.lightbackgound{ background-color: #e7e7e7 !important; }
+.lightbackgound.x-toolbar-default.x-box-item{ background-color: #e7e7e7 !important; }

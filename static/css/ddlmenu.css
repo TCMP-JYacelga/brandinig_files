@@ -1,0 +1,79 @@
+/* ================================================================
+This copyright notice must be kept untouched in the stylesheet at
+all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/cssplay-dropline-dropdown.html
+Copyright (c) Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any
+way to fit your requirements.
+=================================================================== */
+.dlddmenu {position:relative; z-index:10; border-radius:10px 10px 0 0; font-family: Tahoma,Verdana, Calibri,Arial,Sans-Serif; height: 66px; }
+
+.currentItem {font-weight: bold;}
+.nocurrent {z-index:30;}
+.homecurrent {z-index:20;}
+.dlddmenu ul {padding:0; margin:0; list-style:none;}
+.dlddmenu > ul {float:left;}
+.dlddmenu > ul > li {float:left;}
+.dlddmenu > ul > li > a {display:block; line-height:32px; text-decoration:none; padding:0 0 0 0; font-size:13px;}
+.dlddmenu > ul > li > a b {display:block; padding:0 20px 0 10px; font-weight:normal;}
+.dlddmenu > ul > li > ul {position:absolute; left:-9999px; height:30px; opacity:0; width: 100%; font-weight: normal;
+-moz-transition: opacity 0.5s;
+-ms-transition: opacity 0.5s;
+-o-transition: opacity 0.5s;
+-webkit-transition: opacity 0.5s;
+transition: opacity 0.5s;
+}
+.dlddmenu > ul > li > ul > li {float:left; position:relative; min-width: 144px; text-align: center; }
+.dlddmenu > ul > li > ul > li > a {display:block; line-height:30px; text-decoration:none; padding:0 10px; font-size:13px;}
+.dlddmenu > ul > li > ul > li > ul {position:absolute; left:-9999px; top:28px; padding:22px 0 10px 0; border-top:0; border-radius:0 0 5px 5px; min-width:150px; box-shadow:0 3px 5px rgba(0,0,0,0.4);
+-moz-transform: scaleY(0);
+-ms-transform: scaleY(0);
+-o-transform: scaleY(0);
+-webkit-transform: scaleY(0);
+transform: scaleY(0);
+-moz-transform-origin:0 0;
+-ms-transform-origin:0 0;
+-o-transform-origin:0 0;
+-webkit-transform-origin:0 0;
+transform-origin:0 0;
+-moz-transition: -moz-transform 0.1s linear;
+-ms-transition: -ms-transform 0.1s linear;
+-o-transition: -o-transform 0.1s linear;
+-webkit-transition: -webkit-transform 0.1s linear;
+transition: transform 0.1s linear;
+}
+.dlddmenu > ul > li > ul > li > ul > li  { text-align: left; font-weight: normal; padding: 0 2px; }
+.dlddmenu > ul > li > ul > li > ul > li > a {display:block; text-decoration:none; padding:4px 10px; white-space:nowrap; font-size:13px;}
+
+.dlddmenu > ul > li:hover {padding: 0 0 0 9px;}
+.dlddmenu > ul > li:hover > a {} /*border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-radius: 8px 8px 0 0; }*/
+/*.dlddmenu > ul > li:hover > a b {background:url(droplinedown/border-right.gif) no-repeat right top;}*/
+
+.dlddmenu ul li:hover {direction:ltr;}
+.dlddmenu > ul > li:hover > ul {left:0; opacity:1;}
+.dlddmenu > ul > li > ul > li:hover > a {}
+.dlddmenu > ul > li > ul > li:hover > ul {left:0px; top:30px;
+-moz-transform: scaleY(1);
+-ms-transform: scaleY(1);
+-o-transform: scaleY(1);
+-webkit-transform: scaleY(1);
+transform: scaleY(1);
+}
+.dlddmenu > ul > li > ul > li > ul > li > a:hover {}
+
+.dlddmenu > ul > li.current { padding: 0 0 0 9px; }
+.dlddmenu > ul > li.current > a {font-weight: bold;} /*border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-radius: 8px 8px 0 0; */
+.dlddmenu > ul > li.current > a b {font-weight: bold; } /*{background:url(droplinedown/border-right.gif) no-repeat right top; font-weight: bold;}*/
+.dlddmenu > ul > li.current > ul {left:0; opacity:1;}
+
+.dlddmenu > ul:hover > li.current > a {border: 0px none transparent; }
+.dlddmenu > ul:hover > li.current > a b {}
+.dlddmenu > ul:hover > li.current > ul {left:-9999px;}
+
+.dlddmenu > ul:hover > li.current:hover > a {border-width: 1px 1px 0 1px; border-style: solid solid none solid; font-weight: bold; border-radius: 8px 8px 0 0; }
+/*.dlddmenu > ul:hover > li.current:hover > a b {background:url(droplinedown/border-right.gif) no-repeat right top;}*/
+.dlddmenu > ul:hover > li.current:hover > ul {left:0; opacity:1;}
+
+.close {position:absolute; right:10px; bottom:80px; display:none;}

@@ -1,0 +1,250 @@
+
+/*--------------Seperator Css Starts----------------------*/
+.rightMenu {
+	width: 95% !important;
+	margin-top: 12px !important;
+}
+
+#menuHiddenLeftMenu{
+	padding-right: 16px !important;
+}
+
+.sidemenu_right_icon{
+	padding-right: 2px !important;
+}
+/*-------------Seperator Css Ends------------------------*/
+form{
+ margin: 0px !important;
+}
+
+#actionlistform .smartnavHeader{
+ border: 0px !important;
+ background: $panelBackgroundColor !important;
+}
+
+#actionlistform  .rightMenuBody{
+ background: $panelBackgroundColor !important;
+ border-top: 2px solid $lightColor !important;
+}
+
+#quickpaylistform .smartnavHeader{
+ border: 0px !important;
+ background: $panelBackgroundColor !important;
+}
+
+#quickpaylistform  .rightMenuBody{
+ background: $panelBackgroundColor !important;
+ border-top: 2px solid $lightColor !important;
+}
+
+#favReportList .smartnavHeader{
+ border: 0px !important;
+ background: $panelBackgroundColor !important;
+}
+
+#favReportList  .rightMenuBody{
+ background: $panelBackgroundColor !important;
+ border-top: 2px solid $lightColor !important;
+}
+
+#messageFormsRightMenuForm .smartnavHeader{
+ border: 0px !important;
+ background: $panelBackgroundColor !important;
+}
+
+#messageFormsRightMenuForm  .rightMenuBody{
+ background: $panelBackgroundColor !important;
+ border-top: 2px solid $lightColor !important;
+}
+
+.actionmenutitle{
+ color: $primaryColor !important;
+ font-weight: $fontWeight-Regular !important;
+ font-size: $fontSize14 !important;
+ font-family: $fontFamily,arial,verdana,sans-serif !important;
+ letter-spacing: normal;
+text-transform: uppercase;
+margin: 2px;
+}
+
+.rightMenuBody{
+ padding: 10px 0px 12px 5px !important;
+}
+
+.custom-margin{
+ vertical-align: middle;
+ display: inline-block;
+ margin: 3px 10px;
+ color:$primaryColor !important;
+ font-size: fontSize18 !important;
+}
+
+.smartnavHeader .collapseIcon{
+ background: none !important;
+ margin: 3px 6px 0 6px !important;
+}
+
+.collapseIcon:before{
+ content: "\f0da" !important;
+ margin: 2px 6px 0 6px;
+ float: left;
+ color:$primaryColor !important;
+ background: none !important;
+ @include glyph($fontSize13)
+}
+
+.smartnavHeader .expandIcon{
+ background: none !important;
+ margin: 3px 6px 0 6px !important;
+}
+
+.expandIcon:before{
+ content: "\f0d7" !important;
+ margin: 2px 6px 0 6px;
+ float: left;
+ color:$primaryColor !important;
+ background: none !important;
+ @include glyph($fontSize13)
+}
+
+.actionlink{
+	line-height: 24px !important;
+	color: $primaryColor !important;
+	font-family: $fontFamily !important;
+	font-size: $fontSize13 !important;
+	font-weight: $fontWeight-Regular !important;
+}
+
+.sidemenu_left_icon {
+    background-color: transparent;
+    background-image: url("resources/images/sidemenu_left_icon_black.png") !important;
+    background-repeat: no-repeat;
+	position: absolute !important;
+	right: 41px !important;
+	height: 20px !important;
+}
+
+.sidemenu_right_icon {
+    background-color: transparent;
+    background-image: url("resources/images/arrow_right_black.png") !important;
+    background-repeat: no-repeat;
+	height: 20px !important;
+	margin-top: 26px !important;
+}
+
+#menuHiddenRightMenu { 
+	background: url("resources/images/bg-column-separator_black.png") no-repeat scroll left top transparent !important; 
+	position: relative;
+    min-width: 2px; 
+	width: 2px; 
+	/*margin-top: 2%;*/ 
+	height: 700px !important;
+	top: -4px !important;
+	vertical-align:top; 
+	border-width: 0px; 
+	float:right;
+}
+
+.expandIcon{
+	width : 18px !important;
+	height: 18px !important;
+	margin: 2px 6px 0 6px;
+	float:left;
+}
+
+.collapseIcon{
+	width : 18px !important;
+	height: 18px !important;
+	margin: 2px 6px 0 6px;
+	float:left;
+}
+#sidepanel, #sidemenu { float: right; padding: 0 4px 0 8px; min-height: 640px; }
+#sidepanel h4 { padding: 0 0 2px 2px; margin: 0 0 2px 0; }
+#sidemenu h4 { padding: 0 0 2px 2px; margin: 0 0 2px 0; }
+#sidemenu > .innertube { min-height: inherit; }
+
+#sideMenuResizer { top: 173px; }
+
+.toolbar1 { height: 24px; align: right; padding : 0 25px 4px -1px !important; font-family: $fontFamily,helvetica,arial,sans-serif; font-size: $fontSize13 !important;}
+.toolbar > a { height: inherit; display: inline-block; vertical-align: middle; padding: 0px; color: #06C; font-family: $fontFamily,helvetica,arial,sans-serif;}
+
+.toolbar1 > a > img { height: 25px; width: 16px; vertical-align: middle; }
+
+#morePageOptionsDialog a { color: $primaryColor;font-family: $fontFamily,helvetica,arial,sans-serif;}
+
+.jqaccordion div dl dt { padding: 2px 0 2px 6px; margin: 0; }
+h3.acord_header { border: 1px solid #E5E5E5; height: 26px; margin: 0 0 2px 0; }
+h3.acord_header a { padding: 4px 0 0 28px; }
+
+#sidepanel h4 { color: #FF6600; border-bottom: 1px solid #BFBFBF; }
+#sidemenu h4 { color: #FF6600; border-bottom: 1px solid #BFBFBF; }
+
+/* acordion */
+h3.acord_header { background: transparent 0 0 repeat-x scroll url('../images/accordion/bg_user_module_header.png');  }
+h3.acord_header a { color: #FF6600; }
+h3.accord_open a { background: transparent 3px 0 no-repeat url('../images/accordion/accordion.png'); }
+h3.accord_close a { background: transparent 3px -29px no-repeat url('../images/accordion/accordion.png'); }
+div.acord_content dl dt { color: #666; }
+div.acord_content dl dt a { color: #0066cc; }
+div.acord_content dl dt a:hover {color:	#003366; }
+
+.acord_grid_head{
+background: $panelBackgroundColor !important;
+color: $primaryColor !important;
+border-bottom: 2px solid $lightColor !important;
+text-transform: uppercase;
+position: relative;
+height: 28px;
+font-weight: normal !important;
+font-family: $fontFamily;
+font-size: $fontSize15;
+vertical-align: middle;
+line-height: 28px;
+padding:6px 5px 6px 10px ;
+}
+.acord_close:before {
+	float:left;
+	font-family: fontawesome;
+	content: "\f0da" !important;
+	font-size: $fontSize13 !important;
+	color: $primaryColor !important;
+	padding-right:16px !important;
+}
+.acord_open:before{
+	float:left;
+	font-family: fontawesome;
+	content: "\f0d7" !important;
+	font-size: $fontSize13 !important;
+	color: $primaryColor !important;
+	padding-right:16px !important;
+}
+.headerBand { background-color: #E0E0E0; color: #cc0000; border-width: 1px 1px 0 1px; border-style: solid solid none solid; border-color: #aaaaaa #aaaaaa transparent #aaaaaa; }
+.stripedback { background: transparent url('../images/backgrounds/stripes.gif') top left repeat; }
+.ui-accordion-content dt a:hover { background-color: #468FC2; color: $lightColor; }
+
+
+.rightMenuBody > ul > li { padding: 1.5px !important; text-overflow : ellipsis;}
+.rightMenu{
+	width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

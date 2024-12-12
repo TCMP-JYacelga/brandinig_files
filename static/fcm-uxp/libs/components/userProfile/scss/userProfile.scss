@@ -1,0 +1,67 @@
+.view-profile-body {
+	background-color: #ffffff;
+    margin-top: 5px;
+    padding: 1em 2em;
+}
+
+.profile-background {
+  height: 110px;
+  border-radius: 5px;
+}
+
+.profile-avatar {
+   margin-top: -15%;
+   margin-left: 35%;
+}
+
+.bg-profile {
+   background-color: $profileBgColor !important;
+}
+
+.border-bottom-1 {
+   border-bottom: 1px solid $profileBorderColor;
+}
+
+.user-details-section {
+   padding: 1em;
+}
+
+.user-detail-field {
+   padding: 0.5em 0;
+}
+
+.header-myProfile {
+	color: $primaryColor;
+	font: 16px;
+}
+
+.setting-myProfile {
+  margin-top: 5%;
+  border-top: 1px solid $profileBorderColor;
+  padding-bottom: 50px;
+  padding-top: 1em;
+}
+
+.btn-myProfile {
+  width: 200px;
+}
+
+.profile-outline {
+  border-left: 1px solid $profileBorderColor;
+  border-right: 1px solid $profileBorderColor;
+  border-bottom: 1px solid $profileBorderColor;
+}
+
+.user-profile-horizontal-menu-label {
+  padding: 1em 1em 0em 0em;
+  color: #4a4a4a !important;
+}
+
+.switch label .bmd-switch-track {
+	margin-top:-10px;
+}
+
+.fax-icon {
+ height: 22px;
+ width: 22px;
+}

@@ -1,0 +1,64 @@
+<div class="panel panel-default" >
+			 	<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2 class="panel-title">
+								<span id="cmpIdInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+								<span>{{getLabel "lbl.role.compid" "Company ID"}}</span>
+								<img id="companyIdAll_02" data-version = "{{ assignAllCompanyIds_version }}" src="{{checkBoxIcon assignAllCompanyIds}}" class="chkBoxAlign" width="16"
+									height="16" border="0">
+								<label id="companyIdAll_02" for="companyIdAll_02" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.compid1" "All"}}</label>
+								<label id="lblCmpIdCount" class="checkbox-inline pull-right">{{companyIdAssignedCount}} of {{companyIdCount}}{{getLabel "lbl.role.compid2" " Selected"}}</label>
+							</h2>
+						</div>
+					</div>
+				</div>
+				<div id="cmpIdInfoDiv" class="panel-body">
+					<div class="row grid">
+							<table class="view-grid" style="width: 99%">
+								<thead>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" style="width: 5%"></td>
+										<td class="view-grid-header-text">{{getLabel "lbl.role.compid3" "Company ID"}}</td>
+										<td class="view-grid-header-text">{{getLabel "lbl.role.compid4" "Company Name"}}</td>
+										<td class="view-grid-header-text">{{getLabel "lbl.role.compid5" "Status"}}</td>
+										
+									</tr>
+								</thead>
+								<tbody>
+									 {{#each companyIds}}
+
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content text-center "><a
+											class="limit-reached test"><img
+												id="chkcmpId_02_{{companyId}}"
+												data-subsidiaryid = "{{ subsidiaryId }}"
+												data-accountname = "{{ accountName }}"
+												data-accountid = "{{ accountId }}"
+												data-accountno = "{{ accountNo }}"
+												data-companyname = "{{ companyName }}"												
+												data-subsidiaryname = "{{ subsidiaryName }}"
+												data-companyid = "{{ companyId }}"
+												data-version = "{{ version }}"
+												data-assetid="{{../assetId}}"
+												data-digest = "{{ digest }}"
+												src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+												border="0"></a></td>
+										<td class="view-grid-body-content">{{ companyId }}</td>
+										<td class="view-grid-body-content">{{companyName}}</td>
+										<td class="view-grid-body-content">
+											{{getStatusExpression assignedFlag}}
+										</td>
+										
+									</tr>
+									{{else}}
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content" colSpan="4"
+											style="padding-bottom: 1%;">&nbsp</td>
+									</tr>
+									{{/each}} 
+								</tbody>
+							</table>
+					</div>
+				</div>
+			</div>

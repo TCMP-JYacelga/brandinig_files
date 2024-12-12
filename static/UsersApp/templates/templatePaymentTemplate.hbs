@@ -1,0 +1,64 @@
+<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">
+						<span id="templateInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+						<span>{{getLabel "lbl.clientUser.templatepayment.title" "Template"}}</span> 
+							<img id="templateAll_{{assetId}}" data-version = "{{ assignAllTemplates_version }}" src="{{checkBoxIcon allTemplates}}" class="chkBoxAlign" width="16"
+							height="16" border="0"> 
+						<label id="templateAll_{{assetid}}" for="templateAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.clientUser.all" "All"}}</label>
+						<label id="lblTemplateCount" class="checkbox-inline pull-right">{{templatesAssignedCount}} {{getLabel "lbl.clientUser.of" "of"}} {{templatesCount}} {{getLabel "lbl.clientUser.selected" "Selected"}}</label>
+					</h2>
+				</div>
+			</div>
+		</div>
+
+		<div id="templateInfoDiv"  class="panel-body">
+			<div class="row grid">
+					<table class="view-grid" style="width: 100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text" style="width: 5%"></td>
+								<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatepayment.templateName" "Template Name"}}</td>
+								<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatepayment.status" "Status"}}</td>
+								<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatepayment.companyname" "Company Name"}}</td>
+							</tr>
+
+						</thead>
+						<tbody>
+							 {{#each templates}}
+							<tr class="view-grid-body">
+								<td class="view-grid-body-content text-center "><a
+									class="limit-reached test"> <img
+										id="chkTemp_02_{{templateId}}"
+										
+										data-subsidairyid = "{{ subsidairyId  }}"
+										data-templateid = "{{ templateId }}"
+										data-subsidairyname = "{{ subsidairyName }}"
+										data-templatename = "{{ templateName  }}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}" 
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+										border="0"></a></td>
+
+								<td class="view-grid-body-content">{{templateName}}</td>
+								<td class="view-grid-body-content">{{getStatusExpression assignedFlag}}</td>
+								<td class="view-grid-body-content">{{getStringWithSpecialChars subsidairyName}}</td>
+							</tr>
+
+
+							{{else}}
+							
+							<tr class="view-grid-body">
+								<td class="view-grid-body-content" colSpan="5" style="padding-bottom: 1%;" >&nbsp</td>
+							</tr>
+
+							{{/each}}
+						</tbody>
+					</table>
+			</div>
+		</div>
+		
+	</div>

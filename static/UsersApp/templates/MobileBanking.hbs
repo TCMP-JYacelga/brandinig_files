@@ -1,0 +1,55 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">Expand/</a> <a id="collapseAll">Collapse All</a>
+				</div>
+			</div>
+		</div>
+	</div>
+ {{#each assets}}
+	{{#selectAsset assetId "20"}}
+
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+				<img src="{{checkBoxIcon rdcFlag}}" tabindex="1"
+					width="16" height="16" border="0" id="chkRdcFlag"
+					class="field-control chkBoxAlign" tabindex="0">&nbsp; <label
+					id="chkRdcFlag" for="chkRdcFlag" class="checkbox-inline noLeftPadding"> Remote
+					Deposit Capture </label>
+			</div>
+		</div>
+			<input id="rdcFlag" name="rdcFlag" type="hidden" value="N" tabindex="1"
+		autocomplete="off">
+		<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+			<div class="form-group">
+				 {{#if rdcFlag}}
+                <label id="rdcUserKeyLbl" for="rdcUserKey" class="frmLabel required">
+                    <span> Remote Deposit Capture User Key </span>
+                </label>
+                {{else}}
+                <label id="rdcUserKeyLbl" for="rdcUserKey" class="frmLabel">
+                    <span> Remote Deposit Capture User Key </span>
+                </label>
+                {{/if}}
+                {{#if rdcFlag}}
+                    <input id="rdcUserKey" name="rdcUserKey" tabindex="1"
+                        class="form-control" type="text" onblur="markRequired(this);javascript:trim(this)" onfocus="removeMarkRequired(this)" 
+                        maxlength="50" autocomplete="off" value="{{rdcUserKey}}">
+                {{else}}
+                    <input id="rdcUserKey" name="rdcUserKey" tabindex="1"
+                        class="form-control" type="text" onblur="markRequired(this);javascript:trim(this)" onfocus="removeMarkRequired(this)"
+                        maxlength="50" autocomplete="off" disabled="" value="{{rdcUserKey}}">
+                {{/if}}
+			</div>
+		</div>
+	
+	</div>
+
+	{{/selectAsset}} {{/each}}
+
+
+
+</div>

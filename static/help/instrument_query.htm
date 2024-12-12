@@ -1,0 +1,342 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="generator" content="Adobe RoboHelp 9">
+<title>Instrument Query</title>
+<link rel="StyleSheet" href="anz_1.css" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sample_help.htm", "", ">", "Home", "welcome_dashboard.htm");
+document.write("Instrument Query<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sample_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px;" cellspacing="0" width="100%" bgcolor="#04436F" align="left">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr style="height: 11px;">
+			<td style="vertical-align: middle;"><span style="font-family: 'Arial Black', sans-serif; 
+														 font-style: italic; 
+														 color: #ffffff;"><font color="white" ><i>&#160;</i></font></span><span 
+			 style="color: #ffffff; font-family: Arial, sans-serif; font-size: 10pt; 
+			 font-style: italic; font-weight: bold;"><font size="2" color="white" style="font-size:10.000000pt;"><i><b>GCP CashWeb</b></i></font></span><span 
+			 style="font-family: 'Arial Black', sans-serif; font-style: italic; 
+			 color: #ffffff;"><font color="white" ><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></font></span></td>
+			<td style="vertical-align: top;">
+   <p style="text-align: right; 
+												 font-family: 'Arial Black', sans-serif; 
+												 font-style: italic; font-size: 12pt; 
+												 color: #ffffff;">&#160;</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+<p style="text-align: right;"><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+
+<h1>Instrument Status Query</h1>
+<h2>Collection &gt;&gt; Collection Query &gt;&gt; Instrument Query</h2>
+<p>The <span style="font-weight: bold;"><b>Instrument Status Query</b></span> 
+ retrieves the status of various instruments within a deposit. It retrieves 
+ data on the status of instruments as they pass through various stages 
+ in the transaction workflow. You can also view the liquidation type against 
+ each instrument that is listed.</p>
+<h2>Viewing the Instrument Status:</h2>
+<p>You can filter by <span style="font-weight: bold;"><b>Date</b></span> or click 
+ <span style="font-weight: bold;"><b><a class="dropspot" href="javascript:TextPopup(this)" 
+									 id="a1">Advanced Filter<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></b></span> 
+ to retrieve the required instruments.</p>
+<div class="droptext" id="POPUP400088470" style="display: none;">
+	<p class="ListBullet2"><span style="font-family:'Microsoft Sans Serif'" >•</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Specify 
+	 the Advanced Filter criteria:</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Inst. No.:</b></span> Type the number to view 
+	 the instruments with that number.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Inst. Amount:</b></span> Select &lt;, &gt;, 
+	 or = as the filter criterion. Type the amount for the selected filter 
+	 criterion. Data is filtered on the basis of the amount criteria specified 
+	 here.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Inst. Status</b></span>: Select the instrument 
+	 status. The options available for selection are:</p>
+	<p class="ListBullet3Indent" style="font-weight: bold; font-style: italic;">Lost</p>
+	<p class="ListBullet3Indent" style="font-weight: bold; font-style: italic;">Returned</p>
+	<p class="ListBullet3Indent" style="font-weight: bold; font-style: italic;">Paid</p>
+	<p class="ListBullet3Indent" style="font-weight: bold; font-style: italic;">Realisation 
+	 Details Awaited</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Deposit Slip No.</b></span>: Type the deposit 
+	 slip number to retrieve deposit slips with this number.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Deposit Date From</b></span> and <span style="font-weight: bold;"><b>Deposit 
+	 Date To</b></span>: Type the start and the end dates of the period to 
+	 specify the range of deposit dates. The query will retrieve deposits 
+	 with the dates falling within the specified period</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note:</b></span></p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If you do not specify the Deposit Date 
+	 From, the system retrieves all records that are available in the database 
+	 till the specified date.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If you do not specify Deposit Date To, 
+	 then by default, the system takes the application date. It retrieves 
+	 all records from the specified date till the application date.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If you do not specify the From and To 
+	 dates, the system retrieves all records that are available in the 
+	 database till the application date.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>The Deposit Date To has to be greater 
+	 than or equal to the Deposit Date From.</p>
+	<p class="Convensions"><span style="font-weight: bold;"><b>E.g.</b></span>: 
+	 If you type the Deposit Date From as 01/05/2010 and the Deposit Date 
+	 To as 01/06/2010, then the query retrieves deposits with the deposit 
+	 dates falling within the specified period.</p>
+	<hr align="center">
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Credit 
+	 Date From and Credit Date To: Type the start and the end dates of 
+	 the period to specify the range of instrument credit dates. The query 
+	 will retrieve instruments with the credit dates falling within the 
+	 specified period.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note:</b></span> 
+	 &#160;</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If you do not specify the Credit Date 
+	 From, the system retrieves all records that are available in the database 
+	 till the specified date.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If you do not specify Credit Date To, 
+	 then by default, the system takes the application date. It retrieves 
+	 all records from the specified date till the application date.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If you do not specify the From and To 
+	 dates, the system retrieves all records that are available in the 
+	 database till the application date.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>The Credit Date To has to be greater 
+	 than or equal to the Credit Date From.</p>
+	<p class="Convensions"><span style="font-weight: bold;"><b>E.g.:</b></span> 
+	 If you type the Credit Date From as 01/05/2010 and the Credit Date 
+	 To as 01/06/2010, then the query will retrieve instruments with the 
+	 entry dates falling within the specified period.</p>
+	<hr align="center">
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Product:</b></span> Select the product for 
+	 which you want to view the instrument details. The values that are 
+	 displayed in the list are available from the Products master.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Arrangement</b></span>: &#160;Select the client 
+	 product arrangement for which you want to view data. The values displayed 
+	 in the list are available from the Client Product Arrangement master.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Pickup Location</b></span>: Select the pickup 
+	 location of the deposits. The values displayed in the list are available 
+	 from the Clearing Locations master.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Pickup Point</b></span>: Select the pickup 
+	 point from where the deposits were picked up. The values displayed 
+	 in the list are available from the Client Pickup Point master.</p>
+	<p class="ListBullet2"><span style="font-family:'Microsoft Sans Serif'" >•</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+	 <span style="font-weight: bold;"><b>Continue</b></span>. The grid screen 
+	 appears displaying a list of records satisfying the specified filter 
+	 criteria.</p>
+	<p class="ListBullet2"><span style="font-family:'Microsoft Sans Serif'" >•</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>OR</p>
+	<p class="ListBullet2"><span style="font-family:'Microsoft Sans Serif'" >•</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+	 <span style="font-weight: bold;"><b>Cancel</b></span> to close the screen.</p>
+</div>
+<p>The <span style="font-weight: bold;"><b>Instrument Status Query</b></span> 
+ screen displays all the available instruments, the liquidation status, 
+ and the total amount of these instruments.</p>
+<p class="ListNumberUG">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>To&#160;view 
+ details of any instrument, click <span style="font-weight: bold;"><b>View<img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/view.png" alt="view.png" style="border: none;" border="0"></b></span>. The <span style="font-weight: bold;"><b><a class="dropspot" 
+	 href="javascript:TextPopup(this)" id="a2">Instrument Details<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></b></span> 
+ screen opens where all the information related to that instrument like 
+ deposit details, liquidation details and advice info can be viewed.</p>
+<div class="droptext" id="POPUP567147804" style="display: none;">
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-list: l2 level1 lfo2;"><b style="font-weight: bold; mso-bidi-font-weight: normal;"><span 
+	 style="mso-font-kerning: 14.0pt;">Product</span>:</b> View the product 
+	 that was selected for the instrument</span></p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;"><span style="mso-font-kerning: 14.0pt;">Arrangement</span>:</b> 
+	 View the client product arrangement as defined in the Client Product 
+	 Arrangement master.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;"><span style="mso-font-kerning: 14.0pt;">Pickup 
+	 Location:</span></b> View the pickup location of the deposits as defined 
+	 in the Client Pickup Locations master.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;"><span style="mso-font-kerning: 14.0pt;">Pickup 
+	 Point:</span></b> Select the pickup point from where the deposits 
+	 were picked up. The values displayed in the list are available from 
+	 the Client Pickup Point master.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">Payer</b><span 
+	 style="mso-bidi-font-weight: normal;">: View the name of the Payer.</span></p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">Deposit Slip 
+	 No.:</b> View the deposit slip number</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold;">Deposit Date</b>: The date on which the 
+	 deposit was initiated.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold;">Credit Date</b>: The date on which the 
+	 deposit was credited.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold;">Credit Ext. Date</b>: The date on which 
+	 the credit has been extended to the client after return liquidation.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b>Line 
+	 Rev. Date</b>: The date on which the Credit Line is reversed.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Central Bank Reference:</b></span> Displays 
+	 the Central bank reference number.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Deposit No.:</b></span> Displays deposit number.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>UDE Deposit No.:</b></span>Displays UDE Deposit 
+	 number.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Instrument Ref. No.:</b></span>Displays Instrument 
+	 reference number.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Central Bank Reference :</b></span> Displays 
+	 Central Bank Reference number against which the transaction is cleared.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Purpose Code:</b></span> Displays the purpose 
+	 code of the transaction if associated with any.</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>View 
+	 the <b style="mso-bidi-font-weight: normal;">Liquidation Details</b> 
+	 in case the instrument has got liquidated as well as the <span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;"><b>Advice Info.</b></span> <b style="mso-bidi-font-weight: normal;">Details</b> 
+	 of that Instrument in the below pane.</p>
+</div>
+<p class="ListNumberUG">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+ <span style="font-weight: bold;"><b>Back</b></span> to return to the 'Instrument 
+ Status Query' screen.</p>
+<p class="ListNumberUG">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>To 
+ download the transaction details, click <span style="font-weight: bold;"><b>Download-</b></span> 
+ you have the option to 'Open' or 'Save' the <span style="font-weight: bold;"><b>Instrument 
+ Status Query</b></span> details in .xls format.</p>
+<p style="font-weight: bold;"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/see_also.png" alt="see_also.png" style="border: none;" width="21" height="21" border="0">See Also</p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="deposit_query.htm">Executing a Deposit Query</a></p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="collection_center.htm">Collection Transactions</a></p>
+<p class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="collection_file_upload.htm">Collection Transaction through File 
+ Upload</a></p>
+<p><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px; margin-right: 5px;" cellspacing="0" width="100%" bgcolor="#02426D" align="right">
+		<col style="width: 100%;">
+		<tr style="height: 10px;">
+			<td style="vertical-align: middle;">
+   <p style="text-align: right; 
+													 font-style: italic; 
+													 font-family: 'Eras Demi ITC', sans-serif; 
+													 color: #ffffff; font-size: 8pt; 
+													 margin-left: 12px;">Innovation. 
+			 Bank on it</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP400088470');
+	TextPopupInit('a2','POPUP567147804');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

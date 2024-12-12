@@ -1,0 +1,391 @@
+//methods or mixins
+@mixin btnBackground($btnColor1: $gradientColor1, $btnColor2: $gradientColor2) {
+    background: linear-gradient(to bottom, $btnColor1, $btnColor2);
+	background:-webkit-linear-gradient(top,$btnColor1, $btnColor2);
+	background:-o-linear-gradient(top,$btnColor1, $btnColor2);
+	background:-moz-linear-gradient(top,$btnColor1, $btnColor2);
+	border: 0px;
+	color: $darkColor;
+}
+
+@mixin btnHoverBackground($btnHoverColor1: $hoverColor1, $btnHoverColor2: $hoverColor2) {
+    background: linear-gradient(to bottom, $btnHoverColor1, $btnHoverColor2);
+	background:-webkit-linear-gradient(top,$btnHoverColor1, $btnHoverColor2);
+	background:-o-linear-gradient(top,$btnHoverColor1, $btnHoverColor2);
+	background:-moz-linear-gradient(top,$btnHoverColor1, $btnHoverColor2);
+	color: $darkColor;
+	border: 0px;
+}
+
+@mixin gridBackground($Color1: $gridHeaderGradientUpper, $Color2: $gridHeaderGradientLower) {
+    background: linear-gradient(to bottom, $Color1, $Color2);
+	background:-webkit-linear-gradient(top,$Color1, $Color2);
+	background:-o-linear-gradient(top,$Color1, $Color2);
+	background:-moz-linear-gradient(top,$Color1, $Color2);
+	border: 1px solid $lightColor;
+	color: $lightColor;
+}
+
+@mixin innerColor($innerColor: $darkColor) {
+    color: $innerColor;
+		&:hover, &:focus{
+			color: $innerColor;
+		}
+}
+
+.filter-view.xn-ribbon .x-panel-header.x-header {
+    background-color: $panelHeaderBackground;
+}
+.ui-tabs .ui-bar-tabs{ 
+  background-color: transparent !important;
+}
+
+.panel-default > .panel-body
+{
+  background: $panelBodyBackground;
+}
+
+.x-grid .x-column-header-inner {
+  /*background: -webkit-linear-gradient(top,$gridHeaderGradientUpper, $gridHeaderGradientLower);
+  background: -moz-linear-gradient(top,$gridHeaderGradientUpper, $gridHeaderGradientLower);
+  background: -o-linear-gradient(top,$gridHeaderGradientUpper, $gridHeaderGradientLower);*/
+  @include gridBackground;
+}
+
+.t7-grid .gradiant_back{
+    background-color: $panelBodyBackground;
+	}
+
+.title-content {
+	&.ft-accordion-header-sidebar {
+		.ft-dropdown.ft-header-dropdown {
+			& > .ft-button {
+				@include btnBackground;
+			}
+			& > .ft-button:hover {
+				@include btnHoverBackground;
+			}
+			& > .ft-button:focus {
+				@include btnHoverBackground;
+			}
+		}
+	}
+}
+
+.x-btn.x-btn-default-small{
+	@include btnBackground;
+	.x-tab-inner, .x-btn-inner{
+		@include innerColor;
+	}
+	&:hover, &:focus{
+		background-color: transparent;
+	}
+}
+
+.t7-grid
+{
+	.xn-panel-header{
+		.x-tab-bar-body {
+			.x-box-item {
+				&.x-tab-default-top {
+					&:hover, &:focus{
+						background-color: transparent;
+					}
+				}
+				&.x-tab-top-active {
+					@include btnBackground;
+					.x-tab-inner{
+						@include innerColor;
+					}
+					&:hover, &:focus{
+						@include btnHoverBackground;
+					}
+				}
+			}
+		}
+		.btn-row-list{
+			@include btnBackground;
+			&:hover, &:focus{
+				@include btnHoverBackground;
+			}
+		}
+	}
+
+	.xn-custom-toolbar{
+		.action-button.x-btn.x-btn-default-toolbar-small-disabled{
+			background-color: $panelHeaderBackground;
+			border: 0px;
+			.x-btn-inner{
+				@include innerColor;
+			}
+		}
+		
+		.action-button.x-btn-default-toolbar-small{
+			@include btnBackground;
+			&:hover, &:focus{
+				@include btnHoverBackground;
+			}
+			.x-btn-inner{
+				@include innerColor;
+			}
+		}
+	}
+	.gradiant_back .x-toolbar-default{
+		background-color : $panelBodyBackground;
+	}
+}
+
+.ft-button-primary {
+	@include btnBackground;;	
+	&:hover, &:focus {
+		@include btnHoverBackground;
+	}
+}
+
+.ux-dialog .ux-dialog-footer .ft-bar .ft-button-primary{
+	background: $primaryColor;
+}
+
+.ft-button-dark{
+	@include btnBackground;
+	.x-tab-inner{
+		@include innerColor;
+	}
+	&:hover, &:focus{
+		@include btnHoverBackground;
+	}
+}
+
+.icon-action-dropdown{
+	@include btnBackground;
+	border: 0px;
+	.x-tab-inner{
+		@include innerColor;
+	}
+	&:hover, &:focus{
+		@include btnHoverBackground;
+		border: 0px;
+	}
+}
+
+.filter-view {
+	.x-panel-body label.x-component.x-box-item.x-component-default.create-advanced-filter-label {
+		@include btnBackground;
+		&:hover {
+			@include btnHoverBackground;
+		}
+	}
+	
+	.x-btn.x-btn-default-small{
+		background: transparent;
+	}
+	
+	.x-panel-body {
+		&.x-panel-body-default {
+		  background-color:  $panelBodyBackground !important;
+		}
+	}
+	.filter-body{
+		padding: 15px;
+	}
+	.searchBtn{
+		&.x-btn-default-small{
+			@include btnBackground;
+			
+			.x-btn-inner{
+				@include innerColor;
+			}
+		}
+		&.x-btn-default-small-over{
+			@include btnHoverBackground;
+		}
+	}
+}
+
+.x-grid{
+	.icon-action-dropdown{
+		color: $darkColor;
+		&:hover, &:focus{
+			color: $darkColor;
+		}
+	}
+}
+
+a {
+  &[type="button"]:hover {
+    color: $darkColor;
+  }
+  &[type="button"]:focus {
+    color: $darkColor;
+  }
+}
+
+.datepick-month {
+	td {
+		.datepick-today {
+			background-color: lighten($primaryColor, 10%);
+		}
+	}
+}
+
+.x-panel .x-panel-body-default {
+	background: transparent;
+}
+
+.x-body{
+	background-color: $headerBackgroundColor;
+}
+
+.ft-status-bar {
+	li {
+		    opacity: 1;
+	}
+}
+
+.ft-main-nav {
+	background: $headerBackgroundColor;
+	li:hover, li:focus {
+		a {
+			color: $activeMenuTextColor1;
+		}
+	}
+	.ft-sub-nav {
+	background-color: $headerBackgroundColor;
+		> li {
+			&:hover, &:focus{
+				background: $menuHoverColor1;
+				a{
+					color: $buttonHoverColor;
+				}
+			}
+			 > a {
+				color: $buttonHoverColor;
+			}
+		}
+	}
+	li.flyout {
+		> ul{
+			> li > a:hover, &:focus {
+				background: $menuHoverColor1;
+				color: $buttonHoverColor;
+			}
+			background-color: $headerBackgroundColor;
+		}
+	}
+	.ft-page-active{
+		a {
+			color: $activeMenuTextColor1;
+		}
+		&:after{
+			border-top-color: $activeMenuTextColor1;
+		}
+	}
+}
+
+
+.ft-header {
+	border-color: $activeMenuTextColor1;
+}
+
+.filter-panel.panel-default {
+	& > .panel-heading {
+		    background: $panelHeaderBackground;
+	}
+}
+
+.panel-body{
+	background: $panelBodyBackground;
+}
+
+.dropdown-list {
+	li {
+		a {
+			background-color: $lightColor;
+			&:hover, &:focus{
+				background-color: $gridTabOverColor;
+			}
+		}
+	}
+}
+
+.ft-header-menubar .ft-button-login{
+    font-size: 16px;
+	&:hover, &:focus {
+    background-color: transparent;
+	}
+}
+.view-grid {
+	.view-grid-header {
+		.view-grid-header-text {
+			@include gridBackground;
+		}
+	}
+}
+
+.gridTable thead tr th {
+@include gridBackground;
+}
+
+.x-window .x-toolbar-footer .x-btn.x-btn-default-small {
+    background: #005199;
+}
+
+.ui-dialog .ft-button-primary {
+	background: $primaryColor;
+	&:hover, &:focus{
+		background: lighten($primaryColor,5%);
+	}
+}
+
+.t7-popup.x-window .x-toolbar-footer .x-btn.x-btn-default-small:last-child {
+	background: $lightColor;
+}
+
+.t7-popup.x-window .x-toolbar-footer .x-btn.x-btn-default-small:first-child {
+	background: $primaryColor;
+}
+
+.xn-popup .x-window-body-default, .xn-popup .x-toolbar-docked-bottom{
+	background: $headerBackgroundColor;
+}
+x-window-default .x-toolbar-footer, .x-window .x-window-body-default, .t7-popup.x-message-box .x-window-body{
+	background: $headerBackgroundColor;
+}
+.x-window-default .x-toolbar-footer{
+	background: $headerBackgroundColor;
+	border-top: 1px solid #CCCCCC !important;
+}
+
+.ux-dialog .ux-dialog-footer .ft-bar .ft-button-primary:focus{
+	color: $lightColor;
+}
+
+.ux_popup .x-btn.x-btn-default-small .x-btn-inner{
+	color: $lightColor;
+}
+
+.filter-view{
+ .ft-filter-search.x-btn.x-btn-default-small{
+   @include btnBackground;
+   padding: 6px 12px;
+   line-height: 18px;
+   .x-btn-wrap{
+     line-height: 18px;
+   }
+   .x-btn-inner{
+     @include innerColor;
+	 @include fontSize(2);
+	 line-height: 18px !important;
+   }
+ } 
+}
+
+.t7-grid {
+  .ft-round-border{
+    &.gradiant_back{
+	  border-top: 1px solid #ddd;
+	  border-top-left-radius: 4px;
+	  border-top-right-radius: 4px;
+	}
+  }
+}

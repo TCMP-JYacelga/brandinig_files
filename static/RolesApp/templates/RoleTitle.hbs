@@ -1,0 +1,33 @@
+<div id="PageTitle">
+		<h1 class="ft-title">
+					<span>{{getLabel "lbl.role.title" "Role:"}} {{roleId}}</span>
+		</h1>
+		<div class="ft-accordion-header-sidebar">
+			<ul class="ft-status-bar">
+					<li id="tab_c" class="ft-status-bar-li-done">
+					
+					 {{#ifCond mode '!=' "new" }}
+						<span>
+							1. {{getLabel "lbl.role.edit" "Edit Role"}}
+						</span>
+					{{/ifCond}}									
+					
+					 {{#ifCond mode '==' "new" }}
+						<span>
+							1. {{getLabel "lbl.role.create" "Create Role"}}
+						</span>
+					{{/ifCond}}		
+					</li>
+					<li id="tab_e" class="ft-status-bar-li-active">
+						<span>
+							2. {{getLabel "lbl.role.permissions" "Permissions"}}
+						</span>
+					</li>
+					<li id="tab_v">
+						<span>
+								3. {{getLabel "lbl.role.verify" "Verify Role"}}
+						</span>
+					</li>			
+			</ul>
+		</div>
+</div>

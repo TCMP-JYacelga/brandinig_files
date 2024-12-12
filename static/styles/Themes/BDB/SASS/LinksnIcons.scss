@@ -1,0 +1,94 @@
+#contactus h4 { text-transform: uppercase; }
+#quicklink h4 { text-transform: uppercase; }
+#quicklink ul li a { color: #06c; }
+#interestrate h4 { text-transform: uppercase; }
+#exchangerate h4 { text-transform: uppercase; }
+.link_color { color: #394a58; }
+.fa-stack-1x {
+  line-height: 1.8em;
+  font-size: $fontSize13 !important;
+  padding: 0px 0px 0px;
+}
+.fa-stack-2x {
+  font-size: 1.5em;
+  color: $activeTab !important;
+}
+.ux_font-icon-setting.fa:before{
+	color: $activeTab !important;
+}
+
+.ux_font-icon-setting{
+	margin-right: 20px !important;
+}
+.ux_font-size14 .small-linkblue{
+	font-size: $primaryColor !important;
+	color: $primaryColor !important;
+	padding-left: 3px !important;
+	vertical-align: middle !important;
+}
+.ux_font-size14 .linkblue{
+	font-size: $fontSize13 !important;
+	color: $primaryColor !important;
+	padding-left: 3px !important;
+	vertical-align: middle !important;
+}
+.ux_save-icon:before{
+	font-family: fontawesome;
+	content: "\f0c7" !important;
+}
+.ux_group-action-link > a{
+	padding: 10px 5px 0px !important;
+}
+.button_underline {
+	color : $darkColor !important;
+	text-decoration: underline !important;
+}
+.icon-remark { font-family: "FontAwesome"; content: "\f086"; }
+.icon-remark:before { font-family: "FontAwesome"; content: "\f086"; }
+.icon-misc-smrcolapse { background-position: 0 -1067px; min-width: 8px; border-width: 0px; height: 24px;}
+.icon-misc-smrexpand { background-position: 0 -1115px; min-width: 8px; border-width: 0px; height: 24px;}
+.seeklink {
+	font-family: fontawesome !important;
+	content: "\f00e" !important;
+	font-size: $fontSize13 !important;
+}
+.seeklink:before {
+	font-family: fontawesome !important;
+	content: "\f00e" !important;
+	font-size: $fontSize13 !important;
+}
+.squarebullets { list-style: none; padding:0; margin: 0; }
+.squarebullets li { background: transparent url('resources/images/bullet.gif') left center no-repeat; padding: 0 0 0 16px; }
+.icon-expand-blue { background: transparent 0px -$fontSize14 no-repeat scroll url('resources/images/misc_icons.png'); }
+.icon-collapse-blue { background: transparent 0px -60px no-repeat scroll url('resources/images/misc_icons.png'); }
+.icon-projection { background: transparent 0px -620px no-repeat scroll url('resources/images/button_icons.png'); }
+.ux_trans-body .linkblue{
+	color: $primaryColor !important;
+	font-family: $fontFamily !important;
+}
+#contactus, #interestrate, #exchangerate { padding: 0px; }
+
+p#links a { color:white; }
+p#copyright { border-top: 1px solid #FBFBFB; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

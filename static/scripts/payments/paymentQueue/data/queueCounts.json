@@ -1,0 +1,17 @@
+
+{
+    "d": {
+        "queueCounts": [
+            {
+                "queueCount": 4,
+                "queueDescrition": "Verification",
+                "queueType": "V"
+            },
+            {
+                "queueCount": 0,
+                "queueDescrition": "Pending Auth",
+                "queueType": "V"
+            }
+        ]
+    }
+}

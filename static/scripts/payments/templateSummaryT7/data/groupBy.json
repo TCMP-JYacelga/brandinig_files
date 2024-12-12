@@ -1,0 +1,46 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "All",
+			"groupTypeCode" : "all",
+			// "columns" : [],
+			"groups" : []
+			/*"groups" : [{
+				"groupCode" : "STATUS_DRAFT",
+				"groupDescription" : "Draft and Repair",
+				"groupId" : "status",
+				// "columns" : [],
+				"groupQuery" : "(hasInstrDraft eq 1  or ActionStatus eq '0' or ActionStatus eq '9' or ActionStatus eq '1')"
+			}, {
+				"groupCode" : "STATUS_PENDING",
+				"groupDescription" : "Pending Approval and Posting",
+				"groupId" : "status",
+				// "columns" : [],
+				"groupQuery" : "(hasInstrPending eq 1  or ActionStatus eq '2' or ActionStatus eq '3' or ActionStatus eq '4' or ActionStatus eq '6' or ActionStatus eq '10' or ActionStatus eq '30' or ActionStatus eq '31' or ActionStatus eq '24')"
+			}, {
+				"groupCode" : "STATUS_BANK",
+				"groupDescription" : "Payments at Bank",
+				"groupId" : "status",
+				// "columns" : [],
+				"groupQuery" : "(hasInstrAtBank eq 1  or ActionStatus eq '7')"
+			}, {
+				"groupCode" : "STATUS_HISTORY",
+				"groupDescription" : "History",
+				"groupId" : "status",
+				// "columns" : [],
+				"groupQuery" : "(hasInstrHistory eq 1  or ActionStatus eq '12' or ActionStatus eq '8' or ActionStatus eq '15' or ActionStatus eq '28' or ActionStatus eq '75' or ActionStatus eq '76' or ActionStatus eq '77' or ActionStatus eq '78')"
+			}, {
+				"groupCode" : "STATUS_FAILED",
+				"groupDescription" : "Failed",
+				"groupId" : "status",
+				// "columns" : [],
+				"groupQuery" : "(hasInstrFailed eq 1  or ActionStatus eq '13' or ActionStatus eq '16')"
+			}]*/
+		}],
+		"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+		}
+	}
+}

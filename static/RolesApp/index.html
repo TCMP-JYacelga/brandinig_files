@@ -1,0 +1,718 @@
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma-directive" content="no-cache">
+	<meta http-equiv="cache-directive" content="no-cache">
+	<title>Role Master</title>
+	<!-- START: Stylesheets -->
+	<link rel="stylesheet" href="../static/js/extjs4.2.1/resources/css/ext-all.css">
+	<!-- <link rel="stylesheet" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/bootstrap-forms.css">--> 
+	<link rel="stylesheet" href="../static/css/jquery-ui-1.8.16.css">
+	<!-- Custom css files -->
+	<link rel="stylesheet" href="../static/css/slickT7.css">
+	<link rel="stylesheet" type="text/css" href="../static/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/multiselect.css">	
+<!-- 	<link rel="stylesheet" href="../static/css/mainT7.css">  -->
+	 
+	<!-- END: Stylesheets -->
+	<!-- START: Scripts -->	
+		<script src="../static/js/jquery/jquery-1.7.1.min.js"></script>		
+		<script src="lib/handlebars-v4.3.0.js"></script>
+		<script src="lib/sammy.js"></script>
+		<script src="lib/sammy.handlebars.js"></script>	
+		<script src="js/RolesApp.js"></script>				
+		<script src="js/RolesRoutes.js"></script>
+		<script src="../static/js/jquery/jquery-ui-1.8.16.min.js"></script>		
+		<script src="../static/js/jquery/jquery.multiselect.js"></script>	
+		<script src="../static/js/jquery/jquery.blockUI.js"></script>
+		
+		<!-- script src="js/RolesStore.js"></script -->
+		
+		<script src="controller/CommonController.js"></script>
+		<script src="store/CommonStore.js"></script>
+		
+		<script src="js/RoleDetailsView.js"></script>		
+		<script src="js/AdminView.js"></script>		
+		<script src="js/VerifyView.js"></script>		
+		<script src="js/BalanceReportingView.js"></script>		
+		<script src="js/PaymentsView.js"></script>		
+		<script src="js/ImagingView.js"></script>		
+		<script src="js/LoansView.js"></script>		
+		<script src="js/PositivePayView.js"></script>		
+		<script src="js/CheckManagementView.js"></script>		
+		<script src="js/BankReportsView.js"></script>		
+		<script src="js/SupplyChainView.js"></script>		
+		<script src="js/LiquidityView.js"></script>		
+		<script src="js/ForecastingView.js"></script>				
+		<script src="js/RecievablesView.js"></script>		
+		<script src="js/PortalsView.js"></script>		
+		<script src="js/MobileBankingView.js"></script>
+		<script src="js/TPFAView.js"></script>		
+		<script src="js/RoleEntryView.js"></script>		
+		
+		<script src="controller/RoleDetailsController.js"></script>
+		<script src="store/RoleDetailsStore.js"></script>
+		
+		<script src="controller/AdminController.js"></script>
+		<script src="store/AdminStore.js"></script>
+		
+		<script src="controller/BalanceReportingController.js"></script>
+		<script src="store/BalanceReportingStore.js"></script>
+		
+		<script src="controller/PaymentController.js"></script>
+		<script src="store/PaymentStore.js"></script>
+		
+		<script src="controller/VerifyController.js"></script>
+	<!-- END: Scripts -->
+		<link type="text/css" rel="stylesheet" href="../static/styles/Themes/t7-main/t7-main.css" title="main-theme">
+		
+	<style type="text/css">
+		.grid{
+			max-height:180 !important;
+			overflow-y:auto;
+			height: 100%;
+		}
+	</style> 
+	<style type="text/css">
+		.disable {
+			 opacity: 0.4;
+		}
+	</style> 		
+</head>
+<body id="ext-gen1019" class="x-body x-webkit x-chrome">
+ <!-- <form id="formPageContent" method="post">---->
+	<div class="ft-wrapper">
+		<!-- START: Page Header -->
+		<div class="ft-header ft-bgcolor">
+	<div class="globalHeader">
+		<!-- 		<span>Global CASHplus</span> -->
+	</div>
+	<div class="ft-header-menubar">
+			<div class="ft-dropdown ft-header-dropdown">
+				<!-- <div class="">
+			Quick Links <span class="ft-dropdown-caret"></span>
+		</div> -->
+				<!-- <span class="dropdown quicklinks-dropdown"> -->
+				<span id="quickLinksMenuBtn">
+					<button class="ft-dropdown-toggle" role="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Quick Links <i class="fa fa-caret-down"></i>
+					</button>
+				</span>
+				<div class="quicklinks-dropdown ft-dropdown-menu ft-dropdown-right" id="quickLinksDropDown" style="display: none; right: auto; min-width: 160px;">
+					<!-- <ul id="quickLinksDropDownItems" class="ft-dropdown-items"> -->
+						<div class="list-group">
+<style type="text/css">
+</style> 
+<form name="actionlistform" method="post">
+			<h4 class="list-group-item-heading">
+				Action List
+			</h4>
+								<a href="#" class="list-group-item" onclick="gotoActionView('btrSummaryIntraday.form')">Intraday Summary</a>
+								<a href="#" class="list-group-item" onclick="gotoActionView('messageInboxCenter.srvc')">Message Center</a>
+								<a href="#" class="list-group-item" onclick="gotoActionView('userActivityList.srvc')">User Activity</a>
+								<a href="#" class="list-group-item" onclick="gotoActionView('btrSummaryPreviousday.form')">Previous Day Summary</a>
+								<a href="#" class="list-group-item" onclick="gotoActionView('transactionSearch.srvc')">Transaction Search</a>
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+</form>
+<div id="actionListPopUpDiv" class="ui-helper-hidden ux-dialog">
+<!-- Ideally to be Moved to blogLayoutT7_all.jsp -->
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/bootstrap-forms.css">
+<style type="text/css">
+#actionBody {
+	max-height: 200px !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 190px !important;
+}
+</style>
+</div>
+						</div>
+							<li role="separator" class="divider"></li>
+						<div class="list-group">
+<form id="quickpaylistform" name="quickpaylistform" method="post">
+			<h4 class="list-group-item-heading">
+				Quick Payments
+			</h4>
+						<a href="#" class="list-group-item" title="" onclick="gotoQuickPayLink('160708007I', 'B', '1','WlJZNRjTFUgb2PoRZ_rK9lH7PDw-tbIpLnbzI59wjA5TBbVlTQI9D862IiCXWtYevpVdoSBfMuKxIBGlIPBjnNjy8RpgadC_bd5BBqmYFdKLxFwLRR_2vYZOZyarOnZa6cjmqSQ5uOUXsAmknpCmt1rQYf6nSKiUU7xI0L4jaBM90ozKmmHttWqiasxg-ICOGx_cOl6P2u-dyT_WLzOCPAC3Qwrtpawr4vA36Mui8kvqH7WoxBgQ84ssj-k8MJENYjRTN1WFOx7CEs3dez8AVrso7-U0VdQaIdM8jRc8w5LxZhzKTOMONs10IFZ12xaJJX6z-n5HR-tzsQ6jGiLD-AdBW_CO2QzKwaNod4ctDcv5u41FKBkn8GRBAKEXeikiemQ5zi6B-OpS3v1JqFKwPtrOM8oCoWOEHCIEChtGJYB3me9It9GfLkbpmmQRZEoITL2xEUsPyfzYT05C5pc_Zj5tUmYSiz4AX1p6KGYTXPNaQPHKdc-yNGwwgb2X-qGLPTnnkqGmoO5OrkZzTZghq1gXOdy_HlSpMwscYN4L9fOx1g-16ytLBHMGnkqRdS_g0XJTHekEVl0vMwS79s9pFuw6EjVY6T5zweBlek7l1H-kPCr465nuKeq8IIXmP7EjEVl-kAmt_FAATZ9PU016_xqfvvihW0mPnBbcIe-MZeQgsXN3EDUYGBG-wy9og2R6a0lp-yGWekY1S6S7ROcqtrKP8uA3Tps1PaQ5PSu0in9Sm87V8Tk7xjecj1EFgXhM9YXZdukv4bjq-jmXqgBaWy6SaoDWwMpL8y0anNgQ45ULt2tthyl72DmlKgQvWf8nT3hKbrF8Mh8EzlKeXU7b3A','0');">
+							ACCTRAN</a>
+						<a href="#" class="list-group-item" title="" onclick="gotoQuickPayLink('14062800SK', 'Q', '2','WlJZNRjTFUgb2PoRZ_rK9lH7PDw-tbIpLnbzI59wjA5TBbVlTQI9D862IiCXWtYevpVdoSBfMuKxIBGlIPBjnNjy8RpgadC_bd5BBqmYFdKLxFwLRR_2vYZOZyarOnZa6cjmqSQ5uOUXsAmknpCmt1rQYf6nSKiUU7xI0L4jaBM90ozKmmHttWqiasxg-ICOGx_cOl6P2u-dyT_WLzOCPAC3Qwrtpawr4vA36Mui8kvqH7WoxBgQ84ssj-k8MJENYjRTN1WFOx7CEs3dez8AVrso7-U0VdQaIdM8jRc8w5LxZhzKTOMONs10IFZ12xaJJX6z-n5HR-tzsQ6jGiLD-AdBW_CO2QzKwaNod4ctDcv5u41FKBkn8GRBAKEXeikiemQ5zi6B-OpS3v1JqFKwPtrOM8oCoWOEHCIEChtGJYB3me9It9GfLkbpmmQRZEoITL2xEUsPyfzYT05C5pc_Zj5tUmYSiz4AX1p6KGYTXPNaQPHKdc-yNGwwgb2X-qGLPTnnkqGmoO5OrkZzTZghq1gXOdy_HlSpMwscYN4L9fOx1g-16ytLBHMGnkqRdS_g0XJTHekEVl0vMwS79s9pFuw6EjVY6T5zweBlek7l1H-kPCr465nuKeq8IIXmP7EjEVl-kAmt_FAATZ9PU016_xqfvvihW0mPnBbcIe-MZeQgsXN3EDUYGBG-wy9og2R6a0lp-yGWekY1S6S7ROcqtrKP8uA3Tps1PaQ5PSu0in9Sm87V8Tk7xjecj1EFgXhM9YXZdukv4bjq-jmXqgBaWy6SaoDWwMpL8y0anNgQ45ULt2tthyl72DmlKgQvWf8nT3hKbrF8Mh8EzlKeXU7b3A','0');">
+							Account Transfer Entry</a>
+						<a href="#" class="list-group-item" title="" onclick="gotoQuickPayLink('ENR', 'B', '3','WlJZNRjTFUgb2PoRZ_rK9lH7PDw-tbIpLnbzI59wjA5TBbVlTQI9D862IiCXWtYevpVdoSBfMuKxIBGlIPBjnNjy8RpgadC_bd5BBqmYFdKLxFwLRR_2vYZOZyarOnZa6cjmqSQ5uOUXsAmknpCmt1rQYf6nSKiUU7xI0L4jaBM90ozKmmHttWqiasxg-ICOGx_cOl6P2u-dyT_WLzOCPAC3Qwrtpawr4vA36Mui8kvqH7WoxBgQ84ssj-k8MJENYjRTN1WFOx7CEs3dez8AVrso7-U0VdQaIdM8jRc8w5LxZhzKTOMONs10IFZ12xaJJX6z-n5HR-tzsQ6jGiLD-AdBW_CO2QzKwaNod4ctDcv5u41FKBkn8GRBAKEXeikiemQ5zi6B-OpS3v1JqFKwPtrOM8oCoWOEHCIEChtGJYB3me9It9GfLkbpmmQRZEoITL2xEUsPyfzYT05C5pc_Zj5tUmYSiz4AX1p6KGYTXPNaQPHKdc-yNGwwgb2X-qGLPTnnkqGmoO5OrkZzTZghq1gXOdy_HlSpMwscYN4L9fOx1g-16ytLBHMGnkqRdS_g0XJTHekEVl0vMwS79s9pFuw6EjVY6T5zweBlek7l1H-kPCr465nuKeq8IIXmP7EjEVl-kAmt_FAATZ9PU016_xqfvvihW0mPnBbcIe-MZeQgsXN3EDUYGBG-wy9og2R6a0lp-yGWekY1S6S7ROcqtrKP8uA3Tps1PaQ5PSu0in9Sm87V8Tk7xjecj1EFgXhM9YXZdukv4bjq-jmXqgBaWy6SaoDWwMpL8y0anNgQ45ULt2tthyl72DmlKgQvWf8nT3hKbrF8Mh8EzlKeXU7b3A','0');">
+							Automated Enrollment Entry</a>
+						<a href="#" class="list-group-item" title="" onclick="gotoQuickPayLink('BATCHWIRE', 'B', '4','WlJZNRjTFUgb2PoRZ_rK9lH7PDw-tbIpLnbzI59wjA5TBbVlTQI9D862IiCXWtYevpVdoSBfMuKxIBGlIPBjnNjy8RpgadC_bd5BBqmYFdKLxFwLRR_2vYZOZyarOnZa6cjmqSQ5uOUXsAmknpCmt1rQYf6nSKiUU7xI0L4jaBM90ozKmmHttWqiasxg-ICOGx_cOl6P2u-dyT_WLzOCPAC3Qwrtpawr4vA36Mui8kvqH7WoxBgQ84ssj-k8MJENYjRTN1WFOx7CEs3dez8AVrso7-U0VdQaIdM8jRc8w5LxZhzKTOMONs10IFZ12xaJJX6z-n5HR-tzsQ6jGiLD-AdBW_CO2QzKwaNod4ctDcv5u41FKBkn8GRBAKEXeikiemQ5zi6B-OpS3v1JqFKwPtrOM8oCoWOEHCIEChtGJYB3me9It9GfLkbpmmQRZEoITL2xEUsPyfzYT05C5pc_Zj5tUmYSiz4AX1p6KGYTXPNaQPHKdc-yNGwwgb2X-qGLPTnnkqGmoO5OrkZzTZghq1gXOdy_HlSpMwscYN4L9fOx1g-16ytLBHMGnkqRdS_g0XJTHekEVl0vMwS79s9pFuw6EjVY6T5zweBlek7l1H-kPCr465nuKeq8IIXmP7EjEVl-kAmt_FAATZ9PU016_xqfvvihW0mPnBbcIe-MZeQgsXN3EDUYGBG-wy9og2R6a0lp-yGWekY1S6S7ROcqtrKP8uA3Tps1PaQ5PSu0in9Sm87V8Tk7xjecj1EFgXhM9YXZdukv4bjq-jmXqgBaWy6SaoDWwMpL8y0anNgQ45ULt2tthyl72DmlKgQvWf8nT3hKbrF8Mh8EzlKeXU7b3A','0');">
+							BATCHWIRE</a>
+						<a href="#" class="list-group-item" title="" onclick="gotoQuickPayLink('16082201L2', 'Q', '5','WlJZNRjTFUgb2PoRZ_rK9lH7PDw-tbIpLnbzI59wjA5TBbVlTQI9D862IiCXWtYevpVdoSBfMuKxIBGlIPBjnNjy8RpgadC_bd5BBqmYFdKLxFwLRR_2vYZOZyarOnZa6cjmqSQ5uOUXsAmknpCmt1rQYf6nSKiUU7xI0L4jaBM90ozKmmHttWqiasxg-ICOGx_cOl6P2u-dyT_WLzOCPAC3Qwrtpawr4vA36Mui8kvqH7WoxBgQ84ssj-k8MJENYjRTN1WFOx7CEs3dez8AVrso7-U0VdQaIdM8jRc8w5LxZhzKTOMONs10IFZ12xaJJX6z-n5HR-tzsQ6jGiLD-AdBW_CO2QzKwaNod4ctDcv5u41FKBkn8GRBAKEXeikiemQ5zi6B-OpS3v1JqFKwPtrOM8oCoWOEHCIEChtGJYB3me9It9GfLkbpmmQRZEoITL2xEUsPyfzYT05C5pc_Zj5tUmYSiz4AX1p6KGYTXPNaQPHKdc-yNGwwgb2X-qGLPTnnkqGmoO5OrkZzTZghq1gXOdy_HlSpMwscYN4L9fOx1g-16ytLBHMGnkqRdS_g0XJTHekEVl0vMwS79s9pFuw6EjVY6T5zweBlek7l1H-kPCr465nuKeq8IIXmP7EjEVl-kAmt_FAATZ9PU016_xqfvvihW0mPnBbcIe-MZeQgsXN3EDUYGBG-wy9og2R6a0lp-yGWekY1S6S7ROcqtrKP8uA3Tps1PaQ5PSu0in9Sm87V8Tk7xjecj1EFgXhM9YXZdukv4bjq-jmXqgBaWy6SaoDWwMpL8y0anNgQ45ULt2tthyl72DmlKgQvWf8nT3hKbrF8Mh8EzlKeXU7b3A','0');">
+							BILLPAYMETHOD</a>
+						<a href="#" class="list-group-item" title="" onclick="cloneRecordTemplates('multiPaymentTemplateEntry.form', '0','eKJk1A88yqGO0TKRsOEIXqx0hNUCSwm5Ynvtnnw4TbQ92U1ydQQ7hLFRr-i4M1kVMLZKad3VHnWjP7mtDAOjQ5tRigX5QzdTlknqoi48iKI','16101700Q7I0', '', 'B');">
+							Batch Fedwire</a>
+						<a href="#" class="list-group-item" title="" onclick="cloneRecordTemplates('singlePaymentTemplateEntry.form', '1','eKJk1A88yqGO0TKRsOEIXiFNh-G9Uz9WiIowRecclBZl1UADnLd9mnarDy1FP9tCEcMvqXRXmI7BYB6sHCEuuOBdFLdk-s9rmZAMx1mOiCY','16101800QEGT', '', 'Q');">
+							Test2001</a>
+						<a href="#" class="list-group-item" title="" onclick="cloneRecordTemplates('singlePaymentTemplateEntry.form', '2','eKJk1A88yqGO0TKRsOEIXoDpCOSlOC1GsqxXCPjfX2A-iyjAVekc5-sPKI_fHLsDJsUJtGrwhoqz7oOCoajYj5o0iiZCQ8Sja2r5cLOMgWo','16101900QLEA', '', 'Q');">
+							Aaabbb</a>
+						<a href="#" class="list-group-item" title="" onclick="cloneRecordTemplates('multiPaymentTemplateEntry.form', '3','eKJk1A88yqGO0TKRsOEIXse64LhVyat3gzGO4QiQIbWnqPfvLh1m4kDvPATAcDxV87O8HSKrQXRgPkMkHfTU0cZ6vLQ2FRHv9RAodWCESjo','16070800002L', '', 'B');">
+							Test_ChildSupport_A1</a>
+						<a href="#" class="list-group-item" title="" onclick="cloneRecordTemplates('multiPaymentTemplateEntry.form', '4','eKJk1A88yqGO0TKRsOEIXn_-MTM7611q8r78Z1pMsLw4NKtYvrhmsLsSwXBUxmGsqYVIIqpK4QNwy0E8Lc0ZmSc0hR8_wgNzO8vl_XnEpJ0','160708001VCU', '', 'B');">
+							gcp-13408-7269</a>
+	<!-- </ul>
+		</div> -->
+	<input type="hidden" id="qppirMode" name="pirMode"> <input type="hidden" id="qptxtCurrent" name="txtCurrent"> <input type="hidden" id="qptxtIndex" name="txtIndex"> <input type="hidden" id="qpisBatch" name="isBatch" value="0"> <input type="hidden" id="qpmyProduct" name="myProduct"> <input type="hidden" id="txtLayout" name="txtLayout"> <input type="hidden" id="txtIdentifier" name="txtIdentifier"> <input type="hidden" id="txtCode" name="txtCode"> <input type="hidden" id="txtkey" name="txtkey"> <input type="hidden" id="txtPayUsing" name="txtPayUsing" value="P">
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+</form>
+<div id="manageQuickPay" class="ui-helper-hidden ux-dialog">
+<style>
+#choosePmtTypeFromSidePanel {
+	max-height: 250px !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: auto !important;
+}
+#chooseTmptTypeFromSidePanel {
+	max-height: 250px !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: auto !important;
+}
+</style>
+<div id="manageQuickpayForm" name="manageQuickpayForm" commandname="model">
+	<input type="hidden" id="parentElementIdSeek" name="parentElementId">
+	<input type="hidden" id="formNameSeek" name="formName"> <input type="hidden" id="callerIdSeek" name="callerId"> <input type="hidden" id="seekUrlSeek" name="seekUrl"> <input type="hidden" id="seekInputsSeek" name="seekInputs"> <input type="hidden" id="codeSeek" name="code"> <input type="hidden" id="callbackSeek" name="callback">
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+</div>
+</div>
+<div id="quickPayProductsPopUp" class="ui-helper-hidden autowidth">
+<form id="quickPayPopUpForm" name="quickPayPopUpForm" method="post">
+<br> 
+<div id="errorDivQuickPayEntry" name="errorboxAction"></div>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" class="entryTable">
+<colgroup><col width="5%">
+<col width="40%">
+<col width="22%">
+<col width="20%">
+</colgroup><tbody><tr>
+		<td></td>
+		<td>
+		<div class="hidden" id="sendAcc">
+		<label class="frmLabel required">Sending Account</label>
+		</div>
+		<div id="debitAcc">
+		<label class="frmLabel required">Debit Account</label>
+		</div>
+		</td>
+		<td>
+			<label class="frmLabel required">Amount</label>
+		</td>
+		<td></td>	
+</tr>
+<tr height="50">
+		<td></td>
+		<td>
+		 	<input type="text" class="rounded" id="qpAccountNo" readonly="readonly">
+				<a tabindex="105" class="linkbox seeklink" id="btnAccountSeek" onclick="javascript:getHelpQuickSeek('qpAccountNo||qpFromACMCurr|qpAccountBalance',seekIdQuickPay, 'quickPayAccount_seek_first.seek','product:qpProduct|clntparam:qpClnt|entityType:qpEntity|field1:qpDrCrFlag',callerIdQuickPay,'quickPayAccount'); return false;" href="#"></a>
+		<label class="grey hidden" id="qpAvailBalLabel"></label>
+		</td>	
+		<td>
+			<div class="w18 rounded">
+			<select class="w4" style=" border:0px" id="qpTxnCurrency">
+			</select>
+			<input type="text" class="w9" style="border:0px" id="qpAmount" onchange="getDataForFXRate()">	
+			</div>
+		</td>
+		<td>
+			<input type="radio" name="drCrFlag" id="qpDrCrFlagC" value="C" onchange="changeFields(this)"><span>Credit</span>
+			<input type="radio" checked="checked" name="drCrFlag" id="qpDrCrFlagD" value="D" onchange="changeFields(this)"><span>Debit</span>
+		</td>
+</tr>
+<tr>
+		<td></td>
+		<td>
+		<div id="qpDrawer" class="hidden">
+		<label class="frmLabel required">Drawer</label>
+		</div>
+		<div id="qpReciever">
+		<label class="frmLabel required">Receiver</label>
+		</div>
+		</td>
+		<td>
+			<label class="frmLabel required">Reference </label>
+		</td>
+		<td></td>	
+</tr>
+<tr height="40">
+		<td></td>
+		<td>			
+			<input type="text" class="rounded" id="drawerCodeQuickPay" readonly="readonly">
+			<span id="qpBeneficiarySeekLinkDiv">
+			<a class="linkbox seeklink" href="#" id="qpBeneficiarySeek" onclick="javascript:getHelpQuickSeek('drawerCodeQuickPay',beneficiarySeekIdQuickPay, 'qpbeneficiary_seek_first.seek','bankProduct:qpBankProduct|product:qpProduct',callerIdQuickPay,'qpbeneficiary','2'); return false;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>			
+			<label class="frmLabel grey">More Details </label>		
+		</td>
+		<td>
+			<input type="text" id="qpRecordRefNo" class="rounded">
+		</td>
+		<td></td>	
+</tr>
+<tr>
+		<td></td>
+		<td>
+			<label class="frmLabel required" id="rateTypeLabel">Rate Type</label>
+		</td>
+		<td>
+			<div id="cntrctRef">
+			<label class="frmLabel" id="cntrctRefLabel">Contract Reference</label>			
+			</div>
+		</td>
+		<td></td>	
+</tr>
+<tr height="40">
+		<td></td>
+		<td>
+			<select class="w10 rounded" onchange="contractRateEnableDisable(this)" id="qpRateType">
+			<option value="0">Card Rate</option>
+			<option value="1">Contract Rate </option>
+			</select>
+			<span id="btnRefreshDiv" class="loadFXRate">
+				<label class="grey hidden" id="contractFXRateValueLabel"></label>			
+			</span>
+		</td>
+		<td>
+			<input type="text" class="rounded" id="qpContractRefNo" readonly="readonly">
+			<a class="linkbox seeklink" href="#" onclick="javascript:getHelpQuickSeek('qpContractRefNo||qpFXRate',clientContractRatesSeekIDQuickPay, 'qpcontractrates_seek_first.seek','buyCCY:qpFromACMCurr|sellCCY:qpTxnCurrency',callerIdQuickPay,'qpcontractrates','3'); return false;" id="qpcontractratesSeekLink"></a>
+		</td>
+		<td></td>	
+</tr>
+<tr>
+		<td></td>
+		<td>
+			<label class="frmLabel required">Value Date </label>
+		</td>
+		<td>
+			<label class="frmLabel required">Product</label>
+		</td>
+		<td></td>	
+</tr>
+<tr height="40">
+		<td></td>
+		<td>
+			<input type="text" class="rounded" id="qpValueDate">
+		</td>
+		<td>
+		<input type="text" class="rounded" id="qpBankProduct" readonly="readonly">
+		<span id="qpBankProductSeekLinkDiv">
+		<a class="linkbox seeklink" href="#" onclick="javascript:getHelpQuickSeek('qpBankProduct',qpBankPrDebitSeekIDQuickPay, 'qpBankProduct_seek_first.seek','product:qpProduct|currency:qpTxnCurrency',callerIdQuickPay,'qpBankProduct','3'); return false;" id="qpBankProductSeekLink"></a>
+		</span>
+		</td>
+		<td></td>	
+</tr>	
+</tbody></table>	
+	<input type="hidden" id="quickpay_parentElementId" name="parentElementId">
+	<input type="hidden" id="quickpay_code" name="code">
+	<input type="hidden" id="quickpay_maxColumns" name="maxColumns">
+	<input type="hidden" id="quickpay_callerId" name="callerId">
+	<input type="hidden" id="quickpay_seekUrl" name="seekUrl">
+	<input type="hidden" id="quickpay_seekInputs" name="seekInputs">
+	<input type="hidden" id="quickpay_formName" name="formName">
+	<input type="hidden" id="qpProduct" name="qpProduct">
+	<input type="hidden" id="qpClnt" name="qpClnt">
+	<input type="hidden" id="qpBene" name="qpBene">
+	<input type="hidden" id="qpEntity" name="qpEntity">
+	<input type="hidden" id="qpDrCrFlag" name="qpDrCrFlag">
+	<input type="hidden" id="qpFromACMCurr" name="qpFromACMCurr">
+	<input type="hidden" id="qpMypBankBeneFlag" name="qpMypBankBeneFlag">
+	<input type="hidden" id="qpRestrictedBene" name="qpRestrictedBene">
+	<input type="hidden" id="qpFXRate" name="qpFXRate">
+	<input type="hidden" id="qpPirMode" name="qpPirMode">
+	<input type="hidden" id="qpDetailRecordKey" name="qpDetailRecordKey">
+	<input type="hidden" id="qpParentRecordKey" name="qpParentRecordKey">
+	<input type="hidden" id="qpAccountBalance" name="qpAccountBalance">
+	<div id="successMsgPopupRefNo" class="ui-helper-hidden autowidth" title="Success">
+	<table border="0" cellpadding="2" cellspacing="0" width="100%">
+			<colgroup>
+				<col width="10%">
+				<col width="90%">
+			</colgroup>
+			<tbody><tr>
+				<td><a class="linkbox icon_24x24 success_link" href="#" tabindex="-1"></a></td>
+				<td valign="top" id="successRefNo">Instrument Successfully saved.</td>
+			</tr>
+</tbody></table>
+	</div>
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+</form>
+</div>
+<div id="quickPayTemplatesPopUp" class="ui-helper-hidden autowidth">
+</div>
+						</div>
+							<li role="separator" class="divider"></li>
+						<div class="list-group">
+<form id="favReportList" name="favReportList" method="post">
+			<h4 class="list-group-item-heading">
+				Reports
+			</h4>
+						<!-- <li> -->
+						<a href="#" class="list-group-item" title="" onclick="reportView(&quot;CASHPOSCMBV3&quot;,&quot;Cash Position Combined&quot;,&quot;1607060002&quot;,&quot;R&quot;,callerIdRepParam)">
+							Cash Position Combined
+						</a>
+						<!-- </li> -->
+	<input type="hidden" name="reportCode" id="reportCode"> <input type="hidden" id="rep_parentElementId" name="parentElementId"> <input type="hidden" id="rep_callerId" name="callerId"> <input type="hidden" id="rep_seekUrl" name="seekUrl"> <input type="hidden" id="rep_seekInputs" name="seekInputs"> <input type="hidden" id="rep_formName" name="formName"> <input type="hidden" id="rep_code" name="code">
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+</form>
+						</div>
+							<li role="separator" class="divider"></li>
+						<div class="list-group">
+<form id="messageFormsRightMenuForm" name="messageFormsRightMenuForm" method="post">
+	<input type="hidden" id="formRecordKey" name="formRecordKey"> <input type="hidden" id="msgformrightmenu_parentElementId" name="parentElementId"> <input type="hidden" id="msgformrightmenu_callerId" name="callerId"> <input type="hidden" id="msgformrightmenu_seekUrl" name="seekUrl"> <input type="hidden" id="msgformrightmenu_seekInputs" name="seekInputs"> <input type="hidden" id="msgformrightmenu_formName" name="formName"> <input type="hidden" id="msgformrightmenu_code" name="code"> <input type="hidden" id="msgFormCode" name="msgFormCode">
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+	<div id="messageBoxError" style="display: none;">
+		Please select form !
+	</div>
+</form>
+<div id="messageFormsRightMenuFormPopUp" class="ui-helper-hidden ux-dialog">
+<style>
+#chooseMsgTypeFromSidePanel{ max-height: 200px !important;overflow-y:auto;overflow-x:hidden;height:180px !important;}
+</style>
+</div>
+						</div>
+						<!-- <li role="separator" class="divider"></li> -->
+						<a class="list-group-item quicklinks-edit text-center" id="editQuickLinksButton" data-toggle="modal" data-target="#modal-quicklinks">Edit Quick Links</a>
+				</div>
+			</div>
+			<div class="ft-dropdown ft-header-dropdown">
+				<!-- <div class="ft-dropdown-toggle"> -->
+				<span id="alertMenuBtn">
+					<button class="ft-dropdown-toggle" role="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Alerts <span class="fa fa-caret-down"></span>
+					</button>
+				</span>
+				<!-- </div> -->
+				<div class="ft-dropdown-menu list-group" id="alertDropDownMenu" style="display: none;">
+					<ul id="unreadMessagesDropDownItem" class="ft-dropdown-items">
+								<li><span class="ft-item-index"></span> <span class="ft-item-content">No Unread Alerts</span></li>
+					</ul>
+					<div class="ft-dropdown-content">
+						<a class="link-button" onclick="javascript:window.location='inboxAlertCenter.srvc';return false;">View
+							all Alerts</a>
+					</div>
+				</div>
+			</div>
+			<!-- 	<div class="ft-header-menubar-separator"></div> -->
+		<div class="ft-dropdown">
+			<!-- 		<div  id="clockDiv" class="ft-dropdown-toggle" style="cursor: default;"> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+		</div>
+		<!-- </div> -->
+		<!-- <div class="ft-header-menubar-separator"></div> -->
+		<div class="ft-dropdown ft-header-dropdown">
+			<!-- <div class="ft-dropdown-toggle"> -->
+			<span id="userMenuBtn">
+				<button class="ft-dropdown-toggle" role="button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					FT USER1
+					<!-- <span class="ft-dropdown-caret"></span> -->
+					<span class="fa fa-caret-down"></span>
+				</button>
+			</span>
+			<!-- </div> -->
+			<div class="ft-dropdown-menu" id="userDropDownMenu" style="display: none;">
+				<ul class="ft-dropdown-items">
+					<li>
+							<a href="changePassword.form">Change Password</a>
+						</li>
+				</ul>
+			</div>
+		</div>
+				<button type="button" class="ft-margin-l ft-button-login" onclick="javascript:window.location='logoutUser.action';return false;">
+					Logout
+				</button>
+		<div id="dialog-message" title="Important information" style="display: none">
+			<span class="ui-state-default"><span class="ui-icon ui-icon-info" style="float: left; margin: 0 7px 0 0;"></span></span>
+			<div style="margin-left: 23px;">
+				<form id="tokenForm" name="tokenForm">
+					<div id="loadingMessageArea" style="font-size: 100% !important">Loading
+						...</div>
+					<div id="tokenMessageArea" class="errors" style="color: red !important; font-size: 100% !important">
+						<span>Error</span>
+						<ul>
+							<li>Token authentication failed. Please retry</li>
+						</ul>
+					</div>
+					<div style="font-size: 14px;">Please enter code appearing on
+						your secure token device</div>
+					<img src="../static/images/logos/securetoken.jpg" border="0">
+					<div>
+						Secure Token: <input type="text" size="6" max="6" maxlength="6" id="token" name="token" onchange="document._token=this.value">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="viewAlertPopup" class="ui-helper-hidden ux-dialog" title="Message">
+<div id="popupContainer" class="ft-content-pane-scroll ux_panel-transparent-background ux_font-size14-normal">
+<label for="subject" style="font-weight:bold">Subject</label>
+	<label style="font-weight:bold">&nbsp; : &nbsp;</label>
+	<label id="subject" style="font-weight: normal"></label>
+<br>
+	<label for="sentOn" style="font-weight:bold">Sent</label>
+	<label style="font-weight:bold">&nbsp; : &nbsp;</label>
+	<label id="sent" style="font-weight: normal"></label>
+<hr>
+	<div class="disabled">
+		<label id="messageText" style="font-weight: normal"></label>
+	</div>
+<br>
+</div>
+<div class="ux-dialog-footer">
+	<ul class="ft-bar">
+		<li class="ft-bar-stretch"></li>
+		<li id="doneConfirmMsg" class="ft-no-padding">
+			<button class="ft-button ft-button-primary" onclick="closePopup();"> 
+						Close
+			</button>
+		</li>
+	</ul>
+</div>
+		</div>
+		<div id="editQuickLinksPopup" class="ui-helper-hidden ux-dialog ft-no-padding" title="Quick Links Settings" style="overflow-x: hidden;">
+			<div>
+	<div class="modal-body quicklinks-modal-body">
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default ft-no-margin" style="border-left: none; border-right: none; border-bottom: none;">
+				<div class="panel-heading" role="tab" id="action-list">
+					<h4 class="panel-title">
+						<a class="js-collapse-icon collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapse-action-list" aria-label="Expand" onclick="expandCollapse(this);"> <i class="fa fa-caret-down" aria-hidden="true"></i>Action List
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-action-list" class="panel-collapse collapse" role="tabpanel" aria-labelledby="action-list" aria-expanded="false">
+					<div class="panel-body quicklinks-panel-body">
+						<div class="js-quicklinks-badges quicklinks-badges" id="actionListBadges"></div>
+					</div>
+					<div class="panel-body">
+						<div style="max-height: 200px;">
+							<div id="actionListContentDiv"></div>
+	<input type="hidden" id="current_locale" name="current_locale" value="">
+	<input type="hidden" id="selected_menu" name="selected_menu" value="">
+	<input type="hidden" id="OWASP_CSRFTOKEN" name="OWASP_CSRFTOKEN" value="K3B7-R76V-Y0SG-K98B-9P9K-U7LN-B5JG-ZERM">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default ft-no-margin" style="border-left: none; border-right: none; border-bottom: none;">
+				<div class="panel-heading" role="tab" id="quick-payment">
+					<h4 class="panel-title">
+						<a class="js-collapse-icon collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapse-quick-payment" aria-label="Expand" onclick="expandCollapse(this);"> <i class="fa fa-caret-up" aria-hidden="true"></i>Quick Payment
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-quick-payment" class="panel-collapse" role="tabpanel" aria-labelledby="quick-payment" aria-expanded="false">
+					<div class="panel-body quicklinks-panel-body">
+						<div class="js-quicklinks-badges quicklinks-badges" id="productsQuickLinkBadges"></div>
+						<div class="js-quicklinks-badges quicklinks-badges" id="templatesQuickLinkBadges" style="display: none;"></div>
+					</div>
+					<div class="panel-body">
+						<div style="overflow: hidden;">
+							<div class="col-sm-2 quicklinks-col-left verticalDiv right-border">
+								<div class="list-group quicklinks-nav" role="tablist">
+									<a class="list-group-item active" aria-controls="products" role="tab" data-toggle="tab" onclick="selectQuickPayTab(this);" id="productsTabLeftPanel">
+										Products <i class="fa fa-caret-right pull-right"></i>
+									</a> <a class="list-group-item" aria-controls="templates" role="tab" data-toggle="tab" onclick="selectQuickPayTab(this);" id="templatesTabLeftPanel">
+										Templates <i class="fa fa-caret-right pull-right"></i>
+									</a>
+								</div>
+							</div>
+							<div style="overflow: auto;">
+								<div class="tab-content quicklinks-pane" style="height: 200px;">
+									<div role="tabpanel" class="tab-pane active" id="products">
+									</div>
+									<div role="tabpanel" class="tab-pane" id="templates" style="display: none;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default ft-no-margin" style="border-left: none; border-right: none; border-bottom: none;">
+				<div class="panel-heading" role="tab" id="message-forms">
+					<h4 class="panel-title">
+						<a class="js-collapse-icon collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapse-message-forms" aria-label="Collapse" onclick="expandCollapse(this);"> <i class="fa fa-caret-down" aria-hidden="true"></i>Message Forms
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-message-forms" class="panel-collapse collapse" role="tabpanel" aria-labelledby="message-forms" aria-expanded="false">
+					<div class="panel-body quicklinks-panel-body">
+						<div class="js-quicklinks-badges quicklinks-badges" id="messageFormBadges"></div>
+					</div>
+					<div class="panel-body">
+						<div>
+							<div class="choose-message-panel" style="overflow: auto;">
+								<div id="chooseMsgCategoryFromSidePanel" style="max-height: 200px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default ft-no-margin" style="border-left: none; border-right: none; border-bottom: none;">
+				<div class="panel-heading" role="tab" id="reports-list">
+					<h4 class="panel-title">
+						<a class="js-collapse-icon collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapse-reports" aria-label="Collapse" onclick="expandCollapse(this);"> <i class="fa fa-caret-down" aria-hidden="true"></i>
+							Reports
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-reports" class="panel-collapse collapse" role="tabpanel" aria-labelledby="reports-forms" aria-expanded="false">
+					<div class="panel-body quicklinks-panel-body">
+						<div class="js-quicklinks-badges quicklinks-badges" id="reportQuickLinkBadges">
+									<ul class="js-badge-container pull-left list-unstyled">
+											<li><button class="clear-all-links truncate-text" type="button" name="button" title="Cash Position Combined" onclick="reportView(&quot;CASHPOSCMBV3&quot;,&quot;Cash Position Combined&quot;,&quot;1607060002&quot;,&quot;R&quot;,callerIdRepParam)">
+												Cash Position Combined
+											</button>
+											</li>
+									</ul>
+										<span class="js-ghost-badges badges-ghost-container">
+											<div class="badges-ghost"></div>
+											<div class="badges-ghost"></div>
+											<div class="badges-ghost"></div>
+											<div class="badges-ghost"></div>
+										</span>
+							<button style="padding-left:13px;border-left:1px solid" class="clear-all-links" type="button" name="button" onclick="gotoActionView('reportCenterNewUX.srvc')">
+								Report Center
+							</button>
+							<div class="col-sm-12">
+								<div class="form-group">
+									<span id="infoIcon" class="fa fa-info-circle fa-1g" style="color: #609bb7;"></span>&nbsp;<span class="ft-font-italic ft-small-font">To Add/Remove favorite report open Report Center</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ux-dialog-footer ft-padding-bottom">
+	<ul class="ft-bar">
+		<li style="padding-left: 10px;">
+			<button type="button" class="ft-button ft-button-light" data-dismiss="modal" onclick="cancelEditQuickLinkPopup();">Close</button>
+		</li>
+		<li class="ft-bar-stretch"></li>
+		<li style="padding-right: 10px;">
+			<button type="button" class="ft-button ft-button-primary" onclick="saveEditQuickLinkPopup();">Save Changes</button>
+		</li>
+	</ul>
+</div>
+		</div>
+	</div>
+<div id="dialog-message-iframe" title="Authentication" style="display: none">
+	<span class="ui-state-default"><span class="ui-icon ui-icon-info" style="float: left; margin: 0 7px 0 0;"></span></span>
+	<div style="margin-left: 23px;" id="authFrameDiv"></div>
+</div>
+<form id="samlform" target="samlIframe" method="POST">
+	<input type="HIDDEN" name="SAMLRequest" id="SAMLRequest">
+</form>
+		</div>
+		<!-- END: Page Header -->
+		<!--START:Page Navigation-->
+		<div class="ft-header-nav">
+<ul class="ft-main-nav"><li class="ft-page-active"><a href="showWelcome2.form" data-mainnavid="Home"><i class="fa fa-home"></i></a></li><li><a href="btrSummaryIntraday.form" data-mainnavid="Accounts">Accounts</a><ul class="ft-sub-nav" data-subnavid="sub_nav_Accounts" style="display: none;"><li class="flyout"><a href="#">Account Summary<i class="fa fa-caret-down"></i></a><ul class="ft-sub-nav-3"><li><a href="btrSummaryIntraday.form">Intraday</a></li><li><a href="btrSummaryPreviousday.form">Previous Day</a></li></ul></li><li><a href="cashPositionTxnCenter.form">Cash Position Summary</a></li><li><a href="transactionSearch.srvc">Transaction Search</a></li><li class="flyout"><a href="#">Loans<i class="fa fa-caret-down"></i></a><ul class="ft-sub-nav-3"><li><a href="loanCenterNew.srvc">Transaction Summary</a></li><li><a href="loanCenterSiNew.srvc">Recurring Payment</a></li><li><a href="loanInvoiceCenter.srvc">Invoices</a></li></ul></li><li><a href="incomingWiresNew.srvc">Incoming Wires</a></li><li class="flyout"><a href="#">Imaging<i class="fa fa-caret-down"></i></a><ul class="ft-sub-nav-3"><li><a href="depositInquiry.srvc">Deposit Ticket</a></li><li><a href="instrumentInquiry.srvc">Deposit Items</a></li><li><a href="clearedCheckInquiry.srvc">Cleared Check</a></li></ul></li><li><a href="lmsAccountList.form">Account Configuration</a></li></ul></li><li><a href="paymentSummary.form" data-mainnavid="Payments">Payments</a><ul class="ft-sub-nav" data-subnavid="sub_nav_Payments" style="display: none;"><li><a href="paymentSummary.form">Payment Center</a></li><li><a href="templateSummary.form">Templates</a></li><li><a href="SISummary.form">Recurring Transactions</a></li><li><a href="passThruFileACH.srvc">ACH PassThru</a></li><li><a href="tcwAuthMatrixWorkflowMstList.form">Approval Workflow</a></li><li><a href="beneficiaryList.form">Receivers</a></li><li><a href="orderingPartiesList.form">Ordering Party</a></li></ul></li><li><a href="checkManagement.srvc" data-mainnavid="Checks">Checks</a><ul class="ft-sub-nav" data-subnavid="sub_nav_Checks" style="display: none;"><li><a href="checkManagement.srvc">Check Management</a></li><li class="flyout"><a href="#">Positive Pay<i class="fa fa-caret-down"></i></a><ul class="ft-sub-nav-3"><li><a href="positivePayIssuanceList.srvc">Issuance</a></li><li><a href="positivePayListNew.srvc">Decision</a></li><li><a href="passThruPositivePay.srvc">Pass Through</a></li></ul></li></ul></li><li><a href="messageInboxCenter.srvc" data-mainnavid="Messages">Messages</a><ul class="ft-sub-nav" data-subnavid="sub_nav_Messages" style="display: none;"><li class="flyout"><a href="#">Message Center<i class="fa fa-caret-down"></i></a><ul class="ft-sub-nav-3"><li><a href="messageInboxCenter.srvc">Inbox</a></li><li><a href="messageSentCenter.srvc">Outbox</a></li></ul></li><li><a href="clientBroadcastMessageMstList.form">Broadcast Message</a></li></ul></li><li><a href="reportCenterNewUX.srvc" data-mainnavid="Reports">Reports</a><ul class="ft-sub-nav" data-subnavid="sub_nav_Reports" style="display: none;"><li><a href="reportCenterNewUX.srvc">Report Center</a></li><li><a href="customReportCenter.srvc">Custom Reports</a></li><li><a href="preGeneratedReport.srvc">Pre-Generated</a></li><li><a href="customerFileMappingCenter.srvc">Customer File Mapping</a></li><li><a href="taskStatusList.form">File Upload</a></li></ul></li><li><a href="userAdminCategoryList.form" data-mainnavid="Security">Security</a><ul class="ft-sub-nav" data-subnavid="sub_nav_Security" style="display: none;"><li><a href="userAdminCategoryList.form">Roles</a></li><li><a href="userAdminList.form">Users</a></li><li><a href="approvalMatrixList.form">Approval Matrix</a></li><li><a href="securityProfileMstList.form">Security Configuration</a></li><li class="flyout"><a href="#">User Audit Monitor<i class="fa fa-caret-down"></i></a><ul class="ft-sub-nav-3"><li><a href="userActivityList.srvc">User Activity</a></li><li><a href="eventLogList.srvc">Event Log</a></li></ul></li><li><a href="mobileRevocationList.srvc">Mobile Revocation</a></li></ul></li></ul>
+<ul class="ft-help-nav">
+		<!-- 	
+		<div class="ft-dropdown ft-pref-dropdown">
+			<div class="ft-dropdown-toggle" title="Preferences">
+				<span class="ft-help-opt-btn ft-icons ft-icons-help2"></span> 
+				<span class="ft-dropdown-caret"></span>
+			</div>
+			<div class="ft-dropdown-menu">
+				<ul class="ft-dropdown-items">
+					<li><a href="#" id="savePrefMenuBtn" onclick="$(document).trigger('savePreference');return false;">Save</a></li>
+					<li><a href="#" id="clearPrefMenuBtn"  onclick="$(document).trigger('clearPreference');return false;">Clear</a></li>
+				</ul>
+			</div>
+		</div>
+		 -->
+			<li>
+				<a class="" aria-label="Help" onclick="javascript:showHelp('../static/webHelp/GCPClientWebHelp/index.htm#specifying_role_details.htm');return false;" target="_help" title="Help"><i aria-hidden="true" class="fa fa-question-circle"></i></a>
+			</li>
+</ul>
+		</div>
+		<!--END:Page Navigation-->
+		<!--START:Page Content-->
+		<!--START:Page Header ################-->
+			 <div class="ft-layout-header ft-no-padding-right">
+				<!-- Page title to be appended dynamically here -->
+				<!--<div class="ft-accordion-toggle-trigger">
+					<div class="ft-accordion-trigger-icon ft-icons"></div>
+					<div class="ft-accordion-header-txt">
+						HIDE
+					</div>
+				</div>-->
+			</div> 
+		<!--End:Page Header ################-->
+		<div class="ft-layout-container" id ="ft-layout-container">
+		<!--RoleDetails-->			
+		</div>
+		<div id="loadingMsg" class="ui-helper-hidden">
+			<img src="../static/styles/Themes/t7-main/resources/images/T7/loading.gif" style="background-position: left center;">
+    		<span>'+getLabel("loading", "Loading")+'...</span>
+		</div>
+		<div id="rrDialog" class="ui-helper-hidden">
+			<form id="frmDialog">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label id="rrField"></label>
+							<textarea cols="43" rows="6" name="taRemarks" id="taRemarks" class="form-control" maxlength="255"></textarea>	
+						</div>
+					</div>	
+				</div>
+			</form>
+		</div>
+		<!--END:Page Content-->
+		<!-- START: Page Footer -->
+		<div class="ft-footer ft-bgcolor">
+			<div class="ft-footer-column-left">
+	<div class="ft-row-top">
+		<ul class="ft-footer-nav">
+			<li><a>Privacy</a></li>
+			<li><a>Security</a></li>
+			<li><a>Digital Services Agreement</a></li>
+			<li id="footerMoreLink"><a>Release Info</a></li>
+		</ul>
+	</div>
+</div>
+<div>
+	<div id="sessionPopup"></div>
+	<div id="sessionTimeout"></div>
+	<div id="footer_Date_Time" class="ft-footer-center"></div>
+</div>
+<div class="ft-footer-column-right">
+	<ul>
+		<li><span class="ft-footer-copyright rightAlign">©
+				2015, All Rights Reserved.</span></li>
+		<li><span class="ft-footer-copyright rightAlign"></span></li>
+	</ul>
+</div>
+		</div>
+		<!--END:Page Footer-->
+	</div>
+	<div id="alertDialog" class="ui-dialog-content ui-widget-content ui-helper-hidden">
+		<p id="alertMsg"></p>
+	</div>
+<!-- </form>-->	
+</body></html>

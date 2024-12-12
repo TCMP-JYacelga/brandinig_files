@@ -1,0 +1,50 @@
+<div class="panel panel-default" >
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="widgetsInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>{{getLabel "lbl.role.widget" "Widgets"}}</span>
+					<img id="widgetsAll_{{assetid}}" data-version="{{ assignAllWidgets_version }}" src="{{checkBoxIcon assignAllWidgets}}" class="chkBoxAlign" width="16"
+						height="16" border="0"> 
+					<label id = "widgetsAll_{{assetid}}" for = "widgetsAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.widget1" "All"}}</label>
+					<label id="lblWidgetCount" class="checkbox-inline pull-right">{{widgetsAssignedCount}} of {{widgetsCount}}{{getLabel "lbl.role.widget2" " Selected"}}</label>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="widgetsInfoDiv" class="panel-body">
+		<div class="row grid">
+			<table class="view-grid" style="width: 99%">
+				<thead>
+					<tr class="view-grid-header">
+						<td class="view-grid-header-text" style="width: 10%"></td>
+						<td class="view-grid-header-text">{{getLabel "lbl.role.widget3" "Widget Description"}}</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each widgets}}
+					<tr class="view-grid-body">
+						<td class="view-grid-body-content text-center "><a
+							class="limit-reached test"> <img
+								id="chkWidget_{{../assetid}}_{{widgetId}}"
+								data-widgetid = "{{ widgetId }}"
+								data-widgettype = "{{ widgetType }}"
+								data-assetid="{{../assetId}}"
+								data-version = "{{ version }}"
+								data-digest = "{{ digest }}"
+								src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+								border="0"></a></td>
+						<td class="view-grid-body-content">{{getLabel widgetId widgetType}}</td>
+					</tr>
+					{{else}}
+					<tr class="view-grid-body">
+						<td class="view-grid-body-content" colSpan="4"
+							style="padding-bottom: 1%;">&nbsp</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

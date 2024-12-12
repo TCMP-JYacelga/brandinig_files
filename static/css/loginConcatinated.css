@@ -1,0 +1,442 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#keyboardInputMaster {
+  position:absolute;
+  font:normal 11px Arial,sans-serif;
+  border-top:1px solid #eeeeee;
+  border-right:1px solid #888888;
+  border-bottom:1px solid #444444;
+  border-left:1px solid #cccccc;
+  -webkit-border-radius:0.6em;
+  -moz-border-radius:0.6em;
+  border-radius:0.6em;
+  -webkit-box-shadow:0px 2px 10px #444444;
+  -moz-box-shadow:0px 2px 10px #444444;
+  box-shadow:0px 2px 10px #444444;
+  opacity:0.95;
+  filter:alpha(opacity=95);
+  background-color:#dddddd;
+  text-align:left;
+  z-index:1000000;
+  width:auto;
+  height:auto;
+  min-width:0;
+  min-height:0;
+  margin:0px;
+  padding:0px;
+  line-height:normal;
+  -moz-user-select:none;
+  cursor:default;
+}
+#keyboardInputMaster * {
+  position:static;
+  color:#000000;
+  background:transparent;
+  font:normal 11px Arial,sans-serif;
+  width:auto;
+  height:auto;
+  min-width:0;
+  min-height:0;
+  margin:0px;
+  padding:0px;
+  border:0px none;
+  outline:0px;
+  vertical-align:baseline;
+  line-height:1.3em;
+}
+#keyboardInputMaster table {
+  table-layout:auto;
+}
+#keyboardInputMaster.keyboardInputSize1,
+#keyboardInputMaster.keyboardInputSize1 * {
+  font-size:9px;
+}
+#keyboardInputMaster.keyboardInputSize3,
+#keyboardInputMaster.keyboardInputSize3 * {
+  font-size:13px;
+}
+#keyboardInputMaster.keyboardInputSize4,
+#keyboardInputMaster.keyboardInputSize4 * {
+  font-size:16px;
+}
+#keyboardInputMaster.keyboardInputSize5,
+#keyboardInputMaster.keyboardInputSize5 * {
+  font-size:20px;
+}
+
+#keyboardInputMaster thead tr th {
+  padding:0.3em 0.3em 0.1em 0.3em;
+  background-color:#999999;
+  white-space:nowrap;
+  text-align:right;
+  -webkit-border-radius:0.6em 0.6em 0px 0px;
+  -moz-border-radius:0.6em 0.6em 0px 0px;
+  border-radius:0.6em 0.6em 0px 0px;
+}
+#keyboardInputMaster thead tr th div {
+  float:left;
+  font-size:130% !important;
+  height:1.3em;
+  font-weight:bold;
+  position:relative;
+  z-index:1;
+  margin-right:0.5em;
+  cursor:pointer;
+  background-color:transparent;
+}
+#keyboardInputMaster thead tr th div ol {
+  position:absolute;
+  left:0px;
+  top:90%;
+  list-style-type:none;
+  height:9.4em;
+  overflow-y:auto;
+  overflow-x:hidden;
+  background-color:#f6f6f6;
+  border:1px solid #999999;
+  display:none;
+  text-align:left;
+  width:12em;
+}
+#keyboardInputMaster thead tr th div ol li {
+  padding:0.2em 0.4em;
+  cursor:pointer;
+  white-space:nowrap;
+  width:12em;
+}
+#keyboardInputMaster thead tr th div ol li.selected {
+  background-color:#ffffcc;
+}
+#keyboardInputMaster thead tr th div ol li:hover,
+#keyboardInputMaster thead tr th div ol li.hover {
+  background-color:#dddddd;
+}
+#keyboardInputMaster thead tr th span,
+#keyboardInputMaster thead tr th strong,
+#keyboardInputMaster thead tr th small,
+#keyboardInputMaster thead tr th big {
+  display:inline-block;
+  padding:0px 0.4em;
+  height:1.4em;
+  line-height:1.4em;
+  border-top:1px solid #e5e5e5;
+  border-right:1px solid #5d5d5d;
+  border-bottom:1px solid #5d5d5d;
+  border-left:1px solid #e5e5e5;
+  background-color:#cccccc;
+  cursor:pointer;
+  margin:0px 0px 0px 0.3em;
+  -webkit-border-radius:0.3em;
+  -moz-border-radius:0.3em;
+  border-radius:0.3em;
+  vertical-align:middle;
+  -webkit-transition:background-color .15s ease-in-out;
+  -o-transition:background-color .15s ease-in-out;
+  transition:background-color .15s ease-in-out;
+}
+#keyboardInputMaster thead tr th strong {
+  font-weight:bold;
+}
+#keyboardInputMaster thead tr th small {
+  -webkit-border-radius:0.3em 0px 0px 0.3em;
+  -moz-border-radius:0.3em 0px 0px 0.3em;
+  border-radius:0.3em 0px 0px 0.3em;
+  border-right:1px solid #aaaaaa;
+  padding:0px 0.2em 0px 0.3em;
+}
+#keyboardInputMaster thead tr th big {
+  -webkit-border-radius:0px 0.3em 0.3em 0px;
+  -moz-border-radius:0px 0.3em 0.3em 0px;
+  border-radius:0px 0.3em 0.3em 0px;
+  border-left:0px none;
+  margin:0px;
+  padding:0px 0.3em 0px 0.2em;
+}
+#keyboardInputMaster thead tr th span:hover,
+#keyboardInputMaster thead tr th span.hover,
+#keyboardInputMaster thead tr th strong:hover,
+#keyboardInputMaster thead tr th strong.hover,
+#keyboardInputMaster thead tr th small:hover,
+#keyboardInputMaster thead tr th small.hover,
+#keyboardInputMaster thead tr th big:hover,
+#keyboardInputMaster thead tr th big.hover {
+  background-color:#dddddd;
+}
+
+#keyboardInputMaster tbody tr td {
+  text-align:left;
+  padding:0.2em 0.3em 0.3em 0.3em;
+  vertical-align:top;
+}
+#keyboardInputMaster tbody tr td div {
+  text-align:center;
+  position:relative;
+  zoom:1;
+}
+#keyboardInputMaster tbody tr td table {
+  white-space:nowrap;
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0px;
+}
+#keyboardInputMaster tbody tr td#keyboardInputNumpad table {
+  margin-left:0.2em;
+  width:auto;
+}
+#keyboardInputMaster tbody tr td table.keyboardInputCenter {
+  width:auto;
+  margin:0px auto;
+}
+#keyboardInputMaster tbody tr td table tbody tr td {
+  vertical-align:middle;
+  padding:0px 0.45em;
+  white-space:pre;
+  height:1.8em;
+  font-family:'Lucida Console','Arial Unicode MS',monospace;
+  border-top:1px solid #e5e5e5;
+  border-right:1px solid #5d5d5d;
+  border-bottom:1px solid #5d5d5d;
+  border-left:1px solid #e5e5e5;
+  background-color:#eeeeee;
+  cursor:default;
+  min-width:0.75em;
+  -webkit-border-radius:0.2em;
+  -moz-border-radius:0.2em;
+  border-radius:0.2em;
+  -webkit-transition:background-color .15s ease-in-out;
+  -o-transition:background-color .15s ease-in-out;
+  transition:background-color .15s ease-in-out;
+}
+#keyboardInputMaster tbody tr td table tbody tr td.last {
+  width:99%;
+}
+#keyboardInputMaster tbody tr td table tbody tr td.space {
+  padding:0px 4em;
+}
+#keyboardInputMaster tbody tr td table tbody tr td.deadkey {
+  background-color:#ccccdd;
+}
+#keyboardInputMaster tbody tr td table tbody tr td.target {
+  background-color:#ddddcc;
+}
+#keyboardInputMaster tbody tr td table tbody tr td:hover,
+#keyboardInputMaster tbody tr td table tbody tr td.hover {
+  border-top:1px solid #d5d5d5;
+  border-right:1px solid #555555;
+  border-bottom:1px solid #555555;
+  border-left:1px solid #d5d5d5;
+  background-color:#cccccc;
+}
+#keyboardInputMaster thead tr th span:active,
+#keyboardInputMaster thead tr th span.pressed,
+#keyboardInputMaster tbody tr td table tbody tr td:active,
+#keyboardInputMaster tbody tr td table tbody tr td.pressed {
+  border-top:1px solid #555555 !important;
+  border-right:1px solid #d5d5d5;
+  border-bottom:1px solid #d5d5d5;
+  border-left:1px solid #555555;
+  background-color:#cccccc;
+}
+
+#keyboardInputMaster tbody tr td table tbody tr td small {
+  display:block;
+  text-align:center;
+  font-size:0.6em !important;
+  line-height:1.1em;
+}
+
+#keyboardInputMaster tbody tr td div label {
+  position:absolute;
+  bottom:0.2em;
+  left:0.3em;
+}
+#keyboardInputMaster tbody tr td div label input {
+  background-color:#f6f6f6;
+  vertical-align:middle;
+  font-size:inherit;
+  width:1.1em;
+  height:1.1em;
+}
+#keyboardInputMaster tbody tr td div var {
+  position:absolute;
+  bottom:0px;
+  right:3px;
+  font-weight:bold;
+  font-style:italic;
+  color:#444444;
+}
+
+.keyboardInputInitiator {
+  margin:0px 3px;
+  vertical-align:middle;
+  cursor:pointer;
+}
+
+p { text-align: justify; }
+#login_body { color: #5D5D5D; font: 14px 'Roboto'; margin: 0;  }
+#login_container { margin: 0 auto;}
+#login_header { height: 36px; clear: both; padding: 3px; background-color: #EB2C37; }
+#div_logo { background: transparent left center no-repeat scroll url('../images/logos/logo.png'); height: 80px; margin: 5px 25px; }
+#login_footer { background-color: #000; clear: both; border-top: 10px solid #EB2C37; }
+#footer_details { margin: 0; padding: 15px 0; display: inline-block; width: 100%; }
+#footer_details p { color: #dee1e3; font-size: 14px; font-weight: normal; margin: 0; padding: 0; }
+#footer_details p a { color: #dee1e3; margin: 0px 20px 0px 0px; padding: 0; text-decoration: none; }
+#footer_details h4 { color: #b3b3b3; font-size: 12px; font-weight: normal; margin: 0; padding: 0; text-align: right; }
+.clear { clear: both; }
+
+#div_navigation {  float: right;} 
+/* width: 380px; } */
+#nav_menu { margin: 0;}
+#nav_menu ul { margin:0; padding: 0; }
+#nav_menu ul li { display: block; float: left; list-style: none outside none; margin-left: 10px; }
+#nav_menu ul li .form-control{ width: 150px; background-color: transparent; border-color: #fff; color: #fff; padding: 4px 10px; font-size: 13px; }
+/* #nav_menu li a.over { background: url('../images/backgrounds/top_menuleft.gif') no-repeat scroll left bottom transparent; color: #FFFFFF; } */
+#nav_menu li a { color: #fff; display: block; float: left; font: 14px Roboto,Helvetica,sans-serif; padding: 0 4px; text-decoration: none; }
+/* #nav_menu li a.over span {background: url('../images/backgrounds/top_menuright.gif') no-repeat scroll right bottom transparent; } */
+#nav_menu li a span { cursor: pointer; display: block; float: left; padding: 6px 12px 5px; }
+/* #nav_menu li a:hover { background: url('../images/backgrounds/top_menuleft.gif') no-repeat scroll left bottom transparent; color: #FFFFFF; } */
+/* #nav_menu li a:hover span { background: url('../images/backgrounds/top_menuright.gif') no-repeat scroll right bottom transparent; } */
+
+#sub_header { height: 532px; background: transparent right center no-repeat scroll url('../images/people/bg.png'); background-size: cover; }
+#div_products { padding: 38px 0 0 28px; float: left; }
+/* width: 520px;  */
+#col_left { float: left; width: 248px; }
+#col_right { float: right; width: 247px; }
+.black_box { background: transparent 0 0 no-repeat scroll url('../images/backgrounds/black_box.gif'); height: 59px; padding: 4px 8px 4px 4px; }
+#card_info { background: transparent -1px -65px no-repeat scroll url('../images/icons/icons_login.png'); height: inherit; width: inherit; }
+#div_products h3 { color: #FFFFFF; font-size: 20px; font-weight: normal; margin: 0; padding: 0; text-align: right; }
+#div_products p { color: #AFAFAF; margin: 0; padding: 0; text-align: right; }
+#div_products p a { color: #AFAFAF; font-size: 11px; text-decoration: none; }
+#div_products p a:hover { text-decoration: underline; }
+#small_biz { background: transparent -1px 0px no-repeat scroll url('../images/icons/icons_login.png'); height: inherit; }
+#personal_bank { background: transparent -4px -387px no-repeat scroll url('../images/icons/icons_login.png'); height: inherit; }
+#packages { background: transparent -1px -257px no-repeat scroll url('../images/icons/icons_login.png'); height: inherit; }
+
+#content_div { padding: 15px 0 0 0; }
+#content_left { padding: 15px 0px 0px; }
+#content_right { float: left; width: 300px; height: inherit; padding: 0 8px 0 0; }
+#content_left div h1 { color: #C80404; font-size: 22px; font-weight: normal; margin: 0; padding: 0; }
+#content_left div h4 { color: #0167A1; font-size: 13px; font-weight: bold; margin: 0; padding: 10px 0 0; }
+#content_left div p { color: #4a4a4a; font-size: 14px; line-height: 20px; margin: 0; padding: 0px 25px 15px 25px; }
+
+#login_panel { background-color: #000; margin: 0; padding: 10px; height: inherit; opacity: 0.5;}
+#login_panel form { margin:0; padding:0; }
+#login_panel form h3 { font-size: 23px; font-weight: normal; margin: 0; padding: 0; }
+.login-body{ position: absolute; float: left; margin-left: 25px; margin-top: 3%; padding-left: 0px; padding-right: 0px; }
+span.login_heading { color: #f0f0f0; font-size: 20px; text-transform: uppercase; }
+div.login_box { padding: 24px 10px 2px 0px; }
+.login_box p { padding: 4px 0 4px 0; }
+.login_box label { display: inline-block; text-transfom: uppercase; color:	#f0f0f0; }
+.login_box .col-sm-12, .login_box .col-sm-11{ padding-left: 0px; }
+.login_box .login-fields{ background: transparent; padding: 6px 10px; height: 44px; border-radius: 3px; border-color: #f0f0f0; color: #f0f0f0; border-width: 1px; border-style: solid; }
+.login_box .login-fields:focus{ border-color: #f0f0f0; }
+#password-box{ padding-top: 25px; }
+.login_buttons { padding-top: 25px; text-align: center;}
+.login_buttons input { background-color: #EB2C37; color: #fff; border: none; padding: 4px; text-transform: uppercase; height: 51px; font-size: 18px; font-weight: 400; width: 100%; border-radius: 3px; }
+.login_buttons a { color: #5D5D5D; text-decoration: none; vertical-align: bottom; }
+.forgot-password{ text-align: center; padding-top: 10px; }
+.forgot-password a{ color: #f0f0f0; font-size: 14px; font-weight: 400; }
+
+.total-treasure{ height: 20px; margin-left: 50%; margin-top: 7%; }
+.total-treasury{
+	font-family: Roboto;
+	color:  #f8f8f8;
+	font-size: 42px;/* Approximation due to font substitution */
+	font-weight: 900;
+	line-height: 18px;/* Approximation due to font substitution */
+	text-align: left;
+	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* #more-content{ display: none; } */
+
+#news_panel { padding: 30px 0 10px 0; }
+#news_panel h2 { color: #C80404; font-size: 22px; font-weight: normal; margin: 0; padding: 0; }
+span.news_heading { background: transparent -1px -193px no-repeat scroll url('../images/icons/icons_login.png'); margin: 0; padding: 10px 0 10px 45px; }
+ul.news_list { padding: 14px 0 0 0; list-style: none outside none; }
+ul.news_list li { padding: 2px 0 2px 18px; background: transparent left 4px no-repeat scroll url('../images/icons/bullet.gif'); }
+ul.news_list li h4 { color: #0167A1; font-weight: bold; margin:0; padding: 0; }
+ul.news_list li p { margin:0; padding: 0 0 8px 0; }
+
+.gradiant_box { background: transparent left top repeat-x scroll url('../images/backgrounds/box_gradient.gif'); padding: 0 8px 0 8px; min-height: 215px; }
+#div_services td { padding: 0 8px 0 0; }
+.gradiant_box h2 { color: #000; margin:0; padding: 8px 0 2px 0; font-size: 18px; }
+#content_left div.gradiant_box p { font-size: 10px; color: inherit; padding: 0 0 8px 0; line-height: normal; }
+.gradiant_box ul { padding: 0 0 16px 8px; list-style: square inside none; color: #000; }
+#content_left div p a { text-decoration: underline; cursor: pointer; }
+
+.solution-content{
+	background-color: #f1f1f1;
+	padding: 15px 25px;
+}
+
+.solution-content .col-sm-12, .solution-content .col-sm-4{
+	padding-left: 0px;
+}
+
+.solution-content h3{
+	font-size: 24px;
+	color: #4a4a4a;
+	font-weight: 400;
+}
+
+.solution-content .solution-divs{
+	padding: 15px;
+	padding-left: 0px;	
+}
+
+.solution-divs a{
+	color: #EB2C37;
+	font-size: 16px;
+	font-weight: 400;	
+}
+
+.lang-drop-down option{
+	color : #4a4a4a;
+}

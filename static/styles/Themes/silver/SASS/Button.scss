@@ -1,0 +1,550 @@
+@mixin border-radius($radius) {
+	border-radius : $radius !important;
+	-moz-border-radius: $radius !important;
+	-webkit-border-radius: $radius !important;
+	-o-border-radius: $radius !important;
+	-ms-border-radius: $radius !important;
+	-khtml-border-radius: $radius !important;
+}
+
+@mixin glyph($size) {
+	font-family: fontawesome !important;
+	font-size: $size !important;
+
+}
+
+.ux_custom-toolbar .x-btn-default-toolbar-small-focus .x-btn-inner {color : #135e82 !important; font-weight:bold !important;}
+.ux_custom-toolbar .x-btn-default-toolbar-small-focus {background : none !important;}
+
+
+.ui-accordion-content dt a:hover { background-color: #468FC2; color: $lightColor; }
+.ui-oval-button { background: transparent url('resources/images/oval-gray-left.gif') no-repeat top left; }
+button.ui-oval-button { border: 0px transparent none; }
+.ui-oval-button span { background: transparent url('resources/images/oval-gray-right.gif') no-repeat top right; }
+button.orange_button { background: transparent top left no-repeat scroll url('resources/images/button_sprites.png'); border: 0 none; color: $lightColor; }
+
+.x-btn-default-medium .x-btn-inner {
+	font-size: $fontSize12 !important;
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: $fontColor !important;
+	background-repeat: no-repeat !important;
+	padding: 0 3px !important;
+}
+.x-btn-default-large .x-btn-inner {
+	font-size: $fontSize12 !important;
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: $fontColor !important;
+	background-repeat: no-repeat !important;
+	padding: 0 3px !important;
+}
+/*Toolbar css : For buttons */
+.xn-btn-default-toolbar-small .x-unselectable ,.xn-btn-default-toolbar-small .x-btn
+.xn-btn-default-toolbar-small .x-btn-disabled .x-btn-default-toolbar-small-disabled,.x-btn-default-toolbar-small-disabled
+ {	border : 0px !important;}
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-tl,
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-bl,
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-tr,
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-br,
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-tc,
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-bc
+	{
+	background-image:none !important;
+}
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-ml,
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-frame-mr
+	{
+	background-image:none !important;
+}
+.xn-btn-default-toolbar-small .x-btn-default-toolbar-small-disabled .x-btn-inner
+{
+	color: grey !important;
+	
+}
+.xn-btn-default-toolbar-small .x-btn-inner {
+	font-size: $fontSize14 !important;
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: $fontColor !important;
+	background-repeat: no-repeat !important;
+	padding: 0 4px 0 20px !important;
+}
+.x-btn-default-toolbar-medium .x-btn-inner {
+	font-size: $fontSize12 !important;
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: $fontColor !important;
+	background-repeat: no-repeat !important;
+	padding: 0 4px 0 20px !important;
+}
+.x-btn-default-toolbar-large .x-btn-inner {
+	font-size: $fontSize12 !important;
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color: $fontColor !important;
+	background-repeat: no-repeat !important;
+	padding: 0 4px 0 20px !important;
+}
+.ui-dialog .ui-dialog-buttonpane button{
+	background: $primaryColor !important;
+	border: none !important;
+	@include border-radius(3px)
+}
+
+.ui-dialog .ui-dialog-buttonpane button .ui-button-text{
+	color: $lightColor !important;
+}
+
+.menu-disable.x-btn-default-small .x-btn-arrow{
+	background-image: none !important;
+} 
+.ux_export-btn .x-btn-button{
+	float: right !important;
+}
+
+.ux_export-btn .x-btn-button .x-btn-inner{
+	padding: 0px 10px 0px 20px !important;
+}
+
+.ux_export-btn.x-btn-default-small {
+	.x-btn-inner {
+		color: $fontColor !important;
+	}
+}
+
+.xn-saved-filter-btnmenu .x-btn-glyph{
+	line-height: 17px !important;
+	font-family: fontawesome !important;
+}
+
+.ux_button-padding {
+	padding: 5px 10px !important;
+	font-size: $fontSize14 !important;
+	color: $lightColor !important;
+	@include border-radius(4px)
+
+}
+
+.ux_button-padding,#buttonbar input[name="Filter"],#buttonbar input[name="Add"],#buttonbar input[name="saveUpdate"],#buttonbar input[name="btnSave"],#buttonbar input[name="termFilter"],#buttonbar input[name="addNew"],#buttonbar input[name="btnBack"],input[id="Filter"]
+{
+	padding: 5px 10px !important;
+	font-size: $fontSize14 !important;
+	color: $lightColor !important;
+	@include border-radius(4px)
+
+}
+
+.ux_button-padding.x-btn-default-small{ 
+	padding: 5px 10px !important;
+	font-size: $fontSize14 !important;
+	color: $lightColor !important;
+	@include border-radius(4px)
+}
+
+.ux_button-padding.x-btn-default-small .x-btn-inner{
+	color: $lightColor;
+}
+
+
+.ux_button-background{
+	background: $primaryColor !important;
+	color: $lightColor !important;
+	@include border-radius(3px)
+}
+
+.ux_button-background.linkblue{
+	color: $lightColor !important;
+}
+
+.ux_button-background .favlink{
+	color: $lightColor !important;
+}
+
+.ux_panel-padding{
+	padding: 10px 0px !important;
+}
+.ux-custom-more-btn .x-btn-inner{
+	color: $fontColor !important;
+	font-size: $fontSize16 !important;
+	padding: 0px !important;
+}
+
+.ux-custom-more-btn.x-btn-default-small .x-btn-arrow, .x-btn-arrow-right{
+	background: none !important;
+	padding: 0px !important;
+}
+
+.ux-custom-more-btn .x-btn-inner{
+	content: "\f0d7" !important;
+	color: $fontColor !important;
+	@include glyph($fontSize14)
+}
+
+.ux-custom-more-btn .x-btn-inner:after{
+	content: "\f0d7" !important;
+	color: $fontColor !important;
+	padding-left: 6px !important;
+	@include glyph($fontSize14)
+}
+
+/*AccountSummaryView.js "more" option*/
+.ux_color .x-btn-inner{
+	color: $primaryColor !important;
+}
+
+.groupbyButton .x-btn-inner:before{
+	font-family: fontawesome;
+	content: "\f0d7" !important;
+}
+
+.groupbyButton.x-btn-over{
+	background: $lightColor !important;
+	@include border-radius(0px)
+}
+
+.xn-button-transparent .icon-collapse-rounded{
+	top: -4px;
+}
+.xn-button-transparent .icon-expand-rounded{
+	top: -4px;
+}
+
+.x-btn-default-toolbar-small .x-btn-inner {
+	font-size: $fontSize14 !important;
+	/*font-weight: normal !important;*/
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color:$fontColor !important;
+	background-repeat: no-repeat !important;
+	/*padding: 0 4px !important;*/
+	line-height: normal !important;
+}
+.x-btn-default-small .x-btn-inner {
+	font-size : $fontSize11 !important;
+	font-weight: normal !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	/*padding: 0 4px !important;*/
+	color : $lightColor !important;
+}
+.ux_button-background-color {
+	/*background-color : #bfbfbf !important;*/
+	background-color : $primaryColor !important;
+	padding: 5px 10px !important;
+	border-radius : 3px !important;
+}
+
+.ux_button-background-color, #buttonbar  input[name="Filter"] , #buttonbar  input[name="Add"],#buttonbar  input[name="add"],#buttonbar  input[name="saveUpdate"],#buttonbar  input[name="back"],#buttonbar  input[name="btnSave"],#buttonbar  input[name="termFilter"],#buttonbar  input[name="addNew"],#buttonbar  input[name="btnBack"],input[id="Filter"]
+{
+	/*background-color : #bfbfbf !important;*/
+	background-color : $primaryColor !important;
+	padding: 5px 10px !important;
+	border-radius : 3px !important;
+}
+
+.ux_button-background-color.x-btn-default-toolbar-small .x-btn-inner {
+	color : $lightColor !important;
+}
+
+.ux_button-background-color.x-btn-default-small .x-btn-inner {
+	color : $lightColor !important;
+	/*padding-left: 20px !important;*/
+}
+.ux_button-background-color .x-btn-glyph {
+	color : $lightColor !important;
+	opacity : 1 !important;
+	font-family: fontawesome !important;
+	display: inline-block;
+}
+.ux_search-button .x-btn-glyph{
+	font-size : $fontSize14 !important;
+	color : $lightColor !important;
+	font-weight: normal !important;
+	font-family:fontawesome !important;
+}
+.ux_cancel-button .x-btn-glyph {
+	font-size : $fontSize13 !important;
+	color : $lightColor !important; 
+	font-weight: normal !important;
+	line-height: normal !important;
+	font-family: fontawesome !important;
+	top: 2px;
+}
+.ux_save-search-button  .x-btn-glyph{
+	font-size : $fontSize14 !important;
+	color : $lightColor !important;
+	font-family: fontawesome !important;
+	font-weight: normal !important;
+}
+
+.ui-button-text-only .ui-button-text {
+	font-size : $fontSize14 !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color:$fontColor !important;
+	padding: 5px 10px !important;
+	font-weight: normal !important;
+}
+
+.ux_button-background.ui-button-text-only .ui-button-text{
+	font-size : $fontSize14 !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color:$lightColor !important;
+	padding: 0px !important;
+}
+
+.ux_button-background-color.ui-button-text-only .ui-button-text{
+	font-size : $fontSize14 !important;
+	font-family: $fontFamily, helvetica, arial, sans-serif !important;
+	color:$lightColor !important;
+	padding: 0px !important;
+}
+
+.ux_button-background{ font-family: fontawesome, calibri !important; }
+.ux_button-background-color{ font-family: fontawesome, calibri !important; }
+
+.ux_payment-type-all.x-toolbar-item  .xn-toolbar-small .x-toolbar-item .x-btn-inner{
+	font-weight : bold !important;
+	color : #135e82 !important;
+	background : none !important;
+}
+.ux_payment-type-all .xn-toolbar-small .x-toolbar-item .x-btn-inner{
+	font-weight : bold !important;
+	color : #135e82 !important;
+	background : none !important;
+	}
+.ux_report-button .x-btn-icon-el  {
+	padding-right :5px !important;
+}
+
+.ux_report .x-btn-glyph {
+	color : red !important;
+	font-family: fontawesome !important;
+	font-size : $fontSize14 !important;
+}
+.ux_report.x-btn-default-small {
+	background : none !important;
+}
+.ux_create-receiver .x-btn-default-toolbar-small .x-btn-inner{
+	color : white !important;
+}
+.ux_border-radius0 {
+	border-radius : 0px !important;
+}
+.ux_color.x-btn-default-toolbar-small .x-btn-inner {
+	color : $activeTab !important;
+}
+.x-btn-default-small-disabled  span .x-btn-inner{
+	color : $primaryColor !important;
+}
+.ux_btn-toolbar-button .x-btn-inner{
+	margin-left: 10px !important;
+}
+.ux_toolbar-header.x-btn-default-toolbar-small .x-btn-inner {
+	padding:0px;
+}
+.xn-btn {background-color: $primaryColor !important;padding : 5px !important;cursor: pointer !important;
+ @include border-radius(3px)
+ }
+.xn-btn .x-btn-inner {color: $lightColor !important;}
+.xn-content-btn{background-color: $primaryColor !important;padding : 5px !important;cursor: pointer !important;}
+.xn-content-btn .x-btn-inner {color: $lightColor !important;padding-left:20px !important;}
+.xn-content-btn.x-btn-default-small{padding:5px !important;}
+.button_underline.x-btn-default-toolbar-small .x-btn-inner{ color: $primaryColor !important; text-decoration: underline; }
+
+.xn-account-filter-btnmenu .x-btn-inner{ color: $primaryColor !important; text-decoration: underline; }
+
+.xn-account-filter-btnmenu.x-btn-default-small-disabled  span .x-btn-inner{ color: grey !important; text-decoration: underline; }
+
+.ux_border-radius3 {
+	border-radius : 3px !important;
+}
+/*Loan Center Buttons*/
+.ux_loan-center-button .x-btn-inner {
+	margin-left: 16px !Important;
+}
+
+.ux_dropdown.x-btn-default-small {
+	border-width: 1px 1px 1px 0px !important;
+	border-style: solid !important;
+	border-radius: 0px 4px 4px 0px !important;
+	border-color: #eaeaea !important;
+	padding-top: 3px !important;
+}
+.ux_dropdown .x-btn-glyph {
+	opacity : 1.5 !important;
+	font-family: fontawesome !important;
+}
+.xn-custom-arrow-button .x-btn-glyph {
+	opacity : 1.5 !important;
+	font-family: fontawesome !important;
+}
+.ux_popup .x-btn{
+	padding: 5px 10px !important;
+	font-size: $fontSize14 !important;
+	color: $lightColor !important;
+	background-color : $primaryColor !important;
+	@include border-radius(3px)
+}
+.ux_popup .x-btn-default-small .x-btn-inner {
+	color: $lightColor !important;
+}
+.ux-button-s.x-btn-inner{
+	line-height: 24px !important;
+}
+.button_underline.x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.button_underline.x-btn-default-toolbar-small-menu-active,.x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.button_underline.x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: inherit !important;}
+
+.lightbackgound .x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.lightbackgound .x-btn-default-toolbar-small-menu-active,.x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.lightbackgound .x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: inherit !important;}
+
+.x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: $primaryColor !important;}
+
+.x-btn-default-toolbar-small-menu-active,.x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: $primaryColor !important;}
+
+.x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: $primaryColor !important;}
+
+
+.xn-custom-toolbar .x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.xn-custom-toolbar .x-btn-default-toolbar-small-menu-active,.xn-custom-toolbar .x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.xn-custom-toolbar .x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: inherit !important;}
+
+.xn-portlet .x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.xn-portlet .x-btn-default-toolbar-small-menu-active,.xn-portlet .x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: inherit !important;}
+
+.xn-portlet .x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: inherit !important;}
+
+.xn-portlet .custom_sprite_green.x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: green !important;}
+
+.xn-portlet .custom_sprite_green.x-btn-default-toolbar-small-menu-active,.xn-portlet .custom_sprite_green.x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: green !important;}
+
+.xn-portlet .custom_sprite_green.x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: green !important;}
+
+
+.xn-portlet .custom_sprite_orange.x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: orange !important;}
+
+.xn-portlet .custom_sprite_orange.x-btn-default-toolbar-small-menu-active,.xn-portlet .custom_sprite_orange.x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: orange !important;}
+
+.xn-portlet .custom_sprite_orange.x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: orange !important;}
+
+
+.ux-button-s .x-btn-glyph{
+	padding-top: 1px !important;
+	color: $lightColor !important;
+	opacity: 1 !important;
+	font-family: fontawesome !important;
+}
+.ux_button-background-color .x-btn-default-toolbar-small-over{
+	background-image : none !important;
+	background-color : $primaryColor !important;
+	padding: 5px 10px !important;
+	border-radius : 3px !important;
+	font-family : $fontFamily !important;
+}
+
+.groupbyButton.x-btn-default-toolbar-small-focus{ background: none !important; } 
+
+.xn-group-view .x-btn-default-toolbar-small-over{ background: none !important; }
+
+.ux_button-background.ui-state-default, .ui-widget-content .ux_button-background.ui-state-default, .ui-widget-header .ux_button-background.ui-state-default{ border: 0px; border-radius:4px !important; -moz-border-radius: 4px  !important;-webkit-border-radius: 4px  !important; -o-border-radius: 4px  !important;-ms-border-radius: 4px  !important;-khtml-border-radius: 4px  !important; }
+
+.ux_button-background-color.ui-state-default, .ui-widget-content .ux_button-background-color.ui-state-default, .ui-widget-header .ux_button-background-color.ui-state-default{ border: 0px; border-radius:4px !important; -moz-border-radius: 4px  !important;-webkit-border-radius: 4px  !important; -o-border-radius: 4px  !important;-ms-border-radius: 4px  !important;-khtml-border-radius: 4px  !important; }
+
+.xn-custom-heighlight.x-btn-default-toolbar-small-over{ background-color: transparent !important; }
+
+.xn-custom-heighlight.x-btn-default-toolbar-small-focus{ background: none !important; }
+
+
+.ux_button-group.x-btn-group-default-framed-notitle{ 
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-style: none !important;
+	border-radius: 0px !important;
+}
+
+.ux_button-group .xn-btn{
+	margin-right: 2px !important;
+}
+
+.ux_button-group .x-btn-default-toolbar-small-over{
+	background-color: #f3f3f3 !important;
+	background-image: none !important;
+}
+
+.ux_button-group .x-btn-default-toolbar-small-over .x-btn-inner{
+	color: $primaryColor !important;
+}
+
+.ux_button-group .x-btn-default-toolbar-small-focus{
+	background-color: #f3f3f3 !important;
+	background-image: none !important;
+}
+
+.ux_button-group .x-btn-default-toolbar-small-focus .x-btn-inner{
+	color: $primaryColor !important;
+}
+
+.ux_icon-padding.fa {
+	font-family: fontawesome !important;
+}
+
+.xn-paging-toolbar .x-btn-default-toolbar-small-focus {border-color: transparent !important;background-image: none !important;background-color: transparent !important;}
+
+.xn-paging-toolbar .x-btn-default-toolbar-small-menu-active,.xn-custom-toolbar .x-btn-default-toolbar-small-pressed
+	{border-color: transparent !important;background-image: none !important;background-color: transparent !important;}
+
+.xn-paging-toolbar .x-btn-default-toolbar-small-over {	border-color: transparent !important;background-image: none !important;	background-color: transparent !important;}
+
+
+.x-window .ux_button-background-color{
+	background-color: $logoutButton !important;
+	border-radius: 5px !important;
+}
+
+.x-window .ux_button-background-color .x-btn-inner{
+	font-size: 11px !important;
+	padding-left: 0px !important;
+}
+
+.x-window .ux_button-background-color .x-btn-glyph{
+	opacity: 0 !important;
+	display: none !important;
+}
+
+.x-window .x-toolbar .x-btn-default-small:first-child{
+ background-color: $secondaryButtonColor;
+ padding: 5px 10px 3px;
+}
+.x-window .x-toolbar .x-btn-default-small:first-child:hover{
+ background-color: $footerSecondaryBtnHover;
+}
+.x-window .x-toolbar .x-btn-default-small:last-child{
+ background-color: $primaryColor;
+ padding: 5px 10px 3px;
+}
+.x-window .x-toolbar .x-btn-default-small:last-child:hover{
+ background-color: $primaryBtnHover;
+}
+
+.x-datepicker .x-btn{
+	background-color: $primaryColor !important;
+}
+
+.x-datepicker .x-datepicker-header .x-datepicker-month .x-btn{
+	background-color: transparent !important;
+}

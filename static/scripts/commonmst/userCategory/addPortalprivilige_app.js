@@ -1,0 +1,49 @@
+var objPortalPopup = null;
+Ext.Loader.setConfig({
+	enabled : true,
+	setPath : {
+		'Ext' : 'static/js/extjs4.2.1/src',
+		'Ext.ux' : 'static/js/extjs4.2.1/src/ux'
+	}
+});
+Ext.application({
+	name : 'GCP',
+	appFolder : 'static/scripts/commonmst/userCategory/app',
+	controllers : [ 'GCP.controller.PrivilegeController' ],
+	requires : ['GCP.view.ColPriviligesPopup','GCP.view.AdminPriviligesPopup','GCP.view.PayPriviligesPopup','GCP.view.SubsidiarySelectPopup', 
+	    					'Ext.window.MessageBox','GCP.view.PortalPriviligesPopup','Ext.ux.gcp.FilterPopUpView'],
+	launch : function() {
+		objPortalPopup = Ext.create('GCP.view.PortalPriviligesPopup',
+				{
+					itemId : 'portalPriviligesPopup',
+					fnCallback : setSelectedBRFeatureItems,
+					module : '19'
+				});
+	}
+});
+
+function getPortalPrivilegesPopup() {
+	
+	if (objPortalPopup == null || objPortalPopup == undefined) 
+	{
+		objPortalPopup = Ext.create('GCP.view.PortalPriviligesPopup',
+				{
+					itemId : 'portalPriviligesPopup',
+					fnCallback : setSelectedBRFeatureItems,
+					module : '19'
+				});
+		objPortalPopup.show();
+		
+	} 
+	else 
+	{
+		objPortalPopup.show();
+	}
+}
+
+function setSelectedBRFeatureItems(viewSerials,authSerials,editSerials) {
+	document.getElementById("viewRightsSerials").value = JSON.stringify(viewSerials);
+	document.getElementById("editRightsSerials").value = JSON.stringify(editSerials);
+	document.getElementById("authRightsSerials").value = JSON.stringify(authSerials);
+	
+}

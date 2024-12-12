@@ -1,0 +1,117 @@
+$baseFontSize: 9px;
+
+@font-face{
+	font-family: "Open Sans";
+	src: url('resources/fonts/OpenSans-Regular.ttf') format('truetype'),url('resources/fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+$fontFamily: "Open Sans",calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+
+/*Used for Button Background, Horizontal Menu Bar,SmartGrid Header,Linktabs*/
+$primaryColor : #000; 
+
+/* Logout Button Background and hover Color */
+$logoutButton: #8b8b8b;
+$logoutHover: #8b8b8b;
+
+$secondaryButtonColor: #404040;
+
+$primaryBtnHover:#333; 
+$footerSecondaryBtnHover : #333;
+
+$secondaryBtn: #004464;  
+$secondaryBtnHover:  #333;
+
+$secondaryColor: #9ea2ab;
+
+$panelBackgroundColor: #f5f5f5;
+
+/*Used for background color of Active tab*/
+$activeTab : $primaryColor; 
+
+/*Used for background color of inactive tab*/
+$inactiveTab : #ccc; 
+
+/*Font color*/
+$lightColor: #fff;
+$darkColor: #000000;
+$fontColor: #333;
+$fontColorDark: #555555;
+$fontColorDarker: #666666; 
+$buttonDarkColor: #8c8c8c;
+
+$labelColor: $fontColorDark;
+
+$clearlink : #337ab7; 
+$clearlinkHover : #23527c; 
+$dropDownListItems : #555555;
+
+$linkColor: $primaryColor; 
+$linkBgColor: #d0eaf4;
+$panelBgColor: #e4f3f9; 
+
+$disableColor: #EEEEEE;
+
+$contentBorderColor: #A9A6A6;
+$contentBackgroundColor: #FAFAFA; 
+
+/* Used as EXTJS panel background color */ 
+$moduleContent: #f6f6f6;
+
+/* Used for Grid Header, hover, Paginition */
+$gridHeaderColor: $primaryColor; 
+$gridHeaderOverColor: $primaryColor;   
+$gridHeaderTextColor: $lightColor;
+$pagingBackground: #e7e7e7;
+$gridRowColor: #F8F8F8;
+
+/* Background color for button on popup */ 
+$footerColor : #f1f1f1;
+
+/* Used as EXTJS panel background and border color for panels */
+$moduleContent1: #fff; 
+
+$panelHeaderColor: #f5f5f5;
+
+/*Hover Font Color*/ 
+
+$hoverColor: #dddbdc;
+
+/*Link color*/
+
+$linkColor: $primaryColor;
+
+$fieldsetBorderColor: #cfcfcf;
+
+$buttonBackground: $panelBackgroundColor;
+
+$windowHeaderTextColor: $lightColor;
+
+/* Border Color */
+$borderColor: #d0d0d0;
+
+$headerActionDropdown: #f1f1f1;
+$headerBorderColor: #595959;
+
+$accordianBar: #eaeaea;
+
+$headerdropdown: $headerActionDropdown;
+
+$sidePanelHeader: #d9d9d9;
+$sidePanelActionList: #E6e6e6;
+$sidePanelQuickPayments: #ececec;
+$sidePanelMessages: #F9F9F9; 
+$sidePanelReports: #F3F3F3;
+
+$fontWeight-Regular: 400;
+$fontWeight-SemiBold: 600;
+
+@mixin fontSize($size){
+font-size: $baseFontSize+$size;
+}
+@mixin fontSizeImportant($size){
+font-size: $baseFontSize+$size !important;
+}
+
+@import "../base-theme/nonT7-base.scss";
+@import "SASS/Overwrite.scss";

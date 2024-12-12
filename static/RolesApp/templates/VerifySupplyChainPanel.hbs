@@ -1,0 +1,128 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">	
+									<span id="supplyChainCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.rolesrv.supplychain" "Supply chain"}}</span>								
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="supplyChainAssetBody" class="panel-body">
+						<div id="supplyChainFunctionTableDiv">
+						 {{#each assets}}
+							{{#selectAsset assetId "06"}}
+							 {{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+											{{#if packages}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.pkg" "Packages"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression packages "packageName"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if reports}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.report" "Reports"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression reports "reportType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											{{#if alerts}}			
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.alert" "Alerts"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression alerts "alertType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+											{{#if widgets}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.widget" "Widgets"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression widgets "widgetType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+										</tbody>
+										{{/if}}	
+									{{/selectAsset}}
+								{{/each}}
+							</table>
+						</div>
+					
+									
+					<!-- Start of SCF View Service - Privileges Table -->
+						<div class="ft-margin-t" id="lmsPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "06"}}
+								{{#if permissions}}
+								<table class="view-grid" style="width:100%">
+									<thead>
+										<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.privileges" "Privileges"}}</td></tr>
+										<tr class="view-grid-header">
+											<th class="view-grid-header-text" >{{getLabel "lbl.role.type" "Type"}}</th>
+											<th class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privView" "View"}}</th>
+											<th class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privEdit" "Edit"}}</th>
+											<th class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privAppr" "Approve"}}</th>
+										</tr>		
+									</thead>
+									<tbody>							
+										{{#each permissions}}
+											<tr class="view-grid-body">
+												<td class="view-grid-header-text view-grid-body-content" >{{getColoredExpression colorClass screenName}}</td>
+																{{#ifCond rmForView '==' "Y" }}
+																{{#if view}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}} 
+																{{#ifCond rmForEdit '==' "Y" }}
+																{{#if edit}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+																{{#ifCond rmForAuth '==' "Y" }}	
+																{{#if auth}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+											</tr>
+										{{else}}
+											<td class="view-grid-header-text view-grid-body-content" colspan="4" style="width:20%;" >None Selected</td>											
+										{{/each}}											
+									</tbody>
+								</table>
+								{{/if}}	
+								{{/selectAsset}}
+							{{/each}}																			
+						</div>
+						<!-- End of SCF View Service - Privileges Table -->		
+											
+					</div>
+				</div>
+			</div>
+			

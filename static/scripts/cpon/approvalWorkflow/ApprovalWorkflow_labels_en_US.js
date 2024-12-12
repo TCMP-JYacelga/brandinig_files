@@ -1,0 +1,4 @@
+var workflowLabelsMap = {
+	"all" : "ALL"
+	
+};

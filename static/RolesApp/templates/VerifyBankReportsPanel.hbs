@@ -1,0 +1,55 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+								<span id="bankReportsCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.rolesrv.15" "Bank Reports"}}</span>
+									
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="bankReportsAssetBody" class="panel-body">
+						<!-- Start of Bank Reports table -->							
+						<div id="bankReportsAccountTableDiv">
+						 {{#each assets}}
+							{{#selectAsset assetId "15"}} 
+							  {{#if bankReports}}
+							   <table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.rolesrv.15" "Bank Reports"}}</td></tr>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.distributionId" "Distribution Id"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.reportnm" "Report Name"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.type" "Type"}}</td>
+									</tr>		
+								</thead>
+								<tbody>							
+									{{#each bankReports}}
+										<tr class="view-grid-body">
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass distributionId}}</td>
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass reportName}}</td>
+															{{#selectAsset type "G"}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass 'Group'}}</td>
+															{{/selectAsset}}
+															{{#selectAsset type "A"}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass  'Account'}}</td>
+															{{/selectAsset}}
+															{{#selectAsset type "F"}}
+											<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass 'Field'}}</td>
+															{{/selectAsset}}
+										</tr>											
+									{{/each}}											
+								  </tbody>
+							     </table>
+							    {{/if}}	
+							  {{/selectAsset}}
+						    {{/each}}						
+						</div>
+						<!-- End of Bank Reports table -->			
+					</div>
+				</div>
+			</div>
+			

@@ -1,0 +1,25 @@
+@font-face{ 
+	font-family: 'Roboto';
+	src: url('eot/Roboto-Regular.eot');
+	src: url('eot/Roboto-Regular.eot?iefix') format('eot'),
+	     url('ttf/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:futura-pt;
+    src:
+        url(eot/FuturaPT-Medium.eot) format("woff2"),
+        url(woff/FuturaPT-Medium.woff) format("woff"),
+        url(ttf/FuturaPT-Medium.ttf) format("ttf");
+        font-style:normal;
+        font-weight:400
+}
+@font-face{
+    font-family:futura-pt;
+    src:
+	url(eot/FuturaPT-Bold.eot) format("eot"),
+        url(woff/FuturaPT-Bold.woff) format("woff"),
+        url(ttf/FuturaPT-Bold.ttf) format("ttf");
+    font-style:normal;
+    font-weight:700
+}

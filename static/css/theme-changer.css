@@ -1,0 +1,19 @@
+/* CSSS Switcher */
+#colorchanger { text-align: right; height: 32px; line-height: 32px; display: block;  }
+#colorchanger label { font-weight: bold; display: inline; }
+.colorbox { width:16px; height:16px; margin:5px; cursor:pointer; display:block; float:right; }
+
+/* CSS Switcher */
+.colorbox { border:1px solid #050505; }
+.colorgrey { background-color:#C4C4C4; }
+.colorgrey:hover { background-color:#8A8A8A; }
+.colorblue { background-color:#bfe1f1; }
+.colorblue:hover { background-color:#90bcd0; }
+.colororange { background-color:#F69C3A; }
+.colororange:hover { background-color:#FF5C01; }
+.colorgreen { background-color:#78A848; }
+.colorgreen:hover { background-color:#189048; }
+.coloryellow { background-color:#FFFA73; }
+.coloryellow:hover { background-color:#FFF840; }
+.colorred { background-color: #cc0000; }
+.colorred:hover { background-color: #990000; }

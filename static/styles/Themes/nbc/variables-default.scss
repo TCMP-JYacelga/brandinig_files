@@ -1,0 +1,69 @@
+$fontSize14 : 14px;
+$fontFamily : calibri;
+
+/*Used for Button Background, Horizontal Menu Bar,SmartGrid Header,Linktabs*/
+$primaryColor: #e41c23;
+$logoutButton: $primaryColor;
+$logoutHover: $primaryColor;
+$headerActionDropdown: #387494;
+$headerBorderColor: #f36f27;
+$lightColor: #fff;
+
+$gradientColor: #A01418;
+
+$secondaryColor: #f0f0f0;
+
+$secondaryColorHover: #e0e0e0;
+
+$fontColor: #00324d;
+
+$gridHeaderColor: $primaryColor;
+$gridHeaderOverColor: $primaryColor; 
+
+$headerdropdown: #e4f4fa;  
+ 
+$panelBackgroundColor: $lightColor;
+ 
+
+$hoverColor: #b1e1f1;
+
+
+
+/*Used for background color of Active tab*/
+$activeTab : $primaryColor; 
+
+/*Used for background color of inactive tab*/
+$inactiveTab : $gridHeaderColor; 
+
+$fontSize18 : 18px;
+$fontSize16 : 16px;
+$fontSize15 : 15px;
+$fontSize14 : 14px;
+$fontSize13 : 13px;
+$fontSize12 : 12px;
+
+$fontWeight-Regular: 400;
+$fontWeight-SemiBold: 600;
+
+$fieldsetBorderColor: #cfcfcf;
+
+$sidePanelHeader: #7acae4;
+
+$sidePanelActionList: #9ad6ea;
+$sidePanelQuickPayments: #bce4f1;
+$sidePanelMessages: #ddf1f8;
+$sidePanelReports: #eef8fb;
+
+$tabsColor: $sidePanelReports;
+
+$secondaryBtn: #7BBE32;  
+$secondaryBtnHover: $sidePanelHeader;
+
+$verticalPanelHeader: $sidePanelHeader;
+
+@mixin fontSize($size){
+font-size: 10px+$size;
+}
+@mixin fontSizeImportant($size){
+font-size: 10px+$size;
+}

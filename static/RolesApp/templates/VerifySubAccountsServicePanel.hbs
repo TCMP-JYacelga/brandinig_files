@@ -1,0 +1,160 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">	
+									<span id="subAccountsDetailsCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.rolesrv.21" "Sub Accounts"}}</span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="subAccountsAssetBody" class="panel-body">
+						<div id="subAccountsFunctionalDiv">
+						  {{#each assets}}
+								{{#selectAsset assetId "21"}}
+								{{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+											
+											{{#if reports}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.report" "Reports"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression reports "reportType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											
+											{{#if alerts}}			
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.alert" "Alerts"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression alerts "alertType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+											{{#if allowedFeatures}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.features" "Features"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression allowedFeatures "featureName"}}	
+													</td>
+												</tr>
+											{{/if}}											
+									</tbody>
+							</table>
+							{{/if}}
+								 {{/selectAsset}}
+							{{/each}}
+						 
+						</div>	
+					
+						<!-- Start of sub Accounts Service - Privileges Table -->
+						<div class="ft-margin-t" id="adminPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "21"}}
+							{{#if permissions}}
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.privileges" "Privileges"}}</td></tr>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" >{{getLabel "lbl.role.privfunction" "Function"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privView" "View"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privEdit" "Edit"}}</td>
+										<td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privAppr" "Approve"}}</td>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each permissions}}
+											<tr class="view-grid-body">
+												<td class="view-grid-header-text view-grid-body-content" >{{getColoredExpression colorClass screenName}}</td>
+																{{#ifCond rmForView '==' "Y" }}
+																{{#if view}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}} 
+																{{#ifCond rmForEdit '==' "Y" }}
+																{{#if edit}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+																{{#ifCond rmForAuth '==' "Y" }}	
+																{{#if auth}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/ifCond}}
+											</tr>
+										{{else}}
+											<tr class="view-grid-body">
+													<td class="view-grid-body-content" colSpan="4" style="padding-bottom: 1%;" >None assigned</td>
+											</tr>												
+										{{/each}}											
+											
+										</tbody>
+									</table>	
+									{{/if}}
+								{{/selectAsset}}
+							{{/each}}
+						</div>
+						<!-- End of Sub Accounts Service - Privileges Table -->	
+						
+						<!-- Start of Sub Accounts - Account table -->		
+						{{#each assets}}
+							{{#selectAsset assetId "21"}}	
+								{{#if accounts}}				
+									<div class="ft-margin-t" id="brAccountTableDiv">
+										<table class="view-grid" style="width:100%">
+											<thead>
+												<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.acct" "Accounts"}}</td></tr>
+												<tr class="view-grid-header">
+													<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.acctNo" "Account No"}}</td>
+													<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.acctNm" "Account Name"}}</td>
+													<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.clientDesc" "Client Description"}}</td>
+												</tr>		
+											</thead>
+											<tbody>							
+													{{#each accounts}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName}}</td>
+															<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass subsidiaryName}}</td>
+														</tr>		
+													{{else}}
+														<tr class="view-grid-body">
+																<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+														</tr>		
+													{{/each}}											
+											</tbody>
+										</table>							
+									</div>
+								{{/if}}
+							{{/selectAsset}}
+						{{/each}}			
+									
+						<!-- End of Sub Accounts -Account table -->	
+												
+					</div>
+				</div>
+			</div>
+			

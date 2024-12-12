@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../../../js/extjs4.2.1/resources/css/ext-all-gray.css" />
+<link rel="stylesheet" type="text/css" href="../../../js/extjs4.2.1/src/ux/css/portal.css" />
+<link rel="stylesheet" type="text/css" href="../../../styles/SmartGrid.css" />
+<link rel="stylesheet" type="text/css" href="../../../styles/ext-uscash.css" />
+
+<script type="text/javascript" language="JavaScript" src="../../../scripts/cpon/cpon_labels_en_US.js"></script>
+<script type="text/javascript" src="../../../scripts/common/actionMask.js"></script>
+<script type="text/javascript" src="../../../js/extjs4.2.1/ext-debug.js"></script>
+<!-- <script type="text/javascript" src="../../../js/extjs4.2.0/ext.js"></script> -->
+<!-- <script type="text/javascript" src="../../../js/extjs4.2.0/ext-all-dev.js"></script> -->
+
+
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript">
+function getLabel(key, defaultText) {
+	return (cponLabelsMap && !Ext.isEmpty(cponLabelsMap[key])) ? cponLabelsMap[key]
+			: defaultText
+}
+var modelSelectedMst = '';
+var parentkey = '';
+</script>
+<style type="text/css">
+	#clientServiceSetupDiv {min-height:700px !important;height:auto !important}
+</style>
+</head>
+<body>
+	<div id="tabs-bankreports"></div>
+</body>
+</html>

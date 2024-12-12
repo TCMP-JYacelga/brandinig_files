@@ -1,0 +1,51 @@
+<div class="panel panel-default" >
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="messageInfoCaret"
+						class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>{{getLabel "lbl.role.msg" "Message"}}</span>
+					 <img id="messageAll_{{assetid}}" data-version="{{ assignAllMessages_version }}" src="{{checkBoxIcon assignAllMessages}}"class="chkBoxAlign" width="16"
+						height="16" border="0"> 
+					<label id="messageAll_{{assetid}}" for="messageAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.msg1" "All"}}</label>
+					<label id="lblMsgCount" class="checkbox-inline pull-right">{{messagesAssignedCount}} of {{messagesCount}}{{getLabel "lbl.role.msg2" " Selected"}}</label>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="messageInfoDiv" class="panel-body">
+		<div class="row grid">
+				<table class="view-grid" style="width: 99%">
+					<thead>
+						<tr class="view-grid-header">
+							<td class="view-grid-header-text" style="width: 10%"></td>
+							<td class="view-grid-header-text">{{getLabel "lbl.role.msgType" "Message Type"}}</td>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each messages}}
+						<tr class="view-grid-body">
+							<td class="view-grid-body-content text-center "><a
+								class="limit-reached test"> <img
+									id="chkMsg_{{../assetid}}_{{messageId}}"
+									data-messageid = "{{ messageId }}"
+									data-messagetype = "{{ messageType }}"
+									data-assetid="{{../assetId}}"
+									data-version = "{{ version }}"
+									data-digest = "{{ digest }}"
+									src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+									border="0"></a></td>
+							<td class="view-grid-body-content">{{messageType}}</td>
+						</tr>
+						{{else}}
+						<tr class="view-grid-body">
+						<td class="view-grid-body-content" colSpan="4"
+							style="padding-bottom: 1%;">&nbsp</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,190 @@
+<div id="limAchPassThruRow">
+<div class="row">
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="achPassThruMakerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.achPassThruMakerInfoCaret" "Maker - Limits For ACH PassThru"}} </span>
+									<img id = "makerLimit_AchPassThru" data-makerAchPassthruEnabled ="{{ makerAchPassthruEnabled }}" 
+										 src="{{ checkBoxIcon makerAchPassthruEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="achPassThruMakerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.currency" "Currency"}}</label>
+								
+								{{#if makerAchPassthruEnabled}}
+									<select id="defMaker_AchPassThruCurr" name="defMaker_AchPassThruCurr" class="form-control">
+								{{else}}
+									<select id="defMaker_AchPassThruCurr" name="defMaker_AchPassThruCurr" class="form-control" disabled="disabled">
+								{{/if}}	
+								<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+									{{#each currencyList}}
+										{{option ccyCode ccyCode assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						
+						<div class="leftPadding row">
+						
+							{{#if makerAchPassthruEnabled}}
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelCreditLimit" "File Level Credit Limit"}}</label>
+									<br>
+									<input name="makerFileLevelCreditLimitAmt" id="makerFileLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelDebitLimit" "File Level Debit Limit"}}</label>
+									<br>
+									<input name="makerFileLevelDebitLimitAmt" id="makerFileLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">							
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelCreditLimit" "Batch Level Credit Limit"}}</label>
+									<br>
+									<input name="makerBatchLevelCreditLimitAmt" id="makerBatchLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">							
+								</div>
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelDebitLimit" "Batch Level Debit Limit"}}</label>
+									<br>
+									<input name="makerBatchLevelDebitLimitAmt" id="makerBatchLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">							
+								</div>
+							{{else}}
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelCreditLimit" "File Level Credit Limit"}}</label>
+									<br>
+									<input name="makerFileLevelCreditLimitAmt" id="makerFileLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelDebitLimit" "File Level Debit Limit"}}</label>
+									<br>
+									<input name="makerFileLevelDebitLimitAmt" id="makerFileLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">							
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelCreditLimit" "Batch Level Credit Limit"}}</label>
+									<br>
+									<input name="makerBatchLevelCreditLimitAmt" id="makerBatchLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">							
+								</div>
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelDebitLimit" "Batch Level Debit Limit"}}</label>
+									<br>
+									<input name="makerBatchLevelDebitLimitAmt" id="makerBatchLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20" autocomplete="off" disabled="disabled">							
+								</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="achPassThruCheckerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.achPassThruCheckerInfoCaret" "Checker - Limits For ACH PassThru"}} </span>
+									<img id = "checkerLimit_AchPassThru" data-checkerAchPassthruEnabled ="{{ checkerAchPassthruEnabled }}" 
+										 src="{{ checkBoxIcon checkerAchPassthruEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="achPassThruCheckerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.currency" "Currency"}}</label>
+								
+								{{#if checkerAchPassthruEnabled}}
+									<select id="defChecker_AchPassThruCurr" name="defChecker_AchPassThruCurr" class="form-control">
+								{{else}}
+									<select id="defChecker_AchPassThruCurr" name="defChecker_AchPassThruCurr" class="form-control" disabled="disabled">
+								{{/if}}	
+									<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+									{{#each currencyList}}
+										{{option ccyCode ccyCode assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						
+						<div class="leftPadding row">
+						
+							{{#if checkerAchPassthruEnabled}}
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelCreditLimit" "File Level Credit Limit"}}</label>
+									<br>
+									<input name="checkerFileLevelCreditLimitAmt" id="checkerFileLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelDebitLimit" "File Level Debit Limit"}}</label>
+									<br>
+									<input name="checkerFileLevelDebitLimitAmt" id="checkerFileLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">							
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelCreditLimit" "Batch Level Credit Limit"}}</label>
+									<br>
+									<input name="checkerBatchLevelCreditLimitAmt" id="checkerBatchLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off">							
+								</div>
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelDebitLimit" "Batch Level Debit Limit"}}</label>
+									<br>
+									<input name="checkerBatchLevelDebitLimitAmt" id="checkerBatchLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20" autocomplete="off">							
+								</div>
+							{{else}}
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelCreditLimit" "File Level Credit Limit"}}</label>
+									<br>
+									<input name="checkerFileLevelCreditLimitAmt" id="checkerFileLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.fileLevelDebitLimit" "File Level Debit Limit"}}</label>
+									<br>
+									<input name="checkerFileLevelDebitLimitAmt" id="checkerFileLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">							
+								</div>
+								<div style="float:left" class="form-group col-sm-6">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelCreditLimit" "Batch Level Credit Limit"}}</label>
+									<br>
+									<input name="checkerBatchLevelCreditLimitAmt" id="checkerBatchLevelCreditLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">							
+								</div>
+								<div style="float:left" class="col-sm-6 form-group">
+									<label>{{getLabel "lbl.clientUser.limit.batchLevelDebitLimit" "Batch Level Debit Limit"}}</label>
+									<br>
+									<input name="checkerBatchLevelDebitLimitAmt" id="checkerBatchLevelDebitLimitAmt" class="form-control rightJustified" 
+											 maxlength="20"  autocomplete="off" disabled="disabled">							
+								</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+</div>
+</div>

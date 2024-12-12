@@ -1,0 +1,560 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="limitCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">{{getLabel "lbl.clientUser.limit.limitCaret" "User Limits"}}</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="limitAssetBody" class="panel-body">
+			{{#each assets}}
+				{{#selectAsset assetId "18"}}
+					
+					{{#if limitType}}
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="form-group">
+									<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.limitTypeInfoCaret" "Period Type"}} </label>
+										<span class="pull-right catseparator">:</span>
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="form-group">
+									{{#ifCond limitType '==' 'D'}}
+										<span> {{getLabel "lbl.clientUser.limit.daily" "Daily"}} </span>
+									{{/ifCond}}
+									{{#ifCond limitType '==' 'M'}}
+										<span> {{getLabel "lbl.clientUser.limit.monthly" "Monthly"}} </span>
+									{{/ifCond}}
+								</div>
+							</div>
+						</div>
+					{{/if}}
+					
+					
+					<span id="makerLimitSpan"> 
+					
+						<div class="pagesetting"> <!-- Maker Limits -->
+							<fieldset id="maker-fieldset" class="x-fieldset x-fieldset-with-title x-fieldset-with-header x-fieldset-default">
+								<legend class="x-fieldset-header x-fieldset-header-default">
+								<div class="x-component x-fieldset-header-text x-component-default">{{getLabel "lbl.clientUser.limit.makerLimits" "Maker Limits"}}</div>
+								</legend>
+								<div>
+									{{#if defaultMakerPaymentCategory}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.PaymentCat" "Default Limit Payment Category"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultMakerPaymentCategoryClass}}">{{defaultMakerPaymentCategory}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										
+										{{#if makerPaymentCategory}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.customize.PaymentCat" "Customize Limits for Payment Category"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.PaymentCat" "Payment Categories"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.PaymentCat.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each makerPaymentCategory}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+									
+									
+									{{#if defaultMakerSecCode}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel">{{getLabel "lbl.clientUser.limit.default.seccode" "Default Limit SEC Code"}}  </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultMakerSecCodeClass}}">{{defaultMakerSecCode}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										{{#if makerSecCode}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.customize.seccode" "Customize Limits for SEC Code"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.secCodes" "SEC Codes"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.secCodes.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each makerSecCode}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}"  style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}"  style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+										
+									
+									
+									{{#if defaultMakerPackage}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.payPackage" "Default Limit Payment Package"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultMakerPackageClass}}">{{defaultMakerPackage}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										{{#if makerPackage}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.customize.payPackage" "Customize Limits for Payment Package"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.payPackage" "Payment Package"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.payPackage.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each makerPackage}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+										
+									
+									
+									{{#if defaultMakerPaymentTemplate}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.template.paymentcat" "Default Limit Payment Category - Template Type"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultMakerPaymentTemplateClass}}">{{defaultMakerPaymentTemplate}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										{{#if makerPaymentTemplete}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">Customize Limits for Payment Category - Template Type</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.template.paymentcat.Payment Category" "Payment Category"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.template.paymentcat.templateType" "Template Type"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.template.paymentcat.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each makerPaymentTemplete}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}" style="width:20%;" >{{tempTypeDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content  {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+									
+									{{#if defaultMakerAchReversal}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.ACHreversal" "Default Limit ACH Reversal"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultMakerAchReversalClass}}" >{{defaultMakerAchReversal}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if defaultMakerAchPassthruCCY}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.ACHpassthry.currency" "ACH Passthrough Currency"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultMakerAchPassthruCCYClass}}" >{{defaultMakerAchPassthruCCY}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if makerFileLevelCreditLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.fileLevelCreditLimit" "File Level Credit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="makerFileLevelCreditLimitAmt_lblAmt" class="{{makerFileLevelCreditLimitAmtClass}}" >{{makerFileLevelCreditLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if makerFileLevelDebitLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel">{{getLabel "lbl.clientUser.limit.fileLevelDebitLimit" "File Level Debit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="makerFileLevelDebitLimitAmt_lblAmt" class="{{makerFileLevelDebitLimitAmtClass}}">{{makerFileLevelDebitLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if makerBatchLevelCreditLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.batchLevelCreditLimit" "Batch Level Credit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="makerBatchLevelCreditLimitAmt_lblAmt" class="{{makerBatchLevelCreditLimitAmtClass}}">{{makerBatchLevelCreditLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if makerBatchLevelDebitLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.batchLevelDebitLimit" "Batch Level Debit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="makerBatchLevelDebitLimitAmt_lblAmt" class="{{makerBatchLevelDebitLimitAmtClass}}">{{makerBatchLevelDebitLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+								</div>
+							</fieldset>
+						</div>
+					</span>
+					
+					
+					<span id ="checkerLimitSpan">
+						<div class="pagesetting"> <!-- Maker Limits -->
+							<fieldset id="maker-fieldset" class="x-fieldset x-fieldset-with-title x-fieldset-with-header x-fieldset-default">
+								<legend class="x-fieldset-header x-fieldset-header-default">
+								<div class="x-component x-fieldset-header-text x-component-default">{{getLabel "lbl.clientUser.limit.checkerLimits" "Checker Limits"}}</div>
+								</legend>
+								<div>
+									{{#if defaultCheckerPaymentCategory}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.PaymentCat" "Default Limit Payment Category"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultCheckerPaymentCategoryClass}}">{{defaultCheckerPaymentCategory}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										{{#if checkerPaymentCategory}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.customize.PaymentCat" "Customize Limits for Payment Category"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.PaymentCat" "Payment Categories"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.PaymentCat.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each checkerPaymentCategory}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+									
+									{{#if defaultCheckerSecCode}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.seccode" "Default Limit SEC Code"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultCheckerSecCodeClass}}">{{defaultCheckerSecCode}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										{{#if checkerSecCode}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.customize.seccode" "Customize Limits for SEC Code"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.secCodes" "SEC Codes"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.secCodes.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each checkerSecCode}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+									
+									{{#if defaultCheckerPackage}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel">{{getLabel "lbl.clientUser.limit.default.payPackage" "Default Limit Payment Package"}}  </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultCheckerPackageClass}}">{{defaultCheckerPackage}} </span>
+												</div> 
+											</div>
+										</div>
+									{{/if}}	
+										{{#if checkerPackage}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.customize.payPackage" "Customize Limits for Payment Package"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.payPackage" "Payment Package"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.payPackage.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each checkerPackage}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+										
+										
+									
+									{{#if defaultCheckerPaymentTemplate}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.template.paymentcat" "Default Limit Payment Category - Template Type"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultCheckerPaymentTemplateClass}}">{{defaultCheckerPaymentTemplate}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}	
+										
+										
+										{{#if checkerPaymentTemplate}}
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.clientUser.limit.default.template.customize" "Customize Limits for Payment Category - Template Type"}}</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.template.paymentcat.Payment Category" "Payment Category"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.template.paymentcat.templateType" "Template Type"}}</td>
+														<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.clientUser.limit.template.paymentcat.limitPrf" "Limit Profile"}}</td>
+													</tr>		
+												</thead>
+												<tbody>							
+													{{#each checkerPaymentTemplate}}
+														<tr class="view-grid-body">
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{categoryDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{tempTypeDescription}}</td>
+															<td class="view-grid-header-text view-grid-body-content {{ custLimitClass }}" style="width:20%;" >{{profileDescription}}</td>
+														</tr>											
+													{{/each}}											
+												</tbody>
+											</table>	
+											<br>
+										{{/if}}
+										
+										
+									
+									{{#if defaultCheckerAchReversal}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.default.ACHreversal" "Default Limit ACH Reversal"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultCheckerAchReversalClass}}">{{defaultCheckerAchReversal}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if defaultCheckerAchPassthruCCY}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel">{{getLabel "lbl.clientUser.limit.ACHpassthry.currency" "ACH Passthrough Currency"}}  </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span class="{{defaultCheckerAchPassthruCCYClass}}">{{defaultCheckerAchPassthruCCY}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if checkerFileLevelCreditLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.fileLevelCreditLimit" "File Level Credit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="checkerFileLevelCreditLimitAmt_lblAmt" class="{{checkerFileLevelCreditLimitAmtClass}}">{{checkerFileLevelCreditLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if checkerFileLevelDebitLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.fileLevelDebitLimit" "File Level Debit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="checkerFileLevelDebitLimitAmt_lblAmt" class="{{checkerFileLevelDebitLimitAmtClass}}">{{checkerFileLevelDebitLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if checkerBatchLevelCreditLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.batchLevelCreditLimit" "Batch Level Credit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="checkerBatchLevelCreditLimitAmt_lblAmt" class="{{checkerBatchLevelCreditLimitAmtClass}}">{{checkerBatchLevelCreditLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+									{{#if checkerBatchLevelDebitLimitAmt}}
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.limit.batchLevelDebitLimit" "Batch Level Debit Limit"}} </label>
+														<span class="pull-right catseparator">:</span>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-group">
+													<span id="checkerBatchLevelDebitLimitAmt_lblAmt" class="{{checkerBatchLevelDebitLimitAmtClass}}">{{checkerBatchLevelDebitLimitAmt}} </span>
+												</div>
+											</div>
+										</div>
+									{{/if}}
+								</div>
+							</fieldset>
+						</div>
+					</span>
+				{{/selectAsset}}
+			{{/each}}
+		</div>
+	</div>
+</div>
+			

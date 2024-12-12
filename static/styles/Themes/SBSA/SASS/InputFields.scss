@@ -1,0 +1,123 @@
+input[type=text]:hover, input[type=text]:focus, textarea:hover, textarea:focus, select:hover, select:focus { border: 1px solid #c2c2c2; }
+input[type=text], input[type=password], textarea, select { font-size: $fontSize11; font-family: $fontFamily; }
+
+.x-form-field,.x-form-display-field,.x-form-text {font-family: $fontFamily, helvetica, arial, sans-serif !important;font-size: $fontSize12 !important;}
+input,textarea,select {font-family: inherit;font-size: inherit;	font-weight: inherit}
+.xn-suggestion-box {
+    background-image: url("resources/images/icon-search-grey.png") !important;
+    background-position: right center !important;
+	background-repeat: no-repeat !important;
+	padding: 3px 20px 3px 3px !important;
+}
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+}
+.ux_reciever-name-textfield-margin{
+	margin-left: 0px !important;
+}
+.ux_textbox-margin input[type=text], input[type=password], textarea, select{
+	margin: 0px !important;
+}
+
+.w10_3{
+	width: 200px !important;
+	min-width: 200px !important;
+}
+
+.ux_multi-textbox-margin-left{
+	margin-left: 10px !important;
+}
+.amountBox{
+	width: 196px !important;
+	min-width: 196px !important;
+}
+
+/*Prenote and other options*/
+.ux_selectbox{
+	font-size: $fontSize11 !important;
+}
+input[type=text].x-form-field {
+	border-radius : 0px !important;
+	font-size : $fontSize11 !important;
+}
+input[type=text], input[type=password], textarea, select {
+	font-size : $fontSize11 !important;
+	background-color: $lightColor;
+}
+
+.xn-form-field, .xn-form-text {
+	padding-left: 10px !important;
+}
+
+.ux_autoCmplete-field .xn-suggestion-box {
+	width : 165px !important;
+}
+.ux_width165 input[type=text].x-form-field {
+	width : 165px !important;
+}
+.ux_width165 input[type=text] {
+	width : 165px !important;
+}
+.ux_dropdown .xn-form-trigger, .xn-grid-form-trigger {
+	padding-left : 5px !important;
+}
+.ux_width17.xn-form-trigger {
+	width : 17px !important;
+}
+.w165 {
+	width : 165px !important;
+	min-width: 165px !important;
+}
+input[name='clientCodeFltr'],input[name='agreementCodeFltr']{
+font-size:$fontSize11;
+margin:0px !important;
+padding-top:3px !important;
+padding-bottom:3px !important;
+padding-left:0px !important;
+}
+
+
+select:focus { width:auto ;
+position:relative ;
+}
+
+
+.ux_paymententry input[type="text"], input[type="password"]{ padding: 6px 5px !important; }
+.ux_paymententry SELECT ,OPTION{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	padding: 5px 0px 5px 2px !important;
+	font-size: $fontSize11;
+	border: 1px solid #C7C7C7;
+}
+
+input[type="text"], input[type="password"], textarea{ border-color: #eaeaea !important; padding-left: 5px !important; padding-right: 5px !important; border-radius: 5px;}
+
+SELECT ,OPTION{	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important; padding-left: 2px !important; font-size: $fontSize11; border-radius: 5px !important; border: 1px solid #eaeaea; }
+
+.textBox{ padding: 7px 5px !important; }
+.ux_popup .x-form-display-field {
+	font-size: $fontSize11 !important;
+}
+.ux_trigger-height .x-form-trigger{ height: 25px; }
+.w15_5{ width: 15.5em !important; min-width: 15.5em !important; }
+.w15_7{ width: 15.7em !important; min-width: 15.7em !important; }
+.w14_8{ width: 14.843em !important; min-width: 14.843em !important; }
+.w12_8 { width: 12.857em !important; min-width: 12.857em !important; }
+.ux_textbox-margin .x-toolbar-default.x-box-item{ background-color : $panelBackgroundColor !important; }
+
+	
+select:-internal-list-box option:checked {
+	background-color: $lightColor !important;
+	color: $primaryColor !important;
+}
+
+.ux_w35{ width: 350px !important; }
+.ux_w38{ width: 338px !important; }
+
+
+
+
+
+

@@ -1,0 +1,372 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="generator" content="Adobe RoboHelp 9">
+<title>Authorizing a Collection Transaction</title>
+<link rel="StyleSheet" href="anz_1.css" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sample_help.htm", "", ">", "Home", "welcome_dashboard.htm");
+document.write("Authorizing a Collection Transaction<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sample_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px;" cellspacing="0" width="100%" bgcolor="#04436F" align="left">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr style="height: 11px;">
+			<td style="vertical-align: middle;"><span style="font-family: 'Arial Black', sans-serif; 
+														 font-style: italic; 
+														 color: #ffffff;"><font color="white" ><i>&#160;</i></font></span><span 
+			 style="color: #ffffff; font-family: Arial, sans-serif; font-size: 10pt; 
+			 font-style: italic; font-weight: bold;"><font size="2" color="white" style="font-size:10.000000pt;"><i><b>GCP CashWeb</b></i></font></span><span 
+			 style="font-family: 'Arial Black', sans-serif; font-style: italic; 
+			 color: #ffffff;"><font color="white" ><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></font></span></td>
+			<td style="vertical-align: top;">
+   <p style="text-align: right; 
+												 font-family: 'Arial Black', sans-serif; 
+												 font-style: italic; font-size: 12pt; 
+												 color: #ffffff;">&#160;</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+<p style="text-align: right;"><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+
+<h1>Authorizing a Collections Transaction</h1>
+<p style="font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" 
+								 id="a1">About Transaction Authorization<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></p>
+<div class="droptext" id="POPUP512899797" style="display: none;">
+	<p>Every payment request that has been entered into the system has 
+	 to be authorized. This feature follows a Maker-Checker concept wherein 
+	 one user known as the Maker enters the transaction and another user 
+	 known as the Checker authorizes the transaction. In the Maker-Checker 
+	 concept it is mandatory for the Maker and Checker to be different 
+	 users. The Checker can either authorize or reject a transaction at 
+	 Payment Request level. Unless the checker authorizes the transaction, 
+	 it is not used as the active record in the system nor is it processed 
+	 as the valid transaction. By default, the Payment Request pending 
+	 for authorization having the entry date same as the application date 
+	 is displayed. In case you are assigned <b style="mso-bidi-font-weight: normal;">Across 
+	 Seller</b> rights for a corporation, you can authorize transactions 
+	 of clients spread across different countries.</p>
+	<p style="font-weight: bold;"><a name="_Toc313615208" style="font-weight: bold;">Authorization 
+	 Levels</a></p>
+	<p class="MsoNormal">Every collection request that has been entered 
+	 into the system has to be authorized following the Authorization Level 
+	 set in the My Product Master Entry. Authorization of a single instrument 
+	 transactions is always at ‘Instrument Level’ but for Deposit, it depends 
+	 on the <b style="mso-bidi-font-weight: normal;">Authorization Level</b> 
+	 field set in the Collection MyProduct master. If you have selected 
+	 ‘Batch Level’, then checker will authorize the entire Deposit amount 
+	 and credit the client’s account with one credit entry. If you have 
+	 selected ‘Instrument Level’, then checker will authorize every instrument 
+	 within a Deposit individually and credit the client’s account with 
+	 number of credit entries equivalent to the instruments within the 
+	 Deposit.</p>
+	<p class="ListBullet2"><span style="font-family:'Microsoft Sans Serif'" >•</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>At 
+	 the time of authorization, in case the validations are incorrect, 
+	 the authorizer has the right to <span style="font-weight: bold;"><b>Reject</b></span> 
+	 or <span style="font-weight: bold;"><b>Discard</b></span> a transaction. 
+	 The Maker can 'Modify' (edit) a Rejected transaction, 'Update' the 
+	 changes and immediately make it available for authorization. The modified 
+	 record does nor require the 'Submit' process. At this stage, event 
+	 notification will be triggered to notify the authorizer as 'Transaction 
+	 pending for Auth'.</p>
+	<p style="font-weight: bold;"><a name="_Toc300249137" style="font-weight: bold;">Super 
+	 User Authorization</a></p>
+	<p class="ListBullet2"><span style="font-family:'Microsoft Sans Serif'" >•</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Each 
+	 instruction has to undergo the authorization process as per the authorization 
+	 matrix that has been set up. Only after the successful completion 
+	 of the authorization process, an instruction can be sent to the bank 
+	 for further processing. In situations where in the authorizers that 
+	 are involved in the authorization process is unavailable, the authorization 
+	 process may not proceed at all. This may result in a delay in sending 
+	 that instruction for further processing to the bank. As a solution, 
+	 GCP CashWeb front end offers the capability to the super user 
+	 to authorize an instruction irrespective of the authorization matrix 
+	 definition associated with it. A super user can authorize transaction 
+	 at batch as well as instrument level</p>
+</div>
+<hr align="center">
+<p class="ImportantNoteText"><span style="font-weight: bold;"><b>IMP</b></span>:</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>All 
+ transactions initiated in GCP CashWeb have to be <span style="font-weight: bold;"><b>authorized</b></span> 
+ and <span style="font-weight: bold;"><b>sent to bank</b></span> for further processing 
+ within a time frame set in the My Product master. <span style="mso-spacerun: yes;">&#160;</span>At 
+ both these stages, the Client Checker <span style="mso-spacerun: yes;">&#160;</span>(when 
+ the status of the transaction is <span style="font-weight: bold;"><b>Pending 
+ My Auth</b></span>) and the Client, (when the status of the transaction is 
+ <span style="font-weight: bold;"><b>Pending Release)</b></span> will receive 
+ a notification of the pending action.</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+ case a transaction remains unauthorized, system will notify the client 
+ before scrapping the transaction based on the ‘number’ of days entered 
+ in the ‘<b>Notify User of Scrap before’</b> <span style="mso-bidi-font-weight: bold;">field</span> 
+ in the MyProduct master.</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Based 
+ on the ‘<b style="mso-bidi-font-weight: normal;">Scrap if not Auth or 
+ Send’</b> limit set in the MyProduct master by the Maker, all transactions 
+ with status- <b style="mso-bidi-font-weight: normal;">‘Pending Auth’</b> 
+ and <b style="mso-bidi-font-weight: normal;">‘Pending My Auth’,</b> exceeding 
+ the limit will be scrapped bt the system and notification of the same 
+ will be sent to the Client and the Client Checker (authorizer). This is 
+ applicable for all the GCP CashWeb Client initiated transactions. 
+ &#160;</p>
+<hr align="center">
+<h2>Authorizing a Transaction and Releasing it to the Bank:</h2>
+<p>In the <span style="font-weight: bold;"><b>Collection c</b></span>enter screen, 
+ select the record with status showing <span style="font-weight: bold;"><b>Pending</b></span> 
+ <span style="font-weight: bold;"><b>My Auth</b></span> and click the <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/authorize.png" alt="authorize.png" style="border: none;" border="0">. <span style="mso-bidi-font-size: 11.0pt; 
+														 mso-fareast-font-family: Calibri; 
+														 mso-bidi-font-family: 'Times New Roman'; 
+														 mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA;">On 
+ successful authorization the screen will display a message confirming 
+ the same. T</span>he status of the authorized record changes to - <span 
+	 style="font-weight: bold;"><b>Pending Release</b></span> <span style="mso-bidi-font-size: 11.0pt; 
+															 mso-fareast-font-family: Calibri; 
+															 mso-bidi-font-family: 'Times New Roman'; 
+															 mso-ansi-language: EN-US; 
+															 mso-fareast-language: EN-US; 
+															 mso-bidi-language: AR-SA;">which 
+ indicates that it is ready to be sent to the bank for further processing. 
+ Depending on the parameters set up in the My Products master, the transactions 
+ are sent manually or automatically.</span></p>
+<p>To reject or delete the transaction, click <span style="font-weight: bold;"><b>More</b></span> 
+ and select <b style="mso-bidi-font-weight: normal;">Reject</b> or <b style="mso-bidi-font-weight: normal;">Discard.</b> 
+ To reject a transaction, it is mandatory to specify a reject reason.</p>
+<hr align="center">
+<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: &#160;When 
+ the status of the transaction changes to <b style="mso-bidi-font-weight: normal;">'Pending 
+ Release'</b>, client will receive a notification of the same. This event 
+ will be fired on authorizing the transaction. &#160;In case a transaction 
+ with status <span><b style="mso-bidi-font-weight: normal;">'Pending Release'</b></span> 
+ does not appear in the summary screen, the same may have been scrapped 
+ based on the ‘<b style="mso-bidi-font-weight: normal;">Scrap if not Auth 
+ or Send’</b> limit set in the MyProduct master. Notification of the same 
+ will be sent to the Client and the Client Checker (authorizer) of the 
+ same. This is applicable for all the GCP CashWeb Client initiated 
+ transactions.</p>
+<hr align="center">
+<h2><span style="font-weight: bold;"><b><a class="dropspot" href="javascript:TextPopup(this)" 
+										 id="a3">Sending Transactions to 
+ the Bank<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></b></span></h2>
+<div class="droptext" id="POPUP362532947" style="display: none;">
+	<p><b style="font-weight: bold; mso-bidi-font-weight: normal;">Send’</b> 
+	 signifies an action where transactions are sent to the GCP CashWeb 
+	 Back office application for further processing, after client has initiated 
+	 and authorized the transactions in GCP CashWeb.</p>
+	<p>Depending on the parameters set up in the My Products master, the 
+	 transactions can be sent manually or automatically.</p>
+	<p>You cannot send the transactions that are on ‘<b style="mso-bidi-font-weight: normal;">Hold’</b>. 
+	 You need to first ‘<b style="mso-bidi-font-weight: normal;">Release</b>’ 
+	 the transactions from hold and then ‘<b style="mso-bidi-font-weight: normal;">Send’</b> 
+	 to the bank for further processing. In case you are assigned <b style="mso-bidi-font-weight: normal;">Across 
+	 Seller</b> rights for a corporation, you can perform this function 
+	 for clients spread across different countries.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 In case Auto Send is selected at MyProduct level for products which 
+	 do not require an explicit “Send”, the authorized transactions are 
+	 automatically transmitted to the back office application for further 
+	 processing. You can use this option to send transactions which are 
+	 back / current / future dated. Back / current dated transactions are 
+	 automatically rolled over to the subsequent working day if they cross 
+	 the cutoff time. Future dated transaction are subsequently warehoused 
+	 at the bank till their due date.</p>
+	<hr align="center">
+	<p><b style="font-weight: bold;">To ‘</b><b style="mso-bidi-font-weight: normal;">Send’</b> 
+	 <b>Instructions to Bank for Further Processing of Transaction:</b></p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+	 the <b style="mso-bidi-font-weight: normal;">Payment Summary</b> screen, 
+	 select the record with status <b style="mso-bidi-font-weight: normal;">'Pending 
+	 Release'</b>. You can only send those transactions for which you are 
+	 assigned the rights.</p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/send.png" alt="send.png" style="border: none;" border="0"> to release the record 
+	 to the bank for further processing. The status of this transaction 
+	 now changes to <b>Sent to Bank.</b></p>
+	<p class="ListNumberUG2" 
+		 style="mso-bidi-font-weight: bold;">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In case you wish to discard 
+	 a transaction at this point, click the <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/discard.png" alt="discard.png" style="border: none;" border="0">. A popup 
+	 appears where you have to specify the reason for holding or discarding 
+	 the transaction.</p>
+	<p class="ListNumberUG2" 
+		 style="mso-bidi-font-weight: bold;">4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click <b>OK.</b> A message 
+	 confirming the action appears in the header area of the screen.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 All the discarded transactions can be viewed in the Payment Summary 
+	 screen with the status as Deleted and are available for cloning. Once 
+	 replicated, it is available in the Payment Request screen for initiating 
+	 the transaction</p>
+	<hr align="center">
+	<p class="ListNumberUG2" 
+		 style="mso-bidi-font-weight: bold;">5<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>You also have the option to 
+	 <span style="font-weight: bold;"><b>Hold</b></span> the transaction.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 In case a future-dated transaction on authorization is sent to bank 
+	 from Client-end, the same will show the status as ‘<span style="font-weight: bold;"><b>Warehoused</b></span>’ 
+	 instead of Sent to Bank. This ensures the Client is also aware of 
+	 the pending status of the transaction.</p>
+	<hr align="center">
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a2">To Hold/ 
+ Release a Transaction<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></h2>
+<div class="droptext" id="POPUP513464125" style="display: none;">
+	<p class="ListBullet2Indent">GCP CashWeb provides a feature for 
+	 holding a transaction due to reasons such as insufficient funds for 
+	 making the collections etc. Only those transactions with status <span><b 
+	 style="mso-bidi-font-weight: normal;">'Pending Release'</b></span> 
+	 can be put on hold. This prevents the transaction from being released 
+	 to Bank. It is mandatory to release and authorize such transactions 
+	 kept on hold for further processing. This feature is available only 
+	 for authorizers with privileges to this screen.</p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-weight: bold;">In case you wish to hold a transaction 
+	 at this point, in the Collection center screen, select the transaction 
+	 and click</span> <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/hold.png" alt="hold.png" style="border: none;" border="0"><span 
+	 style="mso-bidi-font-weight: bold;">. A popup appears where you have 
+	 to specify the reason for holding the transaction.</span></p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-weight: bold;">Click <b>OK.</b> A message confirming 
+	 the action appears in the header area of the screen.</span></p>
+	<p class="ListNumberUG2">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>To 
+	 release a document kept on hold, select the transaction and click 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/release.png" alt="release.png" style="border: none;" border="0"> icon</p>
+	<hr align="center">
+	<p class="Convensions" style="mso-list: l0 level1 lfo2;"><span style="mso-bidi-font-size: 11.0pt; 
+	 mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-weight: bold;"><b>Note</b></span><span style="mso-bidi-font-size: 11.0pt; 
+											 mso-fareast-font-family: Calibri; 
+											 mso-bidi-font-family: 'Times New Roman'; 
+											 mso-ansi-language: EN-US; 
+											 mso-fareast-language: EN-US; 
+											 mso-bidi-language: AR-SA;">: 
+	 Every release request has to be authorized. As the authorizer, you 
+	 need to validate the correctness of the information provided for the 
+	 hold request and either accept the record or reject it.</span></p>
+	<hr align="center">
+</div>
+<hr align="center">
+<p><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px; margin-right: 5px;" cellspacing="0" width="100%" bgcolor="#02426D" align="right">
+		<col style="width: 100%;">
+		<tr style="height: 10px;">
+			<td style="vertical-align: middle;">
+   <p style="text-align: right; 
+													 font-style: italic; 
+													 font-family: 'Eras Demi ITC', sans-serif; 
+													 color: #ffffff; font-size: 8pt; 
+													 margin-left: 12px;">Innovation. 
+			 Bank on it</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP512899797');
+	TextPopupInit('a3','POPUP362532947');
+	TextPopupInit('a2','POPUP513464125');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">	
+									<span id="brCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">{{getLabel "lbl.rolesrv.01" "Balance Reporting"}}</span>									
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="brAssetBody" class="panel-body">
+						<div id="brFunctionTableDiv">
+							{{#each assets}}
+							{{#selectAsset assetId "01"}}
+							{{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+									
+											{{#if reports}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.report" "Reports"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression reports "reportType"}}
+													</td>
+												</tr>
+											{{/if}}
+											{{#if widgets}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.widget" "Widgets"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression widgets "widgetType"}}	
+													</td>
+												</tr>
+											{{/if}}	
+											{{#if alerts}}								
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">{{getLabel "lbl.role.alert" "Alerts"}}</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression alerts "alertType"}}	
+													</td>
+												</tr>
+											{{/if}}
+									</tbody>
+								</table>
+								{{/if}}
+							{{/selectAsset}}
+						{{/each}}
+						</div>	
+						<!-- Start of BR -Account table -->							
+						<div class="ft-margin-t" id="brAccountTableDiv">
+						{{#each assets}}
+							{{#selectAsset assetId "01"}}
+							{{#if accounts}}
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.acct" "Accounts"}}</td></tr>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.acctNo" "Account No"}}</td>
+										<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.acctNm" "Account Name"}}</td>
+										<td class="view-grid-header-text" style="width:20%;" >{{getLabel "lbl.role.clientDesc" "Client Description"}}</td>
+									</tr>		
+								</thead>
+								<tbody>							
+										
+												{{#each accounts}}
+													<tr class="view-grid-body">
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName }}</td>
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass subsidiaryName}}</td>
+													</tr>													
+												{{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>										
+												{{/each}}											
+											
+								</tbody>
+							</table>
+								{{/if}}
+								{{/selectAsset}}
+							{{/each}}							
+						</div>
+						<!-- End of BR -Account table -->			
+						<!-- Start of BR Service - Privileges Table -->
+						<div class="ft-margin-t" id="brPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "01"}}
+							{{#if permissions}}
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">{{getLabel "lbl.role.privileges" "Privileges"}}</td></tr>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" >{{getLabel "lbl.role.privfunction" "Function"}}</td>
+										<td class="view-grid-header-text" style="width:60%;">{{getLabel "lbl.role.privView" "View"}}</td>												
+									</tr>		
+								</thead>
+								<tbody>	
+										{{#each permissions}}
+													<tr class="view-grid-body">
+														<td class="view-grid-header-text view-grid-body-content" >{{getLabel tciRmParent screenName}}</td>
+																		{{#if view}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:60%;" >
+															<i class="fa fa-check"></i>
+														</td>
+																		{{else}}
+														<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																		{{/if}}														
+													</tr>				
+												{{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>		
+												{{/each}}											
+											
+								</tbody>
+							</table>
+							{{/if}}
+							{{/selectAsset}}
+						{{/each}}																				
+						</div>
+						<!-- End of BR Service - Privileges Table -->
+						<!-- Start of BR Granular Previlages table -->
+						{{#each assets}}
+							{{#selectAsset assetId "01"}}
+								{{#if granularPermission.balanceRpts}}
+									<div class="ft-margin-t" id="brGranularDiv">
+										<div style="max-width:1268px !important;overflow-x:auto; width: 100%;">
+											<table class="view-grid" style="width:100%">
+												<thead>
+													<tr><td colspan="25" class="view-grid-section-header">Granular Privileges</td></tr>
+													<tr class="view-grid-header">
+														<td class="view-grid-header-text" style="width:20%;">Account</td>
+														<td class="view-grid-header-text" style="width:20%;">Account Name</td>
+														{{#each (splitOperation granularPermission.brOperations) }}
+															<td class="view-grid-header-text hidden" style="width:20%;" id="grBRColHdr_{{@index}}">{{colName}}</td>
+														{{/each}}
+													</tr>												
+												</thead>
+												<tbody>							
+													{{#each granularPermission.balanceRpts}}
+															<tr class="view-grid-body">
+																<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountNo}}</td>														
+																<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >{{getColoredExpression colorClass accountName}}</td>
+																{{#each (splitMask mask) }}
+																	{{#if isAssign}}
+																		<td class="view-grid-header-text view-grid-body-content hidden" 
+																			id="chkGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" >
+																			<i class="fa fa-check"></i>
+																		</td>														
+																	{{else}}
+																		<td class="view-grid-header-text view-grid-body-content hidden" 
+																			id="chkGranView_{{../../assetId}}_{{@index}}_{{../accountId}}" style="width:20%;" ></td>
+																	{{/if}} 
+																{{/each}}														
+															</tr>
+															
+														{{else}}
+															<tr class="view-grid-body">
+																	<td class="view-grid-body-content" colSpan="3" style="padding-bottom: 1%;" >&nbsp</td>
+															</tr>		
+														{{/each}}											
+												</tbody>
+											</table>
+										</div>
+									</div>
+								{{/if}}
+							{{/selectAsset}}
+						{{/each}}
+						
+						<!-- end of granular previlages table -->
+					</div>
+				</div>
+			</div>
+			

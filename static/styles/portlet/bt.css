@@ -1,0 +1,31 @@
+/*CSS for Bubble Tooltips by Alessandro Fulciniti
+- http://pro.html.it - http://web-graphics.com */
+
+#btc {
+    border: 0px none white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tooltip,.tooltip *{display:block}
+
+.tooltip {
+    font:lighter 11px/1.3 Verdana,Tahoma,Arial,sans-serif;
+    width:400px;
+    color:#257F82;
+    text-decoration:none;
+    text-align:center;
+    letter-spacing: normal;
+}
+
+.tooltip span.top {
+    padding: 30px 8px 0;
+    background: url('../../images/tooltip.png') no-repeat top
+}
+
+.tooltip b.bottom {
+    padding:3px 8px 15px;
+    color: #548912;
+    background: url('../../images/tooltip.png') no-repeat bottom
+}
+

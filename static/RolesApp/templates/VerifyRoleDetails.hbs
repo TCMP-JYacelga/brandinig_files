@@ -1,0 +1,49 @@
+<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span class="ft-padding-l ">{{getLabel "lbl.role.roledtls" "Role Details"}}</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body" id="categoryDetails">
+						<div>
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text">{{getLabel "lbl.role.privfunction" "Function"}}</td><td class="view-grid-header-text" style="width:20%;">{{getLabel "lbl.role.dtls" "Details"}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">{{getLabel "lbl.role.dtls" "Code"}}</td><td class="view-grid-body-content" style="width:80%;">{{getStringWithSpecialChars roleId}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">{{getLabel "lbl.role.description" "Description"}}</td><td class="view-grid-body-content" style="width:80%;">{{getColoredExpression colorClass roleDesc}}</td></tr>
+									<tr class="view-grid-body"><td class="view-grid-body-content">{{getLabel "lbl.company.name" "Company Name"}}</td><td class="view-grid-body-content" style="width:80%;">{{getStringWithSpecialChars corporationDesc}}</td></tr>
+									
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">{{getLabel "lbl.role.subsidiaryAc" "Subsidiary Access"}}</td>
+										<td class="view-grid-body-content" style="width:80%;">
+											{{getListExpression subsidiaries "subsidiaryName"}}
+										</td>
+									</tr>
+									
+									<tr class="view-grid-body">
+										<td class="view-grid-body-content">{{getLabel "lbl.role.services" "Services"}}</td>
+										<td class="view-grid-body-content" style="width:80%;">
+											{{getListExpression services "serviceName" "serviceId"}}
+										</td>
+									</tr>
+									
+									{{#if granPrivileges}}
+										<tr class="view-grid-body">
+											<td class="view-grid-body-content">Granular Privileges</td>
+											<td class="view-grid-body-content" style="width:80%;">
+												{{getListExpression granPrivileges "granularPrivilegeName"}}
+											</td>
+										</tr>
+									{{/if}}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			

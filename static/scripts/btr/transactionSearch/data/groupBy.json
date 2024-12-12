@@ -1,0 +1,30 @@
+{
+	"d" : {
+		"groupTypes" : [{
+			"groupTypeDesc" : "Account Type",
+			"groupTypeCode" : "ACCTYPE",
+			// "columns" : [],
+			"groups" : [{
+				"groupCode" : "SUBFAC0101",
+				"groupDescription" : "Savings",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0101&$serviceType=BR_STDVIEW_SUBFAC_SAVING"
+			}, {
+				"groupCode" : "SUBFAC0102",
+				"groupDescription" : "Checking", // need to ask for checking
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0102&$serviceType=BR_STDVIEW_SUBFAC_CURRENT"
+			}, {
+				"groupCode" : "SUBFAC0301",
+				"groupDescription" : "Loan",
+				"groupId" : "ACCTYPE",
+				"groupQuery" : "$filterOn=FAC&$filterValue=SUBFAC0103&$serviceType=BR_STDVIEW_SUBFAC_LOAN"
+			}]
+		}],
+		"__metadata" : {
+			"__applicationDate" : "07/09/2014",
+			"__applicationDateFormat" : "MM/dd/yyyy",
+			"__userLocale" : "en_IN"
+		}
+	}
+}

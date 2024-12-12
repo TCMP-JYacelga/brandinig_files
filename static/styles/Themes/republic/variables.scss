@@ -1,0 +1,68 @@
+$fontSize14 : 14px;
+$fontFamily : Arial;
+
+/*Used for Button Background, Horizontal Menu Bar,SmartGrid Header,Linktabs*/
+$primaryColor : #000ccc; 
+$logoutButton: #de1927;
+$logoutHover: #de1927;
+$headerActionDropdown: #a8cee2; 
+$headerBorderColor: #de1927;
+
+/*Used for background color of Active tab*/
+$activeTab : #000ccc; 
+
+/*Used for background color of inactive tab*/
+$inactiveTab : #99CAEA; 
+
+/*Link color*/
+
+$linkColor: #000ccc;
+
+
+/*Used for Button Background, Horizontal Menu Bar,SmartGrid Header,Linktabs*/
+$panelBackgroundColor: #fff;
+
+$lightColor: $panelBackgroundColor;
+
+$secondaryColor: #99CAEA;
+
+$headerTabColor: #000ccc;
+$headerTabHoverColor: #3394d5;
+
+$sidePanelHeader: #7acae4;
+
+$sidePanelActionList: $headerActionDropdown;
+$sidePanelQuickPayments: #C2DDEB;
+$sidePanelMessages: #E5F0F6;
+$sidePanelReports: 	#D4E6F0;
+
+$tabsColor: $sidePanelReports;
+
+$secondaryBtn: 	#4D55DB;
+$secondaryBtnHover:	#666DE0;
+
+$verticalPanelHeader: $primaryColor;  
+
+$hoverColor: #b1e1f1;
+
+$fontColor: #444;
+
+$primaryColor1: #333DD6;
+$fontSize18 : 18px;
+$fontSize16 : 16px;
+$fontSize15 : 15px;
+$fontSize14 : 14px;
+$fontSize13 : 13px;
+$fontSize12 : 12px;
+$fontSize11 : 11px;
+
+$fontWeight-Regular: 400;
+$fontWeight-SemiBold: 600;
+@mixin fontSize($size){
+font-size: 10px+$size;
+}
+@mixin fontSizeImportant($size){
+font-size: 10px+$size;
+}
+
+

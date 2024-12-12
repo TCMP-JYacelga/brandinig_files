@@ -1,0 +1,174 @@
+<div id="limPayCatTempRow">
+<div class="row">
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="payTemplateMakerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.payTemplateMakerInfoCaret" "Maker - Payment Category Template Type"}}</span>
+									<img id = "makerLimit_PaymentTemplate" data-makerPaymentTemplateEnabled = "{{ makerPaymentTemplateEnabled }}" tabindex="1" 
+										 src="{{checkBoxIcon makerPaymentTemplateEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="payTemplateMakerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.payTemplate.defaultLimitProfile" "Default Limit Profile"}}</label>
+								
+								{{#if makerPaymentTemplateEnabled}}
+									<select id="defMaker_PaymentTemplate" name="defMaker_PaymentTemplate" class="form-control" tabindex="1">
+								{{else}}
+									<select id="defMaker_PaymentTemplate" name="defMaker_PaymentTemplate" class="form-control" disabled="disabled" tabindex="1">
+								{{/if}}	
+									<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+									{{#each profileList}}
+										{{option profileId profileDescription assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						
+								<div class="grid">
+									<table class="view-grid" style="width:100%;table-layout: fixed;">
+										<thead>
+											<tr class="view-grid-header">
+												<td class="view-grid-header-text" style="width: 35%;">{{getLabel "lbl.clientUser.limit.template.paymentcat.paymentCategories" "Payment Categories"}}</td>
+												<td class="view-grid-header-text" style="width: 35%;">{{getLabel "lbl.clientUser.limit.template.paymentcat.templateType" "Template Type"}}</td>
+												<td class="view-grid-header-text" style="width: 30%;">{{getLabel "lbl.clientUser.limit.template.paymentcat.limitPrf" "Limit Profile"}}</td>
+											</tr>
+										</thead>			
+										<tbody>	
+										{{#if makerPaymentTemplateEnabled}}
+											  {{#each makerPaymentTemplete}}
+											  		<tr class="view-grid-body">
+											  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}" id="makerPaymentTemplate_{{categoryCode}}" style="width: 35%;">{{getLabel categoryDescription categoryDescription}}</td>
+											  			<td class="view-grid-body-content" id="makerPaymentTemplate_{{categoryCode}}_{{tempTypeCode}}" style="width: 35%;">{{getLabel tempTypeDescription tempTypeDescription}}</td>
+											  			<td class="view-grid-body-content" style="width: 30%;">
+										  					<select id="PaymentTemplate_maker_{{categoryCode}}_{{tempTypeCode}}" name="PaymentTemplate_maker_{{categoryCode}}_{{tempTypeCode}}" 
+											  					    data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" tabindex="1">
+																	<option data-tempTypeDesc="{{ tempTypeDesc }}"  data-tempTypeCode="{{ tempTypeCode }}" >Select</option>
+																	{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+															</select>
+											  			</td>
+													</tr>
+											  {{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="2" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>
+											 {{/each}}	
+										{{else}}
+											 {{#each makerPaymentTemplete}}
+										  		<tr class="view-grid-body">
+										  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}">{{getLabel categoryDescription categoryDescription}}</td>
+										  			<td class="view-grid-body-content">{{getLabel tempTypeDescription tempTypeDescription}}</td>
+										  			<td class="view-grid-body-content">
+											  			<select id="PaymentTemplate_maker_{{categoryCode}}_{{tempTypeCode}}" name="PaymentTemplate_maker_{{categoryCode}}_{{tempTypeCode}}" data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" disabled="disabled" tabindex="1">
+															<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+															{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+														</select>
+										  			</td>
+												</tr>
+											 {{/each}}	
+										{{/if}}	 
+										</tbody>
+									</table>
+								</div>
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+	<div class="col-sm-6">
+		{{#each assets}}
+			{{#selectAsset assetId "18"}}
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">
+									<span id="payTemplateCheckerInfoCaret" class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+									<span>{{getLabel "lbl.clientUser.limit.payTemplateCheckerInfoCaret" "Maker - Payment Category Template Type"}}</span>
+									<img id = "checkerLimit_PaymentTemplate" data-checkerPaymentTemplateEnabled = "{{ checkerPaymentTemplateEnabled }}" tabindex="1" 
+										 src="{{checkBoxIcon checkerPaymentTemplateEnabled }}" class="chkBoxAlign" width="16" height="16" border="0">
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="payTemplateCheckerInfoDiv"  class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>{{getLabel "lbl.clientUser.limit.payTemplate.defaultLimitProfile" "Default Limit Profile"}}</label>
+								
+								{{#if checkerPaymentTemplateEnabled}}
+									<select id="defChecker_PaymentTemplate" name="defChecker_PaymentTemplate" class="form-control" tabindex="1">
+								{{else}}
+									<select id="defChecker_PaymentTemplate" name="defChecker_PaymentTemplate" class="form-control" disabled="disabled" tabindex="1">
+								{{/if}}	
+									<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+									{{#each profileList}}
+										{{option profileId profileDescription assignedFlag }}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						
+								<div class="grid">
+									<table class="view-grid" style="width:100%;table-layout: fixed;">
+										<thead>
+											<tr class="view-grid-header">
+												<td class="view-grid-header-text" style="width: 35%;">{{getLabel "lbl.clientUser.limit.template.paymentcat.paymentCategories" "Payment Categories"}}</td>
+												<td class="view-grid-header-text" style="width: 35%;">{{getLabel "lbl.clientUser.limit.template.paymentcat.templateType" "Template Type"}}</td>
+												<td class="view-grid-header-text" style="width: 30%;">{{getLabel "lbl.clientUser.limit.template.paymentcat.limitPrf" "Limit Profile"}}</td>
+											</tr>
+														
+										</thead>			
+										<tbody>	
+										{{#if checkerPaymentTemplateEnabled}}
+											  {{#each checkerPaymentTemplate}}
+											  		<tr class="view-grid-body">
+											  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}" id="{{categoryCode}}" style="width: 35%;">{{categoryDescription}}</td>
+											  			<td class="view-grid-body-content" id="{{categoryCode}}" style="width: 35%;">{{tempTypeDescription}}</td>
+											  			<td class="view-grid-body-content" style="width: 30%;">
+										  					<select id="PaymentTemplate_checker_{{categoryCode}}_{{tempTypeCode}}" name="PaymentTemplate_checker_{{categoryCode}}_{{tempTypeCode}}" 
+											  					data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" tabindex="1">
+																	<option data-tempTypeDesc="{{ tempTypeDesc }}"  data-tempTypeCode="{{ tempTypeCode }}" >Select</option>
+																	{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+															</select>
+											  			</td>
+													</tr>
+											  {{else}}
+													<tr class="view-grid-body">
+															<td class="view-grid-body-content" colSpan="2" style="padding-bottom: 1%;" >&nbsp</td>
+													</tr>
+											 {{/each}}	
+										{{else}}
+											 {{#each checkerPaymentTemplate}}
+										  		<tr class="view-grid-body">
+										  			<td class="view-grid-body-content textWrap" title="{{categoryDescription}}">{{getLabel categoryDescription categoryDescription}}</td>
+										  			<td class="view-grid-body-content">{{getLabel tempTypeDescription tempTypeDescription}}</td>
+										  			<td class="view-grid-body-content">
+											  			<select id="PaymentTemplate_checker_{{categoryCode}}_{{tempTypeCode}}" name="PaymentTemplate_checker_{{categoryCode}}_{{tempTypeCode}}" data-categoryCode="{{ categoryCode }}" data-categoryCode="{{ categoryDescription }}" class="form-control profileSelect" disabled="disabled" tabindex="1">
+															<option value="Select" >{{getLabel "lbl.clientUser.select" "Select"}}</option>
+															{{custProfileSelectOption ../profileList tempTypeCode tempTypeDescription }}																	
+														</select>
+										  			</td>
+												</tr>
+											 {{/each}}	
+										{{/if}}	 
+										</tbody>
+									</table>
+								</div>
+							
+					</div>
+				</div>
+			{{/selectAsset}}
+		{{/each}}
+	</div>
+</div>
+</div>

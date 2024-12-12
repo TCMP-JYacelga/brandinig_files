@@ -1,0 +1,1159 @@
+.t-update-text, .ft-help-nav li a, .ft-main-nav > li > a i, .panel-body a {
+  color: $lightColor;
+}
+.ft-main-nav > li > a i{
+	&:hover,&:active{
+		color: $mainMenuHoverTextColor;
+		text-decoration: underline;
+	}
+}
+body, .x-body {
+	font-family: arial, helvetica sans-serif;
+}
+.ft-dropdown-toggle, .ft-dropdown-items a:focus, button.ui-datepicker-close, .ft-button{
+	color: $darkColor;
+}
+.ft-dropdown-toggle{
+	@include fontSize(3);
+	padding: 6px 6px;
+}
+.ft-help-nav{
+	margin-top: 3.5px;
+}
+.button-gradient{
+	background-image: url(resources/images/T7/button.png);
+    background-position: center top;
+    background-repeat: repeat-x;
+    background-color: $buttonGradientColor !important;
+    -moz-border-radius: 4px; 
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	height: 24px;
+	font-size: 12px !important;
+	border: 1px solid $buttonGradientBorderColor;
+}
+.button-gradient-hover{
+	background-image: url(resources/images/T7/button.png);
+    background-position: center top;
+    background-repeat: repeat-x;
+    background-color: $buttonGradientHoverColor !important;
+    -moz-border-radius: 4px; 
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	height: 24px;
+	font-size: 12px !important;
+	border: 1px solid $buttonGradientBorderColor;
+}
+.x-window.x-window-default{
+	border: solid $primaryColor thin;
+	border-radius: 0;
+	.x-btn-default-small{
+		@extend .button-gradient;
+		padding: 4px 12px;
+	}
+	.x-btn-default-small:hover{
+		@extend .button-gradient-hover;
+		padding: 3px 12px;
+	}
+	.x-window-header-default-top{
+		background-color: $primaryColor;
+		height: 34px;
+		padding-top: 3px;
+		padding-bottom: 6px;
+		border-radius: 0px;
+	}
+}
+.ft-header-menubar{ 
+	 margin-top: 25px;
+	.ft-button-login{
+		 @extend .button-gradient;
+		 color: $darkColor;
+		 line-height: 6px;
+		 height: 24px;
+		 font-size: 12px;
+		 border-color: #769DC0;
+	 }
+	 .ft-button-login:hover{
+		 @extend .button-gradient-hover;
+		 color: $darkColor;
+		 line-height: 6px;
+	}
+}
+.ft-header {
+	border-bottom: solid $lightColor 4px;
+}
+.title-content.ft-accordion-header-sidebar{
+	.ft-dropdown.ft-header-dropdown{
+		> .ft-button{
+			@extend .button-gradient;
+			 color: $darkColor;
+			 line-height: 6px;
+			 border-color: #769DC0;
+		}
+		> .ft-button:hover{
+			@extend .button-gradient-hover;
+			 color: $darkColor;
+			 line-height: 6px;
+			 border-color: #769DC0;
+		 }
+	 }
+	 .ft-dropdown .ft-dropdown-toggle{
+		padding-top: 6px;
+	 }
+}
+.ui-dialog{
+	border: none;
+	border-radius: 0px;
+	.ui-dialog-content{
+		@include fontSize(3);
+		.ui-tabs .ui-tabs-nav .ui-dialog-titlebar-close{
+			padding: 1px;
+		}
+	}
+	.ft-button-primary{
+		color: $darkColor;
+		&:hover{
+			color: $darkColor;
+		}
+	}
+	.ui-dialog-buttonpane{
+		.ui-dialog-buttonset button:first-child{
+			@extend .button-gradient;
+			color: $darkColor;
+			line-height: 4px;
+			padding-top: 4px;
+		}
+		.ui-dialog-buttonset button:first-child:hover{
+			@extend .button-gradient-hover;
+			color: $darkColor;
+		}
+	}
+	.ui-dialog-titlebar{
+		background-color: $primaryColor;
+		padding: 3px 0px 0px 15px;
+		@include fontSize(3);
+		height: 32px;
+	}
+	.ui-dialog-titlebar-close{
+		.ui-icon-closethick:before{
+			color: $lightColor;
+			font-size: 15px;
+			padding-top: 3px;
+			padding-left: 3px;
+		}
+	}
+	.ui-dialog-title{
+		color: $lightColor;
+	}
+}
+.ux-dialog{
+	panel-body ft-content-pane-scroll{
+		.col-sm-12{
+			color: red;	
+		}
+	}
+	.ux-view-labelValuePair-dialog{
+		@include fontSize(3);
+	}
+	.ft-datepicker.form-control{
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		height: 30px;
+		@include fontSize(3);
+	}
+	.ui-tabs .ui-tabs-nav{
+		background-color: $primaryColor;
+		height: 34px;
+		padding-top: 1px;
+		li a{
+			padding: 4px 10px;
+		}
+	}
+}
+.input-daterange{
+	.input-group-addon.has-icon{
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		height: 30px;
+	}
+	.ft-datepicker.form-control[readonly]{
+		font-size: 13px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px; 
+	}  
+}
+.fa-calendar:before{
+	line-height: 10px;
+	font-size: 15px;
+}
+.ft-main-nav{ 
+	.ft-page-active a{
+		color: $mainMenuHoverTextColor;
+		text-decoration: underline;
+	}
+}
+.ft-header-nav{
+	height: 32px;
+	.ft-main-nav {
+	height: 32px;
+	> li {
+		height: 32px;
+		> a{
+			font-weight: bold;
+			height: 32px;
+			font-size: 13px;
+			padding: 4.5px 15px;
+			&:hover, &:focus{
+				text-decoration: underline;
+			}
+		}
+		&:hover{
+			text-decoration: underline;
+		}
+		.ft-sub-nav{
+			.flyout{
+				> a, a:hover, a:focus, a:visited{
+					color: $darkColor;
+				}
+				> ul{
+					> li{
+						> a, a:hover{
+							color: $darkColor;
+						}
+					}
+					&:hover{
+						color: $darkColor;
+					}
+				}
+			}
+		}
+	}
+	.ft-sub-nav{
+		background-color:$subNav-bgColor;
+		li{
+			color: $darkColor;
+			border: 1px solid $primaryColor;
+			a{
+				height: 32px;
+				padding: 8px 13px;
+			}
+	
+		}
+	}
+	.ft-page-active{
+		.ft-sub-nav{	
+			> li{
+				a{
+					color: $darkColor;
+					@include fontSize(3);
+				}
+				&:hover{
+					color: $darkColor;
+				}
+			}			
+		}
+	}
+}
+}
+.t7-grid{
+	.x-tab-bar-default-top{
+		.x-tabbar-scroll-left, .x-tabbar-scroll-right{
+			color: $lightColor;
+		}
+	}
+	.x-item-disabled{
+		.x-tbar-page-prev:before{
+			color: $darkColor;
+			line-height: 25px;
+		}
+	}
+	.x-tbar-page-next:before{
+		color: $darkColor;
+		line-height: 25px;
+	}
+	input[type=text].x-form-field,.xn-form-field{
+		height: 30px;
+		@include fontSize(3);
+	}
+	.gradiant_back{
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border: 0px;
+	}
+	.x-tab-bar-default-horizontal{
+		top: 2px !important;
+	}
+	.xn-panel-header{
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		height: 32px;
+		padding-top: 0px;
+		.x-tab-bar-body{
+			.x-box-item.x-tab-default-top{
+					background-color: $transparentColor;
+					height: 24px;
+					border: 1px solid $lightColor;
+					line-height: 11px;
+					padding-top: 6px;
+					font-size: 12px;
+			}
+			&:active, &:hover, &:focus{
+				color: $darkColor;
+			}
+			.x-box-item{
+				.x-tab-button{
+					.x-tab-inner{
+						color: $lightColor;
+					}
+				}
+			}
+			.x-box-item.x-tab-top-active{
+				@extend .button-gradient;
+				color: $darkColor;
+				.x-tab-inner{
+					color: $darkColor;
+				}
+			}
+			.x-box-item.x-tab-top-active:hover{
+				@extend .button-gradient-hover;
+				color: $darkColor;
+				.x-tab-inner{
+					color: $darkColor;
+				}
+			}
+		}
+		.btn-row-list{
+			background-color: $transparentColor;
+			border: 1px solid $lightColor;
+			height: 24px;
+			padding-top: 3px;
+			top: 3px !important;
+			.x-btn-inner{
+				color: $lightColor;
+			}
+		}
+	}
+	.x-grid-row{
+		&.x-grid-data-row{
+			.x-grid-cell {
+					background-color : $gridRowColor;
+				}
+				&.x-grid-row-over{
+					.x-grid-cell.x-grid-td {
+						background: url(resources/images/T7/row_back.png) #ABD6FF repeat-x;
+						border-top: 1px solid $gridRowHOverBorder;
+						border-bottom: 1px solid $gridRowHOverBorder;
+					}
+				}
+		}
+		&.x-grid-row-alt{
+			&.x-grid-data-row {
+				.x-grid-cell {
+					background-color : $gridAltRowColor;
+				}
+				&.x-grid-row-over{
+					.x-grid-cell.x-grid-td {
+						background: url(resources/images/T7/row_back.png) #ABD6FF repeat-x;
+						border-top: 1px solid $gridRowHOverBorder;
+						border-bottom: 1px solid $gridRowHOverBorder;
+					}
+				}
+			}
+		}
+	}
+	.xn-paging-toolbar{
+		.x-field{
+			.x-form-text{
+				height: 32px !important;
+				width: 45px !important;
+				font-size: 13px !important;
+			}
+		}
+		.x-toolbar-text{
+			font-size: 12px;
+		}
+		.x-btn-default-toolbar-small.x-btn{
+			@extend .button-gradient;
+			color: $darkColor;
+			line-height: 16px;
+			padding-top: 3px;
+			.x-btn-inner{
+				color: $darkColor;
+			}
+		}
+	}
+	.xn-custom-toolbar{
+		.action-button.x-btn.x-btn-default-toolbar-small-disabled{
+			@extend .button-gradient;
+			line-height: 10px;
+			padding-top: 6px;
+			.x-btn-inner{
+				color: $darkColor;
+			}
+		}
+		.action-button.x-btn.x-btn-default-toolbar-small-disabled:hover{
+			@extend .button-gradient;
+			line-height: 10px;
+			padding-top: 6px;
+			.x-btn-inner{
+				color: $darkColor;
+			}
+		}
+		.action-button.x-btn-default-toolbar-small{
+			height: 24px;
+			line-height: 10px;
+			padding-top: 3px;
+			@extend .button-gradient;
+			color: $darkColor;
+			.x-btn-inner{
+				color: $darkColor;
+			}
+			
+		}
+		.action-button.x-btn-default-toolbar-small:hover, .action-button.x-btn-default-toolbar-small:focus{
+			height: 24px;
+			line-height: 10px;
+			padding-top: 3px;
+			@extend .button-gradient-hover;
+			color: $darkColor;
+			.x-btn-inner{
+				color: $darkColor;
+			}
+		}
+	}
+	.x-grid-cell-inner{
+		    height: 34px;
+			font-family: $fontFamily;
+	}
+}
+#PageTitle{
+	border-bottom: 2px solid $pageHeaderBorderBottom;
+}
+.filter-view{
+	border-radius: 0px;
+	border: 0px !important;
+	.x-panel-body{
+			label.x-component.x-box-item.x-component-default.create-advanced-filter-label{
+				@extend .button-gradient;
+				color: $darkColor;
+				line-height: 9px;
+			}
+			label.x-component.x-box-item.x-component-default.create-advanced-filter-label:hover{
+				@extend .button-gradient-hover;
+				color: $darkColor;
+				line-height: 9px;
+			}
+			label.x-component.x-box-item.x-component-default{
+				font-size: 12px;
+			}
+	}
+	.x-form-field.x-form-trigger-input-cell{
+		.x-form-field{
+		}
+	}
+	.x-form-trigger-input-cell .x-form-field{
+		border-radius: 0px;
+		height: 30px;
+	}
+	.ui-datepicker-range-alignment{ 
+		height: 30px;
+		border-radius: 0px;
+		font-size: 13px;
+	}
+	.x-header-body{
+		background-color: $transparentColor;
+		height: 32px;
+		padding: 5px;
+		padding-top: 3px;
+		border: 1px solid #ccc;
+	}
+	.x-header-text-container{
+		color: $darkColor;
+		font-size: 13px !important;
+	}
+}
+
+.icon-calendar{
+	height: 30px;
+	border-radius: 0px;
+	font-size: 15px;
+	padding-top: 9px;
+}
+.ft-button-light, .ft-button-light:hover, .ft-button-light:focus{
+	height: 24px;
+	line-height: 9px;
+	color: $darkColor;
+}
+
+.ft-button-light:hover, .ft-button-light:focus{
+	box-shadow: none;
+}
+
+.datepick-popup{
+	.datepick-month td .datepick-today{
+			background-color : $primaryColor;
+		}
+}
+.ft-footer{
+	border: none;
+	.ft-footer-nav li a{
+		color: $footerLink;
+		@include fontSize(3);
+	}
+}
+.ft-footer-copyright, .ft-footer-column-right li span, .ft-footer-center{
+	color: $footerLink;
+	@include fontSize(3);
+}
+
+.x-grid{
+	.icon-action-dropdown{
+		@extend .button-gradient;
+		color: $darkColor;
+		line-height: 10px;
+		padding-top: 6px;
+	}
+	.icon-action-dropdown:hover{
+		@extend .button-gradient-hover;
+		color: $darkColor;
+		line-height: 10px;
+		padding-top: 6px;
+	}
+	.x-column-header-inner{
+		height: 32px;
+		background-color: $primaryColor;
+		font-size: 13px;
+	}
+	.x-column-header-text{
+		@include fontSize(3);
+	}
+	.x-grid-cell-inner{
+		@include fontSize(3);
+		padding: 4px 10px;
+		line-height: 24px;
+		font-family: $fontFamily;
+		height: 34px;
+	}
+}
+
+.quicklinks-dropdown{ 
+	.list-group-item:hover, .quicklinks-dropdown .list-group-item:active, .quicklinks-dropdown .list-group-item:focus{
+		color: $linkColor;
+	}
+	.ft-dropdown-menu{ 
+		.ft-dropdown-right{
+			.list-group-item{
+				background-color: $lightColor;
+				color: $primaryColor;
+			}
+		}
+	}
+	a.list-group-item{
+		@include fontSize(2);
+	}
+	.quicklinks-edit.list-group-item{
+		background-color: $primaryColor;
+	}
+}
+.dropdown-list{ 
+	li{ a, .dropdown-list_withoutSearch li a{
+			height: 30px;
+			font-size: 13px;
+			padding: 5px;
+		}
+	}
+}
+.custom-combobox-input.form-control{
+	font-size: 13px;
+}
+.panel-default {
+	border: none;
+	box-shadow: none;
+	.ft-button-light, .ft-button-light:hover, .ft-button-light:focus{
+		padding-top: 7px !important;
+	}
+	> .panel-heading{
+		color: $lightColor;
+		border: none;
+		border-radius: 0px;
+		height: 32px;
+		padding-top: 3px;
+		.panel-title{
+			color: $lightColor;
+			@include fontSize(3);
+			.fa-caret-up:before{
+				font-size: 13px;
+			}
+			span{
+				color: $lightColor;
+				@include fontSize(3);
+				padding-top: 3px;
+			}
+		}
+	}
+	.panel-body{ 
+		span, .radio label, .checkbox label,.radio-inline, .checkbox-inline, .col-sm-12{
+			font-size: 13px !important;
+		}
+		.form-group{
+			.ft-padding-medium-b{
+				@include fontSize(3);
+			}
+		}
+	}
+	.panel-body a:hover{
+		background-color: $tabPanelHover;
+		color: $linkColor;
+	}
+}
+.panel-title{
+	color: $lightColor;
+	@include fontSize(3);
+}
+.datepick-month-header select{
+	height: 30px;
+	font-size: 13px;
+	line-height: 17px;
+}
+.panel-body .t7-anchor:hover{
+	color: $linkColor;
+}
+.ft-bar, .ft-bar-action{
+	background-color: $lightColor;
+}
+input.form-control, select.form-control, .ui-multiselect, .nice-select.form-control{
+	border-radius: 0px;
+	height: 30px;
+	@include fontSize(3);
+}
+.nice-select.form-control{
+	padding: 4px 15px 8px 10px !important;
+	height: 30px;
+	@include fontSize(3);
+}
+.ui-multiselect.ui-widget span{
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: normal;
+}
+.ui-multiselect{ 
+	.ui-multiselect-down-caret{
+		margin-top: 5px;
+	}
+}
+.ui-widget .ui-widget{
+	height: 30px;
+}
+.ux-dialog .form-control{
+	height: 30px;
+}
+.ft-title{
+	color: $tabPanelActive;
+	font-weight: bold;
+	font-size: 20px !important;
+	font-family: $fontFamily;
+}
+.ft-status-bar .ft-status-bar-li-active span{
+	padding: 3px 10px;
+}
+.panel-body .t7-anchor, .filter-view .t7-action-link.x-btn.x-btn-default-small .x-btn-inner, .quicklinks-dropdown a.list-group-item, .link-button, .ft-dropdown-items a, .ft-dropdown-content:hover .link-button, .ft-dropdown-items a:hover, .ft-btn-link, .datepick-cmd-current, a.datepick-cmd-today, a.datepick-cmd-range, .datepick-cmd-current:hover, a.datepick-cmd-today:hover,a.datepick-cmd-range:hover, a.t7-action-link, .ui-multiselect-header a, .ui-multiselect-header a:hover, .xn-popup .x-toolbar-docked-bottom.x-docked-bottom .ft-btn-link.x-btn .x-btn-inner{
+	color: $linkColor;
+	@include fontSize(2);
+}
+.xn-popup{
+	.x-grid-row{ 
+		&.x-grid-data-row {
+				.x-grid-cell {
+					background-color : $gridRowColor;
+				}
+				&.x-grid-row-over{
+					.x-grid-cell.x-grid-td {
+						background: url(resources/images/T7/row_back.png) #ABD6FF repeat-x;
+						border-top: 1px solid $gridRowHOverBorder;
+						border-bottom: 1px solid $gridRowHOverBorder;
+					}
+				}
+			}
+		&.x-grid-row-alt{
+			&.x-grid-data-row {
+				.x-grid-cell {
+					background-color : $gridAltRowColor;
+				}
+				&.x-grid-row-over{
+					.x-grid-cell.x-grid-td {
+						background: url(resources/images/T7/row_back.png) #ABD6FF repeat-x;
+						border-top: 1px solid $gridRowHOverBorder;
+						border-bottom: 1px solid $gridRowHOverBorder;
+					}
+				}
+			}
+		}
+	}
+	.x-toolbar-docked-bottom.x-docked-bottom{
+		.ft-btn-primary.x-btn.x-btn-default-toolbar-small-over{
+				.x-btn-inner{
+					color: $darkColor;
+				}
+		}
+		.ft-btn-primary.x-btn{
+			@extend .button-gradient;
+			color: $darkColor;
+			line-height: 6px;
+			.x-btn-inner, .x-btn-inner:hover{
+				color: $darkColor;
+			}
+		}
+		.ft-btn-link.x-btn{
+			color: $linkColor;
+		}
+	}
+	&:hover{
+		@extend .button-gradient-hover;
+		color: $darkColor;
+	}
+	.x-toolbar-docked-bottom.x-docked-bottom{ 
+		.ft-btn-light.x-btn{
+			height: 24px;
+			color: $darkColor;
+		}
+	}
+	.x-toolbar-docked-bottom .x-btn-toolbar{
+		    padding: 3px 12px;
+	}
+	label{
+		@include fontSize(3);
+		font-family: $fontFamily;
+	}
+}
+.t7-popup.x-window .x-toolbar-footer .x-btn.x-btn-default-small:first-child{
+		@extend .button-gradient;
+		.x-btn-inner{
+			color: $darkColor;
+		}
+	&:hover{
+		@extend .button-gradient-hover;
+		.x-btn-inner{
+			color: $darkColor;
+		}
+	}
+}
+.t7-popup.x-window{
+	.x-component{
+		padding: 15px 10px;
+	}
+}
+.t7-popup .x-form-display-field{
+	font-size: 13px;
+}
+.pagesetting{ 
+	.x-form-trigger-input-cell{ 
+		.x-form-field{
+			height: 30px;
+			font-size: 13px;
+		}
+	}
+	.x-form-trigger-input-cell .x-form-field{
+		border-radius: 0px;
+		height: 30px;
+		@include fontSize(3);
+	}
+	.x-fieldset{
+		margin-top: 15px;
+	}
+}
+.filter-view label.label-font-normal{
+	@include fontSize(3);
+}
+.filter-view{
+	.btn-applied-filter.x-btn.x-btn-default-small{
+		.x-btn-inner{
+			@include fontSize(3);
+		}
+	}
+}
+.filter-view.x-panel{
+	.x-panel-body{
+		.ft-normal-font.x-component.x-box-item.x-component-default{
+			@include fontSize(3);
+		}
+	}
+ }
+.filter-view.xn-ribbon{
+	.x-panel-header-text-container.x-box-item{ 
+		.applied-filter-header{
+			color: $darkColor;
+			font-size: 12px;
+		}
+		.fa.fa-filter{
+			font-size: 13px;
+		}
+	}
+	.x-tool.x-box-item{
+		top: 2px !important;
+	}
+	.x-tool.x-box-item:before{
+		color: $darkColor;
+		font-size: 13px;
+	}
+	.x-panel-body label.x-component.x-box-item.x-component-default{
+		@include fontSize(3);
+	}
+}
+.nice-select:after{
+	margin-top: 0px;
+}
+.ux-dialog.ui-dialog-content{  
+	.ft-tab-bar-title > label{
+		color: $lightColor;
+		padding-left: 5px;
+	}
+	.ft-margin-t{
+		.panel-body span{
+			font-size: 13px !important;
+			font-weight: bold;
+		}
+	}
+}
+.checkbox-inline{
+	padding-bottom: 2px;
+}
+.radio-inline, .checkbox-inline, .ux-dialog.ui-dialog-content .radio-inline, .ux-dialog.ui-dialog-content .checkbox-inline{
+	font-size: 13px;
+}
+.x-window-body-default, .x-window-header-default-top, .x-window-default{
+	padding: 0px;
+}
+.x-window-header-default-horizontal .x-tool-after-title .x-tool-img:hover{
+	background-image: none;
+}
+.x-window{ 
+	.x-window-header-body-horizontal{
+		background-color: $primaryColor;
+	}
+	.x-window-header-default-horizontal .x-tool-after-title:before{
+		color: $lightColor;
+		@include fontSize(5);
+		line-height: 11px;
+	}
+	.x-window-header-text-default{
+		font-size: 13px;
+		color: $lightColor;
+		padding-top: 2px;
+		padding-left: 10px;
+	}
+}
+.xn-popup .x-window-header-default-top{
+	padding-left: 15px;
+    padding-top: 6px;
+}
+.quicklinks-col-left .list-group .list-group-item{
+	background-color: $primaryColor;
+	&.active, &.active:hover, &.active:focus{
+		border-bottom: 2px solid $tabPanelActive;
+		color: $lightColor;
+	}
+	&:hover{
+		background-color: $tabPanelActive;
+		color: $lightColor;
+	}
+}	
+.xn-suggestion-box.x-form-text{
+	height: 32px!important;
+}
+.view-grid{ 
+	.view-grid-body{ 
+		height: 32px;
+		background-color: $gridAltRowColor;
+		.view-grid-body-content{
+			@include fontSize(3);
+			font-family: $fontFamily !important;
+			line-height: 22px;
+		}
+	}
+	.view-grid-body{ 
+		.view-grid-body-content{
+			padding: 4px 10px;
+			@include fontSize(3);
+			height: 34px;
+		}
+	}
+	.view-grid-header{ 
+		.view-grid-header-text{
+			@include fontSize(3);
+		}
+	}
+	.view-grid-section-header{
+		@include fontSize(3);
+		text-decoration: underline;
+	}
+}
+
+.mozilla-btn-rightAlign.x-btn.x-btn-default-small{
+		border: 1px solid $buttonGradientBorderColor !important;
+		padding: 3px 12px;
+		@extend .button-gradient;
+}
+.mozilla-btn-rightAlign.x-btn.x-btn-default-small:hover{
+	border: 1px solid $buttonGradientBorderColor !important;
+	padding: 3px 12px;
+	@extend .button-gradient-hover;
+}
+.ft-button-primary.x-btn.x-btn-default-small{
+		border: 1px solid $buttonGradientBorderColor;
+		padding: 3px 12px;
+		@extend .button-gradient;
+}
+
+.x-btn.x-btn-default-small .x-btn-inner{
+	color: $darkColor;
+}
+.xn-portlet{
+	box-shadow: none;
+}
+.xn-portlet .x-grid-view-default, .xn-portlet .x-grid-empty{
+	background: $lightColor;
+}
+
+.xn-portlet .x-toolbar-default.widgetTable-footer{
+	background-color: $widgetFooterHoverColor;
+}
+
+.xn-portlet .x-toolbar-default{
+	background: $lightColor;
+}
+
+.x-panel .x-panel-header-text-default-framed{
+	font-size: 13px;
+	color: $lightColor;
+}
+.link-button, .ft-item-content, .ft-dropdown-items a, .ft-dropdown-content:hover .link-button, .ft-dropdown-items a:hover{
+	  @include fontSize(2);
+}
+.ft-dropdown-items .headerCheckBox{
+	@include fontSize(3);
+}
+.ft-dropdown-items a, .ft-dropdown-content:hover .link-button, .ft-dropdown-items a:hover, a.t7-action-link-with-noline, a.t7-action-link-with-noline:hover, a.t7-action-link-with-noline:focus, .ft-btn-link:hover, a.t7-action-link:hover{
+	color: $linkColor;
+}
+
+.widget-header .x-component{
+	color: $lightColor !important;
+	font-weight: normal !important;
+	right: 58px !important;
+}
+
+.xn-ribbon .x-tool-img.x-tool-refresh:after, .xn-ribbon .widgetcls{
+	color: $lightColor;
+}
+
+.x-btn-default-small-icon .x-btn-icon-el{
+	background: none;
+	color: $lightColor;
+}
+.filter-view .t7-action-link.x-btn.x-btn-default-small{
+	background: none;
+	border: none;
+	font-size: 12px;
+	padding-top: 1.7px;
+}
+.filter-view .t7-action-link.x-btn.x-btn-default-small:hover{
+	.x-btn-inner{	
+		color: $linkColor;
+		@include fontSize(2);
+	}
+}
+.filter-view .btn-applied-filter.x-btn.x-btn-default-small{
+	background: none;
+	border: none;
+}
+
+.filter-view .x-panel-body label.x-component.x-box-item.x-component-default.create-advanced-filter-label{
+	border-color: #769DC0;
+}
+.x-panel .x-panel-header.x-header{
+	height: 32px;
+	padding: 1px 15px;
+}
+
+.settings-popup input[type="text"]{
+	height: 30px;
+}
+.xn-form-field.x-form-text, .xn-form-text.x-form-text{
+	@include fontSize(3);
+}
+.xn-form-field.x-form-text, .xn-form-text.x-form-text, .xn-suggestion-box.x-form-text{
+	border-radius: 0px;
+	height: 30px !important;
+}
+.settings-popup .x-toolbar.x-docked-bottom .x-box-inner a:last-child{
+	@extend .button-gradient;
+	border: 1px solid #769DC0;
+}
+.settings-popup .x-toolbar.x-docked-bottom .x-box-inner a:last-child .x-btn-inner{
+	color: $darkColor;
+}
+.xn-ribbon .widget-collapse-cls{
+	color: $lightColor;
+}
+.widget-header-menu.x-menu .x-menu-item .x-menu-item-link {
+	.x-menu-item-text, .x-menu-item-icon{
+		color: $linkColor;
+		@include fontSize(3);
+		padding-top: 3px;
+	}
+}
+.widget-header-menu.x-menu{
+	.x-menu-item-active{
+		background-color: $ftDropdownMenuBgColor;
+	}
+}
+.ux-dialog.ui-dialog-content label, a.t7-action-link-with-noline{
+	@include fontSize(3);
+}
+label{
+	font-size: 13px !important;
+}
+.form-group span, .form-group div, .ft-error-message{ 
+	@include fontSize(3);
+}
+.ft-button-dark{
+	padding: 5px 12px;
+	@extend .button-gradient;
+	color: $darkColor;
+}
+.ft-button-dark:hover, .ft-button-dark:focus{
+	padding: 5px 12px;
+	@extend .button-gradient-hover;
+	color: $darkColor !important;
+}
+.t7-grid .xn-panel-header .paymentInstActionCls{
+	padding: 3px 0px;
+}
+.ribbon-view .x-header .x-header-body{
+	background-color: $transparentColor;
+}
+.x-menu-icon-separator{
+	border-left: none;
+}
+.action-dropdown-menu{ 
+	.x-menu-item{ 
+		.x-menu-item-link{
+			padding: 5px 20px 5px 10px;
+			height: 30px;
+		}
+	}
+	.x-menu-item-text{
+		@include fontSize(3);
+	}
+}
+.disclaimerText, .disclaimerTextS, p#disclaimerText{
+	font-size: 13px !important;
+}
+
+.ext-dropdown-menu{
+ .x-menu-item{
+	@include fontSize(3);
+	padding: 5px 20px 5px 10px;
+	height: 34px;
+ }
+ .x-menu-item-text{
+	@include fontSize(3);
+ }
+}
+.ui-multiselect-header{
+	padding: 7px 0px 5px 0px;
+	height: 34px;
+	@include fontSize(3);
+}
+.x-boundlist.x-boundlist-default .x-boundlist-item{
+	@include fontSize(3);
+	padding-top: 7px;
+	height: 34;
+}
+.ft-page-active:after{
+	border-top-color: $primaryColor;
+}
+.nice-select-list .option{
+	font-size: 13px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+	height: 30px;
+	min-height: 0px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select.ui-datepicker-month, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.ui-datepicker-year{
+	height: 30px;
+	@include fontSize(3);
+	line-height: 17px;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon{
+	@include fontSize(3);
+}
+.ui-datepicker th{
+	@include fontSize(3);
+}
+/*.x-window .x-window-body-default, .x-window .x-window-header-default-top, .x-window .x-window-default{
+	padding: 0px;
+}*/
+.ui-multiselect-menu.ui-widget.ui-widget-content{ 
+	.ui-state-active{
+		height: 30px;
+		border-radius: 0px;
+		line-height: 13px;
+	}
+}
+.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear, .datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close{
+	@include fontSize(3);
+}
+.ui-autocomplete li.ui-menu-item{
+	@include fontSize(3);
+	padding-top: 5px;
+    padding-bottom: 5px;
+	height: 30px;
+    font-weight: normal;
+}
+.ui-multiselect-checkboxes label{
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+.success_font, .ux-dialog .additional-info-label .x-form-display-field, .x-windows-viewPopup .additional-info-label .x-form-display-field{
+	font-size: 13px;
+}
+.ft-button-primary {
+	@extend .button-gradient;
+	 color: $darkColor;
+	 line-height: 6px;
+	 padding-top: 8px;
+	 &:hover, &:focus{
+		@extend .button-gradient-hover;
+		color: $darkColor;
+		line-height: 6px;
+		padding-top: 8px;
+	 }
+}
+.x-btn .x-unselectable .x-box-item .x-toolbar-item .x-btn-default-small .x-noicon .x-btn-noicon .x-btn-default-small-noicon{
+		@extend .button-gradient;
+		color: $darkColor;
+}	
+.ft-layout-inner{
+	.ft-padding-b{
+		a{
+			font-size: 12px !important;
+			color: $linkColor;
+		}
+	}
+}
+.x-grid-row-summary{
+	background-color: $lightColor;
+}
+.title-content{
+	padding-top: 0px; 
+}
+.ft-extra-nav a, .ft-extra-nav .ft-extra-active, .ft-extra-nav a:hover{
+	color: $pageHeaderBorderBottom;
+}
+.ft-button-secondary{
+	@extend .button-gradient;
+}

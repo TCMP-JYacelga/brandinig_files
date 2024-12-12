@@ -1,0 +1,18 @@
+.btn:hover {
+    background-color: transparent;
+  }
+  
+.btn:Active:hover{
+    background-color: $toolbarActiveBgColor;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active {
+  background-color: $toolbarActiveBgColor;
+  color: #414141;
+  border-radius: 50%;
+}
+
+.btn.btn-dark:hover {
+  background-color: $toolbarActiveBgColor;
+  border-radius: 50%;
+}

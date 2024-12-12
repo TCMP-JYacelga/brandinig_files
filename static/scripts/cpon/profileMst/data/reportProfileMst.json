@@ -1,0 +1,97 @@
+{
+    "d": {
+        "profile": [
+            {
+                "identifier": "5BtVeuipj2hEBjFD2aMiMVMRVFRMGDDty9UBz6Dl54lsBb87tZHDGJeMJomoBi9JtKW8W8JZ/wEJDofXtyN8Em3pz8yn9LZikP+24RNV4IOkZRT6KEl9h/t5eibghmYk",
+                "beanName": "ReportProfileMstBean",
+                "profileId": "Report1",
+                "primaryKey": {},
+                "profileName": "Report1",
+                "profileType": "1",
+                "module": "BR",
+                "categoryCode": "Cat1",
+                "subCategoryCode": "CatSub1",
+                "copyTo": 0,
+                "disabled": false,
+                "enabled": true,
+                "sellerId": "SG",
+                "makerId": "1064",
+                "makerStamp": 1323253569000,
+                "validFlag": "Y",
+                "requestState": 0,
+                "lastRequestState": 0,
+                "newRecord": true,
+                "modified": false,
+                "authorised": false,
+                "rejected": false,
+                "version": 1,
+                "recordKeyNo": "123456789",
+                "__metadata": {
+                    "type": "GCP.Profile",
+                    "uri": "services/ReportProfileMst(5BtVeuipj2hEBjFD2aMiMVMRVFRMGDDty9UBz6Dl54lsBb87tZHDGJeMJomoBi9JtKW8W8JZ/wEJDofXtyN8Em3pz8yn9LZikP+24RNV4IOkZRT6KEl9h/t5eibghmYk).json"
+                }
+            },
+             {
+                "identifier": "5BtVeuipj2hEBjFD2aMiMVMRVFRMGDDty9UBz6Dl54lsBb87tZHDGJeMJomoBi9JtKW8W8JZ/wEJDofXtyN8Em3pz8yn9LZikP+24RNV4IOkZRT6KEl9h/t5eibghmYk",
+                "beanName": "ReportProfileMstBean",
+                "profileId": "Report2",
+                "primaryKey": {},
+                "profileName": "Report2",
+                "profileType": "1",
+                "module": "BR",
+                "categoryCode": "Cat1",
+                "subCategoryCode": "CatSub1",
+                "copyTo": 0,
+                "disabled": false,
+                "enabled": true,
+                "sellerId": "SG",
+                "makerId": "1064",
+                "makerStamp": 1323253569000,
+                "validFlag": "Y",
+                "requestState": 0,
+                "lastRequestState": 0,
+                "newRecord": true,
+                "modified": false,
+                "authorised": false,
+                "rejected": false,
+                "version": 1,
+                "recordKeyNo": "123456789",
+                "__metadata": {
+                    "type": "GCP.Profile",
+                    "uri": "services/ReportProfileMst(5BtVeuipj2hEBjFD2aMiMVMRVFRMGDDty9UBz6Dl54lsBb87tZHDGJeMJomoBi9JtKW8W8JZ/wEJDofXtyN8Em3pz8yn9LZikP+24RNV4IOkZRT6KEl9h/t5eibghmYk).json"
+                }
+            },
+             {
+                "identifier": "5BtVeuipj2hEBjFD2aMiMVMRVFRMGDDty9UBz6Dl54lsBb87tZHDGJeMJomoBi9JtKW8W8JZ/wEJDofXtyN8Em3pz8yn9LZikP+24RNV4IOkZRT6KEl9h/t5eibghmYk",
+                "beanName": "ReportProfileMstBean",
+                "profileId": "Report3",
+                "primaryKey": {},
+                "profileName": "Report3",
+                "profileType": "1",
+                "module": "BR",
+                "categoryCode": "Cat1",
+                "subCategoryCode": "CatSub1",
+                "copyTo": 0,
+                "disabled": false,
+                "enabled": true,
+                "sellerId": "SG",
+                "makerId": "1064",
+                "makerStamp": 1323253569000,
+                "validFlag": "Y",
+                "requestState": 0,
+                "lastRequestState": 0,
+                "newRecord": true,
+                "modified": false,
+                "authorised": false,
+                "rejected": false,
+                "version": 1,
+                "recordKeyNo": "123456789",
+                "__metadata": {
+                    "type": "GCP.Profile",
+                    "uri": "services/ReportProfileMst(5BtVeuipj2hEBjFD2aMiMVMRVFRMGDDty9UBz6Dl54lsBb87tZHDGJeMJomoBi9JtKW8W8JZ/wEJDofXtyN8Em3pz8yn9LZikP+24RNV4IOkZRT6KEl9h/t5eibghmYk).json"
+                }
+            }
+        ],
+		__count: 3
+    }
+}

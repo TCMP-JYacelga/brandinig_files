@@ -1,0 +1,113 @@
+<div>
+				<div class="panel panel-default">						
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="panel-title">	
+									<span id="tpfaCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+									<span class="ft-padding-l ">TPFA</span>										
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div id="tpfaAssetBody" class="panel-body">
+						<div id="tpfaFunctionalDiv">
+						  {{#each assets}}
+								{{#selectAsset assetId "22"}}
+								{{#if isFunction }}
+							<table class="view-grid" style="width:100%">
+								<tbody>
+									<tr class="view-grid-header"><td class="view-grid-header-text" style="width:20%;">Function</td><td class="view-grid-header-text">Details</td></tr>
+
+											{{#if reports}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">Reports</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression reports "reportType"}}	
+													</td>
+												</tr>
+											{{/if}}
+											
+											{{#if alerts}}			
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">Alerts</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression alerts "alertType"}}
+													</td>
+												</tr>
+											{{/if}}
+											
+											{{#if allowedFeatures}}
+												<tr class="view-grid-body">
+													<td class="view-grid-body-content">Features</td>
+													<td class="view-grid-body-content" style="width:80%;">
+														{{getListExpression allowedFeatures "featureName"}}	
+													</td>
+												</tr>
+											{{/if}}	
+									</tbody>
+							</table>
+							{{/if}}
+								 {{/selectAsset}}
+							{{/each}}
+						</div>	
+					
+						<!-- Start of TPFA Service - Privileges Table -->
+						<div class="ft-margin-t" id="tpfaPrivileges">
+						{{#each assets}}
+							{{#selectAsset assetId "22"}}
+							{{#if permissions}}
+							<table class="view-grid" style="width:100%">
+								<thead>
+									<tr><td colspan="25" class="view-grid-section-header">Privileges</td></tr>
+									<tr class="view-grid-header">
+										<td class="view-grid-header-text" >Function</td>
+										<td class="view-grid-header-text" style="width:20%;">View</td>
+										<td class="view-grid-header-text" style="width:20%;">Edit</td>
+										<td class="view-grid-header-text" style="width:20%;">Approve</td>
+									</tr>		
+								</thead>
+								<tbody>							
+										{{#each permissions}}
+											<tr class="view-grid-body">
+												<td class="view-grid-header-text view-grid-body-content" >{{getColoredExpression colorClass screenName}}</td>
+																{{#if view}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}} 	
+																{{#if edit}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}	
+																{{#if auth}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" >
+													<i class="fa fa-check"></i>
+												</td>
+																{{else}}
+												<td class="view-grid-header-text view-grid-body-content" style="width:20%;" ></td>
+																{{/if}}															
+											</tr>
+										{{else}}
+											<tr class="view-grid-body">
+													<td class="view-grid-body-content" colSpan="4" style="padding-bottom: 1%;" >None assigned</td>
+											</tr>												
+										{{/each}}											
+											
+										</tbody>
+									</table>	
+									{{/if}}
+								{{/selectAsset}}
+							{{/each}}
+						</div>
+						<!-- End of TPFA Service - Privileges Table -->	
+									
+					</div>
+				</div>
+			</div>
+			

@@ -1,0 +1,224 @@
+/* GRID Styles */
+.gridTable  {
+background-color: white;
+border-collapse: collapse;
+border-color: #B6D6D8;
+border-spacing:	0px;
+border-style: solid;
+border-width: 1px;
+margin:	0px;
+padding: 0px;
+width:	100%;
+}
+
+.gridTable td  {
+border:	1px solid #B6D6D8;
+padding: 2px;
+}
+
+.gridTable th  {
+border:	1px solid #B6D6D8;
+padding:2px;
+}
+
+.gridHeader  {
+background-color: #257F82;
+border-top: 1px solid #E5F2E5;
+border-left: 1px solid #E5F2E5;
+border-bottom: 1px solid #146A14;
+border-right: 1px solid #146A14;
+padding-top: 2px;
+color: white;
+font-weight: bold;
+height: 24px;
+text-align:	center;
+white-space: nowrap;
+}
+
+.gridRow  {
+background-color: #F2F8F2;
+border-color: 1px;
+color:	#257F82;
+font-weight: normal;
+height:	20px;
+}
+
+.gridRowO  {
+background-color: #FFFFFF;
+border-color: 1px;
+color:	#257F82;
+font-weight: normal;
+height:	20px;
+}
+
+.gridColumn  {
+height:	20px;
+text-align: center;
+}
+
+.gridLColumn  {
+height:	20px;
+text-align:	left;
+}
+
+.gridRColumn  {
+height:	20px;
+text-align:	right;
+}
+
+/* Message Portlet */
+.msgLine {
+display: block;
+}
+
+.msgTitle {
+display: block;
+height: 22px;
+padding: 2px 0 0 2px;
+background-color: #C8071A;
+color: white;
+}
+
+.msgBody {
+padding: 4px;
+white-space: pre;
+}
+
+.msgWindow {
+margin-top: 4px;
+border: 1px solid #C8071A;
+background-color: #C3CFDD;
+vertical-align: top;
+}
+
+/* General Styles */
+.wordwrap {
+padding: 4px;
+white-space: pre-wrap;       /* css-3 */
+white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+/*-moz-binding: url('./wordwrap.xml#wordwrap');*/
+ }
+
+.leftAligned  {
+text-align:	left;
+}
+
+.rightAligned  {
+text-align:	right;
+}
+
+/* My Network Portlet */
+.onLine {
+background-color: #E7E7E7;
+background-image: url('../../images/online.gif');
+background-position: top right;
+background-repeat: no-repeat;
+}
+.offLine {
+background-color: #E7E7E7;
+background-image: url('../../images/offline.gif');
+background-position: top right;
+background-repeat: no-repeat;
+}
+.contactContainer {
+overflow: scroll;
+height: 250px;
+width: 100%;
+}
+.contactRow {
+border-bottom: 1px solid silver;
+}
+.contactLabel {
+text-align: right;
+font-style: normal;
+color: silver;
+}
+.contactData {
+font-weight: normal;
+font-style: italic;
+}
+.contactName {
+display: block;
+height: 22px;
+color: black;
+font-weight: bold;
+font-style: normal;
+}
+.portrait {
+width: 48px;
+height: 58px;
+padding: 2px;
+border: 1px solid #AEAEAE;
+}
+
+/* Flash based chart portlet */
+.flashContainer {
+width: auto;
+height: 300px;
+}
+
+/* My network send message */
+#contactFormContainer {
+position:absolute;
+z-index:auto;
+width: auto;
+height: auto;
+display:block;
+}
+#contactForm {
+height:255px;
+width:300px;
+background-color:#515151;
+border:1px solid #929191;
+padding:10px 10px;
+color:#fff;
+z-index: inherit;
+position:relative;
+}
+#contactForm span {
+line-height:24px;
+padding-left:4px;
+color:#f5c478;
+display: block;
+background-color: #6d6d6d;
+font-weight: bold;
+}
+#backgroundPopup{
+position:fixed;
+_position:absolute;
+height:100% !important;
+width:100%;
+top:0;
+left:0;
+background-color:#000;
+z-index:auto;
+}
+#contactForm textarea, #contactForm input {
+width:100%;
+background-color:#6d6d6d;
+color:#fff;
+border:1px solid #8a8a8a;
+font-size: 8pt;
+padding: 2px;
+}
+#contactForm p { width: 100%; height: auto; }
+#contactForm input { line-height:22px; }
+#contactForm textarea { height:120px; font-family:Verdana, Tahoma, Geneva, sans-serif; }
+#contactForm .submit {
+border:1px solid #aba8a8;
+background:#e5e5e5;
+color:#4d4d4d;
+font-weight:bold;
+padding:4px;
+height:27px;
+cursor:pointer;
+float:left;
+}
+#contactForm .submit:active {background:#cacaca; }
+#contactForm label {font-weight:bold; padding: 0px 0px 4px 0px; line-height:22px;}
+#contactForm p {padding:2px 2px 2px 0px; margin: 0px;}
+#contactForm .input_boxes {float:left; width:100%;}
+.imgLink { border: 1px solid silver; padding: 4px; height:76px; width:64px; }

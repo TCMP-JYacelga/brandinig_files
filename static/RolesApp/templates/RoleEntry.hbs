@@ -1,0 +1,53 @@
+	<div class="ft-layout-row">
+		<div class="ft-layout-primary">
+			<div class="ft-layout-inner">
+				<!--START:Page content ################-->
+				<!-- start of page title -->
+				{{>RoleTitle}}				
+				<!-- end of page title -->
+				<!-- start of ft-accordion-header-sidebar -->
+				<!-- end of  ft-accordion-header-sidebar  -->
+				<!--  start of frmain -->
+				<form id="frmMain">
+			<div class="panel ft-margin-large-t" style="border-top-width: 1px;border-top-color: #ddd;">
+				
+				<div class="panel-body noLeftPadding" style="padding-right: 0px !important;">
+				<!-- start of left menu -->
+				<div class = "Row" > {{>RoleEntryQuickLinks}}
+				<!-- end of left menu -->
+				<div class="col-sm-10" style="border-left: 1px solid #ddd;">
+		<!-- start of tabs -->
+		<div id="assetPanel">
+		{{>AssetPanel}}
+		</div>
+		<!-- end of tabs -->			
+	</div>
+				</div>
+				
+				
+	</div></div>
+	
+	<div class="form-group" id = "footer">
+	<ul class="ft-bar">
+	<li>		
+		<a id="back" href="#/" class="ft-button ft-button-light">{{getLabel "lbl.role.back" "Back"}}</a>
+		<a id="btnCancelRoleEntry" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.role.cancel" "Cancel"}}</a>
+		</li>
+		<li class="ft-bar-stretch">
+			<div class="pull-right">
+					<a href="#/Verify" id="saveAndVerify" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.role.save" "Save & Verify"}}</a>
+					<a href="#/Verify" id="permissionNext" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.role.next" "Next"}}</a>
+				</div>
+			</li>			
+		</ul>
+	</div>
+	<div id="confirmMsgPopup"></div>	
+	</form>
+				
+				
+				<!-- end of frmain -->
+				<!--END:Page content ################-->
+			</div>
+		</div>
+
+	</div>

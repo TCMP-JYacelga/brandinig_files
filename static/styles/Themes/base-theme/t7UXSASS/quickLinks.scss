@@ -1,0 +1,182 @@
+/*quick links*/
+.quickLink-modal-body .selection-section{
+	border: 1px solid #F1F1F1;
+  padding: 15px 0px;
+}
+
+.quickLink-modal-body .left-section{
+	border-right: 1px solid #F1F1F1;
+	height: 400px;
+  overflow: auto;
+}
+
+.quickLink-modal-body .right-section{
+	height: 400px;
+  overflow: auto;
+}
+
+.quickLink-modal-body .form-check{
+   margin: 15px 0px;
+}
+
+.quickLink-modal-body h6{
+	margin: 15px 0px;
+	padding: 10px 0px;
+	color: $primaryColor;
+	border-bottom: 1px solid #f2f2f2;
+}
+.quickLink-modal-body .nav-link{
+   padding: .5rem 1rem;
+   border-radius: 0;
+}
+.quickLink-modal-body .nav-link.active{
+   padding: .5rem 1rem;
+   border-radius: 0;
+}
+
+.quickLink-section{
+	width: 98%;
+	padding: 20px;
+	min-height:330px;
+}
+
+.quickLink-item{
+  text-align: center;
+  padding: 19px;
+  cursor: pointer;
+}
+.quickLink-large .icon img{
+   height: 70px;
+}
+
+.quickLink-small .icon img{
+   height: 40px;
+}
+
+#quickLinkSlider .carousel-indicators{
+	right: 0 !important;
+    bottom: 0 !important;
+    margin-bottom: -13px;
+    text-align: right;
+}
+ 
+.quickLink-modal .nav-link.active{
+	background: #F2F2F2;
+}
+.quickLink-modal .nav-link{
+	color:$primaryColor;
+}
+.quickLink-modal .page-count label input
+{
+	display: none !important;
+}
+
+.quickLink-modal .page-count label.active
+{
+	background:$primaryColor;
+	color: #fff;
+}
+.quickLink-modal .page-count label
+{
+	border: 1px solid $primaryColor;
+	padding: 1px 19px !important;
+}
+.quickLink-modal .quickLink-modal-header .page-count
+{
+	margin: 0px !important;
+}
+.quickLink-modal .quickLink-modal-header .close
+{
+   margin: -1rem -1rem -1rem -50rem;
+}
+
+#messageInboxComposeMessage .modal-header .close {
+	margin: -2rem -1rem -1rem 0;
+}
+
+#messageInboxComposeMessage .modal-dialog .modal-content .modal-header{
+	padding: 1rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+#messageInboxComposeMessage .modal-dialog .modal-content .modal-footer{
+	padding: 0.4rem !important;
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.label-messageForms {
+ color: $primaryColor;
+ font-size: 14px;
+}
+
+.label-form-input {
+  color: #4A4A4A;
+  font-size: 12px;
+  padding-left:10px;
+}
+
+.label-form-input.required:after {
+  color: #4A4A4A;
+}
+
+.messageForms-input {
+  background-color : $inputFieldBgColor;
+}
+
+.messageForms-input input , .messageForms-input select, .messageForms-input textarea{
+ padding-left :10px;
+}
+
+.content-messageForms {
+ font-weight:700 !important;
+ font-size: 14px;
+}
+
+.messageForms-top-container{
+  background-color : $inputFieldBgColor;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-bottom:1rem;
+}
+
+.messageInboxComposeMessage-modal-header h5 {
+  font-style: roboto;
+}
+
+.quicklink-initials {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left:-35px;
+  margin-top: 32px;
+}
+
+.quicklink-initials-small {
+    position: absolute;
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-left: -22px;
+    margin-top: 15px;
+}
+
+#messageInboxComposeMessage .radio label input[type=radio], label.radio-inline input[type=radio],
+#messageInboxComposeMessage .checkbox label input[type=checkbox], label.checkbox-inline input[type=checkbox]  {
+  height: auto;
+  width:auto;
+  margin-left:-12px;
+  position:inherit;
+  opacity:inherit;
+  z-index:1;
+  margin-right:4px;
+}
+
+#bankInformationDiv  iframe{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+

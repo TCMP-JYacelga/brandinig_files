@@ -1,0 +1,282 @@
+/*
+===============
+Helper classes.
+===============
+*/
+
+.ft-margin-very-small-l {
+  margin-left: 2px !important;
+}
+
+.ft-margin-very-small-r {
+  margin-right: 2px !important;
+}
+
+.ft-margin-small-b {
+  margin-bottom: 4px;
+}
+
+.ft-margin-very-small-t {
+  margin-top: 2px;
+}
+
+.ft-margin-very-small-b {
+  margin-bottom: 2px;
+}
+
+.ft-margin-extra-large-t {
+	margin-top:14px;
+}
+.ft-margin-extra-large-b { 
+	margin-bottom:14px;
+}
+
+.ft-margin-medium-b {
+  margin-bottom: 6px;
+}
+
+.ft-padding {
+  padding: 10px;
+  display: inline-block;
+}
+
+.ft-padding-t {
+  padding-top: 10px;
+}
+
+.ft-padding-l {
+  padding-left: 10px;
+}
+
+.ft-padding-r {
+  padding-right: 10px;
+}
+
+.ft-padding-b {
+  padding-bottom: 10px;
+}
+
+.ft-padding-small-t {
+  padding-top:4px;
+}
+
+.ft-padding-medium-b {
+  padding-bottom: 6px;
+}
+
+.ft-margin {
+  margin: 10px;
+}
+
+.ft-margin-t {
+  margin-top: 10px;
+}
+
+.ft-margin-l {
+  margin-left: 10px;
+}
+
+.ft-margin-r {
+  margin-right: 10px;
+}
+
+.ft-margin-b {
+  margin-bottom: 10px;
+}
+
+.ft-margin-large-t {
+  margin-top: 12px;
+}
+
+.ft-pull-left {
+  float: left;
+}
+
+.ft-pull-right {
+  float: right;
+}
+
+.ft-no-padding-right {
+  padding-right: 0px !important;
+}
+
+.ft-no-padding-left {
+  padding-left: 0px !important;
+}
+
+.ft-no-padding-top {
+  padding-top: 0px !important;
+}
+
+.ux_no-border {
+  border: none !important;
+}
+
+.ft-inline-block {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.ft-align-left {
+  text-align: left;
+}
+
+
+.ft-border-left {
+  border-left: 1px solid $accordianBar;
+}
+
+.ft-border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+
+.ft-no-padding {
+  padding: 0px 0px 0px 0px !important;
+}
+
+.ft-no-margin {
+  margin: 0px 0px 0px 0px !important;
+}
+
+.ft-margin-colon {
+  margin-top: 5px !important;
+  margin-left: 5px !important;
+  margin-right: 8px !important;
+  width: 0% !important;
+}
+
+.ft-width-bmsg {
+  width: 45% !important;
+}
+
+.ux_largemargin-right {
+  margin-right: 10px !important;
+}
+
+.w165 {
+  width: 165px !important;
+  min-width: 165px !important;
+}
+
+.w170 {
+  width: 170px !important;
+  min-width: 170px !important;
+}
+
+[hidden], template {
+  display: inline-block !important;
+}
+
+.ux_no-border-right {
+  border-right: 0px !important;
+}
+
+.rightfloating {
+  float: right;
+}
+
+.leftfloating {
+  float: left;
+}
+
+.inline_block {
+  display: inline-block;
+}
+
+.noLeftPadding {
+  padding-left: 0px !important;
+}
+
+.highZIndex {
+  z-index: 20000 !important;
+}
+
+.nopaddinglr {
+  &.col-sm-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.fa-arrow{
+	text-align: center;
+	margin-top: 31px;	
+	color: #a4a4a4;
+}
+
+.rightAlign{
+	text-align: right !important;
+}
+
+.t7-hr{
+	margin-top: 8px;
+    margin-bottom: 8px;
+    border: 0;
+    border-top: 1px solid #bbb;
+}
+
+.t7-light-hr{
+	margin-top: 0px;
+    margin-bottom: 8px;
+    border: 0;
+    border-top: 1px solid $menuBorderColor;
+}
+.nofloating {
+	float: none !important;
+}
+.word-break{
+	word-break:break-all;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.visible_overflow {
+	overflow: visible;
+}
+
+.ft-small-font{
+	@include fontSize(2);
+}
+
+.ft-normalpadding-l{
+  padding-left: 4px;
+}
+
+.ui-widget-overlay{
+  position: fixed;
+}
+
+.ft-extraPadding-t{
+  padding-top: 28px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+ .labelAlign{         
+        margin-bottom: 25px; 
+        vertical-align: middle;
+    }
+}   
+
+input[type="checkbox"].checkbox-center-align{
+	margin-left: 20px;
+    margin-top: 12px;
+}
+
+.ft-medium-padding-t{
+  padding-top: 8px;
+}
+
+.ft-normal-padding-t{
+  padding-top: 5px;
+}
+
+.ft-large-padding-t{
+  padding-top: 15px;
+}

@@ -1,0 +1,89 @@
+<!--Payments Packages starts here -->
+	<div class="panel panel-default" id="packagePanel">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2 class="panel-title">
+								<span id="packagesInfoCaret"
+									class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+								<span>{{getLabel "lbl.role.pkg" "Packages"}}</span>
+								<img id="packagesAll_{{assetid}}" data-version = "{{ assignAllPackages_version }}" src="{{checkBoxIcon assignAllPackages}}" class="chkBoxAlign" width="16" height="16"
+									border="0"> <label id = "packagesAll_{{assetid}}" for = "packagesAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.pkg1" "All"}}</label>
+								<label id="lblPkgCount" class="checkbox-inline pull-right">{{packagesAssignedCount}} of {{packagesCount}} {{getLabel "lbl.role.pkg2" " Selected"}}</label>
+							</h2>
+						</div>
+					</div>
+				</div>
+
+		<div id="packagesInfoDiv" class="panel-body">
+			<div class="row grid">
+					<table class="view-grid" style="width: 100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text" style="width: 5%"></td>
+								<td class="view-grid-header-text" style="width: 30%">{{getLabel "lbl.role.pkg3" "Package"}}</td>
+								{{#selectAsset assetId "02"}}
+									<td class="view-grid-header-text" style="width: 20%">{{getLabel "lbl.role.pkg4" "Product Cat Type"}}</td>
+								{{/selectAsset}}
+								{{#selectAsset assetId "05"}}
+									<td class="view-grid-header-text" style="width: 20%">{{getLabel "lbl.role.pkg5" "Product Cat Type"}}</td>
+								{{/selectAsset}}
+								<td class="view-grid-header-text" style="width: 15%">{{getLabel "lbl.role.pkg6" "Status"}}</td>
+								{{#ifCond assetId '==' "06" }}
+									<td class="view-grid-header-text" style="width: 30%">{{getLabel "lbl.role.pkg7" "Anchor Client "}}</td>
+								{{else}}
+									<td class="view-grid-header-text" style="width: 30%">{{getLabel "lbl.role.pkg8" "Company Name"}}</td>
+								{{/ifCond}}
+							</tr>
+
+						</thead>
+						<tbody>
+							
+							{{#each packages}}
+							<tr class="view-grid-body">
+								<td class="view-grid-body-content text-center "><a
+									class="limit-reached test"> <img
+										id="chkPkg_02_{{packageId}}"
+										data-subsidiaryid="{{subsidiaryId}}"
+										data-packagename="{{packageName}}"
+										data-bankproduct="{{bankProduct}}"
+										data-packageid="{{packageId}}"
+										data-subsidiaryname="{{subsidiaryName}}"
+										data-productcattype="{{productCatType}}"
+										data-myprelClient="{{myprelClient}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+										border="0"></a></td>
+
+								<td class="view-grid-body-content">{{packageName}}</td>
+								{{#selectAsset ../assetId "02"}}
+								<td class="view-grid-body-content">{{getLabel productCatType productCatType}}</td>
+								{{/selectAsset}}
+								{{#selectAsset ../assetId "05"}}
+								<td class="view-grid-body-content">{{getLabel productCatType productCatType}}</td>
+								{{/selectAsset}}
+								<td class="view-grid-body-content">{{getStatusExpression assignedFlag}}</td>
+								{{#ifCond ../assetId '==' "06" }}
+								<td class="view-grid-body-content">{{acnchor_client}}</td>
+								{{else}}
+								<td class="view-grid-body-content">{{getStringWithSpecialChars subsidiaryName}}</td>
+								{{/ifCond}}
+							</tr>
+
+							{{else}}
+							<tr class="view-grid-body">
+								<td class="view-grid-header-text view-grid-body-content"
+									colSpan="5" style="padding-bottom: 1%;">&nbsp</td>
+							</tr>
+
+							{{/each}} 
+						</tbody>
+					</table>
+
+			</div>
+		</div>
+		
+	</div>
+	<!-- Payment Packages ends here */ -->

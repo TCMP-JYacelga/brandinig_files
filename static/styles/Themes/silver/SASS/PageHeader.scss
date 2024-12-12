@@ -1,0 +1,247 @@
+.toolbar { height: 24px; align: right; padding : 0 25px 4px 0 !important;}
+.toolbar1 { height: 24px; align: right; padding : 0 25px 4px -1px !important; font-family: $fontFamily,helvetica,arial,sans-serif;}
+.toolbar > a { height: inherit; display: inline-block; vertical-align: middle; padding: 0px; color: #06C; font-family: $fontFamily,helvetica,arial,sans-serif;}
+.toolbar1  a { height: inherit; display: inline-block; vertical-align: middle; padding: 0px; margin:0px; color: #06C; font-family: $fontFamily,helvetica,arial,sans-serif;}
+.toolbar1 > a > img { height: 25px; width: 16px; vertical-align: middle; }
+
+#morePageOptionsDialog a { color: #06C;font-family: $fontFamily,helvetica,arial,sans-serif;}
+
+#userInfo p { color: $fontColor; }
+#userInfo p a { color: $fontColor; }
+
+.icon-misc-smrcolapse { background-position: 0 -1067px; min-width: 8px; border-width: 0px; height: 24px;}
+.icon-misc-smrexpand { background-position: 0 -1115px; min-width: 8px; border-width: 0px; height: 24px;}
+
+#navbar { background-image: none; }
+#menubar li a { color: $fontColor; font-weight: normal; }
+#menubar li a:hover { color: #000;  }
+#menubar li.on { background: transparent url('resources/images/right_edge.png') top right no-repeat; }
+#menubar li.on a { background: transparent url('resources/images/left_edge.png') top left no-repeat; font-weight: bold; color: $fontColor; }
+
+/* navigation & menu bar icons */
+.menubar-icon { background-image:url('resources/images/button_icons.png'); background-repeat: no-repeat; }
+
+/* drop line menu */
+.dlddmenu {background: transparent top left repeat-x scroll url('resources/images/menu_bg.png');}
+.dlddmenu > ul > li > a {color:#6B6B6B; background:transparent;}
+.dlddmenu > ul > li > a b {background:transparent;}
+.dlddmenu > ul > li > ul {background:$lightColor;}
+.dlddmenu > ul > li > ul > li {background: transparent right center no-repeat scroll url('resources/images/menu_spacer.gif');}
+.dlddmenu > ul > li > ul > li > a {color:$fontColor;}
+.dlddmenu > ul > li > ul > li > ul {background:$lightColor url('resources/images/submenu_pointer.png') no-repeat; border:1px solid #e8e8e8;}
+.dlddmenu > ul > li > ul > li > ul > li > a {color:$fontColor;}
+.dlddmenu > ul > li > ul > li:hover > a {color:$fontColor;}
+.dlddmenu > ul > li > ul > li > ul > li > a:hover {background:#ececec; color:$fontColor;}
+
+.dlddmenu > ul > li:hover {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul > li:hover > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /*background-color: $lightColor; border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+.dlddmenu > ul > li.current {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul > li.current > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} /* border-color: #e8e8e8 #e8e8e8 transparent #e8e8e8;*/
+
+.dlddmenu > ul:hover > li.current {background: transparent top left no-repeat scroll none;}
+.dlddmenu > ul:hover > li.current > a {background: transparent top left no-repeat scroll none;} /*background:transparent;*/
+.dlddmenu > ul:hover > li.current > a b { background:transparent; }
+.dlddmenu > ul:hover > li.current:hover {background: transparent top left no-repeat scroll url('resources/images/left_edge.png');}
+.dlddmenu > ul:hover > li.current:hover > a {background: transparent top right no-repeat scroll url('resources/images/right_edge.png');} 
+
+
+.actions_menu a:hover, .actions_menu a:active { background-color: #f3f3f3; }
+
+.fav_menu_title { background-color: #F3F3F3; font-weight: bold; color: #666666; padding: 6px 2px; }
+.fav_menu_item { min-width: 200px; }
+.fav_menu_item span { color: #0066CC; }
+
+#contactus, #interestrate, #exchangerate { padding: 0px; }
+#pageHeader { height: 132px !important; margin: 0px !important; border-bottom: 1px solid #e7e7e7; }
+#headerTop { 
+	height: 76px !important;
+	padding : 0px 40px !important;
+	background: $lightColor;
+}
+#menu_container {
+	padding : 0px !important;
+	border-bottom: 1px solid #e1e1e1 !important;
+}
+#menubarContainer { float: left; height: 28px !important; margin:0; padding:0px 0px 0px 40px; border-width: 0; 
+background-color : $primaryColor !important; }
+.dropline {
+	height:29px !important;
+}
+ul.menubar > li.barover {
+	background: $activeTab ;
+	padding: 0 0 0 10px;
+}
+ul.menubar > li.barover > a {
+	background: $activeTab;
+}
+
+.dropline > ul.dlmenu > li > a:hover{
+	border-bottom: 2px solid $primaryColor !important;
+	color: $primaryColor !important;
+}
+
+ul.menubar > li > a
+{
+ color:$lightColor !important;
+ font-size:$fontSize16 !important;
+}
+
+.dropline > ul.dlmenu > li > a{
+color:$fontColor !important;
+}
+
+.dropline > ul.dlmenu > li {
+	float:left;
+	padding: 0px !important;
+}
+
+.dropline > ul.dlmenu > li > a {
+	padding: 0px !important;
+}
+
+.dropline > ul.dlmenu > li > a  > b{
+	padding: 0px 20px 0px 20px !important;
+}
+
+.dropline > ul.dlmenu {
+padding: 0px !important;
+}
+
+li.flyout > a > b {
+	background: right center no-repeat scroll url('resources/images/flyout.png') !important;
+}
+
+li.flyout > ul > li > a > b
+{
+color:$lightColor !important;
+}
+
+li.flyout > ul{
+background: #95d6eb !important;
+border:none !important;
+padding: 4px 15px !important;
+}
+
+li.flyout > ul > li > a:hover{
+background:#b1e1f1 !important;
+}
+
+.toolbar1 { 
+height: 19px !important; background:$primaryColor !important; 
+padding : 5px 40px 4px 1px !important;
+
+}
+
+.toolbar1 a { 
+color:$lightColor !important;
+display : inline !important;
+padding-left: 10px !important;
+}
+.ux_padding-right4 {
+	padding-right : 4px;
+}
+a#homeLink {
+float: left;
+height: 24px;
+font-size: $fontSize18;
+padding-top: 5px;
+padding-right: 10px;
+color: white;
+}
+.ux_alert {
+	color : #c80404 !important;
+	padding-right: 20px;
+}
+div#loginInfo {
+	padding-top : 20px ;
+}
+
+#userInfo div.controls {
+	padding-top : $fontSize14;
+}
+#banklogo {
+	margin-top : 10px;
+}
+.ux_custom-toolbar .x-btn-default-toolbar-small-focus .x-btn-inner {color : #135e82 !important; font-weight:bold !important;}
+.ux_custom-toolbar .x-btn-default-toolbar-small-focus {background : none !important;}
+.xn-custom-heighlight .x-btn-inner{ background : none !important;font-weight : bold !important;color : #135e82 !important;}
+button.orange_button {
+	font-size: $fontSize14 !important;
+	font-weight: normal !important;
+	background: #e67e32 !important;
+}
+#userInfo p {
+	font-size : $fontSize14;
+}
+
+#morePageOptionsDialog{ background: $lightColor !important; font-size: $fontSize14 !important; padding: 0.5em 0.5em; }
+
+#favClient{ background: $lightColor !important; font-size: $fontSize14 !important; padding: 0.5em 0.5em; }
+#favClient .groupHeader{ font-size: $fontSize14 !important; padding: 0px; }
+#favClient .favlink{ font-size: $fontSize14 !important; }
+#favClient table td{ line-height: 24px; height: auto !important; }
+#favClient table td:hover{ background: #f3f3f3; line-height: 24px; height: auto !important; }
+
+#favMenu { background: $lightColor !important; font-size: $fontSize14 !important; padding: 0.5em 0.5em; }
+#favMenu .favitem .favlink{ font-size: $fontSize14 !important; }
+#favMenu table td:hover{ background: #f3f3f3 !important; line-height: 24px !important; }
+#favMenu table td{ line-height: 24px !important; }
+
+#morePageOptionsDialog div{ height: auto !important; line-height: 24px !important; }
+#morePageOptionsDialog div:hover{ height: auto !important; line-height: 24px !important; background: #f3f3f3; }
+
+.page-heading-inactive{ color: $primaryColor; }
+
+.ux_popup_width{
+	width:480px !important;
+}
+
+.ft-pref-dropdown .ft-dropdown-menu .ft-dropdown-items a:hover {
+  background-color: $headerActionDropdown;
+   color: $lightColor !important;
+  text-decoration: none;
+}
+
+.ft-dropdown.ft-header-dropdown:hover .ft-dropdown-toggle {
+  background-color: $headerdropdown !important;
+  color: $primaryColor !important;
+  border-radius: 5px 5px 0px 0px !important;
+}
+
+.ft-header-dropdown:hover .ft-dropdown-toggle,
+.ft-header-dropdown .ft-dropdown-menu {
+  background-color: $headerdropdown !important;
+  color: $primaryColor !important;
+}
+
+.ft-main-compact.ft-main-nav {
+  height: 50px;
+
+  li {
+    height: 49px;
+  }
+
+  > li > a {
+    padding: 0px 10px !important;
+    @include fontSize(8);
+    min-width: 55px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+	/* Compact Menu Changes */
+
+  .ft-main-compact.ft-main-nav {
+    height: 41px;
+
+    li {
+      height: 40px;
+    }
+
+    > li > a {
+      padding: 0px 7px !important;
+      @include fontSize(4);
+      min-width: 55px;
+    }
+  }
+}

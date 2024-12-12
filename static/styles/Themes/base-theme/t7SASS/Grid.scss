@@ -1,0 +1,2214 @@
+.x-grid-body {
+  border: none;
+}
+
+.x-grid-row .x-grid-td {
+  background-color: $gridRowColor;
+}
+
+.x-grid-row-alt .x-grid-td {
+  background-color: $lightColor;
+}
+
+.x-grid-header-ct {
+  border: none;
+}
+
+.t7-grid .x-column-header-text {
+  @include fontSize(2);
+}
+
+.x-grid-row-selected .x-grid-cell-special, .x-grid-cell-special {
+  background-color: $lightColor;
+  background-image: none;
+  border-right: none;
+}
+
+.x-toolbar-default {
+  border: none;
+  background-color: $lightColor;
+  background-image: none;
+}
+
+.x-column-header {
+  border-right: 1px solid $lightColor;
+  color: $gridHeaderTextColor;
+  font-weight: bold;
+  background-image: none;
+  background-color: $gridHeaderColor;
+}
+
+.x-column-header-over {
+  background-image: none;
+  background-color: $moduleHeaderColor2;
+}
+
+.x-column-header-sort-ASC, .x-column-header-sort-DESC {
+  background-color: $moduleHeaderColor2;
+}
+
+.x-column-header-inner {
+  padding: 6px;
+}
+
+.x-docked-summary {
+  border: none;
+  background-color: $gridSummary;
+}
+
+.x-grid-row-summary {
+  border: none;
+  background-color: $gridSummary;
+
+  .x-grid-cell-inner {
+    border-width: 0px;
+  }
+}
+
+.x-docked-summary .x-grid-cell-inner {
+  border: none;
+}
+
+.x-tbar-page-first {
+  background-image: url(resources/images/T7/grid/page-first.png);
+}
+
+.x-item-disabled .x-tbar-page-first {
+  background-image: url(resources/images/T7/grid/page-first-disabled.png);
+}
+
+.x-tbar-page-prev {
+  background-image: url(resources/images/T7/grid/page-prev.png);
+}
+
+.x-item-disabled .x-tbar-page-prev {
+  background-image: url(resources/images/T7/grid/page-prev-disabled.png);
+}
+
+/* Forward */
+
+.x-tbar-page-last {
+  background-image: url(resources/images/T7/grid/page-last.png);
+}
+
+.x-item-disabled .x-tbar-page-last {
+  background-image: url(resources/images/T7/grid/page-last-disabled.png);
+}
+
+.x-tbar-page-next {
+  background-image: url(resources/images/T7/grid/page-next.png);
+}
+
+.x-item-disabled .x-tbar-page-next {
+  background-image: url(resources/images/T7/grid/page-next-disabled.png);
+}
+
+.x-grid-row-checker, .x-column-header-checkbox .x-column-header-text {
+  line-height: 13px;
+  background-image: url(resources/images/T7/checkbox.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 23px;
+  height: 22px;
+}
+
+/* Grid Styling */
+
+.ft-create-payment-form {
+  .x-column-header-text {
+    @include fontSize(2);
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .ft-create-payment-submit-button {
+    width: 103px;
+    height: 31px;
+    @include fontSize(6);
+    padding-top: 8px;
+  }
+
+  .ft-create-payment-submit-button-disabled {
+    background-color: $secondaryBtn;
+  }
+
+  .ft-create-payment-form-header {
+    background-color: $dialogButtonBackground;
+    border-top: 1px solid $accordianBar;
+    height: 50px;
+
+    .ft-pull-left, .ft-pull-right {
+      padding-top: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  .ft-pull-left span {
+    @include fontSize(10);
+  }
+
+  .ft-pull-right span {
+    @include fontSize(4);
+    color: $fontColorDarker;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin-top: 3px;
+  }
+}
+
+.x-grid-cell-inner-checkcolumn {
+  .x-grid-checkcolumn {
+    background-image: url(resources/images/T7/checkbox.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+	border: 1px solid #a4a4a4;
+  }
+
+  .x-grid-checkcolumn-checked {
+    background-image: url(resources/images/T7/checked.png);
+	background-position: inherit;
+  }
+}
+
+.ft-grid-row-expander {
+  .x-grid-row-before-selected:nth-child(even) .x-grid-cell {
+    background-color: $gridRowColor;
+  }
+
+  .x-grid-tree-node-expanded .x-tree-icon-parent {
+    background-image: none;
+    display: none;
+    background-image: none;
+    display: none;
+  }
+
+  .x-tree-icon-parent, .x-tree-icon-leaf {
+    background-image: none;
+    display: none;
+  }
+
+  .x-grid-tree-node-expanded {
+    .x-tree-node-text, .x-grid-cell-inner {
+      @include fontSize(2);
+      color: $fontColor;
+      font-weight: bold;
+    }
+  }
+
+  .x-tree-node-text, .x-grid-cell-inner {
+    @include fontSize(2);
+    color: $fontColor;
+    font-weight: normal;
+  }
+}
+
+.x-tree-arrows {
+  .x-grid-tree-node-expanded {
+    .x-tree-expander, .x-tree-expander-over .x-tree-expander, .x-tree-expander-down .x-tree-expander {
+      background-position: center center;
+    }
+  }
+
+  .x-tree-expander-over .x-tree-expander {
+    background-position: center center;
+  }
+
+  .x-tree-expander {
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    background: url(resources/images/T7/CaretDown.png) no-repeat transparent center center;
+	margin-top: 0px;
+    vertical-align: baseline;
+  }
+}
+
+.x-grid-tree-node-expanded .x-tree-expander {
+  -webkit-background-size: 18px 18px;
+  background-size: 18px 18px;
+  background: url(resources/images/T7/CaretUp.png) no-repeat transparent center center;
+  margin-top: 0px;
+  vertical-align: baseline;
+}
+
+.x-grid-no-row-lines .x-grid-row-focused .x-grid-cell-inner{
+  padding: 12px 10px 11px;
+}
+
+.ft-grid-row-expander .x-grid-header-ct {
+  border-top: 1px solid white;
+}
+
+/* T7 Grid Styling */
+
+.t7-grid {
+
+  .x-nlg & .x-toolbar-default {
+  	background-image: none !important;
+  }
+
+  .icon-collapse-rounded {
+    background-image: url('resources/images/T7/icons.png');
+    background-position: -5px -5px;
+  }
+
+  .icon-expand-rounded {
+    background-image: url('resources/images/T7/icons.png');
+    background-position: -43px -5px;
+  }
+
+  .icon-collapse-rounded:hover {
+    background-position: -25px -101px;
+  }
+
+  .icon-expand-rounded:hover {
+    background-image: url('resources/images/T7/icons.png');
+    background-position: -54px -102px;
+  }
+
+  .xn-panel-header {
+    background-color: $panelHeaderBackground;
+	padding: 10px 15px;
+	margin: 10px 0px 0px;
+	border: 1px solid $summaryBorderColor;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    .x-tab-bar-body {
+      .x-box-inner {
+        height: 38px;
+		min-height: 34px;
+      }
+    }
+
+    .x-btn-default-toolbar-small-icon .x-btn-button {
+      height: 33px;
+      width: 33px;
+      margin: 3px 5px;
+
+      .x-btn-icon-el {
+        height: 33px;
+        width: 33px;
+        margin: 3px 5px;
+      }
+    }
+	.paymentInstActionCls{
+	  padding: 5px 0px;
+	}
+  }
+
+  .x-tab-bar-default-horizontal {
+    background-image: none;
+    background-color: transparent;
+    border-width: 0px;
+  }
+  .xn-custom-toolbar{
+	padding-bottom: 10px;
+	@include fontSize(4);
+	color: $fontColorDark;
+	.x-btn-default-toolbar-small-focus{
+		background-image: none;
+		background-color: transparent;
+	}
+	label{
+		text-align: left;
+	}
+	.action-button.x-btn.x-btn-default-toolbar-small-disabled{
+		background-color: $buttonBackground;
+		@include fontSize(2);
+		margin-right: 10px;
+		padding: 6px 12px;
+		border: 1px solid $buttonBorderColor;
+		.x-btn-inner{
+			color: $lightColor;
+			@include fontSize(2);
+		}
+		&:hover, &:focus{
+			background-color: $buttonBackground;
+		}
+	}
+	.action-button.x-btn-default-toolbar-small{
+		background-color: $primaryColor;
+		@include fontSize(2);
+		margin-right: 10px;
+		padding: 6px 12px;
+		border: 1px solid transparent;
+		&:hover, &:focus{
+			background-color: $primaryColor1;
+		}
+		.x-btn-inner{
+			color: $lightColor;
+			@include fontSize(2);
+		}
+	}
+	i{
+		@include fontSize(8);
+		color: $fontColor;
+	}
+	.x-btn-default-toolbar-small-focus{
+		i{
+			color: $linkFocusColor;
+		}
+	}
+  }
+  .xn-panel-header {
+    .x-component.x-box-item.x-toolbar-item.groupview-header-title {
+      @include fontSize(10);
+      font-weight: normal;
+	  color: $panelTextColor;
+      margin-left: 10px !important;
+      top: 9px !important;
+    }
+
+    .x-btn-default-toolbar-small-noicon {
+      top: 15px !important;
+    }
+
+    .x-component.x-box-item.x-toolbar-item {
+      top: 16px !important;
+    }
+  }
+
+  .xn-hide {
+    display: none;
+  }
+
+  .xn-panel-header {
+    .x-btn-default-toolbar-small .x-btn-arrow {
+      background-image: url('resources/images/T7/caret-blue.png');
+      padding: 0px 5px 5px 5px;
+    }
+
+    .x-tab-bar-strip {
+      visibility: hidden;
+    }
+    .x-tab-bar-body {
+		/*padding-left: 15px;*/
+		.x-box-item {
+		  &.x-tab-default-top {
+			padding: 7px 15px;
+			border-radius: 4px;
+			background-color: $panelHeaderBackground;
+			border: 1px solid $fontColor;
+			margin-left: 0px !important;
+			margin-right: 10px !important;
+		  }
+		  &.x-tab-default-over{
+			background-color: $gridTabOverColor;
+		  }
+
+		  .x-tab-button .x-tab-inner {
+			height: 17px;
+			@include fontSize(2);
+			font-weight: normal;
+			color: $fontColorDark;
+			line-height: inherit;
+		  }
+		  
+		  &.x-tab-top-active {
+			background-color: $buttonBackground;
+			.x-tab-inner{
+				color: $lightColor;
+			}
+		  }
+		}
+	}
+	.btn-row-list{
+		padding: 6px 12px;
+		background-color: $panelHeaderBackground;
+		border: 1px solid $fontColor;
+		line-height: inherit;
+		.x-btn-arrow{
+			background-image: none;
+			padding-right: 0px;
+		}
+		.x-btn-inner{
+			color: $fontColor;
+			@include fontSize(2);
+			line-height: inherit;
+			&:after{
+				font-family: fontawesome;
+				content: '\f0d7';
+				padding-left: 5px;
+			}
+		}
+	}
+  }
+
+  .x-tab-top {
+    background-color: $tabsColor;
+    border-bottom: 0px transparent;
+    background-image: none;
+    margin: 0px 3px !important;
+  }
+  .x-column-header-checkbox .x-column-header-text, .x-grid-row-checker {
+    background-image: url(resources/images/T7/checkbox.png);
+    height: 16px;
+    width: 16px;
+    line-height: 13px;
+    margin: 1px 2px 0px 0px;
+	border: 1px solid #a4a4a4;
+	background-color: $lightColor;
+  }
+  
+  .x-grid-row-checker{
+	margin-top: 4px;
+  }
+
+  .x-grid-row-selected .x-grid-row-checker, .x-column-header-checkbox.x-grid-hd-checker-on .x-column-header-text {
+    background-image: url(resources/images/T7/checked.png);
+    background-position: inherit;
+  }
+  
+  .x-grid-row.x-grid-data-row.x-grid-row-over .x-grid-cell, .x-grid-row.x-grid-data-row.x-grid-row-selected .x-grid-cell{
+	background-color: $gridRowOverColor;
+  }
+  
+  .icon-checkbox-checked {
+    background-image: url(resources/images/T7/checked.png);
+    background-position: inherit;
+    width: 13px;
+    height: 13px;
+  }
+
+  .icon-checkbox-unchecked {
+    background-image: url(resources/images/T7/checkbox.png);
+    background-position: inherit;
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/*Changed*/
+
+.x-grid-cell-row-checker .x-grid-cell-inner {
+  padding-top: 7px;
+}
+
+.t7-grid {
+  .x-column-header, .x-grid-header-ct {
+    height: 33px !important;
+    background: none $gridHeaderColor;
+    color: $gridHeaderTextColor;
+    @include fontSize(6);
+    font-weight: bold;
+    border-color: white;
+  }
+
+  .x-column-header.x-column-header-over {
+    background: none $gridHeaderColorOver;
+    height: 35px;
+  }
+
+  .x-column-header.x-column-header-checkbox {
+    /*width: 40px !important;*/
+  }
+
+  .x-column-header .x-column-header-trigger {
+    background-image: url('../../../js/extjs4.2.1/resources/ext-theme-classic/images/grid/grid3-hd-btn.gif');
+  }
+
+  .single-border .x-column-header-checkbox .x-column-header-inner {
+    padding-top: 10px;
+  }
+
+  .x-column-header .x-column-header-inner {
+    padding: 8px 10px 5px !important;
+  }
+
+  .x-grid-with-row-lines {
+    .x-grid-cell.x-grid-td {
+      border-color: white;
+		
+      /*.x-grid-cell-inner {
+        height: 31px;
+
+        .action-link {
+          height: 31px;
+        }
+      }*/
+    }
+    border: none;
+
+    /*.x-grid-cell-col_action .x-grid-cell-inner {
+      padding-top: 6px;
+      color: $fontColor;
+    }*/
+  }
+  .xn-freeze-row.x-grid-row.x-grid-data-row {
+	.x-grid-cell {
+		background-color: $gridRowOverColor;
+	}
+	&.x-grid-row-over{
+		.x-grid-cell{
+			background-color: $selectedRowOverColor;
+		}
+	}
+  }
+
+  .x-grid-row.x-grid-data-row .x-grid-cell {
+    background-color: $gridRowColor;
+  }
+  
+  .xn-empty-row.x-grid-row.x-grid-data-row{
+  	.x-grid-cell{
+      background-color: $lightColor;
+      border: 0px;
+    }
+  	&.x-grid-row-over{ 
+  	  .x-grid-cell{
+  	    background-color: $lightColor;
+  	    border: 0px;
+  	  }
+  	}
+  }
+
+  /*.x-grid-row-alt.x-grid-data-row .x-grid-cell {
+    background-color: $lightColor;
+  }*/
+
+  .x-panel {
+    .single-border, .x-grid-header-ct {
+      border-width: 0px;
+    }
+  }
+
+  .x-panel-default {
+    border-color: $lightColor;
+  }
+
+  .x-grid-row.x-grid-data-row .x-grid-cell {
+    border-bottom: 1px solid rgb(237, 237, 237);
+  }
+  
+  .x-grid-cell-inner{
+	height: 50px;
+  }
+	
+  .xn-paging-toolbar {
+    padding: 10px 15px;
+    background-color: $pagingBackground;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+	.x-btn-default-toolbar-small.x-btn{
+		background-color: $buttonBackground;
+		padding: 6px 12px;
+		border: 1px solid $buttonBorderColor;
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+		.x-btn-inner{
+			@include fontSize(2);
+			color: $lightColor;
+			line-height: inherit;
+			padding: 0px;
+		}
+	}
+	.x-btn.x-btn-default-toolbar-small-over{
+		background-color: $buttonHoverColor;
+	}
+	.x-btn.x-btn-default-toolbar-small-focus{
+        background-color: $buttonHoverColor;
+    }
+	.x-btn.x-btn-default-toolbar-small-icon-text-left .x-btn-inner{
+		padding-left: 20px;
+	}
+	.x-btn-default-toolbar-small-focus{
+		background-image: none;
+		background-color: $buttonHoverColor;
+	}	
+	.x-btn.x-btn-default-toolbar-small-icon-text-right .x-btn-inner{
+		padding-right: 20px;
+	}
+	.x-toolbar-text{
+		@include fontSize(6);
+		display: inline-block;
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	.x-field{
+		height: 39px;
+		margin-left: 5px !important;
+		margin-right: 25px !important;
+		width: 60px !important;
+		.x-form-item-body {
+			padding-left: 0px;
+		}
+		.x-form-text{
+			height: 39px;
+			width: 60px !important;
+			@include fontSize(8);
+			padding: 6px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			text-align: center;
+		}
+	}
+  }
+
+  .x-item-disabled {
+    .x-tbar-page-first {
+      font-family: fontawesome;
+	  content: '\f0d9';
+	  color: $lightColor;
+	  @include fontSize(8);
+	  &:before{
+		font-family: fontawesome;
+		content: '\f0d9';
+	  }
+    }
+
+    .x-tbar-page-prev {
+      font-family: fontawesome;
+	  content: '\f0d9';
+	  background-image: none;
+	  color: $lightColor;
+	  @include fontSize(8);
+	  top: -4px;
+	  &:before{
+		font-family: fontawesome;
+		content: '\f0d9';
+	  }
+    }
+
+    .x-tbar-page-next {
+      font-family: fontawesome;
+	  content: '\f0da';
+	  background-image: none;
+	  color: $lightColor;
+	  @include fontSize(8);
+	  top: -4px;
+	  &:before{
+		font-family: fontawesome;
+		content: '\f0da';
+	  }
+    }
+
+    .x-tbar-page-last {
+      background-image: url('resources/images/T7/grid/page-last-disabled.png');
+    }
+  }
+
+  .x-tbar-page-first {
+    background-image: url('resources/images/T7/grid/page-first.png');
+  }
+
+  .x-tbar-page-prev {
+    font-family: fontawesome;
+	  content: '\f0d9';
+	  background-image: none;
+	  color: $lightColor;
+	  @include fontSize(8);
+	  top: -4px;
+	  &:before{
+		font-family: fontawesome;
+		content: '\f0d9';
+	  }
+  }
+
+  .x-tbar-page-next {
+    font-family: fontawesome;
+	  content: '\f0da';
+	  background-image: none;
+	  color: $lightColor;
+	  @include fontSize(8);
+	  padding-left: 10px;
+	  top: -4px;
+	  &:before{
+		font-family: fontawesome;
+		content: '\f0da';
+	  }
+  }
+
+  .x-tbar-page-last {
+    background-image: url('resources/images/T7/grid/page-last.png');
+  }
+
+  .x-toolbar-text {
+    @include fontSize(2);
+    color: $fontColor;
+  }
+
+  .xn-form-field.x-form-text {
+    border: 0px;
+  }
+
+  input[type=text].x-form-field, .xn-form-field {
+    height: 36px;
+  }
+
+  .xn-form-trigger {
+    background-image: url('resources/images/T7/caret-blue.png');
+    border: 0px;
+    height: 6px;
+    background-repeat: no-repeat;
+  }
+
+  .x-toolbar.x-toolbar-docked-top {
+    padding: 0px !important;
+    border: 0px !important;
+  }
+
+  .gradiant_back {
+    background-color: $lightColor;
+    padding: 10px 15px 15px !important;
+	margin-top: 0px;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: $summaryBorderColor;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+  }
+
+  .x-grid-cell-col_favorite .x-grid-cell-inner-action-col, .x-grid-cell-col_action .x-grid-cell-inner-action-col {
+    text-overflow: clip;
+  }
+
+  .grid-row-action-icon {
+    &.icon-edit:before {
+      font-family: fontawesome;
+      content: "\f044";
+      @include fontSize(4);
+      color: $gridIconColor;
+      /*To be verified*/
+    }
+
+    &.icon-view {
+      &:before {
+        font-family: fontawesome;
+        content: "\f00e";
+        @include fontSize(4);
+        color: $gridIconColor;
+        /*To be verified*/
+      }
+
+      font-family: fontawesome;
+      content: "\f00e";
+      @include fontSize(4);
+      color: $gridIconColor;
+      /*To be verified*/
+    }
+
+    &.grid-row-check-icon {
+      font-family: fontawesome;
+      content: "\f03e";
+      @include fontSize(4);
+      color: $gridIconColor;
+      /*To be verified*/
+
+      &:before {
+        font-family: fontawesome;
+        content: "\f03e";
+        @include fontSize(4);
+        color: $gridIconColor;
+        /*To be verified*/
+      }
+    }
+  }
+
+  .grid-row-attach-icon:before {
+    font-family: fontawesome;
+    content: "\f0c6";
+    @include fontSize(4);
+  }
+
+  .grid-row-action-icon {
+	color: $primaryColor;
+    &.icon-history:before {
+      font-family: fontawesome;
+      content: "\f1da";
+      @include fontSize(4);
+    }
+
+    &.icon-quickpay:before {
+      font-family: fontawesome;
+      content: "\f1d8";
+      @include fontSize(4);
+    }
+
+    &.icon-confidential:before {
+      font-family: fontawesome;
+      content: "\f023";
+      @include fontSize(4);
+    }
+
+    &.icon-deleted:before {
+      font-family: fontawesome;
+      content: "\f00d";
+      @include fontSize(4);
+      color: $errorIconColor;
+    }
+
+    &.icon-completed:before {
+      font-family: fontawesome;
+      content: "\f058";
+      @include fontSize(4);
+      color: $completedIconColor;
+    }
+
+    &.icon-wrench:before {
+      font-family: fontawesome;
+      content: "\f0ad";
+      @include fontSize(4);
+      color: #ffcc66;
+    }
+
+    &:before {
+      border-width: 0;
+      display: inline-block;
+      height: 18px;
+      min-width: 18px;
+    }
+
+    &.icon-edit {
+      font-family: fontawesome;
+      content: "\f044";
+      @include fontSize(4);
+      color: $gridIconColor;
+      /*To be verified*/
+    }
+
+    &.icon-error {
+      font-family: fontawesome;
+      content: "\f06a";
+      @include fontSize(4);
+      color: $errorIconColor;
+    }
+
+    &.icon-notes {
+      font-family: fontawesome;
+      content: "\f0f6";
+      @include fontSize(4);
+      color: $gridIconColor;
+
+      &:before {
+        font-family: fontawesome;
+        content: "\f0f6";
+        @include fontSize(4);
+        color: $gridIconColor;
+      }
+    }
+
+    &.icon-notes-attached {
+      font-family: fontawesome;
+      content: "\f15c";
+      @include fontSize(4);
+      color: $gridIconColor;
+
+      &:before {
+        font-family: fontawesome;
+        content: "\f15c";
+        @include fontSize(4);
+        color: $gridIconColor;
+      }
+    }
+
+    &.icon-error:before {
+      font-family: fontawesome;
+      content: "\f06a";
+      @include fontSize(4);
+      color: $errorIconColor;
+    }
+
+    &.icon-fedWire:before {
+      font-family: fontawesome;
+      content: "\f090";
+      @include fontSize(4);
+      color: $gridIconColor;
+    }
+
+    &.icon-delete {
+      font-family: fontawesome;
+      content: "\f00d";
+      @include fontSize(4);
+      color: $errorIconColor;
+
+      &:before {
+        font-family: fontawesome;
+        content: "\f00d";
+        @include fontSize(4);
+        color: $errorIconColor;
+      }
+    }
+  }
+
+  .action-link-align {
+    float: left;
+  }
+}
+
+.icon-dropdown {
+  background-position: center center;
+  border-width: 0;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  color: $primaryColor;
+  padding-right: 0px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: visible;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f0d7";
+  }
+}
+
+.t7-grid {
+  .grid-row-action-icon {
+    &.icon-down {
+      &:before {
+        font-family: fontawesome;
+        content: "\f0d7";
+        @include fontSize(4);
+      }
+
+      font-family: fontawesome;
+      content: "\f0d7";
+      @include fontSize(4);
+    }
+
+    &.icon-dropdown:before {
+      font-family: fontawesome;
+      content: "\f0d7";
+      @include fontSize(4);
+    }
+
+    &.icon-up:before {
+      font-family: fontawesome;
+      content: "\f0de";
+      @include fontSize(4);
+    }
+
+    &.icon-dropdown {
+      font-family: fontawesome;
+      content: "\f0d7";
+      @include fontSize(4);
+    }
+
+    &.icon-up {
+      font-family: fontawesome;
+      content: "\f0de";
+      @include fontSize(4);
+    }
+
+    &.icon-history:before {
+      font-family: fontawesome;
+      content: "\f1da";
+      @include fontSize(4);
+    }
+  }
+
+  .xn-disabled-row .x-grid-row-checker {
+    background-image: url("resources/images/etc/icon_unchecked_grey.gif");
+  }
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+/*Editable Grid CSS*/
+
+.t7-grid {
+  .x-form-item-body {
+    padding-left: 7px;
+	padding-right: 7px;
+  }
+
+  .x-grid-row-editor .x-form-text {
+    padding: 2px 4px 2px 4px;
+  }
+
+  .x-grid-editor {
+    .x-form-trigger {
+      @include fontSize(6);
+      height: 39px;
+      border-width: 1px 1px 1px 0px;
+      border-color: $borderColor;
+	  border-top-right-radius: 4px;
+	  border-bottom-right-radius: 4px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url(resources/images/T7/dropdown_arrow.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+	  width: 15px;
+    }
+
+    .x-form-trigger-wrap-focus .x-form-trigger {
+      border-color: #7eadd9;
+    }
+  }
+
+  .x-form-cb-checked .x-form-checkbox {
+    background-image: url(resources/images/T7/checked.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 23px;
+    height: 22px;
+    padding-right: 5px;
+    line-height: 13px;
+    background-position: initial;
+  }
+}
+
+.account-type {
+  @include fontSize(3);
+  font-weight: normal;
+  padding-left: 10px;
+  color: $panelTextColor;
+  padding-right: 10px;
+}
+
+.groupby-label {
+  @include fontSize(3);
+  font-weight: normal;
+  color: $panelTextColor;
+  padding-left: 20px;
+}
+
+.t7-grid {
+  .groupby-label.x-component.x-box-item.x-toolbar-item, .account-type.x-component.x-box-item.x-toolbar-item {
+    top: 16px !important;
+  }
+}
+
+.t7-grid .x-tab-bar-default-top {
+  .x-tabbar-scroll-left {
+	background-image: none;
+	color: $fontColorDark;
+    top: 2px;
+	@include fontSize(10);
+	&:before{
+		font-family: fontawesome;
+		content: '\f0d9';
+	}
+  }
+
+  .x-tabbar-scroll-right {
+	background-image: none;
+    color: $fontColorDark;
+    top: 2px;
+    left: 12px;
+	@include fontSize(10);
+	&:before{
+		font-family: fontawesome;
+		content: '\f0da';
+	}
+  }
+
+  .x-tabbar-scroll-left-hover {
+    background-position: 0px 0px;
+  }
+}
+
+.smartSettingCls {
+  .x-panel-body {
+    border-radius: 5px 0px 5px 5px;
+  }
+
+  .x-menu-item {
+    background-color: $primaryColor;
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+.smartgrid-action-icon {
+  background-image: url(resources/images/T7/caret-blue.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.action-down-hover {
+  background-color: $primaryColor;
+  background-image: url(resources/images/T7/caret-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.groupbyButton.group-down-hover.x-btn-default-toolbar-small-menu-active {
+  background-image: none;
+  background-color: $primaryColor;
+  border-radius: 3px 3px 0px 0px;
+
+  .x-btn-arrow {
+    background-image: url(resources/images/T7/caret-white.png);
+  }
+
+  .x-btn-inner {
+    color: white;
+  }
+}
+
+.groupbyButton {
+  background-image: none;
+  background-color: transparent;
+  margin-top: 4px !important;
+  padding-right: 4px;
+}
+
+.summaryToggleButton {
+  background-image: none;
+  background-color: transparent;
+
+  &:focus {
+    background-image: none;
+    background-color: transparent;
+  }
+}
+
+.t7-grid {
+  .x-btn-default-toolbar-small.x-unselectable, .x-toolbar-default.x-box-item {
+    border-width: 0px;
+  }
+  
+  .ft-btn-link{
+	&.x-btn-default-toolbar-small-over{
+	  .x-btn-inner{
+	    color: $linksHoverColor;
+		text-decoration: underline;
+	  }
+	}
+    .x-btn-inner{
+	  color: $linksColor;
+	  @include fontSize(4);
+	}
+  }
+
+  .xn-button-transparent {
+	padding-top: 6px;
+	padding-bottom: 10px;
+	i{
+		@include fontSize(8);
+	}
+  }
+  
+  .x-btn-default-toolbar-small-over {
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .xn-close-button.x-btn-default-toolbar-small {
+	padding-top: 5px;
+	  .x-btn-inner {
+		@include fontSize(4);
+		color: $fontColor;
+		line-height: inherit;
+		padding-left: 0px;
+		padding-right: 5px;
+		line-height: 20px;
+	  }
+	}
+  .xn-close-button.x-btn-default-toolbar-small.x-btn-default-toolbar-small-focus, .xn-close-button.x-btn-default-toolbar-small.x-btn-default-toolbar-small-pressed{
+	background-image: none;
+	background-color: transparent;
+	border: 0px solid transparent;
+  }
+
+  .x-btn-default-toolbar-small-disabled .x-btn-inner {
+    color: $buttonDarkColor;
+    line-height: inherit;
+  }
+
+  .x-toolbar-default.x-toolbar-default-docked-bottom {
+    background-color: $pagingBackground;
+    background-image: none;
+  }
+
+  .x-tab-default-top {
+    border-width: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.menu-grid-height-label {
+  opacity: 1;
+  cursor: default;
+
+  .x-menu-item-text {
+    color: $gridHeightLabel;
+    cursor: default;
+  }
+
+  &.x-menu-item:hover {
+    background-color: $primaryColor;
+  }
+}
+
+.grid-row-delete-icon {
+  background-image: url("resources/images/etc/icon_delete.png");
+  background-repeat: no-repeat;
+  border-width: 0;
+  display: inline-block;
+  height: 18px;
+  min-width: 18px;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-left: 8.5px;
+}
+
+.grid-row-up-icon {
+  background-image: url("resources/images/T7/CaretUp.png");
+  background-repeat: no-repeat;
+  margin-top: 2px;
+  margin-right: 20px;
+  display: inline;
+  width: 30px;
+  height: 24px;
+  background-position: top center;
+}
+
+.grid-row-down-icon {
+  background-image: url("resources/images/T7/CaretDown.png");
+  background-repeat: no-repeat;
+  margin-top: 2px;
+  margin-right: 20px;
+  display: inline;
+  width: 30px;
+  height: 24px;
+  background-position: top center;
+}
+
+.seeklink {
+  background-image: url('resources/images/etc/icon_search.gif');
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.account-set-tab-grid .x-grid-cell-inner {
+  border: 0px none transparent;
+}
+/*
+.new-account-set-tab-grid {
+  .x-grid-cell-inner {
+    border: 0px none transparent;
+  }
+
+  .x-grid-body {
+    top: 25px !important;
+  }
+
+  .x-grid-cell-inner {
+    margin-top: 5px;
+  }
+
+  .x-grid-header-ct .x-box-inner {
+    height: 25px !important;
+  }
+
+  .xn-grid-cell-inner {
+    margin-top: 0px !important;
+    height: 205px !important;
+  }
+
+  .xn-filter-toolbar {
+    .x-box-inner {
+      height: 45px !important;
+    }
+
+    .x-form-item {
+      top: 15px !important;
+    }
+  }
+}
+*/
+.ft-batch-action {
+  font-weight: normal;
+  @include fontSize(4);
+  color: $fontColor;
+  line-height: inherit;
+}
+
+/*To be verified*/
+
+.x-grid-dirty-cell {
+  background: none;
+}
+
+.t7-grid .grid-row-action-icon {
+  &.icon-money:before {
+    font-family: fontawesome;
+    content: "\f0d6";
+    @include fontSize(8);
+    color: $fontColor;
+    /*To be verified*/
+  }
+
+  &.icon-file {
+    &:before {
+      font-family: fontawesome;
+      content: "\F15B";
+      @include fontSize(4);
+      color: $gridIconColor;
+    }
+
+    font-family: fontawesome;
+    content: "\F15B";
+    @include fontSize(4);
+    color: $gridIconColor;
+  }
+}
+
+.t7-grid{
+  &.x-grid{
+    .x-column-header {
+	  border-right: 1px solid $lightColor !important;
+	}
+  }
+}
+
+.x-grid {
+  .x-grid-header-ct {
+    background: none $gridHeaderColor;
+    color: $gridHeaderTextColor;
+    font-family: $fontFamily;
+    @include fontSize(6);
+    font-weight: bold;
+    border-color: white;
+  }
+
+  .x-column-header {
+    border-right: 0px solid $lightColor !important;
+    color: $gridHeaderTextColor;
+    font-weight: bold;
+	height: 33px;
+    background-image: none;
+    background-color: $gridHeaderColor;
+  }
+
+  .x-column-header-inner {
+    padding: 8px 10px 5px;
+	line-height: 18px;
+    height: inherit;
+	border-right: 1px solid $lightColor;
+	vertical-align: bottom;
+  }
+
+  .x-column-header .x-column-header-inner .x-column-header-text {
+    color: $gridHeaderTextColor;
+  }
+
+  .x-grid-row-alt .x-grid-cell {
+    background-color: $lightColor;
+  }
+
+  .x-column-header-text {
+    @include fontSize(4);
+  }
+
+  .x-column-header-trigger {
+    background-image: url('../../../js/extjs4.2.1/resources/ext-theme-classic/images/grid/grid3-hd-btn.gif');
+  }
+
+  .x-grid-row .x-grid-cell {
+    border-bottom: 1px solid rgb(237, 237, 237);
+    background-color: $gridRowColor;
+  }
+  
+  .x-grid-row.x-grid-data-row.x-grid-row-over .x-grid-cell{
+	background-color: $gridRowOverColor;
+  }
+  
+  .x-grid-row.x-grid-data-row.x-grid-row-selected.x-grid-row-over .x-grid-cell{
+	background-color: $selectedRowOverColor;
+  }
+
+  .x-grid-with-row-lines .x-grid-cell {
+    border-color: white;
+
+    .x-grid-cell-inner {
+      .action-link {
+        font-family: $fontFamily;
+      }
+    }
+  }
+
+  .x-grid-cell-inner {
+    @include fontSize(8);
+    color: $fontColor;
+    padding: 12px 10px 11px;
+	line-height: 26px;
+	vertical-align: top;
+    border-width: 0px 1px 2px 0px;
+    border-style: solid;
+    border-color: $lightColor;
+  }
+
+  .x-column-header-align-right .x-column-header-text {
+    margin-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+.x-grid .x-column-header-over {
+  background: none $gridHeaderColorOver;
+  height: 35px;
+}
+
+.widget-grid .x-column-header {
+  .custom_sprite_orange, .custom_sprite_green {
+    margin-top: 1px !important;
+  }
+}
+
+.t7-grid {
+  .x-grid-row-editor .xn-suggestion-box.x-form-text {
+    height: auto;
+    border: 1px solid $borderColor;
+    @include fontSize(6);
+    padding: 5px 23px 5px 10px;
+	height: 39px;
+  }
+
+  .x-grid-row-editor .x-form-trigger-input-cell .xn-suggestion-box.x-form-text {
+    border-right: 1px solid $borderColor;
+	&.xn-form-text{
+	  border-right-color: #7eadd9;
+	}
+  }
+}
+
+.t7-grid {
+  .x-tab-bar-top .x-tab-bar-body, .x-window-body-default, .x-toolbar-default {
+    border: none;
+    background: transparent;
+  }
+}
+
+.xn-portlet .grid-row-action-icon.download-icon {
+  background-image: url(resources/images/T7/download-button-off-new.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 26px;
+}
+
+.grid-link-icon.viewlink {
+  &:before {
+    font-family: fontawesome;
+    content: "\f00e";
+    @include fontSize(4);
+    color: $gridIconColor;
+    /*To be verified*/
+  }
+
+  font-family: fontawesome;
+  content: "\f00e";
+  @include fontSize(4);
+  color: $gridIconColor;
+  /*To be verified*/
+}
+
+.x-grid.x-grid-locked .x-grid-inner-locked.x-panel {
+  border: none;
+  overflow-y: hidden;
+}
+
+.x-grid .x-column-header-sort-ASC .x-column-header-text{
+	background-image: none;
+	&:after{
+		font-family: fontawesome;
+		content: '\f0d8';
+		color: $lightColor;
+		padding-left: 10px;
+		@include fontSize(8);
+	}
+}
+
+.x-grid .x-column-header-sort-DESC .x-column-header-text{
+	background-image: none;
+	&:after{
+		font-family: fontawesome;
+		content: '\f0d7';
+		color: $lightColor;
+		padding-left: 10px;
+		@include fontSize(8);
+	}
+}
+
+.t7-grid {
+  .x-grid-row-editor {
+    .x-panel-body {
+      padding: 0px;
+      height: auto !important;
+      background-color: $lightColor;
+      margin-top: 2px;
+      border: 1px solid $secondaryBtnHover;
+      background-image: url(resources/images/T7/editableGridMarker.png);
+      background-repeat: no-repeat;
+      background-position: -2px;
+
+      .x-container {
+        vertical-align: middle;
+        padding: 4px 0px;
+      }
+    }
+
+    .x-form-text {
+      padding: 5px 10px;
+      height: 39px;
+      color: $fontColorDark;
+      border: 1px solid $borderColor;
+      background-image: none;
+      @include fontSize(6);
+	  border-radius: 4px;
+    }
+
+    .x-form-trigger-input-cell .x-form-text {
+      border-right: 0px;
+	  border-top-right-radius: 0px;
+	  border-bottom-right-radius: 0px;
+	  &.xn-form-text{
+		border-right: 1px solid $borderColor;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		&.grid-field {
+		  &[disabled] {
+			background-color: $disableColor;
+		  }
+		}
+	  }
+    }
+	
+
+    .x-item-disabled {
+	  .x-form-trigger {
+        background-color: $disableColor;
+        opacity: 1;
+      }
+	  .xn-suggestion-box.grid-field[disabled]{
+		background-color: $disableColor;
+		opacity: 1;
+	  }
+	}
+
+    .x-form-text.x-form-focus {
+      border-color: #7eadd9;
+	  border-right-color: #7eadd9;
+    }
+
+    .x-form-display-field {
+      @include fontSize(8);
+	  color: $fontColor;
+    }
+	.ext-datepicker{
+	  .x-form-trigger-input-cell {
+	    width: 90% !important;
+	  }
+	  .x-trigger-cell{
+	    width: 25px !important;
+		border-left: 1px solid $borderColor;
+	  }
+	  .ext-datepicker-trigger{
+	    background-image: none;
+		font-family: fontawesome;
+		content: '\f073';
+		@include fontSize(8);
+		width: 25px;
+		padding-top: 8px;
+		padding-left: 4px;
+		&:before{
+		  font-family: fontawesome;
+		  content: '\f073';
+		}
+	  }
+	}
+  }
+
+  .x-grid-body .x-grid-table-focused-first {
+    border: none;
+  }
+
+  .x-grid-cell-special {
+    background-image: none;
+  }
+
+  .x-form-checkbox-focus {
+    box-shadow: 0px 0px 8px #7eadd9;
+  }
+
+  .x-form-checkbox {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+.t7-grid .grid-row-action-icon.icon-asterisk {
+  font-family: fontawesome;
+  content: "\f069";
+  @include fontSize(-2);
+  color: $fontColorDarker;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f069";
+    @include fontSize(-2);
+    color: $fontColorDarker;
+  }
+}
+
+/*  DataGrid CSS classes copied from cashplus-theme.css file.
+	DataGrid Colors */
+
+.gridContainer {
+  background-color: white;
+}
+
+.gridTable {
+  background-color: white;
+  color: gray;
+
+  thead {
+    background: $contentBackgroundColor url("resources/images/bg_grid_header.png") repeat-x bottom;
+
+    tr th {
+      color: #878787;
+      border-width: 0 1px 1px 0;
+      border-style: none solid solid none;
+      border-color: transparent #D3D3D3 #D3D3D3 transparent;
+    }
+  }
+
+  tbody tr {
+    height: 24px;
+
+    td {
+      .viewlink {
+        visibility: visible;
+        margin-bottom: 5px;
+      }
+
+      .editlink, .historylink, .activitylink {
+        visibility: visible;
+      }
+
+      .clonelink, .enrichlink, .infolink {
+        visibility: hidden;
+      }
+    }
+
+    &:hover {
+      background-color: $gridRowOverColor;
+
+      td {
+        .viewlink, .editlink, .historylink, .activitylink, .clonelink, .enrichlink, .infolink {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  tfoot {
+    background-color: #F5F5F5;
+
+    tr td {
+      border: 1px solid #cdcdcd;
+    }
+  }
+}
+
+.navColumn {
+  border: 0px transparent none;
+}
+
+.pageOfPage {
+  border: 0px transparent none;
+  color: $darkColor;
+}
+
+.trEven {
+ // background-color: #F3F3F3;
+}
+
+/* DataGrid Pager */
+
+.firstpage {
+  font-family: fontawesome;
+  content: "\f04a";
+  @include fontSize(4);
+  color: $gridIconColor;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f04a";
+    @include fontSize(4);
+	color: $gridIconColor;
+  }
+}
+
+.nextpage {
+  font-family: fontawesome;
+  content: "\f0da";
+  @include fontSize(8);
+  color: $gridIconColor;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f0da";
+    @include fontSize(8);
+	color: $gridIconColor;
+  }
+}
+
+.prevpage {
+  font-family: fontawesome;
+  content: "\f0d9";
+  @include fontSize(8);
+  color: $gridIconColor;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f0d9";
+    @include fontSize(8);
+	color: $gridIconColor;
+  }
+}
+
+.lastpage {
+  font-family: fontawesome;
+  content: "\f04e";
+  @include fontSize(4);
+  color: $gridIconColor;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f04e";
+    @include fontSize(4);
+	color: $gridIconColor;
+  }
+}
+
+.firstpage_grey {
+  font-family: fontawesome;
+  content: "\f04a" ;
+  @include fontSize(4);
+  color: #ccc2c2;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f04a";
+    @include fontSize(4);
+    color: #ccc2c2;
+  }
+}
+
+.nextpage_grey {
+  font-family: fontawesome;
+  content: "\f0da";
+  @include fontSize(8);
+  color: #ccc2c2;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f0da";
+    @include fontSize(8);
+    color: #ccc2c2;
+  }
+}
+
+.prevpage_grey {
+  font-family: fontawesome;
+  content: "\f0d9";
+  @include fontSize(8);
+  color: #ccc2c2;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f0d9";
+    @include fontSize(8);
+    color: #ccc2c2;
+  }
+}
+
+.lastpage_grey {
+  font-family: fontawesome;
+  content: "\f04e";
+  @include fontSize(4);
+  color: #ccc2c2;
+
+  &:before {
+    font-family: fontawesome;
+    content: "\f04e";
+    @include fontSize(4);
+    color: #ccc2c2;
+  }
+}
+
+/* hoverTable */
+
+.hoverTable tbody tr {
+  &:hover {
+    background-color: #a4d4e2;
+  }
+
+  td {
+    border-bottom: 1px dotted #BEBEBE;
+  }
+}
+
+/* tree grid */
+
+.treeContainer {
+  background-color: white;
+  border: 1px solid $buttonDarkColor;
+}
+
+.treeGrid {
+  border-width: 0px;
+  border-style: none;
+
+  thead {
+    background: #ececec 0 0 no-repeat scroll none;
+
+    th {
+      color: $darkColor;
+      font-weight: bold;
+    }
+  }
+}
+
+/* simple grid */
+
+.simpleTable, .userTable {
+  background-color: white;
+  border: 1px solid #BABABA;
+}
+
+/*user Grid*/
+
+.simpleTable td {
+  border-right: 1px solid $lightColor;
+  border-left: 1px solid $lightColor;
+}
+
+.odd_column {
+  background-color: #EFEFEF;
+}
+
+.even_column {
+  background-color: $lightColor;
+}
+
+/* list styles */
+
+.squarebullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    background: transparent url("resources/images/bullet.gif") left center no-repeat;
+    padding: 0 0 0 16px;
+  }
+}
+
+/* action menu */
+
+.actions_menu a {
+  &:hover, &:active {
+    background-color: #f3f3f3;
+  }
+}
+
+/*  DataGrid CSS classes END*/
+
+.t7-grid .x-grid-row-editor .x-form-trigger-input-cell .x-trigger-noedit.x-form-text {
+  border-right: 0px !important;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* Liquidity T7 changes start */
+
+.ft-border-top {
+  border-top: 1px solid $accordianBar;
+}
+
+.ft-border-right {
+  border-right: 1px solid $accordianBar;
+}
+
+.ft-border-bottom {
+  border-bottom: 1px solid $accordianBar;
+}
+
+.ft-border-left {
+  border-left: 1px solid $accordianBar;
+}
+
+.ft-grid-header {
+  &.x-panel{
+    border: 1px solid $summaryBorderColor;
+    border-radius: 4px;
+    .x-panel-header {
+	  &.x-header{
+	    background-color: $panelHeaderBackground;
+        padding: 15px;
+        line-height: 25px;
+		border: none;
+		border-bottom: 1px solid $summaryBorderColor !important;
+		background-image: none;
+
+        .x-panel-header-body {
+          line-height: 25px;
+        }
+
+        .x-panel-header-text-container {
+          color: $fontColor;
+          @include fontSize(10);
+          font-weight: normal;
+		  padding-left: 0px;
+		  line-height: 25px;
+		}
+	  }
+	}
+	.ft-grid-body{
+		padding: 10px 15px 15px;
+		border: none;
+		.ft-grid{
+			.x-layout-fit.x-grid-body{
+				overflow: hidden !important;
+			}
+			.x-column-header-inner{
+				height: auto;
+			}
+		}
+	}
+    .x-tree-icon-parent, .x-grid-tree-node-expanded .x-tree-icon-parent, .x-tree-icon-leaf {
+      background-image: none;
+    }
+
+    .x-tree-icon {
+      width: 0px;
+      height: 0px;
+    }
+
+    .x-tree-elbow-img {
+      width: 19px;
+    }
+	
+	.x-tree-node-text {
+      @include fontSize(8);
+      line-height: 26px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.ft-ux-grid-header {
+	&.x-panel{
+		border: 1px solid $summaryBorderColor;
+		border-radius: 4px;
+		.x-panel-header{
+			&.x-header{
+				background-color: $lightColor;
+				padding: 15px;
+				line-height: 25px;
+				
+				.x-panel-header-text-container {
+					padding-left: 20px;
+					line-height: 25px;
+				}
+				.x-panel-header-text{
+					color: $fontColor;
+					top: 4px !important;
+					@include fontSize(10);
+					font-weight: normal;
+					line-height: 25px;
+				}
+				.x-tool.x-tool-after-title{
+					left: 0px !important;
+					top: 2px !important;
+					background-image: none;
+					color: $fontColor;
+					@include fontSize(8);
+					.x-tool-img{
+						display: none;
+					}
+					&:before{
+						content: "\f0d8";
+						font-family: fontawesome;
+					}
+				}
+			}
+		}
+		
+		&.x-collapsed{
+			.x-panel-header{
+				&.x-header{
+					.x-tool.x-tool-after-title{	
+						&:before{
+							font-family: fontawesome;
+							content: "\f0d7";
+						}
+					}
+				}
+			}
+		}
+
+		.ft-ux-body.x-panel-body{
+			padding: 15px;
+		}
+
+		.xn-form-trigger{
+			background: transparent url(resources/images/T7/dropdown_arrow.png) center no-repeat;
+			background-position: right center;
+			padding: 0px;
+			margin: 0px;
+			height: 36px;
+			width: 16px;
+			border-width: 1px 1px 1px 0px;
+			border: 1px solid $borderColor;
+			border-left: 0px;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+		.xn-form-field{
+			border-right : 0px !important;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+		label{
+			font-weight: normal;
+		}
+	}
+}
+
+/* Liquidity T7 changes end */
+
+/* Data Grid CSS Starts */
+
+/* Main DataGrid */
+.tableContainer table tbody tr td { padding: 4px 0 4px 0; border-width: 0px; line-height:normal;}
+
+.gridContainer { padding: 0px; overflow: auto; border-collapse: collapse; border-top: none; width: 100%;}
+.gridTable { min-width:100%; table-layout:fixed; tbody{ background-color: $gridRowColor; tr{ border-bottom: 2px solid $lightColor; }}}
+.gridTable thead tr th { text-align: left; background: $gridHeaderColor; color: $gridHeaderTextColor; padding: 11px 6px; height: 35px; @include fontSize(4); vertical-align: middle; font-weight: bold; white-space: nowrap; border-width: 0px 1px 0px 0px; border-color: $lightColor; }
+.gridTable tbody tr, thead tr { height: 24px;}
+.gridTable tbody tr td { padding: 12px 10px 11px; vertical-align: middle; white-space: nowrap; @include fontSize(8); border-width: 0px 1px 0px 0px; border-color: $lightColor; border-style: solid; height: 31px;}
+.gridTable tbody tr td .linkbox { border-width: 0; margin: 0px 2px; }
+.gridTable tfoot tr td { height: 32px; padding: 0 4px 0 4px; vertical-align: middle; white-space: nowrap; }
+.gridTable tfoot tr td { padding: 0px 4px 0 4px; }
+.gridTable_header{
+	height: 40px;
+	@include fontSize(10);
+	color: $gridHeaderTextColor;
+	background-color: $moduleHeaderColor2;
+	padding-left: 20px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ux_datagridpaging{
+	background-color: $pagingBackground;
+}
+
+.navColumn a{
+	margin-right: 10px;
+} 
+
+/* Data Grid CSS ends */
+ 
+/*  DataGrid CSS classes END*/ 
+
+.t7-grid{ 
+	.x-grid-body{
+		min-height: 33px; 
+		height: inherit !important;
+		.x-box-inner {
+			min-height: 33px;
+			height: inherit !important;
+		}
+	}
+}
+
+/*******Roles Temporary Grid Style**********/
+
+.view-grid{
+	.view-grid-section-header{
+		background-color: $moduleHeaderColor2;
+		color: $fontColor;
+		@include fontSize(4);
+		padding: 10px;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+	.view-grid-header{
+		.view-grid-header-text{
+			padding: 8px 10px;
+			@include fontSize(4);
+			color: $gridHeaderTextColor;
+			background-color: $gridHeaderColor;
+			border: 1px solid $lightColor;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+	}
+	.view-grid-body{
+		background-color: $gridRowColor;
+		border-bottom: 2px solid $lightColor;
+		.row{
+			margin-right: 0px;
+			margin-left: 0px;
+			border-bottom: 2px solid $lightColor;
+		}
+		.view-grid-body-content{
+			@include fontSize(8);
+			color: $fontColor;
+			padding: 12px 10px 11px;
+			border-width: 0px 1px 0px 0px;
+			border-style: solid;
+			border-color: $lightColor;
+			line-height: 26px;
+			i{
+				line-height: inherit;
+			}
+		}
+	}
+}
+
+::-webkit-scrollbar-corner {
+  background-color: $gridRowColor;
+}
+
+.xn-checked-disabled-row{
+  opacity: .5;
+}
+
+.x-nlg .x-grid .x-grid-row-selected .x-grid-cell-special{
+	background-image : none;
+}
+
+.x-grid {
+  .x-grid-cell.amountCol{
+    padding: 7px 10px 0px;
+    border-color: $lightColor;
+    border-style: solid;
+    border-width: 0px 1px 3px 0px;
+    .x-grid-cell-inner{
+      padding: 4px 10px;
+	  background-color: $lightColor;
+      height: 36px;
+      color: $fontColor;
+      background-image: none;
+      border: 1px solid $borderColor;
+      @include fontSize(6);
+      border-radius: 4px;
+    }
+  }
+  .amountField{
+    width: 119px !important;
+  }
+}
+
+.refresh-icon{
+  @include fontSize(8);
+  color: $fontColor;
+  &:hover{
+    color: $fontColor;
+  }
+}

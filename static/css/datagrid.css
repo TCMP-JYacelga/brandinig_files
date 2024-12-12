@@ -1,0 +1,126 @@
+/* Main DataGrid */
+.tableContainer table tbody tr td { padding: 4px 0 4px 0; border-width: 0px; line-height:normal;}
+
+.gridContainer { padding: 0px; overflow: auto; border-collapse: collapse; border: 1px solid #c5c5c5; border-top: none; width: 100%;}
+.gridTable { min-width:100%; table-layout:fixed; }
+.gridTable thead tr th { background: #5d99b5; color: #fff !important; line-height: 24px; padding: 9px 10px; font-size: 14px; vertical-align: middle; white-space: nowrap; font-family: calibri; border-width: 0px 1px 0px 0px !important; }
+.gridTable tbody tr, thead tr { height: 24px;}
+.gridTable tbody tr td { padding: 9px 10px; vertical-align: middle; white-space: nowrap; line-height: 24px; font-size: 14px;border-width: 0px 1px 0px 0px !important; border-color: #c5c5c5 !important; border-style: solid;}
+.gridTable tbody tr td .linkbox { border-width: 0; margin: 0px 2px; }
+.gridTable tfoot tr td { height: 32px; padding: 0 4px 0 4px; vertical-align: middle; white-space: nowrap; }
+.gridTable tfoot tr td { padding: 0px 4px 0 4px; }
+
+/* DataGrid Row Styling */
+.groupRow { font-weight: bold; color: #000; }
+.trEven {}
+.trEven td {}
+.trOdd {}
+.trOdd td {}
+.whiteRow { border: 1px none white; }
+.whiteRow td { border: 1px none white; background-color: white; }
+
+/* DataGrid Footer */
+#gridpager, .gridpager { line-height: 24px; padding:0; min-height: 24px; }
+.navColumn { display: inline;  padding: 2px 0 2px 0 !important; }
+.pageOfPage { display: inline-block; padding: 0 16px 2px 16px; font-size: 14px; font-family: calibri; color: #444444 !important; }
+.pageno { width: 24px; padding: 3px 3px 3px 5px !important; }
+.navbox { width:22px; height:22px; cursor:pointer; display:inline-block; vertical-align: middle; }
+
+/* Frequently used columns */
+.srnoCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.imgCell { width: 16px; min-width: 16px; text-align: center; white-space:nowrap; }
+.historyCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.viewCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.acceptCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.rejectCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.editCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.deleteCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.enableCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.disableCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.discardCell { width: 2em; min-width: 2em; text-align: center; white-space:nowrap; }
+.ccyCell { width: 8em; min-width: 8em; text-align: center; white-space:nowrap; }
+.amntCell { text-align: right; white-space:nowrap; }
+.dateCell { width: 8em; min-width: 8em; text-align: center; white-space:nowrap; }
+.statCell { min-width: 8em; white-space:nowrap; }
+.delCell { width: 6em; min-width: 6em; text-align: center; white-space:nowrap; }
+.cboxCell { width: 6em; min-width: 6em; text-align: center; white-space:nowrap; }
+
+/* tree table */
+.treeContainer {}
+.treeGrid thead th { padding: 2px 4px 2px 4px; vertical-align: middle; height: 24px; }
+.treeGrid td { padding:2px 4px 2px 4px; }
+.treeGrid tr.parent { font-weight: bold; }
+
+.treeGrid tbody tr td { height: 24px; border-width: 0 0 1px 0; border-style: none none dotted none; border-color: transparent transparent #8c8c8c transparent; }
+.treeTable tbody tr td { padding: 0.3em 1.5em; }
+.treeTable tbody tr td .expander {  background-position: left center; background-repeat: no-repeat; cursor: pointer; padding: 0; zoom: 1; font-weight: bold; }
+.treeTable tbody tr.collapsed td .expander { background-image: url('../images/treeview/plus.gif'); }
+.treeTable tbody tr.expanded td .expander { background-image: url('../images/treeview/minus.gif'); }
+
+/* history Table */
+.historyTable tr { height: 20px; }
+.historyTable td { padding:2px 4px 2px 4px; }
+
+/* action links in datagrid */
+.historylink_grey { cursor: default; }
+.viewlink_grey { cursor:default; }
+.editlink_grey { cursor: default; }
+.clonelink_grey { cursor: default; }
+.enrichlink_grey { cursor: default; }
+.infolink_grey { cursor: default; }
+
+.label_Aling{float:left;margin-top:4px;}
+.box_Aling{}
+.acceptlink {background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat; }
+.acceptlinkLock {height:16px;width:16px;margin-top:6px;background-image: url("../images/icons/icon_unchecked.gif");background-repeat: no-repeat;}
+.acceptedlink {background-image: url('../images/icons/icon_checked.gif'); background-repeat: no-repeat; }
+.acceptedlinkLock {height: 16px;
+    margin-top: 6px;
+    width: 16px;background-image: url("../images/icons/icon_checked.gif");background-repeat: no-repeat;}
+.acceptlink_grey { background-image: url('../images/icons/icon_unchecked_grey.gif'); background-repeat: no-repeat; cursor: default; }
+.acceptedlink_grey { background-image: url('../images/icons/icon_checked_grey.gif'); background-repeat: no-repeat; }
+.rejectlink { background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat; }
+.rejectedlink { background-image: url('../images/icons/icon_checked.gif'); background-repeat: no-repeat; }
+.rejectlink_grey { background-image: url('../images/icons/icon_unchecked_grey.gif'); background-repeat: no-repeat; cursor: default;  }
+.rejectedlink_grey { background-image: url('../images/icons/icon_checked_grey.gif'); background-repeat: no-repeat; }
+.discardlink { background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat;}
+.discardlink_grey { background-image: url('../images/icons/icon_unchecked_grey.gif'); background-repeat: no-repeat; cursor: default;}
+.discardedlink { background-image: url('../images/icons/icon_checked.gif'); background-repeat: no-repeat;}
+.enablelink { background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat;}
+.enablelink_grey { background-image: url('../images/icons/icon_unchecked_grey.gif'); background-repeat: no-repeat; cursor: default;}
+.enabledlink { background-image: url('../images/icons/icon_checked.gif'); background-repeat: no-repeat;}
+.disablelink { background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat; }
+.disablelink_grey { background-image: url('../images/icons/icon_checked_grey.gif'); background-repeat: no-repeat; cursor: default; }
+.disabledlink { background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat; }
+.enabledlink_grey { background-image: url('../images/icons/icon_checked_grey.gif'); background-repeat: no-repeat; cursor: default; }
+.disabledlink_grey { background-image: url('../images/icons/icon_unchecked_grey.gif'); background-repeat: no-repeat; cursor: default; }
+.selectlink { background-image: url('../images/icons/icon_unchecked.gif'); background-repeat: no-repeat; }
+
+
+.word-wrap {
+	margin:0;
+	padding:0;
+	height: auto;
+	font-weight: normal;
+	white-space: pre-wrap;	/* css 3*/
+	word-wrap: break-word; /* IE */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+}
+
+/* Left side tables */
+.sideTables tr td { padding: 2px 0; }
+
+/* a simple table */
+.simpleTable { min-width:100%; width: auto; border-collapse: collapse; }
+.simpleTable tr { height: 20px; line-height: 20px; }
+.simpleTable tr td { padding:4px 4px 0px 4px; border-width: 0px; vertical-align: middle; font-size: 0.8em; }
+
+table.noborder tr td { border-width: 0 !important; padding-right: 10px;}
+table.extrapadding tr td { padding: 4px; }
+
+.grandTotals { height: 26px; font-weight: bold; border-top: 1px solid #616161; border-bottom: 1px solid #616161; }
+.grandTotals table { height: inherit; }
+.grandTotals table tbody tr { height: inherit; }
+.grandTotals table tbody tr td { padding:4px 4px 0px 4px; border-width: 0px; vertical-align: middle; white-space: nowrap;}

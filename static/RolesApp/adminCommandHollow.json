@@ -1,0 +1,103 @@
+[
+	{  
+      "commandName":"UpdatePermission",
+      "path":"/rolesApi/Admin/permissions",
+      "kv":{  
+         "screenId":149,
+         "screenName":"Users",
+         "screenWeight":2,
+         "module":"Admin",
+         "subModule":"ADMPRM",
+         "tciRmParent":138,
+         "assetId":3,
+         "view":true,
+         "edit":false,
+         "auth":false
+      }
+   },
+   
+   {  
+      "commandName":"AddMessages",
+      "path":"/rolesApi/Admin/messages",
+      "kv":{  
+         "messageId":"160707000U54",
+         "messageType":"Mandate Registration",
+         "assetId":3,
+         "assignedFlag":true
+      }
+   },
+   {  
+      "commandName":"AddMessages",
+      "path":"/rolesApi/Admin/messages",
+      "kv":{  
+         "messageId":"1607120044ZU",
+         "messageType":"test doc",
+         "assetId":3,
+         "assignedFlag":true
+      }
+   },
+   
+   {  
+      "commandName":"AddReports",
+      "path":"/rolesApi/Admin/reports",
+      "kv":{  
+         "reportId":"CHRGSUMREP",
+         "reportType":"Charge Summary Report",
+         "assetId":3,
+         "assignedFlag":true
+      }
+   },
+   
+   {  
+      "commandName":"AddWidgets",
+      "path":"/rolesApi/Admin/widgets",
+      "kv":{  
+         "widgetId":"USERACTIVITY",
+         "widgetType":"User Activity",
+         "assetId":3,
+         "assignedFlag":true
+      }
+   },
+   
+   {  
+      "commandName":"UpdateInterface",
+      "path":"/rolesApi/Admin/interfaces",
+      "kv":{  
+         "interfaceType":"CCDPLUSIM1",
+         "interfaceId":"CCDPLUSIM1",
+         "subModule":"",
+         "assetId":3,
+         "edit":true,
+         "execute":false
+      }
+   },
+   {  
+      "commandName":"UpdateInterface",
+      "path":"/rolesApi/Admin/interfaces",
+      "kv":{  
+         "interfaceType":"BABU1",
+         "interfaceId":"BABU1",
+         "subModule":"",
+         "assetId":3,
+         "edit":false,
+         "execute":false
+      }
+   },
+   
+   {  
+      "commandName":"AddAlerts",
+      "path":"/rolesApi/Admin/alerts",
+      "kv":{  
+         "alertId":"16072400FX6X",
+         "alertType":"OnScreenBankReportsSUBSCIRPTION",
+         "assetId":3,
+         "assignedFlag":true
+      }
+   }
+   
+   
+   
+   
+]
+	
+	

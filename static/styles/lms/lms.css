@@ -1,0 +1,299 @@
+*  {
+font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+font-size: 8pt;
+letter-spacing: -.04em;
+}
+
+html body  {
+color: black;
+margin:	0;
+padding: 0;
+}
+
+a {
+color: black;
+border-bottom: 1px dotted #257F82;
+text-decoration: none;
+}
+
+a:hover {
+border-bottom: 1px solid #257F82;
+text-decoration: none;
+}
+
+img  {
+vertical-align:	middle;
+}
+
+td  {
+height: 18px;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+vertical-align: middle;
+}
+
+/*--- General Styles ---*/
+.centered  {
+text-align:	center;
+}
+
+.justified  {
+text-align:	justify;
+}
+
+.leftAligned  {
+text-align:	left;
+}
+
+.rightAligned  {
+text-align:	right;
+}
+
+.topLine  {
+border-top:	1px solid #BBC61F;
+}
+
+
+
+/*---- Error Messages ---*/
+#errorPanel,.errorPanel {
+color: #696F11;
+background-color: #F5F7DA;
+background-image: url('../../images/exclamation.png');
+background-repeat: no-repeat;
+border-bottom: 1px solid #BBC61F;
+border-top:	1px solid #BBC61F;
+height:	24px;
+padding-bottom: 2px;
+padding-left: 0;
+padding-right: 0;
+padding-top: 2px;
+}
+
+/*--- HTML form ---*/
+.cwInputBox  {
+/*--border: 1px solid WindowFrame;*/
+height: 20px;
+}
+.cwTextArea {
+/*--border: 1px solid WindowFrame;*/
+
+}	
+.cwRInputBox  {
+/*--border: 1px solid WindowFrame;*/
+text-align:right;
+height: 20px;
+}
+
+.cwInputBoxReadOnly  {
+/*--border: 1px solid InactiveBorder;*/
+border: none;
+height: 20px;
+}
+
+.cwInputBoxDisabled  {
+border: 1px solid InactiveBorder;
+background:gray;
+height: 20px;
+}
+
+
+/*-- Labels --*/
+.cwLabel  {
+font-weight:bold;
+padding-right:	2px;
+text-align:	right;
+}
+
+.cwReqLabel  {
+font-weight:bold;
+padding-right:	2px;
+text-align:	right;
+background-image:url('../../images/star.gif');
+background-position:right;
+background-repeat:no-repeat;
+}
+
+.wrappable { white-space: pre; }
+
+.viewField {
+height: 21px;
+padding: 5px;
+margin: 0px;
+}
+
+.RedTitle {
+font-weight:bold;
+color:red;
+padding-right:	2px;
+text-align:	right;
+}
+
+
+/*-- Buttons --*/
+#btnStrip, .btnStrip { text-align: center; }
+
+.button, button  {
+background-color: transparent;
+background-image: url('../../images/glassbtn.png');
+background-repeat: repeat-x;
+background-position: 0px;
+border: 1px solid #1C6264;
+color: White;
+font-weight: bold;
+height: 26px;
+padding: 2 10 2 10;
+margin: 0;
+min-width: 112px !important;
+white-space: nowrap;
+vertical-align: middle;
+}
+
+.smallBtn {
+background-color: transparent;
+background-image: url('../../images/glassbtn.png');
+background-repeat: repeat-x;
+background-position: 0px;
+border: 0px solid #1C6264;
+color: White;
+font-weight: bold;
+padding: 2 10 2 10;
+margin: 0;
+min-width: 112px !important;
+white-space: nowrap;
+height: 21px;
+vertical-align: top;
+}
+
+/* ---- Data Grid --*/
+#gridContainer { padding: 0px 4px 0px 4px; }
+.gridTable  {
+background-color: white;
+border-collapse: collapse;
+border-color: #B6D6D8;
+border-spacing:	0px;
+border-style: solid;
+border-width: 1px;
+margin:	0px;
+padding: 0px;
+width:	100%;
+}
+
+.gridTable td  {
+border:	1px solid #B6D6D8;
+padding: 2px;
+}
+
+.gridTable th  {
+border:	1px solid #B6D6D8;
+padding:2px;
+}
+
+.gridHeader  {
+background-color: #257F82;
+border-top: 1px solid #E5F2E5;
+border-left: 1px solid #E5F2E5;
+border-bottom: 1px solid #146A14;
+border-right: 1px solid #146A14;
+padding-top: 2px;
+color: white;
+font-weight: bold;
+height: 24px;
+text-align:	center;
+white-space: nowrap;
+}
+
+.gridLHeader  {
+background-color: #257F82;
+border-top: 1px solid #E5F2E5;
+border-left: 1px solid #E5F2E5;
+border-bottom: 1px solid #146A14;
+border-right: 1px solid #146A14;
+padding: 2px 0 0 2px;
+color:	White;
+font-weight: bold;
+height: 24px;
+text-align:	left;
+white-space: nowrap;
+}
+
+.gridRHeader  {
+background-color: #257F82;
+border-top: 1px solid #E5F2E5;
+border-left: 1px solid #E5F2E5;
+border-bottom: 1px solid #146A14;
+border-right: 1px solid #146A14;
+padding: 2px 0 0 2px;
+color:	White;
+font-weight: bold;
+height: 24px;
+text-align:	right;
+white-space: nowrap;
+}
+
+.gridRow  {
+background-color: #F2F8F2;
+border-color: 1px;
+color:	#257F82;
+font-weight: normal;
+height:	20px;
+}
+
+.gridRowO  {
+background-color: #FFFFFF;
+border-color: 1px;
+color:	#257F82;
+font-weight: normal;
+height:	20px;
+}
+
+.gridColumn  {
+height:	20px;
+text-align: center;
+}
+
+.gridLColumn  {
+height:	20px;
+text-align:	left;
+}
+
+.gridRColumn  {
+height:	20px;
+text-align:	right;
+}
+
+.pageofpage {
+font-size:10pt;
+font-weight:bold;
+color:black;
+height:20px;
+}
+
+/*--- Screen Title ---*/
+#screenTitle,.screenTitle  {
+font-size:102%;
+font-weight: bold;
+color: White;
+background-color: #BBC61F;
+line-height: 24px;
+padding-left: 2px;
+display:block;
+}
+
+.cwBrdCrumb {
+background-color:#fff;
+font-size:80%;
+font-style:normal;
+font-weight: bold;
+color:#303030;
+text-decoration:none;
+text-align:left;
+}
+
+
+/*--- Tab Page ---*/
+#tabContainer,.tabContainer {
+margin: 0;
+padding: 0 0 0 4px;
+width: 99%;
+}

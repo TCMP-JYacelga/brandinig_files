@@ -1,0 +1,601 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Adobe RoboHelp 9">
+<title>Authorizing a Payment Transaction</title>
+<link rel="StyleSheet" href="anz_1.css" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Payments\nPayment Txn\nPayments\nAuthorizing a Payment Transaction");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sample_help.htm", "", ">", "Home", "welcome_dashboard.htm");
+document.write("<a href=\"paymentsmain.htm\">Payments<\/a> > <a href=\"payments.htm\">Payment Txn<\/a> > <a href=\"payment_summary1.htm\">Payments<\/a> > Authorizing a Payment Transaction<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sample_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px;" cellspacing="0" width="100%" bgcolor="#04436F" align="left">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr style="height: 11px;">
+			<td style="vertical-align: middle;"><span style="font-family: 'Arial Black', sans-serif; 
+														 font-style: italic; 
+														 color: #ffffff;"><font color="white" ><i>&#160;</i></font></span><span 
+			 style="color: #ffffff; font-family: Arial, sans-serif; font-size: 10pt; 
+			 font-style: italic; font-weight: bold;"><font size="2" color="white" style="font-size:10.000000pt;"><i><b>GCP CashWeb</b></i></font></span><span 
+			 style="font-family: 'Arial Black', sans-serif; font-style: italic; 
+			 color: #ffffff;"><font color="white" ><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></font></span></td>
+			<td style="vertical-align: top;">
+   <p style="text-align: right; 
+												 font-family: 'Arial Black', sans-serif; 
+												 font-style: italic; font-size: 12pt; 
+												 color: #ffffff;">&#160;</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+<p style="text-align: right;"><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+
+<h1>Authorizing a Payment Transaction</h1>
+<p><span style="font-weight: bold;"><b><a href="about_authorizing_payment_transactions.htm">About 
+ Authorization of Payment Transactions</a></b></span></p>
+<hr align="center">
+<p class="ImportantNoteText"><span style="font-weight: bold;"><b>IMP</b></span>:</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>All 
+ transactions initiated in GCP CashWeb have to be <span style="font-weight: bold;"><b>authorized</b></span> 
+ and <span style="font-weight: bold;"><b>sent to bank</b></span> for further processing 
+ within a time frame set in the My Product master. <span style="mso-spacerun: yes;">&#160;</span>At 
+ both these stages, the Client Checker <span style="mso-spacerun: yes;">&#160;</span>(when 
+ the status of the transaction is <span style="font-weight: bold;"><b>Pending 
+ My Auth</b></span>) and the Client, (when the status of the transaction is 
+ <span style="font-weight: bold;"><b>Pending Release)</b></span> will receive 
+ a notification of the pending action.</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+ case a transaction remains unauthorized, system will notify the client 
+ before scrapping the transaction based on the ‘number’ of days entered 
+ in the ‘<b>Notify User of Scrap before’</b> <span style="mso-bidi-font-weight: bold;">field</span> 
+ in the MyProduct master.</p>
+<p class="IMPbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Based 
+ on the ‘<b style="mso-bidi-font-weight: normal;">Scrap if not Auth or 
+ Send’</b> limit set in the MyProduct master by the Maker, all transactions 
+ with status- <b style="mso-bidi-font-weight: normal;">‘Pending Auth’</b> 
+ and <b style="mso-bidi-font-weight: normal;">‘Pending My Auth’,</b> exceeding 
+ the limit will be scrapped bt the system and notification of the same 
+ will be sent to the Client and the Client Checker (authorizer). This is 
+ applicable for all the GCP CashWeb Client initiated transactions.</p>
+<hr align="center">
+<h2>Authorizing a Transaction and Releasing it to the Bank</h2>
+<hr size="1" align="center">
+<p class="Convensions">Note: You can authorize an instruction only if you 
+ have been assigned the rights for authorization.</p>
+<hr size="1" align="center">
+<h2>Authorizing 
+ Batch/ Instrument by Bank Admin</h2>
+<p style="font-weight: bold;"><span 
+	 style="font-weight: normal;">In the</span> Payment Center, <span style="font-weight: normal;">select 
+ the transactions with status showing</span> Pending My Auth <span style="font-weight: normal;">and 
+ click</span> <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/authorize.png" alt="authorize.png" style="border: none;" border="0">. <span 
+	 style="font-weight: normal;">The authorized transaction is now available 
+ for releasing to bank.</span></p>
+<h3>&#160;</h3>
+<h2>Authorizing 
+ Batch/ Instrument by Client</h2>
+<h3>Authorizing a Batch/ 
+ Instrument by Token Device:</h3>
+<p class="ListNumberUG">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+ the <span style="font-weight: bold;"><b>Payment Center</b></span>, select the 
+ transactions with status showing <span style="font-weight: bold;"><b>Pending</b></span> 
+ <span style="font-weight: bold;"><b>My Auth</b></span> and click <span style="font-weight: bold;"><b><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/authorize.png" alt="authorize.png" style="border: none;" border="0"></b></span> to open<span 
+	 style="font-weight: bold;"><b> Select Signature Type</b></span> popup. </p>
+<p class="ListNumberUG">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Select <span style="font-weight: bold;"><b>Token </b></span>option 
+ and click <span style="font-weight: bold;"><b>Continue</b></span> to go to <span 
+	 style="font-weight: bold;"><b>Batch / Instrument Authorization Summary</b></span> 
+ screen. </p>
+<p class="ListNumberUG">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="line-height: normal; mso-list: none;">The <b style="mso-bidi-font-weight: normal;">Token Entry 
+ Field</b> displays a unique system generated number.</span></p>
+<p class="ListNumberUG">4.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="line-height: normal; mso-list: none;">E</span><span style="mso-bidi-font-size: 11.0pt; 
+	 mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">nter 
+ the number generated in the ‘Token Entry Field’ into the <b style="mso-bidi-font-weight: normal;">Token 
+ Device</b> and press the <b style="mso-bidi-font-weight: normal;">Generate</b></span> 
+ <span style="mso-bidi-font-size: 11.0pt; mso-fareast-font-family: Calibri; 
+		 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+		 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">to generate 
+ a unique numeric code<b style="mso-bidi-font-weight: normal;">.</b> This 
+ is the secure <b style="mso-bidi-font-weight: normal;">Digital Signature.</b></span></p>
+<p class="ListNumberUG">5.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Enter 
+ the unique numeric code in the <b style="mso-bidi-font-weight: normal;">Digital 
+ Signature</b> field for the selected transactions.</p>
+<p class="ListNumberUG">6.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+ <b style="mso-bidi-font-weight: normal;">Sign &amp; Submit</b> to complete 
+ the authorization process.</p>
+<p class="Convensions">&#160;</p>
+<h3><b style="font-weight: bold;">Authorizing a Batch/ Instrument by Smart Card:</b></h3>
+<p 
+	 class="ListNumberUG">1.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+ the <span style="font-weight: bold;"><b>Payment Center</b></span>, select the 
+ transactions with status showing <span style="font-weight: bold;"><b>Pending</b></span> 
+ <span style="font-weight: bold;"><b>My Auth</b></span> and click <span style="font-weight: bold;"><b><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/authorize.png" alt="authorize.png" style="border: none;" border="0"></b></span> to open<span style="font-weight: bold;"><b> 
+ Select Signature Type</b></span> popup.</p>
+<p class="ListNumberUG">2.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Select <span style="font-weight: bold;"><b>Smart 
+ Card </b></span>option and click <span style="font-weight: bold;"><b>Continue</b></span> 
+ to go to <span style="font-weight: bold;"><b>Batch / Instrument Authorization 
+ Summary</b></span> screen. </p>
+<p class="ListNumberUG">3.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In the <span style="font-weight: bold;"><b>Batch/ 
+ Instrument Authorization</b></span> screen, the <span style="font-weight: bold;"><b>Sign</b></span> 
+ button is enabled when you select the Smart Card option.</p>
+<p class="ListNumberUG">4.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click <span style="font-weight: bold;"><b>Sign. 
+ </b></span>The e-Signer box appears.</p>
+<p class="ListNumberUG">5.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Enter the appropriate password to authorize 
+ the batch/transaction.</p>
+<hr align="center">
+<p class="Convensions" style="font-weight: bold;">Note: <span style="font-weight: normal;">The 
+ Smart Card instrument &#160;has to be correctly plugged into the User’s 
+ computer terminal.</span></p>
+<hr align="center">
+<p>On successful authorization the screen will display a message confirming 
+ the same. The status of the authorized instrument changes to - Pending 
+ Release which indicates that it is ready to be sent to the bank for further 
+ processing. Depending on the parameters set up in the My Products master, 
+ the transactions are sent manually or automatically.</p>
+<p>To reject or delete 
+ the transaction, select the transaction, click <span style="font-weight: bold;"><b>More</b></span> 
+ and select <b style="mso-bidi-font-weight: normal;">Reject</b> or <b style="mso-bidi-font-weight: normal;">Discard.</b> 
+ To reject a transaction, it is mandatory to specify a reject reason.</p>
+<hr align="center">
+<p class="Convensions"><span 
+	 style="font-weight: bold;"><b>Note</b></span>: </p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>All the discarded transactions can be 
+ viewed in the summary screen with the status as Deleted and are available 
+ for replicating. Once replicated, they are available &#160;for initiating 
+ the transaction.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>&#160;&#160;When 
+ the status of the transaction changes to <b style="mso-bidi-font-weight: normal;">'Pending 
+ Release'</b>, client will receive a notification of the same. This event 
+ will be fired on authorizing the transaction. &#160;In case a transaction 
+ with status <b style="mso-bidi-font-weight: normal;">‘Pending Release’</b> 
+ does not appear in the summary screen, the same may have been scrapped 
+ based on the ‘<b style="mso-bidi-font-weight: normal;">Scrap if not Auth 
+ or Send’</b> limit set in the MyProduct master. Notification of the same 
+ will be sent to the Client and the Client Checker (authorizer) of the 
+ same. This is applicable for all the GCP CashWeb Client initiated 
+ transactions.</p>
+<hr align="center">
+<h3><span style="font-weight: bold;"><b>S</b></span>econd 
+ Level Authorization</h3>
+<p>Depending upon the 
+ settings done in the bank GCP systems, if the payment amount is above 
+ a certain threshold, a second bank user is required to view the transaction 
+ and authorize the same in addition to the existing authorization workflow,</p>
+<p class="Bullet1"><span style="font-family:Wingdings">&#167;</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="font-weight: bold;"><b>Second Auth:</b></span> This action button 
+ is available to the users who are assigned the rights for second authorization. Conditions 
+ that would transfer the transaction to second level authorization are:</p>
+<p class="ListBulletIndent" style="margin-left: 99px; font-style: italic;">–Transaction above the threshold 
+ limit of single authorization.</p>
+<p class="ListBulletIndent" style="margin-left: 99px; font-style: italic;">– Transactions which are initially 
+ authorized by the user having rights within the threshold limit.</p>
+<p>This method is applicable 
+ for manual entry as well as file upload. </p>
+<p>To authorize select 
+ the partially authorized transaction and click <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/second_authorize.png" style="border: none;" alt="second_authorize.png" border="0">.</p>
+<h2><span style="font-weight: bold;"><b><a class="dropspot" href="javascript:TextPopup(this)" 
+										 id="a1">Send Transactions to the 
+ Bank<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></b></span></h2>
+<div class="droptext" id="POPUP362532947" style="display: none;">
+	<p><b style="font-weight: bold; mso-bidi-font-weight: normal;">Send’</b> 
+	 signifies an action where transactions are sent to the the back office 
+	 application for further processing, after client has initiated and 
+	 authorized the transactions in GCP CashWeb. This step signifies 
+	 submission of payment transaction to bank for further processing.</p>
+	<p>Depending on the parameters set up in the My Products master, the 
+	 transactions can be sent manually or automatically.</p>
+	<p>You cannot send the transactions that are on ‘<b style="mso-bidi-font-weight: normal;">Hold’</b>. 
+	 You need to first ‘<b style="mso-bidi-font-weight: normal;">Release</b>’ 
+	 the transactions from hold and then ‘<b style="mso-bidi-font-weight: normal;">Send’</b> 
+	 to the bank for further processing. In case you are assigned <b style="mso-bidi-font-weight: normal;">Across 
+	 Entity</b> rights for a corporation, you can perform this function 
+	 for clients spread across different countries.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 In case Auto Send is selected at MyProduct level for products which 
+	 do not require an explicit “Send”, the authorized transactions are 
+	 automatically transmitted to the back office application for further 
+	 processing. You can use this option to send transactions which are 
+	 back / current / future dated. Back / current dated transactions are 
+	 automatically rolled over to the subsequent working day if they cross 
+	 the cutoff time. Future dated transaction are subsequently warehoused 
+	 at GCP CashWeb backend till their due date.</p>
+	<hr align="center">
+	<p><b style="font-weight: bold;">To ‘</b><b style="mso-bidi-font-weight: normal;">Send’</b> 
+	 <b>Instructions to Bank for Further Processing of Transaction:</b></p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+	 the <b style="mso-bidi-font-weight: normal;">Payment Summary</b> screen, 
+	 select the record with status ‘<span style="font-weight: bold;"><b>Pending 
+	 Release</b></span><b>’</b>. You can only send those transactions for which 
+	 you are assigned the rights.</p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/send.png" alt="send.png" style="border: none;" border="0"> to release the record 
+	 to the bank for further processing. The status of this transaction 
+	 now changes to <b>Sent to Bank.</b></p>
+	<p class="ListNumberUG2" 
+		 style="mso-bidi-font-weight: bold;">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In case you wish to discard 
+	 a transaction at this point, click the <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/discard.png" alt="discard.png" style="border: none;" border="0">. A popup 
+	 appears where you have to specify the reason for holding or discarding 
+	 the transaction.</p>
+	<p class="ListNumberUG2" 
+		 style="mso-bidi-font-weight: bold;">4<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click <b>OK.</b> A message 
+	 confirming the action appears in the header area of the screen.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 All the discarded transactions can be viewed in the Payment Summary 
+	 screen with the status as Deleted and are available for cloning. Once 
+	 replicated, they are available for initiating the transaction</p>
+	<hr align="center">
+	<p class="ListNumberUG2" 
+		 style="mso-bidi-font-weight: bold;">5<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>You also have the option to 
+	 <span style="font-weight: bold;"><b>Hold</b></span> the transaction.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: 
+	 In case a future-dated transaction on authorization is sent to bank 
+	 from Client-end, the same will show the status as ‘<span style="font-weight: bold;"><b>Warehoused</b></span>’ 
+	 instead of Sent to Bank. This ensures the Client is also aware of 
+	 the pending status of the transaction.</p>
+	<hr align="center">
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Hold/ 
+ Release a Transaction<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></h2>
+<div class="droptext" id="POPUP513464125" style="display: none;">
+	<p class="ListBullet2Indent">GCP CashWeb provides a feature for 
+	 holding a transaction due to reasons such as insufficient funds for 
+	 making the collections etc. Only those transactions with status <b 
+	 style="mso-bidi-font-weight: normal;">‘Pending Release’</b> can be 
+	 put on hold. This prevents the transaction from being released to 
+	 Bank. It is mandatory to release and authorize such transactions kept 
+	 on hold for further processing. This feature is available only for 
+	 authorizers with privileges to this screen.</p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-weight: bold;">In case you wish to hold a transaction 
+	 at this point, in the Payment center, select the transaction and click</span> 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/hold.png" alt="hold.png" style="border: none;" border="0"><span style="mso-bidi-font-weight: bold;">. 
+	 A popup appears where you have to specify the reason for holding the 
+	 transaction.</span></p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span 
+	 style="mso-bidi-font-weight: bold;">Click <b>OK.</b> A message confirming 
+	 the action appears in the header area of the screen.</span></p>
+	<p class="ListNumberUG2">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>To 
+	 release a document kept on hold, select the transaction and click 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/release.png" alt="release.png" style="border: none;" border="0"> icon</p>
+	<hr align="center">
+	<p class="Convensions" style="mso-list: l0 level1 lfo2;"><span style="mso-bidi-font-size: 11.0pt; 
+	 mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-weight: bold;"><b>Note</b></span><span style="mso-bidi-font-size: 11.0pt; 
+											 mso-fareast-font-family: Calibri; 
+											 mso-bidi-font-family: 'Times New Roman'; 
+											 mso-ansi-language: EN-US; 
+											 mso-fareast-language: EN-US; 
+											 mso-bidi-language: AR-SA;">: 
+	 Every release request has to be authorized. As the authorizer, you 
+	 need to validate the correctness of the information provided for the 
+	 hold request and either accept the record or reject it.</span></p>
+	<hr align="center">
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a4">Stop/ 
+ Cancel Payment Request for Instruments initiated in GCP CashWeb<img class="TwistyImage" alt="arrow-open.jpg" style="border: none;" src="arrow-open.jpg"><img class="TwistyImage" alt="arrow-close.jpg" style="border: none; display: none;" src="arrow-close.jpg"></a></h2>
+<div class="droptext" id="POPUP356865134" style="display: none;">
+	<p style="font-weight: bold;">Marking a Cancel / Stop Pay Request for 
+	 Instruments initiated in GCP CashWeb</p>
+	<p class="MsoNormal" style="text-align: justify;">Stop payment is an 
+	 order issued to a bank by clients for not making a payment against 
+	 an instruction initiated on their account. Stop Payment is done when 
+	 the instrument is handed over to beneficiary and the Bank / Client 
+	 is not in possession of the instrument. When the physical instrument 
+	 is still in possession of the client, the stop pay request is internally 
+	 referred to as ‘Cancellation’.</p>
+	<p class="MsoNormal" style="text-align: justify;">After issuance of 
+	 payment initiation requests, client can subsequently inform the system 
+	 to stop the payment being made to the beneficiary through the stop 
+	 payment request. By raising a stop payment request, client can stop 
+	 the payment instructions for physical as well as electronic instruments.</p>
+	<p class="MsoNormal">A brief summary is of when Cancellation / Stop 
+	 Payment can be initiated is provided below:</p>
+	<table class="MsoNormalTable" style="border: Solid 1px #000000; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 0in 5.4pt 0in 5.4pt; 
+			 vertical-align: top; margin-left: 40pt;" cellspacing="1" width="612">
+		<col>
+		<col width="192">
+		<col width="74">
+		<col>
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 18pt;">
+			<td style="border: Solid 1px #000000; padding: 0in 5.4pt 0in 5.4pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px; vertical-align: middle;" width="84"><p 
+				 style="text-align: center; margin-left: 2pt; line-height: Normal;"><b 
+			 style="font-weight: bold; mso-bidi-font-weight: normal;">Instrument</b></p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000; mso-border-left-alt: solid black 2.25pt; 
+				 padding: 0in 5.4pt 0in 5.4pt; padding-left: 0px; padding-top: 0px; 
+				 padding-right: 0px; padding-bottom: 0px; vertical-align: middle;"><p 
+				 style="mso-bidi-font-weight: normal; margin-left: 2pt; 
+				 line-height: Normal;"><b style="font-weight: bold;">Request 
+			 Initiating</b> <b style="font-weight: bold; mso-bidi-font-weight: normal;">Application</b></p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000; mso-border-left-alt: solid black 2.25pt; 
+				 padding: 0in 5.4pt 0in 5.4pt; padding-left: 0px; padding-top: 0px; 
+				 padding-right: 0px; padding-bottom: 0px; vertical-align: middle;"><p 
+				 style="margin-left: 2pt; line-height: Normal;"><b style="font-weight: bold; 
+			 mso-bidi-font-weight: normal;">Cancel Payment</b></p></td>
+			<td style="border-top: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+				 mso-border-left-alt: solid black 2.25pt; padding: 0in 5.4pt 0in 5.4pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px; border-right-width: 1px; border-right-style: solid; 
+				 vertical-align: middle;" width="222"><p style="margin-left: 2pt; 
+														 line-height: Normal;"><b 
+			 style="font-weight: bold; mso-bidi-font-weight: normal;">Stop 
+			 Payment</b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 18pt;">
+			<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000; mso-border-top-alt: windowtext 1.5pt; 
+				 mso-border-left-alt: black 2.25pt; mso-border-bottom-alt: black .25pt; 
+				 mso-border-right-alt: black 2.25pt; mso-border-style-alt: solid; 
+				 padding: 0in 5.4pt 0in 5.4pt; padding-left: 0px; padding-top: 0px; 
+				 padding-right: 0px; padding-bottom: 0px; vertical-align: middle;" 
+				 width="84"><p style="text-align: center; margin-left: 2pt; 
+								 line-height: Normal;"><span style="color: #000000;"><font color="black" >Electronic</font></span></p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+				 mso-border-top-alt: windowtext 1.5pt; mso-border-left-alt: black 2.25pt; 
+				 mso-border-bottom-alt: black .25pt; mso-border-right-alt: black 2.25pt; 
+				 mso-border-style-alt: solid; padding: 0in 5.4pt 0in 5.4pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px; vertical-align: middle;"><p style="margin-left: 2pt; 
+				 line-height: Normal;"><span style="color: #000000;"><font color="black" >Bank 
+			 </font></span></p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+				 mso-border-top-alt: solid windowtext 1.5pt; mso-border-left-alt: solid black 2.25pt; 
+				 padding: 0in 5.4pt 0in 5.4pt; padding-left: 0px; padding-top: 0px; 
+				 padding-right: 0px; padding-bottom: 0px; vertical-align: middle;"><p 
+				 style="margin-left: 2pt; line-height: Normal;"><span style="color: #000000;"><font color="black" >Before 
+			 GL Verification</font></span></p></td>
+			<td style="border-bottom: Solid 1px #000000; mso-border-top-alt: solid windowtext 1.5pt; 
+				 mso-border-left-alt: solid black 2.25pt; padding: 0in 5.4pt 0in 5.4pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px; border-right-width: 1px; border-right-style: solid; 
+				 vertical-align: middle;" width="222"><p style="margin-left: 2pt; 
+														 line-height: Normal;"><span 
+			 style="color: #000000;"><font color="black" >Not Applicable</font></span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes; height: 18pt;">
+			<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000; mso-border-top-alt: windowtext 1.5pt; 
+				 mso-border-left-alt: black 2.25pt; mso-border-bottom-alt: black .25pt; 
+				 mso-border-right-alt: black 2.25pt; mso-border-style-alt: solid; 
+				 padding: 0in 5.4pt 0in 5.4pt; padding-left: 0px; padding-top: 0px; 
+				 padding-right: 0px; padding-bottom: 0px; vertical-align: middle;" 
+				 width="84"><p style="text-align: center; margin-left: 2pt; 
+								 line-height: Normal;"><span style="color: #000000;"><font color="black" >Physical</font></span></p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+				 mso-border-top-alt: windowtext 1.5pt; mso-border-left-alt: black 2.25pt; 
+				 mso-border-bottom-alt: black .25pt; mso-border-right-alt: black 2.25pt; 
+				 mso-border-style-alt: solid; padding: 0in 5.4pt 0in 5.4pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px; vertical-align: middle;"><p style="margin-left: 2pt; 
+				 line-height: Normal;"><span style="color: #000000;"><font color="black" >Bank 
+			 </font></span></p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+				 mso-border-top-alt: solid windowtext 1.5pt; mso-border-left-alt: solid black 2.25pt; 
+				 padding: 0in 5.4pt 0in 5.4pt; padding-left: 0px; padding-top: 0px; 
+				 padding-right: 0px; padding-bottom: 0px; vertical-align: middle;"><p 
+				 style="margin-left: 2pt; line-height: Normal;"><span style="color: #000000;"><font color="black" >Before 
+			 Printing</font></span></p></td>
+			<td style="border-bottom: Solid 1px #000000; mso-border-top-alt: solid windowtext 1.5pt; 
+				 mso-border-left-alt: solid black 2.25pt; padding: 0in 5.4pt 0in 5.4pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px; border-right-width: 1px; border-right-style: solid; 
+				 vertical-align: middle;" width="222"><p style="margin-left: 2pt; 
+														 line-height: Normal;"><span 
+			 style="color: #000000;"><font color="black" >Before Liquidation</font></span></p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+	<p style="tab-stops: list 16.6pt;">At any point of time, you, as a 
+	 maker can view the beneficiary and advice Info details that you have 
+	 entered for a transaction marked as ‘Confidential’. However, while 
+	 marking stop payment requests for the ‘Confidential’ instructions; 
+	 all other users can view these details only if the <b>View Confidential</b> 
+	 flag has been selected for their user IDs in Application Users master</p>
+	<p class="MsoNormal">GCP CashWeb allows you to stop or cancel physical 
+	 as well as electronic payments which are already initiated in the 
+	 system using the Stop /Cancel Payments feature, at <span style="font-weight: bold;"><b>Instrument</b></span> 
+	 level. &#160;A stop request can be marked only after the instruction 
+	 has been authorized by the bank. In case you are assigned <b style="mso-bidi-font-weight: normal;">Across 
+	 Entity</b> rights for a corporation, you can stop transactions from 
+	 processing further for clients spread across different countries.</p>
+	<hr align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>:</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Only those payment transactions with 
+	 status as ‘<span style="font-weight: bold;"><b>Sent to Bank</b></span>’ for 
+	 electronic instruments and '<span style="font-weight: bold;"><b>Received 
+	 by Bank</b></span>' in case of physical instruments, are available for 
+	 Stop payment in GCP CashWeb.</p>
+	<p 
+		 class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Warehoused transactions can be stopped 
+	 only once they are active in the system.</p>
+	<hr align="center">
+	<p class="MsoNormal"><b style="font-weight: bold;">To mark a stop/cancel 
+	 payment:</b></p>
+	<p class="ListNumberUG2">1<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>In 
+	 the Payment center, click the Instrument tab to go to the Instrument 
+	 summary, select the check box of the transaction for which you want 
+	 to issue the stop payment instruction. <span style="mso-bidi-font-size: 11.0pt; 
+													 mso-fareast-font-family: Calibri; 
+													 mso-bidi-font-family: 'Times New Roman'; 
+													 mso-ansi-language: EN-US; 
+													 mso-fareast-language: EN-US; 
+													 mso-bidi-language: AR-SA;">These 
+	 transactions should necessarily show status as <b style="mso-bidi-font-weight: normal;">Debited.</b></span></p>
+	<p class="ListNumberUG2">2<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+	 <b style="mso-bidi-font-weight: normal;">More</b> to open the additional 
+	 actions that can be applied to a transaction and click <span style="mso-bidi-font-weight: normal;"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/stop(symbol_only).png" alt="stop(symbol_only).png" style="border: none;" border="0"></span><span style="mso-bidi-font-weight: normal; 
+															 font-weight: bold;"><b>Stop</b></span>.</p>
+	<p class="ListNumberUG2">3<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/submit.png" alt="submit.png" style="border: none;" border="0"> to process the stop request. 
+	 The transaction will now be available for authorization.</p>
+	<p style="font-weight: bold;">Authorizing a Stop Pay Request:</p>
+	<p class="ListBullet3"><span style="font-family:'Microsoft Sans Serif'" >□</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Based 
+	 on the <a href="maker_and_checker_concept.htm">Maker-Checker</a> concept, 
+	 if you are eligible for authorization, select the record and click 
+	 <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/authorize.png" alt="authorize.png" style="border: none;" border="0">. You also have 
+	 the option to <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/reject.png" alt="reject.png" style="border: none;" border="0">it. 
+	 <span style="mso-list: l0 level1 lfo3;">The status of the request 
+	 will change to '</span><span style="mso-list: l0 level1 lfo3; font-weight: bold;"><b>Authorized</b></span><span 
+	 style="mso-list: l0 level1 lfo3;">' or '</span><span style="mso-list: l0 level1 lfo3; 
+															 font-weight: bold;"><b>Rejected</b></span><span 
+	 style="mso-list: l0 level1 lfo3;">'. Rejected requests will appear 
+	 in summary screen and will be available for editing. In case you reject 
+	 the request, it is mandatory to specify the reject reason.</span></p>
+	<p class="ListBullet3Indent">Before authorization, you have the option 
+	 to <span style="font-weight: bold;"><b><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/discard.png" alt="discard.png" style="border: none;" border="0"></b></span>the 
+	 request .</p>
+	<hr size="1" align="center">
+	<p class="Convensions"><span style="font-weight: bold;"><b>Tip</b></span>: 
+	 Click <img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/download.png" alt="download.png" style="border: none;" border="0"> to save the 
+	 request in .XLS format. &#160;&#160;</p>
+	<hr size="1" align="center">
+</div>
+<p style="font-weight: bold;"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/see_also.png" alt="see_also.png" style="border: none;" width="21" height="21" border="0">See Also</p>
+<p 
+	 class="ListBullet"><span class="BodyTextIndentChar"><span style="font-family:'Microsoft Sans Serif'" >•</span></span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><a href="stop_payment.htm"><span style="mso-bidi-font-size: 11.0pt; 
+														 mso-fareast-font-family: Calibri; 
+														 mso-bidi-font-family: 'Times New Roman'; 
+														 mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA; 
+														 mso-bookmark: _Toc313615216; 
+														 font-weight: bold;"><b>Stop 
+ Payment Request for Instruments</b></span> <span style="mso-bookmark: _Toc313615216; 
+												 mso-fareast-font-family: Calibri; 
+												 mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA; 
+												 font-weight: bold;"><b>initiated 
+ outside GCP CashWeb</b></span></a></p>
+<p><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px; margin-right: 5px;" cellspacing="0" width="100%" bgcolor="#02426D" align="right">
+		<col style="width: 100%;">
+		<tr style="height: 10px;">
+			<td style="vertical-align: middle;">
+   <p style="text-align: right; 
+													 font-style: italic; 
+													 font-family: 'Eras Demi ITC', sans-serif; 
+													 color: #ffffff; font-size: 8pt; 
+													 margin-left: 12px;">Innovation. 
+			 Bank on it</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP362532947');
+	TextPopupInit('a2','POPUP513464125');
+	TextPopupInit('a4','POPUP356865134');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

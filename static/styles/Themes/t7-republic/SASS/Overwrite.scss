@@ -1,0 +1,31 @@
+.ft-sub-nav > li > a{
+	padding: 7px 10px;
+}
+
+.ft-sidebar-accordion-header, .ft-sidebar-accordion-content a, .ft-sidebar-accordion-content a:hover, .ft-content-alert{
+	color: $lightColor;
+}
+
+.ft-status-bar .ft-status-bar-li-done a{
+	color: $lightColor;
+}
+
+.ft-circle-alerts {
+    background-image: url("resources/images/T7/circle-background-red.png");
+	height: 25px;
+	width: 25px;
+	line-height: 25px;
+	color: $lightColor;
+}
+
+.ui-vertical-tab {
+	ul {
+		a {
+			width: 160px; 
+		}
+	}
+	.ui-vertical-tabs-selected :after{
+		border-top: 14px solid transparent;
+		border-bottom: 15px solid transparent;
+	}
+}

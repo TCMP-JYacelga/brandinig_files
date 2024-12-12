@@ -1,0 +1,11 @@
+.ft-header{
+  border-bottom: solid $headerBorderColor 8px;
+  color: $lightColor;
+  .globalHeader{
+    background-position: 10px 3px;
+  }
+}
+
+input.form-control[disabled]{
+  background-color: $fieldDisabledColor;
+}

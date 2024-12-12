@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+fieldset { border: solid 1px #DEDEDE; margin: 1em; }
+fieldset legend { font-weight: bold; height: 20px; border-left: 1px solid #616161; border-right: 1px solid #616161; }
+fieldset ul, fieldset li { border: 0; margin: 0; padding: 0; list-style: none; vertical-align: top; vertical-align: top; }
+fieldset li { clear: both; list-style: none; padding: 1px; vertical-align: top; }
+fieldset input { float: left; }
+fieldset label { width: 15em; float: left; vertical-align: top; }

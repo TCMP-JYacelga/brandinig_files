@@ -1,0 +1,12 @@
+/* CSS Document for Flash based Charts */
+.flashContainer, #flashContainer { width: auto; min-height:128px; height: 100%; z-index:-1; background-color: #fff; }
+.flashContainer object, #flashContainer object { min-height: 128px; height: 100%; vertical-align:text-top; }
+.flashContainer embed, #flashContainer embed { min-height: 128px; height: 100%; vertical-align:text-top; }
+
+.smflashContainer, #smflashContainer { width: auto; min-height:128px; height:128px; z-index:-1; background-color: #fff; padding: 4px; }
+.smflashContainer object, #smflashContainer object { min-height: inherit; height: 100%; vertical-align:text-top; }
+.smflashContainer embed, #smflashContainer embed { min-height: inherit; height: 100%; vertical-align:text-top; }
+
+.graphContainer, #graphContainer { width: auto; min-height:206px; z-index: -1; padding: 4px; background-color: #fff; }
+.graphContainer object, #graphContainer object { min-height:inherit; height: 100%; vertical-align:text-top; }
+.graphContainer embed, #graphContainer embed { min-height:inherit; height: 100%; vertical-align:text-top; }

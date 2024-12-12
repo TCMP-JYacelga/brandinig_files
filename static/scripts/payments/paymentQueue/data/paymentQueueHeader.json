@@ -1,0 +1,12 @@
+{
+    "d": {
+        "bankProcessingQueueInstHeader": {
+            "effectiveDate": "09/19/2014",
+            "sendingAccount": "875487",
+            "description": "description",
+            "controlInstTotal": 2,
+            "controlTotal": "$400.00",
+            "rateType": ""
+        }
+    }
+}

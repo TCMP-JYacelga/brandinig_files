@@ -1,0 +1,5 @@
+#messageArea { margin-top: 4px; padding: 2px; }
+#messageArea.errors {}
+#messageArea span { padding-left: 18px; font-weight: bold; }
+#messageArea ul { list-style: circle inside; padding-left: 24px; padding-top: 4px; }
+#messageArea ul li {}

@@ -1,0 +1,250 @@
+.ft-form-warning {
+  color: $headerBorderColor;
+}
+
+/*
+====================
+Disable Skype links.
+====================
+*/
+
+span {
+  &.skype_pnh_container {
+    display: none !important;
+  }
+
+  &.skype_pnh_print_container {
+    display: inline !important;
+  }
+}
+
+.ft-error-message {
+  background-color: #ffdbdb;
+  color: #900;
+  padding: 15px;
+  max-height: 120px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+  @include fontSize(4);
+}
+
+.create-advanced-filter-label {
+  cursor: pointer;
+}
+
+.ui-spinner {
+  position: relative;
+  border: 0px solid white;
+}
+
+.ui-spinner-buttons {
+  position: absolute;
+}
+
+.ui-spinner-button {
+  overflow: hidden;
+}
+
+label.required, span.required {
+  background: transparent right top no-repeat scroll url('resources/images/T7/form/asterisk.gif');
+  padding-right: 15px;
+  display: inline-block;
+}
+
+label.requiredLeft, span.requiredLeft {
+  background: transparent left top no-repeat scroll url('resources/images/T7/form/asterisk.gif');
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+  white-space: nowrap;
+}
+
+.custom-truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
+  white-space: nowrap;
+}
+
+.custom-tooltip {
+  top: 20px;
+  position: absolute;
+  border: 1px solid #868686;
+  padding: 5px;
+  max-height: 500px;
+  overflow: auto;
+  min-width: 250px;
+  background-color: $lightColor;
+  z-index: 1000;
+  color: $fontColor;
+}
+
+.summary-highlight {
+  background-color: $moduleHeaderColor2;
+  color: $primaryColor1;
+}
+
+.t7-statusbar-info-with-noline {
+  color: $linksColor;
+  text-decoration: none;
+  @include fontSize(5);
+}
+
+.t7-horizontal-line {
+  border-bottom: 1px;
+  border-bottom-color: #bbbbbb;
+  border-bottom-style: double;
+}
+
+/*---Recent Action result font color:start---*/
+
+.error_font {
+  color: #900;
+}
+
+.success_font {
+  color: $primaryColor;
+}
+
+.warning_font {
+  color: $fontColor;
+}
+
+/*---Recent Action result font color:start---*/
+
+.ux_text-elipsis {
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.legend {
+  list-style: none;
+  float: right;
+
+  li {
+    float: left;
+    margin-right: 10px;
+    color: $fontColor;
+  }
+
+  span {
+    &.square {
+      border: 0px solid $borderColor;
+      float: left;
+      width: 12px;
+      height: 12px;
+      margin: 2px;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    &.text {
+      border: 0px solid $borderColor;
+      float: left;
+      vertical-align: middle;
+      text-align: center;
+      height: 16px;
+    }
+  }
+}
+
+fieldset.fieldGroup {
+  border-color: #CFCFCF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  color: #848484;
+  margin: 0px;
+  padding: 2px 2px 2px 0;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+
+  legend {
+    font-weight: normal;
+    width: auto;
+    margin: 0px;
+    padding: 5px 10px 5px 0px;
+    @include fontSize(4);
+    color: #bfbfbf;
+    border-bottom: 0px;
+  }
+}
+
+.xn-portlet {
+  .x-form-item-label, .x-form-cb-label {
+    font-family: $fontFamily;
+    @include fontSize(4);
+  }
+}
+
+.frmLabel {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  margin-bottom: 1px;
+  font-weight: bold;
+  @include fontSize(4);
+  padding-left: 0px;
+  color: $fontColor;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.ft-change-language-text {
+  line-height: 35px;
+  @include fontSize(4);
+}
+
+.limit-reached {
+  text-decoration: none !important;
+  color: #FFBABA;
+}
+
+.additional-info-label {
+  .x-form-item-label {
+    color: $fontColorDarker;
+    @include fontSize(4);
+    font-weight: bold;
+  }
+
+  .x-form-display-field {
+    color: $fontColorDarker;
+    @include fontSize(4);
+    font-weight: bold;
+  }
+}
+
+.xn-required {
+  .x-form-text, textarea.x-form-field, input[type=text].x-form-field, .xn-suggestion-box {
+    border: 1px solid red;
+    background-color: #FFCECE;
+    background-image: none;
+  }
+}
+
+.boldText {
+  font-weight: bold !important;
+}
+
+label{
+	@include fontSize(4);
+}
+
+.red{
+	color : red;
+}
+
+.wrap-word {
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     white-space: pre-wrap !important;       /* css-3 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+     white-space: -webkit-pre-wrap !important; /* Newer versions of Chrome/Safari*/
+     word-break: break-all !important;
+     white-space: normal !important;
+}

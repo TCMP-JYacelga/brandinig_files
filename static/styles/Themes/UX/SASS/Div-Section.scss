@@ -1,0 +1,292 @@
+.ui-widget-content { border: 1px solid #cfcfcf; background: $lightColor url('resources/images/ui-bg_flat_75_ffffff_40x100.png') 50% top repeat-x; color: #222222; }
+.ui-widget-content a { color: #222222; }
+.ui-widget-content a:hover { color: $crumbsHeader; }
+.ui-widget-header a { color: #222222; }
+.ui-widget-overlay { background: #aaaaaa url('resources/images/ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x; }
+.ui-widget-shadow { background: #999999 url('resources/images/ui-bg_flat_0_aaaaaa_40x100.png') 50% 50% repeat-x; }
+
+.ui-dialog .ui-dialog-content { background: none; }
+.ui-dialog .ui-dialog-buttonpane { background-image: none; }
+
+.ui-section-shadow { -moz-box-shadow: 2px 2px 3px #828282; -webkit-box-shadow: 2px 2px 3px #828282; box-shadow: 2px 2px 3px #828282; -ms-filter:"progId:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#828282')"; }
+.ui-section-header { background: $lightColor url('resources/images/title_bg.png') 50% 50% repeat-x; color: #222222; }
+.ui-section-header a { color: #222222; }
+
+.ux_div-padding{
+	padding: 12px 0px 0px !important;
+}
+
+.ux_white-background{
+	background: $lightColor !important;
+	/*line-height: 24px !important;*/
+	/*font-size: $fontSize14 !important;*/
+	padding: 10px !important;
+}
+
+.ux_body-background-color{
+	background: $lightColor !important;
+	/*line-height: 24px !important;
+	font-size: $fontSize14 !important;*/
+	padding: 10px !important;
+}
+
+/*.ux_body-background-color .ui-tabs-selected.ui-state-active{
+	background: $lightColor !important;
+}*/
+
+.ux_radio-buttons-panel{
+	background: #f6f6f6 !important;
+	padding: 10px !important;
+	font-size: $fontSize14 !important;
+}
+
+.ux_reciever-info, .ux_reciever-info.leftAlign{
+	color: #bfbfbf !important;
+	padding-left: 0px !important;
+	font-size: $fontSize14 !important;
+}
+
+.ux_tabpanel-background{
+	background: $lightColor !important;
+}
+
+/*.ux_search-reciever-padding.frmLabel{
+	padding-bottom: 7px !important;
+}*/
+
+.ux_reciever-name-textfield-margin{
+	margin-left: 0px !important;
+}
+
+.ux_padding-top{
+	padding: 12px 0px 0px 0px!important;
+}
+
+.ux_body-background-color .mr80{
+	margin-left: 63px !important;
+}
+
+.ux_body-background-color .m124{
+	margin-left: 33px !important;
+}
+.ux_trans-background.ui-widget-header{
+	background: #d7d7d7 !important;
+}
+
+.ux_trans-body{
+	background: #e7e7e7 !important;
+	padding: 6px 10px !important;
+	line-height: 24px;
+	font-size: $fontSize14;
+}
+.ux_trans-body .linkblue{
+	color: $fontColor !important;
+}
+
+.jq-panel-header.ui-widget-header { background: $lightColor !important; color: $fontColor !important; border-bottom: 2px solid #f3f3f3 !important; text-transform: uppercase;}
+
+.jq-panel-header1.ui-widget-header { background: $lightColor !important; color: $fontColor !important; border-bottom: 2px solid #f3f3f3 !important;}
+
+.ux_panel-background{
+	background: #f3f3f3 !important;
+}
+
+.ui-widget-content{
+	background: #f3f3f3 !important;
+	border: none !important;
+}
+
+.ux_panel-transparent-background{
+	background: $lightColor !important;
+}
+
+.ux_border-top{
+	border-top: 2px solid #f3f3f3 !important;
+}
+
+.ux_border-bottom{
+	border-bottom: 2px solid #f3f3f3 !important;
+}
+
+.ux_border-top-white{
+	border-top: 2px solid $lightColor !important;
+}
+
+.ux_header-pad{
+	padding: 12px 5px 11px 10px !important;
+}
+.ux_payment-type {
+	padding: 6px 0px 0px 10px !important;
+	font-size: $fontSize14 !important;
+	font-weight:Bold !important;
+}
+
+.ui-widget-header { 
+	/*border: 1px solid #dddddd; */
+	/*background: $lightColor url('resources/images/ui-bg_highlight-soft_75_ffffff_1x100.png') 50% 50% repeat-x;*/
+	background-color : #bfbfbf !important;
+	color: #222222;
+	border : none !important;
+	border-radius : 0px !important;
+}
+.ui-dialog {
+	padding : 0px !important;
+	border: 1px solid #bfbfbf !important;
+}
+.ui-dialog .ui-dialog-title {
+	font-size: $fontSize20 !important;
+	font-family: $fontFamily !important;
+}
+.ux-custom-header-font{
+	font-family: $fontFamily,tahoma,arial,verdana,sans-serif !important;
+	font-size: $fontSize16 !important;
+	font-weight: normal !important;
+	color: $fontColor !important;
+}
+.ux_receiver-details-header.ui-widget-header{
+	background: #e7e7e7 !important;
+	color: $fontColor !important;
+	border-bottom: 2px solid #f3f3f3 !important;
+	text-transform: uppercase;
+}
+.ux_receiver-details
+{
+	background: #e7e7e7 !important;
+	padding: 10px !important;
+}
+
+.errmsg{
+	font-weight: bold; 
+    border: 1px solid red;
+    text-align:center;
+}
+.custom-tooltip{
+	top : 100px;
+	right : 20px;
+	position : absolute;
+	border : 1px solid #868686;
+	padding : 5px;
+	max-height : 500px;
+	overflow : auto;
+	min-width : 250px;
+	background-color : $lightColor;
+	z-index : 2000;
+	color : #333333;
+}.ux_padding-top-12 {
+	padding : 12px 0px 0px 0px !important;
+}
+
+.ux_margin-top-12 {
+	margin-top : 12px !important;
+}
+
+.ux_header-padding{
+	padding: 6px 5px 6px 10px !important;
+}
+
+.ux_reciever-padding{
+	padding: 7px 0px 5px !important;
+}
+
+.ux_custom-section-header{
+	margin: 0px !important;
+	padding: 0px !important;
+	line-height: inherit !important;
+	font-size: $fontSize16 !important;
+	font-family: $fontFamily !important;
+	color: $fontColor !important;
+	background: none !important;
+	font-weight: normal !important;
+	text-transform: uppercase;
+}
+
+.ux_custom-section-header.icon-collapse:before{
+	content: "\f0d7" !important;
+	padding-right: 10px !important;
+	@include glyph($fontSize14)
+}
+
+.ux_custom-section-header.icon-expand:before{
+	content: "\f0da" !important;
+	padding-right: 10px !important;
+	@include glyph($fontSize14)
+}
+
+.ux_panel-body{
+	padding: 12px 12px 12px $fontSize14 !important;
+	line-height: 24px;
+	font-size: $fontSize14;
+	background: $lightColor !important;
+}
+
+.ux_info-icon{
+	background: none !important;
+	padding-left: 8px !important;
+	float: right !important;
+}
+
+.ux_info-icon:before{
+	content: "\f05a" !important;
+	float: right !important;
+	@include glyph($fontSize14)
+}
+
+.ux_sifields-header{
+	/*line-height: inherit !important;*/
+	font-size: $fontSize16 !important;
+	font-weight: normal !important;
+	/*background: $lightColor !important;*/
+	color: $fontColor !important;
+	text-transform: uppercase;
+}
+
+/*Body Part*/
+
+.ux_label-margin-right{
+	margin-right: 10px !important;
+}
+
+.ux_panel-padding-leftright{
+	padding: 0px 10px !important;
+}
+
+.ux_no-padding{
+	padding: 0px !important;
+}
+
+.ux_no-border{
+	border: none !important;
+}
+
+.ux_no-margin{
+	margin: 0px !important;
+}
+.ux_no-outline{
+	outline: 0px !important;
+}
+
+.ux_no-top{
+	top:0px !important;
+}
+
+.ux_no-left{
+	left:0px !important;
+}
+.ux_no-marginlrb
+{
+	margin-right:0px !important;
+	margin-left:0px !important;
+	margin-bottom:0px !important;
+}
+
+.ux_no-padding-left{
+	padding-left:0px !important;
+}
+
+
+.ux_top-margin{
+	margin-top: 10px !important;
+}
+
+#paymentHeaderInfoDiv .lightbackgound.x-toolbar-default{ background-color: #e7e7e7 !important; }
+#paymentHeaderInfoDiv .lightbackgound{ background-color: #e7e7e7 !important; }

@@ -1,0 +1,518 @@
+#pageHeader { height: 110px;  padding: 0; border-width: 0; margin: 0 0 -6px 0; }
+#headerTop { height: 72px; }
+#pageHeader:after { clear: both; }
+#banklogo { height: inherit; width: 200px; }
+
+/* branding & user information */
+#branding { height: 72px; float: left; min-width: 200px; }
+#banklogo { height: inherit; width: 240px; }
+#userInfo { height: 72px; float: right; min-width: 480px; }
+#userInfo div#loginInfo { float: right; margin: 0 15px 0 0; text-align: right; }
+#userInfo div#loginInfo span { font-weight: bold; }
+#userInfo div.controls { float: right; }
+
+/* top navigation bar */
+#navbar { width:inherit; height: 37px; margin:0; border-width:0; padding:0; font-family: calibri, helvetica, arial, sans-serif; }
+#navbar:after { clear: both; }
+/*#menubarContainer { float: left; height: 37px !important; margin:0; padding:0; border-width: 0; }*/
+#menubar { margin:0; padding: 0 0 0 4px; border-width: 0; height: inherit; }
+#menubar li { list-style-type: none; height: 37px; margin:0; padding: 0; border-width: 0; float: left; }
+#menubar li a { text-decoration: none; padding: 6px 12px 2px 12px; display: inline-block; height: 28px; border-width: 0; margin: 0; font-size: 14px; }
+
+/* top bar shourcut/links */
+#linkbar { float: right; height: 25px; min-width: 128px; padding: 5px 8px 0 0; }
+#linkbar a { height: 25px; width: 28px; padding: 0 2px 0 2px; }
+
+
+.ft-header {
+  position: relative;
+  background-image: url("../images/T7/logo.png");
+  background-repeat: no-repeat;
+  background-position: 21px 13px;
+  border-bottom: solid #f36f27 12px;
+  height: 74px;
+  color: white;
+  display: block;
+  overflow: hidden;
+  /*Commented out for drop downs */
+  overflow: visible;
+  z-index: 1000;
+}
+
+.ft-bgcolor {
+  background-color: #135e82;
+}
+
+.ft-header-menubar {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.ft-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  min-height: 20px;
+}
+.ft-header-dropdown .ft-dropdown-menu {
+  right: 3px;
+  /* magic number */
+}
+
+.ft-header-dropdown .ft-dropdown-caret {
+  height: 5px;
+  width: 8px;
+  background-image: url('../images/T7/alert-caret.png');
+}
+
+.ft-header-dropdown:hover .ft-dropdown-caret {
+  background-image: url('../images/T7/caret-primary-blue.png');
+}
+
+.ft-header-dropdown:hover .ft-dropdown-toggle,
+.ft-header-dropdown .ft-dropdown-menu {
+  background-color: #e4f4fa;
+  color: #135E82;
+}
+
+.ft-header-dropdown:hover a {
+  color: #135E82;
+}
+
+.ft-header-dropdown .ft-dropdown-items a:hover {
+  background-color: #fff;
+}
+/*---Prefrences drop-down styling---- */
+.ft-dropdown:hover .ft-icons-help2 {
+	background-position: initial;
+	background-image: url(../images/T7/button-preference-off.png);
+}
+.ft-pref-dropdown .ft-dropdown-caret {
+  height: 5px;
+  width: 8px;
+  background-image: url('../images/T7/caret-black.png');
+}
+
+.ft-pref-dropdown:hover .ft-dropdown-caret {
+  background-image: url('../images/T7/caret-white.png');
+}
+
+.ft-pref-dropdown:hover .ft-dropdown-toggle,
+.ft-pref-dropdown .ft-dropdown-menu {
+  background-color: #135e82;
+  color: #FFF;
+}
+
+.ft-pref-dropdown:hover a {
+  color: #FFF;
+}
+
+.ft-pref-dropdown .ft-dropdown-items a:hover {
+  background-color: #387494;
+   color: #fff;
+  text-decoration: none;
+}
+/*Prefrences drop-down*/
+.ft-circle-actions {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url('../images/T7/circle-background-actions.png');
+  background-repeat: no-repeat;
+  color: #135e82;
+  text-align: center;
+  line-height: 20px;
+}
+
+.ft-dropdown:hover .ft-circle-alerts,
+.ft-dropdown:hover .ft-circle-actions {
+  background-image: url('../images/T7/circle-background-primary-blue.png');
+  color: #fff;
+}
+
+.ft-circle-alerts {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url('../images/T7/circle-background.png');
+  background-repeat: no-repeat;
+  color: #135e82;
+  text-align: center;
+  line-height: 20px;
+}
+
+.ft-item-index {
+  display: table-cell;
+  font-size: 30px;
+  vertical-align: top;
+  padding-right: 10px;
+}
+
+.ft-item-content {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 130px;
+}
+.ft-header-menubar {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.ft-header-menubar .ft-dropdown,
+.ft-header-menubar-separator {
+  display: inline;
+}
+
+.ft-header-menubar-separator {
+  width: 1px;
+  height: 100%;
+  border-right: 1px solid #9cafb8;
+  margin: 0 2px;
+}
+
+.ft-header-menubar .ft-button-login {
+  background-color: #609bb7;
+  background-image: url("../images/T7/button-arrow.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 20px;
+}
+
+.ft-header-menubar .ft-button-login:hover {
+  background-color: #4486a5;
+}
+
+.ft-help-txt {
+  display: table-cell;
+  vertical-align: middle;
+  color: #006699;
+  font-size: 15px;
+}
+
+.ft-help-nav {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  vertical-align: middle;
+}
+
+.ft-help-nav > div {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ft-icons {
+  background-image: url(../images/T7/icons.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ft-icons-acc-minus {
+  width: 28px;
+  height: 28px;
+  background-position: -5px -5px;
+}
+
+.ft-icons-acc-plus {
+  width: 28px;
+  height: 28px;
+  background-position: -43px -5px;
+}
+
+.ft-icons-alert-grn {
+  width: 27px;
+  height: 22px;
+  background-position: -81px -5px;
+}
+
+.ft-icons-alert-wht {
+  width: 30px;
+  height: 31px;
+  background-position: -82px -39px;
+}
+
+.ft-icons-arrow-dwn {
+  width: 14px;
+  height: 16px;
+  background-position: -33px -78px;
+}
+
+.ft-icons-btn-arrow {
+  width: 13px;
+  height: 16px;
+  background-position: -88px -78px;
+}
+
+.ft-icons-download {
+  width: 19px;
+  height: 23px;
+  background-position: -5px -104px;
+}
+
+.ft-icons-filter {
+  width: 25px;
+  height: 25px;
+  background-position: -121px -137px;
+}
+
+.ft-icons-filt2 {
+  width: 17px;
+  height: 20px;
+  background-position: -88px -104px;
+}
+
+.ft-icons-filter-wht {
+  background-position: -54px -64px;
+  width: 25px;
+  height: 25px;
+}
+
+.ft-icons-help {
+  width: 19px;
+  height: 23px;
+  background-position: -123px -5px;
+}
+
+.ft-icons-help2 {
+  width: 23px;
+  height: 23px;
+  background-position: -123px -38px;
+}
+
+.ft-icons-menu {
+  width: 25px;
+  height: 24px;
+  background-position: -123px -71px;
+}
+
+.ft-icons-pdf {
+  width: 20px;
+  height: 23px;
+  background-position: -115px -105px;
+}
+
+.ft-icons-refresh {
+  width: 23px;
+  height: 19px;
+  background-position: -5px -139px;
+}
+
+.ft-icons-settings {
+  width: 20px;
+  height: 20px;
+  background-position: -40px -139px;
+}
+
+.ft-icons-xls {
+  width: 20px;
+  height: 23px;
+  background-position: -70px -138px;
+}
+
+.ft-icons-fav-red {
+  width: 22px;
+  height: 20px;
+  background-position: -144px -5px;
+}
+
+.ft-icons-fav {
+  width: 22px;
+  height: 20px;
+  background-position: -99px -73px;
+}
+
+.ft-icons-arr-dwn-blue {
+  width: 13px;
+  height: 12px;
+  background-position: -58px -87px;
+}
+
+.ft-icons-arr-dwn-black {
+  width: 13px;
+  height: 12px;
+  background-position: -46px -86px;
+}
+
+.ft-icons-arr-dwn-black-big {
+  width: 13px;
+  height: 12px;
+  background-position: -71px -88px;
+}
+
+.ft-icons-exp-sml {
+  width: 18px;
+  height: 18px;
+  background-position: -150px -163px;
+}
+
+.ft-icons-coll-sml {
+  width: 18px;
+  height: 18px;
+  background-position: -165px -181px;
+}
+
+.ft-icons-lscroll {
+  width: 15px;
+  height: 76px;
+  background-position: -167px -3px;
+}
+
+.ft-icons-rscroll {
+  width: 15px;
+  height: 76px;
+  background-position: -169px -83px;
+}
+
+.ft-icons-radio-on {
+  width: 20px;
+  height: 20px;
+  background-position: -100px -162px;
+}
+
+.ft-icons-radio-off {
+  width: 20px;
+  height: 20px;
+  background-position: -127px -163px;
+}
+
+.ft-icons-check-on {
+  width: 22px;
+  height: 22px;
+  background-position: -6px -176px;
+}
+
+.ft-icons-check-off {
+  width: 23px;
+  height: 22px;
+  background-position: -29px -176px;
+}
+
+.ft-icons-ui-begin {
+  width: 17px;
+  height: 17px;
+  background-position: -8px -158px;
+}
+
+.ft-icons-ui-fwd {
+  width: 17px;
+  height: 17px;
+  background-position: -8px -158px;
+}
+
+.ft-icons-ui-begin {
+  width: 17px;
+  height: 17px;
+  background-position: -8px -158px;
+}
+
+.ft-icons-ui-bck {
+  width: 21px;
+  height: 17px;
+  background-position: -37px -158px;
+}
+
+.ft-icons-ui-end {
+  width: 17px;
+  height: 17px;
+  background-position: -48px -158px;
+}
+
+.ft-icons-vcard {
+  width: 31px;
+  height: 21px;
+  background-position: -68px -163px;
+}
+
+.ft-icons-attach {
+  width: 22px;
+  height: 23px;
+  background-position: -137px -107px;
+}
+
+.ft-icons-bulk {
+  width: 22px;
+  height: 14px;
+  background-position: -56px -53px;
+}
+
+.ft-icons-flag {
+  width: 20px;
+  height: 17px;
+  background-position: -7px -205px;
+}
+
+.ft-button-login {
+  background: url("../images/T7/button-arrow.png") no-repeat #609bb7 85% center;
+  min-width: 69px;
+  text-align: left;
+  padding-left: 12px;
+}
+
+button.ui-datepicker-close,
+.ft-button-primary {
+  background-color: #135e82;
+}
+
+.ft-button-primary:hover {
+  background-color: #004464;
+}
+
+.ft-button-secondary {
+  background-color: #609bb7;
+}
+
+.ft-button-secondary:hover {
+  background-color: #4486a5;
+}
+
+.ft-button-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button.ui-datepicker-close,
+.ft-button {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: auto;
+  color: #FFF;
+  font-size: 11px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height:13px;
+}
+
+.ft-layout-header {
+  position: relative;
+  padding-top: 20px;
+/*   padding-right: 220px; */
+  padding-bottom: 0px;
+  min-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

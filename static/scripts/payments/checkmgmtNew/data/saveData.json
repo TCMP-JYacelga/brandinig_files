@@ -1,0 +1,28 @@
+{
+	"d" : {
+		"__metadata" : {
+			"_buttonMask" : "11",
+			"isInquieryPlaced" : false,
+			"batchRefNumber" : "id"
+		},
+		"advStopPayChecks" : {
+			"advStopPayMetaData" : {
+				"__rightsMap" : "11",
+				"_detailId" : "123456789",
+				"_buttonMask" : "11"
+			},
+			"accountNumber" : "1234",
+			"checkNumber" : "11111",
+			"accountName" : " ABCD",
+			"sellerId" : "USA",
+			"ccy" : "USD",
+			"message" : {
+				"errors" : [/*{
+							'errorCode' : 'ERR001',
+							'errorMessage' : 'Erro while saving data...'
+						}*/],
+				"success" : "Y"
+			}
+		}
+	}
+}

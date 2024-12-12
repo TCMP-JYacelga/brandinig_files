@@ -1,0 +1,392 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Adobe RoboHelp 9">
+<title>About Authorizing Payment Transactions</title>
+<link rel="StyleSheet" href="anz_1.css" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sample_help.htm", "", ">", "Home", "welcome_dashboard.htm");
+document.write("About Authorizing Payment Transactions<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sample_help.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px;" cellspacing="0" width="100%" bgcolor="#04436F" align="left">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr style="height: 11px;">
+			<td style="vertical-align: middle;"><span style="font-family: 'Arial Black', sans-serif; 
+														 font-style: italic; 
+														 color: #ffffff;"><font color="white" ><i>&#160;</i></font></span><span 
+			 style="color: #ffffff; font-family: Arial, sans-serif; font-size: 10pt; 
+			 font-style: italic; font-weight: bold;"><font size="2" color="white" style="font-size:10.000000pt;"><i><b>GCP CashWeb</b></i></font></span><span 
+			 style="font-family: 'Arial Black', sans-serif; font-style: italic; 
+			 color: #ffffff;"><font color="white" ><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></font></span></td>
+			<td style="vertical-align: top;">
+   <p style="text-align: right; 
+												 font-family: 'Arial Black', sans-serif; 
+												 font-style: italic; font-size: 12pt; 
+												 color: #ffffff;">&#160;</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+
+<p style="text-align: right;"><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+
+<h1>About Authorizing Payment Transactions</h1>
+<p class="MsoNormal">Every payment request that has been entered into the 
+ system has to be authorized. This feature follows a Maker-Checker concept 
+ wherein one user known as the Maker enters the transaction and another 
+ user known as the Checker authorizes the transaction. In the Maker-Checker 
+ concept it is mandatory for the Maker and Checker to be different users. 
+ The Checker can either authorize or reject a transaction at Payment Request 
+ level. Unless the checker authorizes the transaction, it is not used as 
+ the active record in the system nor is it processed as the valid transaction. 
+ By default, the Payment Request pending for authorization having the entry 
+ date same as the application date is displayed. In case you are assigned 
+ <b style="mso-bidi-font-weight: normal;">Across Seller</b> rights for 
+ a corporation, you can authorize transactions of clients spread across 
+ different countries.</p>
+<h2><a name="_Toc313615208">Authorization Levels</a></h2>
+<p class="MsoNormal">Authorization for Quick Pay transactions is always 
+ at ‘Instrument Level’ but for Batch Payments, it depends on the <b style="mso-bidi-font-weight: normal;">Authorization 
+ Level</b> field set in the Payment MyProduct master. If you have selected 
+ ‘Batch Level’, then checker will authorize the entire Batch Amount and 
+ debit the client’s account with one debit entry. If you have selected 
+ ‘Instrument Level’, then checker will authorize every instrument within 
+ a batch individually and debit the client’s account with number of debit 
+ entries equivalent to the instruments within the Batch. Batch Level authorization 
+ has an additional step ahead wherein authorization can happen at <span 
+	 style="font-weight: bold;"><b>Batch – Max Instrument Amount</b></span> level.</p>
+<hr align="center">
+<p class="Convensions">E.g.</p>
+<p class="Convensions"><u style="text-decoration: underline; ">On ‘Instrument 
+ Level’ &amp; ‘Batch Level’ Authorization</u></p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Consider 
+ there are 2 instruments within a file with amount 1000 &amp; 5000 each. 
+ AVM setup is as follows:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-1000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 1</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>1001-10000<span 
+	 style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 2</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If 
+ <b style="mso-bidi-font-weight: normal;">Authorization Level</b> is at 
+ 'Instrument Level', then instrument of amount 1000 will go to User 1 for 
+ authorization. Instrument of amount 5000 will go to User 2.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>If 
+ <b style="mso-bidi-font-weight: normal;">Authorization Level</b> is at 
+ 'Batch Level', then total batch amount 6000 will go to User 2 for authorization.</p>
+<p class="Convensions"><u style="text-decoration: underline; ">On ‘Batch 
+ Level’ and Batch – Max Instrument Amount Authorization</u></p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Consider 
+ the <b style="mso-bidi-font-weight: normal;">Authorization Type</b> is 
+ set to 'Batch level'. The file contains 6 instruments with amount 1000, 
+ 2000, 3000, 4000, 5000 &amp; 10000. AVM setup is as follows:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-1000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 1</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>1001-10000<span 
+	 style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 2</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>10000- 
+ ~<span style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 3</p>
+<p class="Convensions"><span style="font-weight: bold;"><b>Case 1</b></span>: 
+ <b style="mso-bidi-font-weight: normal;">Batch-Max Instrument Amount</b> 
+ check box is unchecked.</p>
+<p class="Convensions">In this case, system will total the instrument amount 
+ to 25000 and put the batch into last slab i.e. 10001- ~ for authorization.</p>
+<p class="Convensions"><span style="font-weight: bold;"><b>Case 2</b></span>: 
+ <b style="mso-bidi-font-weight: normal;">Batch-Max Instrument Amount</b> 
+ check box is checked.</p>
+<p class="Convensions">In this case, system will consider the maximum instrument 
+ amount within the batch i.e. 10000 and put the batch into slab 1001-10000 
+ for authorization.</p>
+<hr align="center">
+<h2><a name="_Toc313615209">Auto Authorization Limits</a></h2>
+<p class="MsoNormal">Payment transactions available for auto authorization 
+ will have an additional check for authorization limits. These authorization 
+ limits are set in Payment MyProduct master against a field named <b style="mso-bidi-font-weight: normal;">Auto 
+ Approval Limit</b>. This field will accept only numerical values in seller 
+ base currency. The <b style="mso-bidi-font-weight: normal;">Auto Approval 
+ Limit</b> field is added for manually entered as well as for file uploaded 
+ transactions. On <b style="mso-bidi-font-weight: normal;">Submit</b>, 
+ system will check the specified approval limit against the Instrument 
+ Level, Batch Level or Batch - Max Instrument Amount in seller base currency.</p>
+<p class="MsoNormal">Hence, if the Instrument, Batch or Batch - Max Instrument 
+ Amount is less than the <b style="mso-bidi-font-weight: normal;">Auto 
+ Approval Limit</b> (after conversion into seller base currency) and if 
+ <b style="mso-bidi-font-weight: normal;">Approval Required</b> checkbox 
+ is unchecked then transaction will be auto authorized. <span style="mso-spacerun: yes;">&#160;</span>If 
+ <b style="mso-bidi-font-weight: normal;">Approval Required</b> checkbox 
+ is checked then transaction will be authorized as per AVM/SVM setup. If 
+ valid AVM/SVM setup is not available then system will raise an exception 
+ error.</p>
+<hr align="center">
+<p class="Convensions"><span style="font-weight: bold;"><b>Note</b></span>: Ensure 
+ that the user sets the <b style="mso-bidi-font-weight: normal;">Auto Approval 
+ Limit</b> as per maximum of any slab in AVM/SVM. In case of mismatch, 
+ then AVM/SVM slab will prevail.</p>
+<hr align="center">
+<h2><a name="_Toc313615210">Batch Splitting Logic</a></h2>
+<p class="MsoNormal">Batch transactions can be split on the basis of the 
+ field <b style="mso-bidi-font-weight: normal;">Split File Batch By AVM/SVM</b> 
+ checked in Payment MyProduct master. This feature will be enabled only 
+ when <b style="mso-bidi-font-weight: normal;">Authorization Level</b> 
+ is set to ‘Batch Level’ and <b style="mso-bidi-font-weight: normal;">Batch-Max 
+ Instrument Amount</b> is enabled. If this field is checked then system 
+ will split the Batch into multiple PIRs based on AVM/SVM slab depending 
+ on the <b style="mso-bidi-font-weight: normal;">Authorization Type</b> 
+ set to ‘My Product’ or ‘Account’. If <b style="mso-bidi-font-weight: normal;">Authorization 
+ Type</b> is set to ‘My Product’ then split the Batch on the basis of batch 
+ amount and AVM/SVM slab defined at My Product level. If <b style="mso-bidi-font-weight: normal;">Authorization 
+ Type</b> is set to ‘Account’ then split the Batch on the basis of batch 
+ amount and AVM/SVM slab defined at Account level. Below examples will 
+ explain the batch split logic clearly.</p>
+<hr align="center">
+<p class="Convensions">Note:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Batch 
+ splitting logic will be applicable only if <b style="mso-bidi-font-weight: normal;">Approval 
+ Required</b> field is unchecked, and <b style="mso-bidi-font-weight: normal;">Auto 
+ Approval Limit</b> (File Upload) field is set to default value i.e. 99999999999.99.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Currently, 
+ system supports only AVM at account level. While introducing support for 
+ SVM at account level, we will allow only users (after validating user 
+ &amp; account restriction) as part of SVM expression. Category will not 
+ be allowed as part of expression.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Effect 
+ of changes in AVM/SVM after batch split will not affect the already split 
+ batch even if it is in reject repair. Reject repair will be on split batch 
+ and file level parameter will apply for split PIR rather than whole file. 
+ Hence after repair, no further splitting is to be done.</p>
+<hr align="center">
+<hr align="center">
+<p class="Convensions"><span style="font-weight: bold;"><b>Example 1</b></span>: 
+ <b style="mso-bidi-font-weight: normal;"><u>Authorization Type</u></b> 
+ <u>is set to ‘My Product<span style="text-decoration: none; ">’:</span></u> 
+ Consider the upload file ‘batch_split_tst1.txt’ contains 9 instruments 
+ with amount 100, 200, 1000, 1300, 1700, 2000, 2500, 2100 &amp; 3000.</p>
+<p class="Convensions"><b style="font-weight: bold; mso-bidi-font-weight: normal;">Case 
+ 1:</b> Consider MYPROD1 with <b style="mso-bidi-font-weight: normal;">Authorization 
+ Type</b> as ‘MyProduct ‘&amp; <b style="mso-bidi-font-weight: normal;">Authorization 
+ Level</b> as ‘Batch’ &amp; <b style="mso-bidi-font-weight: normal;">Batch 
+ – Max Instrument Amount</b> is enabled.<span style="mso-spacerun: yes;">&#160;</span>&#160;AVM 
+ setup is as follows:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-1000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 1</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>1001-2000<span 
+	 style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User2</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>2001- 
+ ~<span style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User3</p>
+<p class="Convensions"><b style="font-weight: bold; mso-bidi-font-weight: normal;">Case 
+ 2:</b> Consider MYPROD1 with <b style="mso-bidi-font-weight: normal;">Authorization 
+ Type</b> as ‘MyProduct ‘&amp; <b style="mso-bidi-font-weight: normal;">Authorization 
+ Level</b> as ‘Batch’ &amp; <b style="mso-bidi-font-weight: normal;">Batch 
+ – Max Instrument Amount</b> is enabled.<span style="mso-spacerun: yes;">&#160;</span>&#160;SVM 
+ setup is as follows:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-1000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User 
+ 1</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-2000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User2</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0- 
+ ~<span style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User3</p>
+<p class="Convensions">In above cases, file will be split into 3 PIRs as 
+ follows:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR1:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 1300 with Total No. 
+ of Instruments = 3. In both the cases, PIR 1 will be available to User 
+ 1 for authorization since Batch- Max instrument Amount is 1000.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR2:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 5000 with Total No. 
+ of Instruments = 3. In both the cases, PIR 2 will be available to User 
+ 2 for authorization since Batch- Max instrument Amount is 2000.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR3:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 7600 with Total No. 
+ of Instruments = 3. In both the cases, PIR 3 will be available to User 
+ 3 for authorization since Batch- Max instrument Amount is 3000</p>
+<p class="Convensions">&#160;</p>
+<p class="Convensions"><span style="font-weight: bold;"><b>Example 2</b></span>: 
+ <b style="mso-bidi-font-weight: normal;"><u>Authorization Type</u></b> 
+ <u>is set to ‘Account<span style="text-decoration: none; ">’:</span></u> 
+ Consider the upload file ‘batch_split_tst1.txt’ contains 9 instruments 
+ with amount 800 &amp; 300 belonging to Account 1, instrument 1000 belonging 
+ to Account 2, instruments 1300, 1700 &amp; 2000 belonging to Account 2, 
+ instrument 2100 belonging to Account 1, instruments 2500 &amp; 3000 belonging 
+ to Account 2. Consider MYPROD1 with <b style="mso-bidi-font-weight: normal;">Authorization 
+ Type</b> as ‘Account‘&amp; <b style="mso-bidi-font-weight: normal;">Authorization 
+ Level</b> as ‘Batch’ &amp; <b style="mso-bidi-font-weight: normal;">Batch 
+ – Max Instrument Amount</b> is enabled.<span style="mso-spacerun: yes;">&#160;</span>&#160;AVM 
+ setup is as follows:</p>
+<p class="Convensions">For Account 1</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-1000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User1</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>1001-2000<span 
+	 style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User2</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>2001- 
+ ~<span style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User3</p>
+<p class="Convensions">For Account 2</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>0-1000<span 
+	 style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User4</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>1001-2000<span 
+	 style="mso-tab-count: 1;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User5</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>2001- 
+ ~<span style="mso-tab-count: 2;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;User6</p>
+<p class="Convensions">In above case, file will be split into 5 PIRs as 
+ follows:</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR1:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 1100 with Total No. 
+ of Instruments = 2. In this case, PIR 1 will be available to User 1 for 
+ authorization since Batch- Max instrument Amount is 800.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR2:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 1000 with Total No. 
+ of Instruments = 1. In this case, PIR 2 will be available to User 4 for 
+ authorization since Batch- Max instrument Amount is 1000.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR3:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 5000 with Total No. 
+ of Instruments = 3. In this case, PIR 3 will be available to User 5 for 
+ authorization since Batch- Max instrument Amount is 2000.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR4:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 2100 with Total No. 
+ of Instruments = 1. In this case, PIR 4 will be available to User 3 for 
+ authorization since Batch- Max instrument Amount is 2100.</p>
+<p class="Conventionbullet"><span  >-</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><b 
+	 style="font-weight: bold; mso-bidi-font-weight: normal;">PIR5:</b> 
+ Ref No ‘batch_split_tst1.txt’, PIR Total Amount = 5500 with Total No. 
+ of Instruments = 2. In this case, PIR 5 will be available to User 6 for 
+ authorization since Batch- Max instrument Amount is 3000</p>
+<hr align="center">
+<h2 class="MsoNormal"><a name="_Toc313615211"></a><a name="_Toc296683378"><span 
+	 style="mso-bookmark: _Toc313615211;">Super User Authorization</span></a></h2>
+<span style="font-size: 10.0pt; mso-bidi-font-size: 11.0pt; font-family: Arial, sans-serif; 
+		 mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+		 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Each 
+ instruction has to undergo the authorization process as per the authorization 
+ matrix that has been set up. Only after the successful completion of the 
+ authorization process, an instruction can be sent to the bank for further 
+ processing. In situations where in the authorizers who are involved in 
+ the authorization process are unavailable, the authorization process may 
+ not proceed at all. This may result in a delay in sending that instruction 
+ for further processing to the bank. As a solution, GCP CashWeb front 
+ end offers the capability to the super user to authorize an instruction 
+ irrespective of the authorization matrix definition associated with it. 
+ A super user can authorize transaction at batch as well as instrument 
+ level.</font></span> 
+<p><a href="javascript:history.go(-1)"><img src="ft_doc_ndm_gcp_cw_pay_ug_files/all_icons/back.png" alt="back.png" style="border: none;" width="52" height="25" border="0"></a></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<table width="100%">
+  <tr>
+  <td>
+	<table style="left: 0px; top: 0px; margin-right: 5px;" cellspacing="0" width="100%" bgcolor="#02426D" align="right">
+		<col style="width: 100%;">
+		<tr style="height: 10px;">
+			<td style="vertical-align: middle;">
+   <p style="text-align: right; 
+													 font-style: italic; 
+													 font-family: 'Eras Demi ITC', sans-serif; 
+													 color: #ffffff; font-size: 8pt; 
+													 margin-left: 12px;">Innovation. 
+			 Bank on it</p></td>
+		</tr>
+	</table>
+	</td></tr>
+</table>
+	</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

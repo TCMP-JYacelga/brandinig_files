@@ -1,0 +1,81 @@
+<!--Payments Packages starts here -->
+	<div class="panel panel-default" id="packagePanel">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2 class="panel-title">
+								<span id="packagesInfoCaret"
+									class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+								<span>{{getLabel "lbl.clientUser.templatepackage.title" "Packages"}}</span>
+								<img id="packagesAll_{{assetid}}" data-version = "{{ assignAllPackages_version }}" src="{{checkBoxIcon allPackages}}" class="chkBoxAlign" width="16" height="16"
+									border="0"> 
+								<label id="packagesAll_{{assetid}}" for="packagesAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.clientUser.all" "All"}}</label>
+								<label id="lblPkgCount" class="checkbox-inline pull-right">{{packagesAssignedCount}} {{getLabel "lbl.clientUser.of" "of"}} {{packagesCount}} {{getLabel "lbl.clientUser.selected" "Selected"}}</label>
+							</h2>
+						</div>
+					</div>
+				</div>
+
+		<div id="packagesInfoDiv" class="panel-body">
+			<div class="row grid">
+					<table class="view-grid" style="width: 100%">
+						<thead>
+							<tr class="view-grid-header">
+								<td class="view-grid-header-text" style = "width:50"></td>
+								<td class="view-grid-header-text" >{{getLabel "lbl.clientUser.templatepackage.package" "Package"}}</td>
+								
+								<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatepackage.status" "Status"}}</td>
+								{{#ifCond assetId '==' "06" }}
+									<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatepackage.anchorClient" "Anchor Client"}} </td>
+								{{/ifCond}}
+								{{#ifCond assetId '!=' "06" }}
+									<td class="view-grid-header-text">{{getLabel "lbl.clientUser.templatepackage.companyname" "Company Name"}}</td>
+								{{/ifCond}}
+							</tr>
+
+						</thead>
+						<tbody>
+							
+							{{#each packages}}
+							<tr class="view-grid-body">
+								<td class="view-grid-body-content text-center "><a
+									class="limit-reached test"> <img
+										id="chkPkg_02_{{packageId}}"
+										data-subsidiaryid="{{subsidiaryId}}"
+										data-packagename="{{packageName}}"
+										data-packageid="{{packageId}}"
+										data-subsidiaryname="{{subsidiaryName}}"
+										data-bankproduct="{{bankProduct}}"
+										data-myprelClient="{{myprelClient}}"
+										data-assetid="{{../assetId}}"
+										data-version = "{{ version }}"
+										data-digest = "{{ digest }}"
+										src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+										border="0"></a></td>
+
+								<td class="view-grid-body-content">{{packageName}}</td>
+								
+								<td class="view-grid-body-content">{{getStatusExpression assignedFlag}}</td>
+								
+								{{#ifCond ../assetId '==' "06" }}
+								<td class="view-grid-body-content">{{subsidiaryName}}</td>
+								{{/ifCond}}
+								{{#ifCond ../assetId '!=' "06" }}
+								<td class="view-grid-body-content">{{getStringWithSpecialChars subsidiaryName}}</td>
+								{{/ifCond}}
+							</tr>
+
+							{{else}}
+							<tr class="view-grid-body">
+								<td class="view-grid-header-text view-grid-body-content"
+									colSpan="5" style="padding-bottom: 1%;">&nbsp</td>
+							</tr>
+
+							{{/each}} 
+						</tbody>
+					</table>
+			</div>
+		</div>
+		
+	</div>
+	<!-- Payment Packages ends here */ -->

@@ -1,0 +1,62 @@
+	<div class="ft-layout-row">
+		<div class="ft-layout-primary">
+			<div class="ft-layout-inner">
+				<!--START:Page content ################-->
+				<!-- start of page title -->
+				{{>UserTitle}}				
+				<!-- end of page title -->
+				<!-- start of ft-accordion-header-sidebar -->
+				<!-- end of  ft-accordion-header-sidebar  -->
+				<div id="errorDiv" class="row hidden">
+					<div class="col-sm-12">
+						<div class="ft-error-message">
+							<span class="ft-bold-font">{{getLabel "lbl.clientUser.error" "ERROR:"}}</span>
+							<p id="errorPara"></p>
+						</div>
+					</div>
+				</div>
+				<!--  start of frmain -->
+				<form id="frmMain">
+			<div class="panel ft-margin-large-t" style="border-top-width: 1px;border-top-color: #ddd;">
+				
+				<div class="panel-body noLeftPadding" style="padding-right: 0px !important;">
+				<!-- start of left menu -->
+				<div class = "Row" > {{>UserEntryQuickLinks}}
+				<!-- end of left menu -->
+				<div class="col-sm-10" style="border-left: 1px solid #ddd;">
+		<!-- start of tabs -->
+		<div id="assetPanel">
+		{{>AssetPanel}}
+		</div>
+		<!-- end of tabs -->			
+	</div>
+				</div>
+				
+				
+	</div></div>
+	
+	<div class="form-group" id = "footer">
+	<ul class="ft-bar">
+	<li>		
+		<a id="back" href="#/" class="ft-button ft-button-light">{{getLabel "lbl.clientUser.btnback" "Back"}}</a>
+		<a id="btnCancelRoleEntry" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.clientUser.btnCancel" "Cancel"}}</a>
+		</li>
+		<li class="ft-bar-stretch">
+			<div class="pull-right">
+					<a href="#/Verify" id="saveAndVerify" class="ft-button ft-margin-l ft-btn-link">{{getLabel "lbl.clientUser.btnSaveVerify" "Save & Verify"}}</a>
+					<a href="#/Verify" id="permissionNext" class="ft-button ft-margin-l ft-button-primary">{{getLabel "lbl.clientUser.btnNext" "Next"}}</a>
+				</div>
+			</li>			
+		</ul>
+	</div>
+	<div id="confirmMsgPopup"></div>
+	<div id="portalDetailsPopup"></div>	
+	</form>
+				
+				
+				<!-- end of frmain -->
+				<!--END:Page content ################-->
+			</div>
+		</div>
+
+	</div>

@@ -1,0 +1,102 @@
+<div>
+	<div class="panel panel-default">						
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="panel-title">	
+						<span id="portalCaret" class = "fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>								
+						<span class="ft-padding-l ">{{getLabel "lbl.clientUser.module.poratl" "Portal"}}</span>									
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div id="portalAssetBody" class="panel-body">
+			<div id="lmsFunctionTableDiv">
+				{{#each assets}} 
+					{{#selectAsset assetId "19"}}
+					{{#each ../map as |servicesObj parentIndex|}}
+						{{#ifCond @key '==' 'IBILLPAY'}}
+							{{#if servicesObj}}
+								{{#if ../billPayID}}
+									<div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label class="toplabel frmLabel">{{getLabel "lbl.clientUser.portal.billPayId" "Bill Pay ID"}} </label> <span
+													class="pull-right catseparator">:</span>
+											</div>
+										</div>
+											<div class="col-sm-9">
+												<div class="form-group">
+													<span class="{{../billPayIDClass}}">{{../billPayID}} </span>
+												</div>
+											</div>
+									</div>
+								{{/if}}
+							{{/if}}
+						{{/ifCond}}
+						{{#ifCond @key '==' 'FPOR-000001'}}
+							{{#if servicesObj}}
+								{{#if ../netCaptureAdmUsrId}}
+									<div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label class="toplabel frmLabel"> NetCapture Admin User ID</label> <span
+													class="pull-right catseparator">:</span>
+											</div>
+										</div>
+											<div class="col-sm-9">
+												<div class="form-group">
+													<span class="{{../netCaptureAdmUsrIdClass}}" >{{../netCaptureAdmUsrId}} </span>
+												</div>
+											</div>
+									</div>
+							{{/if}}
+						{{/if}}	
+						{{/ifCond}}
+						{{#ifCond @key '==' 'RDC'}}
+							{{#if servicesObj}}
+								{{#if ../remoteDepositID}}
+									<div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label class="toplabel frmLabel"> {{getLabel "lbl.clientUser.portal.remoteDepositeTd" "Remote Deposit ID"}} </label> <span
+													class="pull-right catseparator">:</span>
+											</div>
+										</div>
+										<div class="col-sm-9">
+											<div class="form-group">
+												<span class="{{../remoteDepositIDClass}}"> {{../remoteDepositID}} </span>
+											</div>
+										</div>
+									</div>
+								{{/if}}
+							{{/if}}
+						{{/ifCond}}
+					{{/each}}
+				{{/selectAsset}}
+			{{/each}}
+			</div>
+                {{#each assets}} 
+                    {{#selectAsset assetId "19"}}
+                        {{#if accounts}}
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="toplabel frmLabel"> eStatement Accounts
+                                        </label> <span class="pull-right catseparator">:</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <span> 
+                                            {{getResourceListExpressionAccounts accounts "accountName" "accountNo"}}
+                                         </span>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/selectAsset}}
+                {{/each}}                                                			
+		</div>
+	</div>
+</div>

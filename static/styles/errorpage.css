@@ -1,0 +1,65 @@
+body {
+font-family: verdana, arial, sans-serif;
+background-image: url('static/images/error.png');
+background-color: white;
+background-repeat: no-repeat;
+background-position: right top;
+margin: 0px;
+width: 100%;
+height: 100% !important;
+}
+#container {
+position:relative;
+top: 5%;
+left: 5%;
+}
+#oops {
+background-image: url('static/images/oops-1.png');
+background-repeat:no-repeat;
+height: 100px;
+}
+#errorTitle {
+font-size: 2em;
+font-weight: bold;
+font-style: italic;
+width: 60%;
+background-color:transparent;
+font-family: Calibri,Tahoma,Verdana,Arial;
+color: silver;
+}
+blockquote {
+background: transparent url('static/images/quoleft.png') left top no-repeat;
+}
+blockquote div {
+padding: 0 32px;
+background: transparent url('static/images/quoright.png') right bottom no-repeat;
+width: 60%;
+text-align:justify;
+font-size: 10pt;
+}
+
+a.button {
+/* Sliding right image */
+background: transparent url('static/images/button_right.png') no-repeat scroll top right; 
+display: block;
+float: left;
+height: 32px; /* CHANGE THIS VALUE ACCORDING TO IMAGE HEIGHT */
+margin-right: 6px;
+padding-right: 20px; /* CHENGE THIS VALUE ACCORDING TO RIGHT IMAGE WIDTH */
+/* FONT PROPERTIES */
+text-decoration: none;
+color: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+}
+a.button span {
+/* Background left image */ 
+background: transparent url('static/images/button_left.png') no-repeat; 
+display: block;
+line-height: 22px; /* CHANGE THIS VALUE ACCORDING TO BUTTONG HEIGHT */
+padding: 7px 0 5px 18px;
+} 
+a.button:hover span{
+text-decoration:underline;
+}

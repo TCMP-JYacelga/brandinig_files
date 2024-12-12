@@ -1,0 +1,239 @@
+<div class="ft-layout-row">
+	<div class="ft-layout-primary">
+		<div class="ft-layout-inner">
+			<!--START:Page content ################-->
+			<div id="PageTitle">
+				{{#ifCond mode '==' "new" }}
+					<h1 class="ft-title">
+						<span>{{getLabel "lbl.role.create" "Create Role"}}</span>
+					</h1>
+				{{/ifCond}}
+				
+				{{#ifCond mode '!=' "new" }}
+					<h1 class="ft-title">
+						<span>{{getLabel "lbl.role.modify" "Modify Role"}}</span>
+					</h1>
+				{{/ifCond}}
+				
+				<div class="ft-accordion-header-sidebar">
+					<ul class="ft-status-bar">
+					
+						{{#ifCond mode '==' "new" }}
+							<li class="ft-status-bar-li-active" id="txnStep1"><span>
+								1. {{getLabel "lbl.role.create" "Create Role"}}</span></li>
+						{{/ifCond}}
+						
+						{{#ifCond mode '!=' "new" }}
+							<li class="ft-status-bar-li-active" id="txnStep1"><span>
+								1. {{getLabel "lbl.role.edit" "Edit Role"}}</span></li>
+						{{/ifCond}}
+					
+					
+						<li><span> 2. {{getLabel "lbl.role.permissions" "Permissions"}} </span></li>
+						<li><span> 3. {{getLabel "lbl.role.verify" "Verify Role"}} </span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="errorDiv" class="row hidden">
+				<div class="col-sm-12">
+					<div class="ft-error-message">
+						<span class="ft-bold-font">{{getLabel "errorBold" "ERROR:"}} </span>
+						<p id="errorPara"></p>
+					</div>
+				</div>
+			</div>
+			
+			<div id="entryFormDiv">
+				<form id="frmMain" name="frmMain" method="post" autocomplete="off">
+					<div>
+						<!--Role Details section starts here -->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-sm-12">
+										<h2 class="pull-left panel-title">
+											<span>{{getLabel "lbl.role.roledtls" "Role Details"}}</span>
+										</h2>
+									</div>
+								</div>
+							</div>
+							<div class="panel-body">
+								{{#if admin}}
+									<div id="corpDiv">
+										<div class="row">
+											<div class="col-sm-3">
+												<div class="form-group">
+													<label  for="corporation" class="frmLabel required">{{getLabel "lbl.company.name" "Company Name"}}</label>
+													<input type="text" id="corporation" class="ui-suggestion-box  form-control" placeholder="{{getLabel "lbl.role.searchcompany" "Search By Company Name"}}"></input>
+												</div>
+											</div>
+										</div>
+									</div>
+								{{/if}}
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="roleId" class="frmLabel required"> <span>
+													{{getLabel "lbl.role.code" "Name"}} </span>
+											</label> <input id="roleId" name="roleId" class="form-control"
+												 type="text"  maxlength="10" value={{getStringWithSpecialChars roleId}}>
+										</div>
+									</div>
+									<div class="col-sm-offset-1 col-sm-offset-right-1 col-sm-3">
+										<div class="form-group">
+											<label for="roleDesc" class="frmLabel required"> <span>
+												{{getLabel "lbl.role.name" "Role Description"}}</span>
+											</label> <input id="roleDesc" data-version="{{ version }}"  name="roleDesc" class="form-control"
+												type="text" maxlength="40" value="{{{getStringWithSpecialChars roleDesc}}}" >
+										</div>
+									</div>
+									{{#ifCond recordKeyNo  "==" null}}
+									<div id="copyFromDiv">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<a class="limit-reached"> <img
+													id="chkCopyFrom"
+													data-version = "{{ version }}"
+													class="chkBoxAlign" width="16" height="16"
+													src = {{ checkBoxIcon copyFromFlag }}
+													border="0">
+												</a> <label id="chkCopyFrom" for="chkCopyFrom" class="frmLabel noLeftPadding">{{getLabel "lbl.role.copyrole" "Copy From Existing Role"}}</label>
+												<input type="text" id="copyFromRole" class="ui-suggestion-box  form-control" placeholder="{{getLabel "lbl.role.searchrole" "Search By Existing Role"}}"></input>
+											</div>
+										</div>
+									</div>
+									{{/ifCond}}
+									
+									<div class="col-sm-3">
+										<label class="frmLabel required"> <span>
+												{{getLabel "lbl.role.subsidiary" "Subsidiary"}} </span>
+										</label>
+										<select id="subsidiaries" name="subsidiaries" class="form-control" multiple="true">
+											{{#each subsidiaries}}
+												{{option subsidiaryId subsidiaryName assignedFlag version}}
+											{{/each}}
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Role Details section ends here -->
+						<!-- Refactored service -->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-sm-12">
+										<h2 class="panel-title">
+											<span  id='servicesInfoCaret' class="fa fa-caret-up pull-left cursor_pointer toggle-handler" />
+											<span>{{getLabel "lbl.role.services" "Services"}}</span>
+										</h2>
+									</div>
+								</div>
+							</div>
+							<div id="servicesInfoDiv" class="panel-body">
+								{{#each services}}
+								<div class="col-sm-3">
+
+									<a id="chkServbrEnable" class="limit-reached"> <img
+										id="chkImgSrvc_{{serviceId}}"
+										data-servicetid = "{{ serviceId }}"
+										data-digest = "{{ digest }}"
+										data-version = "{{ version }}"
+										src="{{checkBoxIcon assignedFlag}}" class="chkBoxAlign" width="16" height="16"
+										border="0">
+									</a> <label for="chkImgSrvc_{{serviceId}}"
+										id="lblImgSrvc_{{serviceId}}_displayName"
+										class="checkbox-inline noLeftPadding"> {{getModLabel serviceId serviceName}}
+									</label>
+									<input type="hidden" name="lblImgSrvc_{{serviceId}}" id="lblImgSrvc_{{serviceId}}" value="{{serviceName}}" >
+								</div>
+								{{/each}}
+							</div>
+							<!-- end of refactored -->
+						</div>
+						<!-- start of refactored Granular Previlages -->
+						{{#if granPrivileges}}
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-sm-12">
+											<h2 class="panel-title">
+												<span id='granularPrivilegsInfoCaret'
+													class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+												<span>Granular Privileges</span>
+											</h2>
+										</div>
+									</div>
+								</div>
+								<div id="allowedGranularPrivilegesInfoDiv" class="panel-body">
+									{{#each services as |servicesObj parentIndex| }}
+										{{#each ../granPrivileges as |granObj childIndex|}}
+									  		{{#ifCond servicesObj.serviceId '==' granObj.granularPrivilegeId}}
+									  			{{#if servicesObj.assignedFlag}}
+										  			<div class="col-sm-3" id="divGranular_{{granObj.granularPrivilegeId}}">
+														<a id="chkServpaymentGranPrivEnable" class="limit-reached">
+															<img id="chkImgGran_{{granObj.granularPrivilegeId}}"
+															src="{{checkBoxIcon granObj.assignedFlag}}" width="16" height="16"
+															data-digest = "{{ digest }}"
+															border="0">
+														</a> <label for="chkImgGran_{{granObj.granularPrivilegeId}}"
+															id="lblImgGran_{{granObj.granularPrivilegeId}}"
+															class="checkbox-inline noLeftPadding">
+															{{granularPrivilegeName}} </label>
+													</div>
+												{{else}}
+										  			<div class="col-sm-3 hidden" id="divGranular_{{granObj.granularPrivilegeId}}">
+														<a id="chkServpaymentGranPrivEnable" class="limit-reached">
+															<img id="chkImgGran_{{granObj.granularPrivilegeId}}"
+															src="{{checkBoxIcon granObj.assignedFlag}}" width="16" height="16"
+															data-digest = "{{ digest }}"
+															border="0">
+														</a> <label for="chkImgGran_{{granObj.granularPrivilegeId}}"
+															id="lblImgGran_{{granObj.granularPrivilegeId}}"
+															class="checkbox-inline noLeftPadding">
+															{{granularPrivilegeName}} </label>
+													</div>
+												{{/if}}
+									    	{{/ifCond}}
+									  {{/each}}
+									{{/each}}
+								</div>
+							</div>
+							{{/if}}
+							<!-- End  of refactored Granular Previlages -->
+						<div class="form-group">
+							<ul class="ft-bar">
+								<li><a id='btnCancel' class="ft-button ft-button-light">{{getLabel "lbl.role.cancel" "Cancel"}}</a>
+								</li>
+								<li class="ft-bar-stretch">
+									<div class="pull-right">
+									<!-- TODO - Commented temporarily -->
+									{{#ifCond mode '==' "new" }}
+										<input type="button" id="saveUpdate"
+											class="ft-button ft-margin-l ft-btn-link" tabindex="8"
+											value={{getLabel "lbl.role.save" "Save"}} autocomplete="off"> 
+									{{/ifCond}}									
+									
+									{{#ifCond mode '!=' "new" }}
+										<input type="button" id="saveUpdate"
+											class="ft-button ft-margin-l ft-btn-link" tabindex="8"
+											value={{getLabel "lbl.role.update" "Update"}} autocomplete="off"> 
+									{{/ifCond}}
+									
+									<a class="ft-button ft-margin-l ft-button-primary" id="Next">{{getLabel "lbl.role.next" "Next"}}</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="confirmMsgPopup"></div>
+				</form>
+			</div>
+			<!--END:Page content ################-->
+		</div>
+	</div>
+	<input type="hidden" name="recordKeyNo" id="recordKeyNo" value={{recordKeyNo}} >
+	
+	<!--START:Page Side Panel-->
+	<!--END:Page Side Panel-->
+</div>

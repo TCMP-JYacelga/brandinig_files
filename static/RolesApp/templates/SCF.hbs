@@ -1,0 +1,49 @@
+<div>
+<div>
+		<div class="row">
+			<div class="col-sm-12 ft-padding-b">
+				<div class="pull-right">
+				<a id="expandAll">{{getLabel "lbl.role.scfexpandAll" "Expand/"}}</a> <a id="collapseAll">{{getLabel "lbl.role.scfcollapseAll" "Collapse All"}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#each assets}} 
+		{{#selectAsset assetId "06"}}
+	
+		{{>prevTemplate assetid="06"}}
+		
+		<!--SCF Packages starts here -->
+	
+		{{>packageTemplate assetid="06"}}
+		
+		<!--SCF Packages starts here -->
+
+		<!--Alerts and Reports Privileges starts here -->
+		<div class="row">
+	
+			<!-- Start of Alerts -->
+			<div class="col-sm-6">
+				{{>alertTemplate assetid="06"}}
+			</div>
+			<!-- End of Alerts -->
+	
+			<!-- Start of Reports -->
+			<div class="col-sm-6">
+				{{>reportTemplate assetid="06"}}
+			</div>
+			<!-- End of Reports -->
+		</div>
+		<!-- Alerts and Reports Privileges ends here -->
+	<div class="row">
+
+		<!-- Start of Widgets -->
+		<div class="col-sm-6">
+			{{>widgetTemplate assetid="06"}}
+		</div>
+		<!-- End of Widgets -->
+	</div>	
+	
+		{{/selectAsset}} 
+	{{/each}}
+</div>

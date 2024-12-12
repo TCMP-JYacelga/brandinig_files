@@ -1,0 +1,47 @@
+/*Single payment dialog css*/
+
+.single-payment-template{
+	background: white !important;
+	overflow: hidden !important;
+}
+
+.single-payment-template-page-hidden{
+	display : none !important;
+}
+.single-payment-template-method-center{
+	padding-top: 4px;
+}
+.single-payment-template-defined-center{
+	padding-top: 4px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 333px;
+}
+
+.single-payment-template hr{
+    margin-top: 0px;
+  	margin-bottom: 12px;
+}
+
+.single-payment-template-receiver{
+	padding-top: 4px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 190px;
+}
+.tooltip{
+	margin:8px;
+	padding:8px;
+	border:1px solid blue;
+	background-color:yellow;
+	position: absolute;
+	z-index: 2;
+}
+
+
+select.datepick-month-year{background-color:white;width:30%;z-index: 1000000;}
+
+.fcm-error-row .x-grid-cell-inner {
+	color: red;
+} 
+

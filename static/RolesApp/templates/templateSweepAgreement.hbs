@@ -1,0 +1,57 @@
+<div class="panel panel-default" >
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="panel-title">
+					<span id="sweepAgreementInfoCaret"
+						class="fa fa-caret-up pull-left cursor_pointer toggle-handler"></span>
+					<span>{{getLabel "lbl.role.sweepagr" "Sweep Agreements"}}</span> 
+					<img id="sweepAgreementAll_{{assetid}}" src="{{checkBoxIcon assignAllSweeps}}"
+					data-version = "{{ assignAllsweepAgreements_version }}"
+					 class="chkBoxAlign" width="16"
+						height="16" border="0">
+				   <label id="sweepAgreementAll_{{assetid}}" for="sweepAgreementAll_{{assetid}}" class="checkbox-inline noLeftPadding">{{getLabel "lbl.role.sweepagr1" "All"}}</label>
+				   <label id="lblSweepAgreementCount" class="checkbox-inline pull-right">{{sweepAgreementsAssignedCount}} of {{sweepAgreementsCount}}{{getLabel "lbl.role.sweepagr2" " Selected"}}</label>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="sweepAgreementInfoDiv" class="panel-body">
+		<div class="row grid">
+			<table class="view-grid" style="width: 99%">
+				<thead>
+					<tr class="view-grid-header">
+						<td class="view-grid-header-text" style="width: 10%"></td>
+						<td class="view-grid-header-text">{{getLabel "lbl.role.sweepagrcode": "Agreement Code"}}</td>
+						<td class="view-grid-header-text">{{getLabel "lbl.role.sweepagrname": "Agreement Name"}}</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each sweepAgreements}}
+					<tr class="view-grid-body">
+						<td class="view-grid-body-content text-center "><a
+							class="limit-reached test"><img
+								id="chkSweepAgreements_{{../assetid}}_{{agreementCode}}"
+								data-agreementcode = "{{ agreementCode }}"
+								data-agreementname = "{{ agreementName }}"
+								data-assetid="{{../assetId}}"
+								data-subsidairyid = "{{ subsidiaryId }}"
+								data-subsidairyname = "{{ subsidiaryName }}"
+								data-version = "{{ version }}"
+								data-digest = "{{ digest }}"
+								src="{{checkBoxIcon assignedFlag}}" width="16" height="16"
+								border="0"></a></td>
+						<td class="view-grid-body-content">{{agreementCode}}</td>
+						<td class="view-grid-body-content">{{agreementName}}</td>
+					</tr>
+					{{else}}
+					<tr class="view-grid-body">
+						<td class="view-grid-body-content" colSpan="4"
+							style="padding-bottom: 1%;">&nbsp</td>
+					</tr>
+					{{/each}}
+				<tbody>
+			</table>
+		</div>
+	</div>
+</div>

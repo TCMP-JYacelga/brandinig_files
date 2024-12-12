@@ -1,0 +1,84 @@
+
+label.required { background: transparent right top no-repeat scroll url('resources/images/asterisk.gif'); }
+label.required {
+	padding: 0px 15px 0px 0px !important;
+}
+
+.frmLabel { 
+	width: auto !important;
+	line-height: 24px !important;
+	font-size: $fontSize13 !important;
+	font-family: $fontFamily;
+	padding: 0px 7px 0px 0px !important;
+	color: $fontColor !important;
+	display: inline-block !important;
+	font-weight: $fontWeight-SemiBold !important;
+}
+
+label.required-lbl-right{
+	padding: 0px 15px 0px 0px !important;
+	font-family: $fontFamily;
+	font-size: $fontSize13 !important;
+}
+
+.fieldLabel { 
+	line-height: 24px !important;
+	font-size: $fontSize13 !important;
+	padding: 0px 15px 0px 0px !important;
+	color: $fontColor !important;
+	height: auto !important;	
+	display: inline-block !important;
+	font-weight: $fontWeight-SemiBold !important;
+}
+
+.ux_label-style label.tdrequired{
+	padding-left: 0px !important;
+	font-size: $fontSize14 !important;
+	font-family: $fontFamily !important;
+}
+.ux_label-style label.tdfrmLabel{
+	padding-bottom: 6px !important;
+	font-size: $fontSize14 !important;
+	font-family: $fontFamily !important;
+}
+
+.ux_required { background: transparent right top no-repeat scroll url('resources/images/asterisk.gif'); }
+
+.ux_payment-type {
+	padding: 6px 0px 0px 10px !important;
+	font-size: $fontSize14 !important;
+	font-weight:$fontWeight-SemiBold !important;
+}
+
+.ux_font-size14 {
+	font-size:$fontSize14 !important;
+	font-weight:$fontWeight-SemiBold !important;
+	font-family:$fontFamily !important;
+}
+.ux_texttransform-upper{
+	text-transform: uppercase !important;
+}
+
+.ux_reciever-info, .ux_reciever-info.leftAlign{
+	color: #bfbfbf !important;
+	padding-left: 0px !important;
+	font-size: $fontSize14 !important;
+}
+.ux_batchpay-moreinfo-label{ font-size: $fontSize14 !important; color:$fontColor !important; display: inline-block !important; }
+
+.ux_text-elipsis{ text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.grey.fieldLabel{
+	color: $fontColor !important;
+}
+
+.ux_label-margin-right{
+	margin-right: 10px !important;
+}
+
+#userInfo p a { color: $fontColor; }
+
+.ux_right-align.frmLabel {
+	text-align: right !important;
+}
+.ux_color-italic{ font-style: italic; }
